@@ -1,32 +1,212 @@
 [
-  {"dia": 1, "dow": "Ter", "data": "01/09/2026", "meta_dia": 2030764, "pct_mes": 0.0371},
-  {"dia": 2, "dow": "Qua", "data": "02/09/2026", "meta_dia": 2109714, "pct_mes": 0.0385},
-  {"dia": 3, "dow": "Qui", "data": "03/09/2026", "meta_dia": 2074826, "pct_mes": 0.0379},
-  {"dia": 4, "dow": "Sex", "data": "04/09/2026", "meta_dia": 2066894, "pct_mes": 0.0378},
-  {"dia": 5, "dow": "Sab", "data": "05/09/2026", "meta_dia": 1949778, "pct_mes": 0.0356},
-  {"dia": 6, "dow": "Dom", "data": "06/09/2026", "meta_dia": 1689911, "pct_mes": 0.0309},
-  {"dia": 7, "dow": "Seg", "data": "07/09/2026", "meta_dia": 2264634, "pct_mes": 0.0414},
-  {"dia": 8, "dow": "Ter", "data": "08/09/2026", "meta_dia": 2246479, "pct_mes": 0.0410},
-  {"dia": 9, "dow": "Qua", "data": "09/09/2026", "meta_dia": 2191586, "pct_mes": 0.0400},
-  {"dia": 10, "dow": "Qui", "data": "10/09/2026", "meta_dia": 2119791, "pct_mes": 0.0387},
-  {"dia": 11, "dow": "Sex", "data": "11/09/2026", "meta_dia": 2055459, "pct_mes": 0.0375},
-  {"dia": 12, "dow": "Sab", "data": "12/09/2026", "meta_dia": 1832041, "pct_mes": 0.0335},
-  {"dia": 13, "dow": "Dom", "data": "13/09/2026", "meta_dia": 1434389, "pct_mes": 0.0262},
-  {"dia": 14, "dow": "Seg", "data": "14/09/2026", "meta_dia": 1877712, "pct_mes": 0.0343},
-  {"dia": 15, "dow": "Ter", "data": "15/09/2026", "meta_dia": 1922413, "pct_mes": 0.0351},
-  {"dia": 16, "dow": "Qua", "data": "16/09/2026", "meta_dia": 1965735, "pct_mes": 0.0359},
-  {"dia": 17, "dow": "Qui", "data": "17/09/2026", "meta_dia": 1838100, "pct_mes": 0.0336},
-  {"dia": 18, "dow": "Sex", "data": "18/09/2026", "meta_dia": 1723813, "pct_mes": 0.0315},
-  {"dia": 19, "dow": "Sab", "data": "19/09/2026", "meta_dia": 1492330, "pct_mes": 0.0273},
-  {"dia": 20, "dow": "Dom", "data": "20/09/2026", "meta_dia": 1217343, "pct_mes": 0.0222},
-  {"dia": 21, "dow": "Seg", "data": "21/09/2026", "meta_dia": 1615037, "pct_mes": 0.0295},
-  {"dia": 22, "dow": "Ter", "data": "22/09/2026", "meta_dia": 1677776, "pct_mes": 0.0306},
-  {"dia": 23, "dow": "Qua", "data": "23/09/2026", "meta_dia": 1777405, "pct_mes": 0.0325},
-  {"dia": 24, "dow": "Qui", "data": "24/09/2026", "meta_dia": 1737013, "pct_mes": 0.0317},
-  {"dia": 25, "dow": "Sex", "data": "25/09/2026", "meta_dia": 1691413, "pct_mes": 0.0309},
-  {"dia": 26, "dow": "Sab", "data": "26/09/2026", "meta_dia": 1503883, "pct_mes": 0.0275},
-  {"dia": 27, "dow": "Dom", "data": "27/09/2026", "meta_dia": 1250751, "pct_mes": 0.0228},
-  {"dia": 28, "dow": "Seg", "data": "28/09/2026", "meta_dia": 1688413, "pct_mes": 0.0308},
-  {"dia": 29, "dow": "Ter", "data": "29/09/2026", "meta_dia": 1806586, "pct_mes": 0.0330},
-  {"dia": 30, "dow": "Qua", "data": "30/09/2026", "meta_dia": 1893257, "pct_mes": 0.0346}
+  {
+    "dia": 1,
+    "dow": "Ter",
+    "data": "01/09/2026",
+    "meta_dia": 1921923.03,
+    "pct_mes": 0.03510667
+  },
+  {
+    "dia": 2,
+    "dow": "Qua",
+    "data": "02/09/2026",
+    "meta_dia": 2004040.9,
+    "pct_mes": 0.03660667
+  },
+  {
+    "dia": 3,
+    "dow": "Qui",
+    "data": "03/09/2026",
+    "meta_dia": 1949295.65,
+    "pct_mes": 0.03560667
+  },
+  {
+    "dia": 4,
+    "dow": "Sex",
+    "data": "04/09/2026",
+    "meta_dia": 2064260.67,
+    "pct_mes": 0.03770667
+  },
+  {
+    "dia": 5,
+    "dow": "Sab",
+    "data": "05/09/2026",
+    "meta_dia": 1850754.22,
+    "pct_mes": 0.03380667
+  },
+  {
+    "dia": 6,
+    "dow": "Dom",
+    "data": "06/09/2026",
+    "meta_dia": 1571553.47,
+    "pct_mes": 0.02870667
+  },
+  {
+    "dia": 7,
+    "dow": "Seg",
+    "data": "07/09/2026",
+    "meta_dia": 1560604.42,
+    "pct_mes": 0.02850667
+  },
+  {
+    "dia": 8,
+    "dow": "Ter",
+    "data": "08/09/2026",
+    "meta_dia": 2119005.91,
+    "pct_mes": 0.03870667
+  },
+  {
+    "dia": 9,
+    "dow": "Qua",
+    "data": "09/09/2026",
+    "meta_dia": 2053311.62,
+    "pct_mes": 0.03750667
+  },
+  {
+    "dia": 10,
+    "dow": "Qui",
+    "data": "10/09/2026",
+    "meta_dia": 1987617.33,
+    "pct_mes": 0.03630667
+  },
+  {
+    "dia": 11,
+    "dow": "Sex",
+    "data": "11/09/2026",
+    "meta_dia": 1976668.28,
+    "pct_mes": 0.03610667
+  },
+  {
+    "dia": 12,
+    "dow": "Sab",
+    "data": "12/09/2026",
+    "meta_dia": 1746738.25,
+    "pct_mes": 0.03190667
+  },
+  {
+    "dia": 13,
+    "dow": "Dom",
+    "data": "13/09/2026",
+    "meta_dia": 1358047.02,
+    "pct_mes": 0.02480667
+  },
+  {
+    "dia": 14,
+    "dow": "Seg",
+    "data": "14/09/2026",
+    "meta_dia": 1943821.13,
+    "pct_mes": 0.03550667
+  },
+  {
+    "dia": 15,
+    "dow": "Ter",
+    "data": "15/09/2026",
+    "meta_dia": 1976668.28,
+    "pct_mes": 0.03610667
+  },
+  {
+    "dia": 16,
+    "dow": "Qua",
+    "data": "16/09/2026",
+    "meta_dia": 1938346.61,
+    "pct_mes": 0.03540667
+  },
+  {
+    "dia": 17,
+    "dow": "Qui",
+    "data": "17/09/2026",
+    "meta_dia": 1932872.08,
+    "pct_mes": 0.03530667
+  },
+  {
+    "dia": 18,
+    "dow": "Sex",
+    "data": "18/09/2026",
+    "meta_dia": 1921923.03,
+    "pct_mes": 0.03510667
+  },
+  {
+    "dia": 19,
+    "dow": "Sab",
+    "data": "19/09/2026",
+    "meta_dia": 1642722.29,
+    "pct_mes": 0.03000667
+  },
+  {
+    "dia": 20,
+    "dow": "Dom",
+    "data": "20/09/2026",
+    "meta_dia": 1308776.3,
+    "pct_mes": 0.02390667
+  },
+  {
+    "dia": 21,
+    "dow": "Seg",
+    "data": "21/09/2026",
+    "meta_dia": 1845279.69,
+    "pct_mes": 0.03370667
+  },
+  {
+    "dia": 22,
+    "dow": "Ter",
+    "data": "22/09/2026",
+    "meta_dia": 1856228.74,
+    "pct_mes": 0.03390667
+  },
+  {
+    "dia": 23,
+    "dow": "Qua",
+    "data": "23/09/2026",
+    "meta_dia": 1872652.31,
+    "pct_mes": 0.03420667
+  },
+  {
+    "dia": 24,
+    "dow": "Qui",
+    "data": "24/09/2026",
+    "meta_dia": 1889075.89,
+    "pct_mes": 0.03450667
+  },
+  {
+    "dia": 25,
+    "dow": "Sex",
+    "data": "25/09/2026",
+    "meta_dia": 1839805.17,
+    "pct_mes": 0.03360667
+  },
+  {
+    "dia": 26,
+    "dow": "Sab",
+    "data": "26/09/2026",
+    "meta_dia": 1642722.29,
+    "pct_mes": 0.03000667
+  },
+  {
+    "dia": 27,
+    "dow": "Dom",
+    "data": "27/09/2026",
+    "meta_dia": 1336148.92,
+    "pct_mes": 0.02440667
+  },
+  {
+    "dia": 28,
+    "dow": "Seg",
+    "data": "28/09/2026",
+    "meta_dia": 1878126.84,
+    "pct_mes": 0.03430667
+  },
+  {
+    "dia": 29,
+    "dow": "Ter",
+    "data": "29/09/2026",
+    "meta_dia": 1889075.89,
+    "pct_mes": 0.03450667
+  },
+  {
+    "dia": 30,
+    "dow": "Qua",
+    "data": "30/09/2026",
+    "meta_dia": 1867177.79,
+    "pct_mes": 0.03410667
+  }
 ]
