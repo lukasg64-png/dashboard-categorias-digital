@@ -529,9 +529,10 @@
 
     /* Main Chart and Side Insights Section */
     .section-charts {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
     }
 
     .chart-card {
@@ -542,6 +543,7 @@
       display: flex;
       flex-direction: column;
       box-shadow: var(--shadow-sm);
+      width: 100%;
     }
 
     .chart-header {
@@ -549,6 +551,8 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .chart-title {
@@ -568,6 +572,7 @@
       font-size: 11.5px;
       color: var(--text-secondary);
       font-weight: 500;
+      flex-wrap: wrap;
     }
 
     .legend-item {
@@ -585,26 +590,26 @@
     .chart-canvas-wrapper {
       position: relative;
       width: 100%;
-      height: 300px;
+      height: 330px;
     }
 
-    /* Highlights Side Panel */
+    /* Highlights Side-by-Side Panel Below Chart */
     .highlights-container {
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      width: 100%;
     }
 
     .highlight-card {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 16px 18px;
+      padding: 18px 20px;
       box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      flex: 1;
+      gap: 12px;
     }
 
     .highlight-card-title {
@@ -892,15 +897,20 @@
 
     @media (max-width: 1200px) {
       .kpi-grid { grid-template-columns: repeat(3, 1fr); }
-      .section-charts { grid-template-columns: 1fr; }
       .diagnostic-grid-3 { grid-template-columns: 1fr; }
       .filter-inputs-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 900px) {
+      .highlights-container { grid-template-columns: 1fr; }
+      .chart-canvas-wrapper { height: 280px; }
     }
 
     @media (max-width: 768px) {
       .channel-nav-container { grid-template-columns: 1fr; }
       .kpi-grid { grid-template-columns: 1fr; }
       .filter-inputs-grid { grid-template-columns: 1fr; }
+      .chart-canvas-wrapper { height: 250px; }
     }
   </style>
 </head>
@@ -1162,12 +1172,13 @@
         </div>
       </div>
 
-      <!-- Card Lateral de Destaques Rápidos -->
+      <!-- Destaques Rápidos Abaixo do Gráfico (Lado a Lado) -->
       <div class="highlights-container">
         <!-- Aceleradores -->
         <div class="highlight-card" style="border-top: 3px solid var(--apple-green);">
           <div class="highlight-card-title" style="color: var(--apple-green-text);">
             <span>🚀 Top Linhas Superando a Meta</span>
+            <span class="badge-trend trend-pos" style="font-size: 11px; font-weight: 600;">Superávit MTD</span>
           </div>
           <div class="highlight-list" id="listAceleradores">
             <!-- Renderizado via JS -->
@@ -1178,6 +1189,7 @@
         <div class="highlight-card" style="border-top: 3px solid var(--apple-red);">
           <div class="highlight-card-title" style="color: var(--apple-red-text);">
             <span>⚠️ Top Linhas com Maior Oportunidade (GAP)</span>
+            <span class="badge-trend trend-neg" style="font-size: 11px; font-weight: 600;">Déficit MTD</span>
           </div>
           <div class="highlight-list" id="listDetratores">
             <!-- Renderizado via JS -->
@@ -82095,13 +82107,23 @@
       let realKey = 'real_dia_total';
       let metaKey = 'meta_dia_total';
       let desvioKey = 'desvio_dia_total';
+      let channelLabel = 'Total Digital';
 
       if (activeChannel === 'app') {
         realKey = 'real_dia_app'; metaKey = 'meta_dia_app'; desvioKey = 'desvio_dia_app';
+        channelLabel = 'Canal App';
       } else if (activeChannel === 'site') {
         realKey = 'real_dia_site'; metaKey = 'meta_dia_site'; desvioKey = 'desvio_dia_site';
+        channelLabel = 'Canal Site';
       } else if (activeChannel === 'marketplace') {
         realKey = 'real_dia_mkt'; metaKey = 'meta_dia_mkt'; desvioKey = 'desvio_dia_mkt';
+        channelLabel = 'Canal Marketplace';
+      }
+
+      // Atualizar título do gráfico com o canal ativo
+      const titleElem = document.getElementById('chartTitleText');
+      if (titleElem) {
+        titleElem.textContent = `📅 Curva Diária [${channelLabel}]: Realizado vs Meta Diária + Desvio % por Dia`;
       }
 
       const dataReal = curva.map(c => c[realKey]);
@@ -82130,7 +82152,8 @@
               backgroundColor: blueColor,
               borderRadius: 6,
               yAxisID: 'y',
-              order: 2
+              order: 2,
+              maxBarThickness: 32
             },
             {
               label: 'Meta Diária Oficial',
@@ -82138,7 +82161,8 @@
               backgroundColor: metaBarColor,
               borderRadius: 6,
               yAxisID: 'y',
-              order: 3
+              order: 3,
+              maxBarThickness: 32
             },
             {
               label: 'Desvio % vs Meta',
@@ -82214,14 +82238,26 @@
     }
 
     function renderHighlights() {
-      const destaquesObj = window.DASHBOARD_DATA.destaques_por_canal || {};
-      const destaques = destaquesObj[activeChannel] || window.DASHBOARD_DATA.destaques;
+      const diagObj = window.DASHBOARD_DATA.diagnostico_causas || window.DASHBOARD_DATA.destaques_por_canal || {};
+      const destaques = diagObj[activeChannel] || window.DASHBOARD_DATA.destaques || {};
+
+      const chLabel = activeChannel === 'total' ? 'Digital' : (activeChannel === 'app' ? 'App' : (activeChannel === 'site' ? 'Site' : 'Marketplace'));
+      const tAcel = document.getElementById('titleAceleradores');
+      const tDetr = document.getElementById('titleDetratores');
+      if (tAcel) tAcel.textContent = `🚀 Top Linhas Superando a Meta (${chLabel})`;
+      if (tDetr) tDetr.textContent = `⚠️ Top Linhas com Maior Oportunidade (${chLabel})`;
       
       const renderList = (items, isPositive) => {
-        return items.map(item => `
+        if (!items || items.length === 0) {
+          return `<div style="padding: 18px; text-align: center; color: var(--text-tertiary); font-size: 12px;">Nenhum destaque para o filtro selecionado</div>`;
+        }
+        const displayItems = items.slice(0, 8);
+        return displayItems.map((item, idx) => `
           <div class="highlight-item">
             <div class="highlight-info">
-              <span class="highlight-name" title="${item.linha || item.nome}">${item.linha || item.nome}</span>
+              <span class="highlight-name" title="${item.linha || item.nome}">
+                <span style="color: var(--text-tertiary); font-size: 11px; margin-right: 4px; font-weight: 600;">#${idx + 1}</span>${item.linha || item.nome}
+              </span>
               <span class="highlight-cat">${item.grupo || ''} • Ating: ${fmtPct(item.ating_mtd_pct)}</span>
             </div>
             <div class="highlight-metric">
@@ -82234,8 +82270,11 @@
         `).join('');
       };
 
-      document.getElementById('listAceleradores').innerHTML = renderList(destaques.aceleradores_linhas || destaques.aceleradores || [], true);
-      document.getElementById('listDetratores').innerHTML = renderList(destaques.detratores_linhas || destaques.detratores || [], false);
+      const acel = destaques.aceleradores_linhas || destaques.aceleradores || [];
+      const detr = destaques.detratores_linhas || destaques.detratores || [];
+
+      document.getElementById('listAceleradores').innerHTML = renderList(acel, true);
+      document.getElementById('listDetratores').innerHTML = renderList(detr, false);
     }
 
     function renderTable() {
