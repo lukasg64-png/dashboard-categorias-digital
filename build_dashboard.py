@@ -508,10 +508,12 @@ def build():
     .kpi-subtext {{
       display: flex;
       align-items: center;
-      gap: 6px;
-      font-size: 11px;
+      justify-content: space-between;
+      gap: 4px;
+      font-size: 10.5px;
       color: var(--text-secondary);
       font-variant-numeric: tabular-nums;
+      white-space: nowrap;
     }}
 
     .badge-trend {{
@@ -523,6 +525,7 @@ def build():
       font-weight: 700;
       font-size: 10.5px;
       font-variant-numeric: tabular-nums;
+      white-space: nowrap;
     }}
 
     .trend-pos {{
@@ -977,16 +980,15 @@ def build():
         <div class="channel-tab tab-total active" onclick="switchChannel('total')">
           <div class="channel-tab-header">
             <span class="channel-name">🌐 Total Digital</span>
-            <span class="channel-badge trend-neutral" id="badgeAtingTotal">94.9%</span>
+            <span class="channel-badge trend-pos" id="badgeAtingTotal">100.4%</span>
           </div>
           <div class="channel-sales" id="tabSalesTotal">R$ 5.897.259</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaTotal">R$ 6.213.585</strong></span>
-            <span id="tabGapTotal" class="badge-trend trend-neg">-R$ 316.326</span>
+            <span>Meta MTD: <strong id="tabMetaTotal">R$ 5.875.260</strong></span>
+            <span id="tabGapTotal" class="badge-trend trend-pos">+R$ 21.999</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Desvio: <strong id="tabDesvioPctTotal" style="color: var(--apple-red-text);">-5.1%</strong></span>
-            <span>MoM: <strong id="tabMomTotal" style="color: var(--apple-green-text);">+17.1%</strong></span>
+            <span>Share: <strong style="color: var(--apple-blue);">100% Digital</strong></span>
             <span>YoY: <strong id="tabYoyTotal" style="color: var(--apple-green-text);">+43.2%</strong></span>
           </div>
         </div>
@@ -995,16 +997,15 @@ def build():
         <div class="channel-tab tab-app" onclick="switchChannel('app')">
           <div class="channel-tab-header">
             <span class="channel-name">📱 App</span>
-            <span class="channel-badge trend-pos" id="badgeAtingApp">109.2% 🚀</span>
+            <span class="channel-badge trend-pos" id="badgeAtingApp">115.5% 🚀</span>
           </div>
           <div class="channel-sales" id="tabSalesApp">R$ 3.215.637</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaApp">R$ 2.944.468</strong></span>
-            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 271.169</span>
+            <span>Meta MTD: <strong id="tabMetaApp">R$ 2.784.144</strong></span>
+            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 431.494</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Desvio: <strong id="tabDesvioPctApp" style="color: var(--apple-green-text);">+9.2%</strong></span>
-            <span>MoM: <strong id="tabMomApp" style="color: var(--apple-green-text);">+38.5%</strong></span>
+            <span>Share: <strong style="color: var(--apple-blue);">54.5%</strong></span>
             <span>YoY: <strong id="tabYoyApp" style="color: var(--apple-green-text);">+53.4%</strong></span>
           </div>
         </div>
@@ -1013,16 +1014,15 @@ def build():
         <div class="channel-tab tab-marketplace" onclick="switchChannel('marketplace')">
           <div class="channel-tab-header">
             <span class="channel-name">🛍️ Marketplace</span>
-            <span class="channel-badge trend-pos" id="badgeAtingMkt">100.9%</span>
+            <span class="channel-badge trend-pos" id="badgeAtingMkt">106.7% 🚀</span>
           </div>
           <div class="channel-sales" id="tabSalesMkt">R$ 1.638.913</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaMkt">R$ 1.624.060</strong></span>
-            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 14.852</span>
+            <span>Meta MTD: <strong id="tabMetaMkt">R$ 1.535.631</strong></span>
+            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 103.281</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Desvio: <strong id="tabDesvioPctMkt" style="color: var(--apple-green-text);">+0.9%</strong></span>
-            <span>MoM: <strong id="tabMomMkt" style="color: var(--apple-red-text);">-13.3%</strong></span>
+            <span>Share: <strong style="color: var(--apple-blue);">27.8%</strong></span>
             <span>YoY: <strong id="tabYoyMkt" style="color: var(--apple-green-text);">+115.5%</strong></span>
           </div>
         </div>
@@ -1031,16 +1031,15 @@ def build():
         <div class="channel-tab tab-site" onclick="switchChannel('site')">
           <div class="channel-tab-header">
             <span class="channel-name">💻 Site</span>
-            <span class="channel-badge trend-neg" id="badgeAtingSite">63.4% ⚠️</span>
+            <span class="channel-badge trend-neg" id="badgeAtingSite">67.0% ⚠️</span>
           </div>
           <div class="channel-sales" id="tabSalesSite">R$ 1.042.709</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaSite">R$ 1.645.057</strong></span>
-            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 602.348</span>
+            <span>Meta MTD: <strong id="tabMetaSite">R$ 1.555.484</strong></span>
+            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 512.775</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Desvio: <strong id="tabDesvioPctSite" style="color: var(--apple-red-text);">-36.6%</strong></span>
-            <span>MoM: <strong id="tabMomSite" style="color: var(--apple-green-text);">+26.7%</strong></span>
+            <span>Share: <strong style="color: var(--apple-blue);">17.7%</strong></span>
             <span>YoY: <strong id="tabYoySite" style="color: var(--apple-red-text);">-17.4%</strong></span>
           </div>
         </div>
@@ -1097,9 +1096,9 @@ def build():
       </div>
     </section>
 
-    <!-- Grid de 6 KPIs Dinâmicos (Vinculados ao Canal Selecionado) -->
+    <!-- Grid de 6 KPIs Estratégicos (100% Exclusivos e Não-Repetitivos) -->
     <section class="kpi-grid">
-      <!-- 1. Realizado MTD -->
+      <!-- 1. Faturamento Realizado MTD -->
       <div class="kpi-card">
         <div class="kpi-title">
           <span>Venda Realizada MTD</span>
@@ -1107,49 +1106,41 @@ def build():
         </div>
         <div class="kpi-value" id="kpiVendaMtd" style="color: var(--apple-blue);">R$ 5.897.259</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiYoYBadge">↑ +43.2% YoY</span>
-          <span id="kpiYoYDiff" style="color: var(--text-tertiary);">+R$ 1.78M</span>
+          <span>Meta MTD: <strong id="kpiMetaMtdRef" style="color: var(--text-primary);">R$ 5.875.260</strong></span>
+          <span style="color: var(--text-tertiary);">• Curva: <strong id="kpiPctCurva">10.73%</strong></span>
         </div>
       </div>
 
-      <!-- 2. Meta Diarizada MTD -->
+      <!-- 2. Atingimento da Meta & GAP MTD -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span>Meta Diarizada MTD</span>
+          <span>Atingimento & GAP MTD</span>
           <span>🎯</span>
         </div>
-        <div class="kpi-value" id="kpiMetaMtd">R$ 6.213.585</div>
-        <div class="kpi-subtext">
-          <span>Curva Acum.: <strong id="kpiPctCurva" style="color: var(--text-primary);">11.35%</strong> (3/30 dias)</span>
+        <div class="kpi-value" id="kpiAtingMtd" style="color: var(--apple-green);">100.4%</div>
+        <div class="kpi-subtext" style="display: flex; justify-content: space-between; align-items: center;">
+          <span class="badge-trend trend-pos" id="kpiGapBadge">+R$ 21.999 Superávit</span>
+          <span id="kpiDesvioPctRef" style="font-size: 11px; color: var(--text-secondary);">Desvio: +0.4%</span>
         </div>
-      </div>
-
-      <!-- 3. Atingimento MTD -->
-      <div class="kpi-card">
-        <div class="kpi-title">
-          <span>Atingimento da Meta</span>
-          <span>📊</span>
-        </div>
-        <div class="kpi-value" id="kpiAtingMtd" style="color: var(--apple-orange);">94.9%</div>
         <div class="progress-bar-container">
-          <div class="progress-bar-fill" id="kpiProgressBar" style="width: 94.9%; background: var(--apple-orange);"></div>
+          <div class="progress-bar-fill" id="kpiProgressBar" style="width: 100%; background: var(--apple-green);"></div>
         </div>
       </div>
 
-      <!-- 4. Desvio Meta (R$ e %) -->
+      <!-- 3. Diária Necessária (Run Rate) -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span>Desvio vs Meta (GAP)</span>
-          <span>⚖️</span>
+          <span>Diária Necessária (Run Rate)</span>
+          <span>⚡</span>
         </div>
-        <div class="kpi-value" id="kpiGapMtd" style="color: var(--apple-red-text);">-R$ 316.326</div>
+        <div class="kpi-value" id="kpiDiariaNec" style="color: var(--text-primary); font-size: 21px;">R$ 1.809.185 / dia</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-neg" id="kpiDesvioPctBadge">-5.1% Desvio</span>
-          <span id="kpiGapStatus">Déficit vs Curva</span>
+          <span class="badge-trend trend-pos" id="kpiRitmoBadge">+R$ 156.6k/dia Ritmo</span>
+          <span id="kpiDiasRestantesRef" style="color: var(--text-tertiary);">27d rest. (R$ 48.8M)</span>
         </div>
       </div>
 
-      <!-- 5. Crescimento MoM (vs Ago/26) -->
+      <!-- 4. Crescimento MoM (vs Ago/26) -->
       <div class="kpi-card">
         <div class="kpi-title">
           <span>Crescimento MoM (vs Ago/26)</span>
@@ -1157,8 +1148,21 @@ def build():
         </div>
         <div class="kpi-value" id="kpiMoMValue" style="color: var(--apple-green);">+17.1%</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiMoMBadge">+R$ 861.5k</span>
+          <span class="badge-trend trend-pos" id="kpiMoMBadge">+R$ 861.946</span>
           <span style="color: var(--text-tertiary);">vs 01 a 03/Ago</span>
+        </div>
+      </div>
+
+      <!-- 5. Evolução YoY (vs Set/25) -->
+      <div class="kpi-card">
+        <div class="kpi-title">
+          <span>Evolução YoY (vs Set/25)</span>
+          <span>🚀</span>
+        </div>
+        <div class="kpi-value" id="kpiYoYValue" style="color: var(--apple-green);">+43.2%</div>
+        <div class="kpi-subtext">
+          <span class="badge-trend trend-pos" id="kpiYoYBadge">+R$ 1.778.904</span>
+          <span style="color: var(--text-tertiary);">vs 01 a 03/Set/25</span>
         </div>
       </div>
 
@@ -1168,10 +1172,10 @@ def build():
           <span>Projeção de Fechamento</span>
           <span>🔮</span>
         </div>
-        <div class="kpi-value" id="kpiProjecao">R$ 54.950.233</div>
+        <div class="kpi-value" id="kpiProjecao" style="color: var(--apple-purple);">R$ 54.950.233</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiAtingProj">+R$ 205.0k</span>
-          <span id="kpiMetaMensalRef" style="color: var(--text-tertiary);">Meta Mês: R$ 54.7M</span>
+          <span class="badge-trend trend-pos" id="kpiAtingProj">+R$ 205.0k vs Meta</span>
+          <span id="kpiMetaMensalRef" style="color: var(--text-tertiary);">Meta: R$ 54.7M</span>
         </div>
       </div>
     </section>
@@ -1572,16 +1576,22 @@ def build():
         gapEl.className = 'badge-trend ' + (obj.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
 
         const desvioEl = document.getElementById(`tabDesvioPct${{id}}`);
-        desvioEl.textContent = fmtSignPct(obj.desvio_pct);
-        desvioEl.style.color = obj.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        if (desvioEl) {{
+          desvioEl.textContent = fmtSignPct(obj.desvio_pct);
+          desvioEl.style.color = obj.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        }}
 
         const momEl = document.getElementById(`tabMom${{id}}`);
-        momEl.textContent = fmtSignPct(obj.crescimento_mom_pct);
-        momEl.style.color = obj.crescimento_mom_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        if (momEl) {{
+          momEl.textContent = fmtSignPct(obj.crescimento_mom_pct);
+          momEl.style.color = obj.crescimento_mom_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        }}
 
         const yoyEl = document.getElementById(`tabYoy${{id}}`);
-        yoyEl.textContent = fmtSignPct(obj.crescimento_yoy_pct);
-        yoyEl.style.color = obj.crescimento_yoy_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        if (yoyEl) {{
+          yoyEl.textContent = fmtSignPct(obj.crescimento_yoy_pct);
+          yoyEl.style.color = obj.crescimento_yoy_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        }}
       }};
 
       fillTab('Total', k.total);
@@ -1593,63 +1603,100 @@ def build():
     function updateKpis() {{
       const canais = window.DASHBOARD_DATA.kpis.canais;
       const c = canais[activeChannel] || canais.total;
-      const pctCurva = window.DASHBOARD_DATA.kpis.pct_curva_acum;
+      const pctCurva = window.DASHBOARD_DATA.kpis.pct_curva_acum || 10.73;
 
-      document.getElementById('kpiVendaMtd').textContent = fmtMoney(c.venda_mtd);
-      document.getElementById('kpiMetaMtd').textContent = fmtMoney(c.meta_mtd);
-      document.getElementById('kpiPctCurva').textContent = pctCurva + '%';
+      // 1. Venda Realizada MTD
+      const elVenda = document.getElementById('kpiVendaMtd');
+      if (elVenda) {{ elVenda.textContent = fmtMoney(c.venda_mtd); }}
+      const metaRef = document.getElementById('kpiMetaMtdRef');
+      if (metaRef) {{ metaRef.textContent = fmtMoney(c.meta_mtd); }}
+      const curvaRef = document.getElementById('kpiPctCurva');
+      if (curvaRef) {{ curvaRef.textContent = pctCurva + '%'; }}
 
-      // Atingimento
+      // 2. Atingimento & GAP MTD
       const ating = c.ating_mtd_pct;
       const atingElem = document.getElementById('kpiAtingMtd');
-      atingElem.textContent = fmtPct(ating);
+      if (atingElem) {{
+        atingElem.textContent = fmtPct(ating);
+        atingElem.style.color = ating >= 100 ? 'var(--apple-green)' : (ating >= 90 ? 'var(--apple-orange)' : 'var(--apple-red)');
+      }}
       const barElem = document.getElementById('kpiProgressBar');
-      barElem.style.width = Math.min(ating, 100) + '%';
-      
-      if (ating >= 100) {{
-        atingElem.style.color = 'var(--apple-green)';
-        barElem.style.background = 'var(--apple-green)';
-      }} else if (ating >= 90) {{
-        atingElem.style.color = 'var(--apple-orange)';
-        barElem.style.background = 'var(--apple-orange)';
-      }} else {{
-        atingElem.style.color = 'var(--apple-red)';
-        barElem.style.background = 'var(--apple-red)';
+      if (barElem) {{
+        barElem.style.width = Math.min(ating, 100) + '%';
+        barElem.style.background = ating >= 100 ? 'var(--apple-green)' : (ating >= 90 ? 'var(--apple-orange)' : 'var(--apple-red)');
+      }}
+      const gapBadge = document.getElementById('kpiGapBadge');
+      if (gapBadge) {{
+        gapBadge.textContent = (c.gap_mtd >= 0 ? '+' : '') + fmtMoney(c.gap_mtd) + (c.gap_mtd >= 0 ? ' Superávit' : ' Déficit');
+        gapBadge.className = 'badge-trend ' + (c.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
+      }}
+      const desvioRef = document.getElementById('kpiDesvioPctRef');
+      if (desvioRef) {{
+        desvioRef.textContent = `Desvio: ${{fmtSignPct(c.desvio_pct)}}`;
       }}
 
-      // Desvio R$ e Desvio %
-      const gapElem = document.getElementById('kpiGapMtd');
-      gapElem.textContent = (c.gap_mtd >= 0 ? '+' : '') + fmtMoney(c.gap_mtd);
-      gapElem.style.color = c.gap_mtd >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
-      
-      const desvioBadge = document.getElementById('kpiDesvioPctBadge');
-      desvioBadge.textContent = fmtSignPct(c.desvio_pct);
-      desvioBadge.className = 'badge-trend ' + (c.desvio_pct >= 0 ? 'trend-pos' : 'trend-neg');
-      document.getElementById('kpiGapStatus').textContent = c.gap_mtd >= 0 ? 'Superávit Meta' : 'Déficit Meta';
+      // 3. Diária Necessária (Run Rate)
+      const diasRestantes = c.dias_restantes || 27;
+      const diariaNec = c.diaria_necessaria !== undefined ? c.diaria_necessaria : (Math.max(0, (c.meta_mensal - c.venda_mtd)) / diasRestantes);
+      const diariaElem = document.getElementById('kpiDiariaNec');
+      if (diariaElem) {{ diariaElem.textContent = fmtMoney(diariaNec) + ' / dia'; }}
 
-      // Projeção
-      document.getElementById('kpiProjecao').textContent = fmtMoney(c.projecao_fechamento);
-      const gapProj = (c.projecao_fechamento || 0) - (c.meta_mensal || 0);
-      const atingProjElem = document.getElementById('kpiAtingProj');
-      atingProjElem.textContent = (gapProj >= 0 ? '+' : '') + fmtMoney(gapProj) + ' vs Meta';
-      atingProjElem.className = 'badge-trend ' + (gapProj >= 0 ? 'trend-pos' : 'trend-neg');
-      document.getElementById('kpiMetaMensalRef').textContent = `Meta Mês: ${{fmtMoney(c.meta_mensal)}}`;
+      const ritmoDiff = c.ritmo_diff !== undefined ? c.ritmo_diff : ((c.venda_mtd / 3) - diariaNec);
+      const ritmoBadge = document.getElementById('kpiRitmoBadge');
+      if (ritmoBadge) {{
+        const isRitmoPos = ritmoDiff >= 0;
+        ritmoBadge.textContent = (isRitmoPos ? '+' : '') + fmtMoney(ritmoDiff) + '/dia Ritmo';
+        ritmoBadge.className = 'badge-trend ' + (isRitmoPos ? 'trend-pos' : 'trend-neg');
+      }}
+      const diasRef = document.getElementById('kpiDiasRestantesRef');
+      if (diasRef) {{
+        const falta = c.falta_para_meta !== undefined ? c.falta_para_meta : Math.max(0, (c.meta_mensal - c.venda_mtd));
+        const faltaStr = falta >= 1000000 ? ('R$ ' + (falta / 1000000).toFixed(1) + 'M') : fmtMoney(falta);
+        diasRef.textContent = diasRestantes + 'd rest. (' + faltaStr + ')';
+      }}
 
-      // YoY
-      const yoy = c.crescimento_yoy_pct || 0;
-      const yoyBadge = document.getElementById('kpiYoYBadge');
-      yoyBadge.textContent = (yoy >= 0 ? '↑ +' : '↓ ') + yoy.toFixed(1) + '% YoY';
-      yoyBadge.className = 'badge-trend ' + (yoy >= 0 ? 'trend-pos' : 'trend-neg');
-      document.getElementById('kpiYoYDiff').textContent = (c.crescimento_yoy_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_yoy_diff);
-
-      // MoM
+      // 4. Crescimento MoM (vs Ago/26)
       const mom = c.crescimento_mom_pct || 0;
       const momElem = document.getElementById('kpiMoMValue');
-      momElem.textContent = fmtSignPct(mom);
-      momElem.style.color = mom >= 0 ? 'var(--apple-green)' : 'var(--apple-red)';
+      if (momElem) {{
+        momElem.textContent = fmtSignPct(mom);
+        momElem.style.color = mom >= 0 ? 'var(--apple-green)' : 'var(--apple-red)';
+      }}
       const momBadge = document.getElementById('kpiMoMBadge');
-      momBadge.textContent = (c.crescimento_mom_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_mom_diff);
-      momBadge.className = 'badge-trend ' + (c.crescimento_mom_diff >= 0 ? 'trend-pos' : 'trend-neg');
+      if (momBadge) {{
+        momBadge.textContent = (c.crescimento_mom_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_mom_diff);
+        momBadge.className = 'badge-trend ' + (c.crescimento_mom_diff >= 0 ? 'trend-pos' : 'trend-neg');
+      }}
+
+      // 5. Evolução YoY (vs Set/25)
+      const yoy = c.crescimento_yoy_pct || 0;
+      const yoyElem = document.getElementById('kpiYoYValue');
+      if (yoyElem) {{
+        yoyElem.textContent = fmtSignPct(yoy);
+        yoyElem.style.color = yoy >= 0 ? 'var(--apple-green)' : 'var(--apple-red)';
+      }}
+      const yoyBadge = document.getElementById('kpiYoYBadge');
+      if (yoyBadge) {{
+        yoyBadge.textContent = (c.crescimento_yoy_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_yoy_diff);
+        yoyBadge.className = 'badge-trend ' + (c.crescimento_yoy_diff >= 0 ? 'trend-pos' : 'trend-neg');
+      }}
+
+      // 6. Projeção de Fechamento
+      const projElem = document.getElementById('kpiProjecao');
+      if (projElem) {{ projElem.textContent = fmtMoney(c.projecao_fechamento); }}
+      const gapProj = (c.projecao_fechamento || 0) - (c.meta_mensal || 0);
+      const atingProjElem = document.getElementById('kpiAtingProj');
+      if (atingProjElem) {{
+        const gapAbs = Math.abs(gapProj);
+        const gapProjStr = gapAbs >= 1000000 ? ('R$ ' + (gapAbs / 1000000).toFixed(1) + 'M') : (gapAbs >= 1000 ? ('R$ ' + (gapAbs / 1000).toFixed(1) + 'k') : fmtMoney(gapAbs));
+        atingProjElem.textContent = (gapProj >= 0 ? '+' : '-') + gapProjStr + ' vs Meta';
+        atingProjElem.className = 'badge-trend ' + (gapProj >= 0 ? 'trend-pos' : 'trend-neg');
+      }}
+      const metaMesElem = document.getElementById('kpiMetaMensalRef');
+      if (metaMesElem) {{
+        const metaM = (c.meta_mensal / 1000000).toFixed(1);
+        metaMesElem.textContent = 'Meta Mês: R$ ' + metaM + 'M';
+      }}
     }}
 
     /* NOVO GRÁFICO DIÁRIO COM DESVIO % POR DIA (SOLICITADO PELO USUÁRIO) */

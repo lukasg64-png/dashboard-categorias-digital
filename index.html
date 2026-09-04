@@ -477,10 +477,12 @@
     .kpi-subtext {
       display: flex;
       align-items: center;
-      gap: 6px;
-      font-size: 11px;
+      justify-content: space-between;
+      gap: 4px;
+      font-size: 10.5px;
       color: var(--text-secondary);
       font-variant-numeric: tabular-nums;
+      white-space: nowrap;
     }
 
     .badge-trend {
@@ -492,6 +494,7 @@
       font-weight: 700;
       font-size: 10.5px;
       font-variant-numeric: tabular-nums;
+      white-space: nowrap;
     }
 
     .trend-pos {
@@ -946,16 +949,15 @@
         <div class="channel-tab tab-total active" onclick="switchChannel('total')">
           <div class="channel-tab-header">
             <span class="channel-name">🌐 Total Digital</span>
-            <span class="channel-badge trend-neutral" id="badgeAtingTotal">94.9%</span>
+            <span class="channel-badge trend-pos" id="badgeAtingTotal">100.4%</span>
           </div>
           <div class="channel-sales" id="tabSalesTotal">R$ 5.897.259</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaTotal">R$ 6.213.585</strong></span>
-            <span id="tabGapTotal" class="badge-trend trend-neg">-R$ 316.326</span>
+            <span>Meta MTD: <strong id="tabMetaTotal">R$ 5.875.260</strong></span>
+            <span id="tabGapTotal" class="badge-trend trend-pos">+R$ 21.999</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Desvio: <strong id="tabDesvioPctTotal" style="color: var(--apple-red-text);">-5.1%</strong></span>
-            <span>MoM: <strong id="tabMomTotal" style="color: var(--apple-green-text);">+17.1%</strong></span>
+            <span>Share: <strong style="color: var(--apple-blue);">100% Digital</strong></span>
             <span>YoY: <strong id="tabYoyTotal" style="color: var(--apple-green-text);">+43.2%</strong></span>
           </div>
         </div>
@@ -964,16 +966,15 @@
         <div class="channel-tab tab-app" onclick="switchChannel('app')">
           <div class="channel-tab-header">
             <span class="channel-name">📱 App</span>
-            <span class="channel-badge trend-pos" id="badgeAtingApp">109.2% 🚀</span>
+            <span class="channel-badge trend-pos" id="badgeAtingApp">115.5% 🚀</span>
           </div>
           <div class="channel-sales" id="tabSalesApp">R$ 3.215.637</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaApp">R$ 2.944.468</strong></span>
-            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 271.169</span>
+            <span>Meta MTD: <strong id="tabMetaApp">R$ 2.784.144</strong></span>
+            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 431.494</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Desvio: <strong id="tabDesvioPctApp" style="color: var(--apple-green-text);">+9.2%</strong></span>
-            <span>MoM: <strong id="tabMomApp" style="color: var(--apple-green-text);">+38.5%</strong></span>
+            <span>Share: <strong style="color: var(--apple-blue);">54.5%</strong></span>
             <span>YoY: <strong id="tabYoyApp" style="color: var(--apple-green-text);">+53.4%</strong></span>
           </div>
         </div>
@@ -982,16 +983,15 @@
         <div class="channel-tab tab-marketplace" onclick="switchChannel('marketplace')">
           <div class="channel-tab-header">
             <span class="channel-name">🛍️ Marketplace</span>
-            <span class="channel-badge trend-pos" id="badgeAtingMkt">100.9%</span>
+            <span class="channel-badge trend-pos" id="badgeAtingMkt">106.7% 🚀</span>
           </div>
           <div class="channel-sales" id="tabSalesMkt">R$ 1.638.913</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaMkt">R$ 1.624.060</strong></span>
-            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 14.852</span>
+            <span>Meta MTD: <strong id="tabMetaMkt">R$ 1.535.631</strong></span>
+            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 103.281</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Desvio: <strong id="tabDesvioPctMkt" style="color: var(--apple-green-text);">+0.9%</strong></span>
-            <span>MoM: <strong id="tabMomMkt" style="color: var(--apple-red-text);">-13.3%</strong></span>
+            <span>Share: <strong style="color: var(--apple-blue);">27.8%</strong></span>
             <span>YoY: <strong id="tabYoyMkt" style="color: var(--apple-green-text);">+115.5%</strong></span>
           </div>
         </div>
@@ -1000,16 +1000,15 @@
         <div class="channel-tab tab-site" onclick="switchChannel('site')">
           <div class="channel-tab-header">
             <span class="channel-name">💻 Site</span>
-            <span class="channel-badge trend-neg" id="badgeAtingSite">63.4% ⚠️</span>
+            <span class="channel-badge trend-neg" id="badgeAtingSite">67.0% ⚠️</span>
           </div>
           <div class="channel-sales" id="tabSalesSite">R$ 1.042.709</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaSite">R$ 1.645.057</strong></span>
-            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 602.348</span>
+            <span>Meta MTD: <strong id="tabMetaSite">R$ 1.555.484</strong></span>
+            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 512.775</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Desvio: <strong id="tabDesvioPctSite" style="color: var(--apple-red-text);">-36.6%</strong></span>
-            <span>MoM: <strong id="tabMomSite" style="color: var(--apple-green-text);">+26.7%</strong></span>
+            <span>Share: <strong style="color: var(--apple-blue);">17.7%</strong></span>
             <span>YoY: <strong id="tabYoySite" style="color: var(--apple-red-text);">-17.4%</strong></span>
           </div>
         </div>
@@ -1066,9 +1065,9 @@
       </div>
     </section>
 
-    <!-- Grid de 6 KPIs Dinâmicos (Vinculados ao Canal Selecionado) -->
+    <!-- Grid de 6 KPIs Estratégicos (100% Exclusivos e Não-Repetitivos) -->
     <section class="kpi-grid">
-      <!-- 1. Realizado MTD -->
+      <!-- 1. Faturamento Realizado MTD -->
       <div class="kpi-card">
         <div class="kpi-title">
           <span>Venda Realizada MTD</span>
@@ -1076,49 +1075,41 @@
         </div>
         <div class="kpi-value" id="kpiVendaMtd" style="color: var(--apple-blue);">R$ 5.897.259</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiYoYBadge">↑ +43.2% YoY</span>
-          <span id="kpiYoYDiff" style="color: var(--text-tertiary);">+R$ 1.78M</span>
+          <span>Meta MTD: <strong id="kpiMetaMtdRef" style="color: var(--text-primary);">R$ 5.875.260</strong></span>
+          <span style="color: var(--text-tertiary);">• Curva: <strong id="kpiPctCurva">10.73%</strong></span>
         </div>
       </div>
 
-      <!-- 2. Meta Diarizada MTD -->
+      <!-- 2. Atingimento da Meta & GAP MTD -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span>Meta Diarizada MTD</span>
+          <span>Atingimento & GAP MTD</span>
           <span>🎯</span>
         </div>
-        <div class="kpi-value" id="kpiMetaMtd">R$ 6.213.585</div>
-        <div class="kpi-subtext">
-          <span>Curva Acum.: <strong id="kpiPctCurva" style="color: var(--text-primary);">11.35%</strong> (3/30 dias)</span>
+        <div class="kpi-value" id="kpiAtingMtd" style="color: var(--apple-green);">100.4%</div>
+        <div class="kpi-subtext" style="display: flex; justify-content: space-between; align-items: center;">
+          <span class="badge-trend trend-pos" id="kpiGapBadge">+R$ 21.999 Superávit</span>
+          <span id="kpiDesvioPctRef" style="font-size: 11px; color: var(--text-secondary);">Desvio: +0.4%</span>
         </div>
-      </div>
-
-      <!-- 3. Atingimento MTD -->
-      <div class="kpi-card">
-        <div class="kpi-title">
-          <span>Atingimento da Meta</span>
-          <span>📊</span>
-        </div>
-        <div class="kpi-value" id="kpiAtingMtd" style="color: var(--apple-orange);">94.9%</div>
         <div class="progress-bar-container">
-          <div class="progress-bar-fill" id="kpiProgressBar" style="width: 94.9%; background: var(--apple-orange);"></div>
+          <div class="progress-bar-fill" id="kpiProgressBar" style="width: 100%; background: var(--apple-green);"></div>
         </div>
       </div>
 
-      <!-- 4. Desvio Meta (R$ e %) -->
+      <!-- 3. Diária Necessária (Run Rate) -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span>Desvio vs Meta (GAP)</span>
-          <span>⚖️</span>
+          <span>Diária Necessária (Run Rate)</span>
+          <span>⚡</span>
         </div>
-        <div class="kpi-value" id="kpiGapMtd" style="color: var(--apple-red-text);">-R$ 316.326</div>
+        <div class="kpi-value" id="kpiDiariaNec" style="color: var(--text-primary); font-size: 21px;">R$ 1.809.185 / dia</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-neg" id="kpiDesvioPctBadge">-5.1% Desvio</span>
-          <span id="kpiGapStatus">Déficit vs Curva</span>
+          <span class="badge-trend trend-pos" id="kpiRitmoBadge">+R$ 156.6k/dia Ritmo</span>
+          <span id="kpiDiasRestantesRef" style="color: var(--text-tertiary);">27d rest. (R$ 48.8M)</span>
         </div>
       </div>
 
-      <!-- 5. Crescimento MoM (vs Ago/26) -->
+      <!-- 4. Crescimento MoM (vs Ago/26) -->
       <div class="kpi-card">
         <div class="kpi-title">
           <span>Crescimento MoM (vs Ago/26)</span>
@@ -1126,8 +1117,21 @@
         </div>
         <div class="kpi-value" id="kpiMoMValue" style="color: var(--apple-green);">+17.1%</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiMoMBadge">+R$ 861.5k</span>
+          <span class="badge-trend trend-pos" id="kpiMoMBadge">+R$ 861.946</span>
           <span style="color: var(--text-tertiary);">vs 01 a 03/Ago</span>
+        </div>
+      </div>
+
+      <!-- 5. Evolução YoY (vs Set/25) -->
+      <div class="kpi-card">
+        <div class="kpi-title">
+          <span>Evolução YoY (vs Set/25)</span>
+          <span>🚀</span>
+        </div>
+        <div class="kpi-value" id="kpiYoYValue" style="color: var(--apple-green);">+43.2%</div>
+        <div class="kpi-subtext">
+          <span class="badge-trend trend-pos" id="kpiYoYBadge">+R$ 1.778.904</span>
+          <span style="color: var(--text-tertiary);">vs 01 a 03/Set/25</span>
         </div>
       </div>
 
@@ -1137,10 +1141,10 @@
           <span>Projeção de Fechamento</span>
           <span>🔮</span>
         </div>
-        <div class="kpi-value" id="kpiProjecao">R$ 54.950.233</div>
+        <div class="kpi-value" id="kpiProjecao" style="color: var(--apple-purple);">R$ 54.950.233</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiAtingProj">+R$ 205.0k</span>
-          <span id="kpiMetaMensalRef" style="color: var(--text-tertiary);">Meta Mês: R$ 54.7M</span>
+          <span class="badge-trend trend-pos" id="kpiAtingProj">+R$ 205.0k vs Meta</span>
+          <span id="kpiMetaMensalRef" style="color: var(--text-tertiary);">Meta: R$ 54.7M</span>
         </div>
       </div>
     </section>
@@ -1322,7 +1326,7 @@
   <script>
     window.DASHBOARD_DATA = {
   "versao": "2.1.0",
-  "gerado_em": "2026-09-04 17:14:37",
+  "gerado_em": "2026-09-04 17:25:15",
   "kpis": {
     "data_corte": "01 a 03/09/2026 (D-1)",
     "max_dia": 3,
@@ -1350,7 +1354,14 @@
         "crescimento_mom_diff": 861945.59,
         "v25_mtd": 4118354.99,
         "crescimento_yoy_pct": 43.19,
-        "crescimento_yoy_diff": 1778904.06
+        "crescimento_yoy_diff": 1778904.06,
+        "falta_para_meta": 48847984.95,
+        "diaria_necessaria": 1809184.63,
+        "media_diaria_atual": 1965753.02,
+        "ritmo_diff": 156568.39,
+        "ritmo_status": "favoravel",
+        "dias_decorridos": 3,
+        "dias_restantes": 27
       },
       "app": {
         "id": "app",
@@ -1373,7 +1384,14 @@
         "crescimento_mom_diff": 893089.68,
         "v25_mtd": 2095932.79,
         "crescimento_yoy_pct": 53.42,
-        "crescimento_yoy_diff": 1119704.53
+        "crescimento_yoy_diff": 1119704.53,
+        "falta_para_meta": 22726812.68,
+        "diaria_necessaria": 841733.8,
+        "media_diaria_atual": 1071879.11,
+        "ritmo_diff": 230145.31,
+        "ritmo_status": "favoravel",
+        "dias_decorridos": 3,
+        "dias_restantes": 27
       },
       "site": {
         "id": "site",
@@ -1396,7 +1414,14 @@
         "crescimento_mom_diff": 219499.4,
         "v25_mtd": 1261891.48,
         "crescimento_yoy_pct": -17.37,
-        "crescimento_yoy_diff": -219182.41
+        "crescimento_yoy_diff": -219182.41,
+        "falta_para_meta": 13451182.93,
+        "diaria_necessaria": 498191.96,
+        "media_diaria_atual": 347569.69,
+        "ritmo_diff": -150622.27,
+        "ritmo_status": "desafiador",
+        "dias_decorridos": 3,
+        "dias_restantes": 27
       },
       "marketplace": {
         "id": "marketplace",
@@ -1419,7 +1444,14 @@
         "crescimento_mom_diff": -250643.49,
         "v25_mtd": 760530.72,
         "crescimento_yoy_pct": 115.5,
-        "crescimento_yoy_diff": 878381.94
+        "crescimento_yoy_diff": 878381.94,
+        "falta_para_meta": 12669989.34,
+        "diaria_necessaria": 469258.86,
+        "media_diaria_atual": 546304.22,
+        "ritmo_diff": 77045.36,
+        "ritmo_status": "favoravel",
+        "dias_decorridos": 3,
+        "dias_restantes": 27
       }
     }
   },
@@ -1445,7 +1477,14 @@
       "crescimento_mom_diff": 861945.59,
       "v25_mtd": 4118354.99,
       "crescimento_yoy_pct": 43.19,
-      "crescimento_yoy_diff": 1778904.06
+      "crescimento_yoy_diff": 1778904.06,
+      "falta_para_meta": 48847984.95,
+      "diaria_necessaria": 1809184.63,
+      "media_diaria_atual": 1965753.02,
+      "ritmo_diff": 156568.39,
+      "ritmo_status": "favoravel",
+      "dias_decorridos": 3,
+      "dias_restantes": 27
     },
     {
       "id": "app",
@@ -1468,7 +1507,14 @@
       "crescimento_mom_diff": 893089.68,
       "v25_mtd": 2095932.79,
       "crescimento_yoy_pct": 53.42,
-      "crescimento_yoy_diff": 1119704.53
+      "crescimento_yoy_diff": 1119704.53,
+      "falta_para_meta": 22726812.68,
+      "diaria_necessaria": 841733.8,
+      "media_diaria_atual": 1071879.11,
+      "ritmo_diff": 230145.31,
+      "ritmo_status": "favoravel",
+      "dias_decorridos": 3,
+      "dias_restantes": 27
     },
     {
       "id": "marketplace",
@@ -1491,7 +1537,14 @@
       "crescimento_mom_diff": -250643.49,
       "v25_mtd": 760530.72,
       "crescimento_yoy_pct": 115.5,
-      "crescimento_yoy_diff": 878381.94
+      "crescimento_yoy_diff": 878381.94,
+      "falta_para_meta": 12669989.34,
+      "diaria_necessaria": 469258.86,
+      "media_diaria_atual": 546304.22,
+      "ritmo_diff": 77045.36,
+      "ritmo_status": "favoravel",
+      "dias_decorridos": 3,
+      "dias_restantes": 27
     },
     {
       "id": "site",
@@ -1514,7 +1567,14 @@
       "crescimento_mom_diff": 219499.4,
       "v25_mtd": 1261891.48,
       "crescimento_yoy_pct": -17.37,
-      "crescimento_yoy_diff": -219182.41
+      "crescimento_yoy_diff": -219182.41,
+      "falta_para_meta": 13451182.93,
+      "diaria_necessaria": 498191.96,
+      "media_diaria_atual": 347569.69,
+      "ritmo_diff": -150622.27,
+      "ritmo_status": "desafiador",
+      "dias_decorridos": 3,
+      "dias_restantes": 27
     }
   ],
   "curva_diaria": [
@@ -10362,6 +10422,92 @@
       "share_pct": 0.0
     },
     {
+      "grupo": "Medicamentos(1)",
+      "subgrupo": "Antibiotico Cont. Similar(34)",
+      "total_linhas": 3,
+      "canais": {
+        "total": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 58.31,
+          "meta_mensal": 543.31,
+          "gap_mtd": -58.31,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 21.93,
+          "crescimento_mom_pct": -100.0,
+          "crescimento_mom_diff": -21.93,
+          "v25_mtd": 56.7,
+          "crescimento_yoy_pct": -100.0,
+          "crescimento_yoy_diff": -56.7,
+          "share_pct": 0.0
+        },
+        "app": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 41.63,
+          "meta_mensal": 387.92,
+          "gap_mtd": -41.63,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 21.93,
+          "crescimento_mom_pct": -100.0,
+          "crescimento_mom_diff": -21.93,
+          "v25_mtd": 37.8,
+          "crescimento_yoy_pct": -100.0,
+          "crescimento_yoy_diff": -37.8,
+          "share_pct": 0.0
+        },
+        "site": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 0.0,
+          "meta_mensal": 0.0,
+          "gap_mtd": 0.0,
+          "desvio_pct": 0.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 18.9,
+          "crescimento_yoy_pct": -100.0,
+          "crescimento_yoy_diff": -18.9,
+          "share_pct": 0.0
+        },
+        "marketplace": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 16.67,
+          "meta_mensal": 155.37,
+          "gap_mtd": -16.67,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        }
+      },
+      "realizado_mtd": 0.0,
+      "meta_mtd": 58.31,
+      "meta_mensal": 543.31,
+      "gap_mtd": -58.31,
+      "desvio_pct": -100.0,
+      "ating_mtd_pct": 0.0,
+      "projecao_fechamento": 0.0,
+      "realizado_app": 0.0,
+      "realizado_site": 0.0,
+      "realizado_mkt": 0.0,
+      "crescimento_mom_pct": -100.0,
+      "crescimento_mom_diff": -21.93,
+      "crescimento_yoy_pct": -100.0,
+      "crescimento_yoy_diff": -56.7,
+      "share_pct": 0.0
+    },
+    {
       "grupo": "Perfumaria(2)",
       "subgrupo": "Perfumaria Provadores(3223)",
       "total_linhas": 1,
@@ -10449,14 +10595,14 @@
     },
     {
       "grupo": "Medicamentos(1)",
-      "subgrupo": "Vacina Gripe(3148)",
+      "subgrupo": "Vacina Da Gripe Convenios(3224)",
       "total_linhas": 1,
       "canais": {
         "total": {
           "realizado_mtd": 0.0,
-          "meta_mtd": 116.45,
-          "meta_mensal": 1085.03,
-          "gap_mtd": -116.45,
+          "meta_mtd": 30.03,
+          "meta_mensal": 279.81,
+          "gap_mtd": -30.03,
           "desvio_pct": -100.0,
           "ating_mtd_pct": 0.0,
           "projecao_fechamento": 0.0,
@@ -10470,9 +10616,9 @@
         },
         "app": {
           "realizado_mtd": 0.0,
-          "meta_mtd": 37.48,
-          "meta_mensal": 349.22,
-          "gap_mtd": -37.48,
+          "meta_mtd": 14.59,
+          "meta_mensal": 135.96,
+          "gap_mtd": -14.59,
           "desvio_pct": -100.0,
           "ating_mtd_pct": 0.0,
           "projecao_fechamento": 0.0,
@@ -10502,9 +10648,9 @@
         },
         "marketplace": {
           "realizado_mtd": 0.0,
-          "meta_mtd": 78.97,
-          "meta_mensal": 735.81,
-          "gap_mtd": -78.97,
+          "meta_mtd": 15.44,
+          "meta_mensal": 143.85,
+          "gap_mtd": -15.44,
           "desvio_pct": -100.0,
           "ating_mtd_pct": 0.0,
           "projecao_fechamento": 0.0,
@@ -10518,9 +10664,9 @@
         }
       },
       "realizado_mtd": 0.0,
-      "meta_mtd": 116.45,
-      "meta_mensal": 1085.03,
-      "gap_mtd": -116.45,
+      "meta_mtd": 30.03,
+      "meta_mensal": 279.81,
+      "gap_mtd": -30.03,
       "desvio_pct": -100.0,
       "ating_mtd_pct": 0.0,
       "projecao_fechamento": 0.0,
@@ -10706,40 +10852,40 @@
       "share_pct": 0.0
     },
     {
-      "grupo": "Medicamentos(1)",
-      "subgrupo": "Antibiotico Cont. Similar(34)",
-      "total_linhas": 3,
+      "grupo": "Servicos(3)",
+      "subgrupo": "Servicos Troco Solidario(3150)",
+      "total_linhas": 1,
       "canais": {
         "total": {
           "realizado_mtd": 0.0,
-          "meta_mtd": 58.31,
-          "meta_mensal": 543.31,
-          "gap_mtd": -58.31,
+          "meta_mtd": 17.54,
+          "meta_mensal": 163.45,
+          "gap_mtd": -17.54,
           "desvio_pct": -100.0,
           "ating_mtd_pct": 0.0,
           "projecao_fechamento": 0.0,
-          "v26_06_mtd": 21.93,
-          "crescimento_mom_pct": -100.0,
-          "crescimento_mom_diff": -21.93,
-          "v25_mtd": 56.7,
-          "crescimento_yoy_pct": -100.0,
-          "crescimento_yoy_diff": -56.7,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
           "share_pct": 0.0
         },
         "app": {
           "realizado_mtd": 0.0,
-          "meta_mtd": 41.63,
-          "meta_mensal": 387.92,
-          "gap_mtd": -41.63,
+          "meta_mtd": 8.73,
+          "meta_mensal": 81.34,
+          "gap_mtd": -8.73,
           "desvio_pct": -100.0,
           "ating_mtd_pct": 0.0,
           "projecao_fechamento": 0.0,
-          "v26_06_mtd": 21.93,
-          "crescimento_mom_pct": -100.0,
-          "crescimento_mom_diff": -21.93,
-          "v25_mtd": 37.8,
-          "crescimento_yoy_pct": -100.0,
-          "crescimento_yoy_diff": -37.8,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
           "share_pct": 0.0
         },
         "site": {
@@ -10753,16 +10899,16 @@
           "v26_06_mtd": 0.0,
           "crescimento_mom_pct": 0.0,
           "crescimento_mom_diff": 0.0,
-          "v25_mtd": 18.9,
-          "crescimento_yoy_pct": -100.0,
-          "crescimento_yoy_diff": -18.9,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
           "share_pct": 0.0
         },
         "marketplace": {
           "realizado_mtd": 0.0,
-          "meta_mtd": 16.67,
-          "meta_mensal": 155.37,
-          "gap_mtd": -16.67,
+          "meta_mtd": 8.81,
+          "meta_mensal": 82.11,
+          "gap_mtd": -8.81,
           "desvio_pct": -100.0,
           "ating_mtd_pct": 0.0,
           "projecao_fechamento": 0.0,
@@ -10776,19 +10922,105 @@
         }
       },
       "realizado_mtd": 0.0,
-      "meta_mtd": 58.31,
-      "meta_mensal": 543.31,
-      "gap_mtd": -58.31,
+      "meta_mtd": 17.54,
+      "meta_mensal": 163.45,
+      "gap_mtd": -17.54,
       "desvio_pct": -100.0,
       "ating_mtd_pct": 0.0,
       "projecao_fechamento": 0.0,
       "realizado_app": 0.0,
       "realizado_site": 0.0,
       "realizado_mkt": 0.0,
-      "crescimento_mom_pct": -100.0,
-      "crescimento_mom_diff": -21.93,
-      "crescimento_yoy_pct": -100.0,
-      "crescimento_yoy_diff": -56.7,
+      "crescimento_mom_pct": 0.0,
+      "crescimento_mom_diff": 0.0,
+      "crescimento_yoy_pct": 0.0,
+      "crescimento_yoy_diff": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "grupo": "Medicamentos(1)",
+      "subgrupo": "Vacina Gripe(3148)",
+      "total_linhas": 1,
+      "canais": {
+        "total": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 116.45,
+          "meta_mensal": 1085.03,
+          "gap_mtd": -116.45,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "app": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 37.48,
+          "meta_mensal": 349.22,
+          "gap_mtd": -37.48,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "site": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 0.0,
+          "meta_mensal": 0.0,
+          "gap_mtd": 0.0,
+          "desvio_pct": 0.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "marketplace": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 78.97,
+          "meta_mensal": 735.81,
+          "gap_mtd": -78.97,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        }
+      },
+      "realizado_mtd": 0.0,
+      "meta_mtd": 116.45,
+      "meta_mensal": 1085.03,
+      "gap_mtd": -116.45,
+      "desvio_pct": -100.0,
+      "ating_mtd_pct": 0.0,
+      "projecao_fechamento": 0.0,
+      "realizado_app": 0.0,
+      "realizado_site": 0.0,
+      "realizado_mkt": 0.0,
+      "crescimento_mom_pct": 0.0,
+      "crescimento_mom_diff": 0.0,
+      "crescimento_yoy_pct": 0.0,
+      "crescimento_yoy_diff": 0.0,
       "share_pct": 0.0
     },
     {
@@ -10865,178 +11097,6 @@
       "meta_mtd": 0.67,
       "meta_mensal": 6.24,
       "gap_mtd": -0.67,
-      "desvio_pct": -100.0,
-      "ating_mtd_pct": 0.0,
-      "projecao_fechamento": 0.0,
-      "realizado_app": 0.0,
-      "realizado_site": 0.0,
-      "realizado_mkt": 0.0,
-      "crescimento_mom_pct": 0.0,
-      "crescimento_mom_diff": 0.0,
-      "crescimento_yoy_pct": 0.0,
-      "crescimento_yoy_diff": 0.0,
-      "share_pct": 0.0
-    },
-    {
-      "grupo": "Medicamentos(1)",
-      "subgrupo": "Vacina Da Gripe Convenios(3224)",
-      "total_linhas": 1,
-      "canais": {
-        "total": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 30.03,
-          "meta_mensal": 279.81,
-          "gap_mtd": -30.03,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "app": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 14.59,
-          "meta_mensal": 135.96,
-          "gap_mtd": -14.59,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "site": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 0.0,
-          "meta_mensal": 0.0,
-          "gap_mtd": 0.0,
-          "desvio_pct": 0.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "marketplace": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 15.44,
-          "meta_mensal": 143.85,
-          "gap_mtd": -15.44,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        }
-      },
-      "realizado_mtd": 0.0,
-      "meta_mtd": 30.03,
-      "meta_mensal": 279.81,
-      "gap_mtd": -30.03,
-      "desvio_pct": -100.0,
-      "ating_mtd_pct": 0.0,
-      "projecao_fechamento": 0.0,
-      "realizado_app": 0.0,
-      "realizado_site": 0.0,
-      "realizado_mkt": 0.0,
-      "crescimento_mom_pct": 0.0,
-      "crescimento_mom_diff": 0.0,
-      "crescimento_yoy_pct": 0.0,
-      "crescimento_yoy_diff": 0.0,
-      "share_pct": 0.0
-    },
-    {
-      "grupo": "Servicos(3)",
-      "subgrupo": "Servicos Troco Solidario(3150)",
-      "total_linhas": 1,
-      "canais": {
-        "total": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 17.54,
-          "meta_mensal": 163.45,
-          "gap_mtd": -17.54,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "app": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 8.73,
-          "meta_mensal": 81.34,
-          "gap_mtd": -8.73,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "site": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 0.0,
-          "meta_mensal": 0.0,
-          "gap_mtd": 0.0,
-          "desvio_pct": 0.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "marketplace": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 8.81,
-          "meta_mensal": 82.11,
-          "gap_mtd": -8.81,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        }
-      },
-      "realizado_mtd": 0.0,
-      "meta_mtd": 17.54,
-      "meta_mensal": 163.45,
-      "gap_mtd": -17.54,
       "desvio_pct": -100.0,
       "ating_mtd_pct": 0.0,
       "projecao_fechamento": 0.0,
@@ -77199,7 +77259,7 @@
       {
         "nome": "FORMULAS INFANTIS",
         "grupo": "Nutricao(3090)",
-        "subgrupo": "Nutricao Especiais(3156), Nutricao Leites(3154)",
+        "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
         "realizado_mtd": 153257.74,
         "meta_mtd": 208817.16,
         "gap_mtd": -55559.42,
@@ -77223,7 +77283,7 @@
       {
         "nome": "OTC- VITAMINAS E SUPLEMENTOS MINERAIS",
         "grupo": "Conveniencia(10)",
-        "subgrupo": "Similar Oneroso(3186), Similar(4)",
+        "subgrupo": "Referencia Onerosos(40), Genericos(3)",
         "realizado_mtd": 56584.41,
         "meta_mtd": 97550.37,
         "gap_mtd": -40965.96,
@@ -77271,7 +77331,7 @@
       {
         "nome": "ANTIULCEROSOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Similar(4), Antibiotico Cont. Referencia Oneroso(3193)",
+        "subgrupo": "Referencia Onerosos(40), PBMs(15)",
         "realizado_mtd": 28575.96,
         "meta_mtd": 44071.08,
         "gap_mtd": -15495.12,
@@ -77283,7 +77343,7 @@
       {
         "nome": "OTC- REPOSITOR FLORA INTESTINAL",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Similar Oneroso(3186), Similar(4)",
+        "subgrupo": "Referencia Onerosos(40), Referencia Liberado(25)",
         "realizado_mtd": 13276.66,
         "meta_mtd": 24678.39,
         "gap_mtd": -11401.73,
@@ -77319,7 +77379,7 @@
       {
         "nome": "VITAMINAS E SUPLEMENTOS MINERAIS",
         "grupo": "Conveniencia(10)",
-        "subgrupo": "Similar Oneroso(3186), PBM Referencia Liberado(3191)",
+        "subgrupo": "Generico Super Oneroso(3181), Referencia Onerosos(40)",
         "realizado_mtd": 100751.09,
         "meta_mtd": 110851.01,
         "gap_mtd": -10099.92,
@@ -77331,7 +77391,7 @@
       {
         "nome": "OTC- ANTIGRIPAIS/ANTITUSSIGENOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Similar Oneroso(3186), Similar(4)",
+        "subgrupo": "Referencia Onerosos(40), Referencia Liberado(25)",
         "realizado_mtd": 42231.33,
         "meta_mtd": 50347.6,
         "gap_mtd": -8116.27,
@@ -77354,7 +77414,7 @@
       },
       {
         "nome": "ELETROS DE BELEZA E CUIDADO PESSOAL",
-        "grupo": "Conveniencia(10)",
+        "grupo": "Perfumaria(2)",
         "subgrupo": "Perfumaria(8), Conveniencia - Bazar(3206)",
         "realizado_mtd": 4410.73,
         "meta_mtd": 11877.55,
@@ -77381,7 +77441,7 @@
       {
         "nome": "ANTIDIABETICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Generico Super Oneroso(3181), PBMs Combo(3211)",
+        "subgrupo": "Referencia Onerosos(40), PBMs(15)",
         "realizado_mtd": 1405680.16,
         "meta_mtd": 1295763.84,
         "gap_mtd": 109916.32,
@@ -77393,7 +77453,7 @@
       {
         "nome": "NUTRICAO INFANTIL",
         "grupo": "Nutricao(3090)",
-        "subgrupo": "Nutricao Leites(3154), Nutricao Outros(3155)",
+        "subgrupo": "Nutricao Leites(3154), Nutricao Formula(3222)",
         "realizado_mtd": 142205.16,
         "meta_mtd": 94012.88,
         "gap_mtd": 48192.28,
@@ -77405,7 +77465,7 @@
       {
         "nome": "LANCAMENTOS",
         "grupo": "Dermo-Cosmeticos(3089)",
-        "subgrupo": "PBM Controlado Cupom Desconto(3203), PBM Referencia Liberado(3191)",
+        "subgrupo": "Dermo-Cosmeticos(3151), Referencia Oneroso Controlado(77)",
         "realizado_mtd": 48618.92,
         "meta_mtd": 21082.79,
         "gap_mtd": 27536.13,
@@ -77417,7 +77477,7 @@
       {
         "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "PBM Controlado Cupom Desconto(3203), PBMs Combo Controlados(3212)",
+        "subgrupo": "Referencia Onerosos(40), PBMs Combo Controlados(3212)",
         "realizado_mtd": 158739.17,
         "meta_mtd": 137137.76,
         "gap_mtd": 21601.41,
@@ -77429,7 +77489,7 @@
       {
         "nome": "PROMOCIONAL GENERICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Generico Super Oneroso(3181), Genericos Onerosos Controlados(75)",
+        "subgrupo": "Genericos(3), Generico Avulso(17)",
         "realizado_mtd": 66794.36,
         "meta_mtd": 49215.17,
         "gap_mtd": 17579.19,
@@ -77441,7 +77501,7 @@
       {
         "nome": "CONTRACEPTIVOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+        "subgrupo": "PBMs(15), Genericos(3)",
         "realizado_mtd": 149256.25,
         "meta_mtd": 132528.33,
         "gap_mtd": 16727.92,
@@ -77452,8 +77512,8 @@
       },
       {
         "nome": "DERMO - HIDRATANTE FACIAL",
-        "grupo": "Dermo-Cosmeticos(3089)",
-        "subgrupo": "PBM Dermocosmetico(3169), Dermo-Cosmeticos(3151)",
+        "grupo": "Medicamentos(1)",
+        "subgrupo": "Dermo-Cosmeticos(3151), PBM Dermocosmetico(3169)",
         "realizado_mtd": 36233.2,
         "meta_mtd": 20593.27,
         "gap_mtd": 15639.93,
@@ -77465,7 +77525,7 @@
       {
         "nome": "FRALDAS INFANTIS",
         "grupo": "Perfumaria(2)",
-        "subgrupo": "Perfumaria(8), Fralda Exclusiva(3188)",
+        "subgrupo": "Fraldas(9), Perfumaria(8)",
         "realizado_mtd": 780151.61,
         "meta_mtd": 766222.56,
         "gap_mtd": 13929.05,
@@ -77477,7 +77537,7 @@
       {
         "nome": "ANTIPSICOTICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
+        "subgrupo": "PBMs Controlados(22), Referencia Especiais Controlados(74)",
         "realizado_mtd": 33495.8,
         "meta_mtd": 19815.41,
         "gap_mtd": 13680.39,
@@ -77489,7 +77549,7 @@
       {
         "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "PBMs Combo Controlados(3212), Genericos Onerosos Controlados(75)",
+        "subgrupo": "PBMs Combo Controlados(3212), PBMs Controlados(22)",
         "realizado_mtd": 33257.48,
         "meta_mtd": 20632.73,
         "gap_mtd": 12624.75,
@@ -77501,7 +77561,7 @@
       {
         "nome": "ANTIBIOTICOS SISTEMICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Antibiotico Cont. Referencia Oneroso(3193), Antibiotico Cont. Refer Av(35)",
+        "subgrupo": "Similar Controlado(27), Antibiotico Cont. Generico(33)",
         "realizado_mtd": 29640.88,
         "meta_mtd": 17381.33,
         "gap_mtd": 12259.55,
@@ -77512,8 +77572,8 @@
       },
       {
         "nome": "HIGIENE ORAL - CREME E GEL DENTAL",
-        "grupo": "Dermo-Cosmeticos(3089)",
-        "subgrupo": "Perfumaria(8), Referencia Liberado(25)",
+        "grupo": "Perfumaria(2)",
+        "subgrupo": "Perfumaria(8), Dermo-Cosmeticos Especial(3152)",
         "realizado_mtd": 36309.27,
         "meta_mtd": 24154.03,
         "gap_mtd": 12155.24,
@@ -77525,7 +77585,7 @@
       {
         "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+        "subgrupo": "Referencia Onerosos(40), PBMs(15)",
         "realizado_mtd": 52593.2,
         "meta_mtd": 41984.6,
         "gap_mtd": 10608.6,
@@ -77536,7 +77596,7 @@
       },
       {
         "nome": "CAPILAR - SHAMPOO",
-        "grupo": "Medicamentos(1)",
+        "grupo": "Perfumaria(2)",
         "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
         "realizado_mtd": 33151.09,
         "meta_mtd": 24025.22,
@@ -77549,7 +77609,7 @@
       {
         "nome": "KIT - SABONETE BARRAS",
         "grupo": "Perfumaria(2)",
-        "subgrupo": "Perfumaria(8), Perfumaria Exclusiva(3210)",
+        "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
         "realizado_mtd": 22927.59,
         "meta_mtd": 15590.68,
         "gap_mtd": 7336.91,
@@ -78204,7 +78264,7 @@
         {
           "nome": "FORMULAS INFANTIS",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Especiais(3156), Nutricao Leites(3154)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
           "realizado_mtd": 153257.74,
           "meta_mtd": 208817.16,
           "gap_mtd": -55559.42,
@@ -78228,7 +78288,7 @@
         {
           "nome": "OTC- VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Genericos(3)",
           "realizado_mtd": 56584.41,
           "meta_mtd": 97550.37,
           "gap_mtd": -40965.96,
@@ -78276,7 +78336,7 @@
         {
           "nome": "ANTIULCEROSOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Antibiotico Cont. Referencia Oneroso(3193)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 28575.96,
           "meta_mtd": 44071.08,
           "gap_mtd": -15495.12,
@@ -78288,7 +78348,7 @@
         {
           "nome": "OTC- REPOSITOR FLORA INTESTINAL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Referencia Liberado(25)",
           "realizado_mtd": 13276.66,
           "meta_mtd": 24678.39,
           "gap_mtd": -11401.73,
@@ -78324,7 +78384,7 @@
         {
           "nome": "VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Similar Oneroso(3186), PBM Referencia Liberado(3191)",
+          "subgrupo": "Generico Super Oneroso(3181), Referencia Onerosos(40)",
           "realizado_mtd": 100751.09,
           "meta_mtd": 110851.01,
           "gap_mtd": -10099.92,
@@ -78336,7 +78396,7 @@
         {
           "nome": "OTC- ANTIGRIPAIS/ANTITUSSIGENOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Referencia Liberado(25)",
           "realizado_mtd": 42231.33,
           "meta_mtd": 50347.6,
           "gap_mtd": -8116.27,
@@ -78359,7 +78419,7 @@
         },
         {
           "nome": "ELETROS DE BELEZA E CUIDADO PESSOAL",
-          "grupo": "Conveniencia(10)",
+          "grupo": "Perfumaria(2)",
           "subgrupo": "Perfumaria(8), Conveniencia - Bazar(3206)",
           "realizado_mtd": 4410.73,
           "meta_mtd": 11877.55,
@@ -78386,7 +78446,7 @@
         {
           "nome": "ANTIDIABETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Generico Super Oneroso(3181), PBMs Combo(3211)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 1405680.16,
           "meta_mtd": 1295763.84,
           "gap_mtd": 109916.32,
@@ -78398,7 +78458,7 @@
         {
           "nome": "NUTRICAO INFANTIL",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Leites(3154), Nutricao Outros(3155)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Formula(3222)",
           "realizado_mtd": 142205.16,
           "meta_mtd": 94012.88,
           "gap_mtd": 48192.28,
@@ -78410,7 +78470,7 @@
         {
           "nome": "LANCAMENTOS",
           "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), PBM Referencia Liberado(3191)",
+          "subgrupo": "Dermo-Cosmeticos(3151), Referencia Oneroso Controlado(77)",
           "realizado_mtd": 48618.92,
           "meta_mtd": 21082.79,
           "gap_mtd": 27536.13,
@@ -78422,7 +78482,7 @@
         {
           "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), PBMs Combo Controlados(3212)",
+          "subgrupo": "Referencia Onerosos(40), PBMs Combo Controlados(3212)",
           "realizado_mtd": 158739.17,
           "meta_mtd": 137137.76,
           "gap_mtd": 21601.41,
@@ -78434,7 +78494,7 @@
         {
           "nome": "PROMOCIONAL GENERICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Generico Super Oneroso(3181), Genericos Onerosos Controlados(75)",
+          "subgrupo": "Genericos(3), Generico Avulso(17)",
           "realizado_mtd": 66794.36,
           "meta_mtd": 49215.17,
           "gap_mtd": 17579.19,
@@ -78446,7 +78506,7 @@
         {
           "nome": "CONTRACEPTIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+          "subgrupo": "PBMs(15), Genericos(3)",
           "realizado_mtd": 149256.25,
           "meta_mtd": 132528.33,
           "gap_mtd": 16727.92,
@@ -78457,8 +78517,8 @@
         },
         {
           "nome": "DERMO - HIDRATANTE FACIAL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "PBM Dermocosmetico(3169), Dermo-Cosmeticos(3151)",
+          "grupo": "Medicamentos(1)",
+          "subgrupo": "Dermo-Cosmeticos(3151), PBM Dermocosmetico(3169)",
           "realizado_mtd": 36233.2,
           "meta_mtd": 20593.27,
           "gap_mtd": 15639.93,
@@ -78470,7 +78530,7 @@
         {
           "nome": "FRALDAS INFANTIS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria(8), Fralda Exclusiva(3188)",
+          "subgrupo": "Fraldas(9), Perfumaria(8)",
           "realizado_mtd": 780151.61,
           "meta_mtd": 766222.56,
           "gap_mtd": 13929.05,
@@ -78482,7 +78542,7 @@
         {
           "nome": "ANTIPSICOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
+          "subgrupo": "PBMs Controlados(22), Referencia Especiais Controlados(74)",
           "realizado_mtd": 33495.8,
           "meta_mtd": 19815.41,
           "gap_mtd": 13680.39,
@@ -78494,7 +78554,7 @@
         {
           "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo Controlados(3212), Genericos Onerosos Controlados(75)",
+          "subgrupo": "PBMs Combo Controlados(3212), PBMs Controlados(22)",
           "realizado_mtd": 33257.48,
           "meta_mtd": 20632.73,
           "gap_mtd": 12624.75,
@@ -78506,7 +78566,7 @@
         {
           "nome": "ANTIBIOTICOS SISTEMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Antibiotico Cont. Referencia Oneroso(3193), Antibiotico Cont. Refer Av(35)",
+          "subgrupo": "Similar Controlado(27), Antibiotico Cont. Generico(33)",
           "realizado_mtd": 29640.88,
           "meta_mtd": 17381.33,
           "gap_mtd": 12259.55,
@@ -78517,8 +78577,8 @@
         },
         {
           "nome": "HIGIENE ORAL - CREME E GEL DENTAL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Perfumaria(8), Referencia Liberado(25)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Perfumaria(8), Dermo-Cosmeticos Especial(3152)",
           "realizado_mtd": 36309.27,
           "meta_mtd": 24154.03,
           "gap_mtd": 12155.24,
@@ -78530,7 +78590,7 @@
         {
           "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 52593.2,
           "meta_mtd": 41984.6,
           "gap_mtd": 10608.6,
@@ -78541,7 +78601,7 @@
         },
         {
           "nome": "CAPILAR - SHAMPOO",
-          "grupo": "Medicamentos(1)",
+          "grupo": "Perfumaria(2)",
           "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 33151.09,
           "meta_mtd": 24025.22,
@@ -78554,7 +78614,7 @@
         {
           "nome": "KIT - SABONETE BARRAS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria(8), Perfumaria Exclusiva(3210)",
+          "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 22927.59,
           "meta_mtd": 15590.68,
           "gap_mtd": 7336.91,
@@ -79208,7 +79268,7 @@
         {
           "nome": "FRALDAS INFANTIS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria(8), Fralda Exclusiva(3188)",
+          "subgrupo": "Fraldas(9), Perfumaria(8)",
           "realizado_mtd": 331758.02,
           "meta_mtd": 354248.7,
           "gap_mtd": -22490.68,
@@ -79232,7 +79292,7 @@
         {
           "nome": "FORMULAS INFANTIS",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Especiais(3156), Nutricao Leites(3154)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
           "realizado_mtd": 79905.01,
           "meta_mtd": 92124.38,
           "gap_mtd": -12219.37,
@@ -79244,7 +79304,7 @@
         {
           "nome": "FRALDAS INFANTIS ROUPA",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Fraldas(9), Fralda Exclusiva(3188)",
           "realizado_mtd": 21755.88,
           "meta_mtd": 33100.06,
           "gap_mtd": -11344.18,
@@ -79268,7 +79328,7 @@
         {
           "nome": "OTC- VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Genericos(3)",
           "realizado_mtd": 35623.69,
           "meta_mtd": 45407.66,
           "gap_mtd": -9783.97,
@@ -79292,7 +79352,7 @@
         {
           "nome": "ANTIULCEROSOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Antibiotico Cont. Referencia Oneroso(3193)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 16025.04,
           "meta_mtd": 21393.78,
           "gap_mtd": -5368.74,
@@ -79364,7 +79424,7 @@
         {
           "nome": "OTC- REPOSITOR FLORA INTESTINAL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Referencia Liberado(25)",
           "realizado_mtd": 5368.39,
           "meta_mtd": 8406.02,
           "gap_mtd": -3037.63,
@@ -79375,7 +79435,7 @@
         },
         {
           "nome": "ELETROS DE BELEZA E CUIDADO PESSOAL",
-          "grupo": "Conveniencia(10)",
+          "grupo": "Perfumaria(2)",
           "subgrupo": "Perfumaria(8), Conveniencia - Bazar(3206)",
           "realizado_mtd": 1835.34,
           "meta_mtd": 4837.45,
@@ -79390,7 +79450,7 @@
         {
           "nome": "ANTIDIABETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Generico Super Oneroso(3181), PBMs Combo(3211)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 1007455.16,
           "meta_mtd": 773103.87,
           "gap_mtd": 234351.29,
@@ -79402,7 +79462,7 @@
         {
           "nome": "NUTRICAO INFANTIL",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Leites(3154), Nutricao Outros(3155)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Formula(3222)",
           "realizado_mtd": 77144.74,
           "meta_mtd": 46432.29,
           "gap_mtd": 30712.45,
@@ -79414,7 +79474,7 @@
         {
           "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), PBMs Combo Controlados(3212)",
+          "subgrupo": "Referencia Onerosos(40), PBMs Combo Controlados(3212)",
           "realizado_mtd": 116506.7,
           "meta_mtd": 91356.07,
           "gap_mtd": 25150.63,
@@ -79426,7 +79486,7 @@
         {
           "nome": "PROMOCIONAL GENERICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Generico Super Oneroso(3181), Genericos Onerosos Controlados(75)",
+          "subgrupo": "Genericos(3), Generico Avulso(17)",
           "realizado_mtd": 40419.42,
           "meta_mtd": 23247.43,
           "gap_mtd": 17171.99,
@@ -79438,7 +79498,7 @@
         {
           "nome": "LANCAMENTOS",
           "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), PBM Referencia Liberado(3191)",
+          "subgrupo": "Dermo-Cosmeticos(3151), Referencia Oneroso Controlado(77)",
           "realizado_mtd": 27753.64,
           "meta_mtd": 10672.1,
           "gap_mtd": 17081.54,
@@ -79450,7 +79510,7 @@
         {
           "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 36077.44,
           "meta_mtd": 24024.37,
           "gap_mtd": 12053.07,
@@ -79462,7 +79522,7 @@
         {
           "nome": "CONTRACEPTIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+          "subgrupo": "PBMs(15), Genericos(3)",
           "realizado_mtd": 67863.73,
           "meta_mtd": 56196.5,
           "gap_mtd": 11667.23,
@@ -79474,7 +79534,7 @@
         {
           "nome": "ANTIBIOTICOS SISTEMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Antibiotico Cont. Referencia Oneroso(3193), Antibiotico Cont. Refer Av(35)",
+          "subgrupo": "Similar Controlado(27), Antibiotico Cont. Generico(33)",
           "realizado_mtd": 23306.88,
           "meta_mtd": 11961.57,
           "gap_mtd": 11345.31,
@@ -79486,7 +79546,7 @@
         {
           "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo Controlados(3212), Genericos Onerosos Controlados(75)",
+          "subgrupo": "PBMs Combo Controlados(3212), PBMs Controlados(22)",
           "realizado_mtd": 26131.52,
           "meta_mtd": 14844.46,
           "gap_mtd": 11287.06,
@@ -79498,7 +79558,7 @@
         {
           "nome": "ANTIPSICOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
+          "subgrupo": "PBMs Controlados(22), Referencia Especiais Controlados(74)",
           "realizado_mtd": 24698.48,
           "meta_mtd": 13872.66,
           "gap_mtd": 10825.82,
@@ -79509,8 +79569,8 @@
         },
         {
           "nome": "HIGIENE ORAL - CREME E GEL DENTAL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Perfumaria(8), Referencia Liberado(25)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Perfumaria(8), Dermo-Cosmeticos Especial(3152)",
           "realizado_mtd": 20610.83,
           "meta_mtd": 10694.98,
           "gap_mtd": 9915.85,
@@ -79522,7 +79582,7 @@
         {
           "nome": "ANTI-HIPERTENSIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Generico Super Oneroso(3181), Genericos Onerosos(43)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 32221.17,
           "meta_mtd": 24275.84,
           "gap_mtd": 7945.33,
@@ -79533,8 +79593,8 @@
         },
         {
           "nome": "DERMO - HIDRATANTE FACIAL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "PBM Dermocosmetico(3169), Dermo-Cosmeticos(3151)",
+          "grupo": "Medicamentos(1)",
+          "subgrupo": "Dermo-Cosmeticos(3151), PBM Dermocosmetico(3169)",
           "realizado_mtd": 15648.83,
           "meta_mtd": 8421.53,
           "gap_mtd": 7227.3,
@@ -79545,7 +79605,7 @@
         },
         {
           "nome": "CAPILAR - SHAMPOO",
-          "grupo": "Medicamentos(1)",
+          "grupo": "Perfumaria(2)",
           "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 18357.11,
           "meta_mtd": 11243.89,
@@ -79558,7 +79618,7 @@
         {
           "nome": "TESTES DIAGNOSTICOS E APARELHOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Testes Laboratoriais Remotos(3163)",
+          "subgrupo": "PBMs(15), Referencia Liberado(25)",
           "realizado_mtd": 15327.69,
           "meta_mtd": 8525.27,
           "gap_mtd": 6802.42,
@@ -80212,7 +80272,7 @@
         {
           "nome": "FRALDAS INFANTIS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria(8), Fralda Exclusiva(3188)",
+          "subgrupo": "Fraldas(9), Perfumaria(8)",
           "realizado_mtd": 88023.46,
           "meta_mtd": 233064.51,
           "gap_mtd": -145041.05,
@@ -80224,7 +80284,7 @@
         {
           "nome": "FORMULAS INFANTIS",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Especiais(3156), Nutricao Leites(3154)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
           "realizado_mtd": 17089.3,
           "meta_mtd": 76838.35,
           "gap_mtd": -59749.05,
@@ -80235,8 +80295,8 @@
         },
         {
           "nome": "OTC- ANALGESICOS/ANTITERMICOS",
-          "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Referencia Onerosos(40), Genericos(3)",
           "realizado_mtd": 4919.42,
           "meta_mtd": 37612.36,
           "gap_mtd": -32692.94,
@@ -80260,7 +80320,7 @@
         {
           "nome": "OTC- ANTIGRIPAIS/ANTITUSSIGENOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Referencia Liberado(25)",
           "realizado_mtd": 4408.37,
           "meta_mtd": 28143.9,
           "gap_mtd": -23735.53,
@@ -80271,8 +80331,8 @@
         },
         {
           "nome": "TOALHAS UMEDECIDAS - INFANTIL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Lencos e Toalhas Umedecidas(123), Fralda Exclusiva(3188)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Referencia Liberado(25), Lencos e Toalhas Umedecidas(123)",
           "realizado_mtd": 9303.66,
           "meta_mtd": 31452.3,
           "gap_mtd": -22148.64,
@@ -80284,7 +80344,7 @@
         {
           "nome": "CONTRACEPTIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+          "subgrupo": "PBMs(15), Genericos(3)",
           "realizado_mtd": 26581.4,
           "meta_mtd": 46016.92,
           "gap_mtd": -19435.52,
@@ -80296,7 +80356,7 @@
         {
           "nome": "FRALDAS INFANTIS ROUPA",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Fraldas(9), Fralda Exclusiva(3188)",
           "realizado_mtd": 6910.15,
           "meta_mtd": 25321.23,
           "gap_mtd": -18411.08,
@@ -80320,7 +80380,7 @@
         {
           "nome": "DISFUNCAO ERETIL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Genericos Onerosos(43), Genericos(3)",
+          "subgrupo": "Referencia Onerosos(40), Genericos(3)",
           "realizado_mtd": 3939.41,
           "meta_mtd": 15615.4,
           "gap_mtd": -11675.99,
@@ -80356,7 +80416,7 @@
         {
           "nome": "OTC- REPOSITOR FLORA INTESTINAL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Referencia Liberado(25)",
           "realizado_mtd": 1569.85,
           "meta_mtd": 11904.86,
           "gap_mtd": -10335.01,
@@ -80368,7 +80428,7 @@
         {
           "nome": "OTC- ANTIALERGICOS/ANTI-HISTAMINICO SIST",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Genericos(3)",
           "realizado_mtd": 3001.99,
           "meta_mtd": 13010.92,
           "gap_mtd": -10008.93,
@@ -80394,7 +80454,7 @@
         {
           "nome": "ANTIDIABETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Generico Super Oneroso(3181), PBMs Combo(3211)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 395654.37,
           "meta_mtd": 31363.36,
           "gap_mtd": 364291.01,
@@ -80406,7 +80466,7 @@
         {
           "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), PBMs Combo Controlados(3212)",
+          "subgrupo": "Referencia Onerosos(40), PBMs Combo Controlados(3212)",
           "realizado_mtd": 42232.47,
           "meta_mtd": 16.98,
           "gap_mtd": 42215.49,
@@ -80430,7 +80490,7 @@
         {
           "nome": "ANTIPSICOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
+          "subgrupo": "PBMs Controlados(22), Referencia Especiais Controlados(74)",
           "realizado_mtd": 8797.32,
           "meta_mtd": 0.0,
           "gap_mtd": 8797.32,
@@ -80442,7 +80502,7 @@
         {
           "nome": "LANCAMENTOS",
           "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), PBM Referencia Liberado(3191)",
+          "subgrupo": "Dermo-Cosmeticos(3151), Referencia Oneroso Controlado(77)",
           "realizado_mtd": 10976.12,
           "meta_mtd": 3652.95,
           "gap_mtd": 7323.17,
@@ -80454,7 +80514,7 @@
         {
           "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo Controlados(3212), Genericos Onerosos Controlados(75)",
+          "subgrupo": "PBMs Combo Controlados(3212), PBMs Controlados(22)",
           "realizado_mtd": 7125.96,
           "meta_mtd": 0.0,
           "gap_mtd": 7125.96,
@@ -80466,7 +80526,7 @@
         {
           "nome": "ANTIBIOTICOS SISTEMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Antibiotico Cont. Referencia Oneroso(3193), Antibiotico Cont. Refer Av(35)",
+          "subgrupo": "Similar Controlado(27), Antibiotico Cont. Generico(33)",
           "realizado_mtd": 6254.01,
           "meta_mtd": 9.21,
           "gap_mtd": 6244.8,
@@ -80478,7 +80538,7 @@
         {
           "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 10888.07,
           "meta_mtd": 5365.93,
           "gap_mtd": 5522.14,
@@ -80490,7 +80550,7 @@
         {
           "nome": "TROMBOLITICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Generico Super Oneroso(3181), Genericos Onerosos(43)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 5525.78,
           "meta_mtd": 3189.18,
           "gap_mtd": 2336.6,
@@ -80502,7 +80562,7 @@
         {
           "nome": "PSICOESTIMULANTES",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Genericos Onerosos Controlados(75), Referencia Controlado(5)",
+          "subgrupo": "Referencia Controlado(5), PBMs Controlados(22)",
           "realizado_mtd": 2201.48,
           "meta_mtd": 0.74,
           "gap_mtd": 2200.74,
@@ -80514,7 +80574,7 @@
         {
           "nome": "ANALGESICOS OPIOIDES/NARCOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), PBMs Combo Controlados(3212)",
+          "subgrupo": "PBMs Combo Controlados(3212), PBMs Controlados(22)",
           "realizado_mtd": 1871.43,
           "meta_mtd": 17.38,
           "gap_mtd": 1854.05,
@@ -80538,7 +80598,7 @@
         {
           "nome": "ANTI-ALZHEIMER",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Genericos Onerosos Controlados(75), Referencia Super Onerosos Controlado(3177)",
+          "subgrupo": "PBMs Controlados(22), Generico Controlado Super Oneroso(3180)",
           "realizado_mtd": 1549.95,
           "meta_mtd": 0.0,
           "gap_mtd": 1549.95,
@@ -80550,7 +80610,7 @@
         {
           "nome": "CARDIOTERAPIA",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), PBMs Combo(3211)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 2661.36,
           "meta_mtd": 1332.13,
           "gap_mtd": 1329.23,
@@ -80562,7 +80622,7 @@
         {
           "nome": "NEUROLOGICOS / SISTEMA NERVOSO",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Genericos Onerosos(43)",
+          "subgrupo": "Referencia Onerosos(40), Genericos(3)",
           "realizado_mtd": 1352.61,
           "meta_mtd": 125.79,
           "gap_mtd": 1226.82,
@@ -81216,7 +81276,7 @@
         {
           "nome": "ANTIDIABETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Generico Super Oneroso(3181), PBMs Combo(3211)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 2570.63,
           "meta_mtd": 491296.6,
           "gap_mtd": -488725.97,
@@ -81228,7 +81288,7 @@
         {
           "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), PBMs Combo Controlados(3212)",
+          "subgrupo": "Referencia Onerosos(40), PBMs Combo Controlados(3212)",
           "realizado_mtd": 0.0,
           "meta_mtd": 45764.72,
           "gap_mtd": -45764.72,
@@ -81252,7 +81312,7 @@
         {
           "nome": "OTC- VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Genericos(3)",
           "realizado_mtd": 10563.33,
           "meta_mtd": 32513.29,
           "gap_mtd": -21949.96,
@@ -81264,7 +81324,7 @@
         {
           "nome": "VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Similar Oneroso(3186), PBM Referencia Liberado(3191)",
+          "subgrupo": "Generico Super Oneroso(3181), Referencia Onerosos(40)",
           "realizado_mtd": 18854.48,
           "meta_mtd": 35972.31,
           "gap_mtd": -17117.83,
@@ -81312,7 +81372,7 @@
         {
           "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 5627.69,
           "meta_mtd": 12594.3,
           "gap_mtd": -6966.61,
@@ -81324,7 +81384,7 @@
         {
           "nome": "ANTIPSICOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
+          "subgrupo": "PBMs Controlados(22), Referencia Especiais Controlados(74)",
           "realizado_mtd": 0.0,
           "meta_mtd": 5942.76,
           "gap_mtd": -5942.76,
@@ -81348,7 +81408,7 @@
         {
           "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo Controlados(3212), Genericos Onerosos Controlados(75)",
+          "subgrupo": "PBMs Combo Controlados(3212), PBMs Controlados(22)",
           "realizado_mtd": 0.0,
           "meta_mtd": 5788.27,
           "gap_mtd": -5788.27,
@@ -81360,7 +81420,7 @@
         {
           "nome": "ANTIBIOTICOS SISTEMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Antibiotico Cont. Referencia Oneroso(3193), Antibiotico Cont. Refer Av(35)",
+          "subgrupo": "Similar Controlado(27), Antibiotico Cont. Generico(33)",
           "realizado_mtd": 79.99,
           "meta_mtd": 5410.56,
           "gap_mtd": -5330.57,
@@ -81372,7 +81432,7 @@
         {
           "nome": "TROMBOLITICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Generico Super Oneroso(3181), Genericos Onerosos(43)",
+          "subgrupo": "Referencia Onerosos(40), PBMs(15)",
           "realizado_mtd": 3159.92,
           "meta_mtd": 8402.24,
           "gap_mtd": -5242.32,
@@ -81384,7 +81444,7 @@
         {
           "nome": "PSICOESTIMULANTES",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Genericos Onerosos Controlados(75), Referencia Controlado(5)",
+          "subgrupo": "Referencia Controlado(5), PBMs Controlados(22)",
           "realizado_mtd": 0.0,
           "meta_mtd": 4201.73,
           "gap_mtd": -4201.73,
@@ -81398,7 +81458,7 @@
         {
           "nome": "FRALDAS INFANTIS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria(8), Fralda Exclusiva(3188)",
+          "subgrupo": "Fraldas(9), Perfumaria(8)",
           "realizado_mtd": 360370.13,
           "meta_mtd": 178909.34,
           "gap_mtd": 181460.79,
@@ -81410,7 +81470,7 @@
         {
           "nome": "FRALDAS INFANTIS ROUPA",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Fraldas(9), Fralda Exclusiva(3188)",
           "realizado_mtd": 52331.98,
           "meta_mtd": 17140.34,
           "gap_mtd": 35191.64,
@@ -81421,8 +81481,8 @@
         },
         {
           "nome": "OTC- ANALGESICOS/ANTITERMICOS",
-          "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Referencia Onerosos(40), Genericos(3)",
           "realizado_mtd": 31847.92,
           "meta_mtd": 6907.4,
           "gap_mtd": 24940.52,
@@ -81434,7 +81494,7 @@
         {
           "nome": "CONTRACEPTIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Generico Super Oneroso(3181)",
+          "subgrupo": "PBMs(15), Genericos(3)",
           "realizado_mtd": 54811.12,
           "meta_mtd": 30314.91,
           "gap_mtd": 24496.21,
@@ -81446,7 +81506,7 @@
         {
           "nome": "NUTRICAO INFANTIL",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Leites(3154), Nutricao Outros(3155)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Formula(3222)",
           "realizado_mtd": 40040.4,
           "meta_mtd": 17546.29,
           "gap_mtd": 22494.11,
@@ -81457,8 +81517,8 @@
         },
         {
           "nome": "TOALHAS UMEDECIDAS - INFANTIL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Lencos e Toalhas Umedecidas(123), Fralda Exclusiva(3188)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Referencia Liberado(25), Lencos e Toalhas Umedecidas(123)",
           "realizado_mtd": 37085.36,
           "meta_mtd": 14993.61,
           "gap_mtd": 22091.75,
@@ -81482,7 +81542,7 @@
         {
           "nome": "FORMULAS INFANTIS",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Especiais(3156), Nutricao Leites(3154)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
           "realizado_mtd": 56263.43,
           "meta_mtd": 39854.43,
           "gap_mtd": 16409.0,
@@ -81494,7 +81554,7 @@
         {
           "nome": "OTC- ANTIGRIPAIS/ANTITUSSIGENOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Referencia Liberado(25)",
           "realizado_mtd": 22490.45,
           "meta_mtd": 6578.11,
           "gap_mtd": 15912.34,
@@ -81530,7 +81590,7 @@
         {
           "nome": "NUTRICAO ESPORTIVA",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Conveniencia - Bazar(3206), Similar(4)",
+          "subgrupo": "Referencia Liberado(25), Conveniencia - Pereciveis(3205)",
           "realizado_mtd": 18618.58,
           "meta_mtd": 7300.84,
           "gap_mtd": 11317.74,
@@ -81541,8 +81601,8 @@
         },
         {
           "nome": "DERMO - HIDRATANTE FACIAL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "PBM Dermocosmetico(3169), Dermo-Cosmeticos(3151)",
+          "grupo": "Medicamentos(1)",
+          "subgrupo": "Dermo-Cosmeticos(3151), PBM Dermocosmetico(3169)",
           "realizado_mtd": 15952.85,
           "meta_mtd": 4785.14,
           "gap_mtd": 11167.71,
@@ -81566,7 +81626,7 @@
         {
           "nome": "ANALGESICOS / ANTITERMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia Onerosos(40), Genericos(3)",
           "realizado_mtd": 13293.45,
           "meta_mtd": 3253.49,
           "gap_mtd": 10039.96,
@@ -82020,16 +82080,22 @@
         gapEl.className = 'badge-trend ' + (obj.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
 
         const desvioEl = document.getElementById(`tabDesvioPct${id}`);
-        desvioEl.textContent = fmtSignPct(obj.desvio_pct);
-        desvioEl.style.color = obj.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        if (desvioEl) {
+          desvioEl.textContent = fmtSignPct(obj.desvio_pct);
+          desvioEl.style.color = obj.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        }
 
         const momEl = document.getElementById(`tabMom${id}`);
-        momEl.textContent = fmtSignPct(obj.crescimento_mom_pct);
-        momEl.style.color = obj.crescimento_mom_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        if (momEl) {
+          momEl.textContent = fmtSignPct(obj.crescimento_mom_pct);
+          momEl.style.color = obj.crescimento_mom_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        }
 
         const yoyEl = document.getElementById(`tabYoy${id}`);
-        yoyEl.textContent = fmtSignPct(obj.crescimento_yoy_pct);
-        yoyEl.style.color = obj.crescimento_yoy_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        if (yoyEl) {
+          yoyEl.textContent = fmtSignPct(obj.crescimento_yoy_pct);
+          yoyEl.style.color = obj.crescimento_yoy_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        }
       };
 
       fillTab('Total', k.total);
@@ -82041,63 +82107,100 @@
     function updateKpis() {
       const canais = window.DASHBOARD_DATA.kpis.canais;
       const c = canais[activeChannel] || canais.total;
-      const pctCurva = window.DASHBOARD_DATA.kpis.pct_curva_acum;
+      const pctCurva = window.DASHBOARD_DATA.kpis.pct_curva_acum || 10.73;
 
-      document.getElementById('kpiVendaMtd').textContent = fmtMoney(c.venda_mtd);
-      document.getElementById('kpiMetaMtd').textContent = fmtMoney(c.meta_mtd);
-      document.getElementById('kpiPctCurva').textContent = pctCurva + '%';
+      // 1. Venda Realizada MTD
+      const elVenda = document.getElementById('kpiVendaMtd');
+      if (elVenda) { elVenda.textContent = fmtMoney(c.venda_mtd); }
+      const metaRef = document.getElementById('kpiMetaMtdRef');
+      if (metaRef) { metaRef.textContent = fmtMoney(c.meta_mtd); }
+      const curvaRef = document.getElementById('kpiPctCurva');
+      if (curvaRef) { curvaRef.textContent = pctCurva + '%'; }
 
-      // Atingimento
+      // 2. Atingimento & GAP MTD
       const ating = c.ating_mtd_pct;
       const atingElem = document.getElementById('kpiAtingMtd');
-      atingElem.textContent = fmtPct(ating);
+      if (atingElem) {
+        atingElem.textContent = fmtPct(ating);
+        atingElem.style.color = ating >= 100 ? 'var(--apple-green)' : (ating >= 90 ? 'var(--apple-orange)' : 'var(--apple-red)');
+      }
       const barElem = document.getElementById('kpiProgressBar');
-      barElem.style.width = Math.min(ating, 100) + '%';
-      
-      if (ating >= 100) {
-        atingElem.style.color = 'var(--apple-green)';
-        barElem.style.background = 'var(--apple-green)';
-      } else if (ating >= 90) {
-        atingElem.style.color = 'var(--apple-orange)';
-        barElem.style.background = 'var(--apple-orange)';
-      } else {
-        atingElem.style.color = 'var(--apple-red)';
-        barElem.style.background = 'var(--apple-red)';
+      if (barElem) {
+        barElem.style.width = Math.min(ating, 100) + '%';
+        barElem.style.background = ating >= 100 ? 'var(--apple-green)' : (ating >= 90 ? 'var(--apple-orange)' : 'var(--apple-red)');
+      }
+      const gapBadge = document.getElementById('kpiGapBadge');
+      if (gapBadge) {
+        gapBadge.textContent = (c.gap_mtd >= 0 ? '+' : '') + fmtMoney(c.gap_mtd) + (c.gap_mtd >= 0 ? ' Superávit' : ' Déficit');
+        gapBadge.className = 'badge-trend ' + (c.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
+      }
+      const desvioRef = document.getElementById('kpiDesvioPctRef');
+      if (desvioRef) {
+        desvioRef.textContent = `Desvio: ${fmtSignPct(c.desvio_pct)}`;
       }
 
-      // Desvio R$ e Desvio %
-      const gapElem = document.getElementById('kpiGapMtd');
-      gapElem.textContent = (c.gap_mtd >= 0 ? '+' : '') + fmtMoney(c.gap_mtd);
-      gapElem.style.color = c.gap_mtd >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
-      
-      const desvioBadge = document.getElementById('kpiDesvioPctBadge');
-      desvioBadge.textContent = fmtSignPct(c.desvio_pct);
-      desvioBadge.className = 'badge-trend ' + (c.desvio_pct >= 0 ? 'trend-pos' : 'trend-neg');
-      document.getElementById('kpiGapStatus').textContent = c.gap_mtd >= 0 ? 'Superávit Meta' : 'Déficit Meta';
+      // 3. Diária Necessária (Run Rate)
+      const diasRestantes = c.dias_restantes || 27;
+      const diariaNec = c.diaria_necessaria !== undefined ? c.diaria_necessaria : (Math.max(0, (c.meta_mensal - c.venda_mtd)) / diasRestantes);
+      const diariaElem = document.getElementById('kpiDiariaNec');
+      if (diariaElem) { diariaElem.textContent = fmtMoney(diariaNec) + ' / dia'; }
 
-      // Projeção
-      document.getElementById('kpiProjecao').textContent = fmtMoney(c.projecao_fechamento);
-      const gapProj = (c.projecao_fechamento || 0) - (c.meta_mensal || 0);
-      const atingProjElem = document.getElementById('kpiAtingProj');
-      atingProjElem.textContent = (gapProj >= 0 ? '+' : '') + fmtMoney(gapProj) + ' vs Meta';
-      atingProjElem.className = 'badge-trend ' + (gapProj >= 0 ? 'trend-pos' : 'trend-neg');
-      document.getElementById('kpiMetaMensalRef').textContent = `Meta Mês: ${fmtMoney(c.meta_mensal)}`;
+      const ritmoDiff = c.ritmo_diff !== undefined ? c.ritmo_diff : ((c.venda_mtd / 3) - diariaNec);
+      const ritmoBadge = document.getElementById('kpiRitmoBadge');
+      if (ritmoBadge) {
+        const isRitmoPos = ritmoDiff >= 0;
+        ritmoBadge.textContent = (isRitmoPos ? '+' : '') + fmtMoney(ritmoDiff) + '/dia Ritmo';
+        ritmoBadge.className = 'badge-trend ' + (isRitmoPos ? 'trend-pos' : 'trend-neg');
+      }
+      const diasRef = document.getElementById('kpiDiasRestantesRef');
+      if (diasRef) {
+        const falta = c.falta_para_meta !== undefined ? c.falta_para_meta : Math.max(0, (c.meta_mensal - c.venda_mtd));
+        const faltaStr = falta >= 1000000 ? ('R$ ' + (falta / 1000000).toFixed(1) + 'M') : fmtMoney(falta);
+        diasRef.textContent = diasRestantes + 'd rest. (' + faltaStr + ')';
+      }
 
-      // YoY
-      const yoy = c.crescimento_yoy_pct || 0;
-      const yoyBadge = document.getElementById('kpiYoYBadge');
-      yoyBadge.textContent = (yoy >= 0 ? '↑ +' : '↓ ') + yoy.toFixed(1) + '% YoY';
-      yoyBadge.className = 'badge-trend ' + (yoy >= 0 ? 'trend-pos' : 'trend-neg');
-      document.getElementById('kpiYoYDiff').textContent = (c.crescimento_yoy_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_yoy_diff);
-
-      // MoM
+      // 4. Crescimento MoM (vs Ago/26)
       const mom = c.crescimento_mom_pct || 0;
       const momElem = document.getElementById('kpiMoMValue');
-      momElem.textContent = fmtSignPct(mom);
-      momElem.style.color = mom >= 0 ? 'var(--apple-green)' : 'var(--apple-red)';
+      if (momElem) {
+        momElem.textContent = fmtSignPct(mom);
+        momElem.style.color = mom >= 0 ? 'var(--apple-green)' : 'var(--apple-red)';
+      }
       const momBadge = document.getElementById('kpiMoMBadge');
-      momBadge.textContent = (c.crescimento_mom_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_mom_diff);
-      momBadge.className = 'badge-trend ' + (c.crescimento_mom_diff >= 0 ? 'trend-pos' : 'trend-neg');
+      if (momBadge) {
+        momBadge.textContent = (c.crescimento_mom_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_mom_diff);
+        momBadge.className = 'badge-trend ' + (c.crescimento_mom_diff >= 0 ? 'trend-pos' : 'trend-neg');
+      }
+
+      // 5. Evolução YoY (vs Set/25)
+      const yoy = c.crescimento_yoy_pct || 0;
+      const yoyElem = document.getElementById('kpiYoYValue');
+      if (yoyElem) {
+        yoyElem.textContent = fmtSignPct(yoy);
+        yoyElem.style.color = yoy >= 0 ? 'var(--apple-green)' : 'var(--apple-red)';
+      }
+      const yoyBadge = document.getElementById('kpiYoYBadge');
+      if (yoyBadge) {
+        yoyBadge.textContent = (c.crescimento_yoy_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_yoy_diff);
+        yoyBadge.className = 'badge-trend ' + (c.crescimento_yoy_diff >= 0 ? 'trend-pos' : 'trend-neg');
+      }
+
+      // 6. Projeção de Fechamento
+      const projElem = document.getElementById('kpiProjecao');
+      if (projElem) { projElem.textContent = fmtMoney(c.projecao_fechamento); }
+      const gapProj = (c.projecao_fechamento || 0) - (c.meta_mensal || 0);
+      const atingProjElem = document.getElementById('kpiAtingProj');
+      if (atingProjElem) {
+        const gapAbs = Math.abs(gapProj);
+        const gapProjStr = gapAbs >= 1000000 ? ('R$ ' + (gapAbs / 1000000).toFixed(1) + 'M') : (gapAbs >= 1000 ? ('R$ ' + (gapAbs / 1000).toFixed(1) + 'k') : fmtMoney(gapAbs));
+        atingProjElem.textContent = (gapProj >= 0 ? '+' : '-') + gapProjStr + ' vs Meta';
+        atingProjElem.className = 'badge-trend ' + (gapProj >= 0 ? 'trend-pos' : 'trend-neg');
+      }
+      const metaMesElem = document.getElementById('kpiMetaMensalRef');
+      if (metaMesElem) {
+        const metaM = (c.meta_mensal / 1000000).toFixed(1);
+        metaMesElem.textContent = 'Meta Mês: R$ ' + metaM + 'M';
+      }
     }
 
     /* NOVO GRÁFICO DIÁRIO COM DESVIO % POR DIA (SOLICITADO PELO USUÁRIO) */

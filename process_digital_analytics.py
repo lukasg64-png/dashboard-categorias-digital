@@ -227,6 +227,30 @@ def main():
     gap_mtd_site = round(real_acum_site - meta_site_mtd, 2)
     gap_mtd_mkt = round(real_acum_mkt - meta_mkt_mtd, 2)
 
+    dias_decorridos = max_dia
+    dias_restantes = 30 - max_dia
+
+    def calc_run_rate(venda, meta_mes):
+        falta = max(0.0, meta_mes - venda)
+        diaria_nec = round(falta / dias_restantes, 2) if dias_restantes > 0 else 0.0
+        media_atual = round(venda / dias_decorridos, 2) if dias_decorridos > 0 else 0.0
+        diff = round(media_atual - diaria_nec, 2)
+        status = 'favoravel' if diff >= 0 else 'desafiador'
+        return {
+            'falta_para_meta': round(falta, 2),
+            'diaria_necessaria': diaria_nec,
+            'media_diaria_atual': media_atual,
+            'ritmo_diff': diff,
+            'ritmo_status': status,
+            'dias_decorridos': dias_decorridos,
+            'dias_restantes': dias_restantes
+        }
+
+    rr_tot = calc_run_rate(real_acum_total, meta_total_mensal)
+    rr_app = calc_run_rate(real_acum_app, meta_app_mensal)
+    rr_site = calc_run_rate(real_acum_site, meta_site_mensal)
+    rr_mkt = calc_run_rate(real_acum_mkt, meta_mkt_mensal)
+
     kpis_executivos = {
         'data_corte': f"01 a {max_dia:02d}/09/2026 (D-1)",
         'max_dia': max_dia,
@@ -254,7 +278,8 @@ def main():
                 'crescimento_mom_diff': mom_diff_tot,
                 'v25_mtd': round(v25_mtd_tot, 2),
                 'crescimento_yoy_pct': yoy_pct_tot,
-                'crescimento_yoy_diff': yoy_diff_tot
+                'crescimento_yoy_diff': yoy_diff_tot,
+                **rr_tot
             },
             'app': {
                 'id': 'app',
@@ -277,7 +302,8 @@ def main():
                 'crescimento_mom_diff': mom_diff_app,
                 'v25_mtd': round(v25_mtd_app, 2),
                 'crescimento_yoy_pct': yoy_pct_app,
-                'crescimento_yoy_diff': yoy_diff_app
+                'crescimento_yoy_diff': yoy_diff_app,
+                **rr_app
             },
             'site': {
                 'id': 'site',
@@ -300,7 +326,8 @@ def main():
                 'crescimento_mom_diff': mom_diff_site,
                 'v25_mtd': round(v25_mtd_site, 2),
                 'crescimento_yoy_pct': yoy_pct_site,
-                'crescimento_yoy_diff': yoy_diff_site
+                'crescimento_yoy_diff': yoy_diff_site,
+                **rr_site
             },
             'marketplace': {
                 'id': 'marketplace',
@@ -323,7 +350,8 @@ def main():
                 'crescimento_mom_diff': mom_diff_mkt,
                 'v25_mtd': round(v25_mtd_mkt, 2),
                 'crescimento_yoy_pct': yoy_pct_mkt,
-                'crescimento_yoy_diff': yoy_diff_mkt
+                'crescimento_yoy_diff': yoy_diff_mkt,
+                **rr_mkt
             }
         }
     }
