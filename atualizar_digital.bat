@@ -21,14 +21,29 @@ python -u process_digital_analytics.py
 if errorlevel 1 goto :erro
 
 echo.
-echo [4/4] Compilando Dashboard Executivo (index.html)...
+echo [4/5] Compilando Dashboard Executivo (index.html)...
 python -u build_dashboard.py
 if errorlevel 1 goto :erro
 
 echo.
+echo [5/5] Publicando Atualizacoes no Git (GitHub Pages ^& Gitea)...
+git add index.html data/*.json data/*.parquet >nul 2>&1
+git diff --staged --quiet
+if errorlevel 1 (
+    git commit -m "Auto-sync Qlik Sense Digital (%date% %time%)"
+    git push github main --quiet
+    git push github HEAD:gh-pages --quiet
+    git push origin HEAD:main --quiet
+    echo Atualizacoes enviadas para o GitHub Pages e Gitea!
+) else (
+    echo Nenhum arquivo alterado para publicacao.
+)
+
+echo.
 echo ======================================================================
 echo ATUALIZACAO CONCLUIDA COM SUCESSO!
-echo Dashboard atualizado: index.html
+echo Dashboard atualizado localmente e online no GitHub Pages:
+echo https://lukasg64-png.github.io/dashboard-categorias-digital/
 echo ======================================================================
 popd
 exit /b 0
