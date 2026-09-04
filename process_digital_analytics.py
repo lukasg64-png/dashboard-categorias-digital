@@ -804,10 +804,58 @@ def main():
         det_subs = sorted(subs_validos, key=lambda x: x['canais'][ch]['gap_mtd'])[:15]
         acel_subs = sorted(subs_validos, key=lambda x: x['canais'][ch]['gap_mtd'], reverse=True)[:15]
 
-        # Linhas
-        lins_validas = [l for l in tabela_linhas if l['canais'][ch]['meta_mtd'] > 500 or l['canais'][ch]['realizado_mtd'] > 500]
-        det_lins = sorted(lins_validas, key=lambda x: x['canais'][ch]['gap_mtd'])[:15]
-        acel_lins = sorted(lins_validas, key=lambda x: x['canais'][ch]['gap_mtd'], reverse=True)[:15]
+        # Linhas Consolidadas por Nome Único (Garante 100% nomes e números exclusivos)
+        linhas_unicas_dict = defaultdict(lambda: {
+            'linha': '',
+            'grupos': set(),
+            'subgrupos': set(),
+            'realizado_mtd': 0.0,
+            'meta_mtd': 0.0,
+            'meta_mensal': 0.0,
+            'v26_06_mtd': 0.0,
+            'v25_mtd': 0.0
+        })
+        for l in tabela_linhas:
+            lin_name = l['linha']
+            b = l['canais'][ch]
+            lu = linhas_unicas_dict[lin_name]
+            lu['linha'] = lin_name
+            lu['grupos'].add(l['grupo'])
+            lu['subgrupos'].add(l['subgrupo'])
+            lu['realizado_mtd'] += b['realizado_mtd']
+            lu['meta_mtd'] += b['meta_mtd']
+            lu['meta_mensal'] += b['meta_mensal']
+            lu['v26_06_mtd'] += b['v26_06_mtd']
+            lu['v25_mtd'] += b['v25_mtd']
+
+        linhas_unicas_list = []
+        for lin_name, val in linhas_unicas_dict.items():
+            r = val['realizado_mtd']
+            m = val['meta_mtd']
+            if r <= 500 and m <= 500:
+                continue
+            gap = round(r - m, 2)
+            ating = calc_pct(r, m)
+            desvio = calc_desvio_pct(r, m)
+            mom_pct, mom_diff = calc_growth(r, val['v26_06_mtd'])
+            yoy_pct, yoy_diff = calc_growth(r, val['v25_mtd'])
+            sub_str = ', '.join(list(val['subgrupos'])[:2])
+            grp_str = list(val['grupos'])[0] if val['grupos'] else ''
+            linhas_unicas_list.append({
+                'nome': lin_name,
+                'grupo': grp_str,
+                'subgrupo': sub_str,
+                'realizado_mtd': round(r, 2),
+                'meta_mtd': round(m, 2),
+                'gap_mtd': gap,
+                'desvio_pct': desvio,
+                'ating_mtd_pct': ating,
+                'crescimento_mom_pct': mom_pct,
+                'crescimento_yoy_pct': yoy_pct
+            })
+
+        det_lins = sorted(linhas_unicas_list, key=lambda x: x['gap_mtd'])[:15]
+        acel_lins = sorted(linhas_unicas_list, key=lambda x: x['gap_mtd'], reverse=True)[:15]
 
         diagnostico_causas[ch] = {
             'detratores_laboratorios': [{
@@ -852,30 +900,8 @@ def main():
                 'crescimento_mom_pct': x['canais'][ch]['crescimento_mom_pct'],
                 'crescimento_yoy_pct': x['canais'][ch]['crescimento_yoy_pct']
             } for x in acel_subs],
-            'detratores_linhas': [{
-                'nome': x['linha'],
-                'subgrupo': x['subgrupo'],
-                'grupo': x['grupo'],
-                'realizado_mtd': x['canais'][ch]['realizado_mtd'],
-                'meta_mtd': x['canais'][ch]['meta_mtd'],
-                'gap_mtd': x['canais'][ch]['gap_mtd'],
-                'desvio_pct': x['canais'][ch]['desvio_pct'],
-                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct'],
-                'crescimento_mom_pct': x['canais'][ch]['crescimento_mom_pct'],
-                'crescimento_yoy_pct': x['canais'][ch]['crescimento_yoy_pct']
-            } for x in det_lins],
-            'aceleradores_linhas': [{
-                'nome': x['linha'],
-                'subgrupo': x['subgrupo'],
-                'grupo': x['grupo'],
-                'realizado_mtd': x['canais'][ch]['realizado_mtd'],
-                'meta_mtd': x['canais'][ch]['meta_mtd'],
-                'gap_mtd': x['canais'][ch]['gap_mtd'],
-                'desvio_pct': x['canais'][ch]['desvio_pct'],
-                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct'],
-                'crescimento_mom_pct': x['canais'][ch]['crescimento_mom_pct'],
-                'crescimento_yoy_pct': x['canais'][ch]['crescimento_yoy_pct']
-            } for x in acel_lins]
+            'detratores_linhas': det_lins,
+            'aceleradores_linhas': acel_lins
         }
 
     # 11. Opções de Filtros Globais Interativos

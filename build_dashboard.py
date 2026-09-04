@@ -1168,10 +1168,10 @@ def build():
           <span>Projeção de Fechamento</span>
           <span>🔮</span>
         </div>
-        <div class="kpi-value" id="kpiProjecao">R$ 51.958.230</div>
+        <div class="kpi-value" id="kpiProjecao">R$ 54.950.233</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-neutral" id="kpiAtingProj">94.9% da Meta</span>
-          <span id="kpiMetaMensalRef" style="color: var(--text-tertiary);">Meta: R$ 54.7M</span>
+          <span class="badge-trend trend-pos" id="kpiAtingProj">+R$ 205.0k</span>
+          <span id="kpiMetaMensalRef" style="color: var(--text-tertiary);">Meta Mês: R$ 54.7M</span>
         </div>
       </div>
     </section>
@@ -1181,7 +1181,7 @@ def build():
       <div class="chart-card">
         <div class="chart-header">
           <div class="chart-title">
-            <span id="chartTitleText">📅 Curva Diária: Realizado vs Meta Diária + Desvio % por Dia</span>
+            <span id="chartTitleText">📅 Curva Diária [Total Digital]: Realizado vs Meta Diária + Desvio % por Dia</span>
           </div>
           <div class="chart-legend">
             <div class="legend-item">
@@ -1189,12 +1189,13 @@ def build():
               <span>Realizado Diário (R$)</span>
             </div>
             <div class="legend-item">
-              <div class="legend-bullet" style="background: var(--text-quaternary);"></div>
+              <div class="legend-bullet" style="background: var(--surface-hover); border: 1px solid var(--border);"></div>
               <span>Meta Diária Oficial (R$)</span>
             </div>
-            <div class="legend-item">
-              <div class="legend-bullet" style="background: var(--apple-purple); border-radius: 50%;"></div>
-              <span>Desvio % vs Meta (Eixo Direito)</span>
+            <div class="legend-item" style="display: flex; align-items: center; gap: 4px;">
+              <span class="badge-trend trend-pos" style="font-size: 10px; padding: 1px 6px;">+8.3%</span>
+              <span class="badge-trend trend-neg" style="font-size: 10px; padding: 1px 6px;">-8.3%</span>
+              <span>Desvio % no Dia</span>
             </div>
           </div>
         </div>
@@ -1628,8 +1629,11 @@ def build():
 
       // Projeção
       document.getElementById('kpiProjecao').textContent = fmtMoney(c.projecao_fechamento);
-      document.getElementById('kpiAtingProj').textContent = fmtPct(c.ating_proj_pct) + ' da Meta';
-      document.getElementById('kpiMetaMensalRef').textContent = `Meta: ${{fmtMoney(c.meta_mensal)}}`;
+      const gapProj = (c.projecao_fechamento || 0) - (c.meta_mensal || 0);
+      const atingProjElem = document.getElementById('kpiAtingProj');
+      atingProjElem.textContent = (gapProj >= 0 ? '+' : '') + fmtMoney(gapProj) + ' vs Meta';
+      atingProjElem.className = 'badge-trend ' + (gapProj >= 0 ? 'trend-pos' : 'trend-neg');
+      document.getElementById('kpiMetaMensalRef').textContent = `Meta Mês: ${{fmtMoney(c.meta_mensal)}}`;
 
       // YoY
       const yoy = c.crescimento_yoy_pct || 0;
@@ -1685,13 +1689,71 @@ def build():
       if (chartInstance) chartInstance.destroy();
 
       const blueColor = isDark ? '#2997FF' : '#0071E3';
-      const metaBarColor = isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.07)';
+      const metaBarColor = isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)';
       const gridColor = isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.05)';
       const textColor = isDark ? '#8E8E93' : '#86868B';
 
-      // Cores dos pontos da linha de Desvio %
-      const pointColors = dataDesvio.map(v => (v !== null && v !== undefined) ? (v >= 0 ? '#34C759' : '#FF3B30') : 'transparent');
-      const pointBorderColors = dataDesvio.map(v => (v !== null && v !== undefined) ? (v >= 0 ? '#248A3D' : '#D70015') : 'transparent');
+      // Plugin Apple Design: desenha badges elegantes com o % de Desvio flutuando diretamente sobre cada barra realizada
+      const desvioBadgesPlugin = {{
+        id: 'desvioBadges',
+        afterDatasetsDraw(chart) {{
+          const {{ ctx }} = chart;
+          const realMeta = chart.getDatasetMeta(0);
+          if (!realMeta || !chart.data.datasets[0] || !chart.data.datasets[1]) return;
+
+          const realData = chart.data.datasets[0].data;
+          const metaData = chart.data.datasets[1].data;
+
+          realMeta.data.forEach((bar, idx) => {{
+            const realVal = realData[idx];
+            const metaVal = metaData[idx];
+            if (realVal === null || realVal === undefined || realVal <= 0) return;
+            if (!metaVal || metaVal <= 0) return;
+
+            const desvio = ((realVal - metaVal) / metaVal) * 100;
+            const isPos = desvio >= 0;
+            const text = (isPos ? '+' : '') + desvio.toFixed(1) + '%';
+
+            ctx.save();
+            ctx.font = '700 11px -apple-system, BlinkMacSystemFont, "SF Pro Text", "Outfit", sans-serif';
+            const textWidth = ctx.measureText(text).width;
+            const badgeW = textWidth + 14;
+            const badgeH = 20;
+            const badgeX = bar.x - badgeW / 2;
+            const badgeY = bar.y - badgeH - 7;
+
+            // Sombra suave
+            ctx.shadowColor = isDark ? 'rgba(0, 0, 0, 0.45)' : 'rgba(0, 0, 0, 0.08)';
+            ctx.shadowBlur = 5;
+            ctx.shadowOffsetY = 2;
+
+            // Fundo e borda arredondada estilo Apple pill
+            ctx.fillStyle = isDark
+              ? (isPos ? 'rgba(48, 209, 88, 0.22)' : 'rgba(255, 69, 58, 0.22)')
+              : (isPos ? '#EBF9F0' : '#FDF0EE');
+            ctx.strokeStyle = isPos ? (isDark ? '#30D158' : '#34C759') : (isDark ? '#FF453A' : '#FF3B30');
+            ctx.lineWidth = 1.2;
+
+            ctx.beginPath();
+            if (ctx.roundRect) {{
+              ctx.roundRect(badgeX, badgeY, badgeW, badgeH, 10);
+            }} else {{
+              ctx.rect(badgeX, badgeY, badgeW, badgeH);
+            }}
+            ctx.fill();
+            ctx.stroke();
+
+            // Texto do % de Desvio
+            ctx.shadowColor = 'transparent';
+            ctx.fillStyle = isPos ? (isDark ? '#30D158' : '#248A3D') : (isDark ? '#FF453A' : '#D70015');
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(text, bar.x, badgeY + badgeH / 2);
+
+            ctx.restore();
+          }});
+        }}
+      }};
 
       chartInstance = new Chart(ctx, {{
         type: 'bar',
@@ -1704,7 +1766,7 @@ def build():
               backgroundColor: blueColor,
               borderRadius: 6,
               yAxisID: 'y',
-              order: 2,
+              order: 1,
               maxBarThickness: 32
             }},
             {{
@@ -1713,24 +1775,8 @@ def build():
               backgroundColor: metaBarColor,
               borderRadius: 6,
               yAxisID: 'y',
-              order: 3,
+              order: 2,
               maxBarThickness: 32
-            }},
-            {{
-              label: 'Desvio % vs Meta',
-              data: dataDesvio,
-              type: 'line',
-              borderColor: isDark ? '#BF5AF2' : '#AF52DE',
-              backgroundColor: 'transparent',
-              borderWidth: 2.5,
-              tension: 0.25,
-              pointRadius: 5,
-              pointHoverRadius: 7,
-              pointBackgroundColor: pointColors,
-              pointBorderColor: pointBorderColors,
-              pointBorderWidth: 1.5,
-              yAxisID: 'yDesvio',
-              order: 1
             }}
           ]
         }},
@@ -1741,7 +1787,7 @@ def build():
           plugins: {{
             legend: {{ display: false }},
             tooltip: {{
-              backgroundColor: isDark ? 'rgba(44, 44, 46, 0.95)' : 'rgba(29, 29, 31, 0.92)',
+              backgroundColor: isDark ? 'rgba(44, 44, 46, 0.96)' : 'rgba(29, 29, 31, 0.94)',
               titleColor: '#FFFFFF',
               bodyColor: '#E5E5EA',
               padding: 12,
@@ -1750,10 +1796,25 @@ def build():
                 label: function(context) {{
                   const val = context.parsed.y;
                   if (val === null || val === undefined) return '';
-                  if (context.dataset.yAxisID === 'yDesvio') {{
-                    return `${{context.dataset.label}}: ${{fmtSignPct(val)}}`;
-                  }}
                   return `${{context.dataset.label}}: ${{fmtMoney(val)}}`;
+                }},
+                afterBody: function(contexts) {{
+                  if (!contexts || !contexts.length) return [];
+                  const idx = contexts[0].dataIndex;
+                  const c = curva[idx];
+                  const real = c[realKey];
+                  const meta = c[metaKey];
+                  if (real && meta && real > 0) {{
+                    const desvio = ((real - meta) / meta) * 100;
+                    const gap = real - meta;
+                    const sign = desvio >= 0 ? '+' : '';
+                    return [
+                      '───────────────────────',
+                      `Desvio % vs Meta: ${{sign}}${{desvio.toFixed(1)}}% ${{desvio >= 0 ? '🟢 (Superávit)' : '🔴 (Déficit)'}}`,
+                      `GAP no Dia: ${{gap >= 0 ? '+' : ''}}${{fmtMoney(gap)}}`
+                    ];
+                  }}
+                  return [];
                 }}
               }}
             }}
@@ -1765,27 +1826,17 @@ def build():
             }},
             y: {{
               position: 'left',
+              grace: '18%',
               grid: {{ color: gridColor }},
               ticks: {{
                 color: textColor,
                 font: {{ size: 11 }},
                 callback: v => (v / 1000).toFixed(0) + 'k'
               }}
-            }},
-            yDesvio: {{
-              position: 'right',
-              grid: {{
-                color: (c) => c.tick && c.tick.value === 0 ? (isDark ? 'rgba(255,255,255,0.25)' : 'rgba(0,0,0,0.25)') : 'transparent',
-                borderDash: [4, 4]
-              }},
-              ticks: {{
-                color: isDark ? '#D1A3FF' : '#AF52DE',
-                font: {{ size: 11, weight: '600' }},
-                callback: v => (v > 0 ? '+' : '') + v.toFixed(0) + '%'
-              }}
             }}
           }}
-        }}
+        }},
+        plugins: [desvioBadgesPlugin]
       }});
     }}
 
