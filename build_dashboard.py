@@ -1,10 +1,9 @@
 """
-build_dashboard.py — Compila o Dashboard Executivo Moderno (HTML5 + CSS Apple Design System + JS Interativo)
-para o projeto Acompanhamento Categorias Digital (Site, App e Marketplace).
-Baseado no Design System oficial das Farmácias São João (macOS / iOS Apple Human Interface Guidelines):
-- Cores: Parchment (#F5F5F7), Surface (#FFFFFF), Ink (#1D1D1F), Action Blue (#0071E3), Apple Green (#34C759), Apple Red (#FF3B30), Apple Orange (#FF9500)
-- Fontes: SF Pro Display / SF Pro Text / Outfit / Inter com tracking negativo e tabular-nums
-- Componentes: Segmented Controls, Pill Badges, Glassmorphism Frosted Nav, Cards arredondados (18px) e tema claro/escuro.
+build_dashboard.py — Compila o Dashboard Executivo Apple Design System das Farmácias São João.
+Métricas completas: Meta, Realizado, Desvio R$ (GAP), Desvio %, Crescimento MoM (% e R$),
+Evolução YoY (% e R$), Share %, Projeção de Fechamento.
+Filtro de Canais: Total Digital, App, Site, Marketplace.
+Abas analíticas: Visão Geral de Canais, Grupos, Linhas de Produtos, Matriz de Desvios, Top SKUs.
 """
 import os, sys, time, json
 if hasattr(sys.stdout, 'reconfigure'): sys.stdout.reconfigure(encoding='utf-8')
@@ -18,7 +17,7 @@ OUTPUT_HTML = os.path.join(BASE_DIR, 'index.html')
 def build():
     t0 = time.time()
     print("=" * 70)
-    print("  COMPILAÇÃO DO DASHBOARD EXECUTIVO: APPLE DESIGN SYSTEM")
+    print("  COMPILAÇÃO DO DASHBOARD EXECUTIVO DIGITAL: APPLE DESIGN SYSTEM")
     print("=" * 70)
 
     if not os.path.exists(DATA_JSON_PATH):
@@ -36,7 +35,7 @@ def build():
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Acompanhamento Digital — Farmácias São João (App, Site e Marketplace)</title>
   
-  <!-- Apple Typography (Outfit & Inter / SF Pro Stack) -->
+  <!-- Apple Fonts (Outfit & Inter / SF Pro Stack) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -44,11 +43,11 @@ def build():
 
   <style>
     /* ==========================================================================
-       FARMÁCIAS SÃO JOÃO — APPLE DESIGN SYSTEM (macOS / iOS HIG)
+       FARMÁCIAS SÃO JOÃO — APPLE HUMAN INTERFACE GUIDELINES DESIGN SYSTEM
        ========================================================================== */
     
     :root {{
-      /* Apple Light Palette (Default) */
+      /* Apple Light Palette */
       --bg-canvas: #F5F5F7;
       --surface: #FFFFFF;
       --surface-translucent: rgba(255, 255, 255, 0.85);
@@ -56,19 +55,16 @@ def build():
       --surface-sunken: #EBEBED;
       --surface-subtle: #FAFAFC;
 
-      /* Apple Borders & Hairlines */
       --border: rgba(0, 0, 0, 0.08);
       --border-subtle: rgba(0, 0, 0, 0.04);
       --border-hover: rgba(0, 0, 0, 0.16);
       --separator: rgba(60, 60, 67, 0.12);
 
-      /* Apple Typography Colors */
       --text-primary: #1D1D1F;
       --text-secondary: #6E6E73;
       --text-tertiary: #86868B;
       --text-quaternary: #A1A1A6;
 
-      /* Apple Vibrant Accents */
       --apple-blue: #0071E3;
       --apple-blue-hover: #0077ED;
       --apple-blue-soft: rgba(0, 113, 227, 0.08);
@@ -91,14 +87,9 @@ def build():
 
       --apple-indigo: #5856D6;
       --apple-indigo-soft: rgba(88, 86, 214, 0.12);
-
       --apple-purple: #AF52DE;
       --apple-purple-soft: rgba(175, 82, 222, 0.12);
 
-      --apple-teal: #30B0C7;
-      --apple-teal-soft: rgba(48, 176, 199, 0.12);
-
-      /* Radii & Elevation */
       --radius-xs: 6px;
       --radius-sm: 10px;
       --radius-md: 14px;
@@ -109,14 +100,12 @@ def build():
       --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
       --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.03);
       --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.03);
-      --shadow-float: 0 20px 48px rgba(0, 0, 0, 0.09), 0 4px 12px rgba(0, 0, 0, 0.04);
 
       --chart-grid: rgba(0, 0, 0, 0.05);
       --chart-tooltip-bg: rgba(29, 29, 31, 0.92);
-      --chart-tooltip-text: #FFFFFF;
     }}
 
-    /* Apple Dark Mode Variables */
+    /* Apple Dark Mode */
     [data-theme="dark"] {{
       --bg-canvas: #000000;
       --surface: #1C1C1E;
@@ -161,7 +150,6 @@ def build():
 
       --chart-grid: rgba(255, 255, 255, 0.06);
       --chart-tooltip-bg: rgba(44, 44, 46, 0.95);
-      --chart-tooltip-text: #FFFFFF;
     }}
 
     *, *::before, *::after {{
@@ -182,14 +170,13 @@ def build():
       transition: background-color 0.3s ease, color 0.3s ease;
     }}
 
-    /* Layout */
     .app-container {{
       max-width: 1720px;
       margin: 0 auto;
       padding: 24px 32px 64px 32px;
     }}
 
-    /* Apple Frosted Navigation Bar */
+    /* Top Bar Header */
     header.header {{
       display: flex;
       justify-content: space-between;
@@ -200,7 +187,7 @@ def build():
       -webkit-backdrop-filter: blur(24px) saturate(180%);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      margin-bottom: 24px;
+      margin-bottom: 20px;
       box-shadow: var(--shadow-sm);
       position: sticky;
       top: 16px;
@@ -249,14 +236,12 @@ def build():
       background: var(--apple-blue-soft);
       color: var(--apple-blue);
       border: 1px solid var(--apple-blue-border);
-      letter-spacing: 0;
     }}
 
     .brand-text p {{
       font-size: 12.5px;
       color: var(--text-secondary);
       margin-top: 2px;
-      font-weight: 400;
     }}
 
     .header-actions {{
@@ -284,7 +269,6 @@ def build():
       height: 7px;
       border-radius: 50%;
       background: var(--apple-green);
-      box-shadow: 0 0 8px var(--apple-green);
       animation: applePulse 2s infinite;
     }}
 
@@ -294,7 +278,6 @@ def build():
       100% {{ transform: scale(0.95); opacity: 0.8; }}
     }}
 
-    /* Apple Buttons */
     .btn {{
       display: inline-flex;
       align-items: center;
@@ -330,7 +313,6 @@ def build():
 
     .btn-primary:hover {{
       background: var(--apple-blue-hover);
-      box-shadow: 0 6px 18px rgba(0, 113, 227, 0.38);
       color: #FFFFFF;
     }}
 
@@ -344,21 +326,36 @@ def build():
       font-size: 16px;
     }}
 
-    /* Channel Selector Tabs (Apple Segmented Cards) */
+    /* Global Channel Filter Segmented Cards */
+    .channel-filter-section {{
+      margin-bottom: 20px;
+    }}
+
+    .channel-filter-label {{
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--text-tertiary);
+      margin-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }}
+
     .channel-nav {{
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-bottom: 24px;
+      gap: 14px;
     }}
 
     .channel-tab {{
       display: flex;
       flex-direction: column;
-      padding: 18px 22px;
+      padding: 16px 20px;
       background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: var(--radius-xl);
+      border-radius: var(--radius-lg);
       cursor: pointer;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       position: relative;
@@ -384,7 +381,7 @@ def build():
       bottom: 0;
       left: 0;
       right: 0;
-      height: 3px;
+      height: 3.5px;
       background: var(--active-accent, var(--apple-blue));
       border-radius: 3px 3px 0 0;
     }}
@@ -398,7 +395,7 @@ def build():
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }}
 
     .channel-name {{
@@ -407,7 +404,7 @@ def build():
       font-weight: 700;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       color: var(--text-primary);
       letter-spacing: -0.2px;
     }}
@@ -415,24 +412,24 @@ def build():
     .channel-badge {{
       font-size: 11px;
       font-weight: 700;
-      padding: 3px 9px;
+      padding: 3px 8px;
       border-radius: var(--radius-pill);
       font-variant-numeric: tabular-nums;
     }}
 
     .channel-sales {{
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 800;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
-      letter-spacing: -0.8px;
-      margin-bottom: 6px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      letter-spacing: -0.7px;
+      margin-bottom: 4px;
       color: var(--text-primary);
       font-variant-numeric: tabular-nums;
       line-height: 1.15;
     }}
 
     .channel-meta-sub {{
-      font-size: 12px;
+      font-size: 11.5px;
       color: var(--text-secondary);
       display: flex;
       justify-content: space-between;
@@ -440,17 +437,22 @@ def build():
       font-variant-numeric: tabular-nums;
     }}
 
-    .channel-sub-details {{
-      font-size: 10.5px;
-      color: var(--text-tertiary);
-      margin-top: 4px;
+    .channel-deltas-line {{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      margin-top: 6px;
+      padding-top: 6px;
+      border-top: 1px solid var(--border-subtle);
+      font-variant-numeric: tabular-nums;
     }}
 
     /* KPI Grid Cards (Apple Style) */
     .kpi-grid {{
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 16px;
+      gap: 14px;
       margin-bottom: 24px;
     }}
 
@@ -458,13 +460,12 @@ def build():
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
-      padding: 20px 22px;
+      padding: 18px 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       box-shadow: var(--shadow-sm);
-      position: relative;
     }}
 
     .kpi-card:hover {{
@@ -479,25 +480,25 @@ def build():
       text-transform: uppercase;
       letter-spacing: 0.6px;
       color: var(--text-tertiary);
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }}
 
     .kpi-value {{
-      font-size: 26px;
+      font-size: 25px;
       font-weight: 800;
-      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
-      letter-spacing: -0.8px;
-      margin-bottom: 8px;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+      letter-spacing: -0.7px;
+      margin-bottom: 6px;
       color: var(--text-primary);
       font-variant-numeric: tabular-nums;
       line-height: 1.1;
     }}
 
     .kpi-subtext {{
-      font-size: 12px;
+      font-size: 11.5px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -509,10 +510,10 @@ def build():
     .badge-trend {{
       display: inline-flex;
       align-items: center;
-      gap: 4px;
-      font-size: 11.5px;
+      gap: 3px;
+      font-size: 11px;
       font-weight: 700;
-      padding: 3px 8px;
+      padding: 2px 7px;
       border-radius: var(--radius-pill);
       font-variant-numeric: tabular-nums;
       line-height: 1.2;
@@ -536,14 +537,13 @@ def build():
       border: 1px solid var(--apple-orange-border);
     }}
 
-    /* Apple Progress Bar Track & Fill */
     .progress-bar-container {{
       width: 100%;
-      height: 7px;
+      height: 6px;
       background: var(--surface-sunken);
       border-radius: var(--radius-pill);
       overflow: hidden;
-      margin-top: 8px;
+      margin-top: 6px;
     }}
 
     .progress-bar-fill {{
@@ -564,7 +564,7 @@ def build():
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      padding: 24px 26px;
+      padding: 22px 24px;
       display: flex;
       flex-direction: column;
       box-shadow: var(--shadow-sm);
@@ -574,12 +574,12 @@ def build():
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }}
 
     .chart-title {{
       font-family: 'Outfit', -apple-system, sans-serif;
-      font-size: 16.5px;
+      font-size: 16px;
       font-weight: 700;
       color: var(--text-primary);
       display: flex;
@@ -590,8 +590,8 @@ def build():
 
     .chart-legend {{
       display: flex;
-      gap: 16px;
-      font-size: 12px;
+      gap: 14px;
+      font-size: 11.5px;
       color: var(--text-secondary);
       font-weight: 500;
     }}
@@ -611,21 +611,21 @@ def build():
     .chart-canvas-wrapper {{
       position: relative;
       width: 100%;
-      height: 330px;
+      height: 310px;
     }}
 
-    /* Highlights Column (Top Aceleradores & Detratores) */
+    /* Side Highlights */
     .highlights-container {{
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 14px;
     }}
 
     .highlight-card {{
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-xl);
-      padding: 20px 22px;
+      padding: 18px 20px;
       flex: 1;
       box-shadow: var(--shadow-sm);
       display: flex;
@@ -634,19 +634,19 @@ def build():
 
     .highlight-card-title {{
       font-family: 'Outfit', -apple-system, sans-serif;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 700;
       display: flex;
       align-items: center;
       gap: 8px;
-      margin-bottom: 14px;
+      margin-bottom: 12px;
       letter-spacing: -0.2px;
     }}
 
     .highlight-list {{
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
       flex: 1;
     }}
 
@@ -654,7 +654,7 @@ def build():
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 14px;
+      padding: 9px 12px;
       background: var(--surface-subtle);
       border: 1px solid var(--border-subtle);
       border-radius: var(--radius-md);
@@ -664,7 +664,6 @@ def build():
     .highlight-item:hover {{
       background: var(--surface-hover);
       border-color: var(--border);
-      transform: translateX(2px);
     }}
 
     .highlight-info {{
@@ -674,17 +673,17 @@ def build():
     }}
 
     .highlight-name {{
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 600;
       color: var(--text-primary);
-      max-width: 240px;
+      max-width: 230px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }}
 
     .highlight-cat {{
-      font-size: 11px;
+      font-size: 10.5px;
       color: var(--text-tertiary);
     }}
 
@@ -694,12 +693,12 @@ def build():
     }}
 
     .highlight-gap {{
-      font-size: 13.5px;
+      font-size: 13px;
       font-weight: 700;
       font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
     }}
 
-    /* Data Tables Section (Apple Segmented Toolbar) */
+    /* Main Section with Dedicated Apple Tab Bar */
     .table-section {{
       background: var(--surface);
       border: 1px solid var(--border);
@@ -717,20 +716,20 @@ def build():
       gap: 16px;
     }}
 
-    /* Apple Segmented Control for Table Navigation */
+    /* Apple Segmented Control for Views/Tabs */
     .apple-segmented-control {{
       display: inline-flex;
       align-items: center;
       background: rgba(120, 120, 128, 0.12);
       padding: 4px;
       border-radius: var(--radius-md);
-      gap: 2px;
+      gap: 3px;
     }}
 
     .segmented-btn {{
       border: none;
       background: transparent;
-      padding: 7px 18px;
+      padding: 8px 18px;
       border-radius: 10px;
       font-size: 13px;
       font-weight: 600;
@@ -753,7 +752,6 @@ def build():
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12), 0 0 1px rgba(0, 0, 0, 0.1);
     }}
 
-    /* Apple Pill Search Box */
     .table-search-box {{
       position: relative;
       width: 340px;
@@ -786,7 +784,7 @@ def build():
       color: var(--text-tertiary);
     }}
 
-    /* Table Styling (Apple macOS Table Style) */
+    /* Table Styling */
     .table-responsive {{
       width: 100%;
       overflow-x: auto;
@@ -800,10 +798,10 @@ def build():
     }}
 
     table.data-table th {{
-      padding: 12px 16px;
+      padding: 12px 14px;
       font-weight: 700;
       text-transform: uppercase;
-      font-size: 11px;
+      font-size: 10.5px;
       letter-spacing: 0.5px;
       color: var(--text-tertiary);
       border-bottom: 1px solid var(--border);
@@ -813,22 +811,12 @@ def build():
       white-space: nowrap;
     }}
 
-    table.data-table th:first-child {{
-      border-top-left-radius: var(--radius-sm);
-      border-bottom-left-radius: var(--radius-sm);
-    }}
-
-    table.data-table th:last-child {{
-      border-top-right-radius: var(--radius-sm);
-      border-bottom-right-radius: var(--radius-sm);
-    }}
-
     table.data-table th:hover {{
       color: var(--text-primary);
     }}
 
     table.data-table td {{
-      padding: 13px 16px;
+      padding: 12px 14px;
       border-bottom: 1px solid var(--border-subtle);
       color: var(--text-primary);
       white-space: nowrap;
@@ -849,7 +837,32 @@ def build():
       font-weight: 500;
     }}
 
-    /* Footer */
+    /* Matrix Cards for Aba 4 (Desvios & Oportunidades) */
+    .matrix-grid {{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }}
+
+    .matrix-card {{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }}
+
+    .matrix-card-title {{
+      font-family: 'Outfit', -apple-system, sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }}
+
     footer.footer {{
       margin-top: 40px;
       text-align: center;
@@ -865,6 +878,7 @@ def build():
     @media (max-width: 1200px) {{
       .kpi-grid {{ grid-template-columns: repeat(3, 1fr); }}
       .section-charts {{ grid-template-columns: 1fr; }}
+      .matrix-grid {{ grid-template-columns: 1fr; }}
     }}
 
     @media (max-width: 768px) {{
@@ -880,7 +894,7 @@ def build():
 
   <div class="app-container">
 
-    <!-- Header Executivo Estilo Apple HIG -->
+    <!-- Header Executivo Apple HIG -->
     <header class="header">
       <div class="brand">
         <div class="logo-badge">SJ</div>
@@ -889,7 +903,7 @@ def build():
             Acompanhamento Categorias Digital
             <span class="pill">Setembro 2026</span>
           </h1>
-          <p>Visão Integrada de Vendas, Metas Diarizadas e Desvios — App, Site e Marketplace</p>
+          <p>Painel Executivo de Metas, Desvios, Crescimento e Evolução — App, Site e Marketplace</p>
         </div>
       </div>
 
@@ -912,62 +926,89 @@ def build():
       </div>
     </header>
 
-    <!-- Seletor de Canais (Tabs Segmentadas Estilo Apple) -->
-    <nav class="channel-nav">
-      <div class="channel-tab tab-total active" onclick="switchChannel('total')">
-        <div class="channel-tab-header">
-          <span class="channel-name">🌐 Total Digital</span>
-          <span class="channel-badge trend-neutral" id="badgeAtingTotal">94.9%</span>
-        </div>
-        <div class="channel-sales" id="tabSalesTotal">R$ 5.897.259</div>
-        <div class="channel-meta-sub">
-          <span>Meta MTD: <strong id="tabMetaTotal">R$ 6.213.585</strong></span>
-          <span id="tabGapTotal" class="badge-trend trend-neg">-R$ 316.326</span>
-        </div>
-        <div class="channel-sub-details">Consolidado Geral (App + Site + Mkt)</div>
+    <!-- Filtro de Canais Global (Segmented Cards) -->
+    <section class="channel-filter-section">
+      <div class="channel-filter-label">
+        <span>Selecione o Canal para Filtrar o Painel Inteiro:</span>
+        <span id="labelCanalAtivo" style="color: var(--apple-blue); font-weight: 700;">Filtrando: TOTAL DIGITAL</span>
       </div>
 
-      <div class="channel-tab tab-app" onclick="switchChannel('app')">
-        <div class="channel-tab-header">
-          <span class="channel-name">📱 App</span>
-          <span class="channel-badge trend-pos" id="badgeAtingApp">109.2% 🚀</span>
+      <nav class="channel-nav">
+        <!-- 1. Total Digital -->
+        <div class="channel-tab tab-total active" onclick="switchChannel('total')">
+          <div class="channel-tab-header">
+            <span class="channel-name">🌐 Total Digital</span>
+            <span class="channel-badge trend-neutral" id="badgeAtingTotal">94.9%</span>
+          </div>
+          <div class="channel-sales" id="tabSalesTotal">R$ 5.897.259</div>
+          <div class="channel-meta-sub">
+            <span>Meta MTD: <strong id="tabMetaTotal">R$ 6.213.585</strong></span>
+            <span id="tabGapTotal" class="badge-trend trend-neg">-R$ 316.326</span>
+          </div>
+          <div class="channel-deltas-line">
+            <span>Desvio: <strong id="tabDesvioPctTotal" style="color: var(--apple-red-text);">-5.1%</strong></span>
+            <span>MoM: <strong id="tabMomTotal" style="color: var(--apple-green-text);">+17.1%</strong></span>
+            <span>YoY: <strong id="tabYoyTotal" style="color: var(--apple-green-text);">+43.2%</strong></span>
+          </div>
         </div>
-        <div class="channel-sales" id="tabSalesApp">R$ 3.215.637</div>
-        <div class="channel-meta-sub">
-          <span>Meta MTD: <strong id="tabMetaApp">R$ 2.944.468</strong></span>
-          <span id="tabGapApp" class="badge-trend trend-pos">+R$ 271.169</span>
-        </div>
-        <div class="channel-sub-details">App + App Tele Entrega</div>
-      </div>
 
-      <div class="channel-tab tab-site" onclick="switchChannel('site')">
-        <div class="channel-tab-header">
-          <span class="channel-name">💻 Site</span>
-          <span class="channel-badge trend-neg" id="badgeAtingSite">63.4% ⚠️</span>
+        <!-- 2. App -->
+        <div class="channel-tab tab-app" onclick="switchChannel('app')">
+          <div class="channel-tab-header">
+            <span class="channel-name">📱 App</span>
+            <span class="channel-badge trend-pos" id="badgeAtingApp">109.2% 🚀</span>
+          </div>
+          <div class="channel-sales" id="tabSalesApp">R$ 3.215.637</div>
+          <div class="channel-meta-sub">
+            <span>Meta MTD: <strong id="tabMetaApp">R$ 2.944.468</strong></span>
+            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 271.169</span>
+          </div>
+          <div class="channel-deltas-line">
+            <span>Desvio: <strong id="tabDesvioPctApp" style="color: var(--apple-green-text);">+9.2%</strong></span>
+            <span>MoM: <strong id="tabMomApp" style="color: var(--apple-green-text);">+38.5%</strong></span>
+            <span>YoY: <strong id="tabYoyApp" style="color: var(--apple-green-text);">+53.4%</strong></span>
+          </div>
         </div>
-        <div class="channel-sales" id="tabSalesSite">R$ 1.042.709</div>
-        <div class="channel-meta-sub">
-          <span>Meta MTD: <strong id="tabMetaSite">R$ 1.645.057</strong></span>
-          <span id="tabGapSite" class="badge-trend trend-neg">-R$ 602.348</span>
-        </div>
-        <div class="channel-sub-details">Site + Site Tele Entrega</div>
-      </div>
 
-      <div class="channel-tab tab-mkt" onclick="switchChannel('marketplace')">
-        <div class="channel-tab-header">
-          <span class="channel-name">🛍️ Marketplace</span>
-          <span class="channel-badge trend-pos" id="badgeAtingMkt">100.9% 🎯</span>
+        <!-- 3. Marketplace -->
+        <div class="channel-tab tab-mkt" onclick="switchChannel('marketplace')">
+          <div class="channel-tab-header">
+            <span class="channel-name">🛍️ Marketplace</span>
+            <span class="channel-badge trend-pos" id="badgeAtingMkt">100.9% 🎯</span>
+          </div>
+          <div class="channel-sales" id="tabSalesMkt">R$ 1.638.913</div>
+          <div class="channel-meta-sub">
+            <span>Meta MTD: <strong id="tabMetaMkt">R$ 1.624.060</strong></span>
+            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 14.852</span>
+          </div>
+          <div class="channel-deltas-line">
+            <span>Desvio: <strong id="tabDesvioPctMkt" style="color: var(--apple-green-text);">+0.9%</strong></span>
+            <span>MoM: <strong id="tabMomMkt" style="color: var(--apple-red-text);">-13.3%</strong></span>
+            <span>YoY: <strong id="tabYoyMkt" style="color: var(--apple-green-text);">+115.5%</strong></span>
+          </div>
         </div>
-        <div class="channel-sales" id="tabSalesMkt">R$ 1.638.913</div>
-        <div class="channel-meta-sub">
-          <span>Meta MTD: <strong id="tabMetaMkt">R$ 1.624.060</strong></span>
-          <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 14.852</span>
-        </div>
-        <div class="channel-sub-details">iFood + Ecommerce + Rappi</div>
-      </div>
-    </nav>
 
-    <!-- Grid de KPIs Dinâmicos -->
+        <!-- 4. Site -->
+        <div class="channel-tab tab-site" onclick="switchChannel('site')">
+          <div class="channel-tab-header">
+            <span class="channel-name">💻 Site</span>
+            <span class="channel-badge trend-neg" id="badgeAtingSite">63.4% ⚠️</span>
+          </div>
+          <div class="channel-sales" id="tabSalesSite">R$ 1.042.709</div>
+          <div class="channel-meta-sub">
+            <span>Meta MTD: <strong id="tabMetaSite">R$ 1.645.057</strong></span>
+            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 602.348</span>
+          </div>
+          <div class="channel-deltas-line">
+            <span>Desvio: <strong id="tabDesvioPctSite" style="color: var(--apple-red-text);">-36.6%</strong></span>
+            <span>MoM: <strong id="tabMomSite" style="color: var(--apple-green-text);">+26.7%</strong></span>
+            <span>YoY: <strong id="tabYoySite" style="color: var(--apple-red-text);">-17.4%</strong></span>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <!-- Grid de 6 KPIs Dinâmicos (Vinculados ao Canal Selecionado) -->
     <section class="kpi-grid">
       <!-- 1. Realizado MTD -->
       <div class="kpi-card">
@@ -978,7 +1019,7 @@ def build():
         <div class="kpi-value" id="kpiVendaMtd" style="color: var(--apple-blue);">R$ 5.897.259</div>
         <div class="kpi-subtext">
           <span class="badge-trend trend-pos" id="kpiYoYBadge">↑ +43.2% YoY</span>
-          <span>vs Set/25</span>
+          <span id="kpiYoYDiff" style="color: var(--text-tertiary);">+R$ 1.78M</span>
         </div>
       </div>
 
@@ -990,14 +1031,14 @@ def build():
         </div>
         <div class="kpi-value" id="kpiMetaMtd">R$ 6.213.585</div>
         <div class="kpi-subtext">
-          <span>Curva Acumulada: <strong id="kpiPctCurva" style="color: var(--text-primary);">11.35%</strong></span>
+          <span>Curva Acum.: <strong id="kpiPctCurva" style="color: var(--text-primary);">11.35%</strong> (3/30 dias)</span>
         </div>
       </div>
 
       <!-- 3. Atingimento MTD -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span>Atingimento MTD</span>
+          <span>Atingimento da Meta</span>
           <span>📊</span>
         </div>
         <div class="kpi-value" id="kpiAtingMtd" style="color: var(--apple-orange);">94.9%</div>
@@ -1006,35 +1047,23 @@ def build():
         </div>
       </div>
 
-      <!-- 4. GAP / Desvio MTD -->
+      <!-- 4. Desvio Meta (R$ e %) -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span>Desvio GAP (MTD)</span>
+          <span>Desvio Meta (GAP)</span>
           <span>⚖️</span>
         </div>
         <div class="kpi-value" id="kpiGapMtd" style="color: var(--apple-red);">-R$ 316.326</div>
         <div class="kpi-subtext">
-          <span id="kpiGapStatus">Déficit vs Curva Oficial</span>
+          <span class="badge-trend trend-neg" id="kpiDesvioPctBadge">-5.1%</span>
+          <span id="kpiGapStatus">Déficit vs Curva</span>
         </div>
       </div>
 
-      <!-- 5. Projeção Fechamento -->
+      <!-- 5. Crescimento MoM (vs Ago/26) -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span>Projeção Fechamento</span>
-          <span>🔮</span>
-        </div>
-        <div class="kpi-value" id="kpiProjecao">R$ 51.958.230</div>
-        <div class="kpi-subtext">
-          <span class="badge-trend trend-neutral" id="kpiAtingProj">94.9% da Meta</span>
-          <span>Mês: R$ 54.7M</span>
-        </div>
-      </div>
-
-      <!-- 6. Crescimento MoM -->
-      <div class="kpi-card">
-        <div class="kpi-title">
-          <span>Evolução MoM (vs Ago)</span>
+          <span>Crescimento MoM (vs Ago)</span>
           <span>📈</span>
         </div>
         <div class="kpi-value" id="kpiMoMValue" style="color: var(--apple-green);">+17.1%</div>
@@ -1043,15 +1072,27 @@ def build():
           <span>vs Ago/26 MTD</span>
         </div>
       </div>
+
+      <!-- 6. Projeção de Fechamento -->
+      <div class="kpi-card">
+        <div class="kpi-title">
+          <span>Projeção Mês Fechado</span>
+          <span>🔮</span>
+        </div>
+        <div class="kpi-value" id="kpiProjecao">R$ 51.958.230</div>
+        <div class="kpi-subtext">
+          <span class="badge-trend trend-neutral" id="kpiAtingProj">94.9% da Meta</span>
+          <span id="kpiMetaMensalRef" style="color: var(--text-tertiary);">Meta: R$ 54.7M</span>
+        </div>
+      </div>
     </section>
 
-    <!-- Gráficos e Destaques -->
+    <!-- Gráfico Diário de Vendas e Metas -->
     <section class="section-charts">
-      <!-- Gráfico de Evolução Diária da Curva de Metas -->
       <div class="chart-card">
         <div class="chart-header">
           <div class="chart-title">
-            <span>📅 Curva Diária de Metas vs Realizado (30 Dias de Setembro)</span>
+            <span id="chartTitleText">📅 Curva Diária de Metas vs Realizado (30 Dias de Setembro)</span>
           </div>
           <div class="chart-legend">
             <div class="legend-item">
@@ -1073,7 +1114,7 @@ def build():
         </div>
       </div>
 
-      <!-- Card Lateral de Destaques: Top Aceleradores e Detratores -->
+      <!-- Card Lateral de Destaques Rápidos -->
       <div class="highlights-container">
         <!-- Aceleradores -->
         <div class="highlight-card" style="border-top: 3px solid var(--apple-green);">
@@ -1097,18 +1138,24 @@ def build():
       </div>
     </section>
 
-    <!-- Tabela Analítica Multidimensional -->
+    <!-- Seção de Tabelas Multidimensionais com Abas Dedicadas -->
     <section class="table-section">
       <div class="table-toolbar">
         <div class="apple-segmented-control">
-          <button class="segmented-btn active" id="tabBtnGrupos" onclick="switchTableTab('grupos')">
-            🏢 Grupos de Categorias
+          <button class="segmented-btn active" id="tabBtnCanais" onclick="switchTableTab('canais')">
+            🌐 Visão Geral Canais
+          </button>
+          <button class="segmented-btn" id="tabBtnGrupos" onclick="switchTableTab('grupos')">
+            🏢 Categorias / Grupos
           </button>
           <button class="segmented-btn" id="tabBtnLinhas" onclick="switchTableTab('linhas')">
-            📦 Linhas de Produtos (300)
+            📦 Linhas de Produtos
+          </button>
+          <button class="segmented-btn" id="tabBtnMatriz" onclick="switchTableTab('matriz')">
+            ⚖️ Matriz de Desvios
           </button>
           <button class="segmented-btn" id="tabBtnSkus" onclick="switchTableTab('skus')">
-            🏷️ Top SKUs (28.857 Itens)
+            🏷️ Top SKUs (Produtos)
           </button>
         </div>
 
@@ -1118,15 +1165,32 @@ def build():
         </div>
       </div>
 
-      <div class="table-responsive">
+      <!-- Container da Tabela ou Matriz -->
+      <div id="tableContainerWrapper" class="table-responsive">
         <table class="data-table" id="mainDataTable">
-          <thead id="tableHead">
-            <!-- Dynamic columns based on active tab -->
-          </thead>
-          <tbody id="tableBody">
-            <!-- Dynamic rows -->
-          </tbody>
+          <thead id="tableHead"></thead>
+          <tbody id="tableBody"></tbody>
         </table>
+      </div>
+
+      <!-- Container da Matriz de Desvios (Aba 4) -->
+      <div id="matrizContainerWrapper" style="display: none;">
+        <div class="matrix-grid">
+          <div class="matrix-card" style="border-top: 3px solid var(--apple-green);">
+            <div class="matrix-card-title" style="color: var(--apple-green-text);">
+              <span>▲ Maiores Superávits de Meta (Desvio +R$ e +%)</span>
+              <span id="matrixChannelTag1" class="badge-trend trend-pos">Canal Ativo</span>
+            </div>
+            <div id="matrixAceleradoresList" class="highlight-list"></div>
+          </div>
+          <div class="matrix-card" style="border-top: 3px solid var(--apple-red);">
+            <div class="matrix-card-title" style="color: var(--apple-red-text);">
+              <span>▼ Maiores Oportunidades / Déficits (Desvio -R$ e -%)</span>
+              <span id="matrixChannelTag2" class="badge-trend trend-neg">Canal Ativo</span>
+            </div>
+            <div id="matrixDetratoresList" class="highlight-list"></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -1150,7 +1214,7 @@ def build():
   <!-- Lógica da Aplicação -->
   <script>
     let activeChannel = 'total'; // 'total', 'app', 'site', 'marketplace'
-    let activeTableTab = 'grupos'; // 'grupos', 'linhas', 'skus'
+    let activeTableTab = 'canais'; // 'canais', 'grupos', 'linhas', 'matriz', 'skus'
     let searchTerm = '';
     let chartInstance = null;
 
@@ -1161,7 +1225,12 @@ def build():
 
     const fmtPct = (v) => {{
       if (v === null || v === undefined || isNaN(v)) return '0.0%';
-      return v.toFixed(1) + '%';
+      return (v >= 0 ? '' : '') + v.toFixed(1) + '%';
+    }};
+
+    const fmtSignPct = (v) => {{
+      if (v === null || v === undefined || isNaN(v)) return '0.0%';
+      return (v > 0 ? '+' : '') + v.toFixed(1) + '%';
     }};
 
     function toggleTheme() {{
@@ -1204,16 +1273,27 @@ def build():
       else if (canal === 'site') document.querySelector('.tab-site').classList.add('active');
       else if (canal === 'marketplace') document.querySelector('.tab-mkt').classList.add('active');
 
+      const canalNames = {{
+        'total': 'TOTAL DIGITAL',
+        'app': 'APP (App + Tele Entrega)',
+        'site': 'SITE (Site + Tele Entrega)',
+        'marketplace': 'MARKETPLACE (iFood, Ecommerce, Rappi)'
+      }};
+      document.getElementById('labelCanalAtivo').textContent = `Filtrando: ${{canalNames[canal]}}`;
+
       updateKpis();
       renderChart();
+      renderHighlights();
       renderTable();
     }}
 
     function switchTableTab(tab) {{
       activeTableTab = tab;
       document.querySelectorAll('.segmented-btn').forEach(btn => btn.classList.remove('active'));
-      if (tab === 'grupos') document.getElementById('tabBtnGrupos').classList.add('active');
+      if (tab === 'canais') document.getElementById('tabBtnCanais').classList.add('active');
+      else if (tab === 'grupos') document.getElementById('tabBtnGrupos').classList.add('active');
       else if (tab === 'linhas') document.getElementById('tabBtnLinhas').classList.add('active');
+      else if (tab === 'matriz') document.getElementById('tabBtnMatriz').classList.add('active');
       else if (tab === 'skus') document.getElementById('tabBtnSkus').classList.add('active');
 
       renderTable();
@@ -1226,33 +1306,34 @@ def build():
 
     function updateChannelNavSummary() {{
       const k = window.DASHBOARD_DATA.kpis.canais;
-      // Total
-      document.getElementById('tabSalesTotal').textContent = fmtMoney(k.total.venda_mtd);
-      document.getElementById('tabMetaTotal').textContent = fmtMoney(k.total.meta_mtd);
-      document.getElementById('badgeAtingTotal').textContent = fmtPct(k.total.ating_mtd_pct);
-      document.getElementById('tabGapTotal').textContent = (k.total.gap_mtd >= 0 ? '+' : '') + fmtMoney(k.total.gap_mtd);
-      document.getElementById('tabGapTotal').className = 'badge-trend ' + (k.total.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
       
-      // App
-      document.getElementById('tabSalesApp').textContent = fmtMoney(k.app.venda_mtd);
-      document.getElementById('tabMetaApp').textContent = fmtMoney(k.app.meta_mtd);
-      document.getElementById('badgeAtingApp').textContent = fmtPct(k.app.ating_mtd_pct) + (k.app.ating_mtd_pct >= 100 ? ' 🚀' : '');
-      document.getElementById('tabGapApp').textContent = (k.app.gap_mtd >= 0 ? '+' : '') + fmtMoney(k.app.gap_mtd);
-      document.getElementById('tabGapApp').className = 'badge-trend ' + (k.app.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
+      // Helper para preencher cada tab
+      const fillTab = (id, obj) => {{
+        document.getElementById(`tabSales${{id}}`).textContent = fmtMoney(obj.venda_mtd);
+        document.getElementById(`tabMeta${{id}}`).textContent = fmtMoney(obj.meta_mtd);
+        document.getElementById(`badgeAting${{id}}`).textContent = fmtPct(obj.ating_mtd_pct) + (obj.ating_mtd_pct >= 100 ? ' 🚀' : '');
+        
+        const gapEl = document.getElementById(`tabGap${{id}}`);
+        gapEl.textContent = (obj.gap_mtd >= 0 ? '+' : '') + fmtMoney(obj.gap_mtd);
+        gapEl.className = 'badge-trend ' + (obj.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
 
-      // Site
-      document.getElementById('tabSalesSite').textContent = fmtMoney(k.site.venda_mtd);
-      document.getElementById('tabMetaSite').textContent = fmtMoney(k.site.meta_mtd);
-      document.getElementById('badgeAtingSite').textContent = fmtPct(k.site.ating_mtd_pct);
-      document.getElementById('tabGapSite').textContent = (k.site.gap_mtd >= 0 ? '+' : '') + fmtMoney(k.site.gap_mtd);
-      document.getElementById('tabGapSite').className = 'badge-trend ' + (k.site.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
+        const desvioEl = document.getElementById(`tabDesvioPct${{id}}`);
+        desvioEl.textContent = fmtSignPct(obj.desvio_pct);
+        desvioEl.style.color = obj.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
 
-      // Marketplace
-      document.getElementById('tabSalesMkt').textContent = fmtMoney(k.marketplace.venda_mtd);
-      document.getElementById('tabMetaMkt').textContent = fmtMoney(k.marketplace.meta_mtd);
-      document.getElementById('badgeAtingMkt').textContent = fmtPct(k.marketplace.ating_mtd_pct) + (k.marketplace.ating_mtd_pct >= 100 ? ' 🎯' : '');
-      document.getElementById('tabGapMkt').textContent = (k.marketplace.gap_mtd >= 0 ? '+' : '') + fmtMoney(k.marketplace.gap_mtd);
-      document.getElementById('tabGapMkt').className = 'badge-trend ' + (k.marketplace.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
+        const momEl = document.getElementById(`tabMom${{id}}`);
+        momEl.textContent = fmtSignPct(obj.crescimento_mom_pct);
+        momEl.style.color = obj.crescimento_mom_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+
+        const yoyEl = document.getElementById(`tabYoy${{id}}`);
+        yoyEl.textContent = fmtSignPct(obj.crescimento_yoy_pct);
+        yoyEl.style.color = obj.crescimento_yoy_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+      }};
+
+      fillTab('Total', k.total);
+      fillTab('App', k.app);
+      fillTab('Site', k.site);
+      fillTab('Mkt', k.marketplace);
     }}
 
     function updateKpis() {{
@@ -1282,28 +1363,36 @@ def build():
         barElem.style.background = 'var(--apple-red)';
       }}
 
-      // GAP
+      // Desvio R$ e Desvio %
       const gapElem = document.getElementById('kpiGapMtd');
       gapElem.textContent = (c.gap_mtd >= 0 ? '+' : '') + fmtMoney(c.gap_mtd);
       gapElem.style.color = c.gap_mtd >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
-      document.getElementById('kpiGapStatus').textContent = c.gap_mtd >= 0 ? 'Superávit vs Curva' : 'Déficit vs Curva';
+      
+      const desvioBadge = document.getElementById('kpiDesvioPctBadge');
+      desvioBadge.textContent = fmtSignPct(c.desvio_pct);
+      desvioBadge.className = 'badge-trend ' + (c.desvio_pct >= 0 ? 'trend-pos' : 'trend-neg');
+      document.getElementById('kpiGapStatus').textContent = c.gap_mtd >= 0 ? 'Superávit Meta' : 'Déficit Meta';
 
       // Projeção
       document.getElementById('kpiProjecao').textContent = fmtMoney(c.projecao_fechamento);
       document.getElementById('kpiAtingProj').textContent = fmtPct(c.ating_proj_pct) + ' da Meta';
+      document.getElementById('kpiMetaMensalRef').textContent = `Meta: ${{fmtMoney(c.meta_mensal)}}`;
 
-      // YoY / MoM
+      // YoY
       const yoy = c.crescimento_yoy_pct || 0;
       const yoyBadge = document.getElementById('kpiYoYBadge');
       yoyBadge.textContent = (yoy >= 0 ? '↑ +' : '↓ ') + yoy.toFixed(1) + '% YoY';
       yoyBadge.className = 'badge-trend ' + (yoy >= 0 ? 'trend-pos' : 'trend-neg');
+      document.getElementById('kpiYoYDiff').textContent = (c.crescimento_yoy_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_yoy_diff);
 
+      // MoM
       const mom = c.crescimento_mom_pct || 0;
       const momElem = document.getElementById('kpiMoMValue');
-      momElem.textContent = (mom >= 0 ? '+' : '') + mom.toFixed(1) + '%';
+      momElem.textContent = fmtSignPct(mom);
       momElem.style.color = mom >= 0 ? 'var(--apple-green)' : 'var(--apple-red)';
-      document.getElementById('kpiMoMBadge').textContent = (c.crescimento_mom_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_mom_diff);
-      document.getElementById('kpiMoMBadge').className = 'badge-trend ' + (c.crescimento_mom_diff >= 0 ? 'trend-pos' : 'trend-neg');
+      const momBadge = document.getElementById('kpiMoMBadge');
+      momBadge.textContent = (c.crescimento_mom_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_mom_diff);
+      momBadge.className = 'badge-trend ' + (c.crescimento_mom_diff >= 0 ? 'trend-pos' : 'trend-neg');
     }}
 
     function renderChart() {{
@@ -1398,15 +1487,6 @@ def build():
               bodyColor: '#E5E5EA',
               padding: 12,
               cornerRadius: 10,
-              titleFont: {{
-                family: '-apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif',
-                size: 13,
-                weight: '700'
-              }},
-              bodyFont: {{
-                family: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
-                size: 12
-              }},
               callbacks: {{
                 label: function(context) {{
                   const val = context.parsed.y;
@@ -1419,23 +1499,14 @@ def build():
           scales: {{
             x: {{
               grid: {{ display: false }},
-              ticks: {{
-                color: textColor,
-                font: {{
-                  family: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
-                  size: 11
-                }}
-              }}
+              ticks: {{ color: textColor, font: {{ size: 11 }} }}
             }},
             y: {{
               position: 'left',
               grid: {{ color: gridColor }},
               ticks: {{
                 color: textColor,
-                font: {{
-                  family: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
-                  size: 11
-                }},
+                font: {{ size: 11 }},
                 callback: v => (v / 1000).toFixed(0) + 'k'
               }}
             }},
@@ -1444,10 +1515,7 @@ def build():
               grid: {{ display: false }},
               ticks: {{
                 color: greenColor,
-                font: {{
-                  family: '-apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif',
-                  size: 11
-                }},
+                font: {{ size: 11 }},
                 callback: v => (v / 1000000).toFixed(1) + 'M'
               }}
             }}
@@ -1457,42 +1525,57 @@ def build():
     }}
 
     function renderHighlights() {{
-      const destaques = window.DASHBOARD_DATA.destaques;
+      const destaquesObj = window.DASHBOARD_DATA.destaques_por_canal || {{}};
+      const destaques = destaquesObj[activeChannel] || window.DASHBOARD_DATA.destaques;
       
-      const elAcel = document.getElementById('listAceleradores');
-      elAcel.innerHTML = destaques.aceleradores.map(item => `
-        <div class="highlight-item">
-          <div class="highlight-info">
-            <span class="highlight-name" title="${{item.linha}}">${{item.linha}}</span>
-            <span class="highlight-cat">${{item.grupo}} • ${{fmtPct(item.ating_mtd_pct)}} da Meta</span>
+      const renderList = (items, isPositive) => {{
+        return items.map(item => `
+          <div class="highlight-item">
+            <div class="highlight-info">
+              <span class="highlight-name" title="${{item.linha}}">${{item.linha}}</span>
+              <span class="highlight-cat">${{item.grupo}} • Ating: ${{fmtPct(item.ating_mtd_pct)}}</span>
+            </div>
+            <div class="highlight-metric">
+              <div class="highlight-gap" style="color: ${{isPositive ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+                ${{(item.gap_mtd >= 0 ? '+' : '') + fmtMoney(item.gap_mtd)}}
+              </div>
+              <div style="font-size: 11px; color: var(--text-tertiary);">Desvio: ${{fmtSignPct(item.desvio_pct)}}</div>
+            </div>
           </div>
-          <div class="highlight-metric">
-            <div class="highlight-gap" style="color: var(--apple-green-text);">+${{fmtMoney(item.gap_mtd)}}</div>
-            <div style="font-size: 11px; color: var(--text-tertiary);">Venda: ${{fmtMoney(item.realizado_mtd)}}</div>
-          </div>
-        </div>
-      `).join('');
+        `).join('');
+      }};
 
-      const elDet = document.getElementById('listDetratores');
-      elDet.innerHTML = destaques.detratores.map(item => `
-        <div class="highlight-item">
-          <div class="highlight-info">
-            <span class="highlight-name" title="${{item.linha}}">${{item.linha}}</span>
-            <span class="highlight-cat">${{item.grupo}} • ${{fmtPct(item.ating_mtd_pct)}} da Meta</span>
-          </div>
-          <div class="highlight-metric">
-            <div class="highlight-gap" style="color: var(--apple-red-text);">${{fmtMoney(item.gap_mtd)}}</div>
-            <div style="font-size: 11px; color: var(--text-tertiary);">Venda: ${{fmtMoney(item.realizado_mtd)}}</div>
-          </div>
-        </div>
-      `).join('');
+      document.getElementById('listAceleradores').innerHTML = renderList(destaques.aceleradores, true);
+      document.getElementById('listDetratores').innerHTML = renderList(destaques.detratores, false);
+      
+      // Atualizar também na matriz se aberta
+      if (document.getElementById('matrixAceleradoresList')) {{
+        document.getElementById('matrixAceleradoresList').innerHTML = renderList(destaques.aceleradores, true);
+        document.getElementById('matrixDetratoresList').innerHTML = renderList(destaques.detratores, false);
+      }}
     }}
 
     function renderTable() {{
+      const tableWrapper = document.getElementById('tableContainerWrapper');
+      const matrizWrapper = document.getElementById('matrizContainerWrapper');
       const thead = document.getElementById('tableHead');
       const tbody = document.getElementById('tableBody');
 
-      if (activeTableTab === 'grupos') {{
+      if (activeTableTab === 'matriz') {{
+        tableWrapper.style.display = 'none';
+        matrizWrapper.style.display = 'block';
+        document.getElementById('matrixChannelTag1').textContent = `Canal: ${{activeChannel.toUpperCase()}}`;
+        document.getElementById('matrixChannelTag2').textContent = `Canal: ${{activeChannel.toUpperCase()}}`;
+        renderHighlights();
+        return;
+      }}
+
+      tableWrapper.style.display = 'block';
+      matrizWrapper.style.display = 'none';
+
+      if (activeTableTab === 'canais') {{
+        renderCanaisTable(thead, tbody);
+      }} else if (activeTableTab === 'grupos') {{
         renderGruposTable(thead, tbody);
       }} else if (activeTableTab === 'linhas') {{
         renderLinhasTable(thead, tbody);
@@ -1501,19 +1584,77 @@ def build():
       }}
     }}
 
+    /* ABA 1: Visão Geral de Canais */
+    function renderCanaisTable(thead, tbody) {{
+      thead.innerHTML = `
+        <tr>
+          <th>Canal Digital</th>
+          <th class="num-cell">Realizado MTD</th>
+          <th class="num-cell">Meta MTD</th>
+          <th class="num-cell">Ating. %</th>
+          <th class="num-cell">Desvio R$ (GAP)</th>
+          <th class="num-cell">Desvio %</th>
+          <th class="num-cell">Ago/26 MTD</th>
+          <th class="num-cell">Cresc. MoM %</th>
+          <th class="num-cell">Set/25 MTD</th>
+          <th class="num-cell">Evol. YoY %</th>
+          <th class="num-cell">Share %</th>
+          <th class="num-cell">Projeção Mês</th>
+          <th class="num-cell">Meta Mensal</th>
+        </tr>
+      `;
+
+      const canais = window.DASHBOARD_DATA.canais_tabela;
+      tbody.innerHTML = canais.map(c => `
+        <tr style="${{c.id === activeChannel ? 'background: var(--surface-hover); font-weight: 600;' : ''}}">
+          <td><strong>${{c.icone || ''}} ${{c.nome}}</strong></td>
+          <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(c.venda_mtd)}}</td>
+          <td class="num-cell">${{fmtMoney(c.meta_mtd)}}</td>
+          <td class="num-cell">
+            <span class="badge-trend ${{c.ating_mtd_pct >= 100 ? 'trend-pos' : c.ating_mtd_pct >= 90 ? 'trend-neutral' : 'trend-neg'}}">
+              ${{fmtPct(c.ating_mtd_pct)}}
+            </span>
+          </td>
+          <td class="num-cell" style="font-weight: 700; color: ${{c.gap_mtd >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+            ${{(c.gap_mtd >= 0 ? '+' : '') + fmtMoney(c.gap_mtd)}}
+          </td>
+          <td class="num-cell" style="color: ${{c.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+            ${{fmtSignPct(c.desvio_pct)}}
+          </td>
+          <td class="num-cell">${{fmtMoney(c.v26_06_mtd)}}</td>
+          <td class="num-cell">
+            <span class="badge-trend ${{c.crescimento_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+              ${{fmtSignPct(c.crescimento_mom_pct)}}
+            </span>
+          </td>
+          <td class="num-cell">${{fmtMoney(c.v25_mtd)}}</td>
+          <td class="num-cell">
+            <span class="badge-trend ${{c.crescimento_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+              ${{fmtSignPct(c.crescimento_yoy_pct)}}
+            </span>
+          </td>
+          <td class="num-cell">${{fmtPct(c.share_realizado_pct)}}</td>
+          <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(c.projecao_fechamento)}}</td>
+          <td class="num-cell" style="color: var(--text-tertiary);">${{fmtMoney(c.meta_mensal)}}</td>
+        </tr>
+      `).join('');
+    }}
+
+    /* ABA 2: Grupos / Categorias */
     function renderGruposTable(thead, tbody) {{
       thead.innerHTML = `
         <tr>
           <th>Grupo de Categorias</th>
-          <th class="num-cell">Meta MTD</th>
           <th class="num-cell">Realizado MTD</th>
+          <th class="num-cell">Meta MTD</th>
           <th class="num-cell">Ating. %</th>
-          <th class="num-cell">GAP (R$)</th>
-          <th class="num-cell">App MTD</th>
-          <th class="num-cell">Site MTD</th>
-          <th class="num-cell">Mkt MTD</th>
+          <th class="num-cell">Desvio R$ (GAP)</th>
+          <th class="num-cell">Desvio %</th>
+          <th class="num-cell">Cresc. MoM %</th>
+          <th class="num-cell">Evol. YoY %</th>
+          <th class="num-cell">Share %</th>
           <th class="num-cell">Projeção Mês</th>
-          <th class="num-cell">YoY %</th>
+          <th class="num-cell">Meta Mês</th>
         </tr>
       `;
 
@@ -1523,48 +1664,56 @@ def build():
       }}
 
       tbody.innerHTML = items.map(g => {{
-        const isPos = g.gap_mtd >= 0;
+        const chData = (g.canais && g.canais[activeChannel]) ? g.canais[activeChannel] : g;
+        const isPos = chData.gap_mtd >= 0;
         return `
           <tr>
             <td><strong>${{g.grupo}}</strong> <span style="font-size: 11px; color: var(--text-tertiary);">(${{g.total_linhas}} linhas)</span></td>
-            <td class="num-cell">${{fmtMoney(g.meta_mtd)}}</td>
-            <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(g.realizado_mtd)}}</td>
+            <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(chData.realizado_mtd)}}</td>
+            <td class="num-cell">${{fmtMoney(chData.meta_mtd)}}</td>
             <td class="num-cell">
-              <span class="badge-trend ${{g.ating_mtd_pct >= 100 ? 'trend-pos' : g.ating_mtd_pct >= 90 ? 'trend-neutral' : 'trend-neg'}}">
-                ${{fmtPct(g.ating_mtd_pct)}}
+              <span class="badge-trend ${{chData.ating_mtd_pct >= 100 ? 'trend-pos' : chData.ating_mtd_pct >= 90 ? 'trend-neutral' : 'trend-neg'}}">
+                ${{fmtPct(chData.ating_mtd_pct)}}
               </span>
             </td>
             <td class="num-cell" style="font-weight: 700; color: ${{isPos ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-              ${{(isPos ? '+' : '') + fmtMoney(g.gap_mtd)}}
+              ${{(isPos ? '+' : '') + fmtMoney(chData.gap_mtd)}}
             </td>
-            <td class="num-cell">${{fmtMoney(g.realizado_app)}}</td>
-            <td class="num-cell">${{fmtMoney(g.realizado_site)}}</td>
-            <td class="num-cell">${{fmtMoney(g.realizado_mkt)}}</td>
-            <td class="num-cell">${{fmtMoney(g.projecao_fechamento)}}</td>
+            <td class="num-cell" style="color: ${{chData.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+              ${{fmtSignPct(chData.desvio_pct)}}
+            </td>
             <td class="num-cell">
-              <span class="badge-trend ${{g.crescimento_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                ${{(g.crescimento_yoy_pct >= 0 ? '+' : '') + g.crescimento_yoy_pct.toFixed(1)}}%
+              <span class="badge-trend ${{chData.crescimento_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                ${{fmtSignPct(chData.crescimento_mom_pct)}}
               </span>
             </td>
+            <td class="num-cell">
+              <span class="badge-trend ${{chData.crescimento_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                ${{fmtSignPct(chData.crescimento_yoy_pct)}}
+              </span>
+            </td>
+            <td class="num-cell">${{fmtPct(chData.share_pct)}}</td>
+            <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(chData.projecao_fechamento)}}</td>
+            <td class="num-cell" style="color: var(--text-tertiary);">${{fmtMoney(chData.meta_mensal)}}</td>
           </tr>
         `;
       }}).join('');
     }}
 
+    /* ABA 3: Linhas de Produtos */
     function renderLinhasTable(thead, tbody) {{
       thead.innerHTML = `
         <tr>
           <th>Linha de Produto</th>
           <th>Grupo</th>
-          <th class="num-cell">Meta MTD</th>
           <th class="num-cell">Realizado MTD</th>
+          <th class="num-cell">Meta MTD</th>
           <th class="num-cell">Ating. %</th>
-          <th class="num-cell">GAP (R$)</th>
-          <th class="num-cell">App</th>
-          <th class="num-cell">Site</th>
-          <th class="num-cell">Mkt</th>
+          <th class="num-cell">Desvio R$ (GAP)</th>
+          <th class="num-cell">Desvio %</th>
+          <th class="num-cell">Cresc. MoM %</th>
+          <th class="num-cell">Evol. YoY %</th>
           <th class="num-cell">Projeção Mês</th>
-          <th class="num-cell">YoY %</th>
         </tr>
       `;
 
@@ -1577,35 +1726,42 @@ def build():
       }}
 
       tbody.innerHTML = items.slice(0, 100).map(l => {{
-        const isPos = l.gap_mtd >= 0;
+        const chData = (l.canais && l.canais[activeChannel]) ? l.canais[activeChannel] : l;
+        const isPos = chData.gap_mtd >= 0;
         return `
           <tr>
             <td><strong>${{l.linha}}</strong></td>
             <td style="color: var(--text-secondary); font-size: 12px;">${{l.grupo}}</td>
-            <td class="num-cell">${{fmtMoney(l.meta_mtd)}}</td>
-            <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(l.realizado_mtd)}}</td>
+            <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(chData.realizado_mtd)}}</td>
+            <td class="num-cell">${{fmtMoney(chData.meta_mtd)}}</td>
             <td class="num-cell">
-              <span class="badge-trend ${{l.ating_mtd_pct >= 100 ? 'trend-pos' : l.ating_mtd_pct >= 90 ? 'trend-neutral' : 'trend-neg'}}">
-                ${{fmtPct(l.ating_mtd_pct)}}
+              <span class="badge-trend ${{chData.ating_mtd_pct >= 100 ? 'trend-pos' : chData.ating_mtd_pct >= 90 ? 'trend-neutral' : 'trend-neg'}}">
+                ${{fmtPct(chData.ating_mtd_pct)}}
               </span>
             </td>
             <td class="num-cell" style="font-weight: 700; color: ${{isPos ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-              ${{(isPos ? '+' : '') + fmtMoney(l.gap_mtd)}}
+              ${{(isPos ? '+' : '') + fmtMoney(chData.gap_mtd)}}
             </td>
-            <td class="num-cell">${{fmtMoney(l.realizado_app)}}</td>
-            <td class="num-cell">${{fmtMoney(l.realizado_site)}}</td>
-            <td class="num-cell">${{fmtMoney(l.realizado_mkt)}}</td>
-            <td class="num-cell">${{fmtMoney(l.projecao_fechamento)}}</td>
+            <td class="num-cell" style="color: ${{chData.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+              ${{fmtSignPct(chData.desvio_pct)}}
+            </td>
             <td class="num-cell">
-              <span class="badge-trend ${{l.crescimento_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                ${{(l.crescimento_yoy_pct >= 0 ? '+' : '') + l.crescimento_yoy_pct.toFixed(1)}}%
+              <span class="badge-trend ${{chData.crescimento_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                ${{fmtSignPct(chData.crescimento_mom_pct)}}
               </span>
             </td>
+            <td class="num-cell">
+              <span class="badge-trend ${{chData.crescimento_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                ${{fmtSignPct(chData.crescimento_yoy_pct)}}
+              </span>
+            </td>
+            <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(chData.projecao_fechamento)}}</td>
           </tr>
         `;
       }}).join('');
     }}
 
+    /* ABA 5: Top SKUs */
     function renderSkusTable(thead, tbody) {{
       thead.innerHTML = `
         <tr>
@@ -1613,10 +1769,10 @@ def build():
           <th>Descrição do SKU</th>
           <th>Laboratório</th>
           <th>Linha</th>
-          <th class="num-cell">Meta MTD</th>
-          <th class="num-cell">Meta App</th>
-          <th class="num-cell">Meta Site</th>
-          <th class="num-cell">Meta Mkt</th>
+          <th class="num-cell">Meta MTD Total</th>
+          <th class="num-cell">Meta MTD App</th>
+          <th class="num-cell">Meta MTD Site</th>
+          <th class="num-cell">Meta MTD Mkt</th>
           <th class="num-cell">Meta Mensal</th>
         </tr>
       `;
@@ -1638,9 +1794,9 @@ def build():
           <td style="color: var(--text-secondary); font-size: 12px;">${{s.laboratorio}}</td>
           <td style="color: var(--text-tertiary); font-size: 12px;">${{s.linha}}</td>
           <td class="num-cell" style="font-weight: 700; color: var(--apple-green-text);">${{fmtMoney(s.meta_mtd)}}</td>
-          <td class="num-cell">${{fmtMoney(s.meta_app)}}</td>
-          <td class="num-cell">${{fmtMoney(s.meta_site)}}</td>
-          <td class="num-cell">${{fmtMoney(s.meta_mkt)}}</td>
+          <td class="num-cell" style="${{activeChannel === 'app' ? 'font-weight: 700; color: var(--apple-indigo);' : ''}}">${{fmtMoney(s.meta_mtd_app)}}</td>
+          <td class="num-cell" style="${{activeChannel === 'site' ? 'font-weight: 700; color: var(--apple-purple);' : ''}}">${{fmtMoney(s.meta_mtd_site)}}</td>
+          <td class="num-cell" style="${{activeChannel === 'marketplace' ? 'font-weight: 700; color: var(--apple-orange);' : ''}}">${{fmtMoney(s.meta_mtd_mkt)}}</td>
           <td class="num-cell" style="color: var(--text-secondary);">${{fmtMoney(s.meta_mensal)}}</td>
         </tr>
       `).join('');
@@ -1648,27 +1804,34 @@ def build():
 
     function exportToCSV() {{
       let csv = '';
-      if (activeTableTab === 'grupos') {{
-        csv = 'Grupo;Meta_MTD;Realizado_MTD;Ating_Pct;GAP_MTD;App_MTD;Site_MTD;Mkt_MTD;Projecao_Mes;YoY_Pct\\n';
+      if (activeTableTab === 'canais') {{
+        csv = 'Canal;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;Ago26_MTD;MoM_Pct;Set25_MTD;YoY_Pct;Share_Pct;Projecao_Mes;Meta_Mensal\\n';
+        window.DASHBOARD_DATA.canais_tabela.forEach(c => {{
+          csv += `"${{c.nome}}";${{c.venda_mtd}};${{c.meta_mtd}};${{c.ating_mtd_pct}};${{c.gap_mtd}};${{c.desvio_pct}};${{c.v26_06_mtd}};${{c.crescimento_mom_pct}};${{c.v25_mtd}};${{c.crescimento_yoy_pct}};${{c.share_realizado_pct}};${{c.projecao_fechamento}};${{c.meta_mensal}}\\n`;
+        }});
+      }} else if (activeTableTab === 'grupos') {{
+        csv = 'Grupo;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Share_Pct;Projecao_Mes\\n';
         window.DASHBOARD_DATA.grupos.forEach(g => {{
-          csv += `"${{g.grupo}}";${{g.meta_mtd}};${{g.realizado_mtd}};${{g.ating_mtd_pct}};${{g.gap_mtd}};${{g.realizado_app}};${{g.realizado_site}};${{g.realizado_mkt}};${{g.projecao_fechamento}};${{g.crescimento_yoy_pct}}\\n`;
+          const ch = g.canais[activeChannel] || g;
+          csv += `"${{g.grupo}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.share_pct}};${{ch.projecao_fechamento}}\\n`;
         }});
       }} else if (activeTableTab === 'linhas') {{
-        csv = 'Linha;Grupo;Meta_MTD;Realizado_MTD;Ating_Pct;GAP_MTD;App_MTD;Site_MTD;Mkt_MTD;Projecao_Mes;YoY_Pct\\n';
+        csv = 'Linha;Grupo;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Projecao_Mes\\n';
         window.DASHBOARD_DATA.linhas.forEach(l => {{
-          csv += `"${{l.linha}}";"${{l.grupo}}";${{l.meta_mtd}};${{l.realizado_mtd}};${{l.ating_mtd_pct}};${{l.gap_mtd}};${{l.realizado_app}};${{l.realizado_site}};${{l.realizado_mkt}};${{l.projecao_fechamento}};${{l.crescimento_yoy_pct}}\\n`;
+          const ch = l.canais[activeChannel] || l;
+          csv += `"${{l.linha}}";"${{l.grupo}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.projecao_fechamento}}\\n`;
         }});
       }} else if (activeTableTab === 'skus') {{
         csv = 'ID;Descricao;Laboratorio;Linha;Meta_MTD;Meta_App;Meta_Site;Meta_Mkt;Meta_Mensal\\n';
         window.DASHBOARD_DATA.top_skus.forEach(s => {{
-          csv += `${{s.id}};"${{s.nome}}";"${{s.laboratorio}}";"${{s.linha}}";${{s.meta_mtd}};${{s.meta_app}};${{s.meta_site}};${{s.meta_mkt}};${{s.meta_mensal}}\\n`;
+          csv += `${{s.id}};"${{s.nome}}";"${{s.laboratorio}}";"${{s.linha}}";${{s.meta_mtd}};${{s.meta_mtd_app}};${{s.meta_mtd_site}};${{s.meta_mtd_mkt}};${{s.meta_mensal}}\\n`;
         }});
       }}
 
       const blob = new Blob(["\\uFEFF" + csv], {{ type: 'text/csv;charset=utf-8;' }});
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = `Acompanhamento_Digital_${{activeTableTab}}_${{new Date().toISOString().slice(0,10)}}.csv`;
+      link.download = `Acompanhamento_Digital_${{activeTableTab}}_${{activeChannel}}_${{new Date().toISOString().slice(0,10)}}.csv`;
       link.click();
     }}
   </script>
@@ -1679,7 +1842,7 @@ def build():
     with open(OUTPUT_HTML, 'w', encoding='utf-8') as f:
         f.write(html_template)
 
-    print(f"✅ Dashboard Executivo (Apple Design) compilado com sucesso em: {OUTPUT_HTML}")
+    print(f"✅ Dashboard Executivo (Apple Design com Filtros & Desvios) compilado com sucesso em: {OUTPUT_HTML}")
     print(f"   Tamanho final do HTML: {os.path.getsize(OUTPUT_HTML) / 1024:.1f} KB")
     print(f"🎉 Compilação concluída em {time.time() - t0:.2f}s!")
 

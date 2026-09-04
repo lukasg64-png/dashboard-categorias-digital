@@ -1,8 +1,12 @@
 """
 process_digital_analytics.py — Motor Analítico de Consolidação Digital (Set/2026).
 Cruza as Metas Diarizadas oficiais com o Realizado do Qlik Sense.
-Calcula Desvios (Atingimento % e GAP R$), Evolução (Curva Diária), Crescimento (YoY e MoM),
-Projeções de Fechamento e Curva ABC por Hierarquia e SKU.
+Calcula Desvios (Atingimento %, GAP R$ e Desvio %), Crescimento (MoM % e MoM R$),
+Evolução (YoY % e YoY R$), Projeções de Fechamento e Curva Diária para:
+- Total Digital
+- App (App + App Tele Entrega)
+- Site (Site + Site Tele Entrega)
+- Marketplace (iFood + Ecommerce + Rappi)
 Gera o pacote de dados final 'dashboard_digital_data.json'.
 """
 import os, sys, time, json
@@ -37,6 +41,11 @@ def calc_pct(num, den):
         return round((num / den) * 100.0, 2)
     return 0.0
 
+def calc_desvio_pct(real, meta):
+    if meta and meta > 0:
+        return round(((real / meta) - 1.0) * 100.0, 2)
+    return 0.0
+
 def calc_growth(cur, prev):
     diff = cur - prev
     pct = (diff / prev * 100.0) if prev and prev > 0 else 0.0
@@ -45,7 +54,7 @@ def calc_growth(cur, prev):
 def main():
     t0 = time.time()
     print("=" * 70)
-    print("  PROCESSAMENTO ANALÍTICO: METAS X REALIZADO DIGITAL (SET/2026)")
+    print("  PROCESSAMENTO ANALÍTICO: METAS, DESVIOS, CRESCIMENTO & EVOLUÇÃO")
     print("=" * 70)
 
     # 1. Carregar Metas e Curva Diária
@@ -73,13 +82,13 @@ def main():
     print(f"Percentual acumulado da curva até o Dia {max_dia}: {pct_acum_dmax * 100:.2f}%")
 
     # 3. Processar Curva Diária de Vendas (Realizado x Meta)
-    # canais_dia: [canal, dia, v26, v26_06, v25]
     raw_canais_dia = qlik_raw.get('canais_dia', [])
     
-    # Estrutura por Dia: total, app, site, marketplace
+    # Estrutura por Dia: total, app, site, marketplace (v26, v26_06, v25)
     daily_sales = defaultdict(lambda: {
         'total': 0.0, 'app': 0.0, 'site': 0.0, 'marketplace': 0.0,
-        'v26_06_total': 0.0, 'v25_total': 0.0
+        'v26_06_total': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0,
+        'v25_total': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0
     })
 
     for r in raw_canais_dia:
@@ -95,6 +104,10 @@ def main():
             daily_sales[dia][cat] += v26
             daily_sales[dia]['v26_06_total'] += v26_06
             daily_sales[dia]['v25_total'] += v25
+
+            cat_key = 'mkt' if cat == 'marketplace' else cat
+            daily_sales[dia][f'v26_06_{cat_key}'] += v26_06
+            daily_sales[dia][f'v25_{cat_key}'] += v25
 
     # Construir tabela diária para gráficos
     curva_grafico = []
@@ -161,25 +174,49 @@ def main():
             'ating_acum_total': calc_pct(real_acum_total, m_acum_tot) if is_realizado else None
         })
 
-    # 4. Totais Executivos MTD & Projeção
+    # 4. Totais Executivos MTD & Projeções
     meta_total_mtd = meta_total_mensal * pct_acum_dmax
     meta_app_mtd = meta_app_mensal * pct_acum_dmax
     meta_site_mtd = meta_site_mensal * pct_acum_dmax
     meta_mkt_mtd = meta_mkt_mensal * pct_acum_dmax
 
-    # Histórico comparativo MTD
+    # Histórico comparativo MTD Total
     v26_06_mtd_tot = sum(daily_sales[d]['v26_06_total'] for d in range(1, max_dia + 1))
     v25_mtd_tot = sum(daily_sales[d]['v25_total'] for d in range(1, max_dia + 1))
 
-    # Projeção de Fechamento (Run Rate ponderado pela curva de diarização)
+    # Histórico comparativo por canal
+    v26_06_mtd_app = sum(daily_sales[d]['v26_06_app'] for d in range(1, max_dia + 1))
+    v25_mtd_app = sum(daily_sales[d]['v25_app'] for d in range(1, max_dia + 1))
+
+    v26_06_mtd_site = sum(daily_sales[d]['v26_06_site'] for d in range(1, max_dia + 1))
+    v25_mtd_site = sum(daily_sales[d]['v25_site'] for d in range(1, max_dia + 1))
+
+    v26_06_mtd_mkt = sum(daily_sales[d]['v26_06_mkt'] for d in range(1, max_dia + 1))
+    v25_mtd_mkt = sum(daily_sales[d]['v25_mkt'] for d in range(1, max_dia + 1))
+
+    # Projeção de Fechamento (Run Rate ponderado pela curva oficial)
     proj_total = (real_acum_total / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
     proj_app = (real_acum_app / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
     proj_site = (real_acum_site / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
     proj_mkt = (real_acum_mkt / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
 
-    # Crescimentos
-    yoy_pct, yoy_diff = calc_growth(real_acum_total, v25_mtd_tot)
-    mom_pct, mom_diff = calc_growth(real_acum_total, v26_06_mtd_tot)
+    # Crescimentos MoM e YoY
+    yoy_pct_tot, yoy_diff_tot = calc_growth(real_acum_total, v25_mtd_tot)
+    mom_pct_tot, mom_diff_tot = calc_growth(real_acum_total, v26_06_mtd_tot)
+
+    yoy_pct_app, yoy_diff_app = calc_growth(real_acum_app, v25_mtd_app)
+    mom_pct_app, mom_diff_app = calc_growth(real_acum_app, v26_06_mtd_app)
+
+    yoy_pct_site, yoy_diff_site = calc_growth(real_acum_site, v25_mtd_site)
+    mom_pct_site, mom_diff_site = calc_growth(real_acum_site, v26_06_mtd_site)
+
+    yoy_pct_mkt, yoy_diff_mkt = calc_growth(real_acum_mkt, v25_mtd_mkt)
+    mom_pct_mkt, mom_diff_mkt = calc_growth(real_acum_mkt, v26_06_mtd_mkt)
+
+    gap_mtd_tot = round(real_acum_total - meta_total_mtd, 2)
+    gap_mtd_app = round(real_acum_app - meta_app_mtd, 2)
+    gap_mtd_site = round(real_acum_site - meta_site_mtd, 2)
+    gap_mtd_mkt = round(real_acum_mkt - meta_mkt_mtd, 2)
 
     kpis_executivos = {
         'data_corte': f"01 a {max_dia:02d}/09/2026 (D-1)",
@@ -188,81 +225,116 @@ def main():
         'pct_curva_acum': round(pct_acum_dmax * 100, 2),
         'canais': {
             'total': {
+                'id': 'total',
                 'nome': 'Total Digital',
+                'icone': '🌐',
                 'venda_mtd': round(real_acum_total, 2),
                 'meta_mtd': round(meta_total_mtd, 2),
                 'meta_mensal': round(meta_total_mensal, 2),
                 'ating_mtd_pct': calc_pct(real_acum_total, meta_total_mtd),
-                'gap_mtd': round(real_acum_total - meta_total_mtd, 2),
+                'gap_mtd': gap_mtd_tot,
+                'desvio_pct': calc_desvio_pct(real_acum_total, meta_total_mtd),
                 'ating_mensal_pct': calc_pct(real_acum_total, meta_total_mensal),
                 'projecao_fechamento': round(proj_total, 2),
                 'ating_proj_pct': calc_pct(proj_total, meta_total_mensal),
                 'gap_projecao': round(proj_total - meta_total_mensal, 2),
                 'share_realizado_pct': 100.0,
                 'share_meta_pct': 100.0,
-                'crescimento_yoy_pct': yoy_pct,
-                'crescimento_yoy_diff': yoy_diff,
-                'crescimento_mom_pct': mom_pct,
-                'crescimento_mom_diff': mom_diff
+                'v26_06_mtd': round(v26_06_mtd_tot, 2),
+                'crescimento_mom_pct': mom_pct_tot,
+                'crescimento_mom_diff': mom_diff_tot,
+                'v25_mtd': round(v25_mtd_tot, 2),
+                'crescimento_yoy_pct': yoy_pct_tot,
+                'crescimento_yoy_diff': yoy_diff_tot
             },
             'app': {
+                'id': 'app',
                 'nome': 'App',
                 'icone': '📱',
                 'venda_mtd': round(real_acum_app, 2),
                 'meta_mtd': round(meta_app_mtd, 2),
                 'meta_mensal': round(meta_app_mensal, 2),
                 'ating_mtd_pct': calc_pct(real_acum_app, meta_app_mtd),
-                'gap_mtd': round(real_acum_app - meta_app_mtd, 2),
+                'gap_mtd': gap_mtd_app,
+                'desvio_pct': calc_desvio_pct(real_acum_app, meta_app_mtd),
                 'ating_mensal_pct': calc_pct(real_acum_app, meta_app_mensal),
                 'projecao_fechamento': round(proj_app, 2),
                 'ating_proj_pct': calc_pct(proj_app, meta_app_mensal),
                 'gap_projecao': round(proj_app - meta_app_mensal, 2),
                 'share_realizado_pct': calc_pct(real_acum_app, real_acum_total),
-                'share_meta_pct': metas_resumo['shares']['app']
+                'share_meta_pct': metas_resumo['shares']['app'],
+                'v26_06_mtd': round(v26_06_mtd_app, 2),
+                'crescimento_mom_pct': mom_pct_app,
+                'crescimento_mom_diff': mom_diff_app,
+                'v25_mtd': round(v25_mtd_app, 2),
+                'crescimento_yoy_pct': yoy_pct_app,
+                'crescimento_yoy_diff': yoy_diff_app
             },
             'site': {
+                'id': 'site',
                 'nome': 'Site',
                 'icone': '💻',
                 'venda_mtd': round(real_acum_site, 2),
                 'meta_mtd': round(meta_site_mtd, 2),
                 'meta_mensal': round(meta_site_mensal, 2),
                 'ating_mtd_pct': calc_pct(real_acum_site, meta_site_mtd),
-                'gap_mtd': round(real_acum_site - meta_site_mtd, 2),
+                'gap_mtd': gap_mtd_site,
+                'desvio_pct': calc_desvio_pct(real_acum_site, meta_site_mtd),
                 'ating_mensal_pct': calc_pct(real_acum_site, meta_site_mensal),
                 'projecao_fechamento': round(proj_site, 2),
                 'ating_proj_pct': calc_pct(proj_site, meta_site_mensal),
                 'gap_projecao': round(proj_site - meta_site_mensal, 2),
                 'share_realizado_pct': calc_pct(real_acum_site, real_acum_total),
-                'share_meta_pct': metas_resumo['shares']['site']
+                'share_meta_pct': metas_resumo['shares']['site'],
+                'v26_06_mtd': round(v26_06_mtd_site, 2),
+                'crescimento_mom_pct': mom_pct_site,
+                'crescimento_mom_diff': mom_diff_site,
+                'v25_mtd': round(v25_mtd_site, 2),
+                'crescimento_yoy_pct': yoy_pct_site,
+                'crescimento_yoy_diff': yoy_diff_site
             },
             'marketplace': {
+                'id': 'marketplace',
                 'nome': 'Marketplace',
                 'icone': '🛍️',
                 'venda_mtd': round(real_acum_mkt, 2),
                 'meta_mtd': round(meta_mkt_mtd, 2),
                 'meta_mensal': round(meta_mkt_mensal, 2),
                 'ating_mtd_pct': calc_pct(real_acum_mkt, meta_mkt_mtd),
-                'gap_mtd': round(real_acum_mkt - meta_mkt_mtd, 2),
+                'gap_mtd': gap_mtd_mkt,
+                'desvio_pct': calc_desvio_pct(real_acum_mkt, meta_mkt_mtd),
                 'ating_mensal_pct': calc_pct(real_acum_mkt, meta_mkt_mensal),
                 'projecao_fechamento': round(proj_mkt, 2),
                 'ating_proj_pct': calc_pct(proj_mkt, meta_mkt_mensal),
                 'gap_projecao': round(proj_mkt - meta_mkt_mensal, 2),
                 'share_realizado_pct': calc_pct(real_acum_mkt, real_acum_total),
-                'share_meta_pct': metas_resumo['shares']['marketplace']
+                'share_meta_pct': metas_resumo['shares']['marketplace'],
+                'v26_06_mtd': round(v26_06_mtd_mkt, 2),
+                'crescimento_mom_pct': mom_pct_mkt,
+                'crescimento_mom_diff': mom_diff_mkt,
+                'v25_mtd': round(v25_mtd_mkt, 2),
+                'crescimento_yoy_pct': yoy_pct_mkt,
+                'crescimento_yoy_diff': yoy_diff_mkt
             }
         }
     }
 
-    print("\n--- RESUMO DE PERFORMANCE MTD (01 a {:02d}/09) ---".format(max_dia))
-    for k, v in kpis_executivos['canais'].items():
-        print(f"  {v['nome']:15s}: Realizado: R$ {v['venda_mtd']:11,.2f} | Meta MTD: R$ {v['meta_mtd']:11,.2f} | Ating: {v['ating_mtd_pct']:6.1f}% | GAP: R$ {v['gap_mtd']:11,.2f}")
+    # Tabela Executiva de Canais (Resumo Comparativo Consolidado)
+    canais_tabela = [
+        kpis_executivos['canais']['total'],
+        kpis_executivos['canais']['app'],
+        kpis_executivos['canais']['marketplace'],
+        kpis_executivos['canais']['site']
+    ]
 
-    # 5. Processar Hierarquia: Linhas x Categorias x Metas
-    # Carregar metas de linhas
+    print("\n--- RESUMO DE PERFORMANCE MTD (01 a {:02d}/09) ---".format(max_dia))
+    for c in canais_tabela:
+        print(f"  {c['nome']:15s}: Realizado: R$ {c['venda_mtd']:11,.2f} | Meta MTD: R$ {c['meta_mtd']:11,.2f} | Ating: {c['ating_mtd_pct']:6.1f}% | Desvio R$: R$ {c['gap_mtd']:+11,.2f} | MoM: {c['crescimento_mom_pct']:+5.1f}% | YoY: {c['crescimento_yoy_pct']:+5.1f}%")
+
+    # 5. Processar Hierarquia por Linha
     with open(os.path.join(DATA_DIR, 'metas_por_linha.json'), 'r', encoding='utf-8') as f:
         metas_linhas_raw = json.load(f)
 
-    # Dicionário de metas por Linha
     metas_linha_map = {}
     for l in metas_linhas_raw:
         grp = clean_name(l['Desc_Grupo'])
@@ -280,12 +352,11 @@ def main():
             'meta_mtd_mkt': round(l['Marketplace'] * pct_acum_dmax, 2)
         }
 
-    # Agregar realizado por Linha a partir do Qlik
     raw_hier = qlik_raw.get('hierarquia', [])
-    # Formato: [canal, grupo, subgrupo, linha, v26, v26_06, v25]
     real_linha_map = defaultdict(lambda: {
         'v26_total': 0.0, 'v26_app': 0.0, 'v26_site': 0.0, 'v26_mkt': 0.0,
-        'v26_06_total': 0.0, 'v25_total': 0.0
+        'v26_06_total': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0,
+        'v25_total': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0
     })
 
     for r in raw_hier:
@@ -304,9 +375,10 @@ def main():
             real_linha_map[key]['v26_total'] += v26
             real_linha_map[key][f'v26_{c_key}'] += v26
             real_linha_map[key]['v26_06_total'] += v26_06
+            real_linha_map[key][f'v26_06_{c_key}'] += v26_06
             real_linha_map[key]['v25_total'] += v25
+            real_linha_map[key][f'v25_{c_key}'] += v25
 
-    # Unificar todas as linhas (com meta ou com venda)
     all_keys = set(metas_linha_map.keys()).union(set(real_linha_map.keys()))
     tabela_linhas = []
 
@@ -318,107 +390,158 @@ def main():
         })
         rv = real_linha_map.get(key, {
             'v26_total': 0.0, 'v26_app': 0.0, 'v26_site': 0.0, 'v26_mkt': 0.0,
-            'v26_06_total': 0.0, 'v25_total': 0.0
+            'v26_06_total': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0,
+            'v25_total': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0
         })
 
-        v26_tot = round(rv['v26_total'], 2)
-        m_mtd_tot = round(m['meta_mtd_total'], 2)
-        m_mes_tot = round(m['meta_mensal_total'], 2)
+        # Função auxiliar para consolidar cada canal
+        def build_metric_block(real, meta_mtd, meta_mes, v26_06, v25):
+            gap_rs = round(real - meta_mtd, 2)
+            ating_pct = calc_pct(real, meta_mtd)
+            desvio_pct = calc_desvio_pct(real, meta_mtd)
+            proj = round((real / pct_acum_dmax), 2) if pct_acum_dmax > 0 else 0.0
+            mom_pct, mom_diff = calc_growth(real, v26_06)
+            yoy_pct, yoy_diff = calc_growth(real, v25)
+            return {
+                'realizado_mtd': round(real, 2),
+                'meta_mtd': round(meta_mtd, 2),
+                'meta_mensal': round(meta_mes, 2),
+                'gap_mtd': gap_rs,
+                'desvio_pct': desvio_pct,
+                'ating_mtd_pct': ating_pct,
+                'projecao_fechamento': proj,
+                'v26_06_mtd': round(v26_06, 2),
+                'crescimento_mom_pct': mom_pct,
+                'crescimento_mom_diff': mom_diff,
+                'v25_mtd': round(v25, 2),
+                'crescimento_yoy_pct': yoy_pct,
+                'crescimento_yoy_diff': yoy_diff
+            }
 
-        gap_mtd = round(v26_tot - m_mtd_tot, 2)
-        ating_mtd = calc_pct(v26_tot, m_mtd_tot)
-        proj_lin = round((v26_tot / pct_acum_dmax), 2) if pct_acum_dmax > 0 else 0.0
-
-        yoy_l_pct, yoy_l_diff = calc_growth(v26_tot, rv['v25_total'])
-        mom_l_pct, mom_l_diff = calc_growth(v26_tot, rv['v26_06_total'])
+        canais_linha = {
+            'total': build_metric_block(rv['v26_total'], m['meta_mtd_total'], m['meta_mensal_total'], rv['v26_06_total'], rv['v25_total']),
+            'app': build_metric_block(rv['v26_app'], m['meta_mtd_app'], m['meta_mensal_app'], rv['v26_06_app'], rv['v25_app']),
+            'site': build_metric_block(rv['v26_site'], m['meta_mtd_site'], m['meta_mensal_site'], rv['v26_06_site'], rv['v25_site']),
+            'marketplace': build_metric_block(rv['v26_mkt'], m['meta_mtd_mkt'], m['meta_mensal_mkt'], rv['v26_06_mkt'], rv['v25_mkt'])
+        }
 
         tabela_linhas.append({
             'grupo': grp,
             'subgrupo': sub,
             'linha': lin,
-            # Metas
-            'meta_mensal': m_mes_tot,
-            'meta_mtd': m_mtd_tot,
-            'meta_mtd_app': m['meta_mtd_app'],
-            'meta_mtd_site': m['meta_mtd_site'],
-            'meta_mtd_mkt': m['meta_mtd_mkt'],
-            # Realizado
-            'realizado_mtd': v26_tot,
-            'realizado_app': round(rv['v26_app'], 2),
-            'realizado_site': round(rv['v26_site'], 2),
-            'realizado_mkt': round(rv['v26_mkt'], 2),
-            # Desvios
-            'gap_mtd': gap_mtd,
-            'ating_mtd_pct': ating_mtd,
-            'projecao_fechamento': proj_lin,
-            'ating_proj_pct': calc_pct(proj_lin, m_mes_tot),
-            # Crescimento
-            'v25_mtd': round(rv['v25_total'], 2),
-            'crescimento_yoy_pct': yoy_l_pct,
-            'v26_06_mtd': round(rv['v26_06_total'], 2),
-            'crescimento_mom_pct': mom_l_pct
+            'canais': canais_linha,
+            # Flat attributes defaults (Total) for direct access
+            'meta_mensal': canais_linha['total']['meta_mensal'],
+            'meta_mtd': canais_linha['total']['meta_mtd'],
+            'realizado_mtd': canais_linha['total']['realizado_mtd'],
+            'realizado_app': canais_linha['app']['realizado_mtd'],
+            'realizado_site': canais_linha['site']['realizado_mtd'],
+            'realizado_mkt': canais_linha['marketplace']['realizado_mtd'],
+            'gap_mtd': canais_linha['total']['gap_mtd'],
+            'desvio_pct': canais_linha['total']['desvio_pct'],
+            'ating_mtd_pct': canais_linha['total']['ating_mtd_pct'],
+            'projecao_fechamento': canais_linha['total']['projecao_fechamento'],
+            'crescimento_mom_pct': canais_linha['total']['crescimento_mom_pct'],
+            'crescimento_mom_diff': canais_linha['total']['crescimento_mom_diff'],
+            'crescimento_yoy_pct': canais_linha['total']['crescimento_yoy_pct'],
+            'crescimento_yoy_diff': canais_linha['total']['crescimento_yoy_diff']
         })
 
-    # Ordenar por maior venda MTD
     tabela_linhas.sort(key=lambda x: x['realizado_mtd'], reverse=True)
-    print(f"Total de Linhas processadas com Metas e Realizado: {len(tabela_linhas):,}")
+    print(f"Total de Linhas processadas: {len(tabela_linhas):,}")
 
-    # 6. Agregações por Grupo para o dashboard
-    grupos_agg = defaultdict(lambda: {
-        'meta_mensal': 0.0, 'meta_mtd': 0.0, 'realizado_mtd': 0.0,
-        'realizado_app': 0.0, 'realizado_site': 0.0, 'realizado_mkt': 0.0,
-        'v25_mtd': 0.0, 'v26_06_mtd': 0.0, 'total_linhas': 0
+    # 6. Agregações por Grupo com suporte a canais
+    grupos_dict = defaultdict(lambda: {
+        'total': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'app': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'site': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'marketplace': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'total_linhas': 0
     })
 
     for l in tabela_linhas:
         g = l['grupo']
-        grupos_agg[g]['meta_mensal'] += l['meta_mensal']
-        grupos_agg[g]['meta_mtd'] += l['meta_mtd']
-        grupos_agg[g]['realizado_mtd'] += l['realizado_mtd']
-        grupos_agg[g]['realizado_app'] += l['realizado_app']
-        grupos_agg[g]['realizado_site'] += l['realizado_site']
-        grupos_agg[g]['realizado_mkt'] += l['realizado_mkt']
-        grupos_agg[g]['v25_mtd'] += l['v25_mtd']
-        grupos_agg[g]['v26_06_mtd'] += l['v26_06_mtd']
-        grupos_agg[g]['total_linhas'] += 1
+        grupos_dict[g]['total_linhas'] += 1
+        for ch in ['total', 'app', 'site', 'marketplace']:
+            b = l['canais'][ch]
+            grupos_dict[g][ch]['real'] += b['realizado_mtd']
+            grupos_dict[g][ch]['meta_mtd'] += b['meta_mtd']
+            grupos_dict[g][ch]['meta_mes'] += b['meta_mensal']
+            grupos_dict[g][ch]['v26_06'] += b['v26_06_mtd']
+            grupos_dict[g][ch]['v25'] += b['v25_mtd']
 
     tabela_grupos = []
-    for g, v in grupos_agg.items():
-        v26_g = round(v['realizado_mtd'], 2)
-        m_mtd_g = round(v['meta_mtd'], 2)
-        m_mes_g = round(v['meta_mensal'], 2)
-        proj_g = round(v26_g / pct_acum_dmax, 2) if pct_acum_dmax > 0 else 0.0
-        yoy_g_pct, _ = calc_growth(v26_g, v['v25_mtd'])
-        mom_g_pct, _ = calc_growth(v26_g, v['v26_06_mtd'])
+    for g, val in grupos_dict.items():
+        canais_grupo = {}
+        for ch in ['total', 'app', 'site', 'marketplace']:
+            r = val[ch]['real']
+            m_mtd = val[ch]['meta_mtd']
+            m_mes = val[ch]['meta_mes']
+            v06 = val[ch]['v26_06']
+            v25 = val[ch]['v25']
+            
+            gap_rs = round(r - m_mtd, 2)
+            ating = calc_pct(r, m_mtd)
+            desvio = calc_desvio_pct(r, m_mtd)
+            proj = round(r / pct_acum_dmax, 2) if pct_acum_dmax > 0 else 0.0
+            mom_pct, mom_diff = calc_growth(r, v06)
+            yoy_pct, yoy_diff = calc_growth(r, v25)
+            ch_total_real = kpis_executivos['canais'][ch]['venda_mtd']
+            share = calc_pct(r, ch_total_real)
 
+            canais_grupo[ch] = {
+                'realizado_mtd': round(r, 2),
+                'meta_mtd': round(m_mtd, 2),
+                'meta_mensal': round(m_mes, 2),
+                'gap_mtd': gap_rs,
+                'desvio_pct': desvio,
+                'ating_mtd_pct': ating,
+                'projecao_fechamento': proj,
+                'v26_06_mtd': round(v06, 2),
+                'crescimento_mom_pct': mom_pct,
+                'crescimento_mom_diff': mom_diff,
+                'v25_mtd': round(v25, 2),
+                'crescimento_yoy_pct': yoy_pct,
+                'crescimento_yoy_diff': yoy_diff,
+                'share_pct': share
+            }
+
+        tot = canais_grupo['total']
         tabela_grupos.append({
             'grupo': g,
-            'meta_mensal': m_mes_g,
-            'meta_mtd': m_mtd_g,
-            'realizado_mtd': v26_g,
-            'realizado_app': round(v['realizado_app'], 2),
-            'realizado_site': round(v['realizado_site'], 2),
-            'realizado_mkt': round(v['realizado_mkt'], 2),
-            'gap_mtd': round(v26_g - m_mtd_g, 2),
-            'ating_mtd_pct': calc_pct(v26_g, m_mtd_g),
-            'projecao_fechamento': proj_g,
-            'ating_proj_pct': calc_pct(proj_g, m_mes_g),
-            'crescimento_yoy_pct': yoy_g_pct,
-            'crescimento_mom_pct': mom_g_pct,
-            'share_venda_pct': calc_pct(v26_g, real_acum_total),
-            'total_linhas': v['total_linhas']
+            'total_linhas': val['total_linhas'],
+            'canais': canais_grupo,
+            # Flat attributes
+            'realizado_mtd': tot['realizado_mtd'],
+            'meta_mtd': tot['meta_mtd'],
+            'meta_mensal': tot['meta_mensal'],
+            'gap_mtd': tot['gap_mtd'],
+            'desvio_pct': tot['desvio_pct'],
+            'ating_mtd_pct': tot['ating_mtd_pct'],
+            'projecao_fechamento': tot['projecao_fechamento'],
+            'realizado_app': canais_grupo['app']['realizado_mtd'],
+            'realizado_site': canais_grupo['site']['realizado_mtd'],
+            'realizado_mkt': canais_grupo['marketplace']['realizado_mtd'],
+            'crescimento_mom_pct': tot['crescimento_mom_pct'],
+            'crescimento_mom_diff': tot['crescimento_mom_diff'],
+            'crescimento_yoy_pct': tot['crescimento_yoy_pct'],
+            'crescimento_yoy_diff': tot['crescimento_yoy_diff'],
+            'share_pct': tot['share_pct']
         })
+
     tabela_grupos.sort(key=lambda x: x['realizado_mtd'], reverse=True)
 
-    # 7. Top SKUs (28.857 SKUs)
+    # 7. Top SKUs (500)
     with open(os.path.join(DATA_DIR, 'metas_top_skus.json'), 'r', encoding='utf-8') as f:
         top_skus_raw = json.load(f)
 
-    # Enriquecer os top SKUs com meta MTD e ordenação
     top_skus_processados = []
     for sk in top_skus_raw[:500]:
         m_tot = sk.get('Total_Digital', 0.0)
-        m_mtd = round(m_tot * pct_acum_dmax, 2)
+        m_app = sk.get('App', 0.0)
+        m_site = sk.get('Site', 0.0)
+        m_mkt = sk.get('Marketplace', 0.0)
+
         top_skus_processados.append({
             'id': sk.get('Produto_ID'),
             'nome': sk.get('Desc_Produto'),
@@ -426,31 +549,60 @@ def main():
             'subgrupo': sk.get('Desc_Subgrupo'),
             'linha': sk.get('Desc_Linha'),
             'laboratorio': sk.get('Laboratorio'),
-            'meta_mensal': m_tot,
-            'meta_mtd': m_mtd,
-            'meta_app': sk.get('App', 0.0),
-            'meta_site': sk.get('Site', 0.0),
-            'meta_mkt': sk.get('Marketplace', 0.0)
+            # Total
+            'meta_mensal': round(m_tot, 2),
+            'meta_mtd': round(m_tot * pct_acum_dmax, 2),
+            # App
+            'meta_mensal_app': round(m_app, 2),
+            'meta_mtd_app': round(m_app * pct_acum_dmax, 2),
+            # Site
+            'meta_mensal_site': round(m_site, 2),
+            'meta_mtd_site': round(m_site * pct_acum_dmax, 2),
+            # Marketplace
+            'meta_mensal_mkt': round(m_mkt, 2),
+            'meta_mtd_mkt': round(m_mkt * pct_acum_dmax, 2)
         })
 
-    # 8. Curva ABC e Destaques (Top 5 Aceleradores e Top 5 Detratores)
-    linhas_com_meta = [l for l in tabela_linhas if l['meta_mtd'] > 5000]
-    top_aceleradores = sorted(linhas_com_meta, key=lambda x: x['gap_mtd'], reverse=True)[:5]
-    top_detratores = sorted(linhas_com_meta, key=lambda x: x['gap_mtd'])[:5]
+    # 8. Destaques (Top Aceleradores e Detratores por Canal)
+    destaques_por_canal = {}
+    for ch in ['total', 'app', 'site', 'marketplace']:
+        linhas_validas = [l for l in tabela_linhas if l['canais'][ch]['meta_mtd'] > 1000]
+        acel = sorted(linhas_validas, key=lambda x: x['canais'][ch]['gap_mtd'], reverse=True)[:5]
+        det = sorted(linhas_validas, key=lambda x: x['canais'][ch]['gap_mtd'])[:5]
+        
+        destaques_por_canal[ch] = {
+            'aceleradores': [{
+                'linha': x['linha'],
+                'grupo': x['grupo'],
+                'realizado_mtd': x['canais'][ch]['realizado_mtd'],
+                'meta_mtd': x['canais'][ch]['meta_mtd'],
+                'gap_mtd': x['canais'][ch]['gap_mtd'],
+                'desvio_pct': x['canais'][ch]['desvio_pct'],
+                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct']
+            } for x in acel],
+            'detratores': [{
+                'linha': x['linha'],
+                'grupo': x['grupo'],
+                'realizado_mtd': x['canais'][ch]['realizado_mtd'],
+                'meta_mtd': x['canais'][ch]['meta_mtd'],
+                'gap_mtd': x['canais'][ch]['gap_mtd'],
+                'desvio_pct': x['canais'][ch]['desvio_pct'],
+                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct']
+            } for x in det]
+        }
 
     # 9. Montar Pacote Consolidado Final
     dashboard_data = {
-        'versao': '1.0.0',
+        'versao': '2.0.0',
         'gerado_em': time.strftime('%Y-%m-%d %H:%M:%S'),
         'kpis': kpis_executivos,
+        'canais_tabela': canais_tabela,
         'curva_diaria': curva_grafico,
         'grupos': tabela_grupos,
-        'linhas': tabela_linhas[:300], # Top 300 linhas para fluidez instantânea
-        'top_skus': top_skus_processados[:200],
-        'destaques': {
-            'aceleradores': top_aceleradores,
-            'detratores': top_detratores
-        }
+        'linhas': tabela_linhas[:300],
+        'top_skus': top_skus_processados[:250],
+        'destaques': destaques_por_canal['total'],
+        'destaques_por_canal': destaques_por_canal
     }
 
     final_json_path = os.path.join(DATA_DIR, 'dashboard_digital_data.json')
