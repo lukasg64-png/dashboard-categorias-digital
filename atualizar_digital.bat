@@ -7,7 +7,7 @@ echo ======================================================================
 echo INICIANDO ATUALIZACAO AUTOMATICA - CATEGORIAS DIGITAL
 echo ======================================================================
 
-echo [1/4] Processando Metas e Curva de Diarizacao...
+echo [1/5] Processando Metas e Curva de Diarizacao...
 python -u load_metas_digital.py
 if errorlevel 1 goto :erro
 
