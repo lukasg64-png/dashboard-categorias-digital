@@ -1,0 +1,51 @@
+[
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "App": 1135965.22,
+    "Site": 1570278.1,
+    "Marketplace": 874203.56,
+    "Total_Digital": 3580446.88
+  },
+  {
+    "Desc_Grupo": "Dermo-Cosmeticos(3089)",
+    "App": 422914.17,
+    "Site": 260856.31,
+    "Marketplace": 265172.32,
+    "Total_Digital": 948942.8
+  },
+  {
+    "Desc_Grupo": "Diversos(5)",
+    "App": 270542.7,
+    "Site": 2.86,
+    "Marketplace": 141529.61,
+    "Total_Digital": 412075.17
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "App": 15441432.15,
+    "Site": 5890586.11,
+    "Marketplace": 8957625.7,
+    "Total_Digital": 30289643.96
+  },
+  {
+    "Desc_Grupo": "Nutricao(3090)",
+    "App": 1333220.97,
+    "Site": 1024443.89,
+    "Marketplace": 559351.57,
+    "Total_Digital": 2917016.42
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "App": 7337444.46,
+    "Site": 5747724.74,
+    "Marketplace": 3509787.91,
+    "Total_Digital": 16594957.12
+  },
+  {
+    "Desc_Grupo": "Servicos(3)",
+    "App": 930.33,
+    "Site": 0.0,
+    "Marketplace": 1231.33,
+    "Total_Digital": 2161.66
+  }
+]

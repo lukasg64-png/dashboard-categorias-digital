@@ -1,0 +1,738 @@
+[
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Bazar ? Papelaria(3214)",
+    "App": 9652.7,
+    "Site": 11730.79,
+    "Marketplace": 4786.31,
+    "Total_Digital": 26169.81
+  },
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Bebidas(3204)",
+    "App": 38655.79,
+    "Site": 243912.26,
+    "Marketplace": 15799.55,
+    "Total_Digital": 298367.6
+  },
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Congelados(3201)",
+    "App": 2830.96,
+    "Site": 7483.21,
+    "Marketplace": 706.46,
+    "Total_Digital": 11020.63
+  },
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Conveniencia - Bazar(3206)",
+    "App": 826234.67,
+    "Site": 540497.74,
+    "Marketplace": 724246.33,
+    "Total_Digital": 2090978.74
+  },
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Conveniencia - Pereciveis(3205)",
+    "App": 176289.18,
+    "Site": 702192.65,
+    "Marketplace": 72411.04,
+    "Total_Digital": 950892.88
+  },
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Conveniencia Exclusiva(3217)",
+    "App": 7858.53,
+    "Site": 162.54,
+    "Marketplace": 3033.0,
+    "Total_Digital": 11054.07
+  },
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Conveniencia Nutricional(3208)",
+    "App": 60191.59,
+    "Site": 55023.37,
+    "Marketplace": 43483.63,
+    "Total_Digital": 158698.6
+  },
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Conveniencia Refrigerados(3215)",
+    "App": 98.68,
+    "Site": 895.63,
+    "Marketplace": 24.69,
+    "Total_Digital": 1018.99
+  },
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Conveniencia Sazonal(29)",
+    "App": 13103.84,
+    "Site": 7684.34,
+    "Marketplace": 7918.04,
+    "Total_Digital": 28706.23
+  },
+  {
+    "Desc_Grupo": "Conveniencia(10)",
+    "Desc_Subgrupo": "Venda Negativa(3197)",
+    "App": 1049.27,
+    "Site": 695.56,
+    "Marketplace": 1794.51,
+    "Total_Digital": 3539.34
+  },
+  {
+    "Desc_Grupo": "Dermo-Cosmeticos(3089)",
+    "Desc_Subgrupo": "Dermo-Cosmeticos Especial(3152)",
+    "App": 270.46,
+    "Site": 170.51,
+    "Marketplace": 249.04,
+    "Total_Digital": 690.01
+  },
+  {
+    "Desc_Grupo": "Dermo-Cosmeticos(3089)",
+    "Desc_Subgrupo": "Dermo-Cosmeticos Nutraceuticos(3153)",
+    "App": 12432.97,
+    "Site": 6243.66,
+    "Marketplace": 7686.59,
+    "Total_Digital": 26363.21
+  },
+  {
+    "Desc_Grupo": "Dermo-Cosmeticos(3089)",
+    "Desc_Subgrupo": "Dermo-Cosmeticos(3151)",
+    "App": 401886.6,
+    "Site": 251472.08,
+    "Marketplace": 251449.93,
+    "Total_Digital": 904808.61
+  },
+  {
+    "Desc_Grupo": "Dermo-Cosmeticos(3089)",
+    "Desc_Subgrupo": "PBM Dermocosmetico(3169)",
+    "App": 8324.15,
+    "Site": 2970.07,
+    "Marketplace": 5786.75,
+    "Total_Digital": 17080.97
+  },
+  {
+    "Desc_Grupo": "Diversos(5)",
+    "Desc_Subgrupo": "Servicos Tele Entrega(24)",
+    "App": 270542.7,
+    "Site": 2.86,
+    "Marketplace": 141529.61,
+    "Total_Digital": 412075.17
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Antibiotico Cont. Generico Oneroso(72)",
+    "App": 31166.76,
+    "Site": 29.81,
+    "Marketplace": 11320.17,
+    "Total_Digital": 42516.74
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Antibiotico Cont. Generico Super Oneroso(3179)",
+    "App": 17952.45,
+    "Site": 6.44,
+    "Marketplace": 7580.2,
+    "Total_Digital": 25539.08
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Antibiotico Cont. Generico(33)",
+    "App": 15317.31,
+    "Site": 3.84,
+    "Marketplace": 6903.75,
+    "Total_Digital": 22224.9
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Antibiotico Cont. Refer Av(35)",
+    "App": 276.08,
+    "Site": 0.0,
+    "Marketplace": 136.19,
+    "Total_Digital": 412.27
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Antibiotico Cont. Referencia Oneroso(3193)",
+    "App": 6964.89,
+    "Site": 29.79,
+    "Marketplace": 3148.1,
+    "Total_Digital": 10142.78
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Antibiotico Cont. Referencia(32)",
+    "App": 38939.25,
+    "Site": 20.16,
+    "Marketplace": 18298.76,
+    "Total_Digital": 57258.17
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Antibiotico Cont. Similar Av(37)",
+    "App": 6.36,
+    "Site": 0.0,
+    "Marketplace": 13.47,
+    "Total_Digital": 19.83
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Antibiotico Cont. Similar(34)",
+    "App": 387.92,
+    "Site": 0.0,
+    "Marketplace": 155.38,
+    "Total_Digital": 543.3
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Anticoncepcionais Onerosos(3182)",
+    "App": 274810.72,
+    "Site": 259513.53,
+    "Marketplace": 128442.94,
+    "Total_Digital": 662767.19
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Anticoncepcionais(13)",
+    "App": 137483.49,
+    "Site": 82375.36,
+    "Marketplace": 67007.31,
+    "Total_Digital": 286866.16
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Campanha(3157)",
+    "App": 22314.38,
+    "Site": 32859.69,
+    "Marketplace": 10015.1,
+    "Total_Digital": 65189.17
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Fitoterapicos(99)",
+    "App": 4269.59,
+    "Site": 6674.95,
+    "Marketplace": 1824.39,
+    "Total_Digital": 12768.93
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Generico Avulso(17)",
+    "App": 10028.04,
+    "Site": 21906.54,
+    "Marketplace": 3594.37,
+    "Total_Digital": 35528.94
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Generico Controlado Super Oneroso(3180)",
+    "App": 59778.15,
+    "Site": 13.46,
+    "Marketplace": 33949.62,
+    "Total_Digital": 93741.22
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Generico Controlado(16)",
+    "App": 317674.52,
+    "Site": 22.69,
+    "Marketplace": 118931.38,
+    "Total_Digital": 436628.59
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Generico Super Oneroso(3181)",
+    "App": 88783.83,
+    "Site": 80636.81,
+    "Marketplace": 41676.69,
+    "Total_Digital": 211097.33
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Genericos - Otc/Mip(3175)",
+    "App": 205879.14,
+    "Site": 269066.81,
+    "Marketplace": 76752.1,
+    "Total_Digital": 551698.05
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Genericos Onerosos Controlados(75)",
+    "App": 108491.89,
+    "Site": 21.91,
+    "Marketplace": 44548.66,
+    "Total_Digital": 153062.46
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Genericos Onerosos(43)",
+    "App": 254379.13,
+    "Site": 209554.01,
+    "Marketplace": 108957.86,
+    "Total_Digital": 572890.99
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Genericos(3)",
+    "App": 660618.46,
+    "Site": 647917.36,
+    "Marketplace": 280205.92,
+    "Total_Digital": 1588741.73
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Hospitalar Exclusiva(3218)",
+    "App": 15844.48,
+    "Site": 8025.73,
+    "Marketplace": 6119.2,
+    "Total_Digital": 29989.4
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Hospitalares(80)",
+    "App": 244948.43,
+    "Site": 274531.23,
+    "Marketplace": 132020.44,
+    "Total_Digital": 651500.1
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Liberados(7)",
+    "App": 90173.12,
+    "Site": 80493.45,
+    "Marketplace": 64288.61,
+    "Total_Digital": 234955.18
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Medicamentos Dermo Cosmeticos(23)",
+    "App": 120.12,
+    "Site": 9.2,
+    "Marketplace": 45.81,
+    "Total_Digital": 175.13
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "PBM  Especial(3170)",
+    "App": 13903.6,
+    "Site": 1529.53,
+    "Marketplace": 12294.36,
+    "Total_Digital": 27727.49
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "PBM Controlado Cupom Desconto(3203)",
+    "App": 25068.5,
+    "Site": 0.0,
+    "Marketplace": 15212.39,
+    "Total_Digital": 40280.89
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "PBM Cupom Desconto(3200)",
+    "App": 23407.26,
+    "Site": 12252.91,
+    "Marketplace": 14726.13,
+    "Total_Digital": 50386.3
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "PBM Referencia Liberado(3191)",
+    "App": 31351.83,
+    "Site": 8608.02,
+    "Marketplace": 22311.85,
+    "Total_Digital": 62271.71
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "PBMs Antibiotico Cont.(98)",
+    "App": 9538.75,
+    "Site": 0.0,
+    "Marketplace": 4340.83,
+    "Total_Digital": 13879.58
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "PBMs Combo Controlados(3212)",
+    "App": 14628.25,
+    "Site": 0.0,
+    "Marketplace": 6217.89,
+    "Total_Digital": 20846.14
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "PBMs Combo(3211)",
+    "App": 120098.13,
+    "Site": 44212.4,
+    "Marketplace": 66034.5,
+    "Total_Digital": 230345.03
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "PBMs Controlados(22)",
+    "App": 7099012.13,
+    "Site": 242625.38,
+    "Marketplace": 4521654.45,
+    "Total_Digital": 11863291.96
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "PBMs(15)",
+    "App": 190302.03,
+    "Site": 71071.34,
+    "Marketplace": 113731.46,
+    "Total_Digital": 375104.83
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Premiacao Exclusiva(73)",
+    "App": 178795.73,
+    "Site": 70856.74,
+    "Marketplace": 96849.36,
+    "Total_Digital": 346501.83
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Avulso(6)",
+    "App": 48392.14,
+    "Site": 113999.01,
+    "Marketplace": 18772.72,
+    "Total_Digital": 181163.87
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Controlado(5)",
+    "App": 332839.41,
+    "Site": 7.6,
+    "Marketplace": 163596.31,
+    "Total_Digital": 496443.32
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Especiais Controlados(74)",
+    "App": 25873.06,
+    "Site": 11635.17,
+    "Marketplace": 23893.12,
+    "Total_Digital": 61401.35
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Especial Oneroso(30)",
+    "App": 41310.81,
+    "Site": 10666.59,
+    "Marketplace": 43505.39,
+    "Total_Digital": 95482.78
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Especial(3190)",
+    "App": 70816.72,
+    "Site": 9843.24,
+    "Marketplace": 69644.81,
+    "Total_Digital": 150304.77
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Farmacia Popular(3174)",
+    "App": 63171.21,
+    "Site": 53919.35,
+    "Marketplace": 27898.29,
+    "Total_Digital": 144988.85
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Liberado Onerosos(3178)",
+    "App": 156923.43,
+    "Site": 60030.89,
+    "Marketplace": 121191.01,
+    "Total_Digital": 338145.32
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Liberado Super Onerosos(3192)",
+    "App": 358013.02,
+    "Site": 206254.83,
+    "Marketplace": 238239.43,
+    "Total_Digital": 802507.28
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Liberado(25)",
+    "App": 410692.81,
+    "Site": 347156.47,
+    "Marketplace": 261402.52,
+    "Total_Digital": 1019251.8
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Oneroso Controlado(77)",
+    "App": 383495.66,
+    "Site": 12.64,
+    "Marketplace": 205866.89,
+    "Total_Digital": 589375.19
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Oneroso Insulina(3171)",
+    "App": 4417.34,
+    "Site": 5541.36,
+    "Marketplace": 2574.64,
+    "Total_Digital": 12533.34
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Onerosos(40)",
+    "App": 1420083.98,
+    "Site": 1169458.52,
+    "Marketplace": 759854.63,
+    "Total_Digital": 3349397.13
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Super Onerosos Controlado(3177)",
+    "App": 188530.73,
+    "Site": 3332.9,
+    "Marketplace": 102122.91,
+    "Total_Digital": 293986.54
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia Super Onerosos(3176)",
+    "App": 656766.78,
+    "Site": 601363.57,
+    "Marketplace": 389967.98,
+    "Total_Digital": 1648098.33
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Referencia(2)",
+    "App": 583232.09,
+    "Site": 340141.72,
+    "Marketplace": 305103.85,
+    "Total_Digital": 1228477.66
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Similar Avulso(18)",
+    "App": 14967.95,
+    "Site": 22977.48,
+    "Marketplace": 6079.41,
+    "Total_Digital": 44024.84
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Similar Controlado Oneroso(3187)",
+    "App": 20.15,
+    "Site": 0.0,
+    "Marketplace": 9.52,
+    "Total_Digital": 29.67
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Similar Controlado(27)",
+    "App": 36.98,
+    "Site": 0.0,
+    "Marketplace": 21.74,
+    "Total_Digital": 58.72
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Similar Oneroso(3186)",
+    "App": 85235.44,
+    "Site": 136375.99,
+    "Marketplace": 34815.29,
+    "Total_Digital": 256426.72
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Similar(4)",
+    "App": 264299.57,
+    "Site": 356733.55,
+    "Marketplace": 115562.91,
+    "Total_Digital": 736596.03
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Teste Covid19(3166)",
+    "App": 2898.15,
+    "Site": 14975.31,
+    "Marketplace": 2001.53,
+    "Total_Digital": 19874.99
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Testes Laboratoriais Remotos(3163)",
+    "App": 1705.81,
+    "Site": 1221.43,
+    "Marketplace": 2509.49,
+    "Total_Digital": 5436.74
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Vacina Da Gripe Convenios(3224)",
+    "App": 135.96,
+    "Site": 0.0,
+    "Marketplace": 143.85,
+    "Total_Digital": 279.81
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Vacina Gripe(3148)",
+    "App": 349.22,
+    "Site": 0.0,
+    "Marketplace": 735.81,
+    "Total_Digital": 1085.03
+  },
+  {
+    "Desc_Grupo": "Medicamentos(1)",
+    "Desc_Subgrupo": "Vacinas Especiais(3226)",
+    "App": 14509.0,
+    "Site": 69.41,
+    "Marketplace": 22802.05,
+    "Total_Digital": 37380.46
+  },
+  {
+    "Desc_Grupo": "Nutricao(3090)",
+    "Desc_Subgrupo": "Nutricao Especiais(3156)",
+    "App": 1447.11,
+    "Site": 447.5,
+    "Marketplace": 1227.07,
+    "Total_Digital": 3121.67
+  },
+  {
+    "Desc_Grupo": "Nutricao(3090)",
+    "Desc_Subgrupo": "Nutricao Formula(3222)",
+    "App": 345788.47,
+    "Site": 514481.14,
+    "Marketplace": 161097.64,
+    "Total_Digital": 1021367.24
+  },
+  {
+    "Desc_Grupo": "Nutricao(3090)",
+    "Desc_Subgrupo": "Nutricao Leites(3154)",
+    "App": 909021.87,
+    "Site": 461622.02,
+    "Marketplace": 360663.67,
+    "Total_Digital": 1731307.56
+  },
+  {
+    "Desc_Grupo": "Nutricao(3090)",
+    "Desc_Subgrupo": "Nutricao Outros(3155)",
+    "App": 47228.02,
+    "Site": 35757.33,
+    "Marketplace": 25166.97,
+    "Total_Digital": 108152.32
+  },
+  {
+    "Desc_Grupo": "Nutricao(3090)",
+    "Desc_Subgrupo": "Nutricao PBMs(3221)",
+    "App": 29735.5,
+    "Site": 12135.9,
+    "Marketplace": 11196.22,
+    "Total_Digital": 53067.62
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Absorventes e Lenços Substituido(81)",
+    "App": 137607.17,
+    "Site": 197485.63,
+    "Marketplace": 48777.21,
+    "Total_Digital": 383870.02
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Fralda Exclusiva(3188)",
+    "App": 308654.81,
+    "Site": 121337.35,
+    "Marketplace": 119937.98,
+    "Total_Digital": 549930.14
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Fraldas(9)",
+    "App": 3544040.95,
+    "Site": 2384487.95,
+    "Marketplace": 1822727.98,
+    "Total_Digital": 7751256.89
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Higiene Pessoal(3194)",
+    "App": 50141.57,
+    "Site": 76186.6,
+    "Marketplace": 17479.66,
+    "Total_Digital": 143807.83
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Lencos e Toalhas Umedecidas(123)",
+    "App": 336010.96,
+    "Site": 285031.09,
+    "Marketplace": 132325.12,
+    "Total_Digital": 753367.17
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "PBM Perfumaria(3220)",
+    "App": 46701.32,
+    "Site": 40444.94,
+    "Marketplace": 25173.91,
+    "Total_Digital": 112320.17
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Perfumaria Exclusiva Premiacao(3158)",
+    "App": 41659.95,
+    "Site": 22837.65,
+    "Marketplace": 22723.01,
+    "Total_Digital": 87220.61
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Perfumaria Exclusiva(3210)",
+    "App": 33497.22,
+    "Site": 18044.42,
+    "Marketplace": 11277.17,
+    "Total_Digital": 62818.8
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Perfumaria Provadores(3223)",
+    "App": 0.0,
+    "Site": 0.01,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.01
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Perfumaria(8)",
+    "App": 2839130.51,
+    "Site": 2601862.86,
+    "Marketplace": 1309365.87,
+    "Total_Digital": 6750359.24
+  },
+  {
+    "Desc_Grupo": "Perfumaria(2)",
+    "Desc_Subgrupo": "Provadores Maquiagem(3219)",
+    "App": 0.0,
+    "Site": 6.24,
+    "Marketplace": 0.0,
+    "Total_Digital": 6.24
+  },
+  {
+    "Desc_Grupo": "Servicos(3)",
+    "Desc_Subgrupo": "Servicos Farmaceuticos(3144)",
+    "App": 848.99,
+    "Site": 0.0,
+    "Marketplace": 1149.22,
+    "Total_Digital": 1998.21
+  },
+  {
+    "Desc_Grupo": "Servicos(3)",
+    "Desc_Subgrupo": "Servicos Troco Solidario(3150)",
+    "App": 81.34,
+    "Site": 0.0,
+    "Marketplace": 82.11,
+    "Total_Digital": 163.45
+  }
+]

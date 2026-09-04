@@ -1,0 +1,7989 @@
+[
+  {
+    "Laboratorio": "ELI LILLY DO BRASIL LTDA",
+    "App": 4545805.6,
+    "Site": 15828.81,
+    "Marketplace": 2683629.3,
+    "Total_Digital": 7245263.71
+  },
+  {
+    "Laboratorio": "PROCTER & GAMBLE DO BRASIL S/A",
+    "App": 2802871.72,
+    "Site": 1826769.94,
+    "Marketplace": 1510183.39,
+    "Total_Digital": 6139825.04
+  },
+  {
+    "Laboratorio": "NOVO NORDISK FARMACEUTICA DO BRASIL LTDA",
+    "App": 2067922.17,
+    "Site": 246581.27,
+    "Marketplace": 1563060.85,
+    "Total_Digital": 3877564.29
+  },
+  {
+    "Laboratorio": "KIMBERLY-CLARK BRASIL IND COM PROD HIG 4",
+    "App": 969059.24,
+    "Site": 830136.97,
+    "Marketplace": 398206.89,
+    "Total_Digital": 2197403.1
+  },
+  {
+    "Laboratorio": "NESTLE NUTRITION",
+    "App": 802456.47,
+    "Site": 626924.57,
+    "Marketplace": 319095.52,
+    "Total_Digital": 1748476.56
+  },
+  {
+    "Laboratorio": "UNILEVER BRASIL LTDA RS",
+    "App": 646796.2,
+    "Site": 490048.53,
+    "Marketplace": 269923.59,
+    "Total_Digital": 1406768.32
+  },
+  {
+    "Laboratorio": "EMS GENERICOS",
+    "App": 668834.84,
+    "Site": 355699.77,
+    "Marketplace": 276907.69,
+    "Total_Digital": 1301442.31
+  },
+  {
+    "Laboratorio": "EUROFARMA LABORATORIOS LTDA",
+    "App": 695427.79,
+    "Site": 104362.04,
+    "Marketplace": 391972.99,
+    "Total_Digital": 1191762.83
+  },
+  {
+    "Laboratorio": "DANONE LTDA MG",
+    "App": 505177.22,
+    "Site": 384393.33,
+    "Marketplace": 227234.17,
+    "Total_Digital": 1116804.72
+  },
+  {
+    "Laboratorio": "CIMED MARCAS",
+    "App": 361818.61,
+    "Site": 308544.05,
+    "Marketplace": 160155.73,
+    "Total_Digital": 830518.4
+  },
+  {
+    "Laboratorio": "LIBBS FARMACEUTICA LTDA 01",
+    "App": 397883.96,
+    "Site": 172583.79,
+    "Marketplace": 199293.33,
+    "Total_Digital": 769761.08
+  },
+  {
+    "Laboratorio": "PMI SOUTH AMERICA CONSUMER GOODS LT",
+    "App": 285667.99,
+    "Site": 29714.18,
+    "Marketplace": 301212.44,
+    "Total_Digital": 616594.61
+  },
+  {
+    "Laboratorio": "HYPERMARCAS OTC",
+    "App": 217063.31,
+    "Site": 277684.04,
+    "Marketplace": 109968.75,
+    "Total_Digital": 604716.11
+  },
+  {
+    "Laboratorio": "SOFTYS BRASIL LTDA",
+    "App": 274511.73,
+    "Site": 217438.84,
+    "Marketplace": 109569.18,
+    "Total_Digital": 601519.75
+  },
+  {
+    "Laboratorio": "DRYLOCK TECHNOLOGIES BRASIL LTDA",
+    "App": 328951.77,
+    "Site": 136739.0,
+    "Marketplace": 130504.11,
+    "Total_Digital": 596194.89
+  },
+  {
+    "Laboratorio": "BIOLAB SANUS FARMACEUTICA LTDA",
+    "App": 244880.02,
+    "Site": 151865.97,
+    "Marketplace": 183358.35,
+    "Total_Digital": 580104.33
+  },
+  {
+    "Laboratorio": "CIMED GENERICOS",
+    "App": 242935.88,
+    "Site": 236284.87,
+    "Marketplace": 95467.15,
+    "Total_Digital": 574687.91
+  },
+  {
+    "Laboratorio": "ACHE RX/OTX",
+    "App": 284822.53,
+    "Site": 118764.7,
+    "Marketplace": 150013.66,
+    "Total_Digital": 553600.89
+  },
+  {
+    "Laboratorio": "EMS PRESCRICAO",
+    "App": 302916.83,
+    "Site": 78591.78,
+    "Marketplace": 162207.91,
+    "Total_Digital": 543716.51
+  },
+  {
+    "Laboratorio": "LOREAL(PROCOSA LTDA)",
+    "App": 225960.85,
+    "Site": 190832.1,
+    "Marketplace": 93051.36,
+    "Total_Digital": 509844.31
+  },
+  {
+    "Laboratorio": "TAKEDA PHARMA LTDA",
+    "App": 267349.98,
+    "Site": 68393.09,
+    "Marketplace": 158482.03,
+    "Total_Digital": 494225.1
+  },
+  {
+    "Laboratorio": "PRATI DONADUZZI & CIA LTDA",
+    "App": 211743.69,
+    "Site": 199803.98,
+    "Marketplace": 79792.76,
+    "Total_Digital": 491340.43
+  },
+  {
+    "Laboratorio": "BDF NIVEA LTDA - SP",
+    "App": 192199.64,
+    "Site": 169690.17,
+    "Marketplace": 97608.88,
+    "Total_Digital": 459498.69
+  },
+  {
+    "Laboratorio": "BRITANIA ELETRODOMESTICOS SA",
+    "App": 185072.31,
+    "Site": 75687.27,
+    "Marketplace": 191276.55,
+    "Total_Digital": 452036.12
+  },
+  {
+    "Laboratorio": "OPELLA (SANOFI OTC)",
+    "App": 126462.92,
+    "Site": 244513.88,
+    "Marketplace": 53808.72,
+    "Total_Digital": 424785.53
+  },
+  {
+    "Laboratorio": "SERVICOS FARMACIAS",
+    "App": 258655.47,
+    "Site": 2.86,
+    "Marketplace": 135752.09,
+    "Total_Digital": 394410.42
+  },
+  {
+    "Laboratorio": "FARMOQUIMICA S/A",
+    "App": 184103.55,
+    "Site": 94078.41,
+    "Marketplace": 102917.02,
+    "Total_Digital": 381098.98
+  },
+  {
+    "Laboratorio": "APSEN FARMACEUTICA SA.",
+    "App": 207886.25,
+    "Site": 57616.27,
+    "Marketplace": 114106.91,
+    "Total_Digital": 379609.43
+  },
+  {
+    "Laboratorio": "COTY BRASIL COMERCIO LTDA",
+    "App": 140889.31,
+    "Site": 142402.56,
+    "Marketplace": 55504.39,
+    "Total_Digital": 338796.27
+  },
+  {
+    "Laboratorio": "JOHNSON & JOHNSON BR IND COM SAUDE LTDA",
+    "App": 122100.82,
+    "Site": 158523.81,
+    "Marketplace": 50253.13,
+    "Total_Digital": 330877.76
+  },
+  {
+    "Laboratorio": "COLGATE PALMOLIVE LTDA",
+    "App": 140697.74,
+    "Site": 129075.38,
+    "Marketplace": 59099.71,
+    "Total_Digital": 328872.83
+  },
+  {
+    "Laboratorio": "MEDLEY GENERICOS",
+    "App": 131979.94,
+    "Site": 139344.79,
+    "Marketplace": 55649.35,
+    "Total_Digital": 326974.08
+  },
+  {
+    "Laboratorio": "BAYER OTC",
+    "App": 119346.09,
+    "Site": 140782.53,
+    "Marketplace": 52646.29,
+    "Total_Digital": 312774.9
+  },
+  {
+    "Laboratorio": "PROCTER OTC",
+    "App": 94072.26,
+    "Site": 162608.27,
+    "Marketplace": 53087.67,
+    "Total_Digital": 309768.2
+  },
+  {
+    "Laboratorio": "ACHE MIP OTC/OTX",
+    "App": 119635.8,
+    "Site": 109617.98,
+    "Marketplace": 61079.04,
+    "Total_Digital": 290332.83
+  },
+  {
+    "Laboratorio": "MOMENTA FARMACEUTICA LTDA.",
+    "App": 136055.15,
+    "Site": 55218.86,
+    "Marketplace": 86728.38,
+    "Total_Digital": 278002.39
+  },
+  {
+    "Laboratorio": "HYPERMARCAS RX/OTX",
+    "App": 129873.89,
+    "Site": 80971.68,
+    "Marketplace": 61236.92,
+    "Total_Digital": 272082.49
+  },
+  {
+    "Laboratorio": "KENVUE OTC",
+    "App": 79442.34,
+    "Site": 141958.94,
+    "Marketplace": 35207.12,
+    "Total_Digital": 256608.4
+  },
+  {
+    "Laboratorio": "BESINS HEALTHCARE BR COM  DIST MED LTDA",
+    "App": 98271.56,
+    "Site": 53805.0,
+    "Marketplace": 71050.46,
+    "Total_Digital": 223127.02
+  },
+  {
+    "Laboratorio": "MARJAN INDUSTRIA E COMERCIO LTDA",
+    "App": 109593.1,
+    "Site": 25591.68,
+    "Marketplace": 86701.45,
+    "Total_Digital": 221886.23
+  },
+  {
+    "Laboratorio": "MEGALABS FARMACEUTICA S A",
+    "App": 83633.27,
+    "Site": 76353.22,
+    "Marketplace": 40851.51,
+    "Total_Digital": 200838.0
+  },
+  {
+    "Laboratorio": "VITROLA EDITORA E DISTRIBUIDORA",
+    "App": 56592.32,
+    "Site": 109861.0,
+    "Marketplace": 33291.22,
+    "Total_Digital": 199744.54
+  },
+  {
+    "Laboratorio": "PRINCIPIA RS COMERCIO DE COSMETICOS LTDA",
+    "App": 91542.52,
+    "Site": 58309.82,
+    "Marketplace": 47911.49,
+    "Total_Digital": 197763.83
+  },
+  {
+    "Laboratorio": "ALTHAIA",
+    "App": 103954.28,
+    "Site": 42720.88,
+    "Marketplace": 48901.98,
+    "Total_Digital": 195577.14
+  },
+  {
+    "Laboratorio": "MILI S/A",
+    "App": 75696.06,
+    "Site": 75252.64,
+    "Marketplace": 42231.91,
+    "Total_Digital": 193180.62
+  },
+  {
+    "Laboratorio": "MYRALIS PHARMA",
+    "App": 94669.63,
+    "Site": 49494.57,
+    "Marketplace": 48384.5,
+    "Total_Digital": 192548.7
+  },
+  {
+    "Laboratorio": "ORGANON FARMACEUTICA LTDA",
+    "App": 88088.27,
+    "Site": 43112.81,
+    "Marketplace": 53114.75,
+    "Total_Digital": 184315.83
+  },
+  {
+    "Laboratorio": "CELLERA RX",
+    "App": 96426.42,
+    "Site": 29511.65,
+    "Marketplace": 52186.65,
+    "Total_Digital": 178124.72
+  },
+  {
+    "Laboratorio": "ASTRAZENECA DO BRASIL LTDA",
+    "App": 96553.4,
+    "Site": 29674.81,
+    "Marketplace": 43624.94,
+    "Total_Digital": 169853.15
+  },
+  {
+    "Laboratorio": "GENOM FARMACEUTICA LTDA",
+    "App": 79375.14,
+    "Site": 46036.43,
+    "Marketplace": 42978.81,
+    "Total_Digital": 168390.38
+  },
+  {
+    "Laboratorio": "TORRENT DO BRASIL LTDA",
+    "App": 108254.92,
+    "Site": 4776.61,
+    "Marketplace": 52465.12,
+    "Total_Digital": 165496.65
+  },
+  {
+    "Laboratorio": "SANDOZ DO BRASIL IND FARM LTDA",
+    "App": 86232.92,
+    "Site": 34723.55,
+    "Marketplace": 38625.06,
+    "Total_Digital": 159581.53
+  },
+  {
+    "Laboratorio": "RECKITT BENCKISER ( BRASIL ) LTDA",
+    "App": 44499.75,
+    "Site": 96255.62,
+    "Marketplace": 17475.85,
+    "Total_Digital": 158231.22
+  },
+  {
+    "Laboratorio": "LA ROCHE POSAY",
+    "App": 58405.41,
+    "Site": 55309.23,
+    "Marketplace": 36833.12,
+    "Total_Digital": 150547.76
+  },
+  {
+    "Laboratorio": "ABBOTT LABORATORIOS DO BRASIL LTDA",
+    "App": 76750.7,
+    "Site": 18540.74,
+    "Marketplace": 47258.76,
+    "Total_Digital": 142550.2
+  },
+  {
+    "Laboratorio": "COCA COLA COMPANY",
+    "App": 13299.84,
+    "Site": 124335.29,
+    "Marketplace": 4698.23,
+    "Total_Digital": 142333.36
+  },
+  {
+    "Laboratorio": "EXELTIS LABORATORIO FARMACEUTICO LTDA",
+    "App": 66382.99,
+    "Site": 25492.77,
+    "Marketplace": 49845.37,
+    "Total_Digital": 141721.13
+  },
+  {
+    "Laboratorio": "DAIICHI SANKYO BRASIL FARMACEUTICA LTDA",
+    "App": 68871.33,
+    "Site": 31613.4,
+    "Marketplace": 38791.2,
+    "Total_Digital": 139275.92
+  },
+  {
+    "Laboratorio": "HERBARIUM LABORATORIO BOTANICO S.A",
+    "App": 59632.04,
+    "Site": 39715.17,
+    "Marketplace": 36586.48,
+    "Total_Digital": 135933.69
+  },
+  {
+    "Laboratorio": "FRESNOMAQ INDUSTRIA DE MAQUINAS S/A",
+    "App": 52745.95,
+    "Site": 12459.73,
+    "Marketplace": 69702.96,
+    "Total_Digital": 134908.63
+  },
+  {
+    "Laboratorio": "SUPERA RX MEDICAMENTOS LTDA.",
+    "App": 70390.57,
+    "Site": 25743.29,
+    "Marketplace": 38606.48,
+    "Total_Digital": 134740.33
+  },
+  {
+    "Laboratorio": "HYPERA MARCAS",
+    "App": 45911.96,
+    "Site": 68496.85,
+    "Marketplace": 17705.68,
+    "Total_Digital": 132114.49
+  },
+  {
+    "Laboratorio": "HALEON OTC",
+    "App": 37356.71,
+    "Site": 73959.01,
+    "Marketplace": 19632.6,
+    "Total_Digital": 130948.31
+  },
+  {
+    "Laboratorio": "BOTICARIO PRODUTOS DE BELEZA LTDA",
+    "App": 47327.53,
+    "Site": 51797.2,
+    "Marketplace": 23923.4,
+    "Total_Digital": 123048.13
+  },
+  {
+    "Laboratorio": "MONDELEZ BRASIL LTDA",
+    "App": 19233.94,
+    "Site": 97508.43,
+    "Marketplace": 5999.27,
+    "Total_Digital": 122741.64
+  },
+  {
+    "Laboratorio": "EMS OTC",
+    "App": 39564.56,
+    "Site": 63162.71,
+    "Marketplace": 16245.75,
+    "Total_Digital": 118973.01
+  },
+  {
+    "Laboratorio": "UNILEVER BRASIL GELADOS LTDA RS",
+    "App": 11576.41,
+    "Site": 101799.95,
+    "Marketplace": 4047.23,
+    "Total_Digital": 117423.59
+  },
+  {
+    "Laboratorio": "NESTLE CONVENIENCIA",
+    "App": 27544.48,
+    "Site": 76577.79,
+    "Marketplace": 11490.27,
+    "Total_Digital": 115612.54
+  },
+  {
+    "Laboratorio": "ESSITY DO BRASIL INDUST E COMERCIO LTDA",
+    "App": 55714.15,
+    "Site": 26253.03,
+    "Marketplace": 31888.86,
+    "Total_Digital": 113856.05
+  },
+  {
+    "Laboratorio": "KENVUE DERMO",
+    "App": 46834.96,
+    "Site": 35274.21,
+    "Marketplace": 29438.25,
+    "Total_Digital": 111547.42
+  },
+  {
+    "Laboratorio": "GLAXOSMITHKLINE BRASIL LTDA",
+    "App": 43568.94,
+    "Site": 38317.72,
+    "Marketplace": 22172.03,
+    "Total_Digital": 104058.69
+  },
+  {
+    "Laboratorio": "BOEHRINGER INGELHEIM DO BRASIL QUIMICA",
+    "App": 55449.96,
+    "Site": 15416.22,
+    "Marketplace": 32357.71,
+    "Total_Digital": 103223.9
+  },
+  {
+    "Laboratorio": "CATARINENSE S.A",
+    "App": 38003.09,
+    "Site": 42453.18,
+    "Marketplace": 19183.58,
+    "Total_Digital": 99639.85
+  },
+  {
+    "Laboratorio": "RECKITT HB",
+    "App": 21959.02,
+    "Site": 64951.63,
+    "Marketplace": 11815.49,
+    "Total_Digital": 98726.13
+  },
+  {
+    "Laboratorio": "CRISTALIA PROD QUIM FARMACEUTICOS LTDA",
+    "App": 49499.48,
+    "Site": 14098.09,
+    "Marketplace": 31732.34,
+    "Total_Digital": 95329.91
+  },
+  {
+    "Laboratorio": "MERCK PHARMA",
+    "App": 49314.34,
+    "Site": 21720.15,
+    "Marketplace": 24193.5,
+    "Total_Digital": 95227.98
+  },
+  {
+    "Laboratorio": "ACCUMED PRODUTOS MED.HOSPITALARES LTDA",
+    "App": 37344.05,
+    "Site": 32738.53,
+    "Marketplace": 23015.89,
+    "Total_Digital": 93098.47
+  },
+  {
+    "Laboratorio": "UNIAO QUIMICA FARMACEUTICA NACIONAL S A",
+    "App": 34088.4,
+    "Site": 42409.84,
+    "Marketplace": 16035.17,
+    "Total_Digital": 92533.41
+  },
+  {
+    "Laboratorio": "INDUSTRIA COM PROD DE LIMP GIRANDO SOL",
+    "App": 48248.82,
+    "Site": 26289.18,
+    "Marketplace": 14824.18,
+    "Total_Digital": 89362.18
+  },
+  {
+    "Laboratorio": "NOVARTIS BIOCIENCIAS SA",
+    "App": 49362.19,
+    "Site": 10158.47,
+    "Marketplace": 26012.84,
+    "Total_Digital": 85533.51
+  },
+  {
+    "Laboratorio": "CASA GRANADO LAB FARM E DROGARIA SA",
+    "App": 28325.59,
+    "Site": 44103.04,
+    "Marketplace": 11642.6,
+    "Total_Digital": 84071.24
+  },
+  {
+    "Laboratorio": "BAYER S.A.",
+    "App": 38024.62,
+    "Site": 1887.84,
+    "Marketplace": 41246.3,
+    "Total_Digital": 81158.76
+  },
+  {
+    "Laboratorio": "PFIZER BRASIL LTDA",
+    "App": 39486.55,
+    "Site": 11007.77,
+    "Marketplace": 30467.92,
+    "Total_Digital": 80962.24
+  },
+  {
+    "Laboratorio": "CATARINENSE NUTRICAO",
+    "App": 41182.11,
+    "Site": 15914.56,
+    "Marketplace": 22007.55,
+    "Total_Digital": 79104.23
+  },
+  {
+    "Laboratorio": "LBS LABORASA IND FARMAC LTDA",
+    "App": 32679.25,
+    "Site": 34254.4,
+    "Marketplace": 11959.47,
+    "Total_Digital": 78893.12
+  },
+  {
+    "Laboratorio": "LEOFARMA LAB",
+    "App": 25666.85,
+    "Site": 31401.69,
+    "Marketplace": 21091.93,
+    "Total_Digital": 78160.47
+  },
+  {
+    "Laboratorio": "SOROCAPS INDUSTRIA FARMACEUTICA LTDA",
+    "App": 43237.34,
+    "Site": 6610.55,
+    "Marketplace": 26950.78,
+    "Total_Digital": 76798.66
+  },
+  {
+    "Laboratorio": "CREMER – MARCA PROPRIA",
+    "App": 35168.96,
+    "Site": 26491.47,
+    "Marketplace": 14468.85,
+    "Total_Digital": 76129.28
+  },
+  {
+    "Laboratorio": "CHIESI FARMACEUTICA LTDA",
+    "App": 37716.74,
+    "Site": 19384.64,
+    "Marketplace": 18347.44,
+    "Total_Digital": 75448.83
+  },
+  {
+    "Laboratorio": "HYPERA GENERICOS",
+    "App": 24831.72,
+    "Site": 39969.89,
+    "Marketplace": 10001.07,
+    "Total_Digital": 74802.68
+  },
+  {
+    "Laboratorio": "GERMED FARMACEUTICA LTDA",
+    "App": 37437.75,
+    "Site": 22855.9,
+    "Marketplace": 14302.53,
+    "Total_Digital": 74596.17
+  },
+  {
+    "Laboratorio": "WELLA BRASIL LTDA",
+    "App": 28531.48,
+    "Site": 32481.98,
+    "Marketplace": 13292.37,
+    "Total_Digital": 74305.83
+  },
+  {
+    "Laboratorio": "QUALIBRESS",
+    "App": 34082.63,
+    "Site": 31149.52,
+    "Marketplace": 8117.63,
+    "Total_Digital": 73349.78
+  },
+  {
+    "Laboratorio": "LABORATORIOS SERVIER DO BRASIL LTDA",
+    "App": 36853.29,
+    "Site": 14915.35,
+    "Marketplace": 20225.0,
+    "Total_Digital": 71993.64
+  },
+  {
+    "Laboratorio": "GEDEON RICHTER DO BRASIL IMPORTADORA",
+    "App": 23664.87,
+    "Site": 33801.35,
+    "Marketplace": 14396.0,
+    "Total_Digital": 71862.22
+  },
+  {
+    "Laboratorio": "EMS MARCAS",
+    "App": 24003.26,
+    "Site": 36671.01,
+    "Marketplace": 11104.45,
+    "Total_Digital": 71778.73
+  },
+  {
+    "Laboratorio": "ALTHAIA EQUALIV",
+    "App": 29494.09,
+    "Site": 18999.7,
+    "Marketplace": 22153.88,
+    "Total_Digital": 70647.66
+  },
+  {
+    "Laboratorio": "THERAMEX FARMACEUTICA LTDA",
+    "App": 37030.04,
+    "Site": 12372.86,
+    "Marketplace": 21077.7,
+    "Total_Digital": 70480.6
+  },
+  {
+    "Laboratorio": "NOVA QUIMICA GENERICOS",
+    "App": 39363.42,
+    "Site": 16533.62,
+    "Marketplace": 13944.09,
+    "Total_Digital": 69841.13
+  },
+  {
+    "Laboratorio": "BOIRON S.A",
+    "App": 26131.38,
+    "Site": 20560.08,
+    "Marketplace": 22715.19,
+    "Total_Digital": 69406.65
+  },
+  {
+    "Laboratorio": "GENOMMA LABORATORIES DO BRASIL LTDA.",
+    "App": 26268.32,
+    "Site": 28698.02,
+    "Marketplace": 13916.44,
+    "Total_Digital": 68882.78
+  },
+  {
+    "Laboratorio": "ADIUM S A",
+    "App": 37761.82,
+    "Site": 10325.27,
+    "Marketplace": 20613.53,
+    "Total_Digital": 68700.62
+  },
+  {
+    "Laboratorio": "KLEY HERTZ",
+    "App": 25632.48,
+    "Site": 30770.58,
+    "Marketplace": 11682.73,
+    "Total_Digital": 68085.79
+  },
+  {
+    "Laboratorio": "SANOFI-AVENTIS FARMACEUTICA LTDA",
+    "App": 34578.33,
+    "Site": 11680.61,
+    "Marketplace": 21556.1,
+    "Total_Digital": 67815.04
+  },
+  {
+    "Laboratorio": "CERAS JOHNSON LTDA",
+    "App": 29002.62,
+    "Site": 24381.93,
+    "Marketplace": 14202.13,
+    "Total_Digital": 67586.68
+  },
+  {
+    "Laboratorio": "BONYPLUS IND COM COSM LTDA-BEAUTY COLOR",
+    "App": 25422.11,
+    "Site": 31245.84,
+    "Marketplace": 9942.52,
+    "Total_Digital": 66610.47
+  },
+  {
+    "Laboratorio": "PAYOT",
+    "App": 29134.32,
+    "Site": 16467.72,
+    "Marketplace": 20701.83,
+    "Total_Digital": 66303.88
+  },
+  {
+    "Laboratorio": "DIVCOM PHARMA",
+    "App": 23382.76,
+    "Site": 32211.24,
+    "Marketplace": 10435.41,
+    "Total_Digital": 66029.41
+  },
+  {
+    "Laboratorio": "FLORA PROD DE HIG E LIMP GO - CAPILAR",
+    "App": 29427.97,
+    "Site": 24576.66,
+    "Marketplace": 11814.92,
+    "Total_Digital": 65819.55
+  },
+  {
+    "Laboratorio": "LUNDBECK",
+    "App": 42250.95,
+    "Site": 0.0,
+    "Marketplace": 22820.8,
+    "Total_Digital": 65071.74
+  },
+  {
+    "Laboratorio": "BEBE SAUDE LTDA",
+    "App": 29221.24,
+    "Site": 20843.31,
+    "Marketplace": 14689.62,
+    "Total_Digital": 64754.16
+  },
+  {
+    "Laboratorio": "LABORATORIO TEUTO BRASILEIRO S A",
+    "App": 35880.25,
+    "Site": 15933.82,
+    "Marketplace": 12581.74,
+    "Total_Digital": 64395.81
+  },
+  {
+    "Laboratorio": "PARATI IND E COMERCIO DE ALIMENTOS LTDA",
+    "App": 13295.23,
+    "Site": 46184.88,
+    "Marketplace": 4801.87,
+    "Total_Digital": 64281.97
+  },
+  {
+    "Laboratorio": "HYPERMARCAS DERMATO",
+    "App": 31374.04,
+    "Site": 11672.0,
+    "Marketplace": 21036.58,
+    "Total_Digital": 64082.62
+  },
+  {
+    "Laboratorio": "HYPERMARCAS GB",
+    "App": 22942.72,
+    "Site": 31233.16,
+    "Marketplace": 9702.55,
+    "Total_Digital": 63878.43
+  },
+  {
+    "Laboratorio": "SUPLEY LAB DE ALIMENTOS E SUPL NUTR LTDA",
+    "App": 22473.39,
+    "Site": 27600.74,
+    "Marketplace": 13708.9,
+    "Total_Digital": 63783.02
+  },
+  {
+    "Laboratorio": "CERAVE",
+    "App": 27071.44,
+    "Site": 19817.53,
+    "Marketplace": 16057.21,
+    "Total_Digital": 62946.18
+  },
+  {
+    "Laboratorio": "VIATRIS FARMACEUTICA LABORATORIO",
+    "App": 32207.54,
+    "Site": 10813.3,
+    "Marketplace": 19445.22,
+    "Total_Digital": 62466.06
+  },
+  {
+    "Laboratorio": "ASPEN PHARMA INDUSTRIA FARMACEUTICA LTDA",
+    "App": 29273.7,
+    "Site": 14327.59,
+    "Marketplace": 16611.64,
+    "Total_Digital": 60212.93
+  },
+  {
+    "Laboratorio": "ZAMBON LABORATORIOS FARMACEUTICOS LTDA",
+    "App": 25188.11,
+    "Site": 19368.73,
+    "Marketplace": 15127.37,
+    "Total_Digital": 59684.21
+  },
+  {
+    "Laboratorio": "EUROFARMA GEN",
+    "App": 28906.44,
+    "Site": 15923.21,
+    "Marketplace": 14011.6,
+    "Total_Digital": 58841.24
+  },
+  {
+    "Laboratorio": "FRANCINY EHLKE",
+    "App": 19393.7,
+    "Site": 24029.28,
+    "Marketplace": 14870.23,
+    "Total_Digital": 58293.21
+  },
+  {
+    "Laboratorio": "ALCON LABORATORIOS DO BRASIL LTDA",
+    "App": 25972.62,
+    "Site": 15320.95,
+    "Marketplace": 16443.66,
+    "Total_Digital": 57737.23
+  },
+  {
+    "Laboratorio": "BLANVER FARMOQUIMICA E FARMACEUTICA SA",
+    "App": 25286.93,
+    "Site": 12556.02,
+    "Marketplace": 19845.48,
+    "Total_Digital": 57688.42
+  },
+  {
+    "Laboratorio": "FARMAX DISTRIBUIDORA S.A",
+    "App": 15602.04,
+    "Site": 34756.14,
+    "Marketplace": 6532.25,
+    "Total_Digital": 56890.44
+  },
+  {
+    "Laboratorio": "THERASKIN FARMACEUTICA LTDA",
+    "App": 21452.55,
+    "Site": 20835.54,
+    "Marketplace": 14008.47,
+    "Total_Digital": 56296.57
+  },
+  {
+    "Laboratorio": "DKT BRASIL PRODUTOS DE USO PESSOAL LTDA",
+    "App": 17726.99,
+    "Site": 29892.5,
+    "Marketplace": 7872.74,
+    "Total_Digital": 55492.23
+  },
+  {
+    "Laboratorio": "BERTOLUCCI & CIA LTDA",
+    "App": 15361.75,
+    "Site": 33813.69,
+    "Marketplace": 5962.92,
+    "Total_Digital": 55138.36
+  },
+  {
+    "Laboratorio": "CHIMICA BARUEL LTDA",
+    "App": 29518.33,
+    "Site": 15036.25,
+    "Marketplace": 10067.78,
+    "Total_Digital": 54622.35
+  },
+  {
+    "Laboratorio": "BASTON INDUSTRIA DE AEROSSOIS LTDA",
+    "App": 22953.25,
+    "Site": 18188.65,
+    "Marketplace": 11552.44,
+    "Total_Digital": 52694.33
+  },
+  {
+    "Laboratorio": "NEUGEBAUER ALIMENTOS S A",
+    "App": 15984.06,
+    "Site": 30840.6,
+    "Marketplace": 5320.28,
+    "Total_Digital": 52144.94
+  },
+  {
+    "Laboratorio": "DUX COMPANY LTDA.",
+    "App": 20561.14,
+    "Site": 13766.64,
+    "Marketplace": 17731.96,
+    "Total_Digital": 52059.74
+  },
+  {
+    "Laboratorio": "HALEON BRASIL DISTRIBUIDORA LTDA",
+    "App": 20183.7,
+    "Site": 21375.93,
+    "Marketplace": 9689.59,
+    "Total_Digital": 51249.22
+  },
+  {
+    "Laboratorio": "BELLIZ INDUSTRIA COM IMP EXP LTDA",
+    "App": 18477.99,
+    "Site": 22317.05,
+    "Marketplace": 9022.74,
+    "Total_Digital": 49817.78
+  },
+  {
+    "Laboratorio": "FARMOQUIMICA DERMO",
+    "App": 23555.34,
+    "Site": 10014.5,
+    "Marketplace": 16206.81,
+    "Total_Digital": 49776.65
+  },
+  {
+    "Laboratorio": "METALURGICA MOR SA",
+    "App": 23426.63,
+    "Site": 1605.78,
+    "Marketplace": 24278.59,
+    "Total_Digital": 49311.0
+  },
+  {
+    "Laboratorio": "ROCHE DIAGNOSTICA BRASIL LTDA.",
+    "App": 22081.46,
+    "Site": 7858.15,
+    "Marketplace": 18998.63,
+    "Total_Digital": 48938.24
+  },
+  {
+    "Laboratorio": "RED BULL DO BRASIL LTDA",
+    "App": 9310.41,
+    "Site": 34035.58,
+    "Marketplace": 4470.79,
+    "Total_Digital": 47816.78
+  },
+  {
+    "Laboratorio": "UNILEVER BRASIL LTDA MG",
+    "App": 16061.12,
+    "Site": 24890.52,
+    "Marketplace": 6448.32,
+    "Total_Digital": 47399.95
+  },
+  {
+    "Laboratorio": "OLLIE COSMETICOS LTDA",
+    "App": 21290.55,
+    "Site": 10783.66,
+    "Marketplace": 14472.35,
+    "Total_Digital": 46546.55
+  },
+  {
+    "Laboratorio": "GEOLAB GENERICOS",
+    "App": 26039.9,
+    "Site": 9905.92,
+    "Marketplace": 9588.79,
+    "Total_Digital": 45534.62
+  },
+  {
+    "Laboratorio": "ISDIN PRODUTOS FARMACEUTICOS LTDA",
+    "App": 21991.68,
+    "Site": 8927.6,
+    "Marketplace": 14473.32,
+    "Total_Digital": 45392.6
+  },
+  {
+    "Laboratorio": "GALDERMA DERMO",
+    "App": 22853.77,
+    "Site": 9562.23,
+    "Marketplace": 12346.75,
+    "Total_Digital": 44762.75
+  },
+  {
+    "Laboratorio": "SENSELLES INDUSTRIA E COMERCIO DE COSMET",
+    "App": 21830.48,
+    "Site": 10910.55,
+    "Marketplace": 11014.75,
+    "Total_Digital": 43755.78
+  },
+  {
+    "Laboratorio": "GALDERMA BRASIL LTDA",
+    "App": 18832.35,
+    "Site": 7958.66,
+    "Marketplace": 16928.5,
+    "Total_Digital": 43719.51
+  },
+  {
+    "Laboratorio": "ACHE LABORATORIOS FARMACEUTICOS SA",
+    "App": 17767.16,
+    "Site": 18752.89,
+    "Marketplace": 6952.36,
+    "Total_Digital": 43472.41
+  },
+  {
+    "Laboratorio": "QUIMICA AMPARO LTDA",
+    "App": 20920.85,
+    "Site": 15174.18,
+    "Marketplace": 7348.4,
+    "Total_Digital": 43443.43
+  },
+  {
+    "Laboratorio": "NATULAB LABORATORIO S A",
+    "App": 13982.06,
+    "Site": 23401.43,
+    "Marketplace": 5688.66,
+    "Total_Digital": 43072.15
+  },
+  {
+    "Laboratorio": "PHILIPS DO BRASIL LTDA",
+    "App": 16713.63,
+    "Site": 17846.54,
+    "Marketplace": 8446.65,
+    "Total_Digital": 43006.82
+  },
+  {
+    "Laboratorio": "INSTITUTO PASTEUR DE COSMIATRIA LIMITADA",
+    "App": 19531.67,
+    "Site": 11784.79,
+    "Marketplace": 11480.71,
+    "Total_Digital": 42797.17
+  },
+  {
+    "Laboratorio": "SANFARMA INDUSTRIA, COMERCIO E IMPORTACA",
+    "App": 14902.76,
+    "Site": 22613.61,
+    "Marketplace": 5245.83,
+    "Total_Digital": 42762.2
+  },
+  {
+    "Laboratorio": "BL INDUSTRIA OTICA LTDA",
+    "App": 16421.85,
+    "Site": 15968.32,
+    "Marketplace": 10248.65,
+    "Total_Digital": 42638.81
+  },
+  {
+    "Laboratorio": "QUIFA FARMACEUTICA DO BRASIL LTDA",
+    "App": 12892.01,
+    "Site": 14806.19,
+    "Marketplace": 14621.15,
+    "Total_Digital": 42319.36
+  },
+  {
+    "Laboratorio": "NAZCA LTDA",
+    "App": 19354.96,
+    "Site": 15621.79,
+    "Marketplace": 7089.88,
+    "Total_Digital": 42066.62
+  },
+  {
+    "Laboratorio": "LATICINIOS BELA VISTA LTDA",
+    "App": 8251.59,
+    "Site": 29882.6,
+    "Marketplace": 3605.42,
+    "Total_Digital": 41739.6
+  },
+  {
+    "Laboratorio": "CRBS S A",
+    "App": 3185.13,
+    "Site": 37122.09,
+    "Marketplace": 1091.46,
+    "Total_Digital": 41398.68
+  },
+  {
+    "Laboratorio": "MASTERFOODS BRASIL ALIMENTOS LTDA.",
+    "App": 3807.1,
+    "Site": 36066.74,
+    "Marketplace": 1271.75,
+    "Total_Digital": 41145.58
+  },
+  {
+    "Laboratorio": "SANCHEZ CANO LTDA",
+    "App": 8291.01,
+    "Site": 29589.33,
+    "Marketplace": 2984.23,
+    "Total_Digital": 40864.56
+  },
+  {
+    "Laboratorio": "CREMER S.A.",
+    "App": 12509.49,
+    "Site": 22638.71,
+    "Marketplace": 5401.66,
+    "Total_Digital": 40549.86
+  },
+  {
+    "Laboratorio": "VICHY",
+    "App": 17115.34,
+    "Site": 10495.54,
+    "Marketplace": 12928.07,
+    "Total_Digital": 40538.95
+  },
+  {
+    "Laboratorio": "PEPSICO DO BRASIL LTDA",
+    "App": 3744.4,
+    "Site": 33678.13,
+    "Marketplace": 1127.52,
+    "Total_Digital": 38550.05
+  },
+  {
+    "Laboratorio": "SANTHER FABRICA DE PAPEL SANTA THEREZINH",
+    "App": 18320.41,
+    "Site": 10160.14,
+    "Marketplace": 9620.29,
+    "Total_Digital": 38100.84
+  },
+  {
+    "Laboratorio": "FARMAX PRODUTOS FARMACEUTICOS LTDA",
+    "App": 12905.51,
+    "Site": 19351.81,
+    "Marketplace": 5396.44,
+    "Total_Digital": 37653.75
+  },
+  {
+    "Laboratorio": "HISAMITSU FARMACEUTICA DO BRASIL LTDA",
+    "App": 10824.63,
+    "Site": 21761.6,
+    "Marketplace": 4320.4,
+    "Total_Digital": 36906.62
+  },
+  {
+    "Laboratorio": "LABORATORIO GROSS S A",
+    "App": 15985.72,
+    "Site": 11811.41,
+    "Marketplace": 8856.63,
+    "Total_Digital": 36653.77
+  },
+  {
+    "Laboratorio": "GERMED BRACE PHARMA",
+    "App": 21373.72,
+    "Site": 3702.4,
+    "Marketplace": 10996.8,
+    "Total_Digital": 36072.91
+  },
+  {
+    "Laboratorio": "PHARLAB GENERICOS",
+    "App": 18929.98,
+    "Site": 4763.28,
+    "Marketplace": 11832.85,
+    "Total_Digital": 35526.11
+  },
+  {
+    "Laboratorio": "EVER GREEN IND E COM LTDA",
+    "App": 13741.6,
+    "Site": 15965.34,
+    "Marketplace": 5294.97,
+    "Total_Digital": 35001.91
+  },
+  {
+    "Laboratorio": "BELEZE & OLIVEIRA-COMER DE COSMETIC LTDA",
+    "App": 15718.43,
+    "Site": 10599.96,
+    "Marketplace": 8632.38,
+    "Total_Digital": 34950.77
+  },
+  {
+    "Laboratorio": "NUK",
+    "App": 16377.07,
+    "Site": 10215.27,
+    "Marketplace": 8235.81,
+    "Total_Digital": 34828.15
+  },
+  {
+    "Laboratorio": "NELIDA DO BRASIL COMERCIO E IMPORTACAO L",
+    "App": 12697.56,
+    "Site": 15672.21,
+    "Marketplace": 6342.12,
+    "Total_Digital": 34711.88
+  },
+  {
+    "Laboratorio": "DELLAMED SA",
+    "App": 13649.71,
+    "Site": 8702.2,
+    "Marketplace": 11501.25,
+    "Total_Digital": 33853.17
+  },
+  {
+    "Laboratorio": "OMRON HEALTHCARE BRASIL REP E DIST LTDA",
+    "App": 14692.46,
+    "Site": 7644.98,
+    "Marketplace": 11494.96,
+    "Total_Digital": 33832.4
+  },
+  {
+    "Laboratorio": "TEUTO MARCAS",
+    "App": 12966.54,
+    "Site": 16551.75,
+    "Marketplace": 4236.39,
+    "Total_Digital": 33754.69
+  },
+  {
+    "Laboratorio": "PHARMASCIENCE",
+    "App": 8794.08,
+    "Site": 21762.88,
+    "Marketplace": 2754.12,
+    "Total_Digital": 33311.08
+  },
+  {
+    "Laboratorio": "RANBAXY FARMACEUTICA LTDA",
+    "App": 18970.48,
+    "Site": 6357.12,
+    "Marketplace": 7845.92,
+    "Total_Digital": 33173.52
+  },
+  {
+    "Laboratorio": "ASTELLAS",
+    "App": 18908.71,
+    "Site": 4261.76,
+    "Marketplace": 9665.58,
+    "Total_Digital": 32836.06
+  },
+  {
+    "Laboratorio": "KUKA PRODUTOS INFANTIS LTDA",
+    "App": 11749.27,
+    "Site": 16221.69,
+    "Marketplace": 3710.68,
+    "Total_Digital": 31681.64
+  },
+  {
+    "Laboratorio": "BIOLAB FARMA GENERICOS LTDA",
+    "App": 15471.83,
+    "Site": 8095.52,
+    "Marketplace": 7747.66,
+    "Total_Digital": 31315.01
+  },
+  {
+    "Laboratorio": "ALLERGAN PRODUTOS FARMACEUTICOS LTDA",
+    "App": 13758.83,
+    "Site": 7251.1,
+    "Marketplace": 9977.81,
+    "Total_Digital": 30987.74
+  },
+  {
+    "Laboratorio": "MEDLVEN COMER E REPRES PROD HOSPI LTDA",
+    "App": 12597.65,
+    "Site": 9071.92,
+    "Marketplace": 8942.31,
+    "Total_Digital": 30611.88
+  },
+  {
+    "Laboratorio": "PRO NOVA DIST E COMERC DE COSMET LTDA",
+    "App": 11966.25,
+    "Site": 13458.57,
+    "Marketplace": 5118.35,
+    "Total_Digital": 30543.17
+  },
+  {
+    "Laboratorio": "LABORATORIO GLOBO LTDA",
+    "App": 13635.03,
+    "Site": 12188.5,
+    "Marketplace": 4585.56,
+    "Total_Digital": 30409.08
+  },
+  {
+    "Laboratorio": "GLENMARK FARMACEUTICA LTDA",
+    "App": 11689.53,
+    "Site": 10173.52,
+    "Marketplace": 8478.94,
+    "Total_Digital": 30341.98
+  },
+  {
+    "Laboratorio": "BAGO LTDA",
+    "App": 12349.38,
+    "Site": 9820.04,
+    "Marketplace": 7967.69,
+    "Total_Digital": 30137.11
+  },
+  {
+    "Laboratorio": "KELCO PET CARE PRODUTOS ANIMAIS LTDA",
+    "App": 6790.28,
+    "Site": 18517.29,
+    "Marketplace": 4555.58,
+    "Total_Digital": 29863.15
+  },
+  {
+    "Laboratorio": "EMBELLEZE LTDA",
+    "App": 10409.03,
+    "Site": 15408.67,
+    "Marketplace": 4035.76,
+    "Total_Digital": 29853.47
+  },
+  {
+    "Laboratorio": "SEPAC SERRADOS E PASTA DE CELULOSE LTDA",
+    "App": 11635.1,
+    "Site": 14104.04,
+    "Marketplace": 3619.05,
+    "Total_Digital": 29358.18
+  },
+  {
+    "Laboratorio": "LOLLIPOPS COSMETICS - DISTRIBUIDORA DE C",
+    "App": 10364.02,
+    "Site": 14506.33,
+    "Marketplace": 4299.16,
+    "Total_Digital": 29169.51
+  },
+  {
+    "Laboratorio": "THERASKIN FARMACEUTICA DERMO",
+    "App": 14882.16,
+    "Site": 6073.28,
+    "Marketplace": 7958.84,
+    "Total_Digital": 28914.28
+  },
+  {
+    "Laboratorio": "BIOSINTETICA LABORATORIOS FARMACEU",
+    "App": 15135.95,
+    "Site": 5838.88,
+    "Marketplace": 7431.37,
+    "Total_Digital": 28406.2
+  },
+  {
+    "Laboratorio": "SEMINA INDUSTRIA E COMERCIO LTDA",
+    "App": 10586.59,
+    "Site": 10635.43,
+    "Marketplace": 6283.69,
+    "Total_Digital": 27505.72
+  },
+  {
+    "Laboratorio": "CLARAMAX INDUSTRIA E COM DE PAPEIS LTDA",
+    "App": 9454.59,
+    "Site": 15784.55,
+    "Marketplace": 2254.73,
+    "Total_Digital": 27493.86
+  },
+  {
+    "Laboratorio": "TAIFF DISTRIBUIDORA PROD DE BELEZA LTDA",
+    "App": 8940.67,
+    "Site": 9798.68,
+    "Marketplace": 8702.95,
+    "Total_Digital": 27442.3
+  },
+  {
+    "Laboratorio": "AIRELA INDUSTRIA FARMACEUTICA LTDA",
+    "App": 4094.24,
+    "Site": 20720.66,
+    "Marketplace": 2499.8,
+    "Total_Digital": 27314.7
+  },
+  {
+    "Laboratorio": "LOLLY BABY PRODUTOS INFANTIS LTDA",
+    "App": 12304.57,
+    "Site": 10517.95,
+    "Marketplace": 4460.82,
+    "Total_Digital": 27283.34
+  },
+  {
+    "Laboratorio": "3M DO BRASIL LTDA",
+    "App": 6914.83,
+    "Site": 16550.58,
+    "Marketplace": 3327.33,
+    "Total_Digital": 26792.74
+  },
+  {
+    "Laboratorio": "MARI MARIA COSMETICOS LTDA",
+    "App": 8691.2,
+    "Site": 11596.16,
+    "Marketplace": 6435.67,
+    "Total_Digital": 26723.03
+  },
+  {
+    "Laboratorio": "BAUDUCCO E CIA LTDA",
+    "App": 4097.79,
+    "Site": 19518.51,
+    "Marketplace": 2388.81,
+    "Total_Digital": 26005.11
+  },
+  {
+    "Laboratorio": "MAKRODAL DISTRIBUIDORA DE ALIMENTOS LTDA",
+    "App": 5286.31,
+    "Site": 18191.19,
+    "Marketplace": 2486.98,
+    "Total_Digital": 25964.48
+  },
+  {
+    "Laboratorio": "MULTILASER INDUSTRIAL S.A.",
+    "App": 9969.46,
+    "Site": 9005.61,
+    "Marketplace": 6977.44,
+    "Total_Digital": 25952.51
+  },
+  {
+    "Laboratorio": "ANALITIC TECNOLOGIA DE PRECISAO LTDA",
+    "App": 6556.46,
+    "Site": 16212.78,
+    "Marketplace": 2625.32,
+    "Total_Digital": 25394.55
+  },
+  {
+    "Laboratorio": "LILLO BABY",
+    "App": 11435.63,
+    "Site": 9212.94,
+    "Marketplace": 4492.43,
+    "Total_Digital": 25140.99
+  },
+  {
+    "Laboratorio": "LATEX BRASIL",
+    "App": 6163.19,
+    "Site": 16163.15,
+    "Marketplace": 2750.86,
+    "Total_Digital": 25077.2
+  },
+  {
+    "Laboratorio": "SANTE COMERCIO ATACADISTA DE COSMETICOS",
+    "App": 8632.67,
+    "Site": 12261.32,
+    "Marketplace": 4006.95,
+    "Total_Digital": 24900.94
+  },
+  {
+    "Laboratorio": "BIC APAR.MEDICOS LTDA",
+    "App": 10760.47,
+    "Site": 10598.65,
+    "Marketplace": 3379.08,
+    "Total_Digital": 24738.19
+  },
+  {
+    "Laboratorio": "HEBRON S.A",
+    "App": 10392.34,
+    "Site": 6389.42,
+    "Marketplace": 7502.23,
+    "Total_Digital": 24283.99
+  },
+  {
+    "Laboratorio": "BEIERSDORF INDUSTRIA E COMERCIO LTDA",
+    "App": 12187.94,
+    "Site": 2984.67,
+    "Marketplace": 8905.26,
+    "Total_Digital": 24077.86
+  },
+  {
+    "Laboratorio": "CLESS COMERCIO DE COSMETICOS S.A.",
+    "App": 7624.39,
+    "Site": 12435.25,
+    "Marketplace": 3932.1,
+    "Total_Digital": 23991.74
+  },
+  {
+    "Laboratorio": "RV TECNOLOGIA E SISTEMAS S.A.",
+    "App": 3658.66,
+    "Site": 17854.37,
+    "Marketplace": 2228.84,
+    "Total_Digital": 23741.87
+  },
+  {
+    "Laboratorio": "BEBIDAS GRASSI DO BRASIL LTDA",
+    "App": 6832.33,
+    "Site": 13126.55,
+    "Marketplace": 2796.63,
+    "Total_Digital": 22755.51
+  },
+  {
+    "Laboratorio": "BIO EXTRATUS",
+    "App": 9636.59,
+    "Site": 8177.87,
+    "Marketplace": 4937.16,
+    "Total_Digital": 22751.63
+  },
+  {
+    "Laboratorio": "ELG COMERCIO DE ELETRONICOS LTDA",
+    "App": 2046.79,
+    "Site": 19144.91,
+    "Marketplace": 1385.11,
+    "Total_Digital": 22576.81
+  },
+  {
+    "Laboratorio": "FBM COMERCIO E PROMOCAO DE VENDAS LTDA",
+    "App": 3789.48,
+    "Site": 16237.67,
+    "Marketplace": 2541.17,
+    "Total_Digital": 22568.32
+  },
+  {
+    "Laboratorio": "MEGALABS DERMO",
+    "App": 9651.93,
+    "Site": 6387.8,
+    "Marketplace": 6527.39,
+    "Total_Digital": 22567.12
+  },
+  {
+    "Laboratorio": "MERCK SHARP & DOHME FARMACEUTICA LTDA",
+    "App": 8695.58,
+    "Site": 688.89,
+    "Marketplace": 13166.25,
+    "Total_Digital": 22550.72
+  },
+  {
+    "Laboratorio": "LABORATORIOS PIERRE FABRE BR LTDA CD",
+    "App": 9253.21,
+    "Site": 7229.7,
+    "Marketplace": 6054.48,
+    "Total_Digital": 22537.39
+  },
+  {
+    "Laboratorio": "MEDIX BRASIL LTDA",
+    "App": 8086.49,
+    "Site": 10995.79,
+    "Marketplace": 3302.85,
+    "Total_Digital": 22385.13
+  },
+  {
+    "Laboratorio": "BRG SUPLEMENTOS NUTRICIONAIS LTDA",
+    "App": 7636.64,
+    "Site": 10033.84,
+    "Marketplace": 4303.31,
+    "Total_Digital": 21973.79
+  },
+  {
+    "Laboratorio": "MERCUR S/A - BODY CARE",
+    "App": 7371.31,
+    "Site": 8058.51,
+    "Marketplace": 5872.03,
+    "Total_Digital": 21301.85
+  },
+  {
+    "Laboratorio": "VIDA FORTE NUTRIENTES INDUSTRIA E COMERC",
+    "App": 9735.2,
+    "Site": 5346.83,
+    "Marketplace": 5884.51,
+    "Total_Digital": 20966.54
+  },
+  {
+    "Laboratorio": "NATCOFARMA DO BRASIL LTDA",
+    "App": 4290.8,
+    "Site": 11330.58,
+    "Marketplace": 5030.71,
+    "Total_Digital": 20652.09
+  },
+  {
+    "Laboratorio": "ABBOTT NUTRICAO",
+    "App": 7314.98,
+    "Site": 9478.31,
+    "Marketplace": 3855.6,
+    "Total_Digital": 20648.9
+  },
+  {
+    "Laboratorio": "VULT",
+    "App": 7570.28,
+    "Site": 8298.96,
+    "Marketplace": 4721.06,
+    "Total_Digital": 20590.31
+  },
+  {
+    "Laboratorio": "COALA DO BRASIL S.A.",
+    "App": 7474.97,
+    "Site": 9422.47,
+    "Marketplace": 3151.49,
+    "Total_Digital": 20048.93
+  },
+  {
+    "Laboratorio": "GEYER MEDICAMENTOS S.A",
+    "App": 7825.56,
+    "Site": 8410.22,
+    "Marketplace": 3799.37,
+    "Total_Digital": 20035.14
+  },
+  {
+    "Laboratorio": "BEBIDAS FRUKI SA",
+    "App": 2010.59,
+    "Site": 17125.76,
+    "Marketplace": 705.64,
+    "Total_Digital": 19841.99
+  },
+  {
+    "Laboratorio": "MARS",
+    "App": 3051.33,
+    "Site": 15751.53,
+    "Marketplace": 1000.23,
+    "Total_Digital": 19803.08
+  },
+  {
+    "Laboratorio": "SUNNY BRINQUEDOS IMPORT E EXPORT LIMITAD",
+    "App": 10973.43,
+    "Site": 2443.53,
+    "Marketplace": 6358.72,
+    "Total_Digital": 19775.68
+  },
+  {
+    "Laboratorio": "MERAKI SOLUTION DISTRIBUICAO LTDA",
+    "App": 10650.14,
+    "Site": 4055.7,
+    "Marketplace": 5006.08,
+    "Total_Digital": 19711.93
+  },
+  {
+    "Laboratorio": "USO CONTABIL",
+    "App": 12736.22,
+    "Site": 0.0,
+    "Marketplace": 6926.74,
+    "Total_Digital": 19662.96
+  },
+  {
+    "Laboratorio": "MEAD JOHNSON DO BRASIL COM E IMP DE PROD",
+    "App": 9447.9,
+    "Site": 5516.91,
+    "Marketplace": 4594.11,
+    "Total_Digital": 19558.92
+  },
+  {
+    "Laboratorio": "LAB EXPANSCIENCE COM IMP EXP PROD SAUDE",
+    "App": 8604.13,
+    "Site": 6059.73,
+    "Marketplace": 4668.14,
+    "Total_Digital": 19332.0
+  },
+  {
+    "Laboratorio": "BIOIDEAL DISTRIB DE PROD PARA SAUDE LTDA",
+    "App": 8115.05,
+    "Site": 5764.38,
+    "Marketplace": 5345.41,
+    "Total_Digital": 19224.83
+  },
+  {
+    "Laboratorio": "NESTLE NUTRITION VITAMINAS",
+    "App": 8484.29,
+    "Site": 4087.26,
+    "Marketplace": 6588.84,
+    "Total_Digital": 19160.39
+  },
+  {
+    "Laboratorio": "FLEXICOTTON IND COM SA",
+    "App": 6428.6,
+    "Site": 9668.64,
+    "Marketplace": 2603.86,
+    "Total_Digital": 18701.1
+  },
+  {
+    "Laboratorio": "LEGRAND OFTALMO",
+    "App": 9880.6,
+    "Site": 2684.72,
+    "Marketplace": 6016.91,
+    "Total_Digital": 18582.23
+  },
+  {
+    "Laboratorio": "AGAPLASTIC INDUSTRIA E COMERCIO LTDA",
+    "App": 6307.19,
+    "Site": 8551.78,
+    "Marketplace": 3461.53,
+    "Total_Digital": 18320.5
+  },
+  {
+    "Laboratorio": "DIVINA DIST DE VITAM NATURAIS SUNDOWN",
+    "App": 8265.7,
+    "Site": 3796.54,
+    "Marketplace": 5773.85,
+    "Total_Digital": 17836.09
+  },
+  {
+    "Laboratorio": "ALPI DISTRIBUIDORA DE COSMETICOS LTDA",
+    "App": 5689.56,
+    "Site": 9259.55,
+    "Marketplace": 2838.53,
+    "Total_Digital": 17787.64
+  },
+  {
+    "Laboratorio": "GEOLAB PHARMA",
+    "App": 8720.34,
+    "Site": 2804.9,
+    "Marketplace": 6192.26,
+    "Total_Digital": 17717.51
+  },
+  {
+    "Laboratorio": "CELLERA FARMACEUTICA S A",
+    "App": 7047.56,
+    "Site": 7860.39,
+    "Marketplace": 2715.43,
+    "Total_Digital": 17623.39
+  },
+  {
+    "Laboratorio": "MEDQUIMICA GENERICOS",
+    "App": 6073.15,
+    "Site": 9236.84,
+    "Marketplace": 2306.71,
+    "Total_Digital": 17616.7
+  },
+  {
+    "Laboratorio": "MEDQUIMICA INDUSTRIA FARMACEUTICA LTDA",
+    "App": 6910.18,
+    "Site": 7120.02,
+    "Marketplace": 3407.26,
+    "Total_Digital": 17437.46
+  },
+  {
+    "Laboratorio": "PARFUM BRASIL COSMETICOS EIRELI",
+    "App": 4944.61,
+    "Site": 9851.73,
+    "Marketplace": 2471.34,
+    "Total_Digital": 17267.67
+  },
+  {
+    "Laboratorio": "HIDROLIGHT DO BRASIL S.A",
+    "App": 5568.27,
+    "Site": 6504.77,
+    "Marketplace": 4984.09,
+    "Total_Digital": 17057.12
+  },
+  {
+    "Laboratorio": "SANDOZ FARMA",
+    "App": 9226.83,
+    "Site": 1575.54,
+    "Marketplace": 6208.9,
+    "Total_Digital": 17011.27
+  },
+  {
+    "Laboratorio": "BODY FOOD FABRICANTES DE ALIMENTOS SAUDA",
+    "App": 4926.34,
+    "Site": 8027.42,
+    "Marketplace": 3931.45,
+    "Total_Digital": 16885.21
+  },
+  {
+    "Laboratorio": "BABY ROO COMERCIO DE ALIMENTOS EIRELI",
+    "App": 6074.22,
+    "Site": 8549.76,
+    "Marketplace": 2129.28,
+    "Total_Digital": 16753.26
+  },
+  {
+    "Laboratorio": "APIS FLORA INDUSTRIAL E COMERCIAL LTDA",
+    "App": 7528.69,
+    "Site": 4251.94,
+    "Marketplace": 4907.99,
+    "Total_Digital": 16688.62
+  },
+  {
+    "Laboratorio": "ARESE PHARMA LTDA",
+    "App": 8887.47,
+    "Site": 2469.3,
+    "Marketplace": 5113.01,
+    "Total_Digital": 16469.78
+  },
+  {
+    "Laboratorio": "AVAMILLER LTDA",
+    "App": 6975.19,
+    "Site": 6617.99,
+    "Marketplace": 2757.27,
+    "Total_Digital": 16350.45
+  },
+  {
+    "Laboratorio": "VITAMEDIC INDUSTRIA FARMACEUTICA LTDA",
+    "App": 8502.12,
+    "Site": 4137.8,
+    "Marketplace": 3513.88,
+    "Total_Digital": 16153.79
+  },
+  {
+    "Laboratorio": "FLORA PROD DE HIG E LIMP SA - ALBANY",
+    "App": 10142.45,
+    "Site": 1939.42,
+    "Marketplace": 3958.23,
+    "Total_Digital": 16040.1
+  },
+  {
+    "Laboratorio": "GRUNENTHAL DO BRASIL FARMACEUTICA LTDA",
+    "App": 8119.43,
+    "Site": 1963.55,
+    "Marketplace": 5638.54,
+    "Total_Digital": 15721.51
+  },
+  {
+    "Laboratorio": "MERCK S/A",
+    "App": 7373.52,
+    "Site": 5275.78,
+    "Marketplace": 2976.31,
+    "Total_Digital": 15625.61
+  },
+  {
+    "Laboratorio": "HERSHEY DO BRASIL LTDA",
+    "App": 3625.68,
+    "Site": 10804.99,
+    "Marketplace": 1182.74,
+    "Total_Digital": 15613.41
+  },
+  {
+    "Laboratorio": "PORTO DISTRIBUIDORA PHALLEBEAUTY LTDA",
+    "App": 6194.19,
+    "Site": 6717.43,
+    "Marketplace": 2591.01,
+    "Total_Digital": 15502.62
+  },
+  {
+    "Laboratorio": "GEOLAB INDUSTRIA FARMACEUTICA S/A",
+    "App": 5120.2,
+    "Site": 8004.03,
+    "Marketplace": 2198.23,
+    "Total_Digital": 15322.46
+  },
+  {
+    "Laboratorio": "E.H. (BRASIL) LTDA",
+    "App": 5983.89,
+    "Site": 6282.5,
+    "Marketplace": 2507.34,
+    "Total_Digital": 14773.73
+  },
+  {
+    "Laboratorio": "NEEZ BRASIL COMERCIO DE COSMETICOS LTDA",
+    "App": 5847.35,
+    "Site": 6367.52,
+    "Marketplace": 2549.18,
+    "Total_Digital": 14764.05
+  },
+  {
+    "Laboratorio": "AMGEN BIOTECNOLOGIA DO BRASIL LTDA.",
+    "App": 8142.27,
+    "Site": 154.09,
+    "Marketplace": 6289.35,
+    "Total_Digital": 14585.71
+  },
+  {
+    "Laboratorio": "LABORATORIOS NAOS DO BRASIL LTDA",
+    "App": 6184.41,
+    "Site": 3477.53,
+    "Marketplace": 4772.85,
+    "Total_Digital": 14434.78
+  },
+  {
+    "Laboratorio": "GOMES SUPLEMENTOS ALIMENTARES LTDA",
+    "App": 6928.77,
+    "Site": 2557.92,
+    "Marketplace": 4876.06,
+    "Total_Digital": 14362.74
+  },
+  {
+    "Laboratorio": "WELEDA DO BRASIL LABORATORIO E FARMACIA",
+    "App": 4575.87,
+    "Site": 5238.92,
+    "Marketplace": 4519.08,
+    "Total_Digital": 14333.87
+  },
+  {
+    "Laboratorio": "BIOFLORA INDUSTRIA E COMERCIO LTDA",
+    "App": 8762.38,
+    "Site": 3208.86,
+    "Marketplace": 2227.68,
+    "Total_Digital": 14198.92
+  },
+  {
+    "Laboratorio": "BIOPAS BRASIL PROD FARMACEUTICOS LTDA",
+    "App": 8300.8,
+    "Site": 1873.05,
+    "Marketplace": 3965.76,
+    "Total_Digital": 14139.6
+  },
+  {
+    "Laboratorio": "MASTER LINE DO BRASIL LTDA",
+    "App": 4882.19,
+    "Site": 7740.73,
+    "Marketplace": 1457.46,
+    "Total_Digital": 14080.38
+  },
+  {
+    "Laboratorio": "GDS GROW DIETARY SUPPLEMENTS DO BRASIL S",
+    "App": 5520.33,
+    "Site": 4608.71,
+    "Marketplace": 3922.13,
+    "Total_Digital": 14051.17
+  },
+  {
+    "Laboratorio": "ACHE DERMO",
+    "App": 6775.42,
+    "Site": 2542.97,
+    "Marketplace": 4727.7,
+    "Total_Digital": 14046.09
+  },
+  {
+    "Laboratorio": "MUNDIAL",
+    "App": 3786.26,
+    "Site": 8833.59,
+    "Marketplace": 1400.95,
+    "Total_Digital": 14020.79
+  },
+  {
+    "Laboratorio": "E. K. REPRESENTACOES LTDA.",
+    "App": 1435.26,
+    "Site": 11634.07,
+    "Marketplace": 823.4,
+    "Total_Digital": 13892.72
+  },
+  {
+    "Laboratorio": "MELITTA DO BRASIL INDUST E COMERCIO LTDA",
+    "App": 2988.93,
+    "Site": 8347.46,
+    "Marketplace": 2269.94,
+    "Total_Digital": 13606.33
+  },
+  {
+    "Laboratorio": "PERFUMES DANA DO BRASIL S.A.",
+    "App": 5349.2,
+    "Site": 6076.64,
+    "Marketplace": 1835.85,
+    "Total_Digital": 13261.68
+  },
+  {
+    "Laboratorio": "LABORATORIO WESP LTDA",
+    "App": 6478.91,
+    "Site": 4310.66,
+    "Marketplace": 2358.61,
+    "Total_Digital": 13148.18
+  },
+  {
+    "Laboratorio": "SUZANO S.A.",
+    "App": 2522.61,
+    "Site": 9323.31,
+    "Marketplace": 972.09,
+    "Total_Digital": 12818.01
+  },
+  {
+    "Laboratorio": "ESCOBEL IND COM DE PROD DE HIG BEL LTDA",
+    "App": 4400.53,
+    "Site": 6742.45,
+    "Marketplace": 1628.29,
+    "Total_Digital": 12771.26
+  },
+  {
+    "Laboratorio": "IMBECOR PRODUTOS DE BELEZA LTDA",
+    "App": 3267.16,
+    "Site": 7999.74,
+    "Marketplace": 1433.24,
+    "Total_Digital": 12700.15
+  },
+  {
+    "Laboratorio": "EUROFARMA CONVENIENCIA",
+    "App": 3692.27,
+    "Site": 6983.49,
+    "Marketplace": 1886.14,
+    "Total_Digital": 12561.89
+  },
+  {
+    "Laboratorio": "GERMED USK DERMO",
+    "App": 6225.11,
+    "Site": 1234.97,
+    "Marketplace": 5058.3,
+    "Total_Digital": 12518.38
+  },
+  {
+    "Laboratorio": "EMS HB",
+    "App": 5107.21,
+    "Site": 5136.08,
+    "Marketplace": 2201.8,
+    "Total_Digital": 12445.09
+  },
+  {
+    "Laboratorio": "J.R.D. INDUSTRIA FARMACEUTICA LTDA",
+    "App": 4794.69,
+    "Site": 5622.64,
+    "Marketplace": 2010.83,
+    "Total_Digital": 12428.15
+  },
+  {
+    "Laboratorio": "PDHB INDUSTRIA COMERCIO IMPORTACAO E EXP",
+    "App": 6630.49,
+    "Site": 3383.98,
+    "Marketplace": 2382.39,
+    "Total_Digital": 12396.87
+  },
+  {
+    "Laboratorio": "BARRIND IND E COMERCIO DE ALIMENTO EIREL",
+    "App": 2546.3,
+    "Site": 6255.06,
+    "Marketplace": 3552.49,
+    "Total_Digital": 12353.85
+  },
+  {
+    "Laboratorio": "DAHUER LABORATORIO LTDA",
+    "App": 5290.09,
+    "Site": 3424.72,
+    "Marketplace": 3582.32,
+    "Total_Digital": 12297.13
+  },
+  {
+    "Laboratorio": "ECO DIAGNOSTICA LTDA",
+    "App": 954.96,
+    "Site": 10618.56,
+    "Marketplace": 690.46,
+    "Total_Digital": 12263.99
+  },
+  {
+    "Laboratorio": "ADVERTISING OP ASS PLANEJ E PROPAG LTDA",
+    "App": 4967.38,
+    "Site": 4940.09,
+    "Marketplace": 2329.4,
+    "Total_Digital": 12236.87
+  },
+  {
+    "Laboratorio": "LABOTRAT DISTR DE PRODUT DE HIG PESSOAL",
+    "App": 4864.12,
+    "Site": 4988.16,
+    "Marketplace": 2301.25,
+    "Total_Digital": 12153.53
+  },
+  {
+    "Laboratorio": "MATTEL DO BRASIL LTDA",
+    "App": 4971.52,
+    "Site": 3026.52,
+    "Marketplace": 4023.6,
+    "Total_Digital": 12021.64
+  },
+  {
+    "Laboratorio": "RCA LABS LTDA",
+    "App": 4342.14,
+    "Site": 4025.69,
+    "Marketplace": 3579.09,
+    "Total_Digital": 11946.93
+  },
+  {
+    "Laboratorio": "GRUNENTHAL DO BRASIL FARMACEUTICA LTDA.",
+    "App": 4169.34,
+    "Site": 5686.86,
+    "Marketplace": 2071.83,
+    "Total_Digital": 11928.02
+  },
+  {
+    "Laboratorio": "DISPROGEL DISTRIB DE PROD DE HIG E LIMPE",
+    "App": 7212.74,
+    "Site": 1753.96,
+    "Marketplace": 2935.5,
+    "Total_Digital": 11902.2
+  },
+  {
+    "Laboratorio": "LIBBS FARMACEUTICA DERMO",
+    "App": 5134.44,
+    "Site": 1573.74,
+    "Marketplace": 5152.0,
+    "Total_Digital": 11860.18
+  },
+  {
+    "Laboratorio": "LORENZETTI S A INDUSTRIAS BRASILEIRAS",
+    "App": 5066.57,
+    "Site": 2650.07,
+    "Marketplace": 4078.87,
+    "Total_Digital": 11795.5
+  },
+  {
+    "Laboratorio": "CONDOR S.A.",
+    "App": 5160.74,
+    "Site": 4602.89,
+    "Marketplace": 1869.55,
+    "Total_Digital": 11633.18
+  },
+  {
+    "Laboratorio": "BLAU FARMACEUTICA S.A.",
+    "App": 5059.75,
+    "Site": 4189.02,
+    "Marketplace": 2370.07,
+    "Total_Digital": 11618.84
+  },
+  {
+    "Laboratorio": "SAUDE LTDA",
+    "App": 5648.39,
+    "Site": 3226.78,
+    "Marketplace": 2710.43,
+    "Total_Digital": 11585.59
+  },
+  {
+    "Laboratorio": "MERHEJE BRAZIL & COMPANHIA LTDA",
+    "App": 3915.5,
+    "Site": 6155.59,
+    "Marketplace": 1447.0,
+    "Total_Digital": 11518.09
+  },
+  {
+    "Laboratorio": "MOKSHA8 BRASIL INDUSTRIA E COM DE MED LT",
+    "App": 6841.19,
+    "Site": 938.95,
+    "Marketplace": 3696.34,
+    "Total_Digital": 11476.48
+  },
+  {
+    "Laboratorio": "EUROFRAL IND DE PROD HIGIEN E TERMOPLAST",
+    "App": 2958.97,
+    "Site": 7350.55,
+    "Marketplace": 1104.81,
+    "Total_Digital": 11414.33
+  },
+  {
+    "Laboratorio": "UNIAO QUIMICA GENERICOS",
+    "App": 4549.28,
+    "Site": 4548.71,
+    "Marketplace": 2219.34,
+    "Total_Digital": 11317.32
+  },
+  {
+    "Laboratorio": "ENVISION INDUSTRIA DE PRODUTOS ELETRONIC",
+    "App": 2139.7,
+    "Site": 7719.23,
+    "Marketplace": 1444.9,
+    "Total_Digital": 11303.83
+  },
+  {
+    "Laboratorio": "VITAMEDIC GENERICOS",
+    "App": 4364.55,
+    "Site": 4981.95,
+    "Marketplace": 1873.98,
+    "Total_Digital": 11220.48
+  },
+  {
+    "Laboratorio": "NISSIN FOODS DO BRASIL LTDA",
+    "App": 729.39,
+    "Site": 10224.72,
+    "Marketplace": 212.09,
+    "Total_Digital": 11166.19
+  },
+  {
+    "Laboratorio": "BIOCAP INDUSTRIA DE COSMETICOS LTDA",
+    "App": 3694.69,
+    "Site": 5291.12,
+    "Marketplace": 2168.32,
+    "Total_Digital": 11154.13
+  },
+  {
+    "Laboratorio": "CALCADOS BEIRA RIO",
+    "App": 7858.53,
+    "Site": 162.54,
+    "Marketplace": 3033.0,
+    "Total_Digital": 11054.07
+  },
+  {
+    "Laboratorio": "TOTAL QUIMICA LIMITADA",
+    "App": 2942.18,
+    "Site": 6392.47,
+    "Marketplace": 1683.34,
+    "Total_Digital": 11017.99
+  },
+  {
+    "Laboratorio": "IND COM DE PROD BELEZA YAMA LTDA",
+    "App": 2335.06,
+    "Site": 7668.12,
+    "Marketplace": 947.88,
+    "Total_Digital": 10951.06
+  },
+  {
+    "Laboratorio": "VIDORA FARMACEUTICA LTDA",
+    "App": 3971.45,
+    "Site": 5239.68,
+    "Marketplace": 1666.23,
+    "Total_Digital": 10877.36
+  },
+  {
+    "Laboratorio": "DURACELL COMERCIAL E IMPORTADORA DO BRAS",
+    "App": 1881.07,
+    "Site": 7861.41,
+    "Marketplace": 1013.81,
+    "Total_Digital": 10756.29
+  },
+  {
+    "Laboratorio": "TRB PHARMA IND QUIMICA E FARM LTDA",
+    "App": 6865.96,
+    "Site": 782.17,
+    "Marketplace": 3044.37,
+    "Total_Digital": 10692.5
+  },
+  {
+    "Laboratorio": "HIDRATEI COSMETICOS LTDA",
+    "App": 4369.98,
+    "Site": 2498.49,
+    "Marketplace": 3803.0,
+    "Total_Digital": 10671.47
+  },
+  {
+    "Laboratorio": "SEARA ALIMENTOS LTDA",
+    "App": 2837.16,
+    "Site": 7071.39,
+    "Marketplace": 707.5,
+    "Total_Digital": 10616.06
+  },
+  {
+    "Laboratorio": "EMBECTA BRASIL LTDA",
+    "App": 6552.65,
+    "Site": 736.03,
+    "Marketplace": 3149.77,
+    "Total_Digital": 10438.45
+  },
+  {
+    "Laboratorio": "CURADEN SWISS DO BRASIL IMP E EXP LTDA",
+    "App": 3216.65,
+    "Site": 5503.27,
+    "Marketplace": 1667.95,
+    "Total_Digital": 10387.87
+  },
+  {
+    "Laboratorio": "BUMBUM CREAM BRASIL & BARRIGUINHA CREAM",
+    "App": 2259.57,
+    "Site": 1491.14,
+    "Marketplace": 6517.27,
+    "Total_Digital": 10267.98
+  },
+  {
+    "Laboratorio": "SUNSTAR BRASIL IMPORTADORA DISTRIB LTDA",
+    "App": 4324.37,
+    "Site": 4154.38,
+    "Marketplace": 1751.32,
+    "Total_Digital": 10230.07
+  },
+  {
+    "Laboratorio": "LABORATORIOS BALDACCI LTDA",
+    "App": 5313.07,
+    "Site": 1526.94,
+    "Marketplace": 3384.41,
+    "Total_Digital": 10224.42
+  },
+  {
+    "Laboratorio": "HEEL DO BRASIL BIOMEDICA LTDA",
+    "App": 3300.53,
+    "Site": 2972.75,
+    "Marketplace": 3945.81,
+    "Total_Digital": 10219.08
+  },
+  {
+    "Laboratorio": "TERMOLAR SA",
+    "App": 4299.9,
+    "Site": 1748.07,
+    "Marketplace": 3890.34,
+    "Total_Digital": 9938.3
+  },
+  {
+    "Laboratorio": "SANIBRAS MEDICAMENTOS E NUTRICAO LTDA",
+    "App": 3829.27,
+    "Site": 3703.29,
+    "Marketplace": 2360.25,
+    "Total_Digital": 9892.8
+  },
+  {
+    "Laboratorio": "HOMEOPATIA WALDEMIRO PEREIRA LAB. IND",
+    "App": 4409.95,
+    "Site": 2359.29,
+    "Marketplace": 2990.64,
+    "Total_Digital": 9759.88
+  },
+  {
+    "Laboratorio": "CIFARMA CIENTIFICA FARMACEUTICA LTDA",
+    "App": 3337.68,
+    "Site": 4625.73,
+    "Marketplace": 1649.85,
+    "Total_Digital": 9613.25
+  },
+  {
+    "Laboratorio": "YOKI DISTRIBUIDORA DE ALIMENTOS LTDA",
+    "App": 914.85,
+    "Site": 8396.93,
+    "Marketplace": 214.79,
+    "Total_Digital": 9526.57
+  },
+  {
+    "Laboratorio": "FBM INDUSTRIA FARMACEUTICA LTDA",
+    "App": 4648.0,
+    "Site": 2255.92,
+    "Marketplace": 2569.27,
+    "Total_Digital": 9473.19
+  },
+  {
+    "Laboratorio": "CCM INDUSTRIA E COME DE PROD DESCA S.A.",
+    "App": 4758.24,
+    "Site": 1586.15,
+    "Marketplace": 3126.77,
+    "Total_Digital": 9471.16
+  },
+  {
+    "Laboratorio": "NALU DISTRIBUIDORA LTDA",
+    "App": 4367.32,
+    "Site": 2533.36,
+    "Marketplace": 2454.82,
+    "Total_Digital": 9355.5
+  },
+  {
+    "Laboratorio": "AGUAS MINERAIS SARANDI LTDA",
+    "App": 863.42,
+    "Site": 8228.32,
+    "Marketplace": 202.21,
+    "Total_Digital": 9293.95
+  },
+  {
+    "Laboratorio": "HEDERRA COSMETICOS",
+    "App": 3532.18,
+    "Site": 4396.04,
+    "Marketplace": 1346.17,
+    "Total_Digital": 9274.39
+  },
+  {
+    "Laboratorio": "DEPIL BELLA",
+    "App": 3140.61,
+    "Site": 4590.7,
+    "Marketplace": 1432.35,
+    "Total_Digital": 9163.66
+  },
+  {
+    "Laboratorio": "ALVA PERSONAL CARE - EXPORTACAO E IMPORT",
+    "App": 3952.03,
+    "Site": 2279.21,
+    "Marketplace": 2885.92,
+    "Total_Digital": 9117.15
+  },
+  {
+    "Laboratorio": "LABORATORIO FARMAERVAS LTDA",
+    "App": 1406.33,
+    "Site": 6353.32,
+    "Marketplace": 1318.78,
+    "Total_Digital": 9078.43
+  },
+  {
+    "Laboratorio": "LISS COMERCIO, IMPORTACAO E EXPORTACAO L",
+    "App": 2737.09,
+    "Site": 4966.04,
+    "Marketplace": 1295.06,
+    "Total_Digital": 8998.19
+  },
+  {
+    "Laboratorio": "RASKALO PRODUTOS DE BELEZA LTDA",
+    "App": 3516.61,
+    "Site": 4097.59,
+    "Marketplace": 1320.31,
+    "Total_Digital": 8934.51
+  },
+  {
+    "Laboratorio": "AEROFLEX INDUSTRIA DE AEROSOL LTDA",
+    "App": 3957.23,
+    "Site": 2914.3,
+    "Marketplace": 2057.08,
+    "Total_Digital": 8928.61
+  },
+  {
+    "Laboratorio": "BENESA COMERCIAL LTDA",
+    "App": 3850.13,
+    "Site": 2387.17,
+    "Marketplace": 2680.63,
+    "Total_Digital": 8917.93
+  },
+  {
+    "Laboratorio": "MULTILAB FARMA",
+    "App": 3324.28,
+    "Site": 3636.05,
+    "Marketplace": 1700.25,
+    "Total_Digital": 8660.58
+  },
+  {
+    "Laboratorio": "CIMEX DISTRIBUIDORA DE COSMETICOS LTDAS",
+    "App": 2758.64,
+    "Site": 4849.54,
+    "Marketplace": 1034.28,
+    "Total_Digital": 8642.46
+  },
+  {
+    "Laboratorio": "TURATTI & TURATTI LTDA",
+    "App": 3318.17,
+    "Site": 3118.74,
+    "Marketplace": 2159.91,
+    "Total_Digital": 8596.82
+  },
+  {
+    "Laboratorio": "ARCOM S/A",
+    "App": 1854.97,
+    "Site": 5745.12,
+    "Marketplace": 957.68,
+    "Total_Digital": 8557.76
+  },
+  {
+    "Laboratorio": "BTC COMERCIO DE COSMETICOS LTDA",
+    "App": 4073.25,
+    "Site": 1767.97,
+    "Marketplace": 2664.95,
+    "Total_Digital": 8506.18
+  },
+  {
+    "Laboratorio": "EMBRAST INDUSTRIA E COMERCIO DE EMBALAGE",
+    "App": 2670.56,
+    "Site": 4413.37,
+    "Marketplace": 1409.52,
+    "Total_Digital": 8493.45
+  },
+  {
+    "Laboratorio": "NEOPAN DO BRASIL LTDA",
+    "App": 3039.24,
+    "Site": 4293.53,
+    "Marketplace": 1037.4,
+    "Total_Digital": 8370.18
+  },
+  {
+    "Laboratorio": "TECHLINE",
+    "App": 2678.38,
+    "Site": 3857.18,
+    "Marketplace": 1820.24,
+    "Total_Digital": 8355.79
+  },
+  {
+    "Laboratorio": "AMOVERI FARMA S.A.",
+    "App": 3892.68,
+    "Site": 2344.37,
+    "Marketplace": 2019.92,
+    "Total_Digital": 8256.97
+  },
+  {
+    "Laboratorio": "INDAIAL PAPEL EMBALAGENS LTDA",
+    "App": 3929.46,
+    "Site": 2628.8,
+    "Marketplace": 1641.94,
+    "Total_Digital": 8200.19
+  },
+  {
+    "Laboratorio": "MEDQUIMICA PHARMA",
+    "App": 2463.92,
+    "Site": 4539.41,
+    "Marketplace": 1050.55,
+    "Total_Digital": 8053.89
+  },
+  {
+    "Laboratorio": "MUNILA COSMETICOS EIRELI",
+    "App": 2791.84,
+    "Site": 3425.75,
+    "Marketplace": 1763.96,
+    "Total_Digital": 7981.55
+  },
+  {
+    "Laboratorio": "CAZI QUIMICA FARMACEUTICA IND COM LTDA",
+    "App": 1981.27,
+    "Site": 5227.71,
+    "Marketplace": 668.34,
+    "Total_Digital": 7877.32
+  },
+  {
+    "Laboratorio": "GERMED USK",
+    "App": 4370.51,
+    "Site": 823.62,
+    "Marketplace": 2680.16,
+    "Total_Digital": 7874.29
+  },
+  {
+    "Laboratorio": "HYPERA S A",
+    "App": 2380.04,
+    "Site": 4418.67,
+    "Marketplace": 1000.04,
+    "Total_Digital": 7798.74
+  },
+  {
+    "Laboratorio": "CONDOR BRASIL IND COM E TRANS COSM EIREL",
+    "App": 3808.23,
+    "Site": 2244.59,
+    "Marketplace": 1714.85,
+    "Total_Digital": 7767.68
+  },
+  {
+    "Laboratorio": "H M IND E COMERCIO DE PROD DE BELEZA LTD",
+    "App": 2858.39,
+    "Site": 3044.01,
+    "Marketplace": 1829.34,
+    "Total_Digital": 7731.73
+  },
+  {
+    "Laboratorio": "COPAG DA AMAZONIA S A",
+    "App": 1636.97,
+    "Site": 4626.91,
+    "Marketplace": 1377.15,
+    "Total_Digital": 7641.03
+  },
+  {
+    "Laboratorio": "MENTOS GOMAS LTDA",
+    "App": 1261.94,
+    "Site": 5650.99,
+    "Marketplace": 707.11,
+    "Total_Digital": 7620.04
+  },
+  {
+    "Laboratorio": "DEPI-ROLL",
+    "App": 2641.63,
+    "Site": 3844.81,
+    "Marketplace": 1064.18,
+    "Total_Digital": 7550.62
+  },
+  {
+    "Laboratorio": "ZYDUS NIKKHO",
+    "App": 3008.84,
+    "Site": 3102.62,
+    "Marketplace": 1361.81,
+    "Total_Digital": 7473.28
+  },
+  {
+    "Laboratorio": "M DIAS BRANCO S.A. INDUSTRIA E COMERCIO",
+    "App": 875.6,
+    "Site": 6227.64,
+    "Marketplace": 355.65,
+    "Total_Digital": 7458.9
+  },
+  {
+    "Laboratorio": "BOCA ROSA ANT",
+    "App": 2135.86,
+    "Site": 3382.46,
+    "Marketplace": 1926.49,
+    "Total_Digital": 7444.82
+  },
+  {
+    "Laboratorio": "MULTI-MARCAS IND DE PROD HIGIENICOS LTDA",
+    "App": 3585.48,
+    "Site": 1840.38,
+    "Marketplace": 1997.09,
+    "Total_Digital": 7422.95
+  },
+  {
+    "Laboratorio": "BALDONI PRODUTOS NATURAIS COMERCIO INDUS",
+    "App": 2750.26,
+    "Site": 3411.67,
+    "Marketplace": 1216.67,
+    "Total_Digital": 7378.61
+  },
+  {
+    "Laboratorio": "EUROFARMA OTC",
+    "App": 3034.9,
+    "Site": 2509.99,
+    "Marketplace": 1829.05,
+    "Total_Digital": 7373.94
+  },
+  {
+    "Laboratorio": "HEALTHY DO BRASIL INDUSTRIA COMERCIO E D",
+    "App": 3382.33,
+    "Site": 2407.7,
+    "Marketplace": 1553.0,
+    "Total_Digital": 7343.03
+  },
+  {
+    "Laboratorio": "BARAO IND E COMERCIO DE ERVA MATE E CHAS",
+    "App": 1202.07,
+    "Site": 5415.38,
+    "Marketplace": 594.15,
+    "Total_Digital": 7211.6
+  },
+  {
+    "Laboratorio": "TRAMONTINA FARROUPILHA SA IND METALURG",
+    "App": 2881.12,
+    "Site": 2347.75,
+    "Marketplace": 1883.91,
+    "Total_Digital": 7112.78
+  },
+  {
+    "Laboratorio": "BETTANIN S A",
+    "App": 1984.39,
+    "Site": 4099.15,
+    "Marketplace": 914.28,
+    "Total_Digital": 6997.83
+  },
+  {
+    "Laboratorio": "BELFAR LTDA",
+    "App": 2202.39,
+    "Site": 4001.22,
+    "Marketplace": 784.14,
+    "Total_Digital": 6987.75
+  },
+  {
+    "Laboratorio": "BIOLAND",
+    "App": 2447.11,
+    "Site": 2673.8,
+    "Marketplace": 1795.93,
+    "Total_Digital": 6916.84
+  },
+  {
+    "Laboratorio": "KAMALEAO COLOR COMERCIO DE COSMETICOS LT",
+    "App": 1591.27,
+    "Site": 4279.44,
+    "Marketplace": 902.46,
+    "Total_Digital": 6773.16
+  },
+  {
+    "Laboratorio": "TERMOGEL",
+    "App": 1938.6,
+    "Site": 3725.33,
+    "Marketplace": 1023.45,
+    "Total_Digital": 6687.38
+  },
+  {
+    "Laboratorio": "PRATI DONADUZZI RX",
+    "App": 4438.75,
+    "Site": 107.28,
+    "Marketplace": 2133.57,
+    "Total_Digital": 6679.6
+  },
+  {
+    "Laboratorio": "NATUPHITUS INDUST E COM DE COSMETICOS",
+    "App": 2720.86,
+    "Site": 2784.39,
+    "Marketplace": 1155.72,
+    "Total_Digital": 6660.96
+  },
+  {
+    "Laboratorio": "AURA BEAUTY LTDA",
+    "App": 2623.84,
+    "Site": 2604.97,
+    "Marketplace": 1402.09,
+    "Total_Digital": 6630.9
+  },
+  {
+    "Laboratorio": "HIGIMASTER DIST DE PROD DE HIG LTDA",
+    "App": 3167.49,
+    "Site": 2162.96,
+    "Marketplace": 1297.01,
+    "Total_Digital": 6627.46
+  },
+  {
+    "Laboratorio": "FHACES",
+    "App": 1364.38,
+    "Site": 4686.03,
+    "Marketplace": 522.26,
+    "Total_Digital": 6572.66
+  },
+  {
+    "Laboratorio": "DIVCOM PHARMA DERMO",
+    "App": 2777.06,
+    "Site": 2297.18,
+    "Marketplace": 1497.95,
+    "Total_Digital": 6572.19
+  },
+  {
+    "Laboratorio": "MINANCORA & CIA LTDA",
+    "App": 2738.12,
+    "Site": 2531.4,
+    "Marketplace": 1240.71,
+    "Total_Digital": 6510.22
+  },
+  {
+    "Laboratorio": "HASKELL COSMETICA NATURAL",
+    "App": 2646.04,
+    "Site": 2348.55,
+    "Marketplace": 1480.96,
+    "Total_Digital": 6475.56
+  },
+  {
+    "Laboratorio": "DIFARMA IMPORTACAO E DISTRIBUICAO LTDA",
+    "App": 2275.57,
+    "Site": 3056.17,
+    "Marketplace": 1102.82,
+    "Total_Digital": 6434.56
+  },
+  {
+    "Laboratorio": "VITA PREMIUM ATACADISTA LTDA",
+    "App": 3197.26,
+    "Site": 1314.37,
+    "Marketplace": 1834.03,
+    "Total_Digital": 6345.66
+  },
+  {
+    "Laboratorio": "BIO INSTINTO IND E COM DE COSMETICOS",
+    "App": 2420.47,
+    "Site": 2887.02,
+    "Marketplace": 987.06,
+    "Total_Digital": 6294.55
+  },
+  {
+    "Laboratorio": "PARALELO SUL RIO GRANDENSE COMERCIO DE C",
+    "App": 2905.96,
+    "Site": 2572.29,
+    "Marketplace": 813.94,
+    "Total_Digital": 6292.19
+  },
+  {
+    "Laboratorio": "RB EXPORT IMPORT COM E IND PROD BARB LTD",
+    "App": 3642.52,
+    "Site": 1583.38,
+    "Marketplace": 1032.67,
+    "Total_Digital": 6258.57
+  },
+  {
+    "Laboratorio": "GENOM FARMACEUTICA DERMO",
+    "App": 2984.06,
+    "Site": 724.63,
+    "Marketplace": 2525.82,
+    "Total_Digital": 6234.5
+  },
+  {
+    "Laboratorio": "RODRIGUES PINHEL & CIA LTDA",
+    "App": 2667.34,
+    "Site": 2449.35,
+    "Marketplace": 1112.21,
+    "Total_Digital": 6228.9
+  },
+  {
+    "Laboratorio": "MARCO BONI",
+    "App": 2237.91,
+    "Site": 2996.12,
+    "Marketplace": 976.59,
+    "Total_Digital": 6210.62
+  },
+  {
+    "Laboratorio": "NOVA CEDRAL COMERCIO DE COSMETICOS EIREL",
+    "App": 1820.01,
+    "Site": 3488.43,
+    "Marketplace": 900.75,
+    "Total_Digital": 6209.18
+  },
+  {
+    "Laboratorio": "PREVENT PHARMACEUTICALS LTDA",
+    "App": 2431.36,
+    "Site": 1335.08,
+    "Marketplace": 2329.97,
+    "Total_Digital": 6096.41
+  },
+  {
+    "Laboratorio": "TEVA",
+    "App": 2693.95,
+    "Site": 1293.32,
+    "Marketplace": 2091.06,
+    "Total_Digital": 6078.32
+  },
+  {
+    "Laboratorio": "FLORA PRODUTOS DE HIG E LIMP GO - PELE",
+    "App": 2083.09,
+    "Site": 3134.69,
+    "Marketplace": 816.85,
+    "Total_Digital": 6034.63
+  },
+  {
+    "Laboratorio": "TBC PERFUMES E COSMETICOS LTDA",
+    "App": 1896.2,
+    "Site": 2914.79,
+    "Marketplace": 1185.36,
+    "Total_Digital": 5996.36
+  },
+  {
+    "Laboratorio": "IND QUIMICO FARMACEUTICA CEARENSE LTDA",
+    "App": 3424.48,
+    "Site": 1478.54,
+    "Marketplace": 1065.52,
+    "Total_Digital": 5968.54
+  },
+  {
+    "Laboratorio": "MUNDIPHARMA BR PROD MED FARMACEUTICOS",
+    "App": 3250.13,
+    "Site": 497.14,
+    "Marketplace": 2194.44,
+    "Total_Digital": 5941.71
+  },
+  {
+    "Laboratorio": "BR COSMETIC COMERCIAL LTDA",
+    "App": 2163.01,
+    "Site": 2963.24,
+    "Marketplace": 810.68,
+    "Total_Digital": 5936.93
+  },
+  {
+    "Laboratorio": "JANSSEN-CILAG FARMACEUTICA LTDA",
+    "App": 2841.34,
+    "Site": 51.37,
+    "Marketplace": 3034.16,
+    "Total_Digital": 5926.87
+  },
+  {
+    "Laboratorio": "WUTTKE DISTRIBUIDORA DE ALIMENTOS EIRELI",
+    "App": 609.11,
+    "Site": 5033.26,
+    "Marketplace": 203.55,
+    "Total_Digital": 5845.91
+  },
+  {
+    "Laboratorio": "LEXUNS LABORATORIO NUTRACEUTICO E INDUS",
+    "App": 2177.24,
+    "Site": 2453.28,
+    "Marketplace": 1189.23,
+    "Total_Digital": 5819.75
+  },
+  {
+    "Laboratorio": "SINTER FUTURA LTDA",
+    "App": 3145.27,
+    "Site": 985.35,
+    "Marketplace": 1636.66,
+    "Total_Digital": 5767.28
+  },
+  {
+    "Laboratorio": "PHISALIA PROD DE BELEZA",
+    "App": 2738.82,
+    "Site": 2012.15,
+    "Marketplace": 1009.71,
+    "Total_Digital": 5760.68
+  },
+  {
+    "Laboratorio": "LABORATORIOS FERRING LTDA",
+    "App": 2472.61,
+    "Site": 1846.84,
+    "Marketplace": 1404.74,
+    "Total_Digital": 5724.19
+  },
+  {
+    "Laboratorio": "BIORE DERMO",
+    "App": 2371.28,
+    "Site": 1973.74,
+    "Marketplace": 1210.35,
+    "Total_Digital": 5555.37
+  },
+  {
+    "Laboratorio": "BELLESA COMERCIAL LTDA",
+    "App": 1812.59,
+    "Site": 3024.71,
+    "Marketplace": 664.24,
+    "Total_Digital": 5501.54
+  },
+  {
+    "Laboratorio": "MDA COMERCIO DE ALIMENTOS LTDA",
+    "App": 876.09,
+    "Site": 4319.05,
+    "Marketplace": 291.58,
+    "Total_Digital": 5486.71
+  },
+  {
+    "Laboratorio": "DACOLONIA ALIMENTOS NATURAIS LTDA",
+    "App": 1088.51,
+    "Site": 3963.8,
+    "Marketplace": 402.13,
+    "Total_Digital": 5454.44
+  },
+  {
+    "Laboratorio": "FARM E LAB HOMEOP ALMEIDA PRADO LTDA",
+    "App": 2130.7,
+    "Site": 1138.35,
+    "Marketplace": 2161.8,
+    "Total_Digital": 5430.84
+  },
+  {
+    "Laboratorio": "WAHL CLIPPER COM DE UTENSILIOS P CABELO",
+    "App": 1995.53,
+    "Site": 1421.92,
+    "Marketplace": 2008.03,
+    "Total_Digital": 5425.49
+  },
+  {
+    "Laboratorio": "INDUSTRIA DE ARTEFATOS DE BORRACHA INOVA",
+    "App": 1891.18,
+    "Site": 2766.35,
+    "Marketplace": 723.07,
+    "Total_Digital": 5380.6
+  },
+  {
+    "Laboratorio": "BECTON DICKINSON IND CIRURGICAS LTDA",
+    "App": 1404.36,
+    "Site": 3387.43,
+    "Marketplace": 583.3,
+    "Total_Digital": 5375.09
+  },
+  {
+    "Laboratorio": "LA VITTA COSMETICA - EIRELI",
+    "App": 2124.16,
+    "Site": 2424.17,
+    "Marketplace": 786.97,
+    "Total_Digital": 5335.31
+  },
+  {
+    "Laboratorio": "HANES BRANDS BRASIL TEXTIL LTDA",
+    "App": 1971.45,
+    "Site": 2077.28,
+    "Marketplace": 1257.91,
+    "Total_Digital": 5306.65
+  },
+  {
+    "Laboratorio": "DEISICON DISTRIB DE CHOCOLATES LTDA",
+    "App": 1061.2,
+    "Site": 3881.82,
+    "Marketplace": 325.94,
+    "Total_Digital": 5268.95
+  },
+  {
+    "Laboratorio": "MARDAM PROD HIGIENICOS LTDA",
+    "App": 1084.41,
+    "Site": 3608.88,
+    "Marketplace": 559.16,
+    "Total_Digital": 5252.45
+  },
+  {
+    "Laboratorio": "BAUNY",
+    "App": 2413.85,
+    "Site": 1544.09,
+    "Marketplace": 1268.16,
+    "Total_Digital": 5226.09
+  },
+  {
+    "Laboratorio": "COMERCIAL MEGA EIRELI",
+    "App": 1951.17,
+    "Site": 2383.96,
+    "Marketplace": 861.48,
+    "Total_Digital": 5196.6
+  },
+  {
+    "Laboratorio": "DIGREPAL DIST GRESSLER DE PROD ALIM LTDA",
+    "App": 774.5,
+    "Site": 3990.15,
+    "Marketplace": 358.42,
+    "Total_Digital": 5123.08
+  },
+  {
+    "Laboratorio": "JCS BRASIL ELETRODOMESTICOS LTDA",
+    "App": 2690.82,
+    "Site": 595.63,
+    "Marketplace": 1823.22,
+    "Total_Digital": 5109.66
+  },
+  {
+    "Laboratorio": "CHEMBIO DIAGNOSTICS BRAZIL LTDA",
+    "App": 1545.78,
+    "Site": 1221.43,
+    "Marketplace": 2341.5,
+    "Total_Digital": 5108.71
+  },
+  {
+    "Laboratorio": "LABORATORIOS OSORIO DE MORAES LTDA",
+    "App": 2052.45,
+    "Site": 1864.33,
+    "Marketplace": 1166.08,
+    "Total_Digital": 5082.87
+  },
+  {
+    "Laboratorio": "HALEX ISTAR INDUSTRIA FARMACEUTICA SA",
+    "App": 2670.4,
+    "Site": 1276.06,
+    "Marketplace": 1083.39,
+    "Total_Digital": 5029.85
+  },
+  {
+    "Laboratorio": "PAIS E FILHOS",
+    "App": 1912.21,
+    "Site": 2029.25,
+    "Marketplace": 1065.06,
+    "Total_Digital": 5006.53
+  },
+  {
+    "Laboratorio": "ADIUM DERMO",
+    "App": 2092.23,
+    "Site": 698.64,
+    "Marketplace": 2181.25,
+    "Total_Digital": 4972.12
+  },
+  {
+    "Laboratorio": "PORTAL BRASIL COMERCIO INTERNACIONAL LTD",
+    "App": 2809.43,
+    "Site": 955.27,
+    "Marketplace": 1197.68,
+    "Total_Digital": 4962.37
+  },
+  {
+    "Laboratorio": "LABORATORIO MELPOEJO LTDA",
+    "App": 2052.57,
+    "Site": 2105.54,
+    "Marketplace": 778.64,
+    "Total_Digital": 4936.76
+  },
+  {
+    "Laboratorio": "VIA AROMA INDUST DE AROMATIZ DE AMBIENTE",
+    "App": 2188.64,
+    "Site": 1299.65,
+    "Marketplace": 1346.21,
+    "Total_Digital": 4834.5
+  },
+  {
+    "Laboratorio": "FRUKI BEBIDAS S/A.",
+    "App": 923.86,
+    "Site": 3265.62,
+    "Marketplace": 580.16,
+    "Total_Digital": 4769.64
+  },
+  {
+    "Laboratorio": "ROMA JENSEN",
+    "App": 2255.76,
+    "Site": 1370.23,
+    "Marketplace": 1080.38,
+    "Total_Digital": 4706.36
+  },
+  {
+    "Laboratorio": "NEURAXPHARM BRASIL IMPORTACAO E DISTRIBU",
+    "App": 2920.7,
+    "Site": 0.0,
+    "Marketplace": 1751.52,
+    "Total_Digital": 4672.22
+  },
+  {
+    "Laboratorio": "NATUFLORES IND E COMERCIO DE COSME LTDA",
+    "App": 2258.77,
+    "Site": 1415.75,
+    "Marketplace": 974.47,
+    "Total_Digital": 4648.99
+  },
+  {
+    "Laboratorio": "FUJIOKA ELETRO IMAGEM S A",
+    "App": 1517.65,
+    "Site": 958.54,
+    "Marketplace": 2142.45,
+    "Total_Digital": 4618.64
+  },
+  {
+    "Laboratorio": "DISTRIPRIME DISTRIB DE COSMETICOS LTDA",
+    "App": 2188.77,
+    "Site": 713.81,
+    "Marketplace": 1663.01,
+    "Total_Digital": 4565.58
+  },
+  {
+    "Laboratorio": "HENKEL LTDA",
+    "App": 634.03,
+    "Site": 3679.45,
+    "Marketplace": 236.01,
+    "Total_Digital": 4549.49
+  },
+  {
+    "Laboratorio": "DELICATE MODA INFANTIL LTDA",
+    "App": 1746.73,
+    "Site": 2155.1,
+    "Marketplace": 614.07,
+    "Total_Digital": 4515.9
+  },
+  {
+    "Laboratorio": "FLORESTAL ALIMENTOS S A",
+    "App": 2026.37,
+    "Site": 1562.83,
+    "Marketplace": 896.95,
+    "Total_Digital": 4486.15
+  },
+  {
+    "Laboratorio": "PERFECT",
+    "App": 1561.77,
+    "Site": 2055.96,
+    "Marketplace": 764.05,
+    "Total_Digital": 4381.77
+  },
+  {
+    "Laboratorio": "DESCARPACK",
+    "App": 1320.42,
+    "Site": 2398.94,
+    "Marketplace": 627.8,
+    "Total_Digital": 4347.16
+  },
+  {
+    "Laboratorio": "ROCHE QUIMICOS E FARM LTDA",
+    "App": 2257.94,
+    "Site": 985.48,
+    "Marketplace": 1092.13,
+    "Total_Digital": 4335.55
+  },
+  {
+    "Laboratorio": "PROMAG INDUSTRIA E COMERCIO LTDA",
+    "App": 950.92,
+    "Site": 2487.59,
+    "Marketplace": 873.42,
+    "Total_Digital": 4311.93
+  },
+  {
+    "Laboratorio": "GREENCARE PHARMA COMERCIO ATACADISTA DE",
+    "App": 2143.4,
+    "Site": 0.0,
+    "Marketplace": 2105.8,
+    "Total_Digital": 4249.2
+  },
+  {
+    "Laboratorio": "BENNE INDUSTRIA FARMACEUTICA LTDA",
+    "App": 1993.18,
+    "Site": 1147.08,
+    "Marketplace": 1060.69,
+    "Total_Digital": 4200.96
+  },
+  {
+    "Laboratorio": "XALINGO SA INDUSTRIA E COMERCIO",
+    "App": 2142.86,
+    "Site": 433.57,
+    "Marketplace": 1576.57,
+    "Total_Digital": 4153.01
+  },
+  {
+    "Laboratorio": "ACRILEX TINTAS ESPECIAIS S A",
+    "App": 1040.41,
+    "Site": 2538.54,
+    "Marketplace": 524.78,
+    "Total_Digital": 4103.74
+  },
+  {
+    "Laboratorio": "NATURAL LIFE COM IMPO E EXPOR COS EIRELI",
+    "App": 1488.84,
+    "Site": 2036.53,
+    "Marketplace": 531.83,
+    "Total_Digital": 4057.2
+  },
+  {
+    "Laboratorio": "S S MENDES COM ATACADISTA DE COSMETICOS",
+    "App": 1611.07,
+    "Site": 778.58,
+    "Marketplace": 1664.28,
+    "Total_Digital": 4053.92
+  },
+  {
+    "Laboratorio": "GRACIOSA DISTRIBUIDORA DE COSMETICOS LTD",
+    "App": 1888.06,
+    "Site": 969.0,
+    "Marketplace": 1111.7,
+    "Total_Digital": 3968.77
+  },
+  {
+    "Laboratorio": "MAKROFARMA",
+    "App": 1906.36,
+    "Site": 1294.39,
+    "Marketplace": 762.58,
+    "Total_Digital": 3963.33
+  },
+  {
+    "Laboratorio": "CONVATEC",
+    "App": 1668.53,
+    "Site": 508.06,
+    "Marketplace": 1742.2,
+    "Total_Digital": 3918.8
+  },
+  {
+    "Laboratorio": "FLORA PRODUTOS DE HIGIENE E LIMPEZA S A",
+    "App": 2125.3,
+    "Site": 1080.49,
+    "Marketplace": 646.62,
+    "Total_Digital": 3852.4
+  },
+  {
+    "Laboratorio": "SAINT-GOBAIN DO BRASIL PROD INDU LTDA",
+    "App": 658.82,
+    "Site": 2462.8,
+    "Marketplace": 728.12,
+    "Total_Digital": 3849.75
+  },
+  {
+    "Laboratorio": "BLANT COSMETICOS",
+    "App": 1453.51,
+    "Site": 1532.49,
+    "Marketplace": 824.25,
+    "Total_Digital": 3810.25
+  },
+  {
+    "Laboratorio": "EUROART",
+    "App": 1878.47,
+    "Site": 1058.09,
+    "Marketplace": 863.08,
+    "Total_Digital": 3799.65
+  },
+  {
+    "Laboratorio": "BOMBRIL S/A",
+    "App": 863.09,
+    "Site": 2662.17,
+    "Marketplace": 264.8,
+    "Total_Digital": 3790.06
+  },
+  {
+    "Laboratorio": "EMBALIXO INDUSTRIA E COMERCIO DE EMBALAG",
+    "App": 539.41,
+    "Site": 3104.99,
+    "Marketplace": 131.51,
+    "Total_Digital": 3775.91
+  },
+  {
+    "Laboratorio": "NLS ALIMENTOS LTDA",
+    "App": 481.62,
+    "Site": 3083.13,
+    "Marketplace": 166.97,
+    "Total_Digital": 3731.72
+  },
+  {
+    "Laboratorio": "EDITORA VELOS",
+    "App": 1962.66,
+    "Site": 306.02,
+    "Marketplace": 1424.54,
+    "Total_Digital": 3693.22
+  },
+  {
+    "Laboratorio": "HASBRO DO BRASIL INDUST COMER BRINQ JOG",
+    "App": 1612.77,
+    "Site": 1121.63,
+    "Marketplace": 881.49,
+    "Total_Digital": 3615.89
+  },
+  {
+    "Laboratorio": "BELFAR GENERICOS",
+    "App": 1528.75,
+    "Site": 1584.88,
+    "Marketplace": 474.18,
+    "Total_Digital": 3587.81
+  },
+  {
+    "Laboratorio": "LEAO ALIMENTOS E BEBIDAS LTDA",
+    "App": 618.21,
+    "Site": 2707.13,
+    "Marketplace": 259.32,
+    "Total_Digital": 3584.65
+  },
+  {
+    "Laboratorio": "ESPETOSUL ARTIGOS PARA CHURRASCO LTDA",
+    "App": 1353.73,
+    "Site": 59.76,
+    "Marketplace": 2116.83,
+    "Total_Digital": 3530.32
+  },
+  {
+    "Laboratorio": "MEMPHIS S/A INDUSTRIAL",
+    "App": 1515.89,
+    "Site": 1226.77,
+    "Marketplace": 743.1,
+    "Total_Digital": 3485.76
+  },
+  {
+    "Laboratorio": "DOMPEL INDUSTRIA PLASTICA E METALURGICA",
+    "App": 914.77,
+    "Site": 1998.55,
+    "Marketplace": 568.84,
+    "Total_Digital": 3482.16
+  },
+  {
+    "Laboratorio": "QUALYNUTRI NUTRACEUTICOS LTDA",
+    "App": 1416.86,
+    "Site": 815.1,
+    "Marketplace": 1202.54,
+    "Total_Digital": 3434.5
+  },
+  {
+    "Laboratorio": "MMC INDUSTRIA DE PRODUTOS NUTRACEUTICOS",
+    "App": 547.53,
+    "Site": 2583.21,
+    "Marketplace": 264.74,
+    "Total_Digital": 3395.48
+  },
+  {
+    "Laboratorio": "IMEC IND DE MEDIC CUSTODIA LTDA",
+    "App": 1880.75,
+    "Site": 696.85,
+    "Marketplace": 794.71,
+    "Total_Digital": 3372.32
+  },
+  {
+    "Laboratorio": "INAL AIR",
+    "App": 1734.75,
+    "Site": 842.91,
+    "Marketplace": 774.99,
+    "Total_Digital": 3352.65
+  },
+  {
+    "Laboratorio": "PEROSUL EMPREENDIMENTOS LTDA - ME",
+    "App": 1313.9,
+    "Site": 1514.19,
+    "Marketplace": 521.43,
+    "Total_Digital": 3349.51
+  },
+  {
+    "Laboratorio": "ZALIKE COMERCIO IMPORTACAO E EXPORTACAO",
+    "App": 1933.52,
+    "Site": 487.58,
+    "Marketplace": 924.61,
+    "Total_Digital": 3345.71
+  },
+  {
+    "Laboratorio": "ALPAR DO BRASIL IND E COM CALCADOS LTDA",
+    "App": 415.37,
+    "Site": 2732.38,
+    "Marketplace": 180.58,
+    "Total_Digital": 3328.33
+  },
+  {
+    "Laboratorio": "ANNA BELLA COMERCIAL LTDA",
+    "App": 853.79,
+    "Site": 2102.72,
+    "Marketplace": 333.2,
+    "Total_Digital": 3289.71
+  },
+  {
+    "Laboratorio": "UCB BIOPHARMA LTDA.",
+    "App": 2160.73,
+    "Site": 0.0,
+    "Marketplace": 1079.6,
+    "Total_Digital": 3240.33
+  },
+  {
+    "Laboratorio": "LEBON PRODUTOS QUIMICOS FARMACEUTICOS",
+    "App": 775.74,
+    "Site": 2138.28,
+    "Marketplace": 323.97,
+    "Total_Digital": 3238.0
+  },
+  {
+    "Laboratorio": "GOEDERT LTDA",
+    "App": 1576.4,
+    "Site": 733.98,
+    "Marketplace": 890.07,
+    "Total_Digital": 3200.44
+  },
+  {
+    "Laboratorio": "EDITORA PREACH LTDA",
+    "App": 1591.37,
+    "Site": 81.73,
+    "Marketplace": 1503.21,
+    "Total_Digital": 3176.31
+  },
+  {
+    "Laboratorio": "ZALIKE COMERCIO IMP E EXP LTDA-FS",
+    "App": 764.31,
+    "Site": 1993.1,
+    "Marketplace": 314.94,
+    "Total_Digital": 3072.36
+  },
+  {
+    "Laboratorio": "PECCIN SA",
+    "App": 867.44,
+    "Site": 1963.31,
+    "Marketplace": 223.11,
+    "Total_Digital": 3053.86
+  },
+  {
+    "Laboratorio": "LABORATORIO TAYUYNA LTDA",
+    "App": 1617.79,
+    "Site": 910.69,
+    "Marketplace": 523.59,
+    "Total_Digital": 3052.06
+  },
+  {
+    "Laboratorio": "LABORATORIO CANONNE LTDA",
+    "App": 1049.27,
+    "Site": 695.95,
+    "Marketplace": 1265.36,
+    "Total_Digital": 3010.57
+  },
+  {
+    "Laboratorio": "CAFE TRES CORACOES S.A",
+    "App": 482.18,
+    "Site": 2290.57,
+    "Marketplace": 210.84,
+    "Total_Digital": 2983.59
+  },
+  {
+    "Laboratorio": "DERMIWIL INDUSTRIA PLASTICA LTDA",
+    "App": 1688.43,
+    "Site": 826.08,
+    "Marketplace": 466.96,
+    "Total_Digital": 2981.47
+  },
+  {
+    "Laboratorio": "MACRILAN BEAUTY",
+    "App": 761.79,
+    "Site": 1831.85,
+    "Marketplace": 375.86,
+    "Total_Digital": 2969.5
+  },
+  {
+    "Laboratorio": "AURA PHARMA S.A.",
+    "App": 1646.97,
+    "Site": 0.0,
+    "Marketplace": 1321.11,
+    "Total_Digital": 2968.08
+  },
+  {
+    "Laboratorio": "HELLO KITT SABRINA SATO",
+    "App": 953.1,
+    "Site": 1547.6,
+    "Marketplace": 434.71,
+    "Total_Digital": 2935.4
+  },
+  {
+    "Laboratorio": "EQUILIBRIUM DISTRIBUIDORA DE MEDICAMENTO",
+    "App": 1543.15,
+    "Site": 890.88,
+    "Marketplace": 479.15,
+    "Total_Digital": 2913.19
+  },
+  {
+    "Laboratorio": "ALUMINIO CINCO ESTRELAS LTDA",
+    "App": 538.59,
+    "Site": 1503.48,
+    "Marketplace": 838.06,
+    "Total_Digital": 2880.13
+  },
+  {
+    "Laboratorio": "ADS LABORATORIO NUTRICIONAL LTDA",
+    "App": 908.25,
+    "Site": 1451.26,
+    "Marketplace": 495.48,
+    "Total_Digital": 2854.99
+  },
+  {
+    "Laboratorio": "CIFARMA GENERICOS",
+    "App": 933.54,
+    "Site": 1530.82,
+    "Marketplace": 371.66,
+    "Total_Digital": 2836.01
+  },
+  {
+    "Laboratorio": "BIOMM S/A",
+    "App": 910.97,
+    "Site": 904.94,
+    "Marketplace": 963.32,
+    "Total_Digital": 2779.23
+  },
+  {
+    "Laboratorio": "BIO COSMETICA INDUSTRIA E COMERCIO DE PE",
+    "App": 1318.69,
+    "Site": 907.23,
+    "Marketplace": 540.3,
+    "Total_Digital": 2766.22
+  },
+  {
+    "Laboratorio": "DALGE COSMETICOS LTDA",
+    "App": 595.17,
+    "Site": 1938.26,
+    "Marketplace": 217.93,
+    "Total_Digital": 2751.36
+  },
+  {
+    "Laboratorio": "ABBOTT DIAGNOSTICOS RAPIDOS S.A.",
+    "App": 1538.36,
+    "Site": 10.85,
+    "Marketplace": 1188.08,
+    "Total_Digital": 2737.3
+  },
+  {
+    "Laboratorio": "HYPERMARCAS - ADOCANTES",
+    "App": 952.95,
+    "Site": 1325.04,
+    "Marketplace": 443.82,
+    "Total_Digital": 2721.81
+  },
+  {
+    "Laboratorio": "BR BRAND S/A",
+    "App": 769.49,
+    "Site": 1299.55,
+    "Marketplace": 644.92,
+    "Total_Digital": 2713.96
+  },
+  {
+    "Laboratorio": "LIMA & PERGHER INDUSTRIA E COMERCIO SA",
+    "App": 1021.47,
+    "Site": 1072.78,
+    "Marketplace": 592.13,
+    "Total_Digital": 2686.38
+  },
+  {
+    "Laboratorio": "TONDO S A",
+    "App": 288.15,
+    "Site": 2282.71,
+    "Marketplace": 106.11,
+    "Total_Digital": 2676.97
+  },
+  {
+    "Laboratorio": "A.W. FABER CASTELL S.A.",
+    "App": 1007.59,
+    "Site": 1027.1,
+    "Marketplace": 637.2,
+    "Total_Digital": 2671.89
+  },
+  {
+    "Laboratorio": "DOCILE ALIMENTOS LTDA",
+    "App": 582.88,
+    "Site": 1900.68,
+    "Marketplace": 141.97,
+    "Total_Digital": 2625.53
+  },
+  {
+    "Laboratorio": "PRAIAMAR CONV",
+    "App": 1195.5,
+    "Site": 246.86,
+    "Marketplace": 1173.37,
+    "Total_Digital": 2615.74
+  },
+  {
+    "Laboratorio": "MOVEIS DORIPEL LTDA",
+    "App": 1103.84,
+    "Site": 701.01,
+    "Marketplace": 793.46,
+    "Total_Digital": 2598.31
+  },
+  {
+    "Laboratorio": "VR MEDICAL IMPORTADORA E DISTRIBUIDORA D",
+    "App": 665.79,
+    "Site": 1052.72,
+    "Marketplace": 867.02,
+    "Total_Digital": 2585.53
+  },
+  {
+    "Laboratorio": "INDUSTRIAS REUNIDAS DE BEBIDAS TATUZINHO",
+    "App": 615.45,
+    "Site": 1480.5,
+    "Marketplace": 488.06,
+    "Total_Digital": 2584.02
+  },
+  {
+    "Laboratorio": "PROLINE INDUSTRIA E COMERCIO LTDA",
+    "App": 517.26,
+    "Site": 1815.94,
+    "Marketplace": 237.15,
+    "Total_Digital": 2570.34
+  },
+  {
+    "Laboratorio": "SUNMASTER DO BRASIL EIRELI",
+    "App": 709.46,
+    "Site": 1232.46,
+    "Marketplace": 609.44,
+    "Total_Digital": 2551.36
+  },
+  {
+    "Laboratorio": "KAREN BACHINI",
+    "App": 1146.09,
+    "Site": 684.2,
+    "Marketplace": 715.79,
+    "Total_Digital": 2546.09
+  },
+  {
+    "Laboratorio": "MAXLOG IMPORTACAO E EXPORTACAO LTDA",
+    "App": 1336.93,
+    "Site": 248.51,
+    "Marketplace": 951.28,
+    "Total_Digital": 2536.73
+  },
+  {
+    "Laboratorio": "NESTLE NUTRITION ESPECIAIS",
+    "App": 1370.09,
+    "Site": 128.48,
+    "Marketplace": 1020.35,
+    "Total_Digital": 2518.91
+  },
+  {
+    "Laboratorio": "SELENE INDUSTRIA TEXTIL S A",
+    "App": 1003.16,
+    "Site": 827.13,
+    "Marketplace": 687.34,
+    "Total_Digital": 2517.64
+  },
+  {
+    "Laboratorio": "PRIME SUL DISTRIBUIDORA DE COSMETICOS LT",
+    "App": 1198.9,
+    "Site": 792.54,
+    "Marketplace": 498.18,
+    "Total_Digital": 2489.62
+  },
+  {
+    "Laboratorio": "FLORA PRODUT DE HIGI E LIMP SA MAT INSET",
+    "App": 712.15,
+    "Site": 1384.48,
+    "Marketplace": 377.22,
+    "Total_Digital": 2473.86
+  },
+  {
+    "Laboratorio": "BAMBUSE INDUSTRIA E COMERCIO DE ACESSORI",
+    "App": 831.55,
+    "Site": 1218.88,
+    "Marketplace": 385.45,
+    "Total_Digital": 2435.87
+  },
+  {
+    "Laboratorio": "MAWDSLEYS PHARMACEUTICALS DO BRASIL LTDA",
+    "App": 1182.53,
+    "Site": 743.53,
+    "Marketplace": 508.11,
+    "Total_Digital": 2434.17
+  },
+  {
+    "Laboratorio": "BENEVA COMPANHIA DE MARCAS S/A",
+    "App": 1089.01,
+    "Site": 646.79,
+    "Marketplace": 638.28,
+    "Total_Digital": 2374.08
+  },
+  {
+    "Laboratorio": "JADE IMPORTACAO E EXPORTACAO DE MANUFATU",
+    "App": 1338.15,
+    "Site": 620.74,
+    "Marketplace": 405.58,
+    "Total_Digital": 2364.46
+  },
+  {
+    "Laboratorio": "ELIANA MARIANI PELLIZON EIRELI",
+    "App": 930.35,
+    "Site": 1022.82,
+    "Marketplace": 389.58,
+    "Total_Digital": 2342.76
+  },
+  {
+    "Laboratorio": "LOCKO SUPLEMENTOS LTDA",
+    "App": 821.75,
+    "Site": 1046.38,
+    "Marketplace": 459.12,
+    "Total_Digital": 2327.24
+  },
+  {
+    "Laboratorio": "MONTESANO IND E COM DE PROD QUIM EIRELI",
+    "App": 798.3,
+    "Site": 1061.82,
+    "Marketplace": 405.17,
+    "Total_Digital": 2265.29
+  },
+  {
+    "Laboratorio": "GREEN COMERCIO INTERNACIONAL LTDA",
+    "App": 1070.32,
+    "Site": 716.37,
+    "Marketplace": 404.98,
+    "Total_Digital": 2191.67
+  },
+  {
+    "Laboratorio": "MAQUIRA IND DE PROD ODONTOLOGICOS LTDA",
+    "App": 657.67,
+    "Site": 739.55,
+    "Marketplace": 782.06,
+    "Total_Digital": 2179.29
+  },
+  {
+    "Laboratorio": "LOREAL DCA",
+    "App": 915.68,
+    "Site": 503.14,
+    "Marketplace": 744.21,
+    "Total_Digital": 2163.03
+  },
+  {
+    "Laboratorio": "BETTANIN",
+    "App": 620.33,
+    "Site": 1134.08,
+    "Marketplace": 400.62,
+    "Total_Digital": 2155.03
+  },
+  {
+    "Laboratorio": "UNITED MEDICAL LTDA",
+    "App": 1528.69,
+    "Site": 0.0,
+    "Marketplace": 618.14,
+    "Total_Digital": 2146.83
+  },
+  {
+    "Laboratorio": "DAGUA NATURAL",
+    "App": 686.19,
+    "Site": 279.38,
+    "Marketplace": 1167.39,
+    "Total_Digital": 2132.95
+  },
+  {
+    "Laboratorio": "AS ERVAS CURAM INDUST FARMACEUTICA LTDA",
+    "App": 892.86,
+    "Site": 448.09,
+    "Marketplace": 750.49,
+    "Total_Digital": 2091.44
+  },
+  {
+    "Laboratorio": "MACRO COMERCIO INTERNACIONAL LTDA EM REC",
+    "App": 1018.82,
+    "Site": 655.64,
+    "Marketplace": 408.87,
+    "Total_Digital": 2083.33
+  },
+  {
+    "Laboratorio": "BE CARE COSMETICS COMERCIO DE COSMESTICO",
+    "App": 1257.92,
+    "Site": 0.0,
+    "Marketplace": 784.63,
+    "Total_Digital": 2042.55
+  },
+  {
+    "Laboratorio": "TENDENCIA ABSOL IND E COM DE ACESS EIREL",
+    "App": 848.72,
+    "Site": 927.87,
+    "Marketplace": 265.24,
+    "Total_Digital": 2041.83
+  },
+  {
+    "Laboratorio": "INDUSTRIA E COMERCIO JOLITEX LTDA",
+    "App": 705.05,
+    "Site": 908.86,
+    "Marketplace": 427.59,
+    "Total_Digital": 2041.49
+  },
+  {
+    "Laboratorio": "EASELABS LABORATORIO FARMACEUTICO LTDA.",
+    "App": 1110.28,
+    "Site": 0.0,
+    "Marketplace": 910.78,
+    "Total_Digital": 2021.06
+  },
+  {
+    "Laboratorio": "JTX COMERCIO DE PRESENTES E ARMARINHOS E",
+    "App": 1023.34,
+    "Site": 345.72,
+    "Marketplace": 630.91,
+    "Total_Digital": 1999.97
+  },
+  {
+    "Laboratorio": "ACQUA AGUA DE COCO DA AMAZONIA INDUSTRIA",
+    "App": 240.35,
+    "Site": 1700.27,
+    "Marketplace": 56.88,
+    "Total_Digital": 1997.5
+  },
+  {
+    "Laboratorio": "AZOIA ATACADO COMERCIO IMPORTACAO E EXPO",
+    "App": 692.63,
+    "Site": 872.42,
+    "Marketplace": 420.63,
+    "Total_Digital": 1985.68
+  },
+  {
+    "Laboratorio": "MILIGRAMA FARMACIA DE MANIPULACAO SA",
+    "App": 431.46,
+    "Site": 133.43,
+    "Marketplace": 1417.41,
+    "Total_Digital": 1982.3
+  },
+  {
+    "Laboratorio": "ASN BRASIL IMPORTACAO E EXPORTACAO LTDA",
+    "App": 1566.28,
+    "Site": 0.0,
+    "Marketplace": 411.45,
+    "Total_Digital": 1977.73
+  },
+  {
+    "Laboratorio": "MAIS MU COMERCIO DE ALIMENTOS E BEBIDAS",
+    "App": 203.71,
+    "Site": 1630.35,
+    "Marketplace": 136.46,
+    "Total_Digital": 1970.52
+  },
+  {
+    "Laboratorio": "UNIVERSAL CHEMICAL LTDA",
+    "App": 952.5,
+    "Site": 369.16,
+    "Marketplace": 644.28,
+    "Total_Digital": 1965.94
+  },
+  {
+    "Laboratorio": "GSI IMPORTACAO E EXPORTACAO LTDA",
+    "App": 1462.92,
+    "Site": 0.0,
+    "Marketplace": 499.97,
+    "Total_Digital": 1962.89
+  },
+  {
+    "Laboratorio": "HIGIEPLUS COTTONBABY IND E COM LTDA",
+    "App": 992.32,
+    "Site": 619.55,
+    "Marketplace": 345.15,
+    "Total_Digital": 1957.03
+  },
+  {
+    "Laboratorio": "CAFE ITALLE COMERCIO DE BEBIDAS E ALIMEN",
+    "App": 469.57,
+    "Site": 1124.69,
+    "Marketplace": 351.69,
+    "Total_Digital": 1945.95
+  },
+  {
+    "Laboratorio": "BAMBOLA INDUSTRIA E COMERCIO DE BRINQUED",
+    "App": 1181.5,
+    "Site": 290.67,
+    "Marketplace": 460.17,
+    "Total_Digital": 1932.35
+  },
+  {
+    "Laboratorio": "TOCCA ALIMENTOS LTDA",
+    "App": 661.82,
+    "Site": 834.42,
+    "Marketplace": 434.83,
+    "Total_Digital": 1931.07
+  },
+  {
+    "Laboratorio": "RICLAN S.A.",
+    "App": 364.8,
+    "Site": 1459.37,
+    "Marketplace": 88.07,
+    "Total_Digital": 1912.24
+  },
+  {
+    "Laboratorio": "ADIMAX INDUSTRIA E COMERCIO DE ALIMENT",
+    "App": 287.55,
+    "Site": 1474.13,
+    "Marketplace": 128.94,
+    "Total_Digital": 1890.62
+  },
+  {
+    "Laboratorio": "INTELBRAS S.A. INDUSTRIA DE TELECOMUNICA",
+    "App": 488.17,
+    "Site": 546.66,
+    "Marketplace": 852.85,
+    "Total_Digital": 1887.68
+  },
+  {
+    "Laboratorio": "GOTA DOURADA PROD NAT LTDA",
+    "App": 765.41,
+    "Site": 801.45,
+    "Marketplace": 317.65,
+    "Total_Digital": 1884.5
+  },
+  {
+    "Laboratorio": "RAFAEL ELIAS HERNANDES CUESTA",
+    "App": 458.57,
+    "Site": 1130.27,
+    "Marketplace": 288.71,
+    "Total_Digital": 1877.55
+  },
+  {
+    "Laboratorio": "PIETROBON & CIA LTDA",
+    "App": 454.65,
+    "Site": 1189.3,
+    "Marketplace": 219.36,
+    "Total_Digital": 1863.31
+  },
+  {
+    "Laboratorio": "CROMUS EMBALAGENS INDUSTRIA E COMERCIO L",
+    "App": 655.05,
+    "Site": 952.66,
+    "Marketplace": 254.8,
+    "Total_Digital": 1862.51
+  },
+  {
+    "Laboratorio": "PRATI DONADUZZI E CIA LTDA",
+    "App": 802.63,
+    "Site": 820.76,
+    "Marketplace": 226.75,
+    "Total_Digital": 1850.14
+  },
+  {
+    "Laboratorio": "JOSE VALCIR STANGA",
+    "App": 306.35,
+    "Site": 1355.83,
+    "Marketplace": 186.7,
+    "Total_Digital": 1848.88
+  },
+  {
+    "Laboratorio": "RELAXMEDIC IMPORTACAO EXPORTACAO LTDA",
+    "App": 510.42,
+    "Site": 279.43,
+    "Marketplace": 1052.17,
+    "Total_Digital": 1842.02
+  },
+  {
+    "Laboratorio": "BRINOX METALURGICA SA EM RECUPERACAO JUD",
+    "App": 437.61,
+    "Site": 834.51,
+    "Marketplace": 555.44,
+    "Total_Digital": 1827.56
+  },
+  {
+    "Laboratorio": "MUNDIART SA",
+    "App": 265.67,
+    "Site": 1398.41,
+    "Marketplace": 152.03,
+    "Total_Digital": 1816.11
+  },
+  {
+    "Laboratorio": "ERVATEIRA PICOLO BADALOTTI LTDA",
+    "App": 153.76,
+    "Site": 1568.92,
+    "Marketplace": 71.74,
+    "Total_Digital": 1794.42
+  },
+  {
+    "Laboratorio": "YANGZI BRASIL CORPORATION S A",
+    "App": 351.62,
+    "Site": 748.28,
+    "Marketplace": 683.12,
+    "Total_Digital": 1783.02
+  },
+  {
+    "Laboratorio": "JOSAPAR JOAQUIM OLIVEIRA SA PARTICIPACOE",
+    "App": 782.76,
+    "Site": 747.68,
+    "Marketplace": 250.0,
+    "Total_Digital": 1780.44
+  },
+  {
+    "Laboratorio": "ZANLORENZI BEBIDAS LTDA",
+    "App": 308.96,
+    "Site": 1356.56,
+    "Marketplace": 110.13,
+    "Total_Digital": 1775.66
+  },
+  {
+    "Laboratorio": "SANA COMERC E INDUSTR IMPORT E EXP LTDA",
+    "App": 333.57,
+    "Site": 1292.05,
+    "Marketplace": 149.52,
+    "Total_Digital": 1775.14
+  },
+  {
+    "Laboratorio": "AM INDUSTRIA DE COSMETICOS LTDA",
+    "App": 982.01,
+    "Site": 524.64,
+    "Marketplace": 266.13,
+    "Total_Digital": 1772.78
+  },
+  {
+    "Laboratorio": "ALFAPARF",
+    "App": 882.77,
+    "Site": 585.99,
+    "Marketplace": 299.95,
+    "Total_Digital": 1768.71
+  },
+  {
+    "Laboratorio": "BEAUTIFUL DISTRIBUIDORA LTDA",
+    "App": 788.56,
+    "Site": 285.32,
+    "Marketplace": 693.39,
+    "Total_Digital": 1767.26
+  },
+  {
+    "Laboratorio": "NIINA SECRETS",
+    "App": 686.55,
+    "Site": 366.79,
+    "Marketplace": 692.04,
+    "Total_Digital": 1745.38
+  },
+  {
+    "Laboratorio": "NOVVO BEM ESTAR COMERCIO DE PRODUTOS NAT",
+    "App": 748.29,
+    "Site": 385.86,
+    "Marketplace": 610.73,
+    "Total_Digital": 1744.88
+  },
+  {
+    "Laboratorio": "INDUSTRIA DE COSMETICOS ORIENTE LIFE LTD",
+    "App": 1219.04,
+    "Site": 179.29,
+    "Marketplace": 324.95,
+    "Total_Digital": 1723.29
+  },
+  {
+    "Laboratorio": "DIVERTOYS INDUSTRIA E COMERCIO LTDA",
+    "App": 813.4,
+    "Site": 439.79,
+    "Marketplace": 461.57,
+    "Total_Digital": 1714.75
+  },
+  {
+    "Laboratorio": "NUTRIN GROUP LTDA",
+    "App": 712.6,
+    "Site": 636.11,
+    "Marketplace": 366.04,
+    "Total_Digital": 1714.75
+  },
+  {
+    "Laboratorio": "MENON COMERCIO E REPRESENTACOES LTDA",
+    "App": 353.13,
+    "Site": 1216.63,
+    "Marketplace": 141.2,
+    "Total_Digital": 1710.97
+  },
+  {
+    "Laboratorio": "THOMAS KL IND. DE ALTO FALANTES AS",
+    "App": 1011.99,
+    "Site": 155.69,
+    "Marketplace": 542.68,
+    "Total_Digital": 1710.35
+  },
+  {
+    "Laboratorio": "EVORA INDUSTRIA E COMERCIO LTDA",
+    "App": 573.56,
+    "Site": 343.72,
+    "Marketplace": 791.27,
+    "Total_Digital": 1708.55
+  },
+  {
+    "Laboratorio": "PALTERM INDUSTRIA E COMERCIO LTDA",
+    "App": 640.44,
+    "Site": 697.23,
+    "Marketplace": 361.95,
+    "Total_Digital": 1699.62
+  },
+  {
+    "Laboratorio": "LINDT & SPRUNGLI (BRAZIL) HOLDING LTDA",
+    "App": 459.89,
+    "Site": 828.55,
+    "Marketplace": 398.11,
+    "Total_Digital": 1686.56
+  },
+  {
+    "Laboratorio": "MAGIC KIDS COMERCIO LTDA EPP",
+    "App": 581.84,
+    "Site": 931.57,
+    "Marketplace": 169.87,
+    "Total_Digital": 1683.27
+  },
+  {
+    "Laboratorio": "BEM ESTAR IND COM IMPORTACAO DE COSMETCO",
+    "App": 585.4,
+    "Site": 721.87,
+    "Marketplace": 365.91,
+    "Total_Digital": 1673.18
+  },
+  {
+    "Laboratorio": "SUMMIT COMERCIO IMPORTACAO E EXPORTACAO",
+    "App": 716.27,
+    "Site": 618.04,
+    "Marketplace": 314.5,
+    "Total_Digital": 1648.81
+  },
+  {
+    "Laboratorio": "YINS BRASIL COMERCIO INTERNACIONAL LTDA",
+    "App": 853.39,
+    "Site": 296.86,
+    "Marketplace": 497.78,
+    "Total_Digital": 1648.03
+  },
+  {
+    "Laboratorio": "SEB COMERCIAL DE PROD DOMESTICOS LTDA",
+    "App": 733.3,
+    "Site": 519.25,
+    "Marketplace": 370.2,
+    "Total_Digital": 1622.74
+  },
+  {
+    "Laboratorio": "MARTIPLAST INDUSTRIA E COMERCIO DE PLAST",
+    "App": 684.13,
+    "Site": 731.95,
+    "Marketplace": 195.49,
+    "Total_Digital": 1611.57
+  },
+  {
+    "Laboratorio": "FISIOVITAL COMERCIO DE ARTIGOS ORTOPEDIC",
+    "App": 496.72,
+    "Site": 865.04,
+    "Marketplace": 224.6,
+    "Total_Digital": 1586.36
+  },
+  {
+    "Laboratorio": "STUDEX DO BRASIL EIRELI",
+    "App": 388.47,
+    "Site": 1032.14,
+    "Marketplace": 156.77,
+    "Total_Digital": 1577.37
+  },
+  {
+    "Laboratorio": "ENOVAMIX INDUSTRIAL LTDA",
+    "App": 968.98,
+    "Site": 160.18,
+    "Marketplace": 434.95,
+    "Total_Digital": 1564.12
+  },
+  {
+    "Laboratorio": "ALCAST DO BRASIL S/A",
+    "App": 352.51,
+    "Site": 497.84,
+    "Marketplace": 712.77,
+    "Total_Digital": 1563.12
+  },
+  {
+    "Laboratorio": "SANREMO S/A",
+    "App": 646.25,
+    "Site": 478.28,
+    "Marketplace": 434.21,
+    "Total_Digital": 1558.74
+  },
+  {
+    "Laboratorio": "SANOFI MEDLEY FARMACEUTICA LTDA",
+    "App": 338.96,
+    "Site": 1096.33,
+    "Marketplace": 119.67,
+    "Total_Digital": 1554.95
+  },
+  {
+    "Laboratorio": "DISTRIBUIDORA DE COSMETICOS LABOREN LTDA",
+    "App": 905.41,
+    "Site": 378.41,
+    "Marketplace": 266.76,
+    "Total_Digital": 1550.57
+  },
+  {
+    "Laboratorio": "SCRIVIA BRASIL INDUSTRIA DE ALIMENTOS LT",
+    "App": 438.45,
+    "Site": 967.21,
+    "Marketplace": 134.32,
+    "Total_Digital": 1539.98
+  },
+  {
+    "Laboratorio": "MEDLEY FARMA",
+    "App": 751.83,
+    "Site": 229.01,
+    "Marketplace": 553.5,
+    "Total_Digital": 1534.34
+  },
+  {
+    "Laboratorio": "DDP INDUSTRIA E COMERCIO LTDA",
+    "App": 628.58,
+    "Site": 371.26,
+    "Marketplace": 507.7,
+    "Total_Digital": 1507.54
+  },
+  {
+    "Laboratorio": "MEDILAR IMP. DISTR.PROD.MED. HOSPITALAR",
+    "App": 855.71,
+    "Site": 199.45,
+    "Marketplace": 417.74,
+    "Total_Digital": 1472.9
+  },
+  {
+    "Laboratorio": "LECLAIR INDUSTRIA E COMERCIO DE PERFUMES",
+    "App": 692.02,
+    "Site": 426.27,
+    "Marketplace": 345.72,
+    "Total_Digital": 1464.02
+  },
+  {
+    "Laboratorio": "PHARLAB INDUSTRIA FARMACEUTICA S A",
+    "App": 363.18,
+    "Site": 947.82,
+    "Marketplace": 144.29,
+    "Total_Digital": 1455.29
+  },
+  {
+    "Laboratorio": "LQF LABORATORIO QUIMICO FARMACEUTICO RIO",
+    "App": 1068.58,
+    "Site": 56.45,
+    "Marketplace": 297.87,
+    "Total_Digital": 1422.91
+  },
+  {
+    "Laboratorio": "INDUSTRIA DE BISCOITOS KLAIN LTDA",
+    "App": 295.59,
+    "Site": 1013.19,
+    "Marketplace": 87.32,
+    "Total_Digital": 1396.09
+  },
+  {
+    "Laboratorio": "CAFE RANCHEIRO AGRO INDUSTRIAL LTDA",
+    "App": 238.02,
+    "Site": 1078.56,
+    "Marketplace": 74.26,
+    "Total_Digital": 1390.83
+  },
+  {
+    "Laboratorio": "TOH INDUSTRIA E COMERCIO PET LTDA",
+    "App": 531.89,
+    "Site": 283.69,
+    "Marketplace": 560.82,
+    "Total_Digital": 1376.39
+  },
+  {
+    "Laboratorio": "ALLEGRA MKT E PROMOCAO DE VENDAS EIRELI",
+    "App": 843.9,
+    "Site": 105.15,
+    "Marketplace": 414.71,
+    "Total_Digital": 1363.76
+  },
+  {
+    "Laboratorio": "GAMA INDUSTRIA E COMERCIO LTDA",
+    "App": 660.04,
+    "Site": 244.04,
+    "Marketplace": 442.4,
+    "Total_Digital": 1346.49
+  },
+  {
+    "Laboratorio": "PADO S/A INDUSTRIAL COMERCIAL E IMPORTA",
+    "App": 170.87,
+    "Site": 1025.07,
+    "Marketplace": 135.24,
+    "Total_Digital": 1331.17
+  },
+  {
+    "Laboratorio": "MAGAZINE DO SUPLEM COM DE PRODU ALIM LTD",
+    "App": 320.92,
+    "Site": 858.62,
+    "Marketplace": 150.52,
+    "Total_Digital": 1330.05
+  },
+  {
+    "Laboratorio": "VILMAT DISTRIBUIDORA LTDA",
+    "App": 689.58,
+    "Site": 273.77,
+    "Marketplace": 365.33,
+    "Total_Digital": 1328.68
+  },
+  {
+    "Laboratorio": "STRA COMERCIO DE PRODUTOS PARA SAUDE LTD",
+    "App": 364.68,
+    "Site": 645.64,
+    "Marketplace": 298.68,
+    "Total_Digital": 1309.0
+  },
+  {
+    "Laboratorio": "SANTO OLEO INDUST E COM DE PROD NATURAIS",
+    "App": 468.53,
+    "Site": 644.39,
+    "Marketplace": 182.89,
+    "Total_Digital": 1295.81
+  },
+  {
+    "Laboratorio": "PANDURATA ALIMENTOS LTDA",
+    "App": 568.19,
+    "Site": 472.38,
+    "Marketplace": 248.92,
+    "Total_Digital": 1289.49
+  },
+  {
+    "Laboratorio": "LABOFARMA PRODUTOS FARMACEUTICOS LTDA.",
+    "App": 682.8,
+    "Site": 403.25,
+    "Marketplace": 192.56,
+    "Total_Digital": 1278.61
+  },
+  {
+    "Laboratorio": "BRDECOR COMERCIO E IMPORTACAO DE ARTIGOS",
+    "App": 482.29,
+    "Site": 579.33,
+    "Marketplace": 215.12,
+    "Total_Digital": 1276.75
+  },
+  {
+    "Laboratorio": "BRASIL SUL IMPORTADORA E EXPORTADORA L",
+    "App": 264.03,
+    "Site": 910.95,
+    "Marketplace": 80.31,
+    "Total_Digital": 1255.29
+  },
+  {
+    "Laboratorio": "PLATANO BRASIL DISTR E EXPORTADO LTDA",
+    "App": 273.32,
+    "Site": 844.85,
+    "Marketplace": 122.25,
+    "Total_Digital": 1240.42
+  },
+  {
+    "Laboratorio": "CIRANDA CULTURAL EDITORA E DISTRIBUIDORA",
+    "App": 437.69,
+    "Site": 626.08,
+    "Marketplace": 176.01,
+    "Total_Digital": 1239.78
+  },
+  {
+    "Laboratorio": "SWEDISH MATCH DO BRASIL SA",
+    "App": 247.1,
+    "Site": 753.68,
+    "Marketplace": 224.75,
+    "Total_Digital": 1225.53
+  },
+  {
+    "Laboratorio": "BRISTOL MEYERS SQUIBB FARMACASUTICA LTDA",
+    "App": 319.89,
+    "Site": 483.9,
+    "Marketplace": 415.65,
+    "Total_Digital": 1219.44
+  },
+  {
+    "Laboratorio": "PARENTEX INDUSTRIA E COMERCIO LTDA",
+    "App": 651.22,
+    "Site": 352.09,
+    "Marketplace": 208.47,
+    "Total_Digital": 1211.78
+  },
+  {
+    "Laboratorio": "BRAVIR INDUSTRIAL LTDA",
+    "App": 580.71,
+    "Site": 336.13,
+    "Marketplace": 294.25,
+    "Total_Digital": 1211.08
+  },
+  {
+    "Laboratorio": "PAKIPLAST INDUSTRIA E COMERCIO DE BRINQU",
+    "App": 602.21,
+    "Site": 328.35,
+    "Marketplace": 280.27,
+    "Total_Digital": 1210.83
+  },
+  {
+    "Laboratorio": "MILCY COSMETICOS LTDA",
+    "App": 333.32,
+    "Site": 721.25,
+    "Marketplace": 151.78,
+    "Total_Digital": 1206.36
+  },
+  {
+    "Laboratorio": "DIFFUCAP CHEMOBRAS QUIMICA E FARMAC LTDA",
+    "App": 403.4,
+    "Site": 558.35,
+    "Marketplace": 236.03,
+    "Total_Digital": 1197.78
+  },
+  {
+    "Laboratorio": "N DA LUA AROMAS LTDA",
+    "App": 611.57,
+    "Site": 271.05,
+    "Marketplace": 302.57,
+    "Total_Digital": 1185.19
+  },
+  {
+    "Laboratorio": "CEFISA INDUSTRIA E COMERCIO LTDA",
+    "App": 871.61,
+    "Site": 31.09,
+    "Marketplace": 268.59,
+    "Total_Digital": 1171.3
+  },
+  {
+    "Laboratorio": "NESTLE BRASIL LTDA",
+    "App": 748.07,
+    "Site": 28.26,
+    "Marketplace": 394.23,
+    "Total_Digital": 1170.56
+  },
+  {
+    "Laboratorio": "SEM PARAR INSTITUICAO DE PAGAMENTO LTDA",
+    "App": 318.14,
+    "Site": 270.74,
+    "Marketplace": 580.5,
+    "Total_Digital": 1169.38
+  },
+  {
+    "Laboratorio": "DI HELLEN INDUSTRIA DE COSMETICOS LTDA",
+    "App": 438.75,
+    "Site": 557.93,
+    "Marketplace": 162.59,
+    "Total_Digital": 1159.27
+  },
+  {
+    "Laboratorio": "BIC AMAZONIA S.A. AM",
+    "App": 294.54,
+    "Site": 731.51,
+    "Marketplace": 111.05,
+    "Total_Digital": 1137.1
+  },
+  {
+    "Laboratorio": "BIC AMAZONIA S/A SP",
+    "App": 315.79,
+    "Site": 646.37,
+    "Marketplace": 170.85,
+    "Total_Digital": 1133.01
+  },
+  {
+    "Laboratorio": "TE GUARANI DO BRASIL LTDA",
+    "App": 393.33,
+    "Site": 143.51,
+    "Marketplace": 595.0,
+    "Total_Digital": 1131.84
+  },
+  {
+    "Laboratorio": "APIS VIDA IND E COM DE PROD FARMACE LTDA",
+    "App": 479.98,
+    "Site": 469.33,
+    "Marketplace": 174.93,
+    "Total_Digital": 1124.24
+  },
+  {
+    "Laboratorio": "APTI ALIMENTOS LTDA",
+    "App": 359.8,
+    "Site": 617.26,
+    "Marketplace": 142.76,
+    "Total_Digital": 1119.83
+  },
+  {
+    "Laboratorio": "MIURA FABRICACAO DE COSMETICOS E SANEANT",
+    "App": 335.36,
+    "Site": 609.98,
+    "Marketplace": 164.44,
+    "Total_Digital": 1109.78
+  },
+  {
+    "Laboratorio": "HIGIEFARM COMERCIO IMPORTACAO E EXPOR",
+    "App": 533.94,
+    "Site": 403.82,
+    "Marketplace": 171.61,
+    "Total_Digital": 1109.38
+  },
+  {
+    "Laboratorio": "LUSINE INDUSTRIA E COMERCIO DE COSMETICO",
+    "App": 695.79,
+    "Site": 200.04,
+    "Marketplace": 211.55,
+    "Total_Digital": 1107.38
+  },
+  {
+    "Laboratorio": "JOAO HENRIQUE SILVA BESSA E CIA LTDA",
+    "App": 505.03,
+    "Site": 368.23,
+    "Marketplace": 231.05,
+    "Total_Digital": 1104.31
+  },
+  {
+    "Laboratorio": "FOSFOREIRA BRASILEIRA LTDA",
+    "App": 409.71,
+    "Site": 564.59,
+    "Marketplace": 122.51,
+    "Total_Digital": 1096.81
+  },
+  {
+    "Laboratorio": "ALTOMAX COMERCIO DE MEIAS E COBERTORES,",
+    "App": 115.5,
+    "Site": 405.63,
+    "Marketplace": 551.52,
+    "Total_Digital": 1072.64
+  },
+  {
+    "Laboratorio": "ADERE PRODUTOS AUTO ADESIVOS LTDA",
+    "App": 194.45,
+    "Site": 755.58,
+    "Marketplace": 121.57,
+    "Total_Digital": 1071.6
+  },
+  {
+    "Laboratorio": "BRASTERAPICA",
+    "App": 361.88,
+    "Site": 470.96,
+    "Marketplace": 236.81,
+    "Total_Digital": 1069.65
+  },
+  {
+    "Laboratorio": "RIBERBALL MERCANTIL E INDUSTRIAL LTDA",
+    "App": 349.17,
+    "Site": 312.12,
+    "Marketplace": 404.37,
+    "Total_Digital": 1065.67
+  },
+  {
+    "Laboratorio": "CONSERVAS ODERICH SA",
+    "App": 140.7,
+    "Site": 884.87,
+    "Marketplace": 34.27,
+    "Total_Digital": 1059.85
+  },
+  {
+    "Laboratorio": "GRENDENE S A",
+    "App": 179.72,
+    "Site": 773.75,
+    "Marketplace": 104.76,
+    "Total_Digital": 1058.23
+  },
+  {
+    "Laboratorio": "NOVA CREDEAL INDUSTRIA DE CADERNOS S A",
+    "App": 343.19,
+    "Site": 412.29,
+    "Marketplace": 301.08,
+    "Total_Digital": 1056.56
+  },
+  {
+    "Laboratorio": "SNOOPY DOG TICIANE PINHEIRO",
+    "App": 394.21,
+    "Site": 423.61,
+    "Marketplace": 220.29,
+    "Total_Digital": 1038.11
+  },
+  {
+    "Laboratorio": "FLORA PRODUTOS DE HIGIENE E LIMPEZA GO",
+    "App": 449.74,
+    "Site": 425.43,
+    "Marketplace": 155.29,
+    "Total_Digital": 1030.47
+  },
+  {
+    "Laboratorio": "OPHTHALMOS S/A",
+    "App": 357.12,
+    "Site": 285.65,
+    "Marketplace": 386.14,
+    "Total_Digital": 1028.91
+  },
+  {
+    "Laboratorio": "N.S. PRODUTOS E SISTEMAS DE HIGIENE LTDA",
+    "App": 339.8,
+    "Site": 483.27,
+    "Marketplace": 204.66,
+    "Total_Digital": 1027.73
+  },
+  {
+    "Laboratorio": "LEVEZA NEGOCIOS DIGITAIS LTDA",
+    "App": 514.73,
+    "Site": 261.55,
+    "Marketplace": 241.9,
+    "Total_Digital": 1018.19
+  },
+  {
+    "Laboratorio": "NATURALLE CEREAIS E ALIMENTOS LTDA",
+    "App": 257.06,
+    "Site": 695.7,
+    "Marketplace": 63.94,
+    "Total_Digital": 1016.71
+  },
+  {
+    "Laboratorio": "LABORATORIO FARMACEUTICO ELOFAR LTDA",
+    "App": 389.11,
+    "Site": 379.17,
+    "Marketplace": 248.34,
+    "Total_Digital": 1016.62
+  },
+  {
+    "Laboratorio": "CHIQUE COMERCIO DE PRODUTOS DE BELEZA LT",
+    "App": 438.6,
+    "Site": 397.76,
+    "Marketplace": 170.33,
+    "Total_Digital": 1006.69
+  },
+  {
+    "Laboratorio": "ROYAL TOYS, COMERCIO, IMPORTACAO E EXPOR",
+    "App": 225.13,
+    "Site": 688.47,
+    "Marketplace": 90.16,
+    "Total_Digital": 1003.76
+  },
+  {
+    "Laboratorio": "HEMAFARMA COMERCIO E INDUSTRIA FARMACEUT",
+    "App": 487.44,
+    "Site": 249.71,
+    "Marketplace": 264.83,
+    "Total_Digital": 1001.98
+  },
+  {
+    "Laboratorio": "AZULMED INDUSTRIA E COMERCIO DE PRODUTOS",
+    "App": 352.86,
+    "Site": 373.92,
+    "Marketplace": 274.08,
+    "Total_Digital": 1000.86
+  },
+  {
+    "Laboratorio": "SUPER SAUDE NUTRICIONAL LTDA",
+    "App": 326.82,
+    "Site": 469.28,
+    "Marketplace": 192.76,
+    "Total_Digital": 988.86
+  },
+  {
+    "Laboratorio": "IBS INDUSTRIA BRASILEIRA DE SUCOS S/A",
+    "App": 154.9,
+    "Site": 754.53,
+    "Marketplace": 76.25,
+    "Total_Digital": 985.69
+  },
+  {
+    "Laboratorio": "SANTALUCIA ALIMENTOS LTDA",
+    "App": 117.94,
+    "Site": 835.16,
+    "Marketplace": 25.57,
+    "Total_Digital": 978.67
+  },
+  {
+    "Laboratorio": "POLAR TECNICA COMERCIAL E INDUSTRIAL LTD",
+    "App": 194.17,
+    "Site": 580.54,
+    "Marketplace": 200.25,
+    "Total_Digital": 974.95
+  },
+  {
+    "Laboratorio": "MAXINUTRI SUPLEMENTOS NUTRICIONAIS LTDA",
+    "App": 263.71,
+    "Site": 457.71,
+    "Marketplace": 244.61,
+    "Total_Digital": 966.02
+  },
+  {
+    "Laboratorio": "PIPIZITO LTDA",
+    "App": 243.02,
+    "Site": 292.41,
+    "Marketplace": 429.13,
+    "Total_Digital": 964.56
+  },
+  {
+    "Laboratorio": "SEMALO INDUST E COM DE ALIMENTOS LTDA",
+    "App": 199.27,
+    "Site": 714.33,
+    "Marketplace": 46.44,
+    "Total_Digital": 960.04
+  },
+  {
+    "Laboratorio": "PLURAL-SOLUTIONS LTDA",
+    "App": 465.94,
+    "Site": 117.32,
+    "Marketplace": 361.79,
+    "Total_Digital": 945.05
+  },
+  {
+    "Laboratorio": "UNIAGRO IND E COM DE PROD ALIMENTICIOS",
+    "App": 142.9,
+    "Site": 727.25,
+    "Marketplace": 73.17,
+    "Total_Digital": 943.32
+  },
+  {
+    "Laboratorio": "RIO BRANCO LTDA.",
+    "App": 456.65,
+    "Site": 205.48,
+    "Marketplace": 278.51,
+    "Total_Digital": 940.64
+  },
+  {
+    "Laboratorio": "BENEVIA DO BRASIL COMERCIO, IMPORTACAO E",
+    "App": 176.63,
+    "Site": 690.3,
+    "Marketplace": 59.96,
+    "Total_Digital": 926.89
+  },
+  {
+    "Laboratorio": "GRIT COMERCIO DE PRODUTOS DE BELEZA LTDA",
+    "App": 402.22,
+    "Site": 270.79,
+    "Marketplace": 253.15,
+    "Total_Digital": 926.16
+  },
+  {
+    "Laboratorio": "VITAO ALIMENTOS LTDA",
+    "App": 196.48,
+    "Site": 652.19,
+    "Marketplace": 75.57,
+    "Total_Digital": 924.24
+  },
+  {
+    "Laboratorio": "ALGODAO DOCE INDUSTRIA DE URSOS LTDA",
+    "App": 488.32,
+    "Site": 223.11,
+    "Marketplace": 207.94,
+    "Total_Digital": 919.37
+  },
+  {
+    "Laboratorio": "HEARST LABORATORIOS DO BRASIL LTDA",
+    "App": 257.65,
+    "Site": 482.59,
+    "Marketplace": 164.35,
+    "Total_Digital": 904.59
+  },
+  {
+    "Laboratorio": "FRUKI BEBIDAS SA",
+    "App": 83.16,
+    "Site": 801.7,
+    "Marketplace": 18.25,
+    "Total_Digital": 903.11
+  },
+  {
+    "Laboratorio": "VYTTRA DIAGNOSTICOS IMPORT E EXPORT S A",
+    "App": 391.91,
+    "Site": 189.78,
+    "Marketplace": 313.7,
+    "Total_Digital": 895.4
+  },
+  {
+    "Laboratorio": "COPRA INDUSTRIA ALIMENTICIA LTDA",
+    "App": 315.18,
+    "Site": 394.64,
+    "Marketplace": 176.51,
+    "Total_Digital": 886.32
+  },
+  {
+    "Laboratorio": "TRAMONTINA MULTI S/A",
+    "App": 193.4,
+    "Site": 403.86,
+    "Marketplace": 282.89,
+    "Total_Digital": 880.15
+  },
+  {
+    "Laboratorio": "KELLDRIN INDUSTRIAL LTDA",
+    "App": 397.58,
+    "Site": 346.51,
+    "Marketplace": 135.8,
+    "Total_Digital": 879.89
+  },
+  {
+    "Laboratorio": "NACIONAL COMERCIAL HOSPITALAR S.A.",
+    "App": 322.38,
+    "Site": 94.44,
+    "Marketplace": 442.55,
+    "Total_Digital": 859.37
+  },
+  {
+    "Laboratorio": "DPA DAIRY PARTNERS AMERICAS BRASIL LTDA.",
+    "App": 80.69,
+    "Site": 746.98,
+    "Marketplace": 20.92,
+    "Total_Digital": 848.59
+  },
+  {
+    "Laboratorio": "COAMO AGROINDUSTRIAL COOPERATIVA",
+    "App": 126.15,
+    "Site": 684.89,
+    "Marketplace": 29.05,
+    "Total_Digital": 840.1
+  },
+  {
+    "Laboratorio": "MARCHETTI & CIA LTDA CARAZINHO",
+    "App": 348.85,
+    "Site": 283.18,
+    "Marketplace": 201.01,
+    "Total_Digital": 833.03
+  },
+  {
+    "Laboratorio": "ATRIA AROMAS BRASIL DISTRIBUIDORA LTDA",
+    "App": 268.56,
+    "Site": 424.57,
+    "Marketplace": 136.9,
+    "Total_Digital": 830.03
+  },
+  {
+    "Laboratorio": "ELKA PLASTICOS LTDA",
+    "App": 393.25,
+    "Site": 229.26,
+    "Marketplace": 204.3,
+    "Total_Digital": 826.8
+  },
+  {
+    "Laboratorio": "WE COMERCIO DE PRODUTOS COSMESTICOS LTDA",
+    "App": 345.59,
+    "Site": 197.65,
+    "Marketplace": 283.05,
+    "Total_Digital": 826.3
+  },
+  {
+    "Laboratorio": "ABBOTT VACINAS",
+    "App": 229.61,
+    "Site": 0.0,
+    "Marketplace": 593.42,
+    "Total_Digital": 823.03
+  },
+  {
+    "Laboratorio": "INST BIOCHIMICO INDUSTRIA FARM LTDA",
+    "App": 319.73,
+    "Site": 125.81,
+    "Marketplace": 370.99,
+    "Total_Digital": 816.52
+  },
+  {
+    "Laboratorio": "ITALAC",
+    "App": 231.08,
+    "Site": 449.7,
+    "Marketplace": 135.21,
+    "Total_Digital": 816.0
+  },
+  {
+    "Laboratorio": "LA GANEXA PRODUTOS ALIMENTICIOS LTDA",
+    "App": 205.67,
+    "Site": 479.03,
+    "Marketplace": 125.33,
+    "Total_Digital": 810.03
+  },
+  {
+    "Laboratorio": "ARRAYANES PROD HIGIENICOS IND E COM LTDA",
+    "App": 256.17,
+    "Site": 374.88,
+    "Marketplace": 162.1,
+    "Total_Digital": 793.15
+  },
+  {
+    "Laboratorio": "CAMIL ALIMENTOS S.A",
+    "App": 105.38,
+    "Site": 640.69,
+    "Marketplace": 45.15,
+    "Total_Digital": 791.22
+  },
+  {
+    "Laboratorio": "FERRAZ COMERCIO DE ELETRONICOS EIRELI ME",
+    "App": 51.71,
+    "Site": 710.55,
+    "Marketplace": 28.69,
+    "Total_Digital": 790.95
+  },
+  {
+    "Laboratorio": "PADRAO CLB MACEDO IND E COM DE PROD DESC",
+    "App": 394.47,
+    "Site": 92.38,
+    "Marketplace": 302.03,
+    "Total_Digital": 788.88
+  },
+  {
+    "Laboratorio": "J A TEIXEIRA VETERINARIA LTDA",
+    "App": 628.45,
+    "Site": 0.0,
+    "Marketplace": 158.06,
+    "Total_Digital": 786.51
+  },
+  {
+    "Laboratorio": "PIINGUES ALIMENTOS LTDA",
+    "App": 176.63,
+    "Site": 548.06,
+    "Marketplace": 60.89,
+    "Total_Digital": 785.58
+  },
+  {
+    "Laboratorio": "LABORATORIO TIARAJU",
+    "App": 510.01,
+    "Site": 0.0,
+    "Marketplace": 275.14,
+    "Total_Digital": 785.15
+  },
+  {
+    "Laboratorio": "BEIRA ALTA COSMETICOS LTDA",
+    "App": 308.71,
+    "Site": 335.99,
+    "Marketplace": 136.19,
+    "Total_Digital": 780.88
+  },
+  {
+    "Laboratorio": "DM - INDUSTRIAL E COMERCIAL LTDA.",
+    "App": 303.21,
+    "Site": 234.37,
+    "Marketplace": 241.01,
+    "Total_Digital": 778.6
+  },
+  {
+    "Laboratorio": "SSRR INDUSTRIAL E COMERCIAL DE COSM LTDA",
+    "App": 337.1,
+    "Site": 315.67,
+    "Marketplace": 124.41,
+    "Total_Digital": 777.18
+  },
+  {
+    "Laboratorio": "BELLAPHYTUS INDUSTRIA DE COSMETICOS LTDA",
+    "App": 238.02,
+    "Site": 437.19,
+    "Marketplace": 101.86,
+    "Total_Digital": 777.06
+  },
+  {
+    "Laboratorio": "TODOLIVRO DISTRIBUIDORA LTDA",
+    "App": 390.21,
+    "Site": 206.48,
+    "Marketplace": 179.1,
+    "Total_Digital": 775.79
+  },
+  {
+    "Laboratorio": "MAZUI & HORVATH INDUSTRIA DE PRODUTOS CE",
+    "App": 572.36,
+    "Site": 5.97,
+    "Marketplace": 192.84,
+    "Total_Digital": 771.17
+  },
+  {
+    "Laboratorio": "ARTSANA BRASIL LTDA",
+    "App": 432.11,
+    "Site": 168.71,
+    "Marketplace": 164.76,
+    "Total_Digital": 765.57
+  },
+  {
+    "Laboratorio": "VYVEDAS COSMETICOS DO BRASIL LTDA",
+    "App": 417.41,
+    "Site": 104.81,
+    "Marketplace": 214.16,
+    "Total_Digital": 736.38
+  },
+  {
+    "Laboratorio": "CHAMA DE OURO BEM ESTAR LTDA",
+    "App": 246.14,
+    "Site": 332.46,
+    "Marketplace": 156.03,
+    "Total_Digital": 734.62
+  },
+  {
+    "Laboratorio": "LABORATORIO QUIMICO FARMACEUTICO BERGAMO",
+    "App": 453.08,
+    "Site": 77.24,
+    "Marketplace": 203.01,
+    "Total_Digital": 733.34
+  },
+  {
+    "Laboratorio": "TOZZO ALIMENTOS LTDA",
+    "App": 113.42,
+    "Site": 579.73,
+    "Marketplace": 31.37,
+    "Total_Digital": 724.53
+  },
+  {
+    "Laboratorio": "PANIFICIO PANINE LTDA",
+    "App": 102.11,
+    "Site": 581.27,
+    "Marketplace": 38.67,
+    "Total_Digital": 722.05
+  },
+  {
+    "Laboratorio": "MEDLEY/SANOFI ESPECIAL",
+    "App": 184.22,
+    "Site": 103.88,
+    "Marketplace": 428.61,
+    "Total_Digital": 716.71
+  },
+  {
+    "Laboratorio": "ADRIANA SERPA DA SILVA",
+    "App": 207.26,
+    "Site": 129.82,
+    "Marketplace": 373.96,
+    "Total_Digital": 711.03
+  },
+  {
+    "Laboratorio": "INCOTERM IND DE TERMOMETROS LTDA",
+    "App": 337.44,
+    "Site": 220.46,
+    "Marketplace": 149.65,
+    "Total_Digital": 707.55
+  },
+  {
+    "Laboratorio": "ELGIN DISTRIBUIDORA LTDA",
+    "App": 60.63,
+    "Site": 535.81,
+    "Marketplace": 83.5,
+    "Total_Digital": 679.93
+  },
+  {
+    "Laboratorio": "OUROLUX COMERCIAL LTDA",
+    "App": 132.05,
+    "Site": 477.57,
+    "Marketplace": 70.18,
+    "Total_Digital": 679.8
+  },
+  {
+    "Laboratorio": "LILIBEL ALIMENTOS LTDA",
+    "App": 161.34,
+    "Site": 468.62,
+    "Marketplace": 49.83,
+    "Total_Digital": 679.79
+  },
+  {
+    "Laboratorio": "VERONA INDUSTRIA DE PLASTICOS LTDA",
+    "App": 321.22,
+    "Site": 211.73,
+    "Marketplace": 140.49,
+    "Total_Digital": 673.44
+  },
+  {
+    "Laboratorio": "PRODUTOS ALIMENTICIOS PASTELINA LTDA",
+    "App": 253.26,
+    "Site": 247.99,
+    "Marketplace": 164.77,
+    "Total_Digital": 666.03
+  },
+  {
+    "Laboratorio": "HIDRANCE COSMETICOS LTDA",
+    "App": 238.06,
+    "Site": 299.7,
+    "Marketplace": 127.55,
+    "Total_Digital": 665.31
+  },
+  {
+    "Laboratorio": "PET INJET COMERCIO DE ACESSORIOS PARA AN",
+    "App": 268.52,
+    "Site": 229.23,
+    "Marketplace": 162.21,
+    "Total_Digital": 659.97
+  },
+  {
+    "Laboratorio": "LIMPPANO S A",
+    "App": 210.96,
+    "Site": 327.2,
+    "Marketplace": 112.85,
+    "Total_Digital": 651.01
+  },
+  {
+    "Laboratorio": "PILLOWTEX INDUSTRIA E COMERCIO TEXTIL LT",
+    "App": 402.11,
+    "Site": 31.61,
+    "Marketplace": 207.21,
+    "Total_Digital": 640.93
+  },
+  {
+    "Laboratorio": "SOPRANO IND ELETROMETALURGICA EIREL",
+    "App": 174.47,
+    "Site": 213.14,
+    "Marketplace": 251.83,
+    "Total_Digital": 639.44
+  },
+  {
+    "Laboratorio": "METALURGICA CRIPPA LTDA",
+    "App": 305.98,
+    "Site": 191.79,
+    "Marketplace": 136.71,
+    "Total_Digital": 634.49
+  },
+  {
+    "Laboratorio": "IRMAOS RUIVO LTDA",
+    "App": 105.59,
+    "Site": 485.29,
+    "Marketplace": 42.76,
+    "Total_Digital": 633.64
+  },
+  {
+    "Laboratorio": "BIOLAB DERMO",
+    "App": 228.53,
+    "Site": 70.44,
+    "Marketplace": 330.61,
+    "Total_Digital": 629.59
+  },
+  {
+    "Laboratorio": "ARDRAK IND COM IMP EXP PROD NAT ALIM LTD",
+    "App": 181.42,
+    "Site": 286.43,
+    "Marketplace": 158.48,
+    "Total_Digital": 626.32
+  },
+  {
+    "Laboratorio": "CARVAO BRAZAH LTDA",
+    "App": 282.08,
+    "Site": 152.4,
+    "Marketplace": 184.25,
+    "Total_Digital": 618.74
+  },
+  {
+    "Laboratorio": "ORBITAE DIAGNOSTICOS LTDA",
+    "App": 391.72,
+    "Site": 0.0,
+    "Marketplace": 217.11,
+    "Total_Digital": 608.83
+  },
+  {
+    "Laboratorio": "RBR IMPORTACAO E EXPORTACAO EIRELI",
+    "App": 75.02,
+    "Site": 498.89,
+    "Marketplace": 34.42,
+    "Total_Digital": 608.33
+  },
+  {
+    "Laboratorio": "MISSNER & MISSNER LTDA.",
+    "App": 232.03,
+    "Site": 177.57,
+    "Marketplace": 189.45,
+    "Total_Digital": 599.05
+  },
+  {
+    "Laboratorio": "INSETIMAX INDUSTRIA QUIMICA LTDA",
+    "App": 204.86,
+    "Site": 83.03,
+    "Marketplace": 311.11,
+    "Total_Digital": 599.0
+  },
+  {
+    "Laboratorio": "INCOMASA ETIQUETAS E EMBALAGENS LTDA EPP",
+    "App": 111.63,
+    "Site": 438.37,
+    "Marketplace": 43.01,
+    "Total_Digital": 593.0
+  },
+  {
+    "Laboratorio": "MULTILASER CONV",
+    "App": 200.15,
+    "Site": 202.87,
+    "Marketplace": 185.29,
+    "Total_Digital": 588.31
+  },
+  {
+    "Laboratorio": "DOCE BRINQUEDO INDUSTRIA E COMERCIO DE B",
+    "App": 202.09,
+    "Site": 323.56,
+    "Marketplace": 59.09,
+    "Total_Digital": 584.73
+  },
+  {
+    "Laboratorio": "NELSON ANTONIO SILVA RECHI LTDA",
+    "App": 205.49,
+    "Site": 308.21,
+    "Marketplace": 67.69,
+    "Total_Digital": 581.39
+  },
+  {
+    "Laboratorio": "VLT BAZAR LTDA",
+    "App": 37.56,
+    "Site": 520.45,
+    "Marketplace": 15.57,
+    "Total_Digital": 573.58
+  },
+  {
+    "Laboratorio": "YUDEVAN DISTRIBUIDORA E IMPORTADORA LTDA",
+    "App": 255.73,
+    "Site": 159.58,
+    "Marketplace": 154.82,
+    "Total_Digital": 570.13
+  },
+  {
+    "Laboratorio": "FARMOTERAPICA DOVALLE INDUSTRIA QUIMICA",
+    "App": 288.73,
+    "Site": 124.74,
+    "Marketplace": 152.55,
+    "Total_Digital": 566.01
+  },
+  {
+    "Laboratorio": "SOCIEDADE DE BEBIDAS PANIZZON LTDA",
+    "App": 112.0,
+    "Site": 430.09,
+    "Marketplace": 21.01,
+    "Total_Digital": 563.1
+  },
+  {
+    "Laboratorio": "ENOVA FOODS S A",
+    "App": 153.6,
+    "Site": 336.85,
+    "Marketplace": 63.49,
+    "Total_Digital": 553.94
+  },
+  {
+    "Laboratorio": "ORGANICA INDUSTRIA E COMERCIO DE PRODUTO",
+    "App": 239.22,
+    "Site": 228.3,
+    "Marketplace": 82.81,
+    "Total_Digital": 550.33
+  },
+  {
+    "Laboratorio": "PETIT SABLE INDUSTRIA DE ALIMENTOS LTDA",
+    "App": 109.51,
+    "Site": 389.88,
+    "Marketplace": 48.75,
+    "Total_Digital": 548.14
+  },
+  {
+    "Laboratorio": "ILUMI INDUSTRIA E COMERCIO LTDA",
+    "App": 70.46,
+    "Site": 347.15,
+    "Marketplace": 130.22,
+    "Total_Digital": 547.82
+  },
+  {
+    "Laboratorio": "NHAMI MAMI DISTRIBUIDORA DE ALIMENT LTDA",
+    "App": 197.3,
+    "Site": 250.56,
+    "Marketplace": 84.48,
+    "Total_Digital": 532.34
+  },
+  {
+    "Laboratorio": "DBS INDUSTRIA E COMERCIO LTDA",
+    "App": 188.77,
+    "Site": 153.38,
+    "Marketplace": 189.24,
+    "Total_Digital": 531.39
+  },
+  {
+    "Laboratorio": "SANOFI VACINAS",
+    "App": 246.36,
+    "Site": 0.0,
+    "Marketplace": 283.66,
+    "Total_Digital": 530.03
+  },
+  {
+    "Laboratorio": "LVA DISTRIBUIDORA DE ALIMENTOS LTDA",
+    "App": 110.53,
+    "Site": 398.11,
+    "Marketplace": 21.34,
+    "Total_Digital": 529.98
+  },
+  {
+    "Laboratorio": "GALA IBB IND BR DE BRINQ EMBALAGENS LTDA",
+    "App": 173.21,
+    "Site": 277.76,
+    "Marketplace": 78.92,
+    "Total_Digital": 529.88
+  },
+  {
+    "Laboratorio": "M2LIFE COMERCIAL IMPORTADORA E EXPORTADO",
+    "App": 169.38,
+    "Site": 0.0,
+    "Marketplace": 356.61,
+    "Total_Digital": 525.99
+  },
+  {
+    "Laboratorio": "UNICHARM DO BRASIL IND E COM PROD HIGIEN",
+    "App": 90.09,
+    "Site": 369.13,
+    "Marketplace": 63.43,
+    "Total_Digital": 522.65
+  },
+  {
+    "Laboratorio": "BATATAS GUADAGNIN LTDA",
+    "App": 62.41,
+    "Site": 439.91,
+    "Marketplace": 13.22,
+    "Total_Digital": 515.54
+  },
+  {
+    "Laboratorio": "MESASUL COMERCIO E INDUSTRIA DE ALIMENTO",
+    "App": 63.58,
+    "Site": 434.79,
+    "Marketplace": 13.86,
+    "Total_Digital": 512.24
+  },
+  {
+    "Laboratorio": "CADIVEU",
+    "App": 94.19,
+    "Site": 295.44,
+    "Marketplace": 120.0,
+    "Total_Digital": 509.63
+  },
+  {
+    "Laboratorio": "CULTURAMA EDITORA E DIST. LTDA",
+    "App": 140.52,
+    "Site": 292.82,
+    "Marketplace": 74.36,
+    "Total_Digital": 507.69
+  },
+  {
+    "Laboratorio": "LINDT & SPRUNGLI(BR)COM DE ALIMENTOS S.A",
+    "App": 205.16,
+    "Site": 146.87,
+    "Marketplace": 151.23,
+    "Total_Digital": 503.27
+  },
+  {
+    "Laboratorio": "CHAPIRES COMERCIO DE CHAS LTDA",
+    "App": 99.76,
+    "Site": 363.45,
+    "Marketplace": 39.69,
+    "Total_Digital": 502.9
+  },
+  {
+    "Laboratorio": "ASTORIA PAPEIS LTDA",
+    "App": 350.78,
+    "Site": 69.49,
+    "Marketplace": 79.15,
+    "Total_Digital": 499.42
+  },
+  {
+    "Laboratorio": "CILASI ALIMENTOS S/A",
+    "App": 26.98,
+    "Site": 454.17,
+    "Marketplace": 16.36,
+    "Total_Digital": 497.5
+  },
+  {
+    "Laboratorio": "VIGOR ALIMENTOS S.A",
+    "App": 46.68,
+    "Site": 435.61,
+    "Marketplace": 14.48,
+    "Total_Digital": 496.78
+  },
+  {
+    "Laboratorio": "LPS COMPANY LTDA",
+    "App": 65.4,
+    "Site": 353.81,
+    "Marketplace": 77.57,
+    "Total_Digital": 496.77
+  },
+  {
+    "Laboratorio": "ARYANNE MARQUES DE ALMEIDA 00850660106",
+    "App": 213.63,
+    "Site": 0.0,
+    "Marketplace": 279.63,
+    "Total_Digital": 493.26
+  },
+  {
+    "Laboratorio": "DR. OETKER BRASIL LTDA.",
+    "App": 58.45,
+    "Site": 407.14,
+    "Marketplace": 24.75,
+    "Total_Digital": 490.34
+  },
+  {
+    "Laboratorio": "ZENIR DISARZ PRESENTES E DECORACOES LTDA",
+    "App": 260.15,
+    "Site": 134.96,
+    "Marketplace": 94.98,
+    "Total_Digital": 490.08
+  },
+  {
+    "Laboratorio": "NUTRIMENTAL",
+    "App": 90.31,
+    "Site": 362.44,
+    "Marketplace": 33.9,
+    "Total_Digital": 486.65
+  },
+  {
+    "Laboratorio": "LEONORA COMERCIO INTERNACIONAL LTDA",
+    "App": 158.52,
+    "Site": 262.91,
+    "Marketplace": 64.58,
+    "Total_Digital": 486.01
+  },
+  {
+    "Laboratorio": "ECOFITUS INDUSTRIA E COMERCIO LTDA",
+    "App": 164.64,
+    "Site": 237.26,
+    "Marketplace": 81.3,
+    "Total_Digital": 483.2
+  },
+  {
+    "Laboratorio": "FLORA NECTAR INDUSTRIA COMERCIO IMPORTAC",
+    "App": 113.37,
+    "Site": 290.36,
+    "Marketplace": 65.09,
+    "Total_Digital": 468.82
+  },
+  {
+    "Laboratorio": "TRADING CARE IND E COM DE PROD AUTOMOTIV",
+    "App": 195.59,
+    "Site": 134.18,
+    "Marketplace": 136.09,
+    "Total_Digital": 465.85
+  },
+  {
+    "Laboratorio": "MWM CARE DISTRIBUIDORA LTDA",
+    "App": 400.41,
+    "Site": 2.34,
+    "Marketplace": 54.96,
+    "Total_Digital": 457.7
+  },
+  {
+    "Laboratorio": "IRMAOS DALANEZE LTDA",
+    "App": 94.84,
+    "Site": 266.85,
+    "Marketplace": 81.87,
+    "Total_Digital": 443.56
+  },
+  {
+    "Laboratorio": "CONTROLLER COMERCIO E SERVICOS LTDA",
+    "App": 324.63,
+    "Site": 0.0,
+    "Marketplace": 118.75,
+    "Total_Digital": 443.38
+  },
+  {
+    "Laboratorio": "MILI S A",
+    "App": 335.6,
+    "Site": 41.88,
+    "Marketplace": 64.78,
+    "Total_Digital": 442.26
+  },
+  {
+    "Laboratorio": "ELG PEDESTAIS LTDA",
+    "App": 160.88,
+    "Site": 75.53,
+    "Marketplace": 202.54,
+    "Total_Digital": 438.96
+  },
+  {
+    "Laboratorio": "FLORENCE INDUSTRIAL E COMERCIAL LTDA",
+    "App": 111.73,
+    "Site": 272.63,
+    "Marketplace": 48.93,
+    "Total_Digital": 433.29
+  },
+  {
+    "Laboratorio": "FOFY COMERCIO IMPORTACAO E EXPORTACAO LT",
+    "App": 162.82,
+    "Site": 218.69,
+    "Marketplace": 51.0,
+    "Total_Digital": 432.5
+  },
+  {
+    "Laboratorio": "LIKLUC PUERICULTURA EIRELI",
+    "App": 192.37,
+    "Site": 39.4,
+    "Marketplace": 200.23,
+    "Total_Digital": 432.0
+  },
+  {
+    "Laboratorio": "GUIMARAES PRODUTOS QUIMICOS E DE LIMPEZA",
+    "App": 159.77,
+    "Site": 193.82,
+    "Marketplace": 70.81,
+    "Total_Digital": 424.41
+  },
+  {
+    "Laboratorio": "DERMABEL INDUSTRIA E COMERCIO DE PROD CO",
+    "App": 222.97,
+    "Site": 130.07,
+    "Marketplace": 70.29,
+    "Total_Digital": 423.33
+  },
+  {
+    "Laboratorio": "INDUSTRIA E COMERCIO OLIVEIRA LTDA",
+    "App": 131.76,
+    "Site": 212.38,
+    "Marketplace": 72.75,
+    "Total_Digital": 416.9
+  },
+  {
+    "Laboratorio": "PARMISSIMO ALIMENTOS LTDA - EM RECUPERAC",
+    "App": 75.25,
+    "Site": 308.03,
+    "Marketplace": 29.21,
+    "Total_Digital": 412.49
+  },
+  {
+    "Laboratorio": "PRIMEIROS PASSOS COM DE BEBIDAS LTDA",
+    "App": 12.67,
+    "Site": 391.7,
+    "Marketplace": 8.0,
+    "Total_Digital": 412.37
+  },
+  {
+    "Laboratorio": "ANA LYSSA POLL KURYLO",
+    "App": 192.7,
+    "Site": 86.78,
+    "Marketplace": 129.92,
+    "Total_Digital": 409.4
+  },
+  {
+    "Laboratorio": "JOY PLAY AND CARE LTDA",
+    "App": 192.87,
+    "Site": 96.37,
+    "Marketplace": 104.75,
+    "Total_Digital": 393.99
+  },
+  {
+    "Laboratorio": "GIOVANI GRITTI LTDA",
+    "App": 223.13,
+    "Site": 74.82,
+    "Marketplace": 95.51,
+    "Total_Digital": 393.46
+  },
+  {
+    "Laboratorio": "PELO E PELE INDUSTRIA E MANIPULACAO DE C",
+    "App": 198.18,
+    "Site": 116.51,
+    "Marketplace": 74.03,
+    "Total_Digital": 388.73
+  },
+  {
+    "Laboratorio": "MARIANE KIST THOMAS",
+    "App": 109.65,
+    "Site": 242.67,
+    "Marketplace": 35.13,
+    "Total_Digital": 387.46
+  },
+  {
+    "Laboratorio": "PAN CHRISTIAN IND E COM DE PROD ALIMENTI",
+    "App": 49.32,
+    "Site": 307.73,
+    "Marketplace": 29.31,
+    "Total_Digital": 386.36
+  },
+  {
+    "Laboratorio": "BREAD KING ALIMENTOS LTDA",
+    "App": 0.0,
+    "Site": 381.58,
+    "Marketplace": 0.0,
+    "Total_Digital": 381.58
+  },
+  {
+    "Laboratorio": "SUN PHARMA LAB",
+    "App": 0.0,
+    "Site": 0.0,
+    "Marketplace": 380.99,
+    "Total_Digital": 380.99
+  },
+  {
+    "Laboratorio": "OESA COMERCIO E REPRESENTACOES S/A",
+    "App": 75.06,
+    "Site": 267.75,
+    "Marketplace": 34.56,
+    "Total_Digital": 377.37
+  },
+  {
+    "Laboratorio": "SOCIEDADE INDUSTRIAL DE PLASTICOS DAC LT",
+    "App": 165.47,
+    "Site": 141.87,
+    "Marketplace": 69.4,
+    "Total_Digital": 376.74
+  },
+  {
+    "Laboratorio": "RJA - COMERCIO DE PRODUTOS NATURAIS LTDA",
+    "App": 56.63,
+    "Site": 297.01,
+    "Marketplace": 17.76,
+    "Total_Digital": 371.41
+  },
+  {
+    "Laboratorio": "FAZENDA BIOLAND AGROINDUSTRIA LTDA",
+    "App": 97.28,
+    "Site": 250.07,
+    "Marketplace": 21.57,
+    "Total_Digital": 368.92
+  },
+  {
+    "Laboratorio": "BLACK & DECKER DO BRASIL LTDA",
+    "App": 89.19,
+    "Site": 20.26,
+    "Marketplace": 258.76,
+    "Total_Digital": 368.21
+  },
+  {
+    "Laboratorio": "MULTILAR INDUSTRIA E COMERCIO LTDA",
+    "App": 140.64,
+    "Site": 151.49,
+    "Marketplace": 75.04,
+    "Total_Digital": 367.16
+  },
+  {
+    "Laboratorio": "Q UTIL COMERCIO DE MATERIAIS ELETRICOS E",
+    "App": 95.15,
+    "Site": 183.03,
+    "Marketplace": 85.03,
+    "Total_Digital": 363.21
+  },
+  {
+    "Laboratorio": "ABBOTT GENERICOS",
+    "App": 141.01,
+    "Site": 53.41,
+    "Marketplace": 167.38,
+    "Total_Digital": 361.8
+  },
+  {
+    "Laboratorio": "LABORATORIO VITALAB LTDA",
+    "App": 144.44,
+    "Site": 143.97,
+    "Marketplace": 72.0,
+    "Total_Digital": 360.41
+  },
+  {
+    "Laboratorio": "JOSE LUCAS TIEPO LTDA - EM RECUPERACAO J",
+    "App": 62.4,
+    "Site": 268.34,
+    "Marketplace": 23.34,
+    "Total_Digital": 354.08
+  },
+  {
+    "Laboratorio": "TOY E HOME IMPORTADORA E DISTRIBUIDORA L",
+    "App": 125.47,
+    "Site": 189.19,
+    "Marketplace": 34.01,
+    "Total_Digital": 348.67
+  },
+  {
+    "Laboratorio": "BOM DIA LTDA",
+    "App": 66.36,
+    "Site": 255.81,
+    "Marketplace": 21.66,
+    "Total_Digital": 343.82
+  },
+  {
+    "Laboratorio": "TIKBALM INDUSTRIA E COMERCIO DO BRASIL L",
+    "App": 160.23,
+    "Site": 90.32,
+    "Marketplace": 84.16,
+    "Total_Digital": 334.72
+  },
+  {
+    "Laboratorio": "GUIMARAES BRASIL IND E ALIMENTOS LTDA",
+    "App": 131.7,
+    "Site": 164.95,
+    "Marketplace": 37.55,
+    "Total_Digital": 334.2
+  },
+  {
+    "Laboratorio": "DOHLER S A",
+    "App": 156.01,
+    "Site": 0.0,
+    "Marketplace": 171.18,
+    "Total_Digital": 327.18
+  },
+  {
+    "Laboratorio": "DR. BHOREST INDUSTRIA E COMERCIO LTDA",
+    "App": 61.61,
+    "Site": 250.18,
+    "Marketplace": 12.85,
+    "Total_Digital": 324.63
+  },
+  {
+    "Laboratorio": "LUCKAU INDUSTRIA E COMERCIO DE ALIMENTOS",
+    "App": 125.54,
+    "Site": 144.73,
+    "Marketplace": 54.17,
+    "Total_Digital": 324.44
+  },
+  {
+    "Laboratorio": "MACKERDUZ IND DE PROD DE LIMPEZA LTDA",
+    "App": 154.2,
+    "Site": 53.0,
+    "Marketplace": 116.1,
+    "Total_Digital": 323.3
+  },
+  {
+    "Laboratorio": "AERZ QUIMICA INDUSTRIAL LTDA",
+    "App": 257.78,
+    "Site": 0.0,
+    "Marketplace": 65.25,
+    "Total_Digital": 323.03
+  },
+  {
+    "Laboratorio": "DOCES FORNO VELHO LTDA",
+    "App": 78.84,
+    "Site": 218.23,
+    "Marketplace": 19.28,
+    "Total_Digital": 316.35
+  },
+  {
+    "Laboratorio": "SIMPLE DERMO",
+    "App": 165.22,
+    "Site": 95.84,
+    "Marketplace": 41.26,
+    "Total_Digital": 302.32
+  },
+  {
+    "Laboratorio": "PIFFER INDUSTRIA E COMERCIO DE ARTIGOS P",
+    "App": 132.73,
+    "Site": 51.02,
+    "Marketplace": 117.02,
+    "Total_Digital": 300.76
+  },
+  {
+    "Laboratorio": "JAY LUC COSMETICOS LTDA",
+    "App": 66.95,
+    "Site": 201.02,
+    "Marketplace": 32.4,
+    "Total_Digital": 300.37
+  },
+  {
+    "Laboratorio": "SUPERVALE VERDE INDUST DE PROD QUIM LTDA",
+    "App": 16.57,
+    "Site": 257.55,
+    "Marketplace": 26.21,
+    "Total_Digital": 300.32
+  },
+  {
+    "Laboratorio": "BFBO ALIMENTOS LTDA",
+    "App": 24.31,
+    "Site": 262.38,
+    "Marketplace": 12.17,
+    "Total_Digital": 298.85
+  },
+  {
+    "Laboratorio": "CARMELA COMERCIO DE DOCES LTDA.",
+    "App": 82.18,
+    "Site": 183.32,
+    "Marketplace": 28.64,
+    "Total_Digital": 294.14
+  },
+  {
+    "Laboratorio": "ALESS KANAAN COMERCIO DE PRODUTOS VETERI",
+    "App": 108.19,
+    "Site": 85.92,
+    "Marketplace": 91.55,
+    "Total_Digital": 285.66
+  },
+  {
+    "Laboratorio": "PEGORARO DEYCON COMERCIO E DISTRIBUICAO",
+    "App": 33.36,
+    "Site": 207.8,
+    "Marketplace": 42.65,
+    "Total_Digital": 283.81
+  },
+  {
+    "Laboratorio": "CR CERAMICA LTDA",
+    "App": 156.46,
+    "Site": 70.91,
+    "Marketplace": 55.89,
+    "Total_Digital": 283.25
+  },
+  {
+    "Laboratorio": "FLUCTUS IMPORTADORA E EXPORTADORA LTDA",
+    "App": 54.28,
+    "Site": 194.03,
+    "Marketplace": 30.79,
+    "Total_Digital": 279.1
+  },
+  {
+    "Laboratorio": "AROMA BEM ESTAR IND COM DE PROD",
+    "App": 93.61,
+    "Site": 106.27,
+    "Marketplace": 66.97,
+    "Total_Digital": 266.86
+  },
+  {
+    "Laboratorio": "BOHRER",
+    "App": 65.38,
+    "Site": 172.5,
+    "Marketplace": 28.36,
+    "Total_Digital": 266.24
+  },
+  {
+    "Laboratorio": "MR PHARMA LTDA",
+    "App": 72.28,
+    "Site": 101.49,
+    "Marketplace": 90.94,
+    "Total_Digital": 264.71
+  },
+  {
+    "Laboratorio": "UNNIKA AESTHETICS WORLDWIDE LTDA",
+    "App": 121.0,
+    "Site": 50.7,
+    "Marketplace": 92.84,
+    "Total_Digital": 264.54
+  },
+  {
+    "Laboratorio": "SANTO BRILHO INDUSTRIA E COMERCIO LTDA.",
+    "App": 125.35,
+    "Site": 64.75,
+    "Marketplace": 73.81,
+    "Total_Digital": 263.92
+  },
+  {
+    "Laboratorio": "MALVI INDUSTRIA E COMERCIO DE ALIMENTOS",
+    "App": 93.65,
+    "Site": 141.58,
+    "Marketplace": 24.62,
+    "Total_Digital": 259.85
+  },
+  {
+    "Laboratorio": "SAGOL COMERCIAL E IMPORTADORA LTDA",
+    "App": 185.15,
+    "Site": 6.24,
+    "Marketplace": 68.28,
+    "Total_Digital": 259.67
+  },
+  {
+    "Laboratorio": "DISBAL RS DISTRIBUIDORA BALESTRIN LTDA",
+    "App": 48.0,
+    "Site": 174.38,
+    "Marketplace": 36.62,
+    "Total_Digital": 259.0
+  },
+  {
+    "Laboratorio": "AUTOAMERICA LTDA",
+    "App": 72.82,
+    "Site": 125.85,
+    "Marketplace": 56.02,
+    "Total_Digital": 254.69
+  },
+  {
+    "Laboratorio": "AVVIO INDUSTRIA & CIA LTDA",
+    "App": 114.97,
+    "Site": 61.49,
+    "Marketplace": 72.37,
+    "Total_Digital": 248.82
+  },
+  {
+    "Laboratorio": "SUPERMAX",
+    "App": 58.52,
+    "Site": 172.28,
+    "Marketplace": 17.85,
+    "Total_Digital": 248.66
+  },
+  {
+    "Laboratorio": "HIPER TEXTIL CAMA MESA E BANHO LTDA",
+    "App": 63.39,
+    "Site": 9.86,
+    "Marketplace": 174.64,
+    "Total_Digital": 247.89
+  },
+  {
+    "Laboratorio": "SAO DOMINGOS SA INDUSTRIA GRAFICA",
+    "App": 156.96,
+    "Site": 32.02,
+    "Marketplace": 57.59,
+    "Total_Digital": 246.57
+  },
+  {
+    "Laboratorio": "SBARAINI DISTRIBUIDORA LTDA",
+    "App": 63.33,
+    "Site": 142.84,
+    "Marketplace": 37.66,
+    "Total_Digital": 243.83
+  },
+  {
+    "Laboratorio": "COMERCIAL INSUMEDI LTDA",
+    "App": 106.57,
+    "Site": 40.9,
+    "Marketplace": 88.07,
+    "Total_Digital": 235.54
+  },
+  {
+    "Laboratorio": "OPS PANTIES IND E COM DE MODA INTIMA LTD",
+    "App": 59.45,
+    "Site": 118.43,
+    "Marketplace": 56.86,
+    "Total_Digital": 234.74
+  },
+  {
+    "Laboratorio": "CREMER S.A",
+    "App": 103.13,
+    "Site": 89.59,
+    "Marketplace": 39.91,
+    "Total_Digital": 232.63
+  },
+  {
+    "Laboratorio": "PROLIFE",
+    "App": 97.92,
+    "Site": 19.97,
+    "Marketplace": 110.79,
+    "Total_Digital": 228.68
+  },
+  {
+    "Laboratorio": "SANTA HELENA INDUSTRIA DE ALIMENTOS S/A",
+    "App": 41.77,
+    "Site": 175.45,
+    "Marketplace": 10.95,
+    "Total_Digital": 228.17
+  },
+  {
+    "Laboratorio": "MVS CONFECCOES EIRELI",
+    "App": 43.55,
+    "Site": 174.63,
+    "Marketplace": 4.86,
+    "Total_Digital": 223.04
+  },
+  {
+    "Laboratorio": "DINAMO COMERCIO E INDUSTRIA DE SAL LTDA",
+    "App": 46.33,
+    "Site": 98.49,
+    "Marketplace": 75.24,
+    "Total_Digital": 220.07
+  },
+  {
+    "Laboratorio": "INDUSTRIA DE VINAGRES PRINZ LTDA",
+    "App": 32.4,
+    "Site": 177.35,
+    "Marketplace": 8.72,
+    "Total_Digital": 218.47
+  },
+  {
+    "Laboratorio": "MOINHO INDUSTRIA COMERCIO E IMPORTACAO D",
+    "App": 52.61,
+    "Site": 108.1,
+    "Marketplace": 56.65,
+    "Total_Digital": 217.35
+  },
+  {
+    "Laboratorio": "INDUSTRIA DE ALIMENTOS PETRY LTDA",
+    "App": 43.71,
+    "Site": 157.63,
+    "Marketplace": 14.73,
+    "Total_Digital": 216.06
+  },
+  {
+    "Laboratorio": "NAXOS INDUSTRIA E COMERCIO DE UTILIDADES",
+    "App": 95.66,
+    "Site": 18.92,
+    "Marketplace": 98.89,
+    "Total_Digital": 213.46
+  },
+  {
+    "Laboratorio": "UNICA COMERCIO DE UTILIDADES DOMESTICAS",
+    "App": 85.69,
+    "Site": 41.01,
+    "Marketplace": 86.66,
+    "Total_Digital": 213.36
+  },
+  {
+    "Laboratorio": "ASSOCIADAS",
+    "App": 90.34,
+    "Site": 60.47,
+    "Marketplace": 60.21,
+    "Total_Digital": 211.02
+  },
+  {
+    "Laboratorio": "LOOPS COMERCIO IMPORTACAO E EXPORT LTDA",
+    "App": 112.22,
+    "Site": 47.59,
+    "Marketplace": 48.59,
+    "Total_Digital": 208.4
+  },
+  {
+    "Laboratorio": "DR REDDYS FARMACEUTICA DO BRASIL LTDA",
+    "App": 164.34,
+    "Site": 0.0,
+    "Marketplace": 40.63,
+    "Total_Digital": 204.96
+  },
+  {
+    "Laboratorio": "NEW WORLD.COM COMERCIAL LTDA",
+    "App": 107.96,
+    "Site": 65.88,
+    "Marketplace": 30.75,
+    "Total_Digital": 204.59
+  },
+  {
+    "Laboratorio": "INDUSTRIA DE COSMETICOS EFFE-S LTDA",
+    "App": 78.49,
+    "Site": 91.64,
+    "Marketplace": 34.21,
+    "Total_Digital": 204.35
+  },
+  {
+    "Laboratorio": "MERCUR S/A - MARCA PROPRIA",
+    "App": 165.8,
+    "Site": 0.0,
+    "Marketplace": 36.91,
+    "Total_Digital": 202.71
+  },
+  {
+    "Laboratorio": "S.T.P. COMERCIO DE PRODUTOS LTDA",
+    "App": 168.88,
+    "Site": 0.0,
+    "Marketplace": 33.71,
+    "Total_Digital": 202.59
+  },
+  {
+    "Laboratorio": "PERFULE COSMETICOS LIMITADA",
+    "App": 95.59,
+    "Site": 65.52,
+    "Marketplace": 37.11,
+    "Total_Digital": 198.22
+  },
+  {
+    "Laboratorio": "ROJEMAC IMPORTACAO E EXPORTACAO LIMITADA",
+    "App": 132.49,
+    "Site": 14.57,
+    "Marketplace": 49.84,
+    "Total_Digital": 196.9
+  },
+  {
+    "Laboratorio": "BIGNARDI IND E COM DE PAP E ARTEFAT LTDA",
+    "App": 58.67,
+    "Site": 126.13,
+    "Marketplace": 11.84,
+    "Total_Digital": 196.64
+  },
+  {
+    "Laboratorio": "VICTORIA COSMETICOS LTDA",
+    "App": 71.44,
+    "Site": 100.93,
+    "Marketplace": 21.71,
+    "Total_Digital": 194.09
+  },
+  {
+    "Laboratorio": "EVERALDO JUNIOR ELLER LTDA",
+    "App": 75.22,
+    "Site": 43.3,
+    "Marketplace": 67.88,
+    "Total_Digital": 186.39
+  },
+  {
+    "Laboratorio": "ACCO BRANDS BRASIL LTDA TILIBRA",
+    "App": 61.72,
+    "Site": 88.61,
+    "Marketplace": 30.17,
+    "Total_Digital": 180.49
+  },
+  {
+    "Laboratorio": "TRAMONTINA SUL S/A",
+    "App": 50.66,
+    "Site": 61.58,
+    "Marketplace": 65.72,
+    "Total_Digital": 177.97
+  },
+  {
+    "Laboratorio": "FERMENTAOS E CIA LTDA",
+    "App": 73.3,
+    "Site": 54.64,
+    "Marketplace": 48.43,
+    "Total_Digital": 176.38
+  },
+  {
+    "Laboratorio": "AGOSTINELLI COMERCIO DE COSMETICOS LTDA",
+    "App": 68.82,
+    "Site": 44.08,
+    "Marketplace": 60.73,
+    "Total_Digital": 173.63
+  },
+  {
+    "Laboratorio": "NATUGEN INDUSTRIA LTDA",
+    "App": 50.43,
+    "Site": 104.06,
+    "Marketplace": 18.02,
+    "Total_Digital": 172.52
+  },
+  {
+    "Laboratorio": "COSMETIC INDUSTRIA E COMERCIO LTDA.",
+    "App": 130.57,
+    "Site": 15.6,
+    "Marketplace": 25.3,
+    "Total_Digital": 171.47
+  },
+  {
+    "Laboratorio": "ADA INDUSTRIA DE ALIMENTOS LTDA",
+    "App": 60.66,
+    "Site": 89.71,
+    "Marketplace": 18.25,
+    "Total_Digital": 168.62
+  },
+  {
+    "Laboratorio": "DANILLA FOODS BRASIL LTDA",
+    "App": 30.7,
+    "Site": 130.78,
+    "Marketplace": 6.46,
+    "Total_Digital": 167.95
+  },
+  {
+    "Laboratorio": "MULTIPLA",
+    "App": 40.03,
+    "Site": 81.43,
+    "Marketplace": 44.76,
+    "Total_Digital": 166.22
+  },
+  {
+    "Laboratorio": "WAMA PRODUTOS PARA LABORATORIO LTDA",
+    "App": 75.38,
+    "Site": 40.49,
+    "Marketplace": 50.21,
+    "Total_Digital": 166.07
+  },
+  {
+    "Laboratorio": "NUTRISUL SA PRODUTOS ALIMENTICIOS",
+    "App": 30.09,
+    "Site": 123.84,
+    "Marketplace": 11.62,
+    "Total_Digital": 165.55
+  },
+  {
+    "Laboratorio": "GUEDES VINICOLA LTDA",
+    "App": 81.34,
+    "Site": 0.0,
+    "Marketplace": 82.11,
+    "Total_Digital": 163.45
+  },
+  {
+    "Laboratorio": "LABORATORIO NATUREYE",
+    "App": 44.49,
+    "Site": 28.69,
+    "Marketplace": 89.89,
+    "Total_Digital": 163.07
+  },
+  {
+    "Laboratorio": "COOPERATIVA SANTA CLARA LTDA",
+    "App": 35.68,
+    "Site": 112.83,
+    "Marketplace": 14.04,
+    "Total_Digital": 162.55
+  },
+  {
+    "Laboratorio": "FUGINI ALIMENTOS LTDA",
+    "App": 37.2,
+    "Site": 113.71,
+    "Marketplace": 9.68,
+    "Total_Digital": 160.6
+  },
+  {
+    "Laboratorio": "INNOVATIVE WATER CARE INDUST E COMERC",
+    "App": 63.67,
+    "Site": 30.33,
+    "Marketplace": 65.57,
+    "Total_Digital": 159.57
+  },
+  {
+    "Laboratorio": "PROMEX COMERC IMPORT E EXPORT LTDA",
+    "App": 29.41,
+    "Site": 60.74,
+    "Marketplace": 67.7,
+    "Total_Digital": 157.86
+  },
+  {
+    "Laboratorio": "ANADONA COMERCIO E CONFECCOES LTDA",
+    "App": 11.56,
+    "Site": 127.82,
+    "Marketplace": 15.91,
+    "Total_Digital": 155.29
+  },
+  {
+    "Laboratorio": "PAULO R LUDWIG & CIA LTDA",
+    "App": 49.02,
+    "Site": 75.42,
+    "Marketplace": 30.46,
+    "Total_Digital": 154.9
+  },
+  {
+    "Laboratorio": "ARTE NATIVA PRODUTOS NATURAIS LTDA",
+    "App": 76.37,
+    "Site": 37.7,
+    "Marketplace": 38.91,
+    "Total_Digital": 152.99
+  },
+  {
+    "Laboratorio": "MASP INDUSTRIA FARMACEUTICA LTDA",
+    "App": 66.66,
+    "Site": 63.06,
+    "Marketplace": 20.77,
+    "Total_Digital": 150.49
+  },
+  {
+    "Laboratorio": "KAIROS INDUSTRIA LTDA",
+    "App": 22.96,
+    "Site": 121.73,
+    "Marketplace": 3.17,
+    "Total_Digital": 147.87
+  },
+  {
+    "Laboratorio": "ESPACO COR SOLUCOES DIGITAIS LTDA",
+    "App": 59.29,
+    "Site": 59.12,
+    "Marketplace": 28.62,
+    "Total_Digital": 147.03
+  },
+  {
+    "Laboratorio": "DESINCHA COMERCIO DE PRODUTOS NAT LDA",
+    "App": 17.42,
+    "Site": 113.95,
+    "Marketplace": 13.95,
+    "Total_Digital": 145.33
+  },
+  {
+    "Laboratorio": "MEDINOVA LIFE SCIENCES IMP DIST PROD",
+    "App": 53.96,
+    "Site": 65.77,
+    "Marketplace": 24.13,
+    "Total_Digital": 143.86
+  },
+  {
+    "Laboratorio": "FARMAX S.A.",
+    "App": 108.09,
+    "Site": 0.0,
+    "Marketplace": 35.17,
+    "Total_Digital": 143.25
+  },
+  {
+    "Laboratorio": "WECARE COMERCIO DE COSMETICOS LTDA - ME",
+    "App": 77.92,
+    "Site": 13.52,
+    "Marketplace": 51.41,
+    "Total_Digital": 142.86
+  },
+  {
+    "Laboratorio": "EXCEL SERVICOS ADMINISTRATIVOS LTDA",
+    "App": 14.01,
+    "Site": 118.25,
+    "Marketplace": 8.25,
+    "Total_Digital": 140.5
+  },
+  {
+    "Laboratorio": "FERNANDO UNIFORMES EIRELI",
+    "App": 72.16,
+    "Site": 47.6,
+    "Marketplace": 19.2,
+    "Total_Digital": 138.96
+  },
+  {
+    "Laboratorio": "FREEDOM TECH LTDA",
+    "App": 103.31,
+    "Site": 11.25,
+    "Marketplace": 22.49,
+    "Total_Digital": 137.05
+  },
+  {
+    "Laboratorio": "LATIKA IMPORTACAO E EXPORTACAO LTDA",
+    "App": 0.0,
+    "Site": 134.6,
+    "Marketplace": 0.0,
+    "Total_Digital": 134.6
+  },
+  {
+    "Laboratorio": "LA URUGUAYA PADARIA E CONFEITARIA LTDA",
+    "App": 57.05,
+    "Site": 64.76,
+    "Marketplace": 11.01,
+    "Total_Digital": 132.81
+  },
+  {
+    "Laboratorio": "BELAS GARDEN COSMETICOS LTDA",
+    "App": 61.54,
+    "Site": 21.89,
+    "Marketplace": 48.51,
+    "Total_Digital": 131.95
+  },
+  {
+    "Laboratorio": "LINEA COMERCIAL DE ALIMENTOS LTDA",
+    "App": 39.5,
+    "Site": 57.69,
+    "Marketplace": 32.71,
+    "Total_Digital": 129.9
+  },
+  {
+    "Laboratorio": "PETLOOK PRODUTOS DE HIGIENE E ACESSORIOS",
+    "App": 99.48,
+    "Site": 1.29,
+    "Marketplace": 26.78,
+    "Total_Digital": 127.56
+  },
+  {
+    "Laboratorio": "QUESTAO DE GOSTO COMERCIO DE UTILIDADES",
+    "App": 72.73,
+    "Site": 19.2,
+    "Marketplace": 35.2,
+    "Total_Digital": 127.13
+  },
+  {
+    "Laboratorio": "VENTISOL INDUSTRIA E COMERCIO S.A.",
+    "App": 18.58,
+    "Site": 87.83,
+    "Marketplace": 20.39,
+    "Total_Digital": 126.8
+  },
+  {
+    "Laboratorio": "BALBOA INDUSTRIA DE ALIMENTOS LTDA",
+    "App": 23.74,
+    "Site": 80.06,
+    "Marketplace": 22.09,
+    "Total_Digital": 125.89
+  },
+  {
+    "Laboratorio": "INDUSTRIA DE BEBIDAS BRASAO VERDE LTDA",
+    "App": 64.78,
+    "Site": 43.14,
+    "Marketplace": 17.71,
+    "Total_Digital": 125.63
+  },
+  {
+    "Laboratorio": "NAKED NUTS INDUSTRIA & COMERCIO LTDA",
+    "App": 22.85,
+    "Site": 70.32,
+    "Marketplace": 31.45,
+    "Total_Digital": 124.63
+  },
+  {
+    "Laboratorio": "CULTURAMA LTDA",
+    "App": 52.46,
+    "Site": 46.31,
+    "Marketplace": 24.77,
+    "Total_Digital": 123.54
+  },
+  {
+    "Laboratorio": "L S B INDUSTRIA DE CONFECCOES LTDA",
+    "App": 0.0,
+    "Site": 121.73,
+    "Marketplace": 0.0,
+    "Total_Digital": 121.73
+  },
+  {
+    "Laboratorio": "SAO RAFAEL DESTRIBUIDORA DE BEBIDAS",
+    "App": 10.96,
+    "Site": 99.94,
+    "Marketplace": 7.54,
+    "Total_Digital": 118.43
+  },
+  {
+    "Laboratorio": "PIMPOLHO PRODUTOS INFANTIS LTDA",
+    "App": 52.72,
+    "Site": 48.76,
+    "Marketplace": 15.9,
+    "Total_Digital": 117.38
+  },
+  {
+    "Laboratorio": "BANANINHA PARAIBUNA LTDA",
+    "App": 30.12,
+    "Site": 80.59,
+    "Marketplace": 5.81,
+    "Total_Digital": 116.52
+  },
+  {
+    "Laboratorio": "ROMANO DISTRIBUIDORA LTDA",
+    "App": 74.01,
+    "Site": 0.0,
+    "Marketplace": 42.27,
+    "Total_Digital": 116.28
+  },
+  {
+    "Laboratorio": "BRASILUX IND COM IMPORTACAO E EXPOR LTDA",
+    "App": 20.79,
+    "Site": 81.12,
+    "Marketplace": 10.46,
+    "Total_Digital": 112.37
+  },
+  {
+    "Laboratorio": "COOPERATIVA CENTRAL AURORA ALIMENTOS",
+    "App": 0.55,
+    "Site": 110.75,
+    "Marketplace": 0.0,
+    "Total_Digital": 111.31
+  },
+  {
+    "Laboratorio": "M3 INDUSTRIA DE COSMETICOS LTDA",
+    "App": 27.85,
+    "Site": 61.0,
+    "Marketplace": 21.25,
+    "Total_Digital": 110.11
+  },
+  {
+    "Laboratorio": "ROCHA & FILHOS LTDA",
+    "App": 46.26,
+    "Site": 35.25,
+    "Marketplace": 27.55,
+    "Total_Digital": 109.06
+  },
+  {
+    "Laboratorio": "TAUMER INDUSTRIA METALURGICA LTDA",
+    "App": 33.06,
+    "Site": 56.65,
+    "Marketplace": 19.22,
+    "Total_Digital": 108.93
+  },
+  {
+    "Laboratorio": "POSEIDON INDUSTRIAL E COMERCIAL LTDA.",
+    "App": 36.74,
+    "Site": 34.41,
+    "Marketplace": 37.38,
+    "Total_Digital": 108.53
+  },
+  {
+    "Laboratorio": "NDI IMPORTACAO, EXPORTACAO, COMERCIO E R",
+    "App": 70.44,
+    "Site": 11.21,
+    "Marketplace": 24.63,
+    "Total_Digital": 106.28
+  },
+  {
+    "Laboratorio": "COLOPLAST DO BRASIL LTDA",
+    "App": 53.68,
+    "Site": 27.1,
+    "Marketplace": 25.29,
+    "Total_Digital": 106.07
+  },
+  {
+    "Laboratorio": "PRO-TECH INDUSTRIA DE EQUIPAMENTOS DE PR",
+    "App": 26.12,
+    "Site": 49.55,
+    "Marketplace": 30.28,
+    "Total_Digital": 105.95
+  },
+  {
+    "Laboratorio": "M SHOP COMERCIAL LTDA",
+    "App": 6.42,
+    "Site": 16.63,
+    "Marketplace": 79.8,
+    "Total_Digital": 102.85
+  },
+  {
+    "Laboratorio": "MALLUF DISTRIBUIDORA LTDA",
+    "App": 41.74,
+    "Site": 35.31,
+    "Marketplace": 24.19,
+    "Total_Digital": 101.24
+  },
+  {
+    "Laboratorio": "AKORA BRASIL IMPORT DE PRODUT AUTOMOTIVO",
+    "App": 34.17,
+    "Site": 42.88,
+    "Marketplace": 23.76,
+    "Total_Digital": 100.81
+  },
+  {
+    "Laboratorio": "SANJO COOPERATIVA AGRICOLA DE SAO JOAQUI",
+    "App": 17.47,
+    "Site": 77.85,
+    "Marketplace": 3.4,
+    "Total_Digital": 98.72
+  },
+  {
+    "Laboratorio": "JP INDUSTRIA FARMACÃŠUTICA S.A",
+    "App": 0.0,
+    "Site": 98.29,
+    "Marketplace": 0.0,
+    "Total_Digital": 98.29
+  },
+  {
+    "Laboratorio": "MIDWAY",
+    "App": 5.88,
+    "Site": 72.38,
+    "Marketplace": 19.7,
+    "Total_Digital": 97.95
+  },
+  {
+    "Laboratorio": "NEW STAR FOLH IND E COM DE ART DE BIJUT",
+    "App": 0.0,
+    "Site": 97.06,
+    "Marketplace": 0.0,
+    "Total_Digital": 97.06
+  },
+  {
+    "Laboratorio": "BARILLA DO BRASIL LTDA.",
+    "App": 0.0,
+    "Site": 94.23,
+    "Marketplace": 0.0,
+    "Total_Digital": 94.23
+  },
+  {
+    "Laboratorio": "ROMANATO ALIMENTOS LTDA",
+    "App": 61.21,
+    "Site": 0.0,
+    "Marketplace": 32.78,
+    "Total_Digital": 93.99
+  },
+  {
+    "Laboratorio": "CORTEX MANUFATURA DE BRINQUEDOS LTDA",
+    "App": 32.74,
+    "Site": 28.46,
+    "Marketplace": 32.28,
+    "Total_Digital": 93.49
+  },
+  {
+    "Laboratorio": "BRANNI LTDA",
+    "App": 20.09,
+    "Site": 0.0,
+    "Marketplace": 71.7,
+    "Total_Digital": 91.79
+  },
+  {
+    "Laboratorio": "SUPRA ERVAS BEBIDAS E ALIMENTOS LTDA",
+    "App": 29.52,
+    "Site": 5.19,
+    "Marketplace": 56.12,
+    "Total_Digital": 90.83
+  },
+  {
+    "Laboratorio": "LIDER SWEET IMPORTADORA - EXPORTADORA LT",
+    "App": 44.31,
+    "Site": 35.28,
+    "Marketplace": 7.92,
+    "Total_Digital": 87.51
+  },
+  {
+    "Laboratorio": "WS TOYS E HOME COMERCIO E IMPORTACAO EIR",
+    "App": 37.4,
+    "Site": 28.02,
+    "Marketplace": 22.07,
+    "Total_Digital": 87.5
+  },
+  {
+    "Laboratorio": "TIAGO GEHLEN",
+    "App": 0.0,
+    "Site": 87.4,
+    "Marketplace": 0.0,
+    "Total_Digital": 87.4
+  },
+  {
+    "Laboratorio": "DDN INDUSTRIA E COMERCIO PRODUTOS PARA S",
+    "App": 24.99,
+    "Site": 39.28,
+    "Marketplace": 22.82,
+    "Total_Digital": 87.09
+  },
+  {
+    "Laboratorio": "LUDOVICO J. TOZZO LTDA",
+    "App": 9.99,
+    "Site": 74.07,
+    "Marketplace": 2.53,
+    "Total_Digital": 86.58
+  },
+  {
+    "Laboratorio": "ASTA MEDICA ONCOLOGIA LTDA",
+    "App": 18.82,
+    "Site": 9.51,
+    "Marketplace": 56.48,
+    "Total_Digital": 84.82
+  },
+  {
+    "Laboratorio": "SHEEP INDUST E COM DE PRODUT AGROPECUAR",
+    "App": 17.47,
+    "Site": 47.8,
+    "Marketplace": 19.26,
+    "Total_Digital": 84.53
+  },
+  {
+    "Laboratorio": "FATEX INDUSTRIAL, COMERCIAL, IMPORTACAO",
+    "App": 52.39,
+    "Site": 3.63,
+    "Marketplace": 25.54,
+    "Total_Digital": 81.57
+  },
+  {
+    "Laboratorio": "EISAI LABORATORIOS LTDA",
+    "App": 81.12,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 81.12
+  },
+  {
+    "Laboratorio": "POLPA BRASIL DESIDRATADOS LTDA.",
+    "App": 29.5,
+    "Site": 42.26,
+    "Marketplace": 8.73,
+    "Total_Digital": 80.49
+  },
+  {
+    "Laboratorio": "PLATTELLI INDUSTRIA E COM DE COSMETICOS",
+    "App": 49.95,
+    "Site": 21.83,
+    "Marketplace": 8.47,
+    "Total_Digital": 80.24
+  },
+  {
+    "Laboratorio": "BRUNA TATTIELE MATOS SILVA 11947321609",
+    "App": 24.82,
+    "Site": 24.21,
+    "Marketplace": 30.91,
+    "Total_Digital": 79.94
+  },
+  {
+    "Laboratorio": "CHOCOLEITE INDUSTRIA DE ALIMENTOS LTDA",
+    "App": 1.53,
+    "Site": 72.72,
+    "Marketplace": 4.39,
+    "Total_Digital": 78.63
+  },
+  {
+    "Laboratorio": "MANDOLATES KONRAD LTDA",
+    "App": 3.69,
+    "Site": 70.54,
+    "Marketplace": 2.2,
+    "Total_Digital": 76.44
+  },
+  {
+    "Laboratorio": "BR SPICES INDUST E COMER DE ALIMEN S.A",
+    "App": 22.04,
+    "Site": 40.32,
+    "Marketplace": 13.99,
+    "Total_Digital": 76.35
+  },
+  {
+    "Laboratorio": "STITCH",
+    "App": 31.94,
+    "Site": 0.0,
+    "Marketplace": 44.06,
+    "Total_Digital": 76.0
+  },
+  {
+    "Laboratorio": "MOAS INDUSTR HB",
+    "App": 13.86,
+    "Site": 49.66,
+    "Marketplace": 11.96,
+    "Total_Digital": 75.47
+  },
+  {
+    "Laboratorio": "COOPERATIVA AGROINDUSTRIAL NOVA ALIANCA",
+    "App": 12.04,
+    "Site": 51.92,
+    "Marketplace": 11.37,
+    "Total_Digital": 75.34
+  },
+  {
+    "Laboratorio": "COMERCIAL FERANA LTDA",
+    "App": 48.16,
+    "Site": 0.0,
+    "Marketplace": 26.84,
+    "Total_Digital": 75.0
+  },
+  {
+    "Laboratorio": "LUFAMAR TOALHAS LTDA",
+    "App": 4.1,
+    "Site": 55.61,
+    "Marketplace": 14.72,
+    "Total_Digital": 74.44
+  },
+  {
+    "Laboratorio": "CAMPMED SOLUC EM PRODUT PARA SAUDE LTDA",
+    "App": 24.29,
+    "Site": 30.92,
+    "Marketplace": 19.1,
+    "Total_Digital": 74.31
+  },
+  {
+    "Laboratorio": "CSL IMPORTADORA LTDA.",
+    "App": 20.18,
+    "Site": 38.68,
+    "Marketplace": 14.78,
+    "Total_Digital": 73.64
+  },
+  {
+    "Laboratorio": "QUINOVA LTDA",
+    "App": 30.13,
+    "Site": 34.31,
+    "Marketplace": 7.82,
+    "Total_Digital": 72.26
+  },
+  {
+    "Laboratorio": "PH DISTRIBUIDORA DE COSMETICOS LTDA",
+    "App": 33.32,
+    "Site": 18.45,
+    "Marketplace": 20.26,
+    "Total_Digital": 72.04
+  },
+  {
+    "Laboratorio": "REVAL",
+    "App": 1.9,
+    "Site": 64.73,
+    "Marketplace": 5.27,
+    "Total_Digital": 71.91
+  },
+  {
+    "Laboratorio": "PRODIET NUTRICAO CLINICA",
+    "App": 17.76,
+    "Site": 28.59,
+    "Marketplace": 23.68,
+    "Total_Digital": 70.03
+  },
+  {
+    "Laboratorio": "PROTWINS ALIMENTAR LTDA",
+    "App": 38.4,
+    "Site": 20.5,
+    "Marketplace": 10.69,
+    "Total_Digital": 69.59
+  },
+  {
+    "Laboratorio": "HUS BRASIL LTDA",
+    "App": 4.01,
+    "Site": 61.94,
+    "Marketplace": 1.05,
+    "Total_Digital": 66.99
+  },
+  {
+    "Laboratorio": "YWP COMERCIO DISTRIBUICAO IMPORTACAO E E",
+    "App": 28.48,
+    "Site": 30.91,
+    "Marketplace": 7.28,
+    "Total_Digital": 66.67
+  },
+  {
+    "Laboratorio": "TWHITE OFICIAL TECNOLOGY LTDA",
+    "App": 52.27,
+    "Site": 0.0,
+    "Marketplace": 13.23,
+    "Total_Digital": 65.5
+  },
+  {
+    "Laboratorio": "SLOK INDUSTRIA DE BEBIDAS E ALIMENTOS",
+    "App": 30.95,
+    "Site": 16.17,
+    "Marketplace": 17.65,
+    "Total_Digital": 64.78
+  },
+  {
+    "Laboratorio": "EQUIPLEX",
+    "App": 43.3,
+    "Site": 0.0,
+    "Marketplace": 19.19,
+    "Total_Digital": 62.49
+  },
+  {
+    "Laboratorio": "PIRAHY ALIMENTOS LTDA",
+    "App": 16.27,
+    "Site": 42.16,
+    "Marketplace": 4.03,
+    "Total_Digital": 62.46
+  },
+  {
+    "Laboratorio": "DESIREE CARE LTDA",
+    "App": 26.83,
+    "Site": 0.0,
+    "Marketplace": 35.38,
+    "Total_Digital": 62.21
+  },
+  {
+    "Laboratorio": "IRMAOS FISCHER SA IND E COM",
+    "App": 30.18,
+    "Site": 0.0,
+    "Marketplace": 31.74,
+    "Total_Digital": 61.92
+  },
+  {
+    "Laboratorio": "BADALOTTI INDUSTRIA E COMERCIO DE CHAS E",
+    "App": 16.43,
+    "Site": 26.45,
+    "Marketplace": 18.53,
+    "Total_Digital": 61.41
+  },
+  {
+    "Laboratorio": "VLT BAZAR",
+    "App": 21.19,
+    "Site": 21.09,
+    "Marketplace": 18.77,
+    "Total_Digital": 61.05
+  },
+  {
+    "Laboratorio": "CIRLEI BERTELLA",
+    "App": 4.96,
+    "Site": 52.76,
+    "Marketplace": 3.03,
+    "Total_Digital": 60.75
+  },
+  {
+    "Laboratorio": "FLOW FOODS INDUSTRIA E COMERCIO DE ALIME",
+    "App": 20.79,
+    "Site": 35.56,
+    "Marketplace": 4.14,
+    "Total_Digital": 60.49
+  },
+  {
+    "Laboratorio": "PLASUTIL IND E COM DE PLASTICOS LTDA",
+    "App": 8.24,
+    "Site": 39.87,
+    "Marketplace": 12.34,
+    "Total_Digital": 60.46
+  },
+  {
+    "Laboratorio": "JD COMERCIO, IMPORTACAO E REPRESENTACOES",
+    "App": 42.01,
+    "Site": 2.6,
+    "Marketplace": 15.44,
+    "Total_Digital": 60.04
+  },
+  {
+    "Laboratorio": "MOAS IND E COM IMPORTACAO E EXP LTDA",
+    "App": 9.79,
+    "Site": 28.04,
+    "Marketplace": 22.19,
+    "Total_Digital": 60.02
+  },
+  {
+    "Laboratorio": "CAMPOS GERAIS INDUSTRIA DE ALIMENTOS",
+    "App": 7.06,
+    "Site": 40.05,
+    "Marketplace": 9.88,
+    "Total_Digital": 56.99
+  },
+  {
+    "Laboratorio": "MIDIAN IND E COMER DE ART DE ORTOP LTDA",
+    "App": 20.13,
+    "Site": 5.02,
+    "Marketplace": 31.55,
+    "Total_Digital": 56.7
+  },
+  {
+    "Laboratorio": "KAZAN COMERCIO, IMPORTACAO E EXPORTACA",
+    "App": 20.5,
+    "Site": 21.72,
+    "Marketplace": 12.5,
+    "Total_Digital": 54.73
+  },
+  {
+    "Laboratorio": "DISTRIBUIDORA DE MEDICAMENTOS PARANA LTD",
+    "App": 38.95,
+    "Site": 2.83,
+    "Marketplace": 12.94,
+    "Total_Digital": 54.72
+  },
+  {
+    "Laboratorio": "DGRANNO INDUSTRIA E COMERCIO DE MASSAS",
+    "App": 0.0,
+    "Site": 54.06,
+    "Marketplace": 0.0,
+    "Total_Digital": 54.06
+  },
+  {
+    "Laboratorio": "TEXSTAN INDUSTRIA BRASILEIRA DE EQUIPAME",
+    "App": 0.0,
+    "Site": 53.91,
+    "Marketplace": 0.0,
+    "Total_Digital": 53.91
+  },
+  {
+    "Laboratorio": "QUIMATRA IND E COM DE PRODUTOS QUIMICOS",
+    "App": 0.0,
+    "Site": 53.19,
+    "Marketplace": 0.0,
+    "Total_Digital": 53.19
+  },
+  {
+    "Laboratorio": "LABORATORIO SIMOES LTDA",
+    "App": 17.01,
+    "Site": 22.93,
+    "Marketplace": 12.17,
+    "Total_Digital": 52.11
+  },
+  {
+    "Laboratorio": "OPEN MEDICAL COMERC IMPORT E EXPORT LTDA",
+    "App": 34.46,
+    "Site": 5.13,
+    "Marketplace": 10.06,
+    "Total_Digital": 49.65
+  },
+  {
+    "Laboratorio": "VISAMAX SERVICOS GRAFICOS - EIRELI",
+    "App": 13.37,
+    "Site": 17.08,
+    "Marketplace": 18.15,
+    "Total_Digital": 48.6
+  },
+  {
+    "Laboratorio": "INP INDUSTRIA DE ALIMENTOS LTDA",
+    "App": 0.0,
+    "Site": 47.7,
+    "Marketplace": 0.0,
+    "Total_Digital": 47.7
+  },
+  {
+    "Laboratorio": "CROWN INDUSTRIA E COMERCIO DE CANETAS LT",
+    "App": 14.39,
+    "Site": 8.66,
+    "Marketplace": 23.54,
+    "Total_Digital": 46.59
+  },
+  {
+    "Laboratorio": "LVL IMPORTADORA LTDA",
+    "App": 31.02,
+    "Site": 0.0,
+    "Marketplace": 15.42,
+    "Total_Digital": 46.44
+  },
+  {
+    "Laboratorio": "KORUI ALTERNATIVAS LTDA.",
+    "App": 0.0,
+    "Site": 45.77,
+    "Marketplace": 0.0,
+    "Total_Digital": 45.77
+  },
+  {
+    "Laboratorio": "B4U IMPORTADORA, EXPORTADORA E COMERCIO",
+    "App": 17.42,
+    "Site": 20.0,
+    "Marketplace": 6.54,
+    "Total_Digital": 43.96
+  },
+  {
+    "Laboratorio": "IFAL IND E COM PROD FARMA LTDA",
+    "App": 26.35,
+    "Site": 8.54,
+    "Marketplace": 8.65,
+    "Total_Digital": 43.55
+  },
+  {
+    "Laboratorio": "APOTHEKER INDUSTRIA FARMACEUTICA LTDA",
+    "App": 26.41,
+    "Site": 13.41,
+    "Marketplace": 3.39,
+    "Total_Digital": 43.2
+  },
+  {
+    "Laboratorio": "GOLDEN INDUSTRIA E COMERCIO DE ARTEFATOS",
+    "App": 0.0,
+    "Site": 43.14,
+    "Marketplace": 0.0,
+    "Total_Digital": 43.14
+  },
+  {
+    "Laboratorio": "JR 2 COSMETICOS EIRELI",
+    "App": 14.95,
+    "Site": 18.89,
+    "Marketplace": 8.83,
+    "Total_Digital": 42.67
+  },
+  {
+    "Laboratorio": "ACCO BRANDS BRASIL LTDA FORONI",
+    "App": 13.16,
+    "Site": 19.1,
+    "Marketplace": 10.26,
+    "Total_Digital": 42.52
+  },
+  {
+    "Laboratorio": "PENHA DISTRIBUIDORA DE ARTESANATOS REGIO",
+    "App": 21.48,
+    "Site": 13.52,
+    "Marketplace": 6.29,
+    "Total_Digital": 41.29
+  },
+  {
+    "Laboratorio": "GC IMPORTACAO E DISTRIBUICAO LTDA",
+    "App": 5.91,
+    "Site": 32.68,
+    "Marketplace": 1.8,
+    "Total_Digital": 40.39
+  },
+  {
+    "Laboratorio": "VITTORI LABS",
+    "App": 31.58,
+    "Site": 0.0,
+    "Marketplace": 8.39,
+    "Total_Digital": 39.97
+  },
+  {
+    "Laboratorio": "CSL BEHRING",
+    "App": 39.36,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 39.36
+  },
+  {
+    "Laboratorio": "MY PACK PARTICIPACOES SOCIETARIAS LTDA",
+    "App": 0.0,
+    "Site": 39.32,
+    "Marketplace": 0.0,
+    "Total_Digital": 39.32
+  },
+  {
+    "Laboratorio": "PANASONIC DISTRIBUIDORA DO BRASIL LTDA",
+    "App": 5.91,
+    "Site": 23.39,
+    "Marketplace": 8.61,
+    "Total_Digital": 37.91
+  },
+  {
+    "Laboratorio": "CENTRO ATACADISTA BARAO LTDA",
+    "App": 0.0,
+    "Site": 36.7,
+    "Marketplace": 0.0,
+    "Total_Digital": 36.7
+  },
+  {
+    "Laboratorio": "MIMO TOYS DO BRASIL INDUSTRIA E COMERCIO",
+    "App": 14.9,
+    "Site": 16.9,
+    "Marketplace": 4.84,
+    "Total_Digital": 36.65
+  },
+  {
+    "Laboratorio": "CONFIDENCE SEMI JOIAS LTDA",
+    "App": 0.0,
+    "Site": 36.41,
+    "Marketplace": 0.0,
+    "Total_Digital": 36.41
+  },
+  {
+    "Laboratorio": "MOR DISTRIBUIDORA LTDA",
+    "App": 3.1,
+    "Site": 10.9,
+    "Marketplace": 21.91,
+    "Total_Digital": 35.92
+  },
+  {
+    "Laboratorio": "AMICUS INOV IND E COMERCIO DE PROD ELET",
+    "App": 0.0,
+    "Site": 35.76,
+    "Marketplace": 0.0,
+    "Total_Digital": 35.76
+  },
+  {
+    "Laboratorio": "CARDOSO INDUSTRIA E COMERCIO DE PLASTICO",
+    "App": 23.25,
+    "Site": 7.26,
+    "Marketplace": 4.98,
+    "Total_Digital": 35.48
+  },
+  {
+    "Laboratorio": "CHA PRENDA DO BRASIL INDUST E COM EIRELI",
+    "App": 0.0,
+    "Site": 35.1,
+    "Marketplace": 0.0,
+    "Total_Digital": 35.1
+  },
+  {
+    "Laboratorio": "AMAFIL - MATRIZ",
+    "App": 7.39,
+    "Site": 24.56,
+    "Marketplace": 2.46,
+    "Total_Digital": 34.41
+  },
+  {
+    "Laboratorio": "MOACIR SILVA DA ROSA",
+    "App": 12.95,
+    "Site": 2.24,
+    "Marketplace": 17.84,
+    "Total_Digital": 33.02
+  },
+  {
+    "Laboratorio": "STELLA DORO ALIMENTOS LTDA",
+    "App": 1.85,
+    "Site": 29.86,
+    "Marketplace": 0.68,
+    "Total_Digital": 32.38
+  },
+  {
+    "Laboratorio": "QUALICOCO LTDA",
+    "App": 2.04,
+    "Site": 27.14,
+    "Marketplace": 3.1,
+    "Total_Digital": 32.28
+  },
+  {
+    "Laboratorio": "EMS S/A",
+    "App": 18.25,
+    "Site": 0.0,
+    "Marketplace": 13.79,
+    "Total_Digital": 32.04
+  },
+  {
+    "Laboratorio": "TERRA SANTA ALIMENTOS LTDA -EPP",
+    "App": 2.99,
+    "Site": 28.84,
+    "Marketplace": 0.0,
+    "Total_Digital": 31.84
+  },
+  {
+    "Laboratorio": "CIPEL DO BRASIL INDUSTRIA DE PLASTICOS L",
+    "App": 12.25,
+    "Site": 0.0,
+    "Marketplace": 19.48,
+    "Total_Digital": 31.74
+  },
+  {
+    "Laboratorio": "V&W BRENER LTDA",
+    "App": 7.66,
+    "Site": 1.55,
+    "Marketplace": 22.38,
+    "Total_Digital": 31.6
+  },
+  {
+    "Laboratorio": "ETILUX IMPORTA E DISTRIB DE ART CUTE S.A",
+    "App": 6.52,
+    "Site": 14.85,
+    "Marketplace": 9.19,
+    "Total_Digital": 30.57
+  },
+  {
+    "Laboratorio": "FIBER TECIDOS TECNICOS LTDA",
+    "App": 9.51,
+    "Site": 17.69,
+    "Marketplace": 2.9,
+    "Total_Digital": 30.1
+  },
+  {
+    "Laboratorio": "BRW SUPRIMENTOS ESCOLARES E ESCRITORIO L",
+    "App": 15.24,
+    "Site": 9.53,
+    "Marketplace": 5.29,
+    "Total_Digital": 30.07
+  },
+  {
+    "Laboratorio": "LIZZ PROFESSIONAL",
+    "App": 5.36,
+    "Site": 12.22,
+    "Marketplace": 12.43,
+    "Total_Digital": 30.01
+  },
+  {
+    "Laboratorio": "PET FRIEND S COMERCIO IMPORTACAO E EXPOR",
+    "App": 0.0,
+    "Site": 29.69,
+    "Marketplace": 0.0,
+    "Total_Digital": 29.69
+  },
+  {
+    "Laboratorio": "EFX IMPORTACAO E EXPORTACAO EIRELI",
+    "App": 2.13,
+    "Site": 27.43,
+    "Marketplace": 0.0,
+    "Total_Digital": 29.56
+  },
+  {
+    "Laboratorio": "SHARK BRASIL S A",
+    "App": 9.78,
+    "Site": 13.32,
+    "Marketplace": 6.45,
+    "Total_Digital": 29.55
+  },
+  {
+    "Laboratorio": "CARIOCA INDUSTRIA E COMERCIO DE BRINQUED",
+    "App": 17.01,
+    "Site": 0.78,
+    "Marketplace": 11.53,
+    "Total_Digital": 29.33
+  },
+  {
+    "Laboratorio": "FIBRACX INDUSTRIA E COMERCIO DE BRINQUED",
+    "App": 12.08,
+    "Site": 8.51,
+    "Marketplace": 8.58,
+    "Total_Digital": 29.17
+  },
+  {
+    "Laboratorio": "BDC BRINQUEDOS LTDA",
+    "App": 19.25,
+    "Site": 5.28,
+    "Marketplace": 3.87,
+    "Total_Digital": 28.41
+  },
+  {
+    "Laboratorio": "SOLO SNACKS INDUST E COM DE ALIMENTOS",
+    "App": 10.88,
+    "Site": 12.91,
+    "Marketplace": 4.03,
+    "Total_Digital": 27.82
+  },
+  {
+    "Laboratorio": "FIOFORTE INDUSTRIA E COMERCIO LTDA",
+    "App": 0.0,
+    "Site": 17.16,
+    "Marketplace": 9.73,
+    "Total_Digital": 26.89
+  },
+  {
+    "Laboratorio": "TEKA TECELAGEM KUEHNRICH SA EM RECUP JUD",
+    "App": 0.0,
+    "Site": 26.83,
+    "Marketplace": 0.0,
+    "Total_Digital": 26.83
+  },
+  {
+    "Laboratorio": "GOAL COMERCIAL LTDA",
+    "App": 19.8,
+    "Site": 0.0,
+    "Marketplace": 6.88,
+    "Total_Digital": 26.68
+  },
+  {
+    "Laboratorio": "PATY ADESIVOS E COMERCIO DE COSMETICOS E",
+    "App": 9.49,
+    "Site": 11.34,
+    "Marketplace": 5.78,
+    "Total_Digital": 26.61
+  },
+  {
+    "Laboratorio": "ESTANCIA HIDROMIN SANTA RITA DE CASSIA",
+    "App": 0.62,
+    "Site": 25.85,
+    "Marketplace": 0.0,
+    "Total_Digital": 26.46
+  },
+  {
+    "Laboratorio": "AFETO INDUSTRIA E COMERCIO DE COSMETICOS",
+    "App": 18.56,
+    "Site": 0.0,
+    "Marketplace": 6.64,
+    "Total_Digital": 25.2
+  },
+  {
+    "Laboratorio": "HARTS - ALIMENTOS NATURAIS LTDA",
+    "App": 3.19,
+    "Site": 18.59,
+    "Marketplace": 3.2,
+    "Total_Digital": 24.97
+  },
+  {
+    "Laboratorio": "CSB CONF COM DE PROD ORTO RAD E HOSP LTD",
+    "App": 0.0,
+    "Site": 23.92,
+    "Marketplace": 0.0,
+    "Total_Digital": 23.92
+  },
+  {
+    "Laboratorio": "ENDOGEN INDUSTRIA, COMERCIO, IMPORTACAO,",
+    "App": 23.28,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 23.28
+  },
+  {
+    "Laboratorio": "CAMIL ALIMENTOS S.A.",
+    "App": 2.62,
+    "Site": 15.99,
+    "Marketplace": 4.07,
+    "Total_Digital": 22.68
+  },
+  {
+    "Laboratorio": "SONICLEAR NBR",
+    "App": 0.0,
+    "Site": 11.43,
+    "Marketplace": 10.94,
+    "Total_Digital": 22.37
+  },
+  {
+    "Laboratorio": "PEDRO DISTRIBUIDORA DE ALIMENTOS LTDA",
+    "App": 4.31,
+    "Site": 14.03,
+    "Marketplace": 3.95,
+    "Total_Digital": 22.29
+  },
+  {
+    "Laboratorio": "LABOR IMPORT COMERCIAL IMP EXP LTDA",
+    "App": 11.9,
+    "Site": 3.08,
+    "Marketplace": 7.14,
+    "Total_Digital": 22.12
+  },
+  {
+    "Laboratorio": "MG2 DISTRIBUIDORA DE SUPLEMENTOS ALIMENT",
+    "App": 1.6,
+    "Site": 17.2,
+    "Marketplace": 3.16,
+    "Total_Digital": 21.96
+  },
+  {
+    "Laboratorio": "COMERCIO IMPORTACAO EXPORTACAO E LOGISTI",
+    "App": 0.0,
+    "Site": 21.9,
+    "Marketplace": 0.0,
+    "Total_Digital": 21.9
+  },
+  {
+    "Laboratorio": "SMITH & NEPHEW COM DE PROD MEDICOS LTDA",
+    "App": 4.09,
+    "Site": 8.82,
+    "Marketplace": 8.97,
+    "Total_Digital": 21.88
+  },
+  {
+    "Laboratorio": "TAYLOR INDUSTRIA E COMERCIO LTDA",
+    "App": 13.57,
+    "Site": 2.49,
+    "Marketplace": 5.37,
+    "Total_Digital": 21.42
+  },
+  {
+    "Laboratorio": "BIOGEN IDEC",
+    "App": 0.0,
+    "Site": 21.09,
+    "Marketplace": 0.0,
+    "Total_Digital": 21.09
+  },
+  {
+    "Laboratorio": "BELA POR NATUREZA COM.MANIP.COSM.EIRELI",
+    "App": 1.06,
+    "Site": 19.66,
+    "Marketplace": 0.0,
+    "Total_Digital": 20.72
+  },
+  {
+    "Laboratorio": "GLOBAL TABS S.A.",
+    "App": 9.33,
+    "Site": 9.05,
+    "Marketplace": 1.58,
+    "Total_Digital": 19.96
+  },
+  {
+    "Laboratorio": "RAMPINELLI ALIMENTOS LTDA",
+    "App": 6.24,
+    "Site": 4.41,
+    "Marketplace": 8.99,
+    "Total_Digital": 19.64
+  },
+  {
+    "Laboratorio": "FURACAO PET IND E COM DE ARTI ANIMA LTDA",
+    "App": 1.77,
+    "Site": 9.95,
+    "Marketplace": 7.79,
+    "Total_Digital": 19.51
+  },
+  {
+    "Laboratorio": "COOPERATIVA CENTRAL GAUCHA LTDA",
+    "App": 0.96,
+    "Site": 18.06,
+    "Marketplace": 0.32,
+    "Total_Digital": 19.34
+  },
+  {
+    "Laboratorio": "PEROLA VERDE COMERCIO DE COSMETICOS LTDA",
+    "App": 9.61,
+    "Site": 0.0,
+    "Marketplace": 8.96,
+    "Total_Digital": 18.58
+  },
+  {
+    "Laboratorio": "NATUR PRODUKT ZDROVIT SPZOO",
+    "App": 9.72,
+    "Site": 1.55,
+    "Marketplace": 7.13,
+    "Total_Digital": 18.41
+  },
+  {
+    "Laboratorio": "KEPE COMERCIO DE FLORES LTDA",
+    "App": 0.0,
+    "Site": 18.36,
+    "Marketplace": 0.0,
+    "Total_Digital": 18.36
+  },
+  {
+    "Laboratorio": "BONELESKA S/A",
+    "App": 10.68,
+    "Site": 0.0,
+    "Marketplace": 7.5,
+    "Total_Digital": 18.18
+  },
+  {
+    "Laboratorio": "LONGEVICORP S.A.",
+    "App": 8.55,
+    "Site": 0.0,
+    "Marketplace": 9.47,
+    "Total_Digital": 18.02
+  },
+  {
+    "Laboratorio": "NATURAL ONE S.A.",
+    "App": 1.6,
+    "Site": 16.36,
+    "Marketplace": 0.0,
+    "Total_Digital": 17.96
+  },
+  {
+    "Laboratorio": "VIER INDUSTRIA E COMERCIO DO MATE LTDA",
+    "App": 2.55,
+    "Site": 13.23,
+    "Marketplace": 0.84,
+    "Total_Digital": 16.62
+  },
+  {
+    "Laboratorio": "ESSENCIA DI FIORI IND E COM DE COSMETICO",
+    "App": 3.72,
+    "Site": 10.34,
+    "Marketplace": 2.51,
+    "Total_Digital": 16.57
+  },
+  {
+    "Laboratorio": "ISLA",
+    "App": 5.11,
+    "Site": 8.63,
+    "Marketplace": 2.78,
+    "Total_Digital": 16.53
+  },
+  {
+    "Laboratorio": "ANNA FLORA IND E COM PERF E COSM EIRELI",
+    "App": 0.0,
+    "Site": 16.29,
+    "Marketplace": 0.0,
+    "Total_Digital": 16.29
+  },
+  {
+    "Laboratorio": "ONCOSMETIC COMERCIO DE COSMETICOS LTDA",
+    "App": 3.77,
+    "Site": 3.6,
+    "Marketplace": 8.38,
+    "Total_Digital": 15.75
+  },
+  {
+    "Laboratorio": "ELZA IND COM DE COSMETICOS LTDA",
+    "App": 3.66,
+    "Site": 10.64,
+    "Marketplace": 0.79,
+    "Total_Digital": 15.1
+  },
+  {
+    "Laboratorio": "SOAN COMERCIO E DISTRIBUICAOLTDA",
+    "App": 0.0,
+    "Site": 15.05,
+    "Marketplace": 0.0,
+    "Total_Digital": 15.05
+  },
+  {
+    "Laboratorio": "ATIVA BRASIL INDUSTRIA COMERCIO DE COSME",
+    "App": 4.81,
+    "Site": 3.22,
+    "Marketplace": 6.62,
+    "Total_Digital": 14.65
+  },
+  {
+    "Laboratorio": "SO DA NOIX COMERCIO DE BEBIDAS LTDA",
+    "App": 4.4,
+    "Site": 6.46,
+    "Marketplace": 3.7,
+    "Total_Digital": 14.57
+  },
+  {
+    "Laboratorio": "C. S. DO AMARAL COMERCIO LTDA",
+    "App": 0.0,
+    "Site": 13.97,
+    "Marketplace": 0.0,
+    "Total_Digital": 13.97
+  },
+  {
+    "Laboratorio": "SALUTARIS INDUSTRIA DE COSMETICOS LTDA",
+    "App": 4.41,
+    "Site": 4.05,
+    "Marketplace": 4.31,
+    "Total_Digital": 12.77
+  },
+  {
+    "Laboratorio": "PERFEITA ALQUIMIA PRODUTOS NATURAIS LTDA",
+    "App": 5.82,
+    "Site": 3.54,
+    "Marketplace": 2.86,
+    "Total_Digital": 12.23
+  },
+  {
+    "Laboratorio": "TRI GELO INDUSTRIA E COMERCIO LTDA",
+    "App": 0.0,
+    "Site": 12.19,
+    "Marketplace": 0.0,
+    "Total_Digital": 12.19
+  },
+  {
+    "Laboratorio": "ANA ROSA INDUSTRIA DE COSMETICOS LTDA",
+    "App": 0.0,
+    "Site": 12.05,
+    "Marketplace": 0.0,
+    "Total_Digital": 12.05
+  },
+  {
+    "Laboratorio": "BIG BEAUTY COSMETICOS LTDA",
+    "App": 0.0,
+    "Site": 12.01,
+    "Marketplace": 0.0,
+    "Total_Digital": 12.01
+  },
+  {
+    "Laboratorio": "LABVIX COMERCIO E REPRESENTACAO LTDA",
+    "App": 0.0,
+    "Site": 11.91,
+    "Marketplace": 0.0,
+    "Total_Digital": 11.91
+  },
+  {
+    "Laboratorio": "REMILI ALIMENTOS LTDA",
+    "App": 0.0,
+    "Site": 10.11,
+    "Marketplace": 1.5,
+    "Total_Digital": 11.61
+  },
+  {
+    "Laboratorio": "KUSH DO BRASIL IND DE COSMETICOS EIRELLI",
+    "App": 0.0,
+    "Site": 11.54,
+    "Marketplace": 0.0,
+    "Total_Digital": 11.54
+  },
+  {
+    "Laboratorio": "SANTHAILE INDUSTRIA E COMERCIO LTDA",
+    "App": 5.59,
+    "Site": 2.07,
+    "Marketplace": 3.7,
+    "Total_Digital": 11.36
+  },
+  {
+    "Laboratorio": "UNIAGRO INDUSTRIA E COMERCIO DE PRODUTOS",
+    "App": 0.85,
+    "Site": 8.63,
+    "Marketplace": 1.78,
+    "Total_Digital": 11.25
+  },
+  {
+    "Laboratorio": "SOUTH AMERICA IMPORTADORA E EXPORTADORA",
+    "App": 0.0,
+    "Site": 11.21,
+    "Marketplace": 0.0,
+    "Total_Digital": 11.21
+  },
+  {
+    "Laboratorio": "DELLY DISTRIB COSM E PREST SERVICOS LTDA",
+    "App": 0.0,
+    "Site": 10.86,
+    "Marketplace": 0.0,
+    "Total_Digital": 10.86
+  },
+  {
+    "Laboratorio": "CATHERINE BLOOM LTDA",
+    "App": 6.1,
+    "Site": 0.0,
+    "Marketplace": 4.56,
+    "Total_Digital": 10.66
+  },
+  {
+    "Laboratorio": "CK COMERCIO E IMPORTACAO LTDA",
+    "App": 0.0,
+    "Site": 10.63,
+    "Marketplace": 0.0,
+    "Total_Digital": 10.63
+  },
+  {
+    "Laboratorio": "YOU MAKE COSMETICOS LTDA",
+    "App": 2.94,
+    "Site": 4.26,
+    "Marketplace": 3.17,
+    "Total_Digital": 10.38
+  },
+  {
+    "Laboratorio": "HILE INDUSTRIA DE ALIMENTOS LTDA",
+    "App": 0.0,
+    "Site": 10.13,
+    "Marketplace": 0.0,
+    "Total_Digital": 10.13
+  },
+  {
+    "Laboratorio": "TALGE DESCARTAVEIS DO BRASIL LTDA",
+    "App": 2.8,
+    "Site": 2.85,
+    "Marketplace": 4.35,
+    "Total_Digital": 9.99
+  },
+  {
+    "Laboratorio": "REGINA INDUSTRIA E COMERCIO S A",
+    "App": 0.0,
+    "Site": 4.98,
+    "Marketplace": 4.99,
+    "Total_Digital": 9.97
+  },
+  {
+    "Laboratorio": "FUN INDUSTRIA E COMERCIO DE BRINQUEDOS L",
+    "App": 0.0,
+    "Site": 9.87,
+    "Marketplace": 0.0,
+    "Total_Digital": 9.87
+  },
+  {
+    "Laboratorio": "STEM PHARMACEUTICAL SUPLEM ALIMENT LTDA",
+    "App": 0.0,
+    "Site": 9.35,
+    "Marketplace": 0.0,
+    "Total_Digital": 9.35
+  },
+  {
+    "Laboratorio": "LINK COMERCIAL IMPORTADORA E EXPORTADORA",
+    "App": 4.18,
+    "Site": 0.0,
+    "Marketplace": 4.63,
+    "Total_Digital": 8.81
+  },
+  {
+    "Laboratorio": "ROGEMAR COMERCIAL E DISTRIBUIDORA LTDA",
+    "App": 0.51,
+    "Site": 8.18,
+    "Marketplace": 0.0,
+    "Total_Digital": 8.69
+  },
+  {
+    "Laboratorio": "RAR IND. E COM.DE ALIMENTOS LTDA",
+    "App": 0.0,
+    "Site": 7.69,
+    "Marketplace": 0.0,
+    "Total_Digital": 7.69
+  },
+  {
+    "Laboratorio": "LOMAER INDUSTRIA E COMERCIO LTDA",
+    "App": 1.06,
+    "Site": 6.28,
+    "Marketplace": 0.0,
+    "Total_Digital": 7.34
+  },
+  {
+    "Laboratorio": "VERDEMED FARMACEUTICA LTDA",
+    "App": 0.0,
+    "Site": 0.0,
+    "Marketplace": 7.14,
+    "Total_Digital": 7.14
+  },
+  {
+    "Laboratorio": "KIDDO INDUSTRIA E COMERCIO LTDA",
+    "App": 0.0,
+    "Site": 7.01,
+    "Marketplace": 0.0,
+    "Total_Digital": 7.01
+  },
+  {
+    "Laboratorio": "TOQUINHO JR INDUSTRIA DE ARTEFATOS DE MD",
+    "App": 2.14,
+    "Site": 4.68,
+    "Marketplace": 0.0,
+    "Total_Digital": 6.81
+  },
+  {
+    "Laboratorio": "KOAKOSKI COMERCIO DE COSMETICOS LTDA",
+    "App": 0.0,
+    "Site": 6.76,
+    "Marketplace": 0.0,
+    "Total_Digital": 6.76
+  },
+  {
+    "Laboratorio": "HIDRATH INDUSTRIA DE COSMETICOS LTDA",
+    "App": 0.0,
+    "Site": 6.7,
+    "Marketplace": 0.0,
+    "Total_Digital": 6.7
+  },
+  {
+    "Laboratorio": "LIFE ELETRONIC COMERCIO DE ACESSORIOS EL",
+    "App": 6.41,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 6.41
+  },
+  {
+    "Laboratorio": "RETRO COSMETICOS LTDA",
+    "App": 0.0,
+    "Site": 5.27,
+    "Marketplace": 0.95,
+    "Total_Digital": 6.23
+  },
+  {
+    "Laboratorio": "SEX FREE INDUSTRIA E COMERCIO DE ARTEFAT",
+    "App": 0.11,
+    "Site": 5.97,
+    "Marketplace": 0.11,
+    "Total_Digital": 6.18
+  },
+  {
+    "Laboratorio": "CERVEJARIA PETROPOLIS S A",
+    "App": 0.0,
+    "Site": 6.1,
+    "Marketplace": 0.0,
+    "Total_Digital": 6.1
+  },
+  {
+    "Laboratorio": "INFINITY INDUST COSMETICOS IMPOR EXP EIR",
+    "App": 0.0,
+    "Site": 2.6,
+    "Marketplace": 3.47,
+    "Total_Digital": 6.06
+  },
+  {
+    "Laboratorio": "VISUAL MAIS IND E COM DE CERAS DEP EIREL",
+    "App": 0.0,
+    "Site": 5.82,
+    "Marketplace": 0.0,
+    "Total_Digital": 5.82
+  },
+  {
+    "Laboratorio": "UNIKE COME IMPORT EXPORT E DIST DE COSM",
+    "App": 0.0,
+    "Site": 5.77,
+    "Marketplace": 0.0,
+    "Total_Digital": 5.77
+  },
+  {
+    "Laboratorio": "MONDELEZ LACTA ALIMENTOS LTDA",
+    "App": 1.33,
+    "Site": 4.06,
+    "Marketplace": 0.33,
+    "Total_Digital": 5.72
+  },
+  {
+    "Laboratorio": "MICREX IMPORTADORA E DISTRIBUIDORA LTDA",
+    "App": 5.71,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 5.71
+  },
+  {
+    "Laboratorio": "MULTILASER HB",
+    "App": 0.0,
+    "Site": 5.33,
+    "Marketplace": 0.0,
+    "Total_Digital": 5.33
+  },
+  {
+    "Laboratorio": "NCS INDUSTRIA E COMERCIO DE EQUIPAMENTOS",
+    "App": 5.02,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 5.02
+  },
+  {
+    "Laboratorio": "RIOQUIMICA LTDA",
+    "App": 3.42,
+    "Site": 0.71,
+    "Marketplace": 0.78,
+    "Total_Digital": 4.91
+  },
+  {
+    "Laboratorio": "PB FASHION LTDA",
+    "App": 0.0,
+    "Site": 4.9,
+    "Marketplace": 0.0,
+    "Total_Digital": 4.9
+  },
+  {
+    "Laboratorio": "SALUTAR ALIMENTOS LTDA",
+    "App": 0.0,
+    "Site": 4.05,
+    "Marketplace": 0.0,
+    "Total_Digital": 4.05
+  },
+  {
+    "Laboratorio": "CCA DO BRASIL LTDA",
+    "App": 0.0,
+    "Site": 3.85,
+    "Marketplace": 0.0,
+    "Total_Digital": 3.85
+  },
+  {
+    "Laboratorio": "LENIC COMERCIO DE COSMETICOS EIRELI ME",
+    "App": 0.0,
+    "Site": 3.62,
+    "Marketplace": 0.0,
+    "Total_Digital": 3.62
+  },
+  {
+    "Laboratorio": "GG DISTRIBUIDORA DE ALIMENTOS LTDA",
+    "App": 0.0,
+    "Site": 3.61,
+    "Marketplace": 0.0,
+    "Total_Digital": 3.61
+  },
+  {
+    "Laboratorio": "LILA HOME COMERCIO E IMPORTACAO LTDA",
+    "App": 0.0,
+    "Site": 3.49,
+    "Marketplace": 0.0,
+    "Total_Digital": 3.49
+  },
+  {
+    "Laboratorio": "CIEX DO BR INDUS E COME DE PROD CIR LTDA",
+    "App": 0.0,
+    "Site": 3.42,
+    "Marketplace": 0.0,
+    "Total_Digital": 3.42
+  },
+  {
+    "Laboratorio": "BIOFLORENCE IMPLEMENTOS ORTOPEDICOS LTDA",
+    "App": 0.0,
+    "Site": 3.37,
+    "Marketplace": 0.0,
+    "Total_Digital": 3.37
+  },
+  {
+    "Laboratorio": "JWP VENDAS ONLINE LTDA",
+    "App": 3.21,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 3.21
+  },
+  {
+    "Laboratorio": "EQUILIBRA VIDA COMERCIO DE PRODUTOS DE H",
+    "App": 0.0,
+    "Site": 3.1,
+    "Marketplace": 0.0,
+    "Total_Digital": 3.1
+  },
+  {
+    "Laboratorio": "BRASIL BEVERAGES IND E COM LTDA",
+    "App": 0.0,
+    "Site": 2.48,
+    "Marketplace": 0.53,
+    "Total_Digital": 3.01
+  },
+  {
+    "Laboratorio": "GIROTONDO COMER IMPORT E EXPORT LTDA",
+    "App": 0.0,
+    "Site": 2.96,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.96
+  },
+  {
+    "Laboratorio": "MARK MED INDUSTRIA E COMERCIO LTDA",
+    "App": 1.74,
+    "Site": 0.21,
+    "Marketplace": 0.95,
+    "Total_Digital": 2.9
+  },
+  {
+    "Laboratorio": "GL BRANDS IMPORT EXPORT E COMERC LTDA",
+    "App": 0.0,
+    "Site": 2.85,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.85
+  },
+  {
+    "Laboratorio": "DZC INDUSTRIA DE COSMETICOS EIRELI",
+    "App": 0.0,
+    "Site": 2.7,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.7
+  },
+  {
+    "Laboratorio": "ADRIANE CARA ALGAYER",
+    "App": 0.0,
+    "Site": 2.7,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.7
+  },
+  {
+    "Laboratorio": "MATERIAL DE USO E CONSUMO",
+    "App": 0.0,
+    "Site": 2.61,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.61
+  },
+  {
+    "Laboratorio": "BOTANIC DO BRASIL COSMETICOS EIRELI",
+    "App": 0.0,
+    "Site": 2.6,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.6
+  },
+  {
+    "Laboratorio": "CAMESA INDUSTRIA TEXTIL LTDA",
+    "App": 0.0,
+    "Site": 2.59,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.59
+  },
+  {
+    "Laboratorio": "KIGELO LTDA",
+    "App": 0.0,
+    "Site": 2.55,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.55
+  },
+  {
+    "Laboratorio": "-",
+    "App": 2.39,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.39
+  },
+  {
+    "Laboratorio": "HERPLAST INDUSTRIAL DE PLASTICOS LTDA",
+    "App": 0.0,
+    "Site": 2.38,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.38
+  },
+  {
+    "Laboratorio": "DELLO INDUSTRIA E COMERCIO LTDA",
+    "App": 0.93,
+    "Site": 1.43,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.37
+  },
+  {
+    "Laboratorio": "LABOTERRA INDUSTRIA E COMERCIO DE COSMET",
+    "App": 2.14,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.14
+  },
+  {
+    "Laboratorio": "INDUSTRIA E COMERCIO UGHINI LTDA",
+    "App": 0.0,
+    "Site": 2.11,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.11
+  },
+  {
+    "Laboratorio": "LUPO NORDESTE LTDA",
+    "App": 0.0,
+    "Site": 2.08,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.08
+  },
+  {
+    "Laboratorio": "JP BRINK LTDA",
+    "App": 0.0,
+    "Site": 2.07,
+    "Marketplace": 0.0,
+    "Total_Digital": 2.07
+  },
+  {
+    "Laboratorio": "NEWELL BRANDS BRASIL LTDA",
+    "App": 0.0,
+    "Site": 1.98,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.98
+  },
+  {
+    "Laboratorio": "BRF S.A.",
+    "App": 0.0,
+    "Site": 1.87,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.87
+  },
+  {
+    "Laboratorio": "LEGRAND PHARMA IND. FARMACEUTICA LTDA",
+    "App": 0.0,
+    "Site": 1.73,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.73
+  },
+  {
+    "Laboratorio": "BRASMART INDUSTRIA DO VESTUARIO EIRELI",
+    "App": 0.0,
+    "Site": 1.66,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.66
+  },
+  {
+    "Laboratorio": "VINOTAGE COSMETICOS EIRELI",
+    "App": 0.0,
+    "Site": 1.56,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.56
+  },
+  {
+    "Laboratorio": "PADARIA DIVINA ITALIA LTDA",
+    "App": 0.0,
+    "Site": 1.55,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.55
+  },
+  {
+    "Laboratorio": "ALTENBURG TEXTIL LTDA",
+    "App": 0.0,
+    "Site": 1.55,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.55
+  },
+  {
+    "Laboratorio": "FARMABRAZ LTDA",
+    "App": 0.0,
+    "Site": 1.5,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.5
+  },
+  {
+    "Laboratorio": "BASQUERA MENZEL & CIA LTDA",
+    "App": 0.0,
+    "Site": 1.45,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.45
+  },
+  {
+    "Laboratorio": "INDUSTRIA E COMERCIO DE PLASTICOS CAJOVI",
+    "App": 0.0,
+    "Site": 1.43,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.43
+  },
+  {
+    "Laboratorio": "EMBRAMED",
+    "App": 0.0,
+    "Site": 1.36,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.36
+  },
+  {
+    "Laboratorio": "FOCOFARMA DISTRIBUIDORA DE MEDIC LTDA",
+    "App": 0.0,
+    "Site": 1.29,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.29
+  },
+  {
+    "Laboratorio": "METALURGICA SIMONAGGIO LTDA",
+    "App": 0.0,
+    "Site": 1.29,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.29
+  },
+  {
+    "Laboratorio": "VILLA PIVA JUICE & FOODS LTDA",
+    "App": 0.0,
+    "Site": 0.41,
+    "Marketplace": 0.84,
+    "Total_Digital": 1.26
+  },
+  {
+    "Laboratorio": "BRS SUPRIMENTOS CORPORATIVOS SA",
+    "App": 0.0,
+    "Site": 1.03,
+    "Marketplace": 0.0,
+    "Total_Digital": 1.03
+  },
+  {
+    "Laboratorio": "EURO COMPANY BRASIL LTDA",
+    "App": 0.0,
+    "Site": 0.98,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.98
+  },
+  {
+    "Laboratorio": "CALLEGARO & IRMAOS LTDA",
+    "App": 0.0,
+    "Site": 0.83,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.83
+  },
+  {
+    "Laboratorio": "CODIHP COM E DIST DE HIG PESSOAL S/A",
+    "App": 0.0,
+    "Site": 0.78,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.78
+  },
+  {
+    "Laboratorio": "CRISTINA JANSSON ROSEK 88585298049",
+    "App": 0.0,
+    "Site": 0.78,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.78
+  },
+  {
+    "Laboratorio": "SANTA CLARA",
+    "App": 0.01,
+    "Site": 0.71,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.73
+  },
+  {
+    "Laboratorio": "NAPILLUS",
+    "App": 0.0,
+    "Site": 0.67,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.67
+  },
+  {
+    "Laboratorio": "DAVENE LTDA",
+    "App": 0.0,
+    "Site": 0.57,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.57
+  },
+  {
+    "Laboratorio": "BD",
+    "App": 0.51,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.51
+  },
+  {
+    "Laboratorio": "MARIA DELICIA INDUSTRIA DE ALIMENTOS",
+    "App": 0.0,
+    "Site": 0.49,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.49
+  },
+  {
+    "Laboratorio": "M.R. GOULART COSMETICOS EIRELI",
+    "App": 0.0,
+    "Site": 0.42,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.42
+  },
+  {
+    "Laboratorio": "FLORMEL INDUSTRIA DE ALIMENTOS LTDA",
+    "App": 0.0,
+    "Site": 0.41,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.41
+  },
+  {
+    "Laboratorio": "INDUSTRIAS RAYMOUND S EIRELI",
+    "App": 0.05,
+    "Site": 0.36,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.41
+  },
+  {
+    "Laboratorio": "MUCAMBO S/A",
+    "App": 0.0,
+    "Site": 0.26,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.26
+  },
+  {
+    "Laboratorio": "CIAGRO ALIMENTOS LTDA",
+    "App": 0.0,
+    "Site": 0.26,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.26
+  },
+  {
+    "Laboratorio": "FINA ESTAMPA",
+    "App": 0.0,
+    "Site": 0.16,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.16
+  },
+  {
+    "Laboratorio": "LIVRARIA E EDITORA MERITOS LTDA",
+    "App": 0.0,
+    "Site": 0.0,
+    "Marketplace": 0.0,
+    "Total_Digital": 0.0
+  }
+]

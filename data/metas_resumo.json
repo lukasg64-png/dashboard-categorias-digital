@@ -1,0 +1,17 @@
+{
+  "mes": "Setembro/2026",
+  "dias_mes": 30,
+  "total_skus": 28857,
+  "metas": {
+    "total": 54745244.0,
+    "app": 25942450.0,
+    "site": 14493892.0,
+    "marketplace": 14308902.0
+  },
+  "shares": {
+    "app": 47.39,
+    "site": 26.48,
+    "marketplace": 26.14
+  },
+  "atualizado_em": "2026-09-04 16:06:14"
+}
