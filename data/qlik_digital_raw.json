@@ -267913,5 +267913,9758 @@
     ]
   ],
   "maxDia": 3,
-  "origem": "Qlik Sense Engine (Sincronizado)"
+  "origem": "Qlik Sense Engine (Sincronizado)",
+  "laboratorios": [
+    [
+      "SITE",
+      "KUKA PRODUTOS INFANTIS LTDA",
+      308.36,
+      78.22999999999999,
+      106.22
+    ],
+    [
+      "SITE",
+      "CIMED MARCAS",
+      5688.789999999998,
+      5191.230000000001,
+      6627.170000000001
+    ],
+    [
+      "SITE",
+      "NUK",
+      174.3,
+      114.97,
+      189.04
+    ],
+    [
+      "SITE",
+      "RECKITT BENCKISER ( BRASIL ) LTDA",
+      543.36,
+      472.49,
+      918.4500000000002
+    ],
+    [
+      "SITE",
+      "CIMEX DISTRIBUIDORA DE COSMETICOS LTDAS",
+      39.99,
+      203.76000000000002,
+      0
+    ],
+    [
+      "SITE",
+      "LABORATORIOS BALDACCI LTDA",
+      18.5,
+      0,
+      99.79
+    ],
+    [
+      "SITE",
+      "MYRALIS PHARMA",
+      3858.4200000000005,
+      2536.0699999999997,
+      3064.59
+    ],
+    [
+      "SITE",
+      "LIBBS FARMACEUTICA LTDA 01",
+      16348.070000000002,
+      7103.669999999999,
+      16193.230000000003
+    ],
+    [
+      "SITE",
+      "HERBARIUM LABORATORIO BOTANICO S.A",
+      1433.6599999999999,
+      445.3299999999999,
+      4006.6400000000003
+    ],
+    [
+      "SITE",
+      "LAB EXPANSCIENCE COM IMP EXP PROD SAUDE",
+      211.42000000000002,
+      89.89,
+      73.59
+    ],
+    [
+      "SITE",
+      "CERAS JOHNSON LTDA",
+      477.09,
+      120.5,
+      369.21999999999997
+    ],
+    [
+      "SITE",
+      "RASKALO PRODUTOS DE BELEZA LTDA",
+      106.81,
+      71.24,
+      32.11
+    ],
+    [
+      "SITE",
+      "LUNDBECK",
+      487.28,
+      1403.52,
+      2860.8599999999997
+    ],
+    [
+      "SITE",
+      "PROCTER & GAMBLE DO BRASIL S/A",
+      51900.860000000015,
+      30211.530000000006,
+      57787.67000000002
+    ],
+    [
+      "SITE",
+      "THERASKIN FARMACEUTICA LTDA",
+      335.17999999999995,
+      410.64000000000004,
+      541.65
+    ],
+    [
+      "SITE",
+      "GLENMARK FARMACEUTICA LTDA",
+      321.45,
+      687.2099999999999,
+      218.48
+    ],
+    [
+      "SITE",
+      "ACHE RX/OTX",
+      9385.71,
+      7734.76,
+      10173.29
+    ],
+    [
+      "SITE",
+      "DAIICHI SANKYO BRASIL FARMACEUTICA LTDA",
+      1978.25,
+      1451.1200000000003,
+      5038.409999999998
+    ],
+    [
+      "SITE",
+      "ACHE DERMO",
+      88.06,
+      72.9,
+      914.86
+    ],
+    [
+      "SITE",
+      "EUROFARMA LABORATORIOS LTDA",
+      45377.52,
+      31030.89,
+      12628.529999999999
+    ],
+    [
+      "SITE",
+      "KIMBERLY-CLARK BRASIL IND COM PROD HIG 4",
+      16057.720000000001,
+      13536.169999999998,
+      23936.550000000003
+    ],
+    [
+      "SITE",
+      "MOKSHA8 BRASIL INDUSTRIA E COM DE MED LT",
+      38.37,
+      80.16,
+      473.70000000000005
+    ],
+    [
+      "SITE",
+      "ANALITIC TECNOLOGIA DE PRECISAO LTDA",
+      77.86999999999999,
+      54.88,
+      218.49
+    ],
+    [
+      "SITE",
+      "ALPI DISTRIBUIDORA DE COSMETICOS LTDA",
+      139.82,
+      101.03999999999999,
+      47.07
+    ],
+    [
+      "SITE",
+      "THERASKIN FARMACEUTICA DERMO",
+      48.76,
+      221.72,
+      453.43999999999994
+    ],
+    [
+      "SITE",
+      "LOREAL(PROCOSA LTDA)",
+      6428.970000000001,
+      3820.7300000000005,
+      3707.4
+    ],
+    [
+      "SITE",
+      "MARCHETTI & CIA LTDA CARAZINHO",
+      179.93,
+      0,
+      9.9
+    ],
+    [
+      "SITE",
+      "COTY BRASIL COMERCIO LTDA",
+      3152.5400000000004,
+      2091.58,
+      3141.350000000001
+    ],
+    [
+      "SITE",
+      "EUROFARMA OTC",
+      0,
+      139.96,
+      77.78
+    ],
+    [
+      "SITE",
+      "UNIAO QUIMICA GENERICOS",
+      98.62,
+      0,
+      24.9
+    ],
+    [
+      "SITE",
+      "PRATI DONADUZZI & CIA LTDA",
+      8923.14,
+      6845.630000000001,
+      5154.32
+    ],
+    [
+      "SITE",
+      "BIC APAR.MEDICOS LTDA",
+      314.51,
+      245.22000000000003,
+      381.5299999999999
+    ],
+    [
+      "SITE",
+      "DANONE LTDA MG",
+      5667.169999999999,
+      3919.8199999999997,
+      8562.86
+    ],
+    [
+      "SITE",
+      "TORRENT DO BRASIL LTDA",
+      4001.65,
+      3588.8599999999997,
+      2360.0900000000006
+    ],
+    [
+      "SITE",
+      "BELLIZ INDUSTRIA COM IMP EXP LTDA",
+      299.32,
+      465.1400000000001,
+      468.89999999999986
+    ],
+    [
+      "SITE",
+      "SUPERA RX MEDICAMENTOS LTDA.",
+      2098.63,
+      1738.68,
+      2669.5199999999995
+    ],
+    [
+      "SITE",
+      "BAYER S.A.",
+      1299.9,
+      2460.55,
+      5274.67
+    ],
+    [
+      "SITE",
+      "COLGATE PALMOLIVE LTDA",
+      4101.17,
+      3271.9500000000003,
+      4418
+    ],
+    [
+      "SITE",
+      "EMS GENERICOS",
+      25199.760000000006,
+      17209.2,
+      17985.519999999997
+    ],
+    [
+      "SITE",
+      "APSEN FARMACEUTICA SA.",
+      7903.069999999998,
+      5993.570000000001,
+      8136.25
+    ],
+    [
+      "SITE",
+      "SANOFI-AVENTIS FARMACEUTICA LTDA",
+      350.07,
+      0,
+      2711.48
+    ],
+    [
+      "SITE",
+      "FARMAX PRODUTOS FARMACEUTICOS LTDA",
+      220.09000000000003,
+      79.42999999999998,
+      276.22999999999996
+    ],
+    [
+      "SITE",
+      "MERCUR S/A - BODY CARE",
+      309.39,
+      627.9,
+      252.70000000000002
+    ],
+    [
+      "SITE",
+      "EMS PRESCRICAO",
+      33366.75,
+      23787.32,
+      9544.51
+    ],
+    [
+      "SITE",
+      "NACIONAL COMERCIAL HOSPITALAR S.A.",
+      0,
+      0,
+      79.9
+    ],
+    [
+      "SITE",
+      "HIGIMASTER DIST DE PROD DE HIG LTDA",
+      69.94999999999999,
+      28.35,
+      27.13
+    ],
+    [
+      "SITE",
+      "LABORATORIOS NAOS DO BRASIL LTDA",
+      269.99,
+      181.9,
+      164.9
+    ],
+    [
+      "SITE",
+      "MONDELEZ BRASIL LTDA",
+      486.03000000000014,
+      143.72,
+      117.49
+    ],
+    [
+      "SITE",
+      "ACCUMED PRODUTOS MED.HOSPITALARES LTDA",
+      816.2499999999999,
+      675.0999999999999,
+      762.6800000000001
+    ],
+    [
+      "SITE",
+      "LA ROCHE POSAY",
+      1737.1700000000005,
+      1255.4800000000002,
+      2086.11
+    ],
+    [
+      "SITE",
+      "HYPERMARCAS OTC",
+      4294.249999999999,
+      2012.0599999999995,
+      6313.720000000001
+    ],
+    [
+      "SITE",
+      "EUROFARMA CONVENIENCIA",
+      103.37000000000002,
+      84.70000000000002,
+      268.58000000000004
+    ],
+    [
+      "SITE",
+      "VICHY",
+      113.66,
+      387.70000000000005,
+      503.29
+    ],
+    [
+      "SITE",
+      "CREMER S.A.",
+      124.02000000000001,
+      194.52,
+      286.55
+    ],
+    [
+      "SITE",
+      "FARMOQUIMICA S/A",
+      6150.160000000001,
+      3627.5100000000007,
+      4652.72
+    ],
+    [
+      "SITE",
+      "CIMED GENERICOS",
+      7545.719999999999,
+      5151.5599999999995,
+      2849.9300000000003
+    ],
+    [
+      "SITE",
+      "FARMAX DISTRIBUIDORA S.A",
+      122.78999999999998,
+      135.08,
+      275.35
+    ],
+    [
+      "SITE",
+      "LILLO BABY",
+      122.41,
+      119.96,
+      90.55999999999999
+    ],
+    [
+      "SITE",
+      "ELI LILLY DO BRASIL LTDA",
+      247114.64999999997,
+      197911.87,
+      289881.5
+    ],
+    [
+      "SITE",
+      "MEDQUIMICA INDUSTRIA FARMACEUTICA LTDA",
+      113.50999999999999,
+      9.98,
+      116.06
+    ],
+    [
+      "SITE",
+      "ZALIKE COMERCIO IMP E EXP LTDA-FS",
+      10.24,
+      0,
+      10.08
+    ],
+    [
+      "SITE",
+      "ISDIN PRODUTOS FARMACEUTICOS LTDA",
+      152.52999999999997,
+      646.96,
+      1292.56
+    ],
+    [
+      "SITE",
+      "NOVARTIS BIOCIENCIAS SA",
+      2065.96,
+      1453.51,
+      3352.2699999999995
+    ],
+    [
+      "SITE",
+      "MAKRODAL DISTRIBUIDORA DE ALIMENTOS LTDA",
+      53.27,
+      28.68,
+      7.470000000000001
+    ],
+    [
+      "SITE",
+      "INSTITUTO PASTEUR DE COSMIATRIA LIMITADA",
+      452.64,
+      345.21000000000004,
+      446.43
+    ],
+    [
+      "SITE",
+      "MEDLEY GENERICOS",
+      1993.3899999999994,
+      1778.0800000000004,
+      3696.06
+    ],
+    [
+      "SITE",
+      "NAZCA LTDA",
+      233.08000000000004,
+      307.38000000000005,
+      198.59000000000003
+    ],
+    [
+      "SITE",
+      "SANDOZ DO BRASIL IND FARM LTDA",
+      1850.3699999999997,
+      2019.7599999999998,
+      1390.75
+    ],
+    [
+      "SITE",
+      "UNILEVER BRASIL GELADOS LTDA RS",
+      0,
+      175.61,
+      350.51
+    ],
+    [
+      "SITE",
+      "CASA GRANADO LAB FARM E DROGARIA SA",
+      494.56000000000006,
+      314.61999999999995,
+      913.5999999999998
+    ],
+    [
+      "SITE",
+      "SUNSTAR BRASIL IMPORTADORA DISTRIB LTDA",
+      84.78,
+      82.64999999999999,
+      227.42000000000002
+    ],
+    [
+      "SITE",
+      "COCA COLA COMPANY",
+      166.70000000000002,
+      115.86000000000001,
+      343.1
+    ],
+    [
+      "SITE",
+      "MEAD JOHNSON DO BRASIL COM E IMP DE PROD",
+      40.9,
+      227.5,
+      93.05
+    ],
+    [
+      "SITE",
+      "BEBIDAS FRUKI SA",
+      20.93,
+      5.26,
+      47.7
+    ],
+    [
+      "SITE",
+      "BAMBUSE INDUSTRIA E COMERCIO DE ACESSORI",
+      0,
+      49.99,
+      24.99
+    ],
+    [
+      "SITE",
+      "EUROFRAL IND DE PROD HIGIEN E TERMOPLAST",
+      18.34,
+      0,
+      29.17
+    ],
+    [
+      "SITE",
+      "BDF NIVEA LTDA - SP",
+      4162.82,
+      2086.77,
+      2154.6800000000007
+    ],
+    [
+      "SITE",
+      "MARJAN INDUSTRIA E COMERCIO LTDA",
+      1925.9899999999998,
+      2421.32,
+      4239.2300000000005
+    ],
+    [
+      "SITE",
+      "SOROCAPS INDUSTRIA FARMACEUTICA LTDA",
+      2031.4099999999996,
+      964.31,
+      821.26
+    ],
+    [
+      "SITE",
+      "MATTEL DO BRASIL LTDA",
+      89.9,
+      0,
+      100.6
+    ],
+    [
+      "SITE",
+      "HEDERRA COSMETICOS",
+      35.39,
+      20.83,
+      75.43
+    ],
+    [
+      "SITE",
+      "DISTRIPRIME DISTRIB DE COSMETICOS LTDA",
+      220.33,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "BETTANIN S A",
+      0,
+      0,
+      18.98
+    ],
+    [
+      "SITE",
+      "ESSITY DO BRASIL INDUST E COMERCIO LTDA",
+      1243.03,
+      888.9100000000001,
+      1771.26
+    ],
+    [
+      "SITE",
+      "COMERCIAL MEGA EIRELI",
+      13.98,
+      0,
+      25.560000000000002
+    ],
+    [
+      "SITE",
+      "BIOLAB SANUS FARMACEUTICA LTDA",
+      6017.090000000001,
+      5968.749999999999,
+      11518.999999999998
+    ],
+    [
+      "SITE",
+      "PAYOT",
+      639.09,
+      275.93,
+      165.37
+    ],
+    [
+      "SITE",
+      "DURACELL COMERCIAL E IMPORTADORA DO BRAS",
+      0,
+      80.89,
+      34.9
+    ],
+    [
+      "SITE",
+      "NEUGEBAUER ALIMENTOS S A",
+      32.32,
+      120.82000000000001,
+      34.71
+    ],
+    [
+      "SITE",
+      "GERMED USK",
+      333.94,
+      299.69000000000005,
+      92.09
+    ],
+    [
+      "SITE",
+      "HYPERMARCAS RX/OTX",
+      7324.029999999999,
+      4071.09,
+      3784.390000000001
+    ],
+    [
+      "SITE",
+      "VIATRIS FARMACEUTICA LABORATORIO",
+      213.35000000000002,
+      370.78999999999996,
+      623.9100000000001
+    ],
+    [
+      "SITE",
+      "AMGEN BIOTECNOLOGIA DO BRASIL LTDA.",
+      0,
+      4092.7999999999997,
+      0
+    ],
+    [
+      "SITE",
+      "UNILEVER BRASIL LTDA RS",
+      14341.039999999997,
+      11530.889999999994,
+      7517.7
+    ],
+    [
+      "SITE",
+      "WELLA BRASIL LTDA",
+      753.9600000000002,
+      671.26,
+      1866.5900000000001
+    ],
+    [
+      "SITE",
+      "BAUDUCCO E CIA LTDA",
+      55.239999999999995,
+      0,
+      9.65
+    ],
+    [
+      "SITE",
+      "HYPERMARCAS - ADOCANTES",
+      16.9,
+      0,
+      49.47
+    ],
+    [
+      "SITE",
+      "GLAXOSMITHKLINE BRASIL LTDA",
+      950.5,
+      675.0699999999998,
+      1251.8400000000001
+    ],
+    [
+      "SITE",
+      "BAGO LTDA",
+      482.57,
+      118.15,
+      222.63
+    ],
+    [
+      "SITE",
+      "PFIZER BRASIL LTDA",
+      2736.01,
+      1391.09,
+      3090.13
+    ],
+    [
+      "SITE",
+      "OPELLA (SANOFI OTC)",
+      2366.0499999999997,
+      2013.9499999999998,
+      3229.629999999999
+    ],
+    [
+      "SITE",
+      "FLORA PROD DE HIG E LIMP GO - CAPILAR",
+      911.3399999999999,
+      403.6599999999999,
+      819.82
+    ],
+    [
+      "SITE",
+      "SAUDE LTDA",
+      79.05000000000001,
+      119.85999999999999,
+      104.94999999999999
+    ],
+    [
+      "SITE",
+      "FARM E LAB HOMEOP ALMEIDA PRADO LTDA",
+      65.02000000000001,
+      115.97,
+      29.99
+    ],
+    [
+      "SITE",
+      "BIO EXTRATUS",
+      104.98,
+      228.12,
+      311.49
+    ],
+    [
+      "SITE",
+      "GENOM FARMACEUTICA LTDA",
+      1906.2999999999995,
+      1958.6399999999999,
+      2819.0999999999995
+    ],
+    [
+      "SITE",
+      "ORGANON FARMACEUTICA LTDA",
+      848.5600000000002,
+      1288.25,
+      2005.8300000000002
+    ],
+    [
+      "SITE",
+      "ABBOTT LABORATORIOS DO BRASIL LTDA",
+      1385.5900000000001,
+      503.97,
+      3340.5199999999995
+    ],
+    [
+      "SITE",
+      "CELLERA RX",
+      750.06,
+      1515,
+      3687.6599999999994
+    ],
+    [
+      "SITE",
+      "THERAMEX FARMACEUTICA LTDA",
+      1111.27,
+      777.7900000000001,
+      1801.83
+    ],
+    [
+      "SITE",
+      "GERMED FARMACEUTICA LTDA",
+      2122.9700000000003,
+      1373.9399999999996,
+      2014.24
+    ],
+    [
+      "SITE",
+      "HALEON OTC",
+      1186.34,
+      450.48,
+      727.98
+    ],
+    [
+      "SITE",
+      "CATARINENSE S.A",
+      774.5999999999999,
+      744.04,
+      1566.5600000000002
+    ],
+    [
+      "SITE",
+      "PROCTER OTC",
+      1382.5,
+      412.63,
+      2983.2899999999995
+    ],
+    [
+      "SITE",
+      "HYPERA MARCAS",
+      604.16,
+      569.28,
+      335.28999999999996
+    ],
+    [
+      "SITE",
+      "ALCON LABORATORIOS DO BRASIL LTDA",
+      1132.6299999999999,
+      589.98,
+      1353.02
+    ],
+    [
+      "SITE",
+      "VIDORA FARMACEUTICA LTDA",
+      86.63999999999999,
+      85.08,
+      77.51
+    ],
+    [
+      "SITE",
+      "KENVUE OTC",
+      1829.1299999999999,
+      934.53,
+      1507.1500000000003
+    ],
+    [
+      "SITE",
+      "3M DO BRASIL LTDA",
+      108.63999999999999,
+      242.74999999999997,
+      248.84000000000003
+    ],
+    [
+      "SITE",
+      "MEGALABS FARMACEUTICA S A",
+      1272.77,
+      1013.5799999999999,
+      1095.76
+    ],
+    [
+      "SITE",
+      "NEURAXPHARM BRASIL IMPORTACAO E DISTRIBU",
+      46.63,
+      73.50999999999999,
+      205.77999999999997
+    ],
+    [
+      "SITE",
+      "VULT",
+      41.89,
+      29.99,
+      106.98
+    ],
+    [
+      "SITE",
+      "BESINS HEALTHCARE BR COM  DIST MED LTDA",
+      1727.47,
+      1792.3300000000002,
+      4782.670000000001
+    ],
+    [
+      "SITE",
+      "EMS MARCAS",
+      235.07999999999998,
+      308.69999999999993,
+      703.01
+    ],
+    [
+      "SITE",
+      "BAYER OTC",
+      1732.6000000000001,
+      1558.0900000000001,
+      2527.73
+    ],
+    [
+      "SITE",
+      "MAWDSLEYS PHARMACEUTICALS DO BRASIL LTDA",
+      63.36000000000001,
+      12.39,
+      12.09
+    ],
+    [
+      "SITE",
+      "ALLERGAN PRODUTOS FARMACEUTICOS LTDA",
+      1037.1799999999998,
+      598.28,
+      527.58
+    ],
+    [
+      "SITE",
+      "LABORATORIOS OSORIO DE MORAES LTDA",
+      0,
+      80.78,
+      0
+    ],
+    [
+      "SITE",
+      "LEOFARMA LAB",
+      767.0699999999999,
+      1855.62,
+      1364.8700000000003
+    ],
+    [
+      "SITE",
+      "SANDOZ FARMA",
+      1406.37,
+      0,
+      976.9
+    ],
+    [
+      "SITE",
+      "RECKITT HB",
+      479.57000000000005,
+      308.99000000000007,
+      381.22
+    ],
+    [
+      "SITE",
+      "BOEHRINGER INGELHEIM DO BRASIL QUIMICA",
+      3201.3900000000003,
+      1738.7800000000002,
+      1669.3899999999999
+    ],
+    [
+      "SITE",
+      "BLANVER FARMOQUIMICA E FARMACEUTICA SA",
+      394.63000000000005,
+      2143.05,
+      563.0300000000001
+    ],
+    [
+      "SITE",
+      "TRB PHARMA IND QUIMICA E FARM LTDA",
+      376,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "GALDERMA BRASIL LTDA",
+      461.38,
+      635.4200000000001,
+      1184.0200000000002
+    ],
+    [
+      "SITE",
+      "BEIERSDORF INDUSTRIA E COMERCIO LTDA",
+      459.7,
+      151.2,
+      285.11
+    ],
+    [
+      "SITE",
+      "GERMED BRACE PHARMA",
+      1131.6699999999998,
+      1600.9399999999998,
+      754.79
+    ],
+    [
+      "SITE",
+      "MASTER LINE DO BRASIL LTDA",
+      24.99,
+      112.94999999999999,
+      68.97
+    ],
+    [
+      "SITE",
+      "CRISTALIA PROD QUIM FARMACEUTICOS LTDA",
+      2441.7900000000004,
+      2098.34,
+      2268.6099999999997
+    ],
+    [
+      "SITE",
+      "CONDOR BRASIL IND COM E TRANS COSM EIREL",
+      67.22,
+      217.01999999999998,
+      0
+    ],
+    [
+      "SITE",
+      "DEPIL BELLA",
+      79.88,
+      252.82,
+      153.57
+    ],
+    [
+      "SITE",
+      "LBS LABORASA IND FARMAC LTDA",
+      708.0699999999999,
+      661.3999999999999,
+      588.38
+    ],
+    [
+      "SITE",
+      "LATEX BRASIL",
+      53.97,
+      215.5,
+      152.76
+    ],
+    [
+      "SITE",
+      "UNIAO QUIMICA FARMACEUTICA NACIONAL S A",
+      705.1600000000001,
+      374.08,
+      1025.49
+    ],
+    [
+      "SITE",
+      "INCOTERM IND DE TERMOMETROS LTDA",
+      0,
+      17.98,
+      0
+    ],
+    [
+      "SITE",
+      "MERCK SHARP & DOHME FARMACEUTICA LTDA",
+      308.67,
+      0,
+      911.98
+    ],
+    [
+      "SITE",
+      "ACHE LABORATORIOS FARMACEUTICOS SA",
+      668.8100000000001,
+      104.61000000000001,
+      361.21
+    ],
+    [
+      "SITE",
+      "NESTLE NUTRITION",
+      26655.229999999996,
+      5107.629999999999,
+      13209.69
+    ],
+    [
+      "SITE",
+      "LABORATORIO TEUTO BRASILEIRO S A",
+      1435.8500000000001,
+      826.8700000000001,
+      746.08
+    ],
+    [
+      "SITE",
+      "IND QUIMICO FARMACEUTICA CEARENSE LTDA",
+      66.26,
+      4.99,
+      88.21000000000001
+    ],
+    [
+      "SITE",
+      "RANBAXY FARMACEUTICA LTDA",
+      1019.3299999999997,
+      1205.3200000000002,
+      348.78
+    ],
+    [
+      "SITE",
+      "ROCHE DIAGNOSTICA BRASIL LTDA.",
+      77.69999999999999,
+      632.4999999999999,
+      1713.8200000000002
+    ],
+    [
+      "SITE",
+      "SANFARMA INDUSTRIA, COMERCIO E IMPORTACA",
+      317.35,
+      257.25,
+      327.31999999999994
+    ],
+    [
+      "SITE",
+      "LOLLY BABY PRODUTOS INFANTIS LTDA",
+      118.83,
+      140.55,
+      203.44000000000003
+    ],
+    [
+      "SITE",
+      "DEPI-ROLL",
+      38.98,
+      19.99,
+      59.779999999999994
+    ],
+    [
+      "SITE",
+      "HYPERA GENERICOS",
+      639.14,
+      499.5199999999999,
+      294.44
+    ],
+    [
+      "SITE",
+      "VITAMEDIC INDUSTRIA FARMACEUTICA LTDA",
+      565.33,
+      436.31,
+      32.29
+    ],
+    [
+      "SITE",
+      "ADIUM S A",
+      963.7399999999999,
+      2027.3500000000001,
+      1152.33
+    ],
+    [
+      "SITE",
+      "CLESS COMERCIO DE COSMETICOS S.A.",
+      24.9,
+      130.95999999999998,
+      50.980000000000004
+    ],
+    [
+      "SITE",
+      "SEMINA INDUSTRIA E COMERCIO LTDA",
+      207.1,
+      118.28,
+      174.42000000000002
+    ],
+    [
+      "SITE",
+      "MERCK PHARMA",
+      1837.9699999999998,
+      1744.2099999999998,
+      2978.33
+    ],
+    [
+      "SITE",
+      "HALEON BRASIL DISTRIBUIDORA LTDA",
+      168.80000000000004,
+      301.68,
+      572.44
+    ],
+    [
+      "SITE",
+      "BECTON DICKINSON IND CIRURGICAS LTDA",
+      80.59,
+      31.1,
+      0
+    ],
+    [
+      "SITE",
+      "JOHNSON & JOHNSON BR IND COM SAUDE LTDA",
+      3729.3500000000004,
+      1595.2200000000003,
+      3128.9799999999996
+    ],
+    [
+      "SITE",
+      "KENVUE DERMO",
+      795.05,
+      1078.23,
+      2053.19
+    ],
+    [
+      "SITE",
+      "NEEZ BRASIL COMERCIO DE COSMETICOS LTDA",
+      73.66,
+      76.39999999999999,
+      32.260000000000005
+    ],
+    [
+      "SITE",
+      "DIVCOM PHARMA",
+      109.94999999999999,
+      472.1,
+      515.49
+    ],
+    [
+      "SITE",
+      "FARMOQUIMICA DERMO",
+      1414.35,
+      280.88,
+      1611.99
+    ],
+    [
+      "SITE",
+      "CIFARMA CIENTIFICA FARMACEUTICA LTDA",
+      0,
+      0,
+      90.98
+    ],
+    [
+      "SITE",
+      "ACHE MIP OTC/OTX",
+      2596.8600000000006,
+      1669.1299999999999,
+      2656.1700000000005
+    ],
+    [
+      "SITE",
+      "ZAMBON LABORATORIOS FARMACEUTICOS LTDA",
+      326.57,
+      519.61,
+      2077.679999999999
+    ],
+    [
+      "SITE",
+      "ADVERTISING OP ASS PLANEJ E PROPAG LTDA",
+      79.08,
+      215.58999999999997,
+      0
+    ],
+    [
+      "SITE",
+      "MEDLEY FARMA",
+      262.03000000000003,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "LABORATORIO WESP LTDA",
+      0,
+      122.00999999999999,
+      34.99
+    ],
+    [
+      "SITE",
+      "ASPEN PHARMA INDUSTRIA FARMACEUTICA LTDA",
+      798.1800000000001,
+      586.02,
+      659.8699999999999
+    ],
+    [
+      "SITE",
+      "BOTICARIO PRODUTOS DE BELEZA LTDA",
+      454.03999999999996,
+      822.4000000000001,
+      675.19
+    ],
+    [
+      "SITE",
+      "PERFUMES DANA DO BRASIL S.A.",
+      85.93999999999998,
+      85.20999999999998,
+      56.99999999999999
+    ],
+    [
+      "SITE",
+      "MOMENTA FARMACEUTICA LTDA.",
+      5265.659999999999,
+      3083.83,
+      7667.44
+    ],
+    [
+      "SITE",
+      "HYPERMARCAS DERMATO",
+      1041.74,
+      468.82000000000005,
+      459.77
+    ],
+    [
+      "SITE",
+      "CHIMICA BARUEL LTDA",
+      374.21000000000004,
+      442.34000000000003,
+      490.85
+    ],
+    [
+      "SITE",
+      "DKT BRASIL PRODUTOS DE USO PESSOAL LTDA",
+      450.4900000000001,
+      510.23000000000013,
+      362.6
+    ],
+    [
+      "SITE",
+      "HYPERMARCAS GB",
+      433.47999999999996,
+      367.8,
+      211.14
+    ],
+    [
+      "SITE",
+      "CHIESI FARMACEUTICA LTDA",
+      1189.26,
+      854.4599999999999,
+      338.55000000000007
+    ],
+    [
+      "SITE",
+      "BIOPAS BRASIL PROD FARMACEUTICOS LTDA",
+      270.2,
+      29.19,
+      10.17
+    ],
+    [
+      "SITE",
+      "GEYER MEDICAMENTOS S.A",
+      139.38,
+      58.53,
+      237.87
+    ],
+    [
+      "SITE",
+      "MERHEJE BRAZIL & COMPANHIA LTDA",
+      47.26,
+      125.67999999999998,
+      27.75
+    ],
+    [
+      "SITE",
+      "BOIRON S.A",
+      1099.83,
+      0,
+      290.43
+    ],
+    [
+      "SITE",
+      "CREMER – MARCA PROPRIA",
+      687.1800000000001,
+      756.3800000000002,
+      926.87
+    ],
+    [
+      "SITE",
+      "BONYPLUS IND COM COSM LTDA-BEAUTY COLOR",
+      513.98,
+      479.31,
+      187.01999999999998
+    ],
+    [
+      "SITE",
+      "EMS OTC",
+      1116.0399999999997,
+      594.0400000000001,
+      545
+    ],
+    [
+      "SITE",
+      "TAKEDA PHARMA LTDA",
+      2332.9,
+      2764.89,
+      10555.980000000001
+    ],
+    [
+      "SITE",
+      "LABORATORIOS SERVIER DO BRASIL LTDA",
+      843.52,
+      1067.1799999999998,
+      1515.7599999999998
+    ],
+    [
+      "SITE",
+      "MEDQUIMICA PHARMA",
+      13.29,
+      14.82,
+      13.13
+    ],
+    [
+      "SITE",
+      "SOFTYS BRASIL LTDA",
+      3054.77,
+      1356.4599999999998,
+      4289.869999999999
+    ],
+    [
+      "SITE",
+      "MAKROFARMA",
+      35.15,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "DAGUA NATURAL",
+      0,
+      0,
+      47.9
+    ],
+    [
+      "SITE",
+      "MARCO BONI",
+      30.479999999999997,
+      91.12,
+      57.05
+    ],
+    [
+      "SITE",
+      "LABORATORIO GROSS S A",
+      482.76,
+      565.5,
+      425.65
+    ],
+    [
+      "SITE",
+      "HEBRON S.A",
+      386.18999999999994,
+      166.12,
+      283.17
+    ],
+    [
+      "SITE",
+      "ABBOTT NUTRICAO",
+      0,
+      267.54,
+      93.75
+    ],
+    [
+      "SITE",
+      "EMBELLEZE LTDA",
+      96.94999999999999,
+      139.47,
+      93.94999999999999
+    ],
+    [
+      "SITE",
+      "PERFECT",
+      19.71,
+      0,
+      12
+    ],
+    [
+      "SITE",
+      "FLEXICOTTON IND COM SA",
+      51.400000000000006,
+      87.21000000000001,
+      89.99999999999999
+    ],
+    [
+      "SITE",
+      "GEOLAB GENERICOS",
+      1665.82,
+      1526.93,
+      256.85
+    ],
+    [
+      "SITE",
+      "EVER GREEN IND E COM LTDA",
+      608.9699999999999,
+      64.97,
+      146.95
+    ],
+    [
+      "SITE",
+      "LABORATORIOS FERRING LTDA",
+      0,
+      196.36,
+      48.19
+    ],
+    [
+      "SITE",
+      "GALDERMA DERMO",
+      357.42,
+      661.8399999999999,
+      641.29
+    ],
+    [
+      "SITE",
+      "NEOPAN DO BRASIL LTDA",
+      49.97,
+      30.979999999999997,
+      32.379999999999995
+    ],
+    [
+      "SITE",
+      "KLEY HERTZ",
+      390.01,
+      344.86,
+      268.55
+    ],
+    [
+      "SITE",
+      "LEXUNS LABORATORIO NUTRACEUTICO E INDUS",
+      0,
+      0,
+      130.95999999999998
+    ],
+    [
+      "SITE",
+      "LABORATORIO GLOBO LTDA",
+      369.15,
+      126.66999999999999,
+      385.21
+    ],
+    [
+      "SITE",
+      "NOVO NORDISK FARMACEUTICA DO BRASIL LTDA",
+      41375,
+      25060.44,
+      204073.56
+    ],
+    [
+      "SITE",
+      "LABORATORIOS PIERRE FABRE BR LTDA CD",
+      415.41,
+      252.97000000000003,
+      311.96
+    ],
+    [
+      "SITE",
+      "DRYLOCK TECHNOLOGIES BRASIL LTDA",
+      5392.5,
+      6090.909999999998,
+      6714.519999999999
+    ],
+    [
+      "SITE",
+      "EUROFARMA GEN",
+      1671.72,
+      1006.45,
+      746.2999999999998
+    ],
+    [
+      "SITE",
+      "EMBECTA BRASIL LTDA",
+      1003.4300000000001,
+      364.90000000000003,
+      78.19
+    ],
+    [
+      "SITE",
+      "GENOMMA LABORATORIES DO BRASIL LTDA.",
+      307.34000000000003,
+      277.88,
+      473.45000000000005
+    ],
+    [
+      "SITE",
+      "BENNE INDUSTRIA FARMACEUTICA LTDA",
+      75.88,
+      149.8,
+      0
+    ],
+    [
+      "SITE",
+      "EMS HB",
+      55.98,
+      186.63,
+      60.89
+    ],
+    [
+      "SITE",
+      "CELLERA FARMACEUTICA S A",
+      221.58,
+      159.74,
+      86.69999999999999
+    ],
+    [
+      "SITE",
+      "CURADEN SWISS DO BRASIL IMP E EXP LTDA",
+      241.38,
+      0,
+      45.58
+    ],
+    [
+      "SITE",
+      "SANCHEZ CANO LTDA",
+      44.99,
+      44.99,
+      63.58
+    ],
+    [
+      "SITE",
+      "NESTLE CONVENIENCIA",
+      36.67,
+      86.58,
+      0
+    ],
+    [
+      "SITE",
+      "MONTESANO IND E COM DE PROD QUIM EIRELI",
+      20.03,
+      22.9,
+      19.9
+    ],
+    [
+      "SITE",
+      "TEUTO MARCAS",
+      740.6400000000001,
+      137.39000000000001,
+      51.3
+    ],
+    [
+      "SITE",
+      "IMBECOR PRODUTOS DE BELEZA LTDA",
+      59.69999999999999,
+      25.99,
+      59.42999999999999
+    ],
+    [
+      "SITE",
+      "MEMPHIS S/A INDUSTRIAL",
+      26.270000000000003,
+      9.25,
+      0
+    ],
+    [
+      "SITE",
+      "AVAMILLER LTDA",
+      147.29,
+      87.75999999999999,
+      84.02999999999999
+    ],
+    [
+      "SITE",
+      "BENEVA COMPANHIA DE MARCAS S/A",
+      0,
+      137.92999999999998,
+      74.04
+    ],
+    [
+      "SITE",
+      "BIOIDEAL DISTRIB DE PROD PARA SAUDE LTDA",
+      75.8,
+      75.86,
+      540.2099999999999
+    ],
+    [
+      "SITE",
+      "PROMAG INDUSTRIA E COMERCIO LTDA",
+      75.99,
+      43.99,
+      0
+    ],
+    [
+      "SITE",
+      "ASTRAZENECA DO BRASIL LTDA",
+      1561.71,
+      562.41,
+      2982.71
+    ],
+    [
+      "SITE",
+      "DI HELLEN INDUSTRIA DE COSMETICOS LTDA",
+      0,
+      25.98,
+      0
+    ],
+    [
+      "SITE",
+      "DELICATE MODA INFANTIL LTDA",
+      -39.49,
+      0,
+      34.49
+    ],
+    [
+      "SITE",
+      "HANES BRANDS BRASIL TEXTIL LTDA",
+      0,
+      0,
+      94.49
+    ],
+    [
+      "SITE",
+      "PHISALIA PROD DE BELEZA",
+      102.63,
+      0,
+      31.64
+    ],
+    [
+      "SITE",
+      "IND COM DE PROD BELEZA YAMA LTDA",
+      40.47,
+      59.980000000000004,
+      31.27
+    ],
+    [
+      "SITE",
+      "BL INDUSTRIA OTICA LTDA",
+      750.3499999999999,
+      336.06,
+      397.35
+    ],
+    [
+      "SITE",
+      "FLORA PRODUTOS DE HIG E LIMP GO - PELE",
+      24.950000000000003,
+      58.269999999999996,
+      37.57
+    ],
+    [
+      "SITE",
+      "MEDILAR IMP. DISTR.PROD.MED. HOSPITALAR",
+      0,
+      269.94,
+      0
+    ],
+    [
+      "SITE",
+      "GEDEON RICHTER DO BRASIL IMPORTADORA",
+      762.6500000000001,
+      420.46,
+      703.69
+    ],
+    [
+      "SITE",
+      "HEARST LABORATORIOS DO BRASIL LTDA",
+      0,
+      0,
+      14.98
+    ],
+    [
+      "SITE",
+      "HISAMITSU FARMACEUTICA DO BRASIL LTDA",
+      262.90999999999997,
+      235.37,
+      159.75
+    ],
+    [
+      "SITE",
+      "LABORATORIO FARMACEUTICO ELOFAR LTDA",
+      13.33,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "EUROART",
+      0,
+      38.99,
+      94.99
+    ],
+    [
+      "SITE",
+      "XALINGO SA INDUSTRIA E COMERCIO",
+      0,
+      0,
+      149.8
+    ],
+    [
+      "SITE",
+      "AMOVERI FARMA S.A.",
+      0,
+      13.99,
+      42.91
+    ],
+    [
+      "SITE",
+      "RV TECNOLOGIA E SISTEMAS S.A.",
+      59.8,
+      31.41,
+      89.6
+    ],
+    [
+      "SITE",
+      "MEGALABS DERMO",
+      484.63,
+      341.9,
+      0
+    ],
+    [
+      "SITE",
+      "AIRELA INDUSTRIA FARMACEUTICA LTDA",
+      43.839999999999996,
+      39.56,
+      86.28
+    ],
+    [
+      "SITE",
+      "PHILIPS DO BRASIL LTDA",
+      391.71999999999997,
+      544.52,
+      284.12
+    ],
+    [
+      "SITE",
+      "LATICINIOS BELA VISTA LTDA",
+      33.629999999999995,
+      94.86999999999999,
+      58.5
+    ],
+    [
+      "SITE",
+      "DIGREPAL DIST GRESSLER DE PROD ALIM LTDA",
+      63.3,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "CATARINENSE NUTRICAO",
+      1204.02,
+      1096.17,
+      288.5
+    ],
+    [
+      "SITE",
+      "GENOM FARMACEUTICA DERMO",
+      107.8,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "NLS ALIMENTOS LTDA",
+      19.99,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "SENSELLES INDUSTRIA E COMERCIO DE COSMET",
+      803.7900000000001,
+      247.08,
+      323.56
+    ],
+    [
+      "SITE",
+      "MASTERFOODS BRASIL ALIMENTOS LTDA.",
+      22.9,
+      26.9,
+      7.34
+    ],
+    [
+      "SITE",
+      "M DIAS BRANCO S.A. INDUSTRIA E COMERCIO",
+      18.62,
+      2.99,
+      11.9
+    ],
+    [
+      "SITE",
+      "EQUILIBRIUM DISTRIBUIDORA DE MEDICAMENTO",
+      114.78999999999999,
+      33.9,
+      42.06
+    ],
+    [
+      "SITE",
+      "NELIDA DO BRASIL COMERCIO E IMPORTACAO L",
+      452.8499999999999,
+      209.75,
+      205.65000000000003
+    ],
+    [
+      "SITE",
+      "DAHUER LABORATORIO LTDA",
+      335.74,
+      235.72000000000003,
+      0
+    ],
+    [
+      "SITE",
+      "SERVICOS FARMACIAS",
+      207.37,
+      40,
+      54.97
+    ],
+    [
+      "SITE",
+      "ARDRAK IND COM IMP EXP PROD NAT ALIM LTD",
+      0,
+      0,
+      60.6
+    ],
+    [
+      "SITE",
+      "OMRON HEALTHCARE BRASIL REP E DIST LTDA",
+      426.04,
+      563.01,
+      0
+    ],
+    [
+      "SITE",
+      "ZYDUS NIKKHO",
+      0,
+      0,
+      84.35
+    ],
+    [
+      "SITE",
+      "GRUNENTHAL DO BRASIL FARMACEUTICA LTDA",
+      0,
+      277.59,
+      421.28
+    ],
+    [
+      "SITE",
+      "HYPERA S A",
+      23.68,
+      34.21,
+      99.29
+    ],
+    [
+      "SITE",
+      "GIOVANI GRITTI LTDA",
+      13.22,
+      0,
+      4.59
+    ],
+    [
+      "SITE",
+      "ARRAYANES PROD HIGIENICOS IND E COM LTDA",
+      0,
+      0,
+      51.96
+    ],
+    [
+      "SITE",
+      "BIOSINTETICA LABORATORIOS FARMACEU",
+      552.09,
+      756.4399999999999,
+      387.68
+    ],
+    [
+      "SITE",
+      "ASTELLAS",
+      281.46,
+      199.17,
+      171.14
+    ],
+    [
+      "SITE",
+      "BIOLAB FARMA GENERICOS LTDA",
+      1484.13,
+      471.81,
+      222.24
+    ],
+    [
+      "SITE",
+      "MULTILAB FARMA",
+      37.98,
+      126.91,
+      36.29
+    ],
+    [
+      "SITE",
+      "BLAU FARMACEUTICA S.A.",
+      55.8,
+      381.23,
+      100.41
+    ],
+    [
+      "SITE",
+      "HIDROLIGHT DO BRASIL S.A",
+      129.99,
+      0,
+      178.86999999999998
+    ],
+    [
+      "SITE",
+      "TERMOGEL",
+      16.99,
+      16.99,
+      86.96000000000001
+    ],
+    [
+      "SITE",
+      "LABORATORIO MELPOEJO LTDA",
+      100.38,
+      49.69,
+      39.99
+    ],
+    [
+      "SITE",
+      "ALTHAIA EQUALIV",
+      1086.68,
+      562.85,
+      794.5300000000001
+    ],
+    [
+      "SITE",
+      "NATULAB LABORATORIO S A",
+      153.86,
+      67.69,
+      183.24
+    ],
+    [
+      "SITE",
+      "HEMAFARMA COMERCIO E INDUSTRIA FARMACEUT",
+      0,
+      0,
+      35.59
+    ],
+    [
+      "SITE",
+      "TEVA",
+      3904.0499999999997,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "MEDIX BRASIL LTDA",
+      271.27000000000004,
+      212.56,
+      163.76999999999998
+    ],
+    [
+      "SITE",
+      "FHACES",
+      8.97,
+      15.97,
+      0
+    ],
+    [
+      "SITE",
+      "JOSAPAR JOAQUIM OLIVEIRA SA PARTICIPACOE",
+      73.98,
+      0,
+      71.02000000000001
+    ],
+    [
+      "SITE",
+      "HOMEOPATIA WALDEMIRO PEREIRA LAB. IND",
+      164.10999999999999,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "GOTA DOURADA PROD NAT LTDA",
+      0,
+      0,
+      19.99
+    ],
+    [
+      "SITE",
+      "PHARMASCIENCE",
+      245.92000000000002,
+      248.34,
+      103.84
+    ],
+    [
+      "SITE",
+      "SUZANO S.A.",
+      26.08,
+      17.81,
+      44.160000000000004
+    ],
+    [
+      "SITE",
+      "ALTHAIA",
+      5485.98,
+      4507.6,
+      2553.6499999999996
+    ],
+    [
+      "SITE",
+      "MUNDIAL",
+      210.20999999999998,
+      0,
+      16.99
+    ],
+    [
+      "SITE",
+      "ARESE PHARMA LTDA",
+      73.5,
+      299.03999999999996,
+      97.98
+    ],
+    [
+      "SITE",
+      "CAZI QUIMICA FARMACEUTICA IND COM LTDA",
+      45.72,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "LIBBS FARMACEUTICA DERMO",
+      0,
+      0,
+      281.11
+    ],
+    [
+      "SITE",
+      "MUNDIPHARMA BR PROD MED FARMACEUTICOS",
+      295.45,
+      200.72,
+      151.82
+    ],
+    [
+      "SITE",
+      "QUIFA FARMACEUTICA DO BRASIL LTDA",
+      387.51,
+      406.29999999999995,
+      1516.26
+    ],
+    [
+      "SITE",
+      "NOVA QUIMICA GENERICOS",
+      1422.27,
+      1464.14,
+      2522.41
+    ],
+    [
+      "SITE",
+      "MARDAM PROD HIGIENICOS LTDA",
+      0,
+      33.98,
+      0
+    ],
+    [
+      "SITE",
+      "GEOLAB INDUSTRIA FARMACEUTICA S/A",
+      159.89000000000001,
+      0,
+      235.89999999999998
+    ],
+    [
+      "SITE",
+      "LECLAIR INDUSTRIA E COMERCIO DE PERFUMES",
+      13.98,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "MEDLVEN COMER E REPRES PROD HOSPI LTDA",
+      1166.33,
+      851.55,
+      471.93999999999994
+    ],
+    [
+      "SITE",
+      "VITAMEDIC GENERICOS",
+      146.67000000000002,
+      70.47,
+      61.919999999999995
+    ],
+    [
+      "SITE",
+      "MERCK S/A",
+      327.5,
+      282.79,
+      116.35
+    ],
+    [
+      "SITE",
+      "ESCOBEL IND COM DE PROD DE HIG BEL LTDA",
+      38.879999999999995,
+      42.69,
+      76.35
+    ],
+    [
+      "SITE",
+      "ADIUM DERMO",
+      0,
+      95.2,
+      0
+    ],
+    [
+      "SITE",
+      "LABOFARMA PRODUTOS FARMACEUTICOS LTDA.",
+      0,
+      0,
+      18.3
+    ],
+    [
+      "SITE",
+      "LEGRAND OFTALMO",
+      224.94,
+      268.9,
+      1280.6
+    ],
+    [
+      "SITE",
+      "MENTOS GOMAS LTDA",
+      3.47,
+      3.79,
+      46.690000000000005
+    ],
+    [
+      "SITE",
+      "IMEC IND DE MEDIC CUSTODIA LTDA",
+      72.94999999999999,
+      49.74999999999999,
+      11.46
+    ],
+    [
+      "SITE",
+      "FBM COMERCIO E PROMOCAO DE VENDAS LTDA",
+      49.9,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "LA VITTA COSMETICA - EIRELI",
+      11.99,
+      35.98,
+      35.97
+    ],
+    [
+      "SITE",
+      "HASKELL COSMETICA NATURAL",
+      0,
+      0,
+      149.67000000000002
+    ],
+    [
+      "SITE",
+      "ACRILEX TINTAS ESPECIAIS S A",
+      15.98,
+      68.94,
+      29.58
+    ],
+    [
+      "SITE",
+      "SUNMASTER DO BRASIL EIRELI",
+      0,
+      0,
+      16.5
+    ],
+    [
+      "SITE",
+      "MACRILAN BEAUTY",
+      0,
+      19.98,
+      0
+    ],
+    [
+      "SITE",
+      "HENKEL LTDA",
+      0,
+      33.8,
+      10.11
+    ],
+    [
+      "SITE",
+      "SANIBRAS MEDICAMENTOS E NUTRICAO LTDA",
+      75.12,
+      0,
+      71.9
+    ],
+    [
+      "SITE",
+      "SUPLEY LAB DE ALIMENTOS E SUPL NUTR LTDA",
+      515.69,
+      506.70000000000005,
+      113.42999999999999
+    ],
+    [
+      "SITE",
+      "HALEX ISTAR INDUSTRIA FARMACEUTICA SA",
+      235.10000000000002,
+      0,
+      134.51999999999998
+    ],
+    [
+      "SITE",
+      "DIVCOM PHARMA DERMO",
+      0,
+      0,
+      171.89000000000001
+    ],
+    [
+      "SITE",
+      "FBM INDUSTRIA FARMACEUTICA LTDA",
+      63,
+      0,
+      191.39999999999998
+    ],
+    [
+      "SITE",
+      "NATURALLE CEREAIS E ALIMENTOS LTDA",
+      5.07,
+      27.04,
+      3.18
+    ],
+    [
+      "SITE",
+      "HEEL DO BRASIL BIOMEDICA LTDA",
+      170.06,
+      249.99,
+      466.31
+    ],
+    [
+      "SITE",
+      "LOLLIPOPS COSMETICS - DISTRIBUIDORA DE C",
+      288.85,
+      38.99,
+      79.1
+    ],
+    [
+      "SITE",
+      "MAXINUTRI SUPLEMENTOS NUTRICIONAIS LTDA",
+      0,
+      0,
+      38.18
+    ],
+    [
+      "SITE",
+      "EXELTIS LABORATORIO FARMACEUTICO LTDA",
+      2667.84,
+      2820.96,
+      4069.23
+    ],
+    [
+      "SITE",
+      "UNITED MEDICAL LTDA",
+      514.83,
+      514.83,
+      0
+    ],
+    [
+      "SITE",
+      "BRITANIA ELETRODOMESTICOS SA",
+      969.49,
+      1554.5500000000002,
+      1213.75
+    ],
+    [
+      "SITE",
+      "NESTLE NUTRITION VITAMINAS",
+      138.41,
+      449.72,
+      623.3699999999999
+    ],
+    [
+      "SITE",
+      "TECHLINE",
+      0,
+      89.9,
+      0
+    ],
+    [
+      "SITE",
+      "RED BULL DO BRASIL LTDA",
+      183.46,
+      142.2,
+      51.980000000000004
+    ],
+    [
+      "SITE",
+      "BASTON INDUSTRIA DE AEROSSOIS LTDA",
+      412.67,
+      200.27999999999997,
+      700.2400000000001
+    ],
+    [
+      "SITE",
+      "BALDONI PRODUTOS NATURAIS COMERCIO INDUS",
+      38.05,
+      14.9,
+      96.03999999999999
+    ],
+    [
+      "SITE",
+      "CULTURAMA EDITORA E DIST. LTDA",
+      0,
+      0,
+      9.99
+    ],
+    [
+      "SITE",
+      "A.W. FABER CASTELL S.A.",
+      0,
+      29.99,
+      0
+    ],
+    [
+      "SITE",
+      "YUDEVAN DISTRIBUIDORA E IMPORTADORA LTDA",
+      13.9,
+      13.9,
+      0
+    ],
+    [
+      "SITE",
+      "NATURAL LIFE COM IMPO E EXPOR COS EIRELI",
+      64.17,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "ARCOM S/A",
+      9.58,
+      0,
+      81.86
+    ],
+    [
+      "SITE",
+      "VIDA FORTE NUTRIENTES INDUSTRIA E COMERC",
+      602.65,
+      820.09,
+      1030.22
+    ],
+    [
+      "SITE",
+      "BEBE SAUDE LTDA",
+      177.3,
+      604.5,
+      539.14
+    ],
+    [
+      "SITE",
+      "PALTERM INDUSTRIA E COMERCIO LTDA",
+      0,
+      0,
+      69.9
+    ],
+    [
+      "SITE",
+      "MILI S/A",
+      478.43000000000006,
+      220.04999999999998,
+      567.74
+    ],
+    [
+      "SITE",
+      "CERAVE",
+      746.9500000000002,
+      610.33,
+      42.9
+    ],
+    [
+      "SITE",
+      "PAIS E FILHOS",
+      19.99,
+      38.34,
+      127.99999999999999
+    ],
+    [
+      "SITE",
+      "MDA COMERCIO DE ALIMENTOS LTDA",
+      0,
+      12.98,
+      9.99
+    ],
+    [
+      "SITE",
+      "ENOVA FOODS S A",
+      4.39,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "MULTILASER INDUSTRIAL S.A.",
+      1076.03,
+      436.03000000000003,
+      0
+    ],
+    [
+      "SITE",
+      "INDAIAL PAPEL EMBALAGENS LTDA",
+      0,
+      36.94,
+      15.35
+    ],
+    [
+      "SITE",
+      "BELEZE & OLIVEIRA-COMER DE COSMETIC LTDA",
+      914.3900000000001,
+      339.08000000000004,
+      286.98
+    ],
+    [
+      "SITE",
+      "MARS",
+      9.49,
+      20.76,
+      0
+    ],
+    [
+      "SITE",
+      "PEPSICO DO BRASIL LTDA",
+      13.36,
+      57.33,
+      15.969999999999999
+    ],
+    [
+      "SITE",
+      "COPAG DA AMAZONIA S A",
+      0,
+      -83.94,
+      39.9
+    ],
+    [
+      "SITE",
+      "NISSIN FOODS DO BRASIL LTDA",
+      8.19,
+      8.1,
+      0
+    ],
+    [
+      "SITE",
+      "TENDENCIA ABSOL IND E COM DE ACESS EIREL",
+      11.99,
+      0,
+      3.99
+    ],
+    [
+      "SITE",
+      "MEDQUIMICA GENERICOS",
+      107.59,
+      19.8,
+      0
+    ],
+    [
+      "SITE",
+      "H M IND E COMERCIO DE PROD DE BELEZA LTD",
+      25.9,
+      96.55,
+      138.70000000000002
+    ],
+    [
+      "SITE",
+      "NOVA CEDRAL COMERCIO DE COSMETICOS EIREL",
+      0,
+      71.44,
+      27.59
+    ],
+    [
+      "SITE",
+      "SOPRANO IND ELETROMETALURGICA EIREL",
+      0,
+      0,
+      48.209999999999994
+    ],
+    [
+      "SITE",
+      "SSRR INDUSTRIAL E COMERCIAL DE COSM LTDA",
+      9.99,
+      45.96,
+      9.99
+    ],
+    [
+      "SITE",
+      "PHARLAB GENERICOS",
+      992.49,
+      721.13,
+      1111.79
+    ],
+    [
+      "SITE",
+      "BIC AMAZONIA S.A. AM",
+      0,
+      9.9,
+      0
+    ],
+    [
+      "SITE",
+      "DERMIWIL INDUSTRIA PLASTICA LTDA",
+      0,
+      15.99,
+      22.99
+    ],
+    [
+      "SITE",
+      "FURACAO PET IND E COM DE ARTI ANIMA LTDA",
+      0,
+      0,
+      9.9
+    ],
+    [
+      "SITE",
+      "LORENZETTI S A INDUSTRIAS BRASILEIRAS",
+      344.8,
+      0,
+      153.5
+    ],
+    [
+      "SITE",
+      "CIFARMA GENERICOS",
+      0,
+      17.9,
+      0
+    ],
+    [
+      "SITE",
+      "APIS FLORA INDUSTRIAL E COMERCIAL LTDA",
+      46.07,
+      169.23,
+      502.91999999999996
+    ],
+    [
+      "SITE",
+      "NATUPHITUS INDUST E COM DE COSMETICOS",
+      52.57000000000001,
+      34.160000000000004,
+      38.21
+    ],
+    [
+      "SITE",
+      "COPRA INDUSTRIA ALIMENTICIA LTDA",
+      0,
+      0,
+      29.14
+    ],
+    [
+      "SITE",
+      "CONDOR S.A.",
+      290.2700000000001,
+      144.35999999999999,
+      63.56
+    ],
+    [
+      "SITE",
+      "AEROFLEX INDUSTRIA DE AEROSOL LTDA",
+      207.64000000000001,
+      131.26,
+      0
+    ],
+    [
+      "SITE",
+      "PDHB INDUSTRIA COMERCIO IMPORTACAO E EXP",
+      257.40999999999997,
+      116.13,
+      70.51999999999998
+    ],
+    [
+      "SITE",
+      "TBC PERFUMES E COSMETICOS LTDA",
+      0,
+      0,
+      139.96
+    ],
+    [
+      "SITE",
+      "COALA DO BRASIL S.A.",
+      34.75,
+      108.58,
+      359.61
+    ],
+    [
+      "SITE",
+      "GREEN COMERCIO INTERNACIONAL LTDA",
+      25.98,
+      0,
+      23.9
+    ],
+    [
+      "SITE",
+      "LABORATORIO TAYUYNA LTDA",
+      100.94,
+      75.68,
+      0
+    ],
+    [
+      "SITE",
+      "NALU DISTRIBUIDORA LTDA",
+      67.77,
+      141.7,
+      269.79
+    ],
+    [
+      "SITE",
+      "YOKI DISTRIBUIDORA DE ALIMENTOS LTDA",
+      9.49,
+      0,
+      3.59
+    ],
+    [
+      "SITE",
+      "DISPROGEL DISTRIB DE PROD DE HIG E LIMPE",
+      264.81,
+      0,
+      260.37
+    ],
+    [
+      "SITE",
+      "MMC INDUSTRIA DE PRODUTOS NUTRACEUTICOS",
+      0,
+      0,
+      9.65
+    ],
+    [
+      "SITE",
+      "PRO NOVA DIST E COMERC DE COSMET LTDA",
+      344.9,
+      337.11,
+      37.99
+    ],
+    [
+      "SITE",
+      "BRG SUPLEMENTOS NUTRICIONAIS LTDA",
+      207.72,
+      105.75,
+      27.57
+    ],
+    [
+      "SITE",
+      "BIO INSTINTO IND E COM DE COSMETICOS",
+      55.42,
+      41.98,
+      0
+    ],
+    [
+      "SITE",
+      "STRA COMERCIO DE PRODUTOS PARA SAUDE LTD",
+      0,
+      0,
+      73.8
+    ],
+    [
+      "SITE",
+      "INST BIOCHIMICO INDUSTRIA FARM LTDA",
+      88.39,
+      82.48,
+      0
+    ],
+    [
+      "SITE",
+      "BIOCAP INDUSTRIA DE COSMETICOS LTDA",
+      0,
+      23.99,
+      39.98
+    ],
+    [
+      "SITE",
+      "SANTHER FABRICA DE PAPEL SANTA THEREZINH",
+      0,
+      0,
+      427.08
+    ],
+    [
+      "SITE",
+      "PRATI DONADUZZI RX",
+      81.54,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "DOCILE ALIMENTOS LTDA",
+      0,
+      0,
+      6.49
+    ],
+    [
+      "SITE",
+      "WELEDA DO BRASIL LABORATORIO E FARMACIA",
+      96.49,
+      0,
+      218.98
+    ],
+    [
+      "SITE",
+      "INAL AIR",
+      113.97999999999999,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "DIFFUCAP CHEMOBRAS QUIMICA E FARMAC LTDA",
+      0,
+      0,
+      27.07
+    ],
+    [
+      "SITE",
+      "DEISICON DISTRIB DE CHOCOLATES LTDA",
+      16.07,
+      0,
+      7.69
+    ],
+    [
+      "SITE",
+      "TAIFF DISTRIBUIDORA PROD DE BELEZA LTDA",
+      149.9,
+      699.6,
+      229.9
+    ],
+    [
+      "SITE",
+      "MINANCORA & CIA LTDA",
+      41.46,
+      20.73,
+      59.699999999999996
+    ],
+    [
+      "SITE",
+      "AS ERVAS CURAM INDUST FARMACEUTICA LTDA",
+      32.9,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "TONDO S A",
+      4.39,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "PETIT SABLE INDUSTRIA DE ALIMENTOS LTDA",
+      12.36,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "FLORA PRODUTOS DE HIGIENE E LIMPEZA GO",
+      29.99,
+      0,
+      21.02
+    ],
+    [
+      "SITE",
+      "UNILEVER BRASIL LTDA MG",
+      33.8,
+      140.39999999999998,
+      202.4466666666667
+    ],
+    [
+      "SITE",
+      "SINTER FUTURA LTDA",
+      0,
+      4.99,
+      193.01000000000002
+    ],
+    [
+      "SITE",
+      "ORGANICA INDUSTRIA E COMERCIO DE PRODUTO",
+      9.99,
+      6.99,
+      0
+    ],
+    [
+      "SITE",
+      "MILCY COSMETICOS LTDA",
+      9.24,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "WUTTKE DISTRIBUIDORA DE ALIMENTOS EIRELI",
+      12.57,
+      11.99,
+      12.58
+    ],
+    [
+      "SITE",
+      "JOAO HENRIQUE SILVA BESSA E CIA LTDA",
+      0,
+      17.99,
+      0
+    ],
+    [
+      "SITE",
+      "VYTTRA DIAGNOSTICOS IMPORT E EXPORT S A",
+      39.9,
+      4.75,
+      0
+    ],
+    [
+      "SITE",
+      "HEALTHY DO BRASIL INDUSTRIA COMERCIO E D",
+      69.14,
+      49.9,
+      54.099999999999994
+    ],
+    [
+      "SITE",
+      "HERSHEY DO BRASIL LTDA",
+      43.910000000000004,
+      29.950000000000003,
+      12.38
+    ],
+    [
+      "SITE",
+      "BIOFLORA INDUSTRIA E COMERCIO LTDA",
+      188.92,
+      130.03,
+      0
+    ],
+    [
+      "SITE",
+      "EMBRAST INDUSTRIA E COMERCIO DE EMBALAGE",
+      39.8,
+      19.9,
+      116.33000000000001
+    ],
+    [
+      "SITE",
+      "BRAVIR INDUSTRIAL LTDA",
+      39.84,
+      140.80999999999997,
+      39.65
+    ],
+    [
+      "SITE",
+      "MARI MARIA COSMETICOS LTDA",
+      -29.990000000000002,
+      29.99,
+      60.739999999999995
+    ],
+    [
+      "SITE",
+      "SEPAC SERRADOS E PASTA DE CELULOSE LTDA",
+      112.61,
+      132.28,
+      125.03000000000002
+    ],
+    [
+      "SITE",
+      "BARAO IND E COMERCIO DE ERVA MATE E CHAS",
+      0,
+      23.479999999999997,
+      0
+    ],
+    [
+      "SITE",
+      "BABY ROO COMERCIO DE ALIMENTOS EIRELI",
+      66.4,
+      0,
+      176.80999999999997
+    ],
+    [
+      "SITE",
+      "TODOLIVRO DISTRIBUIDORA LTDA",
+      0,
+      29.98,
+      0
+    ],
+    [
+      "SITE",
+      "UNIAGRO IND E COM DE PROD ALIMENTICIOS",
+      13.19,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "DELLAMED SA",
+      189.8,
+      468.59999999999997,
+      203.7
+    ],
+    [
+      "SITE",
+      "SUPER SAUDE NUTRICIONAL LTDA",
+      0,
+      21.5,
+      50.900000000000006
+    ],
+    [
+      "SITE",
+      "BELLESA COMERCIAL LTDA",
+      25.98,
+      2.99,
+      44.31000000000001
+    ],
+    [
+      "SITE",
+      "ELIANA MARIANI PELLIZON EIRELI",
+      0,
+      0,
+      25.98
+    ],
+    [
+      "SITE",
+      "PARATI IND E COMERCIO DE ALIMENTOS LTDA",
+      166.5,
+      48.739999999999995,
+      20.38
+    ],
+    [
+      "SITE",
+      "ANNA BELLA COMERCIAL LTDA",
+      15.99,
+      15.99,
+      9.99
+    ],
+    [
+      "SITE",
+      "GERMED USK DERMO",
+      0,
+      338.04,
+      454.71000000000004
+    ],
+    [
+      "SITE",
+      "PMI SOUTH AMERICA CONSUMER GOODS LT",
+      1474.8,
+      9020.199999999997,
+      10028.520000000002
+    ],
+    [
+      "SITE",
+      "LISS COMERCIO, IMPORTACAO E EXPORTACAO L",
+      25.99,
+      36.99,
+      29.99
+    ],
+    [
+      "SITE",
+      "LINDT & SPRUNGLI (BRAZIL) HOLDING LTDA",
+      39.99,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "VIA AROMA INDUST DE AROMATIZ DE AMBIENTE",
+      114.51,
+      35.98,
+      168.61999999999998
+    ],
+    [
+      "SITE",
+      "TURATTI & TURATTI LTDA",
+      0,
+      0,
+      71.7
+    ],
+    [
+      "SITE",
+      "NATCOFARMA DO BRASIL LTDA",
+      594.93,
+      989.2499999999999,
+      0
+    ],
+    [
+      "SITE",
+      "BELFAR GENERICOS",
+      7.490000000000002,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "PECCIN SA",
+      0,
+      22.74,
+      0
+    ],
+    [
+      "SITE",
+      "VITA PREMIUM ATACADISTA LTDA",
+      349.45,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "DIFARMA IMPORTACAO E DISTRIBUICAO LTDA",
+      69.75,
+      0,
+      52.25
+    ],
+    [
+      "SITE",
+      "VITROLA EDITORA E DISTRIBUIDORA",
+      387.29999999999995,
+      603.62,
+      124.69999999999999
+    ],
+    [
+      "SITE",
+      "BARRIND IND E COMERCIO DE ALIMENTO EIREL",
+      36.96,
+      0,
+      168.42999999999998
+    ],
+    [
+      "SITE",
+      "AGAPLASTIC INDUSTRIA E COMERCIO LTDA",
+      49.8,
+      42.41,
+      118.03
+    ],
+    [
+      "SITE",
+      "PARFUM BRASIL COSMETICOS EIRELI",
+      111.96,
+      87.08,
+      67.88
+    ],
+    [
+      "SITE",
+      "APIS VIDA IND E COM DE PROD FARMACE LTDA",
+      16.99,
+      16.99,
+      0
+    ],
+    [
+      "SITE",
+      "RB EXPORT IMPORT COM E IND PROD BARB LTD",
+      52.870000000000005,
+      51.96,
+      0
+    ],
+    [
+      "SITE",
+      "GOEDERT LTDA",
+      0,
+      0,
+      238.7
+    ],
+    [
+      "SITE",
+      "DIVINA DIST DE VITAM NATURAIS SUNDOWN",
+      154.58999999999997,
+      28.87,
+      375
+    ],
+    [
+      "SITE",
+      "ELG COMERCIO DE ELETRONICOS LTDA",
+      0,
+      0,
+      36.16
+    ],
+    [
+      "SITE",
+      "SUNNY BRINQUEDOS IMPORT E EXPORT LIMITAD",
+      279.8,
+      249.8,
+      0
+    ],
+    [
+      "SITE",
+      "ENVISION INDUSTRIA DE PRODUTOS ELETRONIC",
+      0,
+      39.6,
+      74.01
+    ],
+    [
+      "SITE",
+      "WAHL CLIPPER COM DE UTENSILIOS P CABELO",
+      0,
+      109.9,
+      0
+    ],
+    [
+      "SITE",
+      "MUNILA COSMETICOS EIRELI",
+      119.59000000000002,
+      39.92000000000001,
+      0
+    ],
+    [
+      "SITE",
+      "CRBS S A",
+      17.8,
+      41.6,
+      9.939999999999998
+    ],
+    [
+      "SITE",
+      "SAINT-GOBAIN DO BRASIL PROD INDU LTDA",
+      9.99,
+      14.99,
+      44.7
+    ],
+    [
+      "SITE",
+      "PIETROBON & CIA LTDA",
+      0,
+      0,
+      3.19
+    ],
+    [
+      "SITE",
+      "GALA IBB IND BR DE BRINQ EMBALAGENS LTDA",
+      0,
+      2.99,
+      0
+    ],
+    [
+      "SITE",
+      "BERTOLUCCI & CIA LTDA",
+      89.94999999999999,
+      163.90000000000003,
+      16.49
+    ],
+    [
+      "SITE",
+      "VITAO ALIMENTOS LTDA",
+      0,
+      9.86,
+      0
+    ],
+    [
+      "SITE",
+      "BOMBRIL S/A",
+      0,
+      0,
+      8
+    ],
+    [
+      "SITE",
+      "PREVENT PHARMACEUTICALS LTDA",
+      0,
+      0,
+      29.770000000000003
+    ],
+    [
+      "SITE",
+      "OPS PANTIES IND E COM DE MODA INTIMA LTD",
+      0,
+      0,
+      14.99
+    ],
+    [
+      "SITE",
+      "ILUMI INDUSTRIA E COMERCIO LTDA",
+      0,
+      22.9,
+      9.9
+    ],
+    [
+      "SITE",
+      "ENOVAMIX INDUSTRIAL LTDA",
+      39.9,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "GEOLAB PHARMA",
+      500.58000000000004,
+      574.59,
+      325.85
+    ],
+    [
+      "SITE",
+      "TRAMONTINA FARROUPILHA SA IND METALURG",
+      0,
+      16.99,
+      340.57
+    ],
+    [
+      "SITE",
+      "FRUKI BEBIDAS S/A.",
+      0,
+      0,
+      41.620000000000005
+    ],
+    [
+      "SITE",
+      "MAIS MU COMERCIO DE ALIMENTOS E BEBIDAS",
+      0,
+      0,
+      25.96
+    ],
+    [
+      "SITE",
+      "BETTANIN",
+      0,
+      0,
+      165.9
+    ],
+    [
+      "SITE",
+      "MERAKI SOLUTION DISTRIBUICAO LTDA",
+      124.33000000000001,
+      101.6,
+      224.71
+    ],
+    [
+      "SITE",
+      "SELENE INDUSTRIA TEXTIL S A",
+      52.8,
+      22.9,
+      0
+    ],
+    [
+      "SITE",
+      "SWEDISH MATCH DO BRASIL SA",
+      0,
+      0,
+      25.6
+    ],
+    [
+      "SITE",
+      "SEM PARAR INSTITUICAO DE PAGAMENTO LTDA",
+      60,
+      30,
+      0
+    ],
+    [
+      "SITE",
+      "BIOLAND",
+      0,
+      29.9,
+      39.9
+    ],
+    [
+      "SITE",
+      "NOVA CREDEAL INDUSTRIA DE CADERNOS S A",
+      0,
+      0,
+      12.99
+    ],
+    [
+      "SITE",
+      "BR COSMETIC COMERCIAL LTDA",
+      15.34,
+      0,
+      79.98
+    ],
+    [
+      "SITE",
+      "LPS COMPANY LTDA",
+      0,
+      0,
+      11.97
+    ],
+    [
+      "SITE",
+      "INDUSTRIA E COMERCIO OLIVEIRA LTDA",
+      7.39,
+      0,
+      44.34
+    ],
+    [
+      "SITE",
+      "FRANCINY EHLKE",
+      78.93,
+      109.78999999999999,
+      386.15
+    ],
+    [
+      "SITE",
+      "FLORA PROD DE HIG E LIMP SA - ALBANY",
+      143.73000000000002,
+      95.7,
+      179.52
+    ],
+    [
+      "SITE",
+      "BAMBOLA INDUSTRIA E COMERCIO DE BRINQUED",
+      0,
+      49.9,
+      0
+    ],
+    [
+      "SITE",
+      "SEARA ALIMENTOS LTDA",
+      13.9,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "BAUNY",
+      36.79,
+      82.59,
+      12.99
+    ],
+    [
+      "SITE",
+      "M2LIFE COMERCIAL IMPORTADORA E EXPORTADO",
+      0,
+      0,
+      29.9
+    ],
+    [
+      "SITE",
+      "FLORA PRODUTOS DE HIGIENE E LIMPEZA S A",
+      42.28,
+      5.99,
+      44.580000000000005
+    ],
+    [
+      "SITE",
+      "MAQUIRA IND DE PROD ODONTOLOGICOS LTDA",
+      0,
+      7.49,
+      71.98
+    ],
+    [
+      "SITE",
+      "YINS BRASIL COMERCIO INTERNACIONAL LTDA",
+      69.99,
+      73.98,
+      0
+    ],
+    [
+      "SITE",
+      "CIRANDA CULTURAL EDITORA E DISTRIBUIDORA",
+      18.48,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "BIC AMAZONIA S/A SP",
+      0,
+      8.99,
+      0
+    ],
+    [
+      "SITE",
+      "BODY FOOD FABRICANTES DE ALIMENTOS SAUDA",
+      0,
+      0,
+      106.89
+    ],
+    [
+      "SITE",
+      "DINAMO COMERCIO E INDUSTRIA DE SAL LTDA",
+      0,
+      0,
+      42.010000000000005
+    ],
+    [
+      "SITE",
+      "BEIRA ALTA COSMETICOS LTDA",
+      0,
+      0,
+      10.47
+    ],
+    [
+      "SITE",
+      "QUIMICA AMPARO LTDA",
+      252.34,
+      109.27,
+      758.9399999999999
+    ],
+    [
+      "SITE",
+      "LEBON PRODUTOS QUIMICOS FARMACEUTICOS",
+      0,
+      81.53,
+      42.9
+    ],
+    [
+      "SITE",
+      "GDS GROW DIETARY SUPPLEMENTS DO BRASIL S",
+      0,
+      364.6,
+      116.49
+    ],
+    [
+      "SITE",
+      "JOY PLAY AND CARE LTDA",
+      0,
+      0,
+      19.59
+    ],
+    [
+      "SITE",
+      "RODRIGUES PINHEL & CIA LTDA",
+      90.58,
+      6.99,
+      29.99
+    ],
+    [
+      "SITE",
+      "MAXLOG IMPORTACAO E EXPORTACAO LTDA",
+      0,
+      39.98,
+      0
+    ],
+    [
+      "SITE",
+      "SUMMIT COMERCIO IMPORTACAO E EXPORTACAO",
+      0,
+      44.97,
+      0
+    ],
+    [
+      "SITE",
+      "MELITTA DO BRASIL INDUST E COMERCIO LTDA",
+      17.78,
+      10.99,
+      221.93
+    ],
+    [
+      "SITE",
+      "PRINCIPIA RS COMERCIO DE COSMETICOS LTDA",
+      3223.52,
+      2774.4600000000005,
+      4497.779999999999
+    ],
+    [
+      "SITE",
+      "TOH INDUSTRIA E COMERCIO PET LTDA",
+      0,
+      24.9,
+      54.699999999999996
+    ],
+    [
+      "SITE",
+      "PORTO DISTRIBUIDORA PHALLEBEAUTY LTDA",
+      68.18,
+      240.54,
+      23.99
+    ],
+    [
+      "SITE",
+      "AZOIA ATACADO COMERCIO IMPORTACAO E EXPO",
+      0,
+      0,
+      22.380000000000003
+    ],
+    [
+      "SITE",
+      "TOTAL QUIMICA LIMITADA",
+      0,
+      0,
+      79.69999999999999
+    ],
+    [
+      "SITE",
+      "INDUSTRIA E COMERCIO JOLITEX LTDA",
+      19.99,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "KELCO PET CARE PRODUTOS ANIMAIS LTDA",
+      211.8,
+      0,
+      401.76000000000005
+    ],
+    [
+      "SITE",
+      "PET INJET COMERCIO DE ACESSORIOS PARA AN",
+      0,
+      0,
+      5.98
+    ],
+    [
+      "SITE",
+      "CHEMBIO DIAGNOSTICS BRAZIL LTDA",
+      0,
+      206.45,
+      92
+    ],
+    [
+      "SITE",
+      "PAKIPLAST INDUSTRIA E COMERCIO DE BRINQU",
+      0,
+      0,
+      39.9
+    ],
+    [
+      "SITE",
+      "CROMUS EMBALAGENS INDUSTRIA E COMERCIO L",
+      0,
+      14.98,
+      0
+    ],
+    [
+      "SITE",
+      "OLLIE COSMETICOS LTDA",
+      263.62,
+      139.99,
+      1357.8999999999996
+    ],
+    [
+      "SITE",
+      "E. K. REPRESENTACOES LTDA.",
+      0,
+      24.99,
+      0
+    ],
+    [
+      "SITE",
+      "RAFAEL ELIAS HERNANDES CUESTA",
+      15.98,
+      0,
+      7.29
+    ],
+    [
+      "SITE",
+      "GOMES SUPLEMENTOS ALIMENTARES LTDA",
+      155.92,
+      64.8,
+      364.17999999999995
+    ],
+    [
+      "SITE",
+      "CARVAO BRAZAH LTDA",
+      0,
+      30.29,
+      0
+    ],
+    [
+      "SITE",
+      "SANTE COMERCIO ATACADISTA DE COSMETICOS",
+      79.99,
+      55.28,
+      141.60000000000002
+    ],
+    [
+      "SITE",
+      "Q UTIL COMERCIO DE MATERIAIS ELETRICOS E",
+      9.66,
+      29.9,
+      0
+    ],
+    [
+      "SITE",
+      "J.R.D. INDUSTRIA FARMACEUTICA LTDA",
+      39.95,
+      126.66,
+      64.60000000000001
+    ],
+    [
+      "SITE",
+      "DACOLONIA ALIMENTOS NATURAIS LTDA",
+      8.99,
+      8.280000000000001,
+      45.5
+    ],
+    [
+      "SITE",
+      "JADE IMPORTACAO E EXPORTACAO DE MANUFATU",
+      66.23,
+      40.31,
+      0
+    ],
+    [
+      "SITE",
+      "VILMAT DISTRIBUIDORA LTDA",
+      8.98,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "TERMOLAR SA",
+      0,
+      0,
+      149.7
+    ],
+    [
+      "SITE",
+      "PORTAL BRASIL COMERCIO INTERNACIONAL LTD",
+      42.95,
+      14.99,
+      343.06
+    ],
+    [
+      "SITE",
+      "HIDRATEI COSMETICOS LTDA",
+      48.1,
+      194.85999999999999,
+      212.12
+    ],
+    [
+      "SITE",
+      "BUMBUM CREAM BRASIL & BARRIGUINHA CREAM",
+      119.9,
+      0,
+      193.65
+    ],
+    [
+      "SITE",
+      "UNIVERSAL CHEMICAL LTDA",
+      14.99,
+      44.97,
+      0
+    ],
+    [
+      "SITE",
+      "TOZZO ALIMENTOS LTDA",
+      15.7,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "ALVA PERSONAL CARE - EXPORTACAO E IMPORT",
+      113.9,
+      76.9,
+      221.10000000000002
+    ],
+    [
+      "SITE",
+      "COSMETIC INDUSTRIA E COMERCIO LTDA.",
+      15.99,
+      47.97,
+      0
+    ],
+    [
+      "SITE",
+      "MILIGRAMA FARMACIA DE MANIPULACAO SA",
+      0,
+      0,
+      299.96999999999997
+    ],
+    [
+      "SITE",
+      "WAMA PRODUTOS PARA LABORATORIO LTDA",
+      114.74000000000001,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "AURA PHARMA S.A.",
+      0,
+      589,
+      0
+    ],
+    [
+      "SITE",
+      "INSETIMAX INDUSTRIA QUIMICA LTDA",
+      0,
+      0,
+      19.6
+    ],
+    [
+      "SITE",
+      "LABOTRAT DISTR DE PRODUT DE HIG PESSOAL",
+      65.31,
+      58.97,
+      136.18
+    ],
+    [
+      "SITE",
+      "INDUSTRIA DE ARTEFATOS DE BORRACHA INOVA",
+      35.96,
+      39.95,
+      9.9
+    ],
+    [
+      "SITE",
+      "FRESNOMAQ INDUSTRIA DE MAQUINAS S/A",
+      119.9,
+      179.9,
+      124.70000000000002
+    ],
+    [
+      "SITE",
+      "DUX COMPANY LTDA.",
+      1098.3300000000002,
+      179.9,
+      1342.49
+    ],
+    [
+      "SITE",
+      "BRINOX METALURGICA SA EM RECUPERACAO JUD",
+      0,
+      12.99,
+      0
+    ],
+    [
+      "SITE",
+      "ALLEGRA MKT E PROMOCAO DE VENDAS EIRELI",
+      0,
+      0,
+      143.57
+    ],
+    [
+      "SITE",
+      "NELSON ANTONIO SILVA RECHI LTDA",
+      0,
+      8.3,
+      0
+    ],
+    [
+      "SITE",
+      "LEVEZA NEGOCIOS DIGITAIS LTDA",
+      0,
+      31.99,
+      0
+    ],
+    [
+      "SITE",
+      "BEBIDAS GRASSI DO BRASIL LTDA",
+      53.21,
+      31.42,
+      145.43
+    ],
+    [
+      "SITE",
+      "QUALYNUTRI NUTRACEUTICOS LTDA",
+      0,
+      0,
+      69.9
+    ],
+    [
+      "SITE",
+      "SANTO BRILHO INDUSTRIA E COMERCIO LTDA.",
+      0,
+      0,
+      6.98
+    ],
+    [
+      "SITE",
+      "PADO S/A INDUSTRIAL COMERCIAL E IMPORTA",
+      69.9,
+      152.6,
+      0
+    ],
+    [
+      "SITE",
+      "ALUMINIO CINCO ESTRELAS LTDA",
+      0,
+      0,
+      159.5
+    ],
+    [
+      "SITE",
+      "MAZUI & HORVATH INDUSTRIA DE PRODUTOS CE",
+      12.9,
+      25.8,
+      0
+    ],
+    [
+      "SITE",
+      "IBS INDUSTRIA BRASILEIRA DE SUCOS S/A",
+      0,
+      0,
+      41.400000000000006
+    ],
+    [
+      "SITE",
+      "INDUSTRIA COM PROD DE LIMP GIRANDO SOL",
+      565.9,
+      1322.42,
+      398.58
+    ],
+    [
+      "SITE",
+      "HIPER TEXTIL CAMA MESA E BANHO LTDA",
+      0,
+      0,
+      49.9
+    ],
+    [
+      "SITE",
+      "QUALIBRESS",
+      750.5200000000001,
+      193.75,
+      631.05
+    ],
+    [
+      "SITE",
+      "ESPETOSUL ARTIGOS PARA CHURRASCO LTDA",
+      0,
+      169.9,
+      0
+    ],
+    [
+      "SITE",
+      "PRATI DONADUZZI E CIA LTDA",
+      14.99,
+      46.94,
+      0
+    ],
+    [
+      "SITE",
+      "YANGZI BRASIL CORPORATION S A",
+      18.71,
+      0,
+      140.3
+    ],
+    [
+      "SITE",
+      "PADRAO CLB MACEDO IND E COM DE PROD DESC",
+      0,
+      29.98,
+      0
+    ],
+    [
+      "SITE",
+      "BLACK & DECKER DO BRASIL LTDA",
+      0,
+      0,
+      99
+    ],
+    [
+      "SITE",
+      "VR MEDICAL IMPORTADORA E DISTRIBUIDORA D",
+      0,
+      159.99,
+      0
+    ],
+    [
+      "SITE",
+      "MARTIPLAST INDUSTRIA E COMERCIO DE PLAST",
+      -2.99,
+      5.98,
+      19.9
+    ],
+    [
+      "SITE",
+      "GRACIOSA DISTRIBUIDORA DE COSMETICOS LTD",
+      59.98,
+      29.99,
+      91.16
+    ],
+    [
+      "SITE",
+      "CAFE RANCHEIRO AGRO INDUSTRIAL LTDA",
+      3.15,
+      0,
+      9.57
+    ],
+    [
+      "SITE",
+      "MACRO COMERCIO INTERNACIONAL LTDA EM REC",
+      22.9,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "ELKA PLASTICOS LTDA",
+      0,
+      0,
+      55.11
+    ],
+    [
+      "SITE",
+      "HIGIEPLUS COTTONBABY IND E COM LTDA",
+      12.69,
+      0,
+      27.59
+    ],
+    [
+      "SITE",
+      "SAO DOMINGOS SA INDUSTRIA GRAFICA",
+      0,
+      0,
+      29.99
+    ],
+    [
+      "SITE",
+      "ADRIANA SERPA DA SILVA",
+      0,
+      49.99,
+      48.99
+    ],
+    [
+      "SITE",
+      "CHAMA DE OURO BEM ESTAR LTDA",
+      0,
+      24.99,
+      108.71000000000001
+    ],
+    [
+      "SITE",
+      "APTI ALIMENTOS LTDA",
+      0,
+      11.96,
+      21.45
+    ],
+    [
+      "SITE",
+      "AM INDUSTRIA DE COSMETICOS LTDA",
+      0,
+      6.99,
+      0
+    ],
+    [
+      "SITE",
+      "PIFFER INDUSTRIA E COMERCIO DE ARTIGOS P",
+      0,
+      69.99,
+      0
+    ],
+    [
+      "SITE",
+      "EVORA INDUSTRIA E COMERCIO LTDA",
+      0,
+      85.69,
+      10.99
+    ],
+    [
+      "SITE",
+      "MAGIC KIDS COMERCIO LTDA EPP",
+      0,
+      9.99,
+      0
+    ],
+    [
+      "SITE",
+      "JTX COMERCIO DE PRESENTES E ARMARINHOS E",
+      64.99,
+      64.99,
+      0
+    ],
+    [
+      "SITE",
+      "DALGE COSMETICOS LTDA",
+      0,
+      8.85,
+      42.629999999999995
+    ],
+    [
+      "SITE",
+      "KELLDRIN INDUSTRIAL LTDA",
+      0,
+      22.9,
+      0
+    ],
+    [
+      "SITE",
+      "ALFAPARF",
+      0,
+      108.96,
+      0
+    ],
+    [
+      "SITE",
+      "BTC COMERCIO DE COSMETICOS LTDA",
+      136.88,
+      0,
+      236.74
+    ],
+    [
+      "SITE",
+      "TRADING CARE IND E COM DE PROD AUTOMOTIV",
+      34.9,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "LOOPS COMERCIO IMPORTACAO E EXPORT LTDA",
+      0,
+      19.99,
+      0
+    ],
+    [
+      "SITE",
+      "AVVIO INDUSTRIA & CIA LTDA",
+      0,
+      0,
+      58.99999999999999
+    ],
+    [
+      "SITE",
+      "HELLO KITT SABRINA SATO",
+      15.99,
+      15.99,
+      0
+    ],
+    [
+      "SITE",
+      "MOINHO INDUSTRIA COMERCIO E IMPORTACAO D",
+      0,
+      29.9,
+      0
+    ],
+    [
+      "SITE",
+      "PEGORARO DEYCON COMERCIO E DISTRIBUICAO",
+      0,
+      0,
+      33.98
+    ],
+    [
+      "SITE",
+      "THOMAS KL IND. DE ALTO FALANTES AS",
+      0,
+      729.6,
+      0
+    ],
+    [
+      "SITE",
+      "OUROLUX COMERCIAL LTDA",
+      0,
+      0,
+      9.9
+    ],
+    [
+      "SITE",
+      "BRISTOL MEYERS SQUIBB FARMACASUTICA LTDA",
+      615.6,
+      77.95,
+      77.95
+    ],
+    [
+      "SITE",
+      "ZALIKE COMERCIO IMPORTACAO E EXPORTACAO",
+      149.1,
+      177.65,
+      79.8
+    ],
+    [
+      "SITE",
+      "MACKERDUZ IND DE PROD DE LIMPEZA LTDA",
+      12.9,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "PIPIZITO LTDA",
+      0,
+      0,
+      8.99
+    ],
+    [
+      "SITE",
+      "NOVVO BEM ESTAR COMERCIO DE PRODUTOS NAT",
+      31.16,
+      43.95,
+      0
+    ],
+    [
+      "SITE",
+      "BENESA COMERCIAL LTDA",
+      0,
+      95.78999999999999,
+      115.92
+    ],
+    [
+      "SITE",
+      "DERMABEL INDUSTRIA E COMERCIO DE PROD CO",
+      9.49,
+      47.45,
+      0
+    ],
+    [
+      "SITE",
+      "DM - INDUSTRIAL E COMERCIAL LTDA.",
+      0,
+      22.9,
+      16.9
+    ],
+    [
+      "SITE",
+      "AURA BEAUTY LTDA",
+      0,
+      0,
+      442.94
+    ],
+    [
+      "SITE",
+      "CR CERAMICA LTDA",
+      29.99,
+      23.99,
+      29.9
+    ],
+    [
+      "SITE",
+      "VERONA INDUSTRIA DE PLASTICOS LTDA",
+      0,
+      34.99,
+      0
+    ],
+    [
+      "SITE",
+      "VYVEDAS COSMETICOS DO BRASIL LTDA",
+      29.97,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "EVERALDO JUNIOR ELLER LTDA",
+      34.8,
+      39.8,
+      0
+    ],
+    [
+      "SITE",
+      "SNOOPY DOG TICIANE PINHEIRO",
+      21.53,
+      42.98,
+      0
+    ],
+    [
+      "SITE",
+      "N DA LUA AROMAS LTDA",
+      69.98,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "BATATAS GUADAGNIN LTDA",
+      5.29,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "INDUSTRIA DE BISCOITOS KLAIN LTDA",
+      8.99,
+      9.49,
+      0
+    ],
+    [
+      "SITE",
+      "NHAMI MAMI DISTRIBUIDORA DE ALIMENT LTDA",
+      17.98,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "UNNIKA AESTHETICS WORLDWIDE LTDA",
+      42.79,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "LUCKAU INDUSTRIA E COMERCIO DE ALIMENTOS",
+      0,
+      13.98,
+      0
+    ],
+    [
+      "SITE",
+      "SANOFI MEDLEY FARMACEUTICA LTDA",
+      54.07,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "CLARAMAX INDUSTRIA E COM DE PAPEIS LTDA",
+      163.85000000000002,
+      119.89999999999999,
+      149.17000000000002
+    ],
+    [
+      "SITE",
+      "TOCCA ALIMENTOS LTDA",
+      4.98,
+      27.48,
+      0
+    ],
+    [
+      "SITE",
+      "NATUFLORES IND E COMERCIO DE COSME LTDA",
+      0,
+      142.19,
+      58.97
+    ],
+    [
+      "SITE",
+      "RCA LABS LTDA",
+      93.93,
+      349.71,
+      211.01
+    ],
+    [
+      "SITE",
+      "DISTRIBUIDORA DE COSMETICOS LABOREN LTDA",
+      43.93,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "SANTO OLEO INDUST E COM DE PROD NATURAIS",
+      0,
+      19.98,
+      37.97
+    ],
+    [
+      "SITE",
+      "ADERE PRODUTOS AUTO ADESIVOS LTDA",
+      -14.9,
+      14.9,
+      29.8
+    ],
+    [
+      "SITE",
+      "PARALELO SUL RIO GRANDENSE COMERCIO DE C",
+      75.17,
+      73.65,
+      74.89999999999999
+    ],
+    [
+      "SITE",
+      "ORBITAE DIAGNOSTICOS LTDA",
+      0,
+      59.9,
+      0
+    ],
+    [
+      "SITE",
+      "BE CARE COSMETICS COMERCIO DE COSMESTICO",
+      0,
+      79.8,
+      0
+    ],
+    [
+      "SITE",
+      "PIINGUES ALIMENTOS LTDA",
+      7.99,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "MANDOLATES KONRAD LTDA",
+      0,
+      5.97,
+      0
+    ],
+    [
+      "SITE",
+      "BOHRER",
+      0,
+      0,
+      9.98
+    ],
+    [
+      "SITE",
+      "JCS BRASIL ELETRODOMESTICOS LTDA",
+      133.94,
+      0,
+      163.1
+    ],
+    [
+      "SITE",
+      "PELO E PELE INDUSTRIA E MANIPULACAO DE C",
+      18.99,
+      9.99,
+      0
+    ],
+    [
+      "SITE",
+      "FOFY COMERCIO IMPORTACAO E EXPORTACAO LT",
+      0,
+      -43.49,
+      0
+    ],
+    [
+      "SITE",
+      "CEFISA INDUSTRIA E COMERCIO LTDA",
+      66.19,
+      44.06999999999999,
+      0
+    ],
+    [
+      "SITE",
+      "QUINOVA LTDA",
+      0,
+      2.9,
+      0
+    ],
+    [
+      "SITE",
+      "TE GUARANI DO BRASIL LTDA",
+      73.8,
+      0,
+      54.9
+    ],
+    [
+      "SITE",
+      "GUIMARAES BRASIL IND E ALIMENTOS LTDA",
+      4.98,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "BEAUTIFUL DISTRIBUIDORA LTDA",
+      0,
+      0,
+      124.79
+    ],
+    [
+      "SITE",
+      "SCRIVIA BRASIL INDUSTRIA DE ALIMENTOS LT",
+      3.91,
+      4.5,
+      4.14
+    ],
+    [
+      "SITE",
+      "ZANLORENZI BEBIDAS LTDA",
+      0,
+      0,
+      19.04
+    ],
+    [
+      "SITE",
+      "MALVI INDUSTRIA E COMERCIO DE ALIMENTOS",
+      11.99,
+      22.98,
+      0
+    ],
+    [
+      "SITE",
+      "LA GANEXA PRODUTOS ALIMENTICIOS LTDA",
+      0,
+      14.9,
+      0
+    ],
+    [
+      "SITE",
+      "ALGODAO DOCE INDUSTRIA DE URSOS LTDA",
+      0,
+      69.9,
+      0
+    ],
+    [
+      "SITE",
+      "PRIME SUL DISTRIBUIDORA DE COSMETICOS LT",
+      88.61,
+      73.8,
+      0
+    ],
+    [
+      "SITE",
+      "PARENTEX INDUSTRIA E COMERCIO LTDA",
+      78,
+      19.9,
+      0
+    ],
+    [
+      "SITE",
+      "N.S. PRODUTOS E SISTEMAS DE HIGIENE LTDA",
+      0,
+      16.99,
+      0
+    ],
+    [
+      "SITE",
+      "MOVEIS DORIPEL LTDA",
+      69.9,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "MULTIPLA",
+      21.99,
+      0,
+      20.23
+    ],
+    [
+      "SITE",
+      "HIGIEFARM COMERCIO IMPORTACAO E EXPOR",
+      0,
+      1.99,
+      0
+    ],
+    [
+      "SITE",
+      "VIGOR ALIMENTOS S.A",
+      0,
+      0,
+      5.79
+    ],
+    [
+      "SITE",
+      "KAZAN COMERCIO, IMPORTACAO E EXPORTACA",
+      0,
+      15.98,
+      0
+    ],
+    [
+      "SITE",
+      "LQF LABORATORIO QUIMICO FARMACEUTICO RIO",
+      7.99,
+      36.96,
+      0
+    ],
+    [
+      "SITE",
+      "CALCADOS BEIRA RIO",
+      1527.76,
+      1104.5,
+      0
+    ],
+    [
+      "SITE",
+      "MILI S A",
+      17.39,
+      19.99,
+      0
+    ],
+    [
+      "SITE",
+      "FRUKI BEBIDAS SA",
+      0,
+      9.8,
+      0
+    ],
+    [
+      "SITE",
+      "ASN BRASIL IMPORTACAO E EXPORTACAO LTDA",
+      56.43,
+      25,
+      0
+    ],
+    [
+      "SITE",
+      "LABORATORIO CANONNE LTDA",
+      0,
+      49.9,
+      0
+    ],
+    [
+      "SITE",
+      "PILLOWTEX INDUSTRIA E COMERCIO TEXTIL LT",
+      0,
+      179.97,
+      0
+    ],
+    [
+      "SITE",
+      "MESASUL COMERCIO E INDUSTRIA DE ALIMENTO",
+      0,
+      9.59,
+      0
+    ],
+    [
+      "SITE",
+      "BIO COSMETICA INDUSTRIA E COMERCIO DE PE",
+      89.5,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "KAMALEAO COLOR COMERCIO DE COSMETICOS LT",
+      159.87,
+      189.96,
+      0
+    ],
+    [
+      "SITE",
+      "GSI IMPORTACAO E EXPORTACAO LTDA",
+      0,
+      119.70000000000002,
+      0
+    ],
+    [
+      "SITE",
+      "EDITORA PREACH LTDA",
+      0,
+      49.9,
+      0
+    ],
+    [
+      "SITE",
+      "AERZ QUIMICA INDUSTRIAL LTDA",
+      21.37,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "FARMAX S.A.",
+      97.92999999999999,
+      16.97,
+      0
+    ],
+    [
+      "SITE",
+      "ASTORIA PAPEIS LTDA",
+      136.61,
+      38.97,
+      0
+    ],
+    [
+      "SITE",
+      "FERNANDO UNIFORMES EIRELI",
+      29.979999999999997,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "MERCUR S/A - MARCA PROPRIA",
+      0,
+      20.98,
+      0
+    ],
+    [
+      "SITE",
+      "RAMPINELLI ALIMENTOS LTDA",
+      0,
+      11.98,
+      0
+    ],
+    [
+      "SITE",
+      "EMS S/A",
+      133.84,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "KAIROS INDUSTRIA LTDA",
+      14.99,
+      0,
+      0
+    ],
+    [
+      "SITE",
+      "MWM CARE DISTRIBUIDORA LTDA",
+      14.99,
+      184.22000000000003,
+      0
+    ],
+    [
+      "APP",
+      "KUKA PRODUTOS INFANTIS LTDA",
+      614.07,
+      627.07,
+      520.02
+    ],
+    [
+      "APP",
+      "CIMED MARCAS",
+      20054.58,
+      16220.650000000001,
+      14748.310000000001
+    ],
+    [
+      "APP",
+      "NUK",
+      922.57,
+      615.5600000000001,
+      652.94
+    ],
+    [
+      "APP",
+      "RECKITT BENCKISER ( BRASIL ) LTDA",
+      2188.42,
+      1761.84,
+      2795.54
+    ],
+    [
+      "APP",
+      "CIMEX DISTRIBUIDORA DE COSMETICOS LTDAS",
+      112.99000000000001,
+      44.99,
+      80.94
+    ],
+    [
+      "APP",
+      "LABORATORIOS BALDACCI LTDA",
+      347.92,
+      367.48999999999995,
+      215.55
+    ],
+    [
+      "APP",
+      "MYRALIS PHARMA",
+      12659.26,
+      7182.319999999999,
+      6652.76
+    ],
+    [
+      "APP",
+      "LIBBS FARMACEUTICA LTDA 01",
+      41282.509999999995,
+      15239.380000000003,
+      26298.95
+    ],
+    [
+      "APP",
+      "HERBARIUM LABORATORIO BOTANICO S.A",
+      3006.04,
+      3092.6800000000003,
+      3250.6700000000005
+    ],
+    [
+      "APP",
+      "ALPAR DO BRASIL IND E COM CALCADOS LTDA",
+      0,
+      71.89,
+      0
+    ],
+    [
+      "APP",
+      "LAB EXPANSCIENCE COM IMP EXP PROD SAUDE",
+      714.9399999999999,
+      82.53,
+      271.14
+    ],
+    [
+      "APP",
+      "CERAS JOHNSON LTDA",
+      1994.4500000000007,
+      456.52,
+      297.91
+    ],
+    [
+      "APP",
+      "RASKALO PRODUTOS DE BELEZA LTDA",
+      176.99,
+      245.77000000000004,
+      161.60000000000002
+    ],
+    [
+      "APP",
+      "LUNDBECK",
+      1247.6100000000001,
+      2440.6400000000003,
+      4571.36
+    ],
+    [
+      "APP",
+      "PROCTER & GAMBLE DO BRASIL S/A",
+      198896.66999999975,
+      117785.9449999999,
+      140998.5549999999
+    ],
+    [
+      "APP",
+      "THERASKIN FARMACEUTICA LTDA",
+      2601.4,
+      1049.83,
+      1370.27
+    ],
+    [
+      "APP",
+      "GLENMARK FARMACEUTICA LTDA",
+      938.8,
+      1029.88,
+      301.84
+    ],
+    [
+      "APP",
+      "ACHE RX/OTX",
+      28704.37,
+      18312.690000000002,
+      20592.819999999996
+    ],
+    [
+      "APP",
+      "DAIICHI SANKYO BRASIL FARMACEUTICA LTDA",
+      7532.629999999999,
+      4762.25,
+      3642.4000000000005
+    ],
+    [
+      "APP",
+      "ACHE DERMO",
+      428.56,
+      278.36,
+      1106.8800000000003
+    ],
+    [
+      "APP",
+      "EUROFARMA LABORATORIOS LTDA",
+      121351.21999999999,
+      71136.64000000001,
+      28024.12
+    ],
+    [
+      "APP",
+      "KIMBERLY-CLARK BRASIL IND COM PROD HIG 4",
+      65339.060000000005,
+      71824.56000000001,
+      54522.789999999986
+    ],
+    [
+      "APP",
+      "MOKSHA8 BRASIL INDUSTRIA E COM DE MED LT",
+      253.11999999999998,
+      551.27,
+      807.97
+    ],
+    [
+      "APP",
+      "ANALITIC TECNOLOGIA DE PRECISAO LTDA",
+      319.65000000000003,
+      35.97,
+      394.61
+    ],
+    [
+      "APP",
+      "ALPI DISTRIBUIDORA DE COSMETICOS LTDA",
+      233.14000000000001,
+      147.76,
+      200.43000000000004
+    ],
+    [
+      "APP",
+      "THERASKIN FARMACEUTICA DERMO",
+      774.79,
+      433.68,
+      647.4499999999999
+    ],
+    [
+      "APP",
+      "LOREAL(PROCOSA LTDA)",
+      26127.850000000006,
+      14283.770000000004,
+      7570.19
+    ],
+    [
+      "APP",
+      "MARCHETTI & CIA LTDA CARAZINHO",
+      84.68,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "COTY BRASIL COMERCIO LTDA",
+      13514.479999999998,
+      8081.740000000002,
+      6491.820000000001
+    ],
+    [
+      "APP",
+      "EUROFARMA OTC",
+      60.760000000000005,
+      121.28999999999999,
+      233.32
+    ],
+    [
+      "APP",
+      "UNIAO QUIMICA GENERICOS",
+      152.62,
+      9.9,
+      68.05
+    ],
+    [
+      "APP",
+      "PRATI DONADUZZI & CIA LTDA",
+      32931.19000000001,
+      25161.440000000002,
+      9279.119999999997
+    ],
+    [
+      "APP",
+      "BIC APAR.MEDICOS LTDA",
+      1106.57,
+      930.1499999999997,
+      669.6200000000001
+    ],
+    [
+      "APP",
+      "DANONE LTDA MG",
+      19823.780000000002,
+      18573.96,
+      31683.059999999998
+    ],
+    [
+      "APP",
+      "TORRENT DO BRASIL LTDA",
+      12800.199999999999,
+      9053.89,
+      7028.17
+    ],
+    [
+      "APP",
+      "BELLIZ INDUSTRIA COM IMP EXP LTDA",
+      1637.77,
+      1189.0100000000002,
+      765.8900000000001
+    ],
+    [
+      "APP",
+      "SUPERA RX MEDICAMENTOS LTDA.",
+      6329.79,
+      3879.0199999999995,
+      5520.880000000001
+    ],
+    [
+      "APP",
+      "BAYER S.A.",
+      2590.120000000001,
+      528.56,
+      1401.16
+    ],
+    [
+      "APP",
+      "CONVATEC",
+      0,
+      84.9,
+      209.97
+    ],
+    [
+      "APP",
+      "COLGATE PALMOLIVE LTDA",
+      20438.369999999995,
+      11428.530000000002,
+      8994.680000000002
+    ],
+    [
+      "APP",
+      "EMS GENERICOS",
+      91820.69,
+      63562.06,
+      35709.41
+    ],
+    [
+      "APP",
+      "APSEN FARMACEUTICA SA.",
+      19323.52,
+      11369.249999999998,
+      16672.82
+    ],
+    [
+      "APP",
+      "SANOFI-AVENTIS FARMACEUTICA LTDA",
+      169.63,
+      679.1300000000001,
+      2388.7900000000004
+    ],
+    [
+      "APP",
+      "FARMAX PRODUTOS FARMACEUTICOS LTDA",
+      696.9000000000001,
+      663.13,
+      530.73
+    ],
+    [
+      "APP",
+      "MERCUR S/A - BODY CARE",
+      461.84000000000003,
+      419.20000000000005,
+      352.15000000000003
+    ],
+    [
+      "APP",
+      "EMS PRESCRICAO",
+      82201.53,
+      67141.29,
+      15398.86
+    ],
+    [
+      "APP",
+      "HIGIMASTER DIST DE PROD DE HIG LTDA",
+      99.82,
+      139.92000000000002,
+      0
+    ],
+    [
+      "APP",
+      "LABORATORIOS NAOS DO BRASIL LTDA",
+      807.81,
+      434.52,
+      223.71
+    ],
+    [
+      "APP",
+      "MONDELEZ BRASIL LTDA",
+      1135.96,
+      558.08,
+      378.40000000000003
+    ],
+    [
+      "APP",
+      "ACCUMED PRODUTOS MED.HOSPITALARES LTDA",
+      3528.78,
+      1541.8500000000004,
+      2831.1400000000003
+    ],
+    [
+      "APP",
+      "LA ROCHE POSAY",
+      5439.279999999999,
+      3394.46,
+      3120.13
+    ],
+    [
+      "APP",
+      "HYPERMARCAS OTC",
+      14345.51,
+      8368.96,
+      13077.599999999999
+    ],
+    [
+      "APP",
+      "EUROFARMA CONVENIENCIA",
+      86.54,
+      221.24,
+      182.33
+    ],
+    [
+      "APP",
+      "VICHY",
+      1354.3400000000001,
+      586.04,
+      158.01
+    ],
+    [
+      "APP",
+      "CREMER S.A.",
+      962.3799999999999,
+      753.59,
+      376.32
+    ],
+    [
+      "APP",
+      "FARMOQUIMICA S/A",
+      17460.34,
+      10637.01,
+      15072.089999999995
+    ],
+    [
+      "APP",
+      "CIMED GENERICOS",
+      26868.58,
+      20660.540000000005,
+      7053.010000000001
+    ],
+    [
+      "APP",
+      "FARMAX DISTRIBUIDORA S.A",
+      926.01,
+      509.5299999999999,
+      587.9399999999999
+    ],
+    [
+      "APP",
+      "LILLO BABY",
+      696.3800000000001,
+      408.37,
+      205.22
+    ],
+    [
+      "APP",
+      "ELI LILLY DO BRASIL LTDA",
+      671414.9299999999,
+      410037.9800000001,
+      346063.7
+    ],
+    [
+      "APP",
+      "MEDQUIMICA INDUSTRIA FARMACEUTICA LTDA",
+      412.48,
+      144.44,
+      57.68000000000001
+    ],
+    [
+      "APP",
+      "ZALIKE COMERCIO IMP E EXP LTDA-FS",
+      8.98,
+      7.29,
+      18.57
+    ],
+    [
+      "APP",
+      "ISDIN PRODUTOS FARMACEUTICOS LTDA",
+      1881.0300000000002,
+      897.07,
+      1161.45
+    ],
+    [
+      "APP",
+      "NOVARTIS BIOCIENCIAS SA",
+      5060.96,
+      3489.72,
+      5265.499999999998
+    ],
+    [
+      "APP",
+      "MAKRODAL DISTRIBUIDORA DE ALIMENTOS LTDA",
+      124.93,
+      80.03999999999999,
+      153.95000000000002
+    ],
+    [
+      "APP",
+      "INSTITUTO PASTEUR DE COSMIATRIA LIMITADA",
+      898.59,
+      920.7200000000001,
+      873.36
+    ],
+    [
+      "APP",
+      "MEDLEY GENERICOS",
+      8739.130000000003,
+      7045.15,
+      7661.389999999996
+    ],
+    [
+      "APP",
+      "NAZCA LTDA",
+      1397.5900000000004,
+      845.97,
+      921.39
+    ],
+    [
+      "APP",
+      "SANDOZ DO BRASIL IND FARM LTDA",
+      8208.22,
+      5192.25,
+      2768.39
+    ],
+    [
+      "APP",
+      "UNILEVER BRASIL GELADOS LTDA RS",
+      20.99,
+      0,
+      1437.44
+    ],
+    [
+      "APP",
+      "CASA GRANADO LAB FARM E DROGARIA SA",
+      1910.45,
+      1254.94,
+      1457.64
+    ],
+    [
+      "APP",
+      "SUNSTAR BRASIL IMPORTADORA DISTRIB LTDA",
+      428.01000000000005,
+      291.25,
+      247.58
+    ],
+    [
+      "APP",
+      "COCA COLA COMPANY",
+      853.63,
+      310.61999999999995,
+      311.62
+    ],
+    [
+      "APP",
+      "MEAD JOHNSON DO BRASIL COM E IMP DE PROD",
+      331.33,
+      257.52,
+      212.24
+    ],
+    [
+      "APP",
+      "BEBIDAS FRUKI SA",
+      52.3,
+      107.45,
+      70.28
+    ],
+    [
+      "APP",
+      "BAMBUSE INDUSTRIA E COMERCIO DE ACESSORI",
+      0,
+      224.94000000000003,
+      33.59
+    ],
+    [
+      "APP",
+      "EUROFRAL IND DE PROD HIGIEN E TERMOPLAST",
+      263.79,
+      356.14,
+      160.75
+    ],
+    [
+      "APP",
+      "BDF NIVEA LTDA - SP",
+      17015.89,
+      8017.549999999998,
+      5551.390000000001
+    ],
+    [
+      "APP",
+      "MARJAN INDUSTRIA E COMERCIO LTDA",
+      6297.640000000001,
+      3041.91,
+      6852.52
+    ],
+    [
+      "APP",
+      "SOROCAPS INDUSTRIA FARMACEUTICA LTDA",
+      3914.4000000000005,
+      3491.84,
+      2447.5500000000006
+    ],
+    [
+      "APP",
+      "LEAO ALIMENTOS E BEBIDAS LTDA",
+      5.99,
+      29.869999999999997,
+      0
+    ],
+    [
+      "APP",
+      "MATTEL DO BRASIL LTDA",
+      240.56,
+      129.98,
+      179.74
+    ],
+    [
+      "APP",
+      "HEDERRA COSMETICOS",
+      177.46999999999997,
+      99.76,
+      176.59999999999997
+    ],
+    [
+      "APP",
+      "DISTRIPRIME DISTRIB DE COSMETICOS LTDA",
+      371.46000000000004,
+      208.41000000000003,
+      0
+    ],
+    [
+      "APP",
+      "BETTANIN S A",
+      69.96,
+      8.9,
+      17.85
+    ],
+    [
+      "APP",
+      "ESSITY DO BRASIL INDUST E COMERCIO LTDA",
+      3351.7299999999996,
+      1948.3,
+      1560.5
+    ],
+    [
+      "APP",
+      "COMERCIAL MEGA EIRELI",
+      20.55,
+      27.96,
+      0
+    ],
+    [
+      "APP",
+      "BIOLAB SANUS FARMACEUTICA LTDA",
+      16416.37,
+      14605.12,
+      14934.91
+    ],
+    [
+      "APP",
+      "PAYOT",
+      2590.72,
+      737.82,
+      681.8699999999999
+    ],
+    [
+      "APP",
+      "DURACELL COMERCIAL E IMPORTADORA DO BRAS",
+      138.46,
+      75.8,
+      0
+    ],
+    [
+      "APP",
+      "NEUGEBAUER ALIMENTOS S A",
+      239.62999999999997,
+      1014.2900000000001,
+      204.57
+    ],
+    [
+      "APP",
+      "GERMED USK",
+      1323.2100000000003,
+      220.91000000000003,
+      1240.17
+    ],
+    [
+      "APP",
+      "HYPERMARCAS RX/OTX",
+      14834.210000000001,
+      10182.609999999997,
+      5629.389999999999
+    ],
+    [
+      "APP",
+      "VIATRIS FARMACEUTICA LABORATORIO",
+      1027.92,
+      690.2099999999999,
+      1891.74
+    ],
+    [
+      "APP",
+      "AMGEN BIOTECNOLOGIA DO BRASIL LTDA.",
+      0,
+      8185.5999999999985,
+      1784.88
+    ],
+    [
+      "APP",
+      "UNILEVER BRASIL LTDA RS",
+      58917.42000000007,
+      46995.42000000004,
+      21288.94000000001
+    ],
+    [
+      "APP",
+      "WELLA BRASIL LTDA",
+      2337.0599999999995,
+      2461.1400000000003,
+      1837.8700000000003
+    ],
+    [
+      "APP",
+      "BAUDUCCO E CIA LTDA",
+      75.87000000000002,
+      30.29,
+      123.81
+    ],
+    [
+      "APP",
+      "HYPERMARCAS - ADOCANTES",
+      0,
+      62.599999999999994,
+      42.06999999999999
+    ],
+    [
+      "APP",
+      "GLAXOSMITHKLINE BRASIL LTDA",
+      3435.8,
+      3439.4099999999994,
+      2337.8
+    ],
+    [
+      "APP",
+      "BAGO LTDA",
+      297.91,
+      1367.09,
+      431.80000000000007
+    ],
+    [
+      "APP",
+      "PFIZER BRASIL LTDA",
+      5435.54,
+      2845.95,
+      2715.5099999999998
+    ],
+    [
+      "APP",
+      "OPELLA (SANOFI OTC)",
+      9794.960000000001,
+      5435.57,
+      7483.039999999999
+    ],
+    [
+      "APP",
+      "FLORA PROD DE HIG E LIMP GO - CAPILAR",
+      2903.7300000000005,
+      1983.5900000000001,
+      792.6600000000001
+    ],
+    [
+      "APP",
+      "SAUDE LTDA",
+      408.93000000000006,
+      180.57999999999998,
+      309.62
+    ],
+    [
+      "APP",
+      "FARM E LAB HOMEOP ALMEIDA PRADO LTDA",
+      33.99,
+      35.99,
+      0
+    ],
+    [
+      "APP",
+      "BIO EXTRATUS",
+      433.78000000000003,
+      390.42999999999995,
+      520.98
+    ],
+    [
+      "APP",
+      "GENOM FARMACEUTICA LTDA",
+      5473.26,
+      5698.08,
+      5516.969999999998
+    ],
+    [
+      "APP",
+      "ORGANON FARMACEUTICA LTDA",
+      6070.07,
+      3482.2000000000007,
+      3835.4200000000005
+    ],
+    [
+      "APP",
+      "ABBOTT LABORATORIOS DO BRASIL LTDA",
+      3841.96,
+      4754.179999999999,
+      5478.999999999998
+    ],
+    [
+      "APP",
+      "CELLERA RX",
+      7180.629999999999,
+      4418.07,
+      8124.490000000001
+    ],
+    [
+      "APP",
+      "THERAMEX FARMACEUTICA LTDA",
+      4702.95,
+      2847.7799999999997,
+      2008.73
+    ],
+    [
+      "APP",
+      "GERMED FARMACEUTICA LTDA",
+      5487.8200000000015,
+      4329.96,
+      2254.9300000000003
+    ],
+    [
+      "APP",
+      "HALEON OTC",
+      2787.2499999999995,
+      1333.1000000000004,
+      1658.2200000000003
+    ],
+    [
+      "APP",
+      "CATARINENSE S.A",
+      2502,
+      1458.93,
+      2344.0200000000004
+    ],
+    [
+      "APP",
+      "PROCTER OTC",
+      3665.2200000000007,
+      3013.5699999999997,
+      5227.46
+    ],
+    [
+      "APP",
+      "HYPERA MARCAS",
+      4094.5,
+      2668.5499999999997,
+      2207.4400000000005
+    ],
+    [
+      "APP",
+      "ALCON LABORATORIOS DO BRASIL LTDA",
+      1530.0600000000002,
+      840.05,
+      1741.8600000000001
+    ],
+    [
+      "APP",
+      "VIDORA FARMACEUTICA LTDA",
+      121.57,
+      134.45000000000002,
+      177.78
+    ],
+    [
+      "APP",
+      "KENVUE OTC",
+      6448.61,
+      3897.1000000000004,
+      4563.180000000001
+    ],
+    [
+      "APP",
+      "3M DO BRASIL LTDA",
+      331.56000000000006,
+      367.84,
+      596.3
+    ],
+    [
+      "APP",
+      "MEGALABS FARMACEUTICA S A",
+      4498.58,
+      4813.44,
+      4015.0599999999995
+    ],
+    [
+      "APP",
+      "NEURAXPHARM BRASIL IMPORTACAO E DISTRIBU",
+      327.74,
+      48.67,
+      303.34000000000003
+    ],
+    [
+      "APP",
+      "VULT",
+      383.77,
+      90.88,
+      352.95
+    ],
+    [
+      "APP",
+      "BESINS HEALTHCARE BR COM  DIST MED LTDA",
+      6191.84,
+      4092.2300000000005,
+      7114.340000000001
+    ],
+    [
+      "APP",
+      "EMS MARCAS",
+      1756.2200000000005,
+      1115.7400000000002,
+      1410.3600000000001
+    ],
+    [
+      "APP",
+      "BAYER OTC",
+      8221.85,
+      4916.450000000001,
+      9091.91
+    ],
+    [
+      "APP",
+      "MAWDSLEYS PHARMACEUTICALS DO BRASIL LTDA",
+      158.18,
+      83.21000000000001,
+      31.4
+    ],
+    [
+      "APP",
+      "ALLERGAN PRODUTOS FARMACEUTICOS LTDA",
+      833.0200000000001,
+      724.51,
+      881.7600000000001
+    ],
+    [
+      "APP",
+      "LABORATORIOS OSORIO DE MORAES LTDA",
+      132.87,
+      138.17000000000002,
+      197.66000000000003
+    ],
+    [
+      "APP",
+      "LEOFARMA LAB",
+      2018.6799999999998,
+      1794.89,
+      899.6600000000001
+    ],
+    [
+      "APP",
+      "SANDOZ FARMA",
+      1300.31,
+      1228.06,
+      0
+    ],
+    [
+      "APP",
+      "RECKITT HB",
+      644.1200000000001,
+      1309.2600000000002,
+      683.85
+    ],
+    [
+      "APP",
+      "BOEHRINGER INGELHEIM DO BRASIL QUIMICA",
+      9087.279999999999,
+      6564.6,
+      1105.19
+    ],
+    [
+      "APP",
+      "BLANVER FARMOQUIMICA E FARMACEUTICA SA",
+      1475.12,
+      963.9599999999999,
+      1458.8100000000002
+    ],
+    [
+      "APP",
+      "TRB PHARMA IND QUIMICA E FARM LTDA",
+      571,
+      579.35,
+      0
+    ],
+    [
+      "APP",
+      "GALDERMA BRASIL LTDA",
+      980.83,
+      288.86,
+      855.7600000000002
+    ],
+    [
+      "APP",
+      "BEIERSDORF INDUSTRIA E COMERCIO LTDA",
+      1831.1899999999998,
+      482.29999999999995,
+      0
+    ],
+    [
+      "APP",
+      "GERMED BRACE PHARMA",
+      3592.42,
+      3086.68,
+      1560.3000000000002
+    ],
+    [
+      "APP",
+      "MASTER LINE DO BRASIL LTDA",
+      415.84000000000003,
+      516.47,
+      113.94999999999999
+    ],
+    [
+      "APP",
+      "CRISTALIA PROD QUIM FARMACEUTICOS LTDA",
+      5175.45,
+      4335.779999999999,
+      3287.36
+    ],
+    [
+      "APP",
+      "CONDOR BRASIL IND COM E TRANS COSM EIREL",
+      368.08000000000004,
+      260.79999999999995,
+      191.19
+    ],
+    [
+      "APP",
+      "DEPIL BELLA",
+      262.75,
+      330.98,
+      103.71999999999998
+    ],
+    [
+      "APP",
+      "LBS LABORASA IND FARMAC LTDA",
+      2469.9200000000005,
+      2012.1700000000005,
+      1858.1700000000003
+    ],
+    [
+      "APP",
+      "LATEX BRASIL",
+      548.59,
+      377.84000000000003,
+      129.74999999999997
+    ],
+    [
+      "APP",
+      "UNIAO QUIMICA FARMACEUTICA NACIONAL S A",
+      2486.2599999999998,
+      2459.5700000000006,
+      1913.2599999999998
+    ],
+    [
+      "APP",
+      "INCOTERM IND DE TERMOMETROS LTDA",
+      9.99,
+      9.99,
+      16.54
+    ],
+    [
+      "APP",
+      "ACHE LABORATORIOS FARMACEUTICOS SA",
+      2381.3999999999996,
+      709.4600000000003,
+      861.65
+    ],
+    [
+      "APP",
+      "NESTLE NUTRITION",
+      85954.77999999998,
+      23749.749999999996,
+      36444.48000000001
+    ],
+    [
+      "APP",
+      "LABORATORIO TEUTO BRASILEIRO S A",
+      6016.77,
+      3791.1600000000003,
+      2543.1100000000006
+    ],
+    [
+      "APP",
+      "IND QUIMICO FARMACEUTICA CEARENSE LTDA",
+      178.59,
+      74.35000000000001,
+      250.15000000000003
+    ],
+    [
+      "APP",
+      "RANBAXY FARMACEUTICA LTDA",
+      4305.679999999999,
+      3397.9,
+      784.96
+    ],
+    [
+      "APP",
+      "ROCHE DIAGNOSTICA BRASIL LTDA.",
+      1143.74,
+      1407.53,
+      1155.8300000000002
+    ],
+    [
+      "APP",
+      "SANFARMA INDUSTRIA, COMERCIO E IMPORTACA",
+      1544.1399999999996,
+      1067.02,
+      774.27
+    ],
+    [
+      "APP",
+      "LOLLY BABY PRODUTOS INFANTIS LTDA",
+      432.7900000000001,
+      234.92000000000002,
+      227.14000000000001
+    ],
+    [
+      "APP",
+      "DEPI-ROLL",
+      126.82999999999998,
+      176.93,
+      108.94
+    ],
+    [
+      "APP",
+      "HYPERA GENERICOS",
+      3234.7899999999995,
+      1883.5900000000006,
+      519.1400000000001
+    ],
+    [
+      "APP",
+      "VITAMEDIC INDUSTRIA FARMACEUTICA LTDA",
+      1736.0499999999997,
+      1753.7900000000002,
+      116.55000000000001
+    ],
+    [
+      "APP",
+      "ADIUM S A",
+      2801.7100000000005,
+      1874.74,
+      3031.25
+    ],
+    [
+      "APP",
+      "CLESS COMERCIO DE COSMETICOS S.A.",
+      396.75,
+      341.75,
+      158.42
+    ],
+    [
+      "APP",
+      "SEMINA INDUSTRIA E COMERCIO LTDA",
+      723.26,
+      788.53,
+      254.1
+    ],
+    [
+      "APP",
+      "MERCK PHARMA",
+      9011.569999999998,
+      7015.290000000002,
+      2497.46
+    ],
+    [
+      "APP",
+      "HALEON BRASIL DISTRIBUIDORA LTDA",
+      1172.46,
+      824.78,
+      813.9300000000001
+    ],
+    [
+      "APP",
+      "BECTON DICKINSON IND CIRURGICAS LTDA",
+      76.17,
+      111.76,
+      0
+    ],
+    [
+      "APP",
+      "JOHNSON & JOHNSON BR IND COM SAUDE LTDA",
+      16187.009999999995,
+      6577.89,
+      8002.24
+    ],
+    [
+      "APP",
+      "KENVUE DERMO",
+      3826.09,
+      2775.8,
+      1633.6299999999999
+    ],
+    [
+      "APP",
+      "NEEZ BRASIL COMERCIO DE COSMETICOS LTDA",
+      538.76,
+      283.63,
+      279.46000000000004
+    ],
+    [
+      "APP",
+      "DIVCOM PHARMA",
+      1246.1899999999998,
+      1598.01,
+      2520.4899999999993
+    ],
+    [
+      "APP",
+      "FARMOQUIMICA DERMO",
+      3847.88,
+      2302.78,
+      1353.77
+    ],
+    [
+      "APP",
+      "CIFARMA CIENTIFICA FARMACEUTICA LTDA",
+      82,
+      34.19,
+      191.68
+    ],
+    [
+      "APP",
+      "ACHE MIP OTC/OTX",
+      8504.98,
+      5419.9,
+      6838.6900000000005
+    ],
+    [
+      "APP",
+      "ZAMBON LABORATORIOS FARMACEUTICOS LTDA",
+      2157.79,
+      829.34,
+      2082.3100000000004
+    ],
+    [
+      "APP",
+      "ADVERTISING OP ASS PLANEJ E PROPAG LTDA",
+      714.6199999999999,
+      467.77,
+      0
+    ],
+    [
+      "APP",
+      "MEDLEY FARMA",
+      0,
+      0,
+      192.41
+    ],
+    [
+      "APP",
+      "LABORATORIO WESP LTDA",
+      294.11,
+      363.49,
+      244.94000000000003
+    ],
+    [
+      "APP",
+      "ASPEN PHARMA INDUSTRIA FARMACEUTICA LTDA",
+      2350.6000000000004,
+      1468.01,
+      3249.1499999999996
+    ],
+    [
+      "APP",
+      "BOTICARIO PRODUTOS DE BELEZA LTDA",
+      3905.5799999999995,
+      2644.0699999999997,
+      1497.3200000000002
+    ],
+    [
+      "APP",
+      "PERFUMES DANA DO BRASIL S.A.",
+      381.33000000000004,
+      302.21000000000004,
+      211.26999999999998
+    ],
+    [
+      "APP",
+      "MOMENTA FARMACEUTICA LTDA.",
+      14916.289999999999,
+      9767.759999999998,
+      10412.840000000002
+    ],
+    [
+      "APP",
+      "HYPERMARCAS DERMATO",
+      2535.5400000000004,
+      1163.96,
+      762.85
+    ],
+    [
+      "APP",
+      "CHIMICA BARUEL LTDA",
+      3062.98,
+      2684.1800000000003,
+      1581.07
+    ],
+    [
+      "APP",
+      "DKT BRASIL PRODUTOS DE USO PESSOAL LTDA",
+      1274.6200000000001,
+      1281.2500000000005,
+      941.7399999999999
+    ],
+    [
+      "APP",
+      "HYPERMARCAS GB",
+      1598.1,
+      822.82,
+      589.23
+    ],
+    [
+      "APP",
+      "CHIESI FARMACEUTICA LTDA",
+      3163.0399999999995,
+      1856.47,
+      2069.03
+    ],
+    [
+      "APP",
+      "BIOPAS BRASIL PROD FARMACEUTICOS LTDA",
+      747.5500000000001,
+      417.22,
+      700.0699999999999
+    ],
+    [
+      "APP",
+      "GEYER MEDICAMENTOS S.A",
+      224.60000000000002,
+      241.46,
+      185.04999999999998
+    ],
+    [
+      "APP",
+      "MERHEJE BRAZIL & COMPANHIA LTDA",
+      169.29000000000002,
+      403.4200000000001,
+      82.4
+    ],
+    [
+      "APP",
+      "BOIRON S.A",
+      1877.2,
+      1464.48,
+      1075.58
+    ],
+    [
+      "APP",
+      "CREMER – MARCA PROPRIA",
+      3557.01,
+      2311.299999999999,
+      1642.9799999999998
+    ],
+    [
+      "APP",
+      "BONYPLUS IND COM COSM LTDA-BEAUTY COLOR",
+      2587.1799999999994,
+      1522.14,
+      711.4200000000002
+    ],
+    [
+      "APP",
+      "EMS OTC",
+      2854.5299999999997,
+      742.7800000000001,
+      1772.4100000000003
+    ],
+    [
+      "APP",
+      "TAKEDA PHARMA LTDA",
+      6342.200000000001,
+      7648.160000000002,
+      27135.230000000007
+    ],
+    [
+      "APP",
+      "GRUNENTHAL DO BRASIL FARMACEUTICA LTDA.",
+      86.98,
+      675.97,
+      0
+    ],
+    [
+      "APP",
+      "LABORATORIOS SERVIER DO BRASIL LTDA",
+      2492.8900000000003,
+      3197.02,
+      1525.84
+    ],
+    [
+      "APP",
+      "MEDQUIMICA PHARMA",
+      191.10999999999999,
+      271.65999999999997,
+      97.60999999999999
+    ],
+    [
+      "APP",
+      "SOFTYS BRASIL LTDA",
+      13689.729999999996,
+      9685.25,
+      11805.859999999999
+    ],
+    [
+      "APP",
+      "MAKROFARMA",
+      138.21,
+      0,
+      59.9
+    ],
+    [
+      "APP",
+      "FARMOTERAPICA DOVALLE INDUSTRIA QUIMICA",
+      0,
+      0,
+      115.51
+    ],
+    [
+      "APP",
+      "MARCO BONI",
+      151.6,
+      159.85,
+      102.46999999999998
+    ],
+    [
+      "APP",
+      "LABORATORIO GROSS S A",
+      2075.58,
+      1405.4699999999998,
+      1539.16
+    ],
+    [
+      "APP",
+      "HEBRON S.A",
+      971.3800000000001,
+      287.88,
+      482.34999999999997
+    ],
+    [
+      "APP",
+      "ABBOTT NUTRICAO",
+      233.49,
+      68.66,
+      299.68
+    ],
+    [
+      "APP",
+      "EMBELLEZE LTDA",
+      623.7,
+      622.72,
+      387.65000000000003
+    ],
+    [
+      "APP",
+      "PERFECT",
+      62.13,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "FLEXICOTTON IND COM SA",
+      579.6400000000001,
+      323.31,
+      223.36000000000004
+    ],
+    [
+      "APP",
+      "GEOLAB GENERICOS",
+      8193.920000000002,
+      5385.879999999999,
+      356.61
+    ],
+    [
+      "APP",
+      "EVER GREEN IND E COM LTDA",
+      2164.17,
+      369.78000000000003,
+      676.5200000000001
+    ],
+    [
+      "APP",
+      "LABORATORIOS FERRING LTDA",
+      98.18,
+      2342.52,
+      329.61
+    ],
+    [
+      "APP",
+      "GALDERMA DERMO",
+      2197.5900000000006,
+      1447.4,
+      315.88
+    ],
+    [
+      "APP",
+      "NEOPAN DO BRASIL LTDA",
+      94.97,
+      34.99,
+      275.57
+    ],
+    [
+      "APP",
+      "KLEY HERTZ",
+      1611.0899999999997,
+      796.1300000000001,
+      1010.42
+    ],
+    [
+      "APP",
+      "LEXUNS LABORATORIO NUTRACEUTICO E INDUS",
+      77.69999999999999,
+      51.8,
+      106.87
+    ],
+    [
+      "APP",
+      "LABORATORIO GLOBO LTDA",
+      1409.8199999999997,
+      586.5400000000001,
+      719.06
+    ],
+    [
+      "APP",
+      "NOVO NORDISK FARMACEUTICA DO BRASIL LTDA",
+      94054.58,
+      67725.82,
+      330356.81
+    ],
+    [
+      "APP",
+      "LABORATORIOS PIERRE FABRE BR LTDA CD",
+      1866.49,
+      478.78,
+      69.99
+    ],
+    [
+      "APP",
+      "DRYLOCK TECHNOLOGIES BRASIL LTDA",
+      20638.390000000003,
+      19503.32,
+      12437.729999999998
+    ],
+    [
+      "APP",
+      "EUROFARMA GEN",
+      4248.209999999999,
+      1858.8700000000006,
+      1347.26
+    ],
+    [
+      "APP",
+      "EMBECTA BRASIL LTDA",
+      1310.76,
+      1313.14,
+      125.73000000000002
+    ],
+    [
+      "APP",
+      "GENOMMA LABORATORIES DO BRASIL LTDA.",
+      1886.52,
+      1234.9800000000002,
+      1009.02
+    ],
+    [
+      "APP",
+      "BENNE INDUSTRIA FARMACEUTICA LTDA",
+      305.82,
+      139.3,
+      82.71
+    ],
+    [
+      "APP",
+      "EMS HB",
+      598.34,
+      198.34,
+      243.15000000000003
+    ],
+    [
+      "APP",
+      "CELLERA FARMACEUTICA S A",
+      557.3,
+      558.6899999999999,
+      233.69
+    ],
+    [
+      "APP",
+      "CURADEN SWISS DO BRASIL IMP E EXP LTDA",
+      443.58000000000004,
+      228.01,
+      344.57
+    ],
+    [
+      "APP",
+      "SANCHEZ CANO LTDA",
+      638.1899999999999,
+      424.07,
+      247.2
+    ],
+    [
+      "APP",
+      "NESTLE CONVENIENCIA",
+      213.04999999999998,
+      754.7800000000001,
+      172.32000000000002
+    ],
+    [
+      "APP",
+      "MONTESANO IND E COM DE PROD QUIM EIRELI",
+      0,
+      45.8,
+      39.8
+    ],
+    [
+      "APP",
+      "TEUTO MARCAS",
+      2090.54,
+      690.8100000000001,
+      548.03
+    ],
+    [
+      "APP",
+      "IMBECOR PRODUTOS DE BELEZA LTDA",
+      220.61,
+      72.75,
+      134.14000000000001
+    ],
+    [
+      "APP",
+      "MEMPHIS S/A INDUSTRIAL",
+      50.83,
+      58.21000000000001,
+      48.09
+    ],
+    [
+      "APP",
+      "AVAMILLER LTDA",
+      641.8900000000002,
+      280.23,
+      247.55
+    ],
+    [
+      "APP",
+      "BENEVA COMPANHIA DE MARCAS S/A",
+      207.08,
+      250.29,
+      27.58
+    ],
+    [
+      "APP",
+      "BIOIDEAL DISTRIB DE PROD PARA SAUDE LTDA",
+      236.34,
+      155.6,
+      467.16999999999996
+    ],
+    [
+      "APP",
+      "ASTRAZENECA DO BRASIL LTDA",
+      5671.02,
+      1876.3600000000001,
+      4077.100000000001
+    ],
+    [
+      "APP",
+      "BELFAR LTDA",
+      94.62,
+      0,
+      12.89
+    ],
+    [
+      "APP",
+      "DI HELLEN INDUSTRIA DE COSMETICOS LTDA",
+      25.98,
+      12.99,
+      0
+    ],
+    [
+      "APP",
+      "DELICATE MODA INFANTIL LTDA",
+      35.49,
+      0,
+      249.52
+    ],
+    [
+      "APP",
+      "HANES BRANDS BRASIL TEXTIL LTDA",
+      113.99,
+      227.98,
+      370.51
+    ],
+    [
+      "APP",
+      "PHISALIA PROD DE BELEZA",
+      308.88,
+      160.20000000000002,
+      53.79
+    ],
+    [
+      "APP",
+      "IND COM DE PROD BELEZA YAMA LTDA",
+      143.9,
+      151.07,
+      15.63
+    ],
+    [
+      "APP",
+      "BL INDUSTRIA OTICA LTDA",
+      1298.1799999999998,
+      800.2900000000001,
+      1136.15
+    ],
+    [
+      "APP",
+      "FLORA PRODUTOS DE HIG E LIMP GO - PELE",
+      105.88000000000001,
+      160.19,
+      152.14000000000004
+    ],
+    [
+      "APP",
+      "GEDEON RICHTER DO BRASIL IMPORTADORA",
+      1799,
+      2212.0800000000004,
+      1173.22
+    ],
+    [
+      "APP",
+      "HISAMITSU FARMACEUTICA DO BRASIL LTDA",
+      1028.8999999999999,
+      341.68999999999994,
+      311.21
+    ],
+    [
+      "APP",
+      "LABORATORIO FARMACEUTICO ELOFAR LTDA",
+      0,
+      0,
+      13.33
+    ],
+    [
+      "APP",
+      "EUROART",
+      71.99,
+      231.96,
+      32.99
+    ],
+    [
+      "APP",
+      "FLORA PRODUT DE HIGI E LIMP SA MAT INSET",
+      36.61,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "XALINGO SA INDUSTRIA E COMERCIO",
+      0,
+      29.9,
+      0
+    ],
+    [
+      "APP",
+      "AMOVERI FARMA S.A.",
+      123.27999999999999,
+      55.160000000000004,
+      144.27999999999997
+    ],
+    [
+      "APP",
+      "RV TECNOLOGIA E SISTEMAS S.A.",
+      201.61,
+      199.4,
+      59.8
+    ],
+    [
+      "APP",
+      "MEGALABS DERMO",
+      1757.9,
+      228.89000000000001,
+      610.11
+    ],
+    [
+      "APP",
+      "AIRELA INDUSTRIA FARMACEUTICA LTDA",
+      175.35999999999999,
+      135.93,
+      117.71
+    ],
+    [
+      "APP",
+      "CAMPMED SOLUC EM PRODUT PARA SAUDE LTDA",
+      0,
+      32.89,
+      0
+    ],
+    [
+      "APP",
+      "PHILIPS DO BRASIL LTDA",
+      1454.6900000000003,
+      1294.1399999999999,
+      586.44
+    ],
+    [
+      "APP",
+      "LATICINIOS BELA VISTA LTDA",
+      197.39999999999998,
+      305.68999999999994,
+      129.1
+    ],
+    [
+      "APP",
+      "DIGREPAL DIST GRESSLER DE PROD ALIM LTDA",
+      59.21000000000001,
+      38.76,
+      0
+    ],
+    [
+      "APP",
+      "CATARINENSE NUTRICAO",
+      3908.0999999999995,
+      1568.96,
+      1294.0100000000002
+    ],
+    [
+      "APP",
+      "GENOM FARMACEUTICA DERMO",
+      51.09,
+      281.6,
+      43.23
+    ],
+    [
+      "APP",
+      "NLS ALIMENTOS LTDA",
+      38.07,
+      17.75,
+      12.26
+    ],
+    [
+      "APP",
+      "SENSELLES INDUSTRIA E COMERCIO DE COSMET",
+      2551.2799999999997,
+      1268.3700000000003,
+      668.87
+    ],
+    [
+      "APP",
+      "MASTERFOODS BRASIL ALIMENTOS LTDA.",
+      141.64999999999998,
+      97.84,
+      171.77
+    ],
+    [
+      "APP",
+      "M DIAS BRANCO S.A. INDUSTRIA E COMERCIO",
+      29.840000000000003,
+      10.55,
+      6.19
+    ],
+    [
+      "APP",
+      "ASSOCIADAS",
+      0,
+      19.98,
+      0
+    ],
+    [
+      "APP",
+      "EQUILIBRIUM DISTRIBUIDORA DE MEDICAMENTO",
+      311.42999999999995,
+      64.16,
+      80.22999999999999
+    ],
+    [
+      "APP",
+      "NELIDA DO BRASIL COMERCIO E IMPORTACAO L",
+      1655.7899999999997,
+      743.6500000000001,
+      327.56000000000006
+    ],
+    [
+      "APP",
+      "DAHUER LABORATORIO LTDA",
+      356.53,
+      428.02,
+      164.29000000000002
+    ],
+    [
+      "APP",
+      "SERVICOS FARMACIAS",
+      69.58,
+      0,
+      86.91
+    ],
+    [
+      "APP",
+      "ARDRAK IND COM IMP EXP PROD NAT ALIM LTD",
+      33.98,
+      0,
+      19.2
+    ],
+    [
+      "APP",
+      "CAFE TRES CORACOES S.A",
+      38.86,
+      3.5,
+      18.2
+    ],
+    [
+      "APP",
+      "OMRON HEALTHCARE BRASIL REP E DIST LTDA",
+      1820.23,
+      1140.47,
+      1098.34
+    ],
+    [
+      "APP",
+      "HASBRO DO BRASIL INDUST COMER BRINQ JOG",
+      0,
+      139.6,
+      0
+    ],
+    [
+      "APP",
+      "ZYDUS NIKKHO",
+      593.04,
+      74,
+      95.68
+    ],
+    [
+      "APP",
+      "GRUNENTHAL DO BRASIL FARMACEUTICA LTDA",
+      963.89,
+      2191.61,
+      459.24
+    ],
+    [
+      "APP",
+      "HYPERA S A",
+      237.28,
+      94.6,
+      271.65000000000003
+    ],
+    [
+      "APP",
+      "GIOVANI GRITTI LTDA",
+      6.99,
+      6.99,
+      0
+    ],
+    [
+      "APP",
+      "BIOSINTETICA LABORATORIOS FARMACEU",
+      1642.1899999999996,
+      699.91,
+      1082.47
+    ],
+    [
+      "APP",
+      "ASTELLAS",
+      584.66,
+      747.72,
+      1479.19
+    ],
+    [
+      "APP",
+      "BIOLAB FARMA GENERICOS LTDA",
+      2467.2299999999996,
+      1743.44,
+      709.79
+    ],
+    [
+      "APP",
+      "MULTILAB FARMA",
+      154.31,
+      168.35,
+      129.79
+    ],
+    [
+      "APP",
+      "BLAU FARMACEUTICA S.A.",
+      917.6899999999998,
+      240.59,
+      139.39
+    ],
+    [
+      "APP",
+      "HIDROLIGHT DO BRASIL S.A",
+      559.56,
+      70.65,
+      299.71999999999997
+    ],
+    [
+      "APP",
+      "TERMOGEL",
+      50.97,
+      79.47,
+      47.67
+    ],
+    [
+      "APP",
+      "LABORATORIO MELPOEJO LTDA",
+      0,
+      49.69,
+      76.78
+    ],
+    [
+      "APP",
+      "ALTHAIA EQUALIV",
+      1951.3300000000002,
+      1690.75,
+      816.74
+    ],
+    [
+      "APP",
+      "NATULAB LABORATORIO S A",
+      1212.73,
+      691.8499999999999,
+      698.06
+    ],
+    [
+      "APP",
+      "HEMAFARMA COMERCIO E INDUSTRIA FARMACEUT",
+      74.97999999999999,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "PRAIAMAR CONV",
+      137.8,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "TEVA",
+      152.44,
+      2604.3599999999997,
+      0
+    ],
+    [
+      "APP",
+      "MEDIX BRASIL LTDA",
+      447.4699999999999,
+      741.08,
+      280.43
+    ],
+    [
+      "APP",
+      "FHACES",
+      8.97,
+      2.99,
+      8.81
+    ],
+    [
+      "APP",
+      "JOSAPAR JOAQUIM OLIVEIRA SA PARTICIPACOE",
+      36.99,
+      110.97,
+      36.99
+    ],
+    [
+      "APP",
+      "HOMEOPATIA WALDEMIRO PEREIRA LAB. IND",
+      191.9,
+      0,
+      246.52
+    ],
+    [
+      "APP",
+      "GOTA DOURADA PROD NAT LTDA",
+      11.28,
+      34.75,
+      16.99
+    ],
+    [
+      "APP",
+      "PHARMASCIENCE",
+      975.51,
+      1246.23,
+      304.83000000000004
+    ],
+    [
+      "APP",
+      "SUZANO S.A.",
+      226.45000000000002,
+      95.58999999999999,
+      163
+    ],
+    [
+      "APP",
+      "ALTHAIA",
+      19563.230000000003,
+      12892.460000000001,
+      6005.24
+    ],
+    [
+      "APP",
+      "MUNDIAL",
+      350.61,
+      83.38,
+      186.12
+    ],
+    [
+      "APP",
+      "ARESE PHARMA LTDA",
+      907.1599999999999,
+      412.9,
+      547
+    ],
+    [
+      "APP",
+      "CAZI QUIMICA FARMACEUTICA IND COM LTDA",
+      114.3,
+      160.01999999999998,
+      126.5
+    ],
+    [
+      "APP",
+      "LIBBS FARMACEUTICA DERMO",
+      0,
+      0,
+      202.24
+    ],
+    [
+      "APP",
+      "QUIFA FARMACEUTICA DO BRASIL LTDA",
+      655.7200000000001,
+      71.4,
+      1493.23
+    ],
+    [
+      "APP",
+      "NOVA QUIMICA GENERICOS",
+      5633.790000000001,
+      3465.82,
+      4570.49
+    ],
+    [
+      "APP",
+      "MARDAM PROD HIGIENICOS LTDA",
+      0,
+      33.98,
+      0
+    ],
+    [
+      "APP",
+      "GEOLAB INDUSTRIA FARMACEUTICA S/A",
+      543.84,
+      297.71999999999997,
+      170.60999999999999
+    ],
+    [
+      "APP",
+      "LECLAIR INDUSTRIA E COMERCIO DE PERFUMES",
+      19.35,
+      61.550000000000004,
+      0
+    ],
+    [
+      "APP",
+      "NUTRIMENTAL",
+      0,
+      1.99,
+      0
+    ],
+    [
+      "APP",
+      "ABBOTT GENERICOS",
+      0,
+      0,
+      69.19
+    ],
+    [
+      "APP",
+      "PHARLAB INDUSTRIA FARMACEUTICA S A",
+      22.740000000000002,
+      45.07,
+      0
+    ],
+    [
+      "APP",
+      "MEDLVEN COMER E REPRES PROD HOSPI LTDA",
+      2916.7999999999997,
+      711.01,
+      771.8999999999999
+    ],
+    [
+      "APP",
+      "VITAMEDIC GENERICOS",
+      165.01999999999998,
+      187.93,
+      110.66
+    ],
+    [
+      "APP",
+      "MERCK S/A",
+      1293.83,
+      657.3499999999999,
+      470.21999999999997
+    ],
+    [
+      "APP",
+      "ESCOBEL IND COM DE PROD DE HIG BEL LTDA",
+      188.19,
+      175.82000000000002,
+      117.49000000000001
+    ],
+    [
+      "APP",
+      "ADIUM DERMO",
+      390.51,
+      99.9,
+      81.5
+    ],
+    [
+      "APP",
+      "LABOFARMA PRODUTOS FARMACEUTICOS LTDA.",
+      34.05,
+      0,
+      39.78
+    ],
+    [
+      "APP",
+      "LEGRAND OFTALMO",
+      831.7700000000001,
+      169.95000000000002,
+      810.14
+    ],
+    [
+      "APP",
+      "MENTOS GOMAS LTDA",
+      221.07000000000002,
+      169.08999999999997,
+      30.68
+    ],
+    [
+      "APP",
+      "OPHTHALMOS S/A",
+      95.43,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "IMEC IND DE MEDIC CUSTODIA LTDA",
+      159.82999999999996,
+      149.56999999999996,
+      77.11
+    ],
+    [
+      "APP",
+      "PEROSUL EMPREENDIMENTOS LTDA - ME",
+      35.98,
+      21.99,
+      20.23
+    ],
+    [
+      "APP",
+      "FBM COMERCIO E PROMOCAO DE VENDAS LTDA",
+      234.9,
+      289.5,
+      0
+    ],
+    [
+      "APP",
+      "LA VITTA COSMETICA - EIRELI",
+      106.78999999999999,
+      70.39,
+      91.15
+    ],
+    [
+      "APP",
+      "HASKELL COSMETICA NATURAL",
+      201.56,
+      51.59,
+      54.74
+    ],
+    [
+      "APP",
+      "ACRILEX TINTAS ESPECIAIS S A",
+      7.99,
+      123.7,
+      56.510000000000005
+    ],
+    [
+      "APP",
+      "DOMPEL INDUSTRIA PLASTICA E METALURGICA",
+      2.49,
+      44.970000000000006,
+      51.79
+    ],
+    [
+      "APP",
+      "SUNMASTER DO BRASIL EIRELI",
+      74.8,
+      22.9,
+      0
+    ],
+    [
+      "APP",
+      "MACRILAN BEAUTY",
+      0,
+      0,
+      79.97999999999999
+    ],
+    [
+      "APP",
+      "HENKEL LTDA",
+      16.9,
+      73.6,
+      11.03
+    ],
+    [
+      "APP",
+      "SANIBRAS MEDICAMENTOS E NUTRICAO LTDA",
+      75.5,
+      0,
+      353.74
+    ],
+    [
+      "APP",
+      "SUPLEY LAB DE ALIMENTOS E SUPL NUTR LTDA",
+      2115.2599999999998,
+      1115.1499999999999,
+      709.3000000000001
+    ],
+    [
+      "APP",
+      "HALEX ISTAR INDUSTRIA FARMACEUTICA SA",
+      290.9,
+      223.2,
+      302.48
+    ],
+    [
+      "APP",
+      "DIVCOM PHARMA DERMO",
+      0,
+      107.55,
+      239.42000000000002
+    ],
+    [
+      "APP",
+      "FBM INDUSTRIA FARMACEUTICA LTDA",
+      416.52,
+      108.72,
+      191.39999999999998
+    ],
+    [
+      "APP",
+      "NATURALLE CEREAIS E ALIMENTOS LTDA",
+      76.96000000000001,
+      11.829999999999998,
+      4.38
+    ],
+    [
+      "APP",
+      "HEEL DO BRASIL BIOMEDICA LTDA",
+      181.95999999999998,
+      84.21,
+      626.77
+    ],
+    [
+      "APP",
+      "LOLLIPOPS COSMETICS - DISTRIBUIDORA DE C",
+      1184.83,
+      410.98,
+      521.3199999999999
+    ],
+    [
+      "APP",
+      "EXELTIS LABORATORIO FARMACEUTICO LTDA",
+      5590.91,
+      7083.86,
+      4405.820000000001
+    ],
+    [
+      "APP",
+      "UCB BIOPHARMA LTDA.",
+      0,
+      1117.8,
+      0
+    ],
+    [
+      "APP",
+      "UNITED MEDICAL LTDA",
+      946.8,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "EMBALIXO INDUSTRIA E COMERCIO DE EMBALAG",
+      0,
+      0,
+      25.58
+    ],
+    [
+      "APP",
+      "RIO BRANCO LTDA.",
+      59.98,
+      95.93999999999998,
+      13.79
+    ],
+    [
+      "APP",
+      "CCM INDUSTRIA E COME DE PROD DESCA S.A.",
+      0,
+      19.9,
+      0
+    ],
+    [
+      "APP",
+      "BRITANIA ELETRODOMESTICOS SA",
+      4311.59,
+      5906.6,
+      2557.9500000000007
+    ],
+    [
+      "APP",
+      "NESTLE NUTRITION VITAMINAS",
+      178,
+      258.38000000000005,
+      645.72
+    ],
+    [
+      "APP",
+      "TECHLINE",
+      0,
+      89.9,
+      0
+    ],
+    [
+      "APP",
+      "RED BULL DO BRASIL LTDA",
+      1295.9999999999998,
+      1319.69,
+      341.06
+    ],
+    [
+      "APP",
+      "BASTON INDUSTRIA DE AEROSSOIS LTDA",
+      1702.4700000000003,
+      825.8200000000002,
+      1368.8100000000004
+    ],
+    [
+      "APP",
+      "BALDONI PRODUTOS NATURAIS COMERCIO INDUS",
+      188.58999999999997,
+      62.32,
+      78.25
+    ],
+    [
+      "APP",
+      "A.W. FABER CASTELL S.A.",
+      15.99,
+      103.92999999999999,
+      0
+    ],
+    [
+      "APP",
+      "FLORESTAL ALIMENTOS S A",
+      67.9,
+      101.9,
+      38.76
+    ],
+    [
+      "APP",
+      "LIKLUC PUERICULTURA EIRELI",
+      0,
+      0,
+      9.99
+    ],
+    [
+      "APP",
+      "VISAMAX SERVICOS GRAFICOS - EIRELI",
+      0,
+      9.99,
+      8
+    ],
+    [
+      "APP",
+      "YUDEVAN DISTRIBUIDORA E IMPORTADORA LTDA",
+      27.8,
+      13.9,
+      39.48
+    ],
+    [
+      "APP",
+      "NATURAL LIFE COM IMPO E EXPOR COS EIRELI",
+      72.98,
+      21.98,
+      32.97
+    ],
+    [
+      "APP",
+      "ARCOM S/A",
+      104.60000000000001,
+      145.89,
+      106.09999999999998
+    ],
+    [
+      "APP",
+      "VIDA FORTE NUTRIENTES INDUSTRIA E COMERC",
+      1360.04,
+      1082.0800000000002,
+      656.73
+    ],
+    [
+      "APP",
+      "BEBE SAUDE LTDA",
+      2138.37,
+      1488.2799999999997,
+      1690.7
+    ],
+    [
+      "APP",
+      "PALTERM INDUSTRIA E COMERCIO LTDA",
+      36.9,
+      68.71,
+      134.11
+    ],
+    [
+      "APP",
+      "MILI S/A",
+      1677.5600000000002,
+      1771.8600000000001,
+      1443.9
+    ],
+    [
+      "APP",
+      "CERAVE",
+      3245.8700000000003,
+      1921.53,
+      672.9399999999999
+    ],
+    [
+      "APP",
+      "PAIS E FILHOS",
+      34.94,
+      69.97,
+      41.98
+    ],
+    [
+      "APP",
+      "MDA COMERCIO DE ALIMENTOS LTDA",
+      70.09,
+      30.89,
+      0
+    ],
+    [
+      "APP",
+      "ENOVA FOODS S A",
+      26.34,
+      0,
+      23.12
+    ],
+    [
+      "APP",
+      "MULTILASER INDUSTRIAL S.A.",
+      2101.0699999999997,
+      1289.07,
+      51.33
+    ],
+    [
+      "APP",
+      "LIMA & PERGHER INDUSTRIA E COMERCIO SA",
+      0,
+      7.74,
+      13.98
+    ],
+    [
+      "APP",
+      "PROLINE INDUSTRIA E COMERCIO LTDA",
+      39.98,
+      0,
+      11.95
+    ],
+    [
+      "APP",
+      "INDAIAL PAPEL EMBALAGENS LTDA",
+      79.96,
+      0,
+      232.64000000000004
+    ],
+    [
+      "APP",
+      "BELEZE & OLIVEIRA-COMER DE COSMETIC LTDA",
+      4088.1399999999994,
+      1812.26,
+      -137.89
+    ],
+    [
+      "APP",
+      "RIOQUIMICA LTDA",
+      0,
+      8.99,
+      0
+    ],
+    [
+      "APP",
+      "MARS",
+      42.99,
+      52.75,
+      11.98
+    ],
+    [
+      "APP",
+      "PEPSICO DO BRASIL LTDA",
+      184.07,
+      177.21,
+      98.82
+    ],
+    [
+      "APP",
+      "COPAG DA AMAZONIA S A",
+      499.03,
+      103.77999999999999,
+      11.87
+    ],
+    [
+      "APP",
+      "NISSIN FOODS DO BRASIL LTDA",
+      0,
+      43.82,
+      11.02
+    ],
+    [
+      "APP",
+      "TENDENCIA ABSOL IND E COM DE ACESS EIREL",
+      172.54,
+      97.62,
+      16.58
+    ],
+    [
+      "APP",
+      "MEDQUIMICA GENERICOS",
+      323.93000000000006,
+      245.21000000000006,
+      75.25999999999999
+    ],
+    [
+      "APP",
+      "H M IND E COMERCIO DE PROD DE BELEZA LTD",
+      118.97,
+      237.3,
+      177.25
+    ],
+    [
+      "APP",
+      "NOVA CEDRAL COMERCIO DE COSMETICOS EIREL",
+      19.99,
+      79.98,
+      64.77
+    ],
+    [
+      "APP",
+      "SSRR INDUSTRIAL E COMERCIAL DE COSM LTDA",
+      17.85,
+      9.99,
+      39.03
+    ],
+    [
+      "APP",
+      "PHARLAB GENERICOS",
+      1887.5700000000002,
+      553.8799999999999,
+      2108.87
+    ],
+    [
+      "APP",
+      "BIC AMAZONIA S.A. AM",
+      0,
+      7.99,
+      0
+    ],
+    [
+      "APP",
+      "DERMIWIL INDUSTRIA PLASTICA LTDA",
+      309.56,
+      135.93,
+      22.99
+    ],
+    [
+      "APP",
+      "DIVERTOYS INDUSTRIA E COMERCIO LTDA",
+      93.22999999999999,
+      165.23000000000002,
+      0
+    ],
+    [
+      "APP",
+      "LORENZETTI S A INDUSTRIAS BRASILEIRAS",
+      0,
+      169.9,
+      153.5
+    ],
+    [
+      "APP",
+      "CIFARMA GENERICOS",
+      138.29,
+      124.29,
+      0
+    ],
+    [
+      "APP",
+      "APIS FLORA INDUSTRIAL E COMERCIAL LTDA",
+      475.03999999999996,
+      328.78999999999996,
+      598.24
+    ],
+    [
+      "APP",
+      "NATUPHITUS INDUST E COM DE COSMETICOS",
+      129.10999999999999,
+      91.82,
+      85.47
+    ],
+    [
+      "APP",
+      "COPRA INDUSTRIA ALIMENTICIA LTDA",
+      13.77,
+      4.99,
+      19.16
+    ],
+    [
+      "APP",
+      "CONDOR S.A.",
+      782.2600000000001,
+      514.65,
+      123.31
+    ],
+    [
+      "APP",
+      "AEROFLEX INDUSTRIA DE AEROSOL LTDA",
+      592.1500000000001,
+      299.37,
+      0
+    ],
+    [
+      "APP",
+      "PDHB INDUSTRIA COMERCIO IMPORTACAO E EXP",
+      814.7300000000001,
+      652.53,
+      334.61000000000007
+    ],
+    [
+      "APP",
+      "TBC PERFUMES E COSMETICOS LTDA",
+      9.99,
+      0,
+      92.17
+    ],
+    [
+      "APP",
+      "COALA DO BRASIL S.A.",
+      245.25,
+      158.87,
+      570.3299999999999
+    ],
+    [
+      "APP",
+      "GREEN COMERCIO INTERNACIONAL LTDA",
+      37.24,
+      64.04,
+      50.010000000000005
+    ],
+    [
+      "APP",
+      "LABORATORIO TAYUYNA LTDA",
+      415.27,
+      213.76,
+      137.53
+    ],
+    [
+      "APP",
+      "NALU DISTRIBUIDORA LTDA",
+      77.91,
+      782.0999999999999,
+      113.89
+    ],
+    [
+      "APP",
+      "YOKI DISTRIBUIDORA DE ALIMENTOS LTDA",
+      51.900000000000006,
+      62.18,
+      34.730000000000004
+    ],
+    [
+      "APP",
+      "DISPROGEL DISTRIB DE PROD DE HIG E LIMPE",
+      280.6,
+      172.99,
+      229.51
+    ],
+    [
+      "APP",
+      "BLANT COSMETICOS",
+      0,
+      62.980000000000004,
+      80.69999999999999
+    ],
+    [
+      "APP",
+      "MMC INDUSTRIA DE PRODUTOS NUTRACEUTICOS",
+      9.59,
+      0,
+      21.54
+    ],
+    [
+      "APP",
+      "BENEVIA DO BRASIL COMERCIO, IMPORTACAO E",
+      3.49,
+      17.68,
+      0
+    ],
+    [
+      "APP",
+      "PRO NOVA DIST E COMERC DE COSMET LTDA",
+      1089.9199999999996,
+      1177.0700000000002,
+      159.86
+    ],
+    [
+      "APP",
+      "BRG SUPLEMENTOS NUTRICIONAIS LTDA",
+      378.52,
+      411.41999999999996,
+      157.84
+    ],
+    [
+      "APP",
+      "BIO INSTINTO IND E COM DE COSMETICOS",
+      203.38,
+      115.96999999999998,
+      0
+    ],
+    [
+      "APP",
+      "STRA COMERCIO DE PRODUTOS PARA SAUDE LTD",
+      36.9,
+      73.8,
+      36.9
+    ],
+    [
+      "APP",
+      "INST BIOCHIMICO INDUSTRIA FARM LTDA",
+      0,
+      87.79,
+      0
+    ],
+    [
+      "APP",
+      "BIOCAP INDUSTRIA DE COSMETICOS LTDA",
+      233.86999999999998,
+      42.489999999999995,
+      172.22000000000003
+    ],
+    [
+      "APP",
+      "SANTHER FABRICA DE PAPEL SANTA THEREZINH",
+      79.58999999999999,
+      177.93,
+      1287.72
+    ],
+    [
+      "APP",
+      "PRATI DONADUZZI RX",
+      922.2599999999999,
+      591.05,
+      967.1300000000001
+    ],
+    [
+      "APP",
+      "DOCILE ALIMENTOS LTDA",
+      7.29,
+      0,
+      6.49
+    ],
+    [
+      "APP",
+      "WELEDA DO BRASIL LABORATORIO E FARMACIA",
+      185.48,
+      0,
+      559.99
+    ],
+    [
+      "APP",
+      "INAL AIR",
+      290.46999999999997,
+      0,
+      111.42
+    ],
+    [
+      "APP",
+      "DEISICON DISTRIB DE CHOCOLATES LTDA",
+      22.39,
+      27.930000000000003,
+      9.78
+    ],
+    [
+      "APP",
+      "TAIFF DISTRIBUIDORA PROD DE BELEZA LTDA",
+      424.8,
+      769.6899999999999,
+      0
+    ],
+    [
+      "APP",
+      "MINANCORA & CIA LTDA",
+      135.09,
+      312.07,
+      100.33
+    ],
+    [
+      "APP",
+      "AS ERVAS CURAM INDUST FARMACEUTICA LTDA",
+      127.69,
+      45.99,
+      41.31
+    ],
+    [
+      "APP",
+      "TONDO S A",
+      11.29,
+      19.439999999999998,
+      8.27
+    ],
+    [
+      "APP",
+      "IRMAOS RUIVO LTDA",
+      0,
+      0,
+      3.19
+    ],
+    [
+      "APP",
+      "ABBOTT DIAGNOSTICOS RAPIDOS S.A.",
+      0,
+      0,
+      55.11
+    ],
+    [
+      "APP",
+      "FLORA PRODUTOS DE HIGIENE E LIMPEZA GO",
+      58.93000000000001,
+      29.99,
+      0
+    ],
+    [
+      "APP",
+      "UNILEVER BRASIL LTDA MG",
+      289.62,
+      93.8,
+      353.2599999999999
+    ],
+    [
+      "APP",
+      "SINTER FUTURA LTDA",
+      49.599999999999994,
+      29.259999999999998,
+      52.800000000000004
+    ],
+    [
+      "APP",
+      "ORGANICA INDUSTRIA E COMERCIO DE PRODUTO",
+      9.99,
+      22.57,
+      19.52
+    ],
+    [
+      "APP",
+      "MILCY COSMETICOS LTDA",
+      0,
+      19.9,
+      35.98
+    ],
+    [
+      "APP",
+      "WUTTKE DISTRIBUIDORA DE ALIMENTOS EIRELI",
+      31.97,
+      16.18,
+      6.29
+    ],
+    [
+      "APP",
+      "FISIOVITAL COMERCIO DE ARTIGOS ORTOPEDIC",
+      44.99,
+      0,
+      134.97
+    ],
+    [
+      "APP",
+      "JOAO HENRIQUE SILVA BESSA E CIA LTDA",
+      34.629999999999995,
+      35.98,
+      0
+    ],
+    [
+      "APP",
+      "ROMA JENSEN",
+      0,
+      0,
+      59.9
+    ],
+    [
+      "APP",
+      "VYTTRA DIAGNOSTICOS IMPORT E EXPORT S A",
+      0,
+      175.76,
+      11.9
+    ],
+    [
+      "APP",
+      "HEALTHY DO BRASIL INDUSTRIA COMERCIO E D",
+      474.8000000000001,
+      141.6,
+      34.8
+    ],
+    [
+      "APP",
+      "HERSHEY DO BRASIL LTDA",
+      427.56999999999994,
+      348.73,
+      42.33
+    ],
+    [
+      "APP",
+      "SANREMO S/A",
+      0,
+      16.9,
+      0
+    ],
+    [
+      "APP",
+      "BIOFLORA INDUSTRIA E COMERCIO LTDA",
+      1190.98,
+      885,
+      0
+    ],
+    [
+      "APP",
+      "EMBRAST INDUSTRIA E COMERCIO DE EMBALAGE",
+      89.5,
+      148.14000000000001,
+      210.95
+    ],
+    [
+      "APP",
+      "BRAVIR INDUSTRIAL LTDA",
+      227.57,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "MARI MARIA COSMETICOS LTDA",
+      228.45,
+      210.22,
+      249.98000000000002
+    ],
+    [
+      "APP",
+      "SEPAC SERRADOS E PASTA DE CELULOSE LTDA",
+      1071.3700000000001,
+      455.84999999999997,
+      592.78
+    ],
+    [
+      "APP",
+      "GAMA INDUSTRIA E COMERCIO LTDA",
+      0,
+      239.8,
+      0
+    ],
+    [
+      "APP",
+      "DBS INDUSTRIA E COMERCIO LTDA",
+      0,
+      46.9,
+      0
+    ],
+    [
+      "APP",
+      "BARAO IND E COMERCIO DE ERVA MATE E CHAS",
+      68.35,
+      54.03,
+      23.98
+    ],
+    [
+      "APP",
+      "BABY ROO COMERCIO DE ALIMENTOS EIRELI",
+      792.5,
+      254.82999999999998,
+      160.27
+    ],
+    [
+      "APP",
+      "TODOLIVRO DISTRIBUIDORA LTDA",
+      43.89,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "SANTA HELENA INDUSTRIA DE ALIMENTOS S/A",
+      5.67,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "UNIAGRO IND E COM DE PROD ALIMENTICIOS",
+      0,
+      0,
+      11.49
+    ],
+    [
+      "APP",
+      "DELLAMED SA",
+      -60.1,
+      923.9599999999999,
+      711.49
+    ],
+    [
+      "APP",
+      "SUPER SAUDE NUTRICIONAL LTDA",
+      0,
+      74.62,
+      72.47
+    ],
+    [
+      "APP",
+      "BELLESA COMERCIAL LTDA",
+      111.88999999999999,
+      59.38999999999999,
+      156.08000000000004
+    ],
+    [
+      "APP",
+      "ELIANA MARIANI PELLIZON EIRELI",
+      31.799999999999997,
+      0,
+      70.16
+    ],
+    [
+      "APP",
+      "PARATI IND E COMERCIO DE ALIMENTOS LTDA",
+      402.94000000000005,
+      67.67,
+      73.09
+    ],
+    [
+      "APP",
+      "ANNA BELLA COMERCIAL LTDA",
+      0,
+      94.30000000000001,
+      12.99
+    ],
+    [
+      "APP",
+      "GERMED USK DERMO",
+      533.8,
+      669.8,
+      0
+    ],
+    [
+      "APP",
+      "PMI SOUTH AMERICA CONSUMER GOODS LT",
+      4721.360000000001,
+      16731.75999999999,
+      14318.489999999994
+    ],
+    [
+      "APP",
+      "LISS COMERCIO, IMPORTACAO E EXPORTACAO L",
+      156.08999999999997,
+      218.35000000000002,
+      96.86999999999999
+    ],
+    [
+      "APP",
+      "LINDT & SPRUNGLI (BRAZIL) HOLDING LTDA",
+      151.96,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "VIA AROMA INDUST DE AROMATIZ DE AMBIENTE",
+      53.03999999999999,
+      53.97,
+      176.81
+    ],
+    [
+      "APP",
+      "TURATTI & TURATTI LTDA",
+      141.91,
+      46.55,
+      0
+    ],
+    [
+      "APP",
+      "NATCOFARMA DO BRASIL LTDA",
+      2311.8100000000004,
+      1386.98,
+      0
+    ],
+    [
+      "APP",
+      "OPEN MEDICAL COMERC IMPORT E EXPORT LTDA",
+      0,
+      0,
+      32.89
+    ],
+    [
+      "APP",
+      "BELFAR GENERICOS",
+      29.34,
+      35.230000000000004,
+      66.66000000000001
+    ],
+    [
+      "APP",
+      "PECCIN SA",
+      46.4,
+      151.39,
+      5.19
+    ],
+    [
+      "APP",
+      "VITA PREMIUM ATACADISTA LTDA",
+      507.8499999999999,
+      296.88,
+      391.98
+    ],
+    [
+      "APP",
+      "DIFARMA IMPORTACAO E DISTRIBUICAO LTDA",
+      45.81999999999999,
+      163.97,
+      50.67
+    ],
+    [
+      "APP",
+      "VITROLA EDITORA E DISTRIBUIDORA",
+      1838.9199999999998,
+      1172.2,
+      79.8
+    ],
+    [
+      "APP",
+      "BARRIND IND E COMERCIO DE ALIMENTO EIREL",
+      268.8,
+      45.16,
+      179
+    ],
+    [
+      "APP",
+      "AGAPLASTIC INDUSTRIA E COMERCIO LTDA",
+      194.19,
+      246.51000000000002,
+      334.85999999999996
+    ],
+    [
+      "APP",
+      "ADS LABORATORIO NUTRICIONAL LTDA",
+      153.8,
+      8.98,
+      0
+    ],
+    [
+      "APP",
+      "PARFUM BRASIL COSMETICOS EIRELI",
+      479.34000000000003,
+      384.33000000000004,
+      134.36
+    ],
+    [
+      "APP",
+      "APIS VIDA IND E COM DE PROD FARMACE LTDA",
+      16.99,
+      50.97,
+      0
+    ],
+    [
+      "APP",
+      "RB EXPORT IMPORT COM E IND PROD BARB LTD",
+      628.0800000000002,
+      395.19000000000005,
+      55.69
+    ],
+    [
+      "APP",
+      "GOEDERT LTDA",
+      239.80000000000004,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "DIVINA DIST DE VITAM NATURAIS SUNDOWN",
+      811.33,
+      204.60000000000002,
+      302.98
+    ],
+    [
+      "APP",
+      "ELG COMERCIO DE ELETRONICOS LTDA",
+      244.4,
+      139.9,
+      33.95
+    ],
+    [
+      "APP",
+      "ARTSANA BRASIL LTDA",
+      0,
+      0,
+      89
+    ],
+    [
+      "APP",
+      "SUNNY BRINQUEDOS IMPORT E EXPORT LIMITAD",
+      1465.3200000000002,
+      191.75,
+      49.9
+    ],
+    [
+      "APP",
+      "ENVISION INDUSTRIA DE PRODUTOS ELETRONIC",
+      0,
+      0,
+      149.66
+    ],
+    [
+      "APP",
+      "WAHL CLIPPER COM DE UTENSILIOS P CABELO",
+      233.08,
+      29.9,
+      0
+    ],
+    [
+      "APP",
+      "ECOFITUS INDUSTRIA E COMERCIO LTDA",
+      0,
+      0,
+      5.99
+    ],
+    [
+      "APP",
+      "MUNILA COSMETICOS EIRELI",
+      181.33,
+      133.45,
+      38.209999999999994
+    ],
+    [
+      "APP",
+      "CRBS S A",
+      75.02,
+      86.10000000000001,
+      48.129999999999995
+    ],
+    [
+      "APP",
+      "SAINT-GOBAIN DO BRASIL PROD INDU LTDA",
+      13.69,
+      47.96,
+      9.11
+    ],
+    [
+      "APP",
+      "ROCHA & FILHOS LTDA",
+      28.96,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "PIETROBON & CIA LTDA",
+      23.18,
+      20.38,
+      6.12
+    ],
+    [
+      "APP",
+      "MUNDIART SA",
+      0,
+      0,
+      36.9
+    ],
+    [
+      "APP",
+      "GALA IBB IND BR DE BRINQ EMBALAGENS LTDA",
+      4.99,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "BERTOLUCCI & CIA LTDA",
+      214.84999999999997,
+      1411.7200000000003,
+      79.77999999999999
+    ],
+    [
+      "APP",
+      "VITAO ALIMENTOS LTDA",
+      0,
+      10.9,
+      0
+    ],
+    [
+      "APP",
+      "BOMBRIL S/A",
+      6.9,
+      0,
+      18.310000000000002
+    ],
+    [
+      "APP",
+      "METALURGICA MOR SA",
+      128.04,
+      123.12,
+      -158.24
+    ],
+    [
+      "APP",
+      "OPS PANTIES IND E COM DE MODA INTIMA LTD",
+      0,
+      0,
+      13.79
+    ],
+    [
+      "APP",
+      "VLT BAZAR",
+      0,
+      0,
+      29.9
+    ],
+    [
+      "APP",
+      "ENOVAMIX INDUSTRIAL LTDA",
+      119.69999999999999,
+      0,
+      85.43
+    ],
+    [
+      "APP",
+      "GEOLAB PHARMA",
+      2633.3700000000003,
+      1115.39,
+      593.96
+    ],
+    [
+      "APP",
+      "TRAMONTINA FARROUPILHA SA IND METALURG",
+      193.10000000000002,
+      67.37,
+      105.88
+    ],
+    [
+      "APP",
+      "FRUKI BEBIDAS S/A.",
+      10.9,
+      17.97,
+      43.89000000000001
+    ],
+    [
+      "APP",
+      "MAIS MU COMERCIO DE ALIMENTOS E BEBIDAS",
+      0,
+      0,
+      42.38
+    ],
+    [
+      "APP",
+      "MERAKI SOLUTION DISTRIBUICAO LTDA",
+      2057.34,
+      1014.5899999999997,
+      487.6599999999999
+    ],
+    [
+      "APP",
+      "SELENE INDUSTRIA TEXTIL S A",
+      22.9,
+      137.4,
+      0
+    ],
+    [
+      "APP",
+      "SWEDISH MATCH DO BRASIL SA",
+      0,
+      0,
+      2.99
+    ],
+    [
+      "APP",
+      "SEM PARAR INSTITUICAO DE PAGAMENTO LTDA",
+      90,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "BIOLAND",
+      139.78,
+      39.9,
+      29.9
+    ],
+    [
+      "APP",
+      "NOVA CREDEAL INDUSTRIA DE CADERNOS S A",
+      0,
+      122.83,
+      0
+    ],
+    [
+      "APP",
+      "BR COSMETIC COMERCIAL LTDA",
+      99.47,
+      44.99,
+      0
+    ],
+    [
+      "APP",
+      "LPS COMPANY LTDA",
+      6.9,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "INDUSTRIA E COMERCIO OLIVEIRA LTDA",
+      0,
+      6.38,
+      0
+    ],
+    [
+      "APP",
+      "M3 INDUSTRIA DE COSMETICOS LTDA",
+      0,
+      0,
+      9.11
+    ],
+    [
+      "APP",
+      "FRANCINY EHLKE",
+      276.24,
+      634.89,
+      1044.54
+    ],
+    [
+      "APP",
+      "FLORA PROD DE HIG E LIMP SA - ALBANY",
+      725.1200000000001,
+      346.9000000000001,
+      661.94
+    ],
+    [
+      "APP",
+      "BAMBOLA INDUSTRIA E COMERCIO DE BRINQUED",
+      64.9,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "RELAXMEDIC IMPORTACAO EXPORTACAO LTDA",
+      0,
+      0,
+      121.99
+    ],
+    [
+      "APP",
+      "SEARA ALIMENTOS LTDA",
+      135.29999999999998,
+      121,
+      197.91
+    ],
+    [
+      "APP",
+      "BAUNY",
+      59.980000000000004,
+      235.92000000000002,
+      43.75
+    ],
+    [
+      "APP",
+      "M2LIFE COMERCIAL IMPORTADORA E EXPORTADO",
+      0,
+      0,
+      29.9
+    ],
+    [
+      "APP",
+      "FLORA PRODUTOS DE HIGIENE E LIMPEZA S A",
+      70.69999999999999,
+      91.02000000000001,
+      110.42
+    ],
+    [
+      "APP",
+      "MAQUIRA IND DE PROD ODONTOLOGICOS LTDA",
+      46.31,
+      14.98,
+      24.88
+    ],
+    [
+      "APP",
+      "YINS BRASIL COMERCIO INTERNACIONAL LTDA",
+      66.98,
+      15.97,
+      39.99
+    ],
+    [
+      "APP",
+      "CIRANDA CULTURAL EDITORA E DISTRIBUIDORA",
+      75.85,
+      0,
+      9.19
+    ],
+    [
+      "APP",
+      "BELLAPHYTUS INDUSTRIA DE COSMETICOS LTDA",
+      29.9,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "MENON COMERCIO E REPRESENTACOES LTDA",
+      0,
+      60.970000000000006,
+      0
+    ],
+    [
+      "APP",
+      "BIC AMAZONIA S/A SP",
+      0,
+      35.96,
+      0
+    ],
+    [
+      "APP",
+      "DDP INDUSTRIA E COMERCIO LTDA",
+      0,
+      0,
+      9.5
+    ],
+    [
+      "APP",
+      "IRMAOS DALANEZE LTDA",
+      0,
+      0,
+      55.11
+    ],
+    [
+      "APP",
+      "BODY FOOD FABRICANTES DE ALIMENTOS SAUDA",
+      190.84,
+      56.75,
+      362.71000000000004
+    ],
+    [
+      "APP",
+      "DINAMO COMERCIO E INDUSTRIA DE SAL LTDA",
+      0,
+      0,
+      32.46
+    ],
+    [
+      "APP",
+      "BEIRA ALTA COSMETICOS LTDA",
+      1.99,
+      5.97,
+      0
+    ],
+    [
+      "APP",
+      "QUIMICA AMPARO LTDA",
+      1582.1899999999998,
+      491.75,
+      2718.6700000000005
+    ],
+    [
+      "APP",
+      "LEBON PRODUTOS QUIMICOS FARMACEUTICOS",
+      205.24,
+      128.7,
+      0
+    ],
+    [
+      "APP",
+      "GDS GROW DIETARY SUPPLEMENTS DO BRASIL S",
+      10,
+      943.42,
+      446.64
+    ],
+    [
+      "APP",
+      "CHIQUE COMERCIO DE PRODUTOS DE BELEZA LT",
+      0,
+      0,
+      27.59
+    ],
+    [
+      "APP",
+      "RODRIGUES PINHEL & CIA LTDA",
+      70.78,
+      261.46,
+      70.93
+    ],
+    [
+      "APP",
+      "GREENCARE PHARMA COMERCIO ATACADISTA DE",
+      729.18,
+      729.18,
+      0
+    ],
+    [
+      "APP",
+      "MAXLOG IMPORTACAO E EXPORTACAO LTDA",
+      114.4,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "SUMMIT COMERCIO IMPORTACAO E EXPORTACAO",
+      44.97,
+      14.99,
+      0
+    ],
+    [
+      "APP",
+      "VLT BAZAR LTDA",
+      7.34,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "PAULO R LUDWIG & CIA LTDA",
+      0,
+      0,
+      12.47
+    ],
+    [
+      "APP",
+      "MELITTA DO BRASIL INDUST E COMERCIO LTDA",
+      39.99,
+      105.18,
+      428.71999999999997
+    ],
+    [
+      "APP",
+      "PRINCIPIA RS COMERCIO DE COSMETICOS LTDA",
+      11070.32,
+      7813,
+      5388.04
+    ],
+    [
+      "APP",
+      "TOH INDUSTRIA E COMERCIO PET LTDA",
+      0,
+      24.9,
+      19.9
+    ],
+    [
+      "APP",
+      "PORTO DISTRIBUIDORA PHALLEBEAUTY LTDA",
+      569.21,
+      724.75,
+      78.46
+    ],
+    [
+      "APP",
+      "AZOIA ATACADO COMERCIO IMPORTACAO E EXPO",
+      31.03,
+      19.9,
+      53.800000000000004
+    ],
+    [
+      "APP",
+      "TOTAL QUIMICA LIMITADA",
+      0,
+      88.78,
+      239.40000000000003
+    ],
+    [
+      "APP",
+      "INDUSTRIA E COMERCIO JOLITEX LTDA",
+      0,
+      19.9,
+      0
+    ],
+    [
+      "APP",
+      "KELCO PET CARE PRODUTOS ANIMAIS LTDA",
+      126.17999999999998,
+      104.5,
+      512.92
+    ],
+    [
+      "APP",
+      "RICLAN S.A.",
+      4.98,
+      7.76,
+      25.099999999999998
+    ],
+    [
+      "APP",
+      "PET INJET COMERCIO DE ACESSORIOS PARA AN",
+      0,
+      6.99,
+      2.79
+    ],
+    [
+      "APP",
+      "INDUSTRIA DE VINAGRES PRINZ LTDA",
+      0,
+      7.98,
+      11.98
+    ],
+    [
+      "APP",
+      "INDUSTRIA DE ALIMENTOS PETRY LTDA",
+      17.98,
+      17.98,
+      0
+    ],
+    [
+      "APP",
+      "CHEMBIO DIAGNOSTICS BRAZIL LTDA",
+      114.45,
+      0,
+      257.6
+    ],
+    [
+      "APP",
+      "PAKIPLAST INDUSTRIA E COMERCIO DE BRINQU",
+      0,
+      54.9,
+      0
+    ],
+    [
+      "APP",
+      "CROMUS EMBALAGENS INDUSTRIA E COMERCIO L",
+      45.35,
+      37.28,
+      15.66
+    ],
+    [
+      "APP",
+      "OLLIE COSMETICOS LTDA",
+      1003.6400000000001,
+      625.51,
+      1367.92
+    ],
+    [
+      "APP",
+      "RAFAEL ELIAS HERNANDES CUESTA",
+      15.06,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "COAMO AGROINDUSTRIAL COOPERATIVA",
+      10.99,
+      21.98,
+      0
+    ],
+    [
+      "APP",
+      "GOMES SUPLEMENTOS ALIMENTARES LTDA",
+      395.73999999999995,
+      294.58,
+      444.91999999999996
+    ],
+    [
+      "APP",
+      "SANTE COMERCIO ATACADISTA DE COSMETICOS",
+      137.17,
+      59.99,
+      300.27
+    ],
+    [
+      "APP",
+      "BRDECOR COMERCIO E IMPORTACAO DE ARTIGOS",
+      6.99,
+      25.96,
+      6.99
+    ],
+    [
+      "APP",
+      "Q UTIL COMERCIO DE MATERIAIS ELETRICOS E",
+      27.25,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "DR. OETKER BRASIL LTDA.",
+      0,
+      6.38,
+      0
+    ],
+    [
+      "APP",
+      "RIBERBALL MERCANTIL E INDUSTRIAL LTDA",
+      0,
+      58.95000000000001,
+      23.9
+    ],
+    [
+      "APP",
+      "J.R.D. INDUSTRIA FARMACEUTICA LTDA",
+      413,
+      328.99,
+      299.97
+    ],
+    [
+      "APP",
+      "DACOLONIA ALIMENTOS NATURAIS LTDA",
+      305.24,
+      0,
+      99.72999999999999
+    ],
+    [
+      "APP",
+      "JADE IMPORTACAO E EXPORTACAO DE MANUFATU",
+      321.53000000000003,
+      109.92999999999998,
+      83.78999999999999
+    ],
+    [
+      "APP",
+      "BRASIL SUL IMPORTADORA E EXPORTADORA L",
+      0,
+      0,
+      72.67
+    ],
+    [
+      "APP",
+      "TERMOLAR SA",
+      77.35,
+      0,
+      149.7
+    ],
+    [
+      "APP",
+      "LABORATORIO TIARAJU",
+      37.19,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "PORTAL BRASIL COMERCIO INTERNACIONAL LTD",
+      41.84,
+      72.16,
+      249.83000000000004
+    ],
+    [
+      "APP",
+      "FUGINI ALIMENTOS LTDA",
+      3.99,
+      3.99,
+      0
+    ],
+    [
+      "APP",
+      "SOCIEDADE INDUSTRIAL DE PLASTICOS DAC LT",
+      19.99,
+      22.979999999999997,
+      0
+    ],
+    [
+      "APP",
+      "HIDRATEI COSMETICOS LTDA",
+      262.46000000000004,
+      415.96999999999997,
+      460.91999999999996
+    ],
+    [
+      "APP",
+      "AMAFIL - MATRIZ",
+      0,
+      0,
+      3.99
+    ],
+    [
+      "APP",
+      "UNIVERSAL CHEMICAL LTDA",
+      118.97,
+      28.380000000000003,
+      0
+    ],
+    [
+      "APP",
+      "OESA COMERCIO E REPRESENTACOES S/A",
+      0,
+      10.99,
+      9.74
+    ],
+    [
+      "APP",
+      "TOZZO ALIMENTOS LTDA",
+      0,
+      17.87,
+      0
+    ],
+    [
+      "APP",
+      "ARTE NATIVA PRODUTOS NATURAIS LTDA",
+      0,
+      6.99,
+      0
+    ],
+    [
+      "APP",
+      "ALVA PERSONAL CARE - EXPORTACAO E IMPORT",
+      534.26,
+      320.8,
+      263.96000000000004
+    ],
+    [
+      "APP",
+      "COSMETIC INDUSTRIA E COMERCIO LTDA.",
+      47.97,
+      79.95,
+      0
+    ],
+    [
+      "APP",
+      "EASELABS LABORATORIO FARMACEUTICO LTDA.",
+      0,
+      0,
+      323.99
+    ],
+    [
+      "APP",
+      "AURA PHARMA S.A.",
+      589,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "LABOTRAT DISTR DE PRODUT DE HIG PESSOAL",
+      157.29000000000002,
+      99.25,
+      212
+    ],
+    [
+      "APP",
+      "LOCKO SUPLEMENTOS LTDA",
+      69.30000000000001,
+      19.880000000000003,
+      9.9
+    ],
+    [
+      "APP",
+      "PRODUTOS ALIMENTICIOS PASTELINA LTDA",
+      4.79,
+      4.49,
+      0
+    ],
+    [
+      "APP",
+      "INDUSTRIA DE ARTEFATOS DE BORRACHA INOVA",
+      233.67000000000004,
+      205.49,
+      82.35
+    ],
+    [
+      "APP",
+      "CARMELA COMERCIO DE DOCES LTDA.",
+      0,
+      4.49,
+      0
+    ],
+    [
+      "APP",
+      "PLATANO BRASIL DISTR E EXPORTADO LTDA",
+      0,
+      3.19,
+      0
+    ],
+    [
+      "APP",
+      "FRESNOMAQ INDUSTRIA DE MAQUINAS S/A",
+      119.9,
+      359.8,
+      124.7
+    ],
+    [
+      "APP",
+      "TRAMONTINA MULTI S/A",
+      0,
+      49.8,
+      0
+    ],
+    [
+      "APP",
+      "DUX COMPANY LTDA.",
+      1945.89,
+      856.08,
+      152.63
+    ],
+    [
+      "APP",
+      "ALTOMAX COMERCIO DE MEIAS E COBERTORES,",
+      0,
+      39.9,
+      0
+    ],
+    [
+      "APP",
+      "BRINOX METALURGICA SA EM RECUPERACAO JUD",
+      78.16999999999999,
+      37.489999999999995,
+      0
+    ],
+    [
+      "APP",
+      "ALLEGRA MKT E PROMOCAO DE VENDAS EIRELI",
+      20.99,
+      0,
+      82.27999999999999
+    ],
+    [
+      "APP",
+      "NELSON ANTONIO SILVA RECHI LTDA",
+      0,
+      18.36,
+      4.12
+    ],
+    [
+      "APP",
+      "LEVEZA NEGOCIOS DIGITAIS LTDA",
+      29.99,
+      31.42,
+      0
+    ],
+    [
+      "APP",
+      "BEBIDAS GRASSI DO BRASIL LTDA",
+      159.11,
+      107.69000000000001,
+      129.17
+    ],
+    [
+      "APP",
+      "QUALYNUTRI NUTRACEUTICOS LTDA",
+      139.8,
+      0,
+      64.28
+    ],
+    [
+      "APP",
+      "SANTO BRILHO INDUSTRIA E COMERCIO LTDA.",
+      0,
+      0,
+      23.22
+    ],
+    [
+      "APP",
+      "PADO S/A INDUSTRIAL COMERCIAL E IMPORTA",
+      0,
+      98.80000000000001,
+      29.89
+    ],
+    [
+      "APP",
+      "MAZUI & HORVATH INDUSTRIA DE PRODUTOS CE",
+      12.9,
+      51.6,
+      0
+    ],
+    [
+      "APP",
+      "FOSFOREIRA BRASILEIRA LTDA",
+      4.9,
+      25.8,
+      12.9
+    ],
+    [
+      "APP",
+      "IBS INDUSTRIA BRASILEIRA DE SUCOS S/A",
+      0,
+      0,
+      12.7
+    ],
+    [
+      "APP",
+      "INDUSTRIA COM PROD DE LIMP GIRANDO SOL",
+      2870.1200000000003,
+      6605.0599999999995,
+      1092.02
+    ],
+    [
+      "APP",
+      "QUALIBRESS",
+      3140.64,
+      2338.8399999999997,
+      2081.57
+    ],
+    [
+      "APP",
+      "PRATI DONADUZZI E CIA LTDA",
+      139.05,
+      302.55999999999995,
+      24.9
+    ],
+    [
+      "APP",
+      "NEW WORLD.COM COMERCIAL LTDA",
+      0,
+      0,
+      11.87
+    ],
+    [
+      "APP",
+      "YANGZI BRASIL CORPORATION S A",
+      9.44,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "PADRAO CLB MACEDO IND E COM DE PROD DESC",
+      29.98,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "BLACK & DECKER DO BRASIL LTDA",
+      0,
+      0,
+      97.02
+    ],
+    [
+      "APP",
+      "MARTIPLAST INDUSTRIA E COMERCIO DE PLAST",
+      5.98,
+      22.979999999999997,
+      79.03
+    ],
+    [
+      "APP",
+      "ISLA",
+      2,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "GRENDENE S A",
+      0,
+      29.9,
+      0
+    ],
+    [
+      "APP",
+      "ZENIR DISARZ PRESENTES E DECORACOES LTDA",
+      0,
+      29.99,
+      0
+    ],
+    [
+      "APP",
+      "GRACIOSA DISTRIBUIDORA DE COSMETICOS LTD",
+      93.97,
+      327.40000000000003,
+      107.31
+    ],
+    [
+      "APP",
+      "CAFE RANCHEIRO AGRO INDUSTRIAL LTDA",
+      0,
+      23.35,
+      12.58
+    ],
+    [
+      "APP",
+      "MACRO COMERCIO INTERNACIONAL LTDA EM REC",
+      107.6,
+      99.8,
+      0
+    ],
+    [
+      "APP",
+      "ELKA PLASTICOS LTDA",
+      0,
+      0,
+      39.9
+    ],
+    [
+      "APP",
+      "HIGIEPLUS COTTONBABY IND E COM LTDA",
+      182.73,
+      19.99,
+      37.64
+    ],
+    [
+      "APP",
+      "SAO DOMINGOS SA INDUSTRIA GRAFICA",
+      0,
+      19.98,
+      0
+    ],
+    [
+      "APP",
+      "ADRIANA SERPA DA SILVA",
+      115.77000000000001,
+      99.98,
+      0
+    ],
+    [
+      "APP",
+      "CHAMA DE OURO BEM ESTAR LTDA",
+      0,
+      24.99,
+      131.43
+    ],
+    [
+      "APP",
+      "APTI ALIMENTOS LTDA",
+      26.39,
+      0,
+      25.73
+    ],
+    [
+      "APP",
+      "AM INDUSTRIA DE COSMETICOS LTDA",
+      78.38,
+      38.96,
+      0
+    ],
+    [
+      "APP",
+      "CAFE ITALLE COMERCIO DE BEBIDAS E ALIMEN",
+      30.39,
+      0,
+      53.760000000000005
+    ],
+    [
+      "APP",
+      "MAGIC KIDS COMERCIO LTDA EPP",
+      19.99,
+      98.93999999999998,
+      22.99
+    ],
+    [
+      "APP",
+      "BIGNARDI IND E COM DE PAP E ARTEFAT LTDA",
+      0,
+      7.99,
+      0
+    ],
+    [
+      "APP",
+      "AGUAS MINERAIS SARANDI LTDA",
+      0,
+      9,
+      13.239999999999998
+    ],
+    [
+      "APP",
+      "JTX COMERCIO DE PRESENTES E ARMARINHOS E",
+      39.99,
+      185.96,
+      36.79
+    ],
+    [
+      "APP",
+      "DALGE COSMETICOS LTDA",
+      69.30000000000001,
+      73.12,
+      19.99
+    ],
+    [
+      "APP",
+      "KELLDRIN INDUSTRIAL LTDA",
+      0,
+      0,
+      32.629999999999995
+    ],
+    [
+      "APP",
+      "METALURGICA CRIPPA LTDA",
+      2.99,
+      64.05,
+      37.8
+    ],
+    [
+      "APP",
+      "LILIBEL ALIMENTOS LTDA",
+      6.49,
+      17.74,
+      0
+    ],
+    [
+      "APP",
+      "ALFAPARF",
+      0,
+      99.96,
+      51.81999999999999
+    ],
+    [
+      "APP",
+      "BTC COMERCIO DE COSMETICOS LTDA",
+      381.05000000000007,
+      59.9,
+      127.2
+    ],
+    [
+      "APP",
+      "AVVIO INDUSTRIA & CIA LTDA",
+      0,
+      0,
+      18.22
+    ],
+    [
+      "APP",
+      "HELLO KITT SABRINA SATO",
+      26.72,
+      59.97,
+      0
+    ],
+    [
+      "APP",
+      "THOMAS KL IND. DE ALTO FALANTES AS",
+      0,
+      2228.8,
+      0
+    ],
+    [
+      "APP",
+      "ELG PEDESTAIS LTDA",
+      0,
+      49.8,
+      0
+    ],
+    [
+      "APP",
+      "OUROLUX COMERCIAL LTDA",
+      0,
+      6.49,
+      0
+    ],
+    [
+      "APP",
+      "BRISTOL MEYERS SQUIBB FARMACASUTICA LTDA",
+      529.6500000000001,
+      77.95,
+      0
+    ],
+    [
+      "APP",
+      "ATRIA AROMAS BRASIL DISTRIBUIDORA LTDA",
+      0,
+      34.99,
+      0
+    ],
+    [
+      "APP",
+      "ZALIKE COMERCIO IMPORTACAO E EXPORTACAO",
+      281.47,
+      142.75,
+      0
+    ],
+    [
+      "APP",
+      "NDI IMPORTACAO, EXPORTACAO, COMERCIO E R",
+      38.07,
+      24.99,
+      0
+    ],
+    [
+      "APP",
+      "NOVVO BEM ESTAR COMERCIO DE PRODUTOS NAT",
+      7.79,
+      0,
+      63.16
+    ],
+    [
+      "APP",
+      "MISSNER & MISSNER LTDA.",
+      -51.9,
+      38.98,
+      0
+    ],
+    [
+      "APP",
+      "WE COMERCIO DE PRODUTOS COSMESTICOS LTDA",
+      0,
+      179.9,
+      0
+    ],
+    [
+      "APP",
+      "BENESA COMERCIAL LTDA",
+      39.99,
+      89.97,
+      0
+    ],
+    [
+      "APP",
+      "DERMABEL INDUSTRIA E COMERCIO DE PROD CO",
+      18.98,
+      18.98,
+      0
+    ],
+    [
+      "APP",
+      "BIORE DERMO",
+      375.51,
+      311.05,
+      167.97
+    ],
+    [
+      "APP",
+      "DM - INDUSTRIAL E COMERCIAL LTDA.",
+      0,
+      88.6,
+      39.8
+    ],
+    [
+      "APP",
+      "AURA BEAUTY LTDA",
+      0,
+      0,
+      178
+    ],
+    [
+      "APP",
+      "TOY E HOME IMPORTADORA E DISTRIBUIDORA L",
+      0,
+      15,
+      0
+    ],
+    [
+      "APP",
+      "MVS CONFECCOES EIRELI",
+      4.99,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "TIKBALM INDUSTRIA E COMERCIO DO BRASIL L",
+      9.99,
+      0,
+      36.78
+    ],
+    [
+      "APP",
+      "CR CERAMICA LTDA",
+      0,
+      47.98,
+      27.51
+    ],
+    [
+      "APP",
+      "VERONA INDUSTRIA DE PLASTICOS LTDA",
+      0,
+      34.99,
+      0
+    ],
+    [
+      "APP",
+      "VYVEDAS COSMETICOS DO BRASIL LTDA",
+      91.22,
+      59.98,
+      0
+    ],
+    [
+      "APP",
+      "SNOOPY DOG TICIANE PINHEIRO",
+      40.81,
+      62.42,
+      0
+    ],
+    [
+      "APP",
+      "N DA LUA AROMAS LTDA",
+      9.99,
+      0,
+      17.39
+    ],
+    [
+      "APP",
+      "POLAR TECNICA COMERCIAL E INDUSTRIAL LTD",
+      94.48,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "ACQUA AGUA DE COCO DA AMAZONIA INDUSTRIA",
+      0,
+      0,
+      13.75
+    ],
+    [
+      "APP",
+      "BATATAS GUADAGNIN LTDA",
+      9.98,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "INDUSTRIA DE BISCOITOS KLAIN LTDA",
+      45.94,
+      31.96,
+      35.78
+    ],
+    [
+      "APP",
+      "NHAMI MAMI DISTRIBUIDORA DE ALIMENT LTDA",
+      0,
+      17.34,
+      0
+    ],
+    [
+      "APP",
+      "SEMALO INDUST E COM DE ALIMENTOS LTDA",
+      9.99,
+      23.32,
+      15.98
+    ],
+    [
+      "APP",
+      "LUCKAU INDUSTRIA E COMERCIO DE ALIMENTOS",
+      6.99,
+      6.99,
+      0
+    ],
+    [
+      "APP",
+      "SANOFI MEDLEY FARMACEUTICA LTDA",
+      111.91,
+      10.9,
+      0
+    ],
+    [
+      "APP",
+      "DOCE BRINQUEDO INDUSTRIA E COMERCIO DE B",
+      22.9,
+      22.9,
+      18.31
+    ],
+    [
+      "APP",
+      "CLARAMAX INDUSTRIA E COM DE PAPEIS LTDA",
+      1343.91,
+      823.3100000000002,
+      626.14
+    ],
+    [
+      "APP",
+      "TOCCA ALIMENTOS LTDA",
+      19.340000000000003,
+      19.9,
+      32.99
+    ],
+    [
+      "APP",
+      "NATUFLORES IND E COMERCIO DE COSME LTDA",
+      138.18,
+      255.62,
+      123.29999999999998
+    ],
+    [
+      "APP",
+      "TAUMER INDUSTRIA METALURGICA LTDA",
+      33.5,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "RCA LABS LTDA",
+      364.58000000000004,
+      378.49,
+      109.9
+    ],
+    [
+      "APP",
+      "SOCIEDADE DE BEBIDAS PANIZZON LTDA",
+      41.4,
+      15.9,
+      0
+    ],
+    [
+      "APP",
+      "DISTRIBUIDORA DE COSMETICOS LABOREN LTDA",
+      45.98,
+      0,
+      22.99
+    ],
+    [
+      "APP",
+      "LUSINE INDUSTRIA E COMERCIO DE COSMETICO",
+      114.82,
+      158.37,
+      26.99
+    ],
+    [
+      "APP",
+      "ROYAL TOYS, COMERCIO, IMPORTACAO E EXPOR",
+      0,
+      19.98,
+      18.22
+    ],
+    [
+      "APP",
+      "FAZENDA BIOLAND AGROINDUSTRIA LTDA",
+      60.07,
+      0,
+      4.61
+    ],
+    [
+      "APP",
+      "SANTO OLEO INDUST E COM DE PROD NATURAIS",
+      38.7,
+      63.330000000000005,
+      19.18
+    ],
+    [
+      "APP",
+      "ADERE PRODUTOS AUTO ADESIVOS LTDA",
+      0,
+      0,
+      58.410000000000004
+    ],
+    [
+      "APP",
+      "PARALELO SUL RIO GRANDENSE COMERCIO DE C",
+      321.36,
+      423.35,
+      57.379999999999995
+    ],
+    [
+      "APP",
+      "NATUGEN INDUSTRIA LTDA",
+      5.89,
+      0,
+      5.42
+    ],
+    [
+      "APP",
+      "ORBITAE DIAGNOSTICOS LTDA",
+      109.8,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "BE CARE COSMETICS COMERCIO DE COSMESTICO",
+      73.88,
+      121.94999999999999,
+      99.78999999999999
+    ],
+    [
+      "APP",
+      "PIINGUES ALIMENTOS LTDA",
+      23.97,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "GLOBAL TABS S.A.",
+      13.27,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "BOHRER",
+      0,
+      0,
+      29.94
+    ],
+    [
+      "APP",
+      "JCS BRASIL ELETRODOMESTICOS LTDA",
+      0,
+      140.8,
+      0
+    ],
+    [
+      "APP",
+      "PELO E PELE INDUSTRIA E MANIPULACAO DE C",
+      9.99,
+      19.1,
+      0
+    ],
+    [
+      "APP",
+      "FOFY COMERCIO IMPORTACAO E EXPORTACAO LT",
+      26.09,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "LINK COMERCIAL IMPORTADORA E EXPORTADORA",
+      78.08,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "CEFISA INDUSTRIA E COMERCIO LTDA",
+      87.83999999999999,
+      88.33,
+      0
+    ],
+    [
+      "APP",
+      "TE GUARANI DO BRASIL LTDA",
+      0,
+      0,
+      54.9
+    ],
+    [
+      "APP",
+      "GUIMARAES BRASIL IND E ALIMENTOS LTDA",
+      1.98,
+      16.85,
+      8.06
+    ],
+    [
+      "APP",
+      "SCRIVIA BRASIL INDUSTRIA DE ALIMENTOS LT",
+      18,
+      46.480000000000004,
+      8.64
+    ],
+    [
+      "APP",
+      "ZANLORENZI BEBIDAS LTDA",
+      0,
+      0,
+      13.8
+    ],
+    [
+      "APP",
+      "MALVI INDUSTRIA E COMERCIO DE ALIMENTOS",
+      0,
+      34.97,
+      11
+    ],
+    [
+      "APP",
+      "LA GANEXA PRODUTOS ALIMENTICIOS LTDA",
+      0,
+      40.7,
+      0
+    ],
+    [
+      "APP",
+      "ARYANNE MARQUES DE ALMEIDA 00850660106",
+      0,
+      0,
+      124.7
+    ],
+    [
+      "APP",
+      "ALGODAO DOCE INDUSTRIA DE URSOS LTDA",
+      0,
+      24.5,
+      0
+    ],
+    [
+      "APP",
+      "LA URUGUAYA PADARIA E CONFEITARIA LTDA",
+      0,
+      13.99,
+      0
+    ],
+    [
+      "APP",
+      "NUTRISUL SA PRODUTOS ALIMENTICIOS",
+      0,
+      0,
+      4.59
+    ],
+    [
+      "APP",
+      "PRIME SUL DISTRIBUIDORA DE COSMETICOS LT",
+      204.14,
+      215.08999999999997,
+      0
+    ],
+    [
+      "APP",
+      "PARENTEX INDUSTRIA E COMERCIO LTDA",
+      192.06000000000003,
+      114.5,
+      39.9
+    ],
+    [
+      "APP",
+      "PANIFICIO PANINE LTDA",
+      12.99,
+      0,
+      12.99
+    ],
+    [
+      "APP",
+      "PLATTELLI INDUSTRIA E COM DE COSMETICOS",
+      0,
+      16.99,
+      0
+    ],
+    [
+      "APP",
+      "N.S. PRODUTOS E SISTEMAS DE HIGIENE LTDA",
+      0,
+      26.18,
+      15.63
+    ],
+    [
+      "APP",
+      "GUIMARAES PRODUTOS QUIMICOS E DE LIMPEZA",
+      0,
+      14.9,
+      0
+    ],
+    [
+      "APP",
+      "MULTIPLA",
+      0,
+      21.99,
+      0
+    ],
+    [
+      "APP",
+      "HIGIEFARM COMERCIO IMPORTACAO E EXPOR",
+      65.19,
+      90.5,
+      0
+    ],
+    [
+      "APP",
+      "FATEX INDUSTRIAL, COMERCIAL, IMPORTACAO",
+      0,
+      0,
+      128.62
+    ],
+    [
+      "APP",
+      "BANANINHA PARAIBUNA LTDA",
+      3.99,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "KAZAN COMERCIO, IMPORTACAO E EXPORTACA",
+      0,
+      15.98,
+      0
+    ],
+    [
+      "APP",
+      "FREEDOM TECH LTDA",
+      0,
+      269.96999999999997,
+      0
+    ],
+    [
+      "APP",
+      "LQF LABORATORIO QUIMICO FARMACEUTICO RIO",
+      113.55,
+      68.26,
+      0
+    ],
+    [
+      "APP",
+      "CALCADOS BEIRA RIO",
+      539.87,
+      3752.7200000000007,
+      0
+    ],
+    [
+      "APP",
+      "MILI S A",
+      77.43,
+      23.97,
+      0
+    ],
+    [
+      "APP",
+      "DANILLA FOODS BRASIL LTDA",
+      3.99,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "FRUKI BEBIDAS SA",
+      34.11,
+      9.8,
+      0
+    ],
+    [
+      "APP",
+      "INDUSTRIA DE COSMETICOS ORIENTE LIFE LTD",
+      59.9,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "ASN BRASIL IMPORTACAO E EXPORTACAO LTDA",
+      298.88000000000005,
+      265.78000000000003,
+      0
+    ],
+    [
+      "APP",
+      "LABORATORIO CANONNE LTDA",
+      0,
+      149.7,
+      0
+    ],
+    [
+      "APP",
+      "EDITORA VELOS",
+      0,
+      49.9,
+      0
+    ],
+    [
+      "APP",
+      "BIO COSMETICA INDUSTRIA E COMERCIO DE PE",
+      247.74,
+      162.58,
+      0
+    ],
+    [
+      "APP",
+      "J A TEIXEIRA VETERINARIA LTDA",
+      0,
+      42.8,
+      0
+    ],
+    [
+      "APP",
+      "KAMALEAO COLOR COMERCIO DE COSMETICOS LT",
+      236.57000000000002,
+      109.98,
+      0
+    ],
+    [
+      "APP",
+      "CULTURAMA LTDA",
+      0,
+      15.99,
+      0
+    ],
+    [
+      "APP",
+      "SLOK INDUSTRIA DE BEBIDAS E ALIMENTOS",
+      48.3,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "CREMER S.A",
+      0,
+      14.9,
+      0
+    ],
+    [
+      "APP",
+      "PETLOOK PRODUTOS DE HIGIENE E ACESSORIOS",
+      51.36,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "GSI IMPORTACAO E EXPORTACAO LTDA",
+      252.97000000000003,
+      113.86,
+      0
+    ],
+    [
+      "APP",
+      "SBARAINI DISTRIBUIDORA LTDA",
+      0,
+      34.12,
+      0
+    ],
+    [
+      "APP",
+      "EDITORA PREACH LTDA",
+      0,
+      49.9,
+      0
+    ],
+    [
+      "APP",
+      "AERZ QUIMICA INDUSTRIAL LTDA",
+      183.43,
+      46.98,
+      0
+    ],
+    [
+      "APP",
+      "SIMPLE DERMO",
+      69.9,
+      69.9,
+      0
+    ],
+    [
+      "APP",
+      "LIDER SWEET IMPORTADORA - EXPORTADORA LT",
+      0,
+      13.99,
+      0
+    ],
+    [
+      "APP",
+      "FARMAX S.A.",
+      89.05999999999999,
+      47.489999999999995,
+      0
+    ],
+    [
+      "APP",
+      "ASTORIA PAPEIS LTDA",
+      548.0999999999999,
+      182.69,
+      0
+    ],
+    [
+      "APP",
+      "S.T.P. COMERCIO DE PRODUTOS LTDA",
+      38.99,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "FERNANDO UNIFORMES EIRELI",
+      77.77000000000001,
+      19.98,
+      0
+    ],
+    [
+      "APP",
+      "MERCUR S/A - MARCA PROPRIA",
+      71.92999999999999,
+      71.86,
+      0
+    ],
+    [
+      "APP",
+      "NESTLE BRASIL LTDA",
+      257.98,
+      251.87,
+      0
+    ],
+    [
+      "APP",
+      "ADA INDUSTRIA DE ALIMENTOS LTDA",
+      76.47999999999999,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "KAIROS INDUSTRIA LTDA",
+      59.96,
+      0,
+      0
+    ],
+    [
+      "APP",
+      "MWM CARE DISTRIBUIDORA LTDA",
+      123.71999999999997,
+      120.89999999999999,
+      0
+    ],
+    [
+      "APP",
+      "CONTROLLER COMERCIO E SERVICOS LTDA",
+      117.32999999999998,
+      29.9,
+      0
+    ]
+  ]
 }

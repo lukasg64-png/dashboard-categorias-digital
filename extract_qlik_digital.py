@@ -146,6 +146,28 @@ async def fetch_qlik_data():
                             const totalRows2 = l2.result.qLayout.qHyperCube.qSize.qcy;
                             resData.hierarquia = await fetchAllHyperCubeRows(h2, totalRows2, 7, 1000);
 
+                            // 3. Laboratórios / Fornecedores Digital (Canal x Laboratorio MTD)
+                            const c3 = await send("CreateSessionObject", docHandle, [{
+                                "qInfo": { "qType": "q_digital_labs" },
+                                "qHyperCubeDef": {
+                                    "qDimensions": [
+                                        { "qDef": { "qFieldDefs": ["Canal"] } },
+                                        { "qDef": { "qFieldDefs": ["Laboratorio"] } }
+                                    ],
+                                    "qMeasures": [
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-09'}, ${dayFilter}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])`, "qLabel": "v26" } },
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-08'}, ${dayFilter}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])`, "qLabel": "v26_06" } },
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2025-09'}, ${dayFilter}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])`, "qLabel": "v25" } }
+                                    ],
+                                    "qInitialDataFetch": [{ "qTop": 0, "qLeft": 0, "qHeight": 1000, "qWidth": 5 }],
+                                    "qSuppressZero": true, "qSuppressMissing": true
+                                }
+                            }]);
+                            const h3 = c3.result.qReturn.qHandle;
+                            const l3 = await send("GetLayout", h3, []);
+                            const totalRows3 = l3.result.qLayout.qHyperCube.qSize.qcy;
+                            resData.laboratorios = await fetchAllHyperCubeRows(h3, totalRows3, 5, 1000);
+
                             ws.close();
                             resolve(resData);
                         } catch (e) {

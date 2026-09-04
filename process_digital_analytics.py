@@ -171,7 +171,16 @@ def main():
             'real_acum_mkt': round(real_acum_mkt, 2) if is_realizado else None,
             # Atingimento diário
             'ating_dia_total': calc_pct(ds['total'], m_dia_tot) if is_realizado else None,
-            'ating_acum_total': calc_pct(real_acum_total, m_acum_tot) if is_realizado else None
+            'ating_acum_total': calc_pct(real_acum_total, m_acum_tot) if is_realizado else None,
+            # Desvio % e GAP R$ diários vs Meta (Solicitado pelo usuário)
+            'desvio_dia_total': calc_desvio_pct(ds['total'], m_dia_tot) if is_realizado else None,
+            'desvio_dia_app': calc_desvio_pct(ds['app'], m_dia_app) if is_realizado else None,
+            'desvio_dia_site': calc_desvio_pct(ds['site'], m_dia_site) if is_realizado else None,
+            'desvio_dia_mkt': calc_desvio_pct(ds['marketplace'], m_dia_mkt) if is_realizado else None,
+            'gap_dia_total': round(ds['total'] - m_dia_tot, 2) if is_realizado else None,
+            'gap_dia_app': round(ds['app'] - m_dia_app, 2) if is_realizado else None,
+            'gap_dia_site': round(ds['site'] - m_dia_site, 2) if is_realizado else None,
+            'gap_dia_mkt': round(ds['marketplace'] - m_dia_mkt, 2) if is_realizado else None
         })
 
     # 4. Totais Executivos MTD & Projeções
@@ -531,7 +540,226 @@ def main():
 
     tabela_grupos.sort(key=lambda x: x['realizado_mtd'], reverse=True)
 
-    # 7. Top SKUs (500)
+    # 7. Agregações por Subgrupo com suporte a canais
+    subgrupos_dict = defaultdict(lambda: {
+        'grupo': '',
+        'total': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'app': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'site': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'marketplace': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'total_linhas': 0
+    })
+
+    for l in tabela_linhas:
+        sub = l['subgrupo']
+        grp = l['grupo']
+        subgrupos_dict[sub]['grupo'] = grp
+        subgrupos_dict[sub]['total_linhas'] += 1
+        for ch in ['total', 'app', 'site', 'marketplace']:
+            b = l['canais'][ch]
+            subgrupos_dict[sub][ch]['real'] += b['realizado_mtd']
+            subgrupos_dict[sub][ch]['meta_mtd'] += b['meta_mtd']
+            subgrupos_dict[sub][ch]['meta_mes'] += b['meta_mensal']
+            subgrupos_dict[sub][ch]['v26_06'] += b['v26_06_mtd']
+            subgrupos_dict[sub][ch]['v25'] += b['v25_mtd']
+
+    tabela_subgrupos = []
+    for sub, val in subgrupos_dict.items():
+        canais_sub = {}
+        for ch in ['total', 'app', 'site', 'marketplace']:
+            r = val[ch]['real']
+            m_mtd = val[ch]['meta_mtd']
+            m_mes = val[ch]['meta_mes']
+            v06 = val[ch]['v26_06']
+            v25 = val[ch]['v25']
+
+            gap_rs = round(r - m_mtd, 2)
+            ating = calc_pct(r, m_mtd)
+            desvio = calc_desvio_pct(r, m_mtd)
+            proj = round(r / pct_acum_dmax, 2) if pct_acum_dmax > 0 else 0.0
+            mom_pct, mom_diff = calc_growth(r, v06)
+            yoy_pct, yoy_diff = calc_growth(r, v25)
+            ch_total_real = kpis_executivos['canais'][ch]['venda_mtd']
+            share = calc_pct(r, ch_total_real)
+
+            canais_sub[ch] = {
+                'realizado_mtd': round(r, 2),
+                'meta_mtd': round(m_mtd, 2),
+                'meta_mensal': round(m_mes, 2),
+                'gap_mtd': gap_rs,
+                'desvio_pct': desvio,
+                'ating_mtd_pct': ating,
+                'projecao_fechamento': proj,
+                'v26_06_mtd': round(v06, 2),
+                'crescimento_mom_pct': mom_pct,
+                'crescimento_mom_diff': mom_diff,
+                'v25_mtd': round(v25, 2),
+                'crescimento_yoy_pct': yoy_pct,
+                'crescimento_yoy_diff': yoy_diff,
+                'share_pct': share
+            }
+
+        tot = canais_sub['total']
+        tabela_subgrupos.append({
+            'grupo': val['grupo'],
+            'subgrupo': sub,
+            'total_linhas': val['total_linhas'],
+            'canais': canais_sub,
+            'realizado_mtd': tot['realizado_mtd'],
+            'meta_mtd': tot['meta_mtd'],
+            'meta_mensal': tot['meta_mensal'],
+            'gap_mtd': tot['gap_mtd'],
+            'desvio_pct': tot['desvio_pct'],
+            'ating_mtd_pct': tot['ating_mtd_pct'],
+            'projecao_fechamento': tot['projecao_fechamento'],
+            'realizado_app': canais_sub['app']['realizado_mtd'],
+            'realizado_site': canais_sub['site']['realizado_mtd'],
+            'realizado_mkt': canais_sub['marketplace']['realizado_mtd'],
+            'crescimento_mom_pct': tot['crescimento_mom_pct'],
+            'crescimento_mom_diff': tot['crescimento_mom_diff'],
+            'crescimento_yoy_pct': tot['crescimento_yoy_pct'],
+            'crescimento_yoy_diff': tot['crescimento_yoy_diff'],
+            'share_pct': tot['share_pct']
+        })
+    tabela_subgrupos.sort(key=lambda x: x['realizado_mtd'], reverse=True)
+    print(f"Total de Subgrupos processados: {len(tabela_subgrupos):,}")
+
+    # 8. Fornecedores / Laboratórios com suporte a canais
+    with open(os.path.join(DATA_DIR, 'metas_por_laboratorio.json'), 'r', encoding='utf-8') as f:
+        metas_labs_list = json.load(f)
+    metas_labs_map = {clean_name(r['Laboratorio']): r for r in metas_labs_list}
+
+    qlik_labs_file = os.path.join(DATA_DIR, 'qlik_laboratorios_raw.json')
+    labs_raw = []
+    if os.path.exists(qlik_labs_file):
+        with open(qlik_labs_file, 'r', encoding='utf-8') as f:
+            labs_raw = json.load(f)
+    elif 'laboratorios' in qlik_raw:
+        labs_raw = qlik_raw['laboratorios']
+
+    # Estrutura acumulada de laboratórios
+    lab_real = defaultdict(lambda: {
+        'total': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+        'app': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+        'site': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+        'marketplace': {'real': 0.0, 'v06': 0.0, 'v25': 0.0}
+    })
+
+    for r in labs_raw:
+        canal = r[0]
+        lab = clean_name(r[1])
+        v26 = float(r[2] or 0.0)
+        v26_06 = float(r[3] or 0.0)
+        v25 = float(r[4] or 0.0)
+        cat = map_channel_category(canal)
+        if cat != 'outros':
+            lab_real[lab][cat]['real'] += v26
+            lab_real[lab][cat]['v06'] += v26_06
+            lab_real[lab][cat]['v25'] += v25
+            lab_real[lab]['total']['real'] += v26
+            lab_real[lab]['total']['v06'] += v26_06
+            lab_real[lab]['total']['v25'] += v25
+
+    # Distribuição Marketplace via SKU / Linha mapping
+    parquet_path = os.path.join(DATA_DIR, 'metas_digital_completa.parquet')
+    if os.path.exists(parquet_path):
+        df_meta = pd.read_parquet(parquet_path)
+        linha_lab_mkt = df_meta.groupby(['Desc_Linha', 'Laboratorio'])['Marketplace'].sum().reset_index()
+        linha_tot_mkt = df_meta.groupby('Desc_Linha')['Marketplace'].sum().reset_index().rename(columns={'Marketplace': 'Tot_Mkt'})
+        linha_weights = pd.merge(linha_lab_mkt, linha_tot_mkt, on='Desc_Linha')
+        linha_weights['weight'] = linha_weights['Marketplace'] / linha_weights['Tot_Mkt']
+        linha_weights = linha_weights[linha_weights['weight'] > 0]
+        w_dict = defaultdict(dict)
+        for _, row in linha_weights.iterrows():
+            w_dict[clean_name(row['Desc_Linha'])][clean_name(row['Laboratorio'])] = row['weight']
+
+        for r in raw_hier:
+            c = map_channel_category(r[0])
+            if c == 'marketplace':
+                lin = clean_name(r[3])
+                v26 = float(r[4] or 0.0)
+                v26_06 = float(r[5] or 0.0)
+                v25 = float(r[6] or 0.0)
+                if lin in w_dict:
+                    for lab, w in w_dict[lin].items():
+                        lab_real[lab]['marketplace']['real'] += v26 * w
+                        lab_real[lab]['marketplace']['v06'] += v26_06 * w
+                        lab_real[lab]['marketplace']['v25'] += v25 * w
+                        lab_real[lab]['total']['real'] += v26 * w
+                        lab_real[lab]['total']['v06'] += v26_06 * w
+                        lab_real[lab]['total']['v25'] += v25 * w
+
+    all_labs_keys = set(metas_labs_map.keys()).union(set(lab_real.keys()))
+    tabela_laboratorios = []
+    meta_keys = {'total': 'Total_Digital', 'app': 'App', 'site': 'Site', 'marketplace': 'Marketplace'}
+    
+    for lab in all_labs_keys:
+        m = metas_labs_map.get(lab, {'Total_Digital': 0.0, 'App': 0.0, 'Site': 0.0, 'Marketplace': 0.0})
+        rv = lab_real.get(lab, {
+            'total': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+            'app': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+            'site': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+            'marketplace': {'real': 0.0, 'v06': 0.0, 'v25': 0.0}
+        })
+        
+        canais_lab = {}
+        for ch in ['total', 'app', 'site', 'marketplace']:
+            r = rv[ch]['real']
+            m_mes = float(m.get(meta_keys[ch], 0.0) or 0.0)
+            m_mtd = round(m_mes * pct_acum_dmax, 2)
+            v06 = rv[ch]['v06']
+            v25 = rv[ch]['v25']
+            gap_rs = round(r - m_mtd, 2)
+            ating = calc_pct(r, m_mtd)
+            desvio = calc_desvio_pct(r, m_mtd)
+            proj = round(r / pct_acum_dmax, 2) if pct_acum_dmax > 0 else 0.0
+            mom_pct, mom_diff = calc_growth(r, v06)
+            yoy_pct, yoy_diff = calc_growth(r, v25)
+            ch_total_real = kpis_executivos['canais'][ch]['venda_mtd']
+            share = calc_pct(r, ch_total_real)
+
+            canais_lab[ch] = {
+                'realizado_mtd': round(r, 2),
+                'meta_mtd': round(m_mtd, 2),
+                'meta_mensal': round(m_mes, 2),
+                'gap_mtd': gap_rs,
+                'desvio_pct': desvio,
+                'ating_mtd_pct': ating,
+                'projecao_fechamento': proj,
+                'v26_06_mtd': round(v06, 2),
+                'crescimento_mom_pct': mom_pct,
+                'crescimento_mom_diff': mom_diff,
+                'v25_mtd': round(v25, 2),
+                'crescimento_yoy_pct': yoy_pct,
+                'crescimento_yoy_diff': yoy_diff,
+                'share_pct': share
+            }
+
+        tot = canais_lab['total']
+        if tot['realizado_mtd'] > 0 or tot['meta_mtd'] > 0:
+            tabela_laboratorios.append({
+                'laboratorio': lab,
+                'canais': canais_lab,
+                'realizado_mtd': tot['realizado_mtd'],
+                'meta_mtd': tot['meta_mtd'],
+                'meta_mensal': tot['meta_mensal'],
+                'gap_mtd': tot['gap_mtd'],
+                'desvio_pct': tot['desvio_pct'],
+                'ating_mtd_pct': tot['ating_mtd_pct'],
+                'projecao_fechamento': tot['projecao_fechamento'],
+                'realizado_app': canais_lab['app']['realizado_mtd'],
+                'realizado_site': canais_lab['site']['realizado_mtd'],
+                'realizado_mkt': canais_lab['marketplace']['realizado_mtd'],
+                'crescimento_mom_pct': tot['crescimento_mom_pct'],
+                'crescimento_mom_diff': tot['crescimento_mom_diff'],
+                'crescimento_yoy_pct': tot['crescimento_yoy_pct'],
+                'crescimento_yoy_diff': tot['crescimento_yoy_diff'],
+                'share_pct': tot['share_pct']
+            })
+    tabela_laboratorios.sort(key=lambda x: x['realizado_mtd'], reverse=True)
+    print(f"Total de Laboratórios processados: {len(tabela_laboratorios):,}")
+
+    # 9. Top SKUs (500)
     with open(os.path.join(DATA_DIR, 'metas_top_skus.json'), 'r', encoding='utf-8') as f:
         top_skus_raw = json.load(f)
 
@@ -563,46 +791,125 @@ def main():
             'meta_mtd_mkt': round(m_mkt * pct_acum_dmax, 2)
         })
 
-    # 8. Destaques (Top Aceleradores e Detratores por Canal)
-    destaques_por_canal = {}
+    # 10. Diagnóstico de Causa-Raiz (Raio-X de Problemas vs Aceleradores por Canal)
+    diagnostico_causas = {}
     for ch in ['total', 'app', 'site', 'marketplace']:
-        linhas_validas = [l for l in tabela_linhas if l['canais'][ch]['meta_mtd'] > 1000]
-        acel = sorted(linhas_validas, key=lambda x: x['canais'][ch]['gap_mtd'], reverse=True)[:5]
-        det = sorted(linhas_validas, key=lambda x: x['canais'][ch]['gap_mtd'])[:5]
-        
-        destaques_por_canal[ch] = {
-            'aceleradores': [{
-                'linha': x['linha'],
+        # Fornecedores
+        labs_validos = [l for l in tabela_laboratorios if l['canais'][ch]['meta_mtd'] > 500 or l['canais'][ch]['realizado_mtd'] > 500]
+        det_labs = sorted(labs_validos, key=lambda x: x['canais'][ch]['gap_mtd'])[:15]
+        acel_labs = sorted(labs_validos, key=lambda x: x['canais'][ch]['gap_mtd'], reverse=True)[:15]
+
+        # Subgrupos
+        subs_validos = [s for s in tabela_subgrupos if s['canais'][ch]['meta_mtd'] > 500 or s['canais'][ch]['realizado_mtd'] > 500]
+        det_subs = sorted(subs_validos, key=lambda x: x['canais'][ch]['gap_mtd'])[:15]
+        acel_subs = sorted(subs_validos, key=lambda x: x['canais'][ch]['gap_mtd'], reverse=True)[:15]
+
+        # Linhas
+        lins_validas = [l for l in tabela_linhas if l['canais'][ch]['meta_mtd'] > 500 or l['canais'][ch]['realizado_mtd'] > 500]
+        det_lins = sorted(lins_validas, key=lambda x: x['canais'][ch]['gap_mtd'])[:15]
+        acel_lins = sorted(lins_validas, key=lambda x: x['canais'][ch]['gap_mtd'], reverse=True)[:15]
+
+        diagnostico_causas[ch] = {
+            'detratores_laboratorios': [{
+                'nome': x['laboratorio'],
+                'realizado_mtd': x['canais'][ch]['realizado_mtd'],
+                'meta_mtd': x['canais'][ch]['meta_mtd'],
+                'gap_mtd': x['canais'][ch]['gap_mtd'],
+                'desvio_pct': x['canais'][ch]['desvio_pct'],
+                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct'],
+                'crescimento_mom_pct': x['canais'][ch]['crescimento_mom_pct'],
+                'crescimento_yoy_pct': x['canais'][ch]['crescimento_yoy_pct']
+            } for x in det_labs],
+            'aceleradores_laboratorios': [{
+                'nome': x['laboratorio'],
+                'realizado_mtd': x['canais'][ch]['realizado_mtd'],
+                'meta_mtd': x['canais'][ch]['meta_mtd'],
+                'gap_mtd': x['canais'][ch]['gap_mtd'],
+                'desvio_pct': x['canais'][ch]['desvio_pct'],
+                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct'],
+                'crescimento_mom_pct': x['canais'][ch]['crescimento_mom_pct'],
+                'crescimento_yoy_pct': x['canais'][ch]['crescimento_yoy_pct']
+            } for x in acel_labs],
+            'detratores_subgrupos': [{
+                'nome': x['subgrupo'],
                 'grupo': x['grupo'],
                 'realizado_mtd': x['canais'][ch]['realizado_mtd'],
                 'meta_mtd': x['canais'][ch]['meta_mtd'],
                 'gap_mtd': x['canais'][ch]['gap_mtd'],
                 'desvio_pct': x['canais'][ch]['desvio_pct'],
-                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct']
-            } for x in acel],
-            'detratores': [{
-                'linha': x['linha'],
+                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct'],
+                'crescimento_mom_pct': x['canais'][ch]['crescimento_mom_pct'],
+                'crescimento_yoy_pct': x['canais'][ch]['crescimento_yoy_pct']
+            } for x in det_subs],
+            'aceleradores_subgrupos': [{
+                'nome': x['subgrupo'],
                 'grupo': x['grupo'],
                 'realizado_mtd': x['canais'][ch]['realizado_mtd'],
                 'meta_mtd': x['canais'][ch]['meta_mtd'],
                 'gap_mtd': x['canais'][ch]['gap_mtd'],
                 'desvio_pct': x['canais'][ch]['desvio_pct'],
-                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct']
-            } for x in det]
+                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct'],
+                'crescimento_mom_pct': x['canais'][ch]['crescimento_mom_pct'],
+                'crescimento_yoy_pct': x['canais'][ch]['crescimento_yoy_pct']
+            } for x in acel_subs],
+            'detratores_linhas': [{
+                'nome': x['linha'],
+                'subgrupo': x['subgrupo'],
+                'grupo': x['grupo'],
+                'realizado_mtd': x['canais'][ch]['realizado_mtd'],
+                'meta_mtd': x['canais'][ch]['meta_mtd'],
+                'gap_mtd': x['canais'][ch]['gap_mtd'],
+                'desvio_pct': x['canais'][ch]['desvio_pct'],
+                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct'],
+                'crescimento_mom_pct': x['canais'][ch]['crescimento_mom_pct'],
+                'crescimento_yoy_pct': x['canais'][ch]['crescimento_yoy_pct']
+            } for x in det_lins],
+            'aceleradores_linhas': [{
+                'nome': x['linha'],
+                'subgrupo': x['subgrupo'],
+                'grupo': x['grupo'],
+                'realizado_mtd': x['canais'][ch]['realizado_mtd'],
+                'meta_mtd': x['canais'][ch]['meta_mtd'],
+                'gap_mtd': x['canais'][ch]['gap_mtd'],
+                'desvio_pct': x['canais'][ch]['desvio_pct'],
+                'ating_mtd_pct': x['canais'][ch]['ating_mtd_pct'],
+                'crescimento_mom_pct': x['canais'][ch]['crescimento_mom_pct'],
+                'crescimento_yoy_pct': x['canais'][ch]['crescimento_yoy_pct']
+            } for x in acel_lins]
         }
 
-    # 9. Montar Pacote Consolidado Final
+    # 11. Opções de Filtros Globais Interativos
+    filtro_grupos = sorted(list(set(l['grupo'] for l in tabela_linhas if l['grupo'] not in ('OUTROS', ''))))
+    filtro_subgrupos = defaultdict(list)
+    for l in tabela_linhas:
+        g = l['grupo']
+        s = l['subgrupo']
+        if s not in filtro_subgrupos[g] and s not in ('OUTROS', ''):
+            filtro_subgrupos[g].append(s)
+    for g in filtro_subgrupos:
+        filtro_subgrupos[g] = sorted(filtro_subgrupos[g])
+
+    filtro_laboratorios = [l['laboratorio'] for l in tabela_laboratorios[:100] if l['laboratorio'] not in ('OUTROS', '')]
+
+    # 12. Montar Pacote Consolidado Final
     dashboard_data = {
-        'versao': '2.0.0',
+        'versao': '2.1.0',
         'gerado_em': time.strftime('%Y-%m-%d %H:%M:%S'),
         'kpis': kpis_executivos,
         'canais_tabela': canais_tabela,
         'curva_diaria': curva_grafico,
         'grupos': tabela_grupos,
-        'linhas': tabela_linhas[:300],
+        'subgrupos': tabela_subgrupos,
+        'linhas': tabela_linhas[:500],
+        'laboratorios': tabela_laboratorios[:250],
         'top_skus': top_skus_processados[:250],
-        'destaques': destaques_por_canal['total'],
-        'destaques_por_canal': destaques_por_canal
+        'destaques': diagnostico_causas['total'],
+        'diagnostico_causas': diagnostico_causas,
+        'filtros': {
+            'grupos': filtro_grupos,
+            'subgrupos': filtro_subgrupos,
+            'laboratorios': filtro_laboratorios
+        }
     }
 
     final_json_path = os.path.join(DATA_DIR, 'dashboard_digital_data.json')
