@@ -253,10 +253,15 @@ def load_fallback_data():
                     if v26 > 0 or v26_06 > 0 or v25_val > 0:
                         canais_dia_rows.append([c.get('canal'), d_idx + 1, v26, v26_06, v25_val])
 
+    dias_com_venda = [r[1] for r in canais_dia_rows if float(r[2] or 0) > 0]
+    import datetime
+    today = datetime.datetime.now().day
+    computed_max = max(dias_com_venda) if dias_com_venda else (today - 1 if today > 1 else 1)
+
     return {
         'canais_dia': canais_dia_rows,
         'hierarquia': hier_rows,
-        'maxDia': 3,
+        'maxDia': computed_max,
         'origem': 'Qlik Sense Engine (Sincronizado)'
     }
 

@@ -1,6 +1,6 @@
 {
   "versao": "2.2.0",
-  "gerado_em": "2026-09-06 13:15:05",
+  "gerado_em": "2026-09-06 13:25:21",
   "kpis": {
     "data_corte": "01 a 05/09/2026 (D-1)",
     "max_dia": 5,
@@ -11658,6 +11658,95 @@
     },
     {
       "grupo": "Medicamentos(1)",
+      "subgrupo": "Vacina Da Gripe Convenios(3224)",
+      "total_linhas": 1,
+      "laboratorios": [
+        "SANOFI VACINAS"
+      ],
+      "canais": {
+        "total": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 50.04,
+          "meta_mensal": 279.81,
+          "gap_mtd": -50.04,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "app": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 24.31,
+          "meta_mensal": 135.96,
+          "gap_mtd": -24.31,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "site": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 0.0,
+          "meta_mensal": 0.0,
+          "gap_mtd": 0.0,
+          "desvio_pct": 0.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "marketplace": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 25.73,
+          "meta_mensal": 143.85,
+          "gap_mtd": -25.73,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        }
+      },
+      "realizado_mtd": 0.0,
+      "meta_mtd": 50.04,
+      "meta_mensal": 279.81,
+      "gap_mtd": -50.04,
+      "desvio_pct": -100.0,
+      "ating_mtd_pct": 0.0,
+      "projecao_fechamento": 0.0,
+      "realizado_app": 0.0,
+      "realizado_site": 0.0,
+      "realizado_mkt": 0.0,
+      "crescimento_mom_pct": 0.0,
+      "crescimento_mom_diff": 0.0,
+      "crescimento_yoy_pct": 0.0,
+      "crescimento_yoy_diff": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "grupo": "Medicamentos(1)",
       "subgrupo": "Similar Controlado(27)",
       "total_linhas": 1,
       "laboratorios": [
@@ -11734,6 +11823,95 @@
       "meta_mensal": 58.72,
       "gap_mtd": -10.5,
       "desvio_pct": -100.0,
+      "ating_mtd_pct": 0.0,
+      "projecao_fechamento": 0.0,
+      "realizado_app": 0.0,
+      "realizado_site": 0.0,
+      "realizado_mkt": 0.0,
+      "crescimento_mom_pct": 0.0,
+      "crescimento_mom_diff": 0.0,
+      "crescimento_yoy_pct": 0.0,
+      "crescimento_yoy_diff": 0.0,
+      "share_pct": 0.0
+    },
+    {
+      "grupo": "Perfumaria(2)",
+      "subgrupo": "Perfumaria Provadores(3223)",
+      "total_linhas": 1,
+      "laboratorios": [
+        "BR BRAND S/A"
+      ],
+      "canais": {
+        "total": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 0.0,
+          "meta_mensal": 0.01,
+          "gap_mtd": 0.0,
+          "desvio_pct": 0.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "app": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 0.0,
+          "meta_mensal": 0.0,
+          "gap_mtd": 0.0,
+          "desvio_pct": 0.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "site": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 0.0,
+          "meta_mensal": 0.01,
+          "gap_mtd": 0.0,
+          "desvio_pct": 0.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "marketplace": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 0.0,
+          "meta_mensal": 0.0,
+          "gap_mtd": 0.0,
+          "desvio_pct": 0.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        }
+      },
+      "realizado_mtd": 0.0,
+      "meta_mtd": 0.0,
+      "meta_mensal": 0.01,
+      "gap_mtd": 0.0,
+      "desvio_pct": 0.0,
       "ating_mtd_pct": 0.0,
       "projecao_fechamento": 0.0,
       "realizado_app": 0.0,
@@ -11837,6 +12015,98 @@
       "share_pct": 0.0
     },
     {
+      "grupo": "Perfumaria(2)",
+      "subgrupo": "Provadores Maquiagem(3219)",
+      "total_linhas": 1,
+      "laboratorios": [
+        "BAUNY",
+        "BENESA COMERCIAL LTDA",
+        "LABORATORIO FARMAERVAS LTDA",
+        "MARI MARIA COSMETICOS LTDA"
+      ],
+      "canais": {
+        "total": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 1.12,
+          "meta_mensal": 6.24,
+          "gap_mtd": -1.12,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "app": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 0.0,
+          "meta_mensal": 0.0,
+          "gap_mtd": 0.0,
+          "desvio_pct": 0.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "site": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 1.12,
+          "meta_mensal": 6.24,
+          "gap_mtd": -1.12,
+          "desvio_pct": -100.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        },
+        "marketplace": {
+          "realizado_mtd": 0.0,
+          "meta_mtd": 0.0,
+          "meta_mensal": 0.0,
+          "gap_mtd": 0.0,
+          "desvio_pct": 0.0,
+          "ating_mtd_pct": 0.0,
+          "projecao_fechamento": 0.0,
+          "v26_06_mtd": 0.0,
+          "crescimento_mom_pct": 0.0,
+          "crescimento_mom_diff": 0.0,
+          "v25_mtd": 0.0,
+          "crescimento_yoy_pct": 0.0,
+          "crescimento_yoy_diff": 0.0,
+          "share_pct": 0.0
+        }
+      },
+      "realizado_mtd": 0.0,
+      "meta_mtd": 1.12,
+      "meta_mensal": 6.24,
+      "gap_mtd": -1.12,
+      "desvio_pct": -100.0,
+      "ating_mtd_pct": 0.0,
+      "projecao_fechamento": 0.0,
+      "realizado_app": 0.0,
+      "realizado_site": 0.0,
+      "realizado_mkt": 0.0,
+      "crescimento_mom_pct": 0.0,
+      "crescimento_mom_diff": 0.0,
+      "crescimento_yoy_pct": 0.0,
+      "crescimento_yoy_diff": 0.0,
+      "share_pct": 0.0
+    },
+    {
       "grupo": "Medicamentos(1)",
       "subgrupo": "Vacinas Especiais(3226)",
       "total_linhas": 1,
@@ -11927,276 +12197,6 @@
       "crescimento_mom_diff": 0.0,
       "crescimento_yoy_pct": -100.0,
       "crescimento_yoy_diff": -14375.67,
-      "share_pct": 0.0
-    },
-    {
-      "grupo": "Perfumaria(2)",
-      "subgrupo": "Perfumaria Provadores(3223)",
-      "total_linhas": 1,
-      "laboratorios": [
-        "BR BRAND S/A"
-      ],
-      "canais": {
-        "total": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 0.0,
-          "meta_mensal": 0.01,
-          "gap_mtd": 0.0,
-          "desvio_pct": 0.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "app": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 0.0,
-          "meta_mensal": 0.0,
-          "gap_mtd": 0.0,
-          "desvio_pct": 0.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "site": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 0.0,
-          "meta_mensal": 0.01,
-          "gap_mtd": 0.0,
-          "desvio_pct": 0.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "marketplace": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 0.0,
-          "meta_mensal": 0.0,
-          "gap_mtd": 0.0,
-          "desvio_pct": 0.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        }
-      },
-      "realizado_mtd": 0.0,
-      "meta_mtd": 0.0,
-      "meta_mensal": 0.01,
-      "gap_mtd": 0.0,
-      "desvio_pct": 0.0,
-      "ating_mtd_pct": 0.0,
-      "projecao_fechamento": 0.0,
-      "realizado_app": 0.0,
-      "realizado_site": 0.0,
-      "realizado_mkt": 0.0,
-      "crescimento_mom_pct": 0.0,
-      "crescimento_mom_diff": 0.0,
-      "crescimento_yoy_pct": 0.0,
-      "crescimento_yoy_diff": 0.0,
-      "share_pct": 0.0
-    },
-    {
-      "grupo": "Medicamentos(1)",
-      "subgrupo": "Vacina Da Gripe Convenios(3224)",
-      "total_linhas": 1,
-      "laboratorios": [
-        "SANOFI VACINAS"
-      ],
-      "canais": {
-        "total": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 50.04,
-          "meta_mensal": 279.81,
-          "gap_mtd": -50.04,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "app": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 24.31,
-          "meta_mensal": 135.96,
-          "gap_mtd": -24.31,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "site": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 0.0,
-          "meta_mensal": 0.0,
-          "gap_mtd": 0.0,
-          "desvio_pct": 0.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "marketplace": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 25.73,
-          "meta_mensal": 143.85,
-          "gap_mtd": -25.73,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        }
-      },
-      "realizado_mtd": 0.0,
-      "meta_mtd": 50.04,
-      "meta_mensal": 279.81,
-      "gap_mtd": -50.04,
-      "desvio_pct": -100.0,
-      "ating_mtd_pct": 0.0,
-      "projecao_fechamento": 0.0,
-      "realizado_app": 0.0,
-      "realizado_site": 0.0,
-      "realizado_mkt": 0.0,
-      "crescimento_mom_pct": 0.0,
-      "crescimento_mom_diff": 0.0,
-      "crescimento_yoy_pct": 0.0,
-      "crescimento_yoy_diff": 0.0,
-      "share_pct": 0.0
-    },
-    {
-      "grupo": "Perfumaria(2)",
-      "subgrupo": "Provadores Maquiagem(3219)",
-      "total_linhas": 1,
-      "laboratorios": [
-        "BAUNY",
-        "BENESA COMERCIAL LTDA",
-        "LABORATORIO FARMAERVAS LTDA",
-        "MARI MARIA COSMETICOS LTDA"
-      ],
-      "canais": {
-        "total": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 1.12,
-          "meta_mensal": 6.24,
-          "gap_mtd": -1.12,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "app": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 0.0,
-          "meta_mensal": 0.0,
-          "gap_mtd": 0.0,
-          "desvio_pct": 0.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "site": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 1.12,
-          "meta_mensal": 6.24,
-          "gap_mtd": -1.12,
-          "desvio_pct": -100.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        },
-        "marketplace": {
-          "realizado_mtd": 0.0,
-          "meta_mtd": 0.0,
-          "meta_mensal": 0.0,
-          "gap_mtd": 0.0,
-          "desvio_pct": 0.0,
-          "ating_mtd_pct": 0.0,
-          "projecao_fechamento": 0.0,
-          "v26_06_mtd": 0.0,
-          "crescimento_mom_pct": 0.0,
-          "crescimento_mom_diff": 0.0,
-          "v25_mtd": 0.0,
-          "crescimento_yoy_pct": 0.0,
-          "crescimento_yoy_diff": 0.0,
-          "share_pct": 0.0
-        }
-      },
-      "realizado_mtd": 0.0,
-      "meta_mtd": 1.12,
-      "meta_mensal": 6.24,
-      "gap_mtd": -1.12,
-      "desvio_pct": -100.0,
-      "ating_mtd_pct": 0.0,
-      "projecao_fechamento": 0.0,
-      "realizado_app": 0.0,
-      "realizado_site": 0.0,
-      "realizado_mkt": 0.0,
-      "crescimento_mom_pct": 0.0,
-      "crescimento_mom_diff": 0.0,
-      "crescimento_yoy_pct": 0.0,
-      "crescimento_yoy_diff": 0.0,
       "share_pct": 0.0
     }
   ],
@@ -115072,7 +115072,7 @@
       {
         "nome": "FORMULAS INFANTIS",
         "grupo": "Nutricao(3090)",
-        "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
+        "subgrupo": "Nutricao Formula(3222), Nutricao Leites(3154)",
         "realizado_mtd": 274259.51,
         "meta_mtd": 347963.09,
         "gap_mtd": -73703.58,
@@ -115084,7 +115084,7 @@
       {
         "nome": "OTC- VITAMINAS E SUPLEMENTOS MINERAIS",
         "grupo": "Conveniencia(10)",
-        "subgrupo": "Similar Oneroso(3186), Similar(4)",
+        "subgrupo": "Referencia(2), Similar Oneroso(3186)",
         "realizado_mtd": 93496.11,
         "meta_mtd": 162553.36,
         "gap_mtd": -69057.25,
@@ -115132,7 +115132,7 @@
       {
         "nome": "ANTIULCEROSOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Similar(4), Referencia(2)",
+        "subgrupo": "Referencia(2), Genericos Onerosos(43)",
         "realizado_mtd": 48053.83,
         "meta_mtd": 73438.0,
         "gap_mtd": -25384.17,
@@ -115144,7 +115144,7 @@
       {
         "nome": "SOLAR - KIT",
         "grupo": "Perfumaria(2)",
-        "subgrupo": "Perfumaria Exclusiva Premiacao(3158), Perfumaria(8)",
+        "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
         "realizado_mtd": 7050.55,
         "meta_mtd": 26144.09,
         "gap_mtd": -19093.54,
@@ -115156,7 +115156,7 @@
       {
         "nome": "OTC- REPOSITOR FLORA INTESTINAL",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Similar Oneroso(3186), Similar(4)",
+        "subgrupo": "Similar Oneroso(3186), Referencia Onerosos(40)",
         "realizado_mtd": 22811.09,
         "meta_mtd": 41122.91,
         "gap_mtd": -18311.82,
@@ -115180,7 +115180,7 @@
       {
         "nome": "VITAMINAS E SUPLEMENTOS MINERAIS",
         "grupo": "Conveniencia(10)",
-        "subgrupo": "Referencia(2), Similar Avulso(18)",
+        "subgrupo": "PBM Referencia Liberado(3191), Referencia Liberado Super Onerosos(3192)",
         "realizado_mtd": 169162.32,
         "meta_mtd": 184716.89,
         "gap_mtd": -15554.57,
@@ -115191,8 +115191,8 @@
       },
       {
         "nome": "ELETROS DE BELEZA E CUIDADO PESSOAL",
-        "grupo": "Conveniencia(10)",
-        "subgrupo": "Conveniencia - Bazar(3206), Perfumaria(8)",
+        "grupo": "Perfumaria(2)",
+        "subgrupo": "Perfumaria(8), Conveniencia - Bazar(3206)",
         "realizado_mtd": 8467.69,
         "meta_mtd": 19792.2,
         "gap_mtd": -11324.51,
@@ -115228,7 +115228,7 @@
       {
         "nome": "CUIDADO – LABIAL",
         "grupo": "Perfumaria(2)",
-        "subgrupo": "Perfumaria Exclusiva(3210), Perfumaria Exclusiva Premiacao(3158)",
+        "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
         "realizado_mtd": 17075.54,
         "meta_mtd": 25512.39,
         "gap_mtd": -8436.85,
@@ -115242,7 +115242,7 @@
       {
         "nome": "NUTRICAO INFANTIL",
         "grupo": "Nutricao(3090)",
-        "subgrupo": "Nutricao Formula(3222), Nutricao Especiais(3156)",
+        "subgrupo": "Nutricao Leites(3154), Nutricao Formula(3222)",
         "realizado_mtd": 288930.84,
         "meta_mtd": 156658.62,
         "gap_mtd": 132272.22,
@@ -115254,7 +115254,7 @@
       {
         "nome": "ANTIDIABETICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "PBMs Combo(3211), Referencia(2)",
+        "subgrupo": "Referencia(2), Genericos Onerosos(43)",
         "realizado_mtd": 2234883.99,
         "meta_mtd": 2159199.92,
         "gap_mtd": 75684.07,
@@ -115266,7 +115266,7 @@
       {
         "nome": "FRALDAS INFANTIS",
         "grupo": "Perfumaria(2)",
-        "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+        "subgrupo": "Perfumaria(8), Fraldas(9)",
         "realizado_mtd": 1341076.62,
         "meta_mtd": 1276797.21,
         "gap_mtd": 64279.41,
@@ -115278,7 +115278,7 @@
       {
         "nome": "LANCAMENTOS",
         "grupo": "Dermo-Cosmeticos(3089)",
-        "subgrupo": "Referencia Controlado(5), Referencia Oneroso Controlado(77)",
+        "subgrupo": "PBM Referencia Liberado(3191), Referencia Liberado Super Onerosos(3192)",
         "realizado_mtd": 80920.96,
         "meta_mtd": 35131.38,
         "gap_mtd": 45789.58,
@@ -115290,7 +115290,7 @@
       {
         "nome": "PROMOCIONAL GENERICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Genericos - Otc/Mip(3175), Genericos Onerosos Controlados(75)",
+        "subgrupo": "Genericos Onerosos(43), Generico Avulso(17)",
         "realizado_mtd": 123856.41,
         "meta_mtd": 82009.83,
         "gap_mtd": 41846.58,
@@ -115302,7 +115302,7 @@
       {
         "nome": "CONTRACEPTIVOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "PBMs Combo(3211), Similar(4)",
+        "subgrupo": "Referencia(2), Genericos Onerosos(43)",
         "realizado_mtd": 261483.94,
         "meta_mtd": 220838.98,
         "gap_mtd": 40644.96,
@@ -115314,7 +115314,7 @@
       {
         "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+        "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
         "realizado_mtd": 268610.68,
         "meta_mtd": 228519.92,
         "gap_mtd": 40090.76,
@@ -115325,8 +115325,8 @@
       },
       {
         "nome": "HIGIENE ORAL - CREME E GEL DENTAL",
-        "grupo": "Dermo-Cosmeticos(3089)",
-        "subgrupo": "Dermo-Cosmeticos Especial(3152), PBM Perfumaria(3220)",
+        "grupo": "Perfumaria(2)",
+        "subgrupo": "Perfumaria(8), PBM Perfumaria(3220)",
         "realizado_mtd": 68273.08,
         "meta_mtd": 40249.13,
         "gap_mtd": 28023.95,
@@ -115338,7 +115338,7 @@
       {
         "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+        "subgrupo": "Genericos Onerosos Controlados(75), Referencia Controlado(5)",
         "realizado_mtd": 59611.32,
         "meta_mtd": 34381.41,
         "gap_mtd": 25229.91,
@@ -115350,7 +115350,7 @@
       {
         "nome": "ANTIPSICOTICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Referencia Especiais Controlados(74), Referencia Super Onerosos Controlado(3177)",
+        "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
         "realizado_mtd": 55852.49,
         "meta_mtd": 33019.44,
         "gap_mtd": 22833.05,
@@ -115362,7 +115362,7 @@
       {
         "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "PBMs Combo(3211), Similar(4)",
+        "subgrupo": "Referencia(2), Genericos Onerosos(43)",
         "realizado_mtd": 92385.75,
         "meta_mtd": 69961.15,
         "gap_mtd": 22424.6,
@@ -115373,7 +115373,7 @@
       },
       {
         "nome": "DERMO - HIDRATANTE FACIAL",
-        "grupo": "Dermo-Cosmeticos(3089)",
+        "grupo": "Medicamentos(1)",
         "subgrupo": "PBM Dermocosmetico(3169), Dermo-Cosmeticos(3151)",
         "realizado_mtd": 56462.28,
         "meta_mtd": 34315.65,
@@ -115386,7 +115386,7 @@
       {
         "nome": "CAPILAR - SHAMPOO",
         "grupo": "Perfumaria(2)",
-        "subgrupo": "Referencia Liberado(25), Perfumaria Exclusiva Premiacao(3158)",
+        "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
         "realizado_mtd": 60561.89,
         "meta_mtd": 40034.5,
         "gap_mtd": 20527.39,
@@ -115398,7 +115398,7 @@
       {
         "nome": "ANTIBIOTICOS SISTEMICOS",
         "grupo": "Medicamentos(1)",
-        "subgrupo": "Antibiotico Cont. Referencia(32), Antibiotico Cont. Similar(34)",
+        "subgrupo": "Antibiotico Cont. Generico Super Oneroso(3179), Similar Controlado(27)",
         "realizado_mtd": 48258.61,
         "meta_mtd": 28963.41,
         "gap_mtd": 19295.2,
@@ -116077,7 +116077,7 @@
         {
           "nome": "FORMULAS INFANTIS",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
+          "subgrupo": "Nutricao Formula(3222), Nutricao Leites(3154)",
           "realizado_mtd": 274259.51,
           "meta_mtd": 347963.09,
           "gap_mtd": -73703.58,
@@ -116089,7 +116089,7 @@
         {
           "nome": "OTC- VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia(2), Similar Oneroso(3186)",
           "realizado_mtd": 93496.11,
           "meta_mtd": 162553.36,
           "gap_mtd": -69057.25,
@@ -116137,7 +116137,7 @@
         {
           "nome": "ANTIULCEROSOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Referencia(2)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 48053.83,
           "meta_mtd": 73438.0,
           "gap_mtd": -25384.17,
@@ -116149,7 +116149,7 @@
         {
           "nome": "SOLAR - KIT",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria Exclusiva Premiacao(3158), Perfumaria(8)",
+          "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 7050.55,
           "meta_mtd": 26144.09,
           "gap_mtd": -19093.54,
@@ -116161,7 +116161,7 @@
         {
           "nome": "OTC- REPOSITOR FLORA INTESTINAL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Similar Oneroso(3186), Referencia Onerosos(40)",
           "realizado_mtd": 22811.09,
           "meta_mtd": 41122.91,
           "gap_mtd": -18311.82,
@@ -116185,7 +116185,7 @@
         {
           "nome": "VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Referencia(2), Similar Avulso(18)",
+          "subgrupo": "PBM Referencia Liberado(3191), Referencia Liberado Super Onerosos(3192)",
           "realizado_mtd": 169162.32,
           "meta_mtd": 184716.89,
           "gap_mtd": -15554.57,
@@ -116196,8 +116196,8 @@
         },
         {
           "nome": "ELETROS DE BELEZA E CUIDADO PESSOAL",
-          "grupo": "Conveniencia(10)",
-          "subgrupo": "Conveniencia - Bazar(3206), Perfumaria(8)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Perfumaria(8), Conveniencia - Bazar(3206)",
           "realizado_mtd": 8467.69,
           "meta_mtd": 19792.2,
           "gap_mtd": -11324.51,
@@ -116233,7 +116233,7 @@
         {
           "nome": "CUIDADO – LABIAL",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria Exclusiva(3210), Perfumaria Exclusiva Premiacao(3158)",
+          "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 17075.54,
           "meta_mtd": 25512.39,
           "gap_mtd": -8436.85,
@@ -116247,7 +116247,7 @@
         {
           "nome": "NUTRICAO INFANTIL",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Formula(3222), Nutricao Especiais(3156)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Formula(3222)",
           "realizado_mtd": 288930.84,
           "meta_mtd": 156658.62,
           "gap_mtd": 132272.22,
@@ -116259,7 +116259,7 @@
         {
           "nome": "ANTIDIABETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Referencia(2)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 2234883.99,
           "meta_mtd": 2159199.92,
           "gap_mtd": 75684.07,
@@ -116271,7 +116271,7 @@
         {
           "nome": "FRALDAS INFANTIS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Perfumaria(8), Fraldas(9)",
           "realizado_mtd": 1341076.62,
           "meta_mtd": 1276797.21,
           "gap_mtd": 64279.41,
@@ -116283,7 +116283,7 @@
         {
           "nome": "LANCAMENTOS",
           "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Referencia Controlado(5), Referencia Oneroso Controlado(77)",
+          "subgrupo": "PBM Referencia Liberado(3191), Referencia Liberado Super Onerosos(3192)",
           "realizado_mtd": 80920.96,
           "meta_mtd": 35131.38,
           "gap_mtd": 45789.58,
@@ -116295,7 +116295,7 @@
         {
           "nome": "PROMOCIONAL GENERICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Genericos - Otc/Mip(3175), Genericos Onerosos Controlados(75)",
+          "subgrupo": "Genericos Onerosos(43), Generico Avulso(17)",
           "realizado_mtd": 123856.41,
           "meta_mtd": 82009.83,
           "gap_mtd": 41846.58,
@@ -116307,7 +116307,7 @@
         {
           "nome": "CONTRACEPTIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 261483.94,
           "meta_mtd": 220838.98,
           "gap_mtd": 40644.96,
@@ -116319,7 +116319,7 @@
         {
           "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
           "realizado_mtd": 268610.68,
           "meta_mtd": 228519.92,
           "gap_mtd": 40090.76,
@@ -116330,8 +116330,8 @@
         },
         {
           "nome": "HIGIENE ORAL - CREME E GEL DENTAL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Dermo-Cosmeticos Especial(3152), PBM Perfumaria(3220)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Perfumaria(8), PBM Perfumaria(3220)",
           "realizado_mtd": 68273.08,
           "meta_mtd": 40249.13,
           "gap_mtd": 28023.95,
@@ -116343,7 +116343,7 @@
         {
           "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "Genericos Onerosos Controlados(75), Referencia Controlado(5)",
           "realizado_mtd": 59611.32,
           "meta_mtd": 34381.41,
           "gap_mtd": 25229.91,
@@ -116355,7 +116355,7 @@
         {
           "nome": "ANTIPSICOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Especiais Controlados(74), Referencia Super Onerosos Controlado(3177)",
+          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
           "realizado_mtd": 55852.49,
           "meta_mtd": 33019.44,
           "gap_mtd": 22833.05,
@@ -116367,7 +116367,7 @@
         {
           "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 92385.75,
           "meta_mtd": 69961.15,
           "gap_mtd": 22424.6,
@@ -116378,7 +116378,7 @@
         },
         {
           "nome": "DERMO - HIDRATANTE FACIAL",
-          "grupo": "Dermo-Cosmeticos(3089)",
+          "grupo": "Medicamentos(1)",
           "subgrupo": "PBM Dermocosmetico(3169), Dermo-Cosmeticos(3151)",
           "realizado_mtd": 56462.28,
           "meta_mtd": 34315.65,
@@ -116391,7 +116391,7 @@
         {
           "nome": "CAPILAR - SHAMPOO",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Referencia Liberado(25), Perfumaria Exclusiva Premiacao(3158)",
+          "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 60561.89,
           "meta_mtd": 40034.5,
           "gap_mtd": 20527.39,
@@ -116403,7 +116403,7 @@
         {
           "nome": "ANTIBIOTICOS SISTEMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Antibiotico Cont. Referencia(32), Antibiotico Cont. Similar(34)",
+          "subgrupo": "Antibiotico Cont. Generico Super Oneroso(3179), Similar Controlado(27)",
           "realizado_mtd": 48258.61,
           "meta_mtd": 28963.41,
           "gap_mtd": 19295.2,
@@ -117093,7 +117093,7 @@
         {
           "nome": "OTC- VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia(2), Similar Oneroso(3186)",
           "realizado_mtd": 59189.4,
           "meta_mtd": 75665.17,
           "gap_mtd": -16475.77,
@@ -117117,7 +117117,7 @@
         {
           "nome": "FRALDAS INFANTIS ROUPA",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Fraldas(9), Fralda Exclusiva(3188)",
           "realizado_mtd": 42851.42,
           "meta_mtd": 55156.39,
           "gap_mtd": -12304.97,
@@ -117129,7 +117129,7 @@
         {
           "nome": "SOLAR - KIT",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria Exclusiva Premiacao(3158), Perfumaria(8)",
+          "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 3793.41,
           "meta_mtd": 13167.29,
           "gap_mtd": -9373.88,
@@ -117141,7 +117141,7 @@
         {
           "nome": "ANTIULCEROSOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Referencia(2)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 26615.72,
           "meta_mtd": 35649.6,
           "gap_mtd": -9033.88,
@@ -117177,7 +117177,7 @@
         {
           "nome": "FORMULAS INFANTIS",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
+          "subgrupo": "Nutricao Formula(3222), Nutricao Leites(3154)",
           "realizado_mtd": 147218.04,
           "meta_mtd": 153511.72,
           "gap_mtd": -6293.68,
@@ -117200,8 +117200,8 @@
         },
         {
           "nome": "ELETROS DE BELEZA E CUIDADO PESSOAL",
-          "grupo": "Conveniencia(10)",
-          "subgrupo": "Conveniencia - Bazar(3206), Perfumaria(8)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Perfumaria(8), Conveniencia - Bazar(3206)",
           "realizado_mtd": 3597.61,
           "meta_mtd": 8060.9,
           "gap_mtd": -4463.29,
@@ -117213,7 +117213,7 @@
         {
           "nome": "CUIDADO – LABIAL",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria Exclusiva(3210), Perfumaria Exclusiva Premiacao(3158)",
+          "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 6853.84,
           "meta_mtd": 11058.56,
           "gap_mtd": -4204.72,
@@ -117225,7 +117225,7 @@
         {
           "nome": "OTC- REPOSITOR FLORA INTESTINAL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Similar Oneroso(3186), Referencia Onerosos(40)",
           "realizado_mtd": 9837.07,
           "meta_mtd": 14007.39,
           "gap_mtd": -4170.32,
@@ -117251,7 +117251,7 @@
         {
           "nome": "ANTIDIABETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Referencia(2)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 1575686.97,
           "meta_mtd": 1288263.96,
           "gap_mtd": 287423.01,
@@ -117263,7 +117263,7 @@
         {
           "nome": "NUTRICAO INFANTIL",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Formula(3222), Nutricao Especiais(3156)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Formula(3222)",
           "realizado_mtd": 156455.31,
           "meta_mtd": 77372.59,
           "gap_mtd": 79082.72,
@@ -117275,7 +117275,7 @@
         {
           "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
           "realizado_mtd": 196294.18,
           "meta_mtd": 152231.45,
           "gap_mtd": 44062.73,
@@ -117287,7 +117287,7 @@
         {
           "nome": "PROMOCIONAL GENERICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Genericos - Otc/Mip(3175), Genericos Onerosos Controlados(75)",
+          "subgrupo": "Genericos Onerosos(43), Generico Avulso(17)",
           "realizado_mtd": 72598.02,
           "meta_mtd": 38738.42,
           "gap_mtd": 33859.6,
@@ -117299,7 +117299,7 @@
         {
           "nome": "CONTRACEPTIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 127428.5,
           "meta_mtd": 93643.22,
           "gap_mtd": 33785.28,
@@ -117311,7 +117311,7 @@
         {
           "nome": "LANCAMENTOS",
           "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Referencia Controlado(5), Referencia Oneroso Controlado(77)",
+          "subgrupo": "PBM Referencia Liberado(3191), Referencia Liberado Super Onerosos(3192)",
           "realizado_mtd": 47153.66,
           "meta_mtd": 17783.47,
           "gap_mtd": 29370.19,
@@ -117323,7 +117323,7 @@
         {
           "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 64399.65,
           "meta_mtd": 40033.06,
           "gap_mtd": 24366.59,
@@ -117334,8 +117334,8 @@
         },
         {
           "nome": "HIGIENE ORAL - CREME E GEL DENTAL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Dermo-Cosmeticos Especial(3152), PBM Perfumaria(3220)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Perfumaria(8), PBM Perfumaria(3220)",
           "realizado_mtd": 39430.92,
           "meta_mtd": 17821.59,
           "gap_mtd": 21609.33,
@@ -117347,7 +117347,7 @@
         {
           "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "Genericos Onerosos Controlados(75), Referencia Controlado(5)",
           "realizado_mtd": 45380.66,
           "meta_mtd": 24736.1,
           "gap_mtd": 20644.56,
@@ -117359,7 +117359,7 @@
         {
           "nome": "ANTIBIOTICOS SISTEMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Antibiotico Cont. Referencia(32), Antibiotico Cont. Similar(34)",
+          "subgrupo": "Antibiotico Cont. Generico Super Oneroso(3179), Similar Controlado(27)",
           "realizado_mtd": 39032.83,
           "meta_mtd": 19932.2,
           "gap_mtd": 19100.63,
@@ -117371,7 +117371,7 @@
         {
           "nome": "ANTIPSICOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Especiais Controlados(74), Referencia Super Onerosos Controlado(3177)",
+          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
           "realizado_mtd": 42150.82,
           "meta_mtd": 23116.71,
           "gap_mtd": 19034.11,
@@ -117383,7 +117383,7 @@
         {
           "nome": "FRALDAS INFANTIS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Perfumaria(8), Fraldas(9)",
           "realizado_mtd": 607232.04,
           "meta_mtd": 590303.37,
           "gap_mtd": 16928.67,
@@ -117395,7 +117395,7 @@
         {
           "nome": "CAPILAR - SHAMPOO",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Referencia Liberado(25), Perfumaria Exclusiva Premiacao(3158)",
+          "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 34578.65,
           "meta_mtd": 18736.28,
           "gap_mtd": 15842.37,
@@ -117407,7 +117407,7 @@
         {
           "nome": "ANTI-HIPERTENSIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Referencia(2)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 55147.37,
           "meta_mtd": 40452.13,
           "gap_mtd": 14695.24,
@@ -117419,7 +117419,7 @@
         {
           "nome": "VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Referencia(2), Similar Avulso(18)",
+          "subgrupo": "PBM Referencia Liberado(3191), Referencia Liberado Super Onerosos(3192)",
           "realizado_mtd": 104480.35,
           "meta_mtd": 90562.08,
           "gap_mtd": 13918.27,
@@ -118073,7 +118073,7 @@
         {
           "nome": "FRALDAS INFANTIS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Perfumaria(8), Fraldas(9)",
           "realizado_mtd": 135503.44,
           "meta_mtd": 388367.75,
           "gap_mtd": -252864.31,
@@ -118085,7 +118085,7 @@
         {
           "nome": "FORMULAS INFANTIS",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
+          "subgrupo": "Nutricao Formula(3222), Nutricao Leites(3154)",
           "realizado_mtd": 28392.82,
           "meta_mtd": 128039.83,
           "gap_mtd": -99647.01,
@@ -118097,7 +118097,7 @@
         {
           "nome": "OTC- ANALGESICOS/ANTITERMICOS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 8861.94,
           "meta_mtd": 62675.49,
           "gap_mtd": -53813.55,
@@ -118121,7 +118121,7 @@
         {
           "nome": "OTC- ANTIGRIPAIS/ANTITUSSIGENOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Liberados(7), Similar Oneroso(3186)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 7500.83,
           "meta_mtd": 46897.69,
           "gap_mtd": -39396.86,
@@ -118132,8 +118132,8 @@
         },
         {
           "nome": "TOALHAS UMEDECIDAS - INFANTIL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Dermo-Cosmeticos(3151), Fralda Exclusiva(3188)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Lencos e Toalhas Umedecidas(123), Perfumaria(8)",
           "realizado_mtd": 16007.95,
           "meta_mtd": 52410.64,
           "gap_mtd": -36402.69,
@@ -118145,7 +118145,7 @@
         {
           "nome": "CONTRACEPTIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 42529.74,
           "meta_mtd": 76680.42,
           "gap_mtd": -34150.68,
@@ -118157,7 +118157,7 @@
         {
           "nome": "FRALDAS INFANTIS ROUPA",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Fraldas(9), Fralda Exclusiva(3188)",
           "realizado_mtd": 11886.99,
           "meta_mtd": 42194.1,
           "gap_mtd": -30307.11,
@@ -118181,7 +118181,7 @@
         {
           "nome": "DISFUNCAO ERETIL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia(2), Referencia Super Onerosos(3176)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 7837.57,
           "meta_mtd": 26020.78,
           "gap_mtd": -18183.21,
@@ -118217,7 +118217,7 @@
         {
           "nome": "OTC- VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia(2), Similar Oneroso(3186)",
           "realizado_mtd": 15084.13,
           "meta_mtd": 32709.61,
           "gap_mtd": -17625.48,
@@ -118229,7 +118229,7 @@
         {
           "nome": "OTC- REPOSITOR FLORA INTESTINAL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Similar Oneroso(3186), Referencia Onerosos(40)",
           "realizado_mtd": 2429.77,
           "meta_mtd": 19837.7,
           "gap_mtd": -17407.93,
@@ -118241,7 +118241,7 @@
         {
           "nome": "OTC- ANTIALERGICOS/ANTI-HISTAMINICO SIST",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Similar Oneroso(3186), Generico Super Oneroso(3181)",
           "realizado_mtd": 5061.16,
           "meta_mtd": 21680.77,
           "gap_mtd": -16619.61,
@@ -118255,7 +118255,7 @@
         {
           "nome": "ANTIDIABETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Referencia(2)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 654533.07,
           "meta_mtd": 52262.42,
           "gap_mtd": 602270.65,
@@ -118267,7 +118267,7 @@
         {
           "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
           "realizado_mtd": 72316.5,
           "meta_mtd": 28.29,
           "gap_mtd": 72288.21,
@@ -118291,7 +118291,7 @@
         {
           "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "Genericos Onerosos Controlados(75), Referencia Controlado(5)",
           "realizado_mtd": 14230.66,
           "meta_mtd": 0.0,
           "gap_mtd": 14230.66,
@@ -118303,7 +118303,7 @@
         {
           "nome": "ANTIPSICOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Especiais Controlados(74), Referencia Super Onerosos Controlado(3177)",
+          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
           "realizado_mtd": 13701.67,
           "meta_mtd": 0.0,
           "gap_mtd": 13701.67,
@@ -118315,7 +118315,7 @@
         {
           "nome": "LANCAMENTOS",
           "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Referencia Controlado(5), Referencia Oneroso Controlado(77)",
+          "subgrupo": "PBM Referencia Liberado(3191), Referencia Liberado Super Onerosos(3192)",
           "realizado_mtd": 17680.89,
           "meta_mtd": 6087.11,
           "gap_mtd": 11593.78,
@@ -118327,7 +118327,7 @@
         {
           "nome": "ANTIBIOTICOS SISTEMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Antibiotico Cont. Referencia(32), Antibiotico Cont. Similar(34)",
+          "subgrupo": "Antibiotico Cont. Generico Super Oneroso(3179), Similar Controlado(27)",
           "realizado_mtd": 9145.79,
           "meta_mtd": 15.34,
           "gap_mtd": 9130.45,
@@ -118339,7 +118339,7 @@
         {
           "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 17724.18,
           "meta_mtd": 8941.53,
           "gap_mtd": 8782.65,
@@ -118351,7 +118351,7 @@
         {
           "nome": "TROMBOLITICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia(2), Referencia Super Onerosos(3176)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 10214.53,
           "meta_mtd": 5314.29,
           "gap_mtd": 4900.24,
@@ -118363,7 +118363,7 @@
         {
           "nome": "NEUROLOGICOS / SISTEMA NERVOSO",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar(4), Referencia Super Onerosos Controlado(3177)",
+          "subgrupo": "Genericos Onerosos(43), Referencia Onerosos(40)",
           "realizado_mtd": 3499.13,
           "meta_mtd": 209.61,
           "gap_mtd": 3289.52,
@@ -118375,7 +118375,7 @@
         {
           "nome": "ANALGESICOS OPIOIDES/NARCOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
           "realizado_mtd": 3054.98,
           "meta_mtd": 28.96,
           "gap_mtd": 3026.02,
@@ -118411,7 +118411,7 @@
         {
           "nome": "CARDIOTERAPIA",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 4515.4,
           "meta_mtd": 2219.82,
           "gap_mtd": 2295.58,
@@ -118423,7 +118423,7 @@
         {
           "nome": "ANTI-ALZHEIMER",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "Genericos Onerosos Controlados(75), Referencia Controlado(5)",
           "realizado_mtd": 2139.84,
           "meta_mtd": 0.0,
           "gap_mtd": 2139.84,
@@ -119077,7 +119077,7 @@
         {
           "nome": "ANTIDIABETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Referencia(2)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 4663.95,
           "meta_mtd": 818673.54,
           "gap_mtd": -814009.59,
@@ -119089,7 +119089,7 @@
         {
           "nome": "ANTIDEPRESSIVOS / ESTABIL HUMOR",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
           "realizado_mtd": 0.0,
           "meta_mtd": 76260.16,
           "gap_mtd": -76260.16,
@@ -119113,7 +119113,7 @@
         {
           "nome": "OTC- VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia(2), Similar Oneroso(3186)",
           "realizado_mtd": 19222.58,
           "meta_mtd": 54178.56,
           "gap_mtd": -34955.98,
@@ -119125,7 +119125,7 @@
         {
           "nome": "VITAMINAS E SUPLEMENTOS MINERAIS",
           "grupo": "Conveniencia(10)",
-          "subgrupo": "Referencia(2), Similar Avulso(18)",
+          "subgrupo": "PBM Referencia Liberado(3191), Referencia Liberado Super Onerosos(3192)",
           "realizado_mtd": 32739.75,
           "meta_mtd": 59942.57,
           "gap_mtd": -27202.82,
@@ -119173,7 +119173,7 @@
         {
           "nome": "ANTILIPEMICOS / REDUTORES COLESTEROL",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 10261.92,
           "meta_mtd": 20986.56,
           "gap_mtd": -10724.64,
@@ -119185,7 +119185,7 @@
         {
           "nome": "ANTIPSICOTICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Especiais Controlados(74), Referencia Super Onerosos Controlado(3177)",
+          "subgrupo": "PBM Controlado Cupom Desconto(3203), Genericos Onerosos Controlados(75)",
           "realizado_mtd": 0.0,
           "meta_mtd": 9902.73,
           "gap_mtd": -9902.73,
@@ -119209,7 +119209,7 @@
         {
           "nome": "ANTICONVULSIVANTES / ANTIEPILETICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia Super Onerosos Controlado(3177), Generico Controlado Super Oneroso(3180)",
+          "subgrupo": "Genericos Onerosos Controlados(75), Referencia Controlado(5)",
           "realizado_mtd": 0.0,
           "meta_mtd": 9645.31,
           "gap_mtd": -9645.31,
@@ -119221,7 +119221,7 @@
         {
           "nome": "ANTIBIOTICOS SISTEMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Antibiotico Cont. Referencia(32), Antibiotico Cont. Similar(34)",
+          "subgrupo": "Antibiotico Cont. Generico Super Oneroso(3179), Similar Controlado(27)",
           "realizado_mtd": 79.99,
           "meta_mtd": 9015.89,
           "gap_mtd": -8935.9,
@@ -119233,7 +119233,7 @@
         {
           "nome": "TROMBOLITICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Referencia(2), Referencia Super Onerosos(3176)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 5411.8,
           "meta_mtd": 14001.08,
           "gap_mtd": -8589.28,
@@ -119245,7 +119245,7 @@
         {
           "nome": "SOLAR - KIT",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Perfumaria Exclusiva Premiacao(3158), Perfumaria(8)",
+          "subgrupo": "Perfumaria(8), Perfumaria Exclusiva Premiacao(3158)",
           "realizado_mtd": 1658.75,
           "meta_mtd": 9166.77,
           "gap_mtd": -7508.02,
@@ -119259,7 +119259,7 @@
         {
           "nome": "FRALDAS INFANTIS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Perfumaria(8), Fraldas(9)",
           "realizado_mtd": 598341.13,
           "meta_mtd": 298126.1,
           "gap_mtd": 300215.03,
@@ -119271,7 +119271,7 @@
         {
           "nome": "NUTRICAO INFANTIL",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Formula(3222), Nutricao Especiais(3156)",
+          "subgrupo": "Nutricao Leites(3154), Nutricao Formula(3222)",
           "realizado_mtd": 92254.96,
           "meta_mtd": 29238.29,
           "gap_mtd": 63016.67,
@@ -119283,7 +119283,7 @@
         {
           "nome": "OTC- ANALGESICOS/ANTITERMICOS",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 55503.93,
           "meta_mtd": 11510.16,
           "gap_mtd": 43993.77,
@@ -119307,7 +119307,7 @@
         {
           "nome": "FRALDAS INFANTIS ROUPA",
           "grupo": "Perfumaria(2)",
-          "subgrupo": "Fralda Exclusiva(3188), Fraldas(9)",
+          "subgrupo": "Fraldas(9), Fralda Exclusiva(3188)",
           "realizado_mtd": 71051.99,
           "meta_mtd": 28561.86,
           "gap_mtd": 42490.13,
@@ -119319,7 +119319,7 @@
         {
           "nome": "CONTRACEPTIVOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "PBMs Combo(3211), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 91525.7,
           "meta_mtd": 50515.36,
           "gap_mtd": 41010.34,
@@ -119330,8 +119330,8 @@
         },
         {
           "nome": "TOALHAS UMEDECIDAS - INFANTIL",
-          "grupo": "Dermo-Cosmeticos(3089)",
-          "subgrupo": "Dermo-Cosmeticos(3151), Fralda Exclusiva(3188)",
+          "grupo": "Perfumaria(2)",
+          "subgrupo": "Lencos e Toalhas Umedecidas(123), Perfumaria(8)",
           "realizado_mtd": 62702.28,
           "meta_mtd": 24984.65,
           "gap_mtd": 37717.63,
@@ -119343,7 +119343,7 @@
         {
           "nome": "FORMULAS INFANTIS",
           "grupo": "Nutricao(3090)",
-          "subgrupo": "Nutricao Leites(3154), Nutricao Especiais(3156)",
+          "subgrupo": "Nutricao Formula(3222), Nutricao Leites(3154)",
           "realizado_mtd": 98648.65,
           "meta_mtd": 66411.54,
           "gap_mtd": 32237.11,
@@ -119355,7 +119355,7 @@
         {
           "nome": "OTC- ANTIGRIPAIS/ANTITUSSIGENOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Liberados(7), Similar Oneroso(3186)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 41128.01,
           "meta_mtd": 10961.45,
           "gap_mtd": 30166.56,
@@ -119403,7 +119403,7 @@
         {
           "nome": "PROMOCIONAL GENERICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Genericos - Otc/Mip(3175), Genericos Onerosos Controlados(75)",
+          "subgrupo": "Genericos Onerosos(43), Generico Avulso(17)",
           "realizado_mtd": 34290.21,
           "meta_mtd": 14203.75,
           "gap_mtd": 20086.46,
@@ -119415,7 +119415,7 @@
         {
           "nome": "ANALGESICOS / ANTITERMICOS",
           "grupo": "Medicamentos(1)",
-          "subgrupo": "Similar Oneroso(3186), Similar(4)",
+          "subgrupo": "Referencia(2), Genericos Onerosos(43)",
           "realizado_mtd": 24087.77,
           "meta_mtd": 5421.45,
           "gap_mtd": 18666.32,
