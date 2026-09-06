@@ -27,7 +27,7 @@ if errorlevel 1 goto :erro
 
 echo.
 echo [5/5] Publicando Atualizacoes no Git (GitHub Pages ^& Gitea)...
-git add index.html data/*.json data/*.parquet >nul 2>&1
+git add index.html data/*.json data/*.parquet *.py >nul 2>&1
 git diff --staged --quiet
 if errorlevel 1 (
     git commit -m "Auto-sync Qlik Sense Digital (%date% %time%)"
