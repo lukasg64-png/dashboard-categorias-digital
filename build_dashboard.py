@@ -29,6 +29,12 @@ def build():
     with open(DATA_JSON_PATH, 'r', encoding='utf-8') as f:
         data_content = f.read()
 
+    dash_data = json.loads(data_content)
+    kpis_dict = dash_data.get('kpis', {})
+    data_corte = kpis_dict.get('data_corte', '01 a 05/09/2026 (D-1)')
+    max_dia = kpis_dict.get('max_dia', 5)
+    max_dia_str = f"{max_dia:02d}"
+
     html_template = f"""<!DOCTYPE html>
 <html lang="pt-BR" data-theme="light">
 <head>
@@ -467,6 +473,218 @@ def build():
       background: var(--surface-sunken);
       color: var(--apple-red-text);
       border-color: var(--apple-red-border);
+    }}
+
+    .filter-search-banner {{
+      margin-top: 14px;
+      padding: 10px 16px;
+      background: var(--surface-hover);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-secondary);
+      animation: fadeIn 0.25s ease;
+    }}
+
+    .filter-badge-pill {{
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 3px 9px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 600;
+      background: rgba(0, 113, 227, 0.1);
+      color: var(--apple-blue);
+      border: 1px solid rgba(0, 113, 227, 0.2);
+    }}
+
+    .filter-badge-pill.clickable {{
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }}
+
+    .filter-badge-pill.clickable:hover {{
+      background: rgba(0, 113, 227, 0.2);
+      transform: translateY(-1px);
+    }}
+
+    .tab-badge {{
+      display: inline-block;
+      padding: 1px 6px;
+      font-size: 10px;
+      font-weight: 700;
+      border-radius: 10px;
+      background: rgba(0, 113, 227, 0.15);
+      color: var(--apple-blue);
+      margin-left: 4px;
+      vertical-align: middle;
+    }}
+
+    /* Pílulas de Acesso Rápido a Categorias Macro */
+    .filter-quick-pills {{
+      display: flex;
+      gap: 8px;
+      margin-top: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }}
+
+    .quick-pill {{
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 600;
+      background: var(--surface-hover);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+    }}
+
+    .quick-pill:hover {{
+      background: var(--surface-sunken);
+      color: var(--text-primary);
+      border-color: var(--apple-blue);
+      transform: translateY(-1px);
+    }}
+
+    .quick-pill.active {{
+      background: var(--apple-blue);
+      color: #FFFFFF !important;
+      border-color: var(--apple-blue);
+      box-shadow: 0 2px 8px var(--apple-blue-soft);
+    }}
+
+    /* Wrapper de Busca Inteligente com Botão Limpar e Spotlight Dropdown */
+    .apple-search-wrapper {{
+      position: relative;
+      width: 100%;
+    }}
+
+    .apple-search-wrapper .apple-input {{
+      padding-right: 32px;
+    }}
+
+    .search-clear-btn {{
+      position: absolute;
+      right: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--surface-sunken);
+      border: 1px solid var(--border);
+      color: var(--text-tertiary);
+      font-size: 11px;
+      font-weight: 700;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      z-index: 5;
+    }}
+
+    .search-clear-btn:hover {{
+      background: var(--apple-red);
+      color: #FFFFFF;
+      border-color: var(--apple-red);
+    }}
+
+    .quick-search-dropdown {{
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      min-width: 320px;
+      max-height: 400px;
+      overflow-y: auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      z-index: 1000;
+      animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      padding: 6px 0;
+    }}
+
+    .quick-search-header {{
+      padding: 6px 14px;
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--text-tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface-hover);
+    }}
+
+    .quick-search-item {{
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: background 0.15s ease;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    }}
+
+    .quick-search-item:hover {{
+      background: var(--surface-hover);
+    }}
+
+    .quick-search-item:last-child {{
+      border-bottom: none;
+    }}
+
+    .quick-search-info {{
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      overflow: hidden;
+      padding-right: 10px;
+    }}
+
+    .quick-search-title {{
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+
+    .quick-search-subtitle {{
+      font-size: 11px;
+      color: var(--text-tertiary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }}
+
+    .quick-search-metric {{
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--apple-blue);
+      white-space: nowrap;
+      text-align: right;
     }}
 
     /* KPI Grid */
@@ -965,7 +1183,7 @@ def build():
       <div class="header-actions">
         <div class="badge-status">
           <div class="status-dot"></div>
-          <span id="headerCutDate">D-1: 01 a 03/09/2026</span>
+          <span id="headerCutDate">{data_corte}</span>
         </div>
         <button class="theme-toggle-btn" onclick="toggleTheme()" title="Alternar Modo Claro / Escuro">
           🌓
@@ -1056,6 +1274,16 @@ def build():
           Visualizando todos os registros
         </div>
       </div>
+
+      <!-- Pílulas de Acesso Rápido a Categorias Macro -->
+      <div class="filter-quick-pills">
+        <span class="quick-pill active" id="pillGrupoAll" onclick="selectQuickGrupo('')">⭐ Todos os Grupos</span>
+        <span class="quick-pill" id="pillGrupoMed" onclick="selectQuickGrupo('Medicamentos(1)')">💊 Medicamentos (1)</span>
+        <span class="quick-pill" id="pillGrupoPerf" onclick="selectQuickGrupo('Perfumaria(2)')">🧴 Perfumaria (2)</span>
+        <span class="quick-pill" id="pillGrupoConv" onclick="selectQuickGrupo('Conveniencia(3)')">🍫 Conveniência (3)</span>
+        <span class="quick-pill" id="pillGrupoHosp" onclick="selectQuickGrupo('Hospitalar(4)')">🏥 Hospitalar (4)</span>
+      </div>
+
       <div class="filter-inputs-grid">
         <!-- 1. Grupo -->
         <div class="filter-control-group">
@@ -1068,7 +1296,7 @@ def build():
         <!-- 2. Subgrupo -->
         <div class="filter-control-group">
           <label for="filterSubgrupo">📂 Subgrupo (Intermediário)</label>
-          <select id="filterSubgrupo" class="apple-select" onchange="applyGlobalFilters()">
+          <select id="filterSubgrupo" class="apple-select" onchange="onFilterSubgrupoChange()">
             <option value="">Todos os Subgrupos</option>
           </select>
         </div>
@@ -1076,24 +1304,31 @@ def build():
         <!-- 3. Fornecedor / Laboratório -->
         <div class="filter-control-group">
           <label for="filterLab">🏭 Fornecedor / Laboratório</label>
-          <select id="filterLab" class="apple-select" onchange="applyGlobalFilters()">
+          <select id="filterLab" class="apple-select" onchange="onFilterLabChange()">
             <option value="">Todos os Fornecedores</option>
           </select>
         </div>
 
-        <!-- 4. Busca Textual -->
+        <!-- 4. Busca Textual Universal com Spotlight -->
         <div class="filter-control-group">
-          <label for="filterSearchText">🏷️ Busca SKU / Linha / Nome</label>
-          <input type="text" id="filterSearchText" class="apple-input" placeholder="Ex: Mounjaro, Fralda, Lilly, Ozempic..." oninput="applyGlobalFilters()">
+          <label for="filterSearchText">🏷️ Busca Inteligente (SKU, Linha, Lab)</label>
+          <div class="apple-search-wrapper">
+            <input type="text" id="filterSearchText" class="apple-input" placeholder="Ex: Mounjaro, Fralda, Lilly, Ozempic, 10046653..." oninput="onSearchTextInput()" onfocus="onSearchTextInput()" onkeydown="onSearchKeyDown(event)" autocomplete="off">
+            <button id="btnSearchClear" class="search-clear-btn" onclick="clearSearchInput()" title="Limpar busca">✕</button>
+            <div id="quickSearchDropdown" class="quick-search-dropdown" style="display: none;"></div>
+          </div>
         </div>
 
         <!-- 5. Limpar -->
         <div>
-          <button class="apple-btn-secondary" onclick="resetGlobalFilters()" title="Limpar filtros">
+          <button class="apple-btn-secondary" onclick="resetGlobalFilters()" title="Limpar todos os filtros">
             ✕ Limpar Filtros
           </button>
         </div>
       </div>
+
+      <!-- Banner de Feedback da Busca Inteligente -->
+      <div id="filterSearchBanner" class="filter-search-banner" style="display: none;"></div>
     </section>
 
     <!-- Grid de 6 KPIs Estratégicos (100% Exclusivos e Não-Repetitivos) -->
@@ -1149,7 +1384,7 @@ def build():
         <div class="kpi-value" id="kpiMoMValue" style="color: var(--apple-green);">+17.1%</div>
         <div class="kpi-subtext">
           <span class="badge-trend trend-pos" id="kpiMoMBadge">+R$ 861.946</span>
-          <span style="color: var(--text-tertiary);">vs 01 a 03/Ago</span>
+          <span id="kpiMoMPeriodRef" style="color: var(--text-tertiary);">vs 01 a {max_dia_str}/Ago</span>
         </div>
       </div>
 
@@ -1162,7 +1397,7 @@ def build():
         <div class="kpi-value" id="kpiYoYValue" style="color: var(--apple-green);">+43.2%</div>
         <div class="kpi-subtext">
           <span class="badge-trend trend-pos" id="kpiYoYBadge">+R$ 1.778.904</span>
-          <span style="color: var(--text-tertiary);">vs 01 a 03/Set/25</span>
+          <span id="kpiYoYPeriodRef" style="color: var(--text-tertiary);">vs 01 a {max_dia_str}/Set/25</span>
         </div>
       </div>
 
@@ -1243,16 +1478,16 @@ def build():
               🌐 Canais (Consolidado)
             </button>
             <button class="segmented-btn" id="tabBtnHierarquia" onclick="switchTableTab('hierarquia')">
-              🏢 Hierarquia (Grupo > Subgrupo > Linha)
+              🏢 Hierarquia <span id="badgeCountHierarquia" class="tab-badge" style="display:none;"></span>
             </button>
             <button class="segmented-btn" id="tabBtnLabs" onclick="switchTableTab('laboratorios')">
-              🏭 Fornecedores / Labs
+              🏭 Fornecedores <span id="badgeCountLabs" class="tab-badge" style="display:none;"></span>
             </button>
             <button class="segmented-btn" id="tabBtnDiagnostico" onclick="switchTableTab('diagnostico')">
               ⚠️ Raio-X de Problemas
             </button>
             <button class="segmented-btn" id="tabBtnSkus" onclick="switchTableTab('skus')">
-              🏷️ Top SKUs (Produtos)
+              🏷️ Top SKUs <span id="badgeCountSkus" class="tab-badge" style="display:none;"></span>
             </button>
           </div>
 
@@ -1417,15 +1652,295 @@ def build():
       renderChart();
       renderHighlights();
       renderTable();
+
+      // Fechar busca rápida ao clicar fora
+      document.addEventListener('click', (e) => {{
+        const wrapper = document.querySelector('.apple-search-wrapper');
+        if (wrapper && !wrapper.contains(e.target)) {{
+          closeQuickSearch();
+        }}
+      }});
+    }}
+
+    function normStr(str) {{
+      return (str || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+    }}
+
+    function getSearchMatchesFromSkus(qNorm) {{
+      if (!qNorm) return {{ linhas: new Set(), labs: new Set(), grupos: new Set(), subgrupos: new Set() }};
+      const topSkus = window.DASHBOARD_DATA.top_skus || [];
+      const matchingSkus = topSkus.filter(s => 
+        String(s.id).includes(qNorm) || 
+        normStr(s.nome).includes(qNorm) ||
+        normStr(s.laboratorio).includes(qNorm) ||
+        normStr(s.linha).includes(qNorm)
+      );
+      return {{
+        linhas: new Set(matchingSkus.map(s => s.linha)),
+        labs: new Set(matchingSkus.map(s => s.laboratorio)),
+        grupos: new Set(matchingSkus.map(s => s.grupo)),
+        subgrupos: new Set(matchingSkus.map(s => s.subgrupo))
+      }};
+    }}
+
+    function getFilteredLinhas(ignoreCategoryFilters = false) {{
+      let items = window.DASHBOARD_DATA.linhas || [];
+      if (!ignoreCategoryFilters) {{
+        if (selectedGrupo) items = items.filter(l => l.grupo === selectedGrupo);
+        if (selectedSubgrupo) items = items.filter(l => l.subgrupo === selectedSubgrupo);
+        if (selectedLab) items = items.filter(l => l.laboratorios && l.laboratorios.includes(selectedLab));
+      }}
+      if (searchText) {{
+        const q = normStr(searchText);
+        const skuMatches = getSearchMatchesFromSkus(q);
+        items = items.filter(l => 
+          normStr(l.linha).includes(q) ||
+          normStr(l.subgrupo).includes(q) ||
+          normStr(l.grupo).includes(q) ||
+          (l.laboratorios && l.laboratorios.some(lab => normStr(lab).includes(q))) ||
+          (l.skus && l.skus.some(s => normStr(s).includes(q))) ||
+          skuMatches.linhas.has(l.linha)
+        );
+      }}
+      return items;
+    }}
+
+    function getFilteredSubgrupos(ignoreCategoryFilters = false) {{
+      let items = window.DASHBOARD_DATA.subgrupos || [];
+      if (!ignoreCategoryFilters) {{
+        if (selectedGrupo) items = items.filter(s => s.grupo === selectedGrupo);
+        if (selectedSubgrupo) items = items.filter(s => s.subgrupo === selectedSubgrupo);
+        if (selectedLab) items = items.filter(s => s.laboratorios && s.laboratorios.includes(selectedLab));
+      }}
+      if (searchText) {{
+        const q = normStr(searchText);
+        const fl = getFilteredLinhas(ignoreCategoryFilters);
+        const matchedSubs = new Set(fl.map(l => l.subgrupo));
+        const skuMatches = getSearchMatchesFromSkus(q);
+        items = items.filter(s => 
+          normStr(s.subgrupo).includes(q) ||
+          normStr(s.grupo).includes(q) ||
+          (s.laboratorios && s.laboratorios.some(lab => normStr(lab).includes(q))) ||
+          matchedSubs.has(s.subgrupo) ||
+          skuMatches.subgrupos.has(s.subgrupo)
+        );
+      }}
+      return items;
+    }}
+
+    function getFilteredGrupos(ignoreCategoryFilters = false) {{
+      let items = window.DASHBOARD_DATA.grupos || [];
+      if (!ignoreCategoryFilters) {{
+        if (selectedGrupo) items = items.filter(g => g.grupo === selectedGrupo);
+        if (selectedLab) {{
+          const filtros = window.DASHBOARD_DATA.filtros || {{}};
+          items = items.filter(g => filtros.grupos_labs && filtros.grupos_labs[g.grupo] && filtros.grupos_labs[g.grupo].includes(selectedLab));
+        }}
+      }}
+      if (searchText) {{
+        const q = normStr(searchText);
+        const fl = getFilteredLinhas(ignoreCategoryFilters);
+        const matchedGrupos = new Set(fl.map(l => l.grupo));
+        const skuMatches = getSearchMatchesFromSkus(q);
+        items = items.filter(g => 
+          normStr(g.grupo).includes(q) || 
+          matchedGrupos.has(g.grupo) ||
+          skuMatches.grupos.has(g.grupo)
+        );
+      }}
+      return items;
+    }}
+
+    function getFilteredLaboratorios(ignoreCategoryFilters = false) {{
+      let items = window.DASHBOARD_DATA.laboratorios || [];
+      if (!ignoreCategoryFilters) {{
+        if (selectedGrupo) items = items.filter(l => l.grupos && l.grupos.includes(selectedGrupo));
+        if (selectedSubgrupo) items = items.filter(l => l.subgrupos && l.subgrupos.includes(selectedSubgrupo));
+        if (selectedLab) items = items.filter(l => l.laboratorio === selectedLab);
+      }}
+      if (searchText) {{
+        const q = normStr(searchText);
+        const skuMatches = getSearchMatchesFromSkus(q);
+        items = items.filter(l => 
+          normStr(l.laboratorio).includes(q) ||
+          (l.linhas && l.linhas.some(lin => normStr(lin).includes(q))) ||
+          (l.grupos && l.grupos.some(grp => normStr(grp).includes(q))) ||
+          (l.subgrupos && l.subgrupos.some(sub => normStr(sub).includes(q))) ||
+          (l.skus && l.skus.some(s => normStr(s).includes(q))) ||
+          skuMatches.labs.has(l.laboratorio)
+        );
+      }}
+      return items;
+    }}
+
+    function getFilteredSkus(ignoreCategoryFilters = false) {{
+      let items = window.DASHBOARD_DATA.top_skus || [];
+      if (!ignoreCategoryFilters) {{
+        if (selectedGrupo) items = items.filter(s => s.grupo === selectedGrupo);
+        if (selectedSubgrupo) items = items.filter(s => s.subgrupo === selectedSubgrupo);
+        if (selectedLab) items = items.filter(s => s.laboratorio === selectedLab);
+      }}
+      if (searchText) {{
+        const q = normStr(searchText);
+        items = items.filter(s => 
+          String(s.id).includes(q) ||
+          normStr(s.nome).includes(q) ||
+          normStr(s.laboratorio).includes(q) ||
+          normStr(s.linha).includes(q) ||
+          normStr(s.subgrupo).includes(q) ||
+          normStr(s.grupo).includes(q)
+        );
+      }}
+      return items;
+    }}
+
+    function formatCanaisBlock(canaisObj) {{
+      const chList = [
+        {{ id: 'total', nome: 'Total Digital', icone: '🌐', key: 'total' }},
+        {{ id: 'app', nome: 'App São João', icone: '📱', key: 'app' }},
+        {{ id: 'marketplace', nome: 'Marketplaces', icone: '🛍️', key: 'marketplace' }},
+        {{ id: 'site', nome: 'Site Oficial', icone: '🌐', key: 'site' }}
+      ];
+      return chList.map(item => {{
+        const d = canaisObj[item.key] || {{}};
+        return {{
+          id: item.id,
+          nome: item.nome,
+          icone: item.icone,
+          venda_mtd: d.realizado_mtd || 0,
+          meta_mtd: d.meta_mtd || 0,
+          ating_mtd_pct: d.ating_mtd_pct || 0,
+          gap_mtd: d.gap_mtd || 0,
+          desvio_pct: d.desvio_pct || 0,
+          v26_06_mtd: d.v26_06_mtd || 0,
+          crescimento_mom_pct: d.crescimento_mom_pct || 0,
+          crescimento_mom_diff: d.crescimento_mom_diff || 0,
+          v25_mtd: d.v25_mtd || 0,
+          crescimento_yoy_pct: d.crescimento_yoy_pct || 0,
+          crescimento_yoy_diff: d.crescimento_yoy_diff || 0,
+          share_realizado_pct: d.share_pct || 0,
+          projecao_fechamento: d.projecao_fechamento || 0,
+          meta_mensal: d.meta_mensal || 0
+        }};
+      }});
+    }}
+
+    function getFilteredCanaisData() {{
+      const isFilterActive = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
+      if (!isFilterActive) {{
+        return window.DASHBOARD_DATA.canais_tabela;
+      }}
+
+      // Caso 1: Apenas laboratório selecionado sem outros filtros
+      if (selectedLab && !selectedGrupo && !selectedSubgrupo && !searchText) {{
+        const labItem = (window.DASHBOARD_DATA.laboratorios || []).find(l => l.laboratorio === selectedLab);
+        if (labItem && labItem.canais) {{
+          return formatCanaisBlock(labItem.canais);
+        }}
+      }}
+
+      // Caso 2: Apenas Subgrupo selecionado
+      if (selectedSubgrupo && !selectedLab && !searchText) {{
+        const subItem = (window.DASHBOARD_DATA.subgrupos || []).find(s => s.subgrupo === selectedSubgrupo && (!selectedGrupo || s.grupo === selectedGrupo));
+        if (subItem && subItem.canais) {{
+          return formatCanaisBlock(subItem.canais);
+        }}
+      }}
+
+      // Caso 3: Apenas Grupo selecionado
+      if (selectedGrupo && !selectedSubgrupo && !selectedLab && !searchText) {{
+        const grpItem = (window.DASHBOARD_DATA.grupos || []).find(g => g.grupo === selectedGrupo);
+        if (grpItem && grpItem.canais) {{
+          return formatCanaisBlock(grpItem.canais);
+        }}
+      }}
+
+      // Caso 4: Agregação genérica a partir das linhas filtradas
+      const linhas = getFilteredLinhas();
+      const channels = ['total', 'app', 'marketplace', 'site'];
+      const channelNames = {{
+        'total': 'Total Digital',
+        'app': 'App São João',
+        'marketplace': 'Marketplaces',
+        'site': 'Site Oficial'
+      }};
+      const channelIcons = {{
+        'total': '🌐',
+        'app': '📱',
+        'marketplace': '🛍️',
+        'site': '🌐'
+      }};
+
+      const pctCurva = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.pct_curva_acum) ? (window.DASHBOARD_DATA.kpis.pct_curva_acum / 100) : 0.1073;
+
+      let totalRealizado = 0;
+      const res = channels.map(ch => {{
+        let r = 0, m_mtd = 0, m_mes = 0, v06 = 0, v25 = 0;
+        linhas.forEach(l => {{
+          const c = l.canais ? l.canais[ch] : null;
+          if (c) {{
+            r += c.realizado_mtd || 0;
+            m_mtd += c.meta_mtd || 0;
+            m_mes += c.meta_mensal || 0;
+            v06 += c.v26_06_mtd || 0;
+            v25 += c.v25_mtd || 0;
+          }}
+        }});
+
+        r = Math.round(r * 100) / 100;
+        m_mtd = Math.round(m_mtd * 100) / 100;
+        m_mes = Math.round(m_mes * 100) / 100;
+        v06 = Math.round(v06 * 100) / 100;
+        v25 = Math.round(v25 * 100) / 100;
+
+        if (ch === 'total') totalRealizado = r;
+
+        const gap = Math.round((r - m_mtd) * 100) / 100;
+        const ating = m_mtd > 0 ? ((r / m_mtd) * 100) : 0;
+        const desvio = m_mtd > 0 ? (((r / m_mtd) - 1) * 100) : 0;
+        const mom = v06 > 0 ? (((r - v06) / v06) * 100) : 0;
+        const mom_diff = Math.round((r - v06) * 100) / 100;
+        const yoy = v25 > 0 ? (((r - v25) / v25) * 100) : 0;
+        const yoy_diff = Math.round((r - v25) * 100) / 100;
+        const proj = pctCurva > 0 ? Math.round((r / pctCurva) * 100) / 100 : 0;
+
+        return {{
+          id: ch,
+          nome: channelNames[ch],
+          icone: channelIcons[ch],
+          venda_mtd: r,
+          meta_mtd: m_mtd,
+          ating_mtd_pct: ating,
+          gap_mtd: gap,
+          desvio_pct: desvio,
+          v26_06_mtd: v06,
+          crescimento_mom_pct: mom,
+          crescimento_mom_diff: mom_diff,
+          v25_mtd: v25,
+          crescimento_yoy_pct: yoy,
+          crescimento_yoy_diff: yoy_diff,
+          share_realizado_pct: 0,
+          projecao_fechamento: proj,
+          meta_mensal: m_mes
+        }};
+      }});
+
+      res.forEach(c => {{
+        if (c.id !== 'total' && totalRealizado > 0) {{
+          c.share_realizado_pct = (c.venda_mtd / totalRealizado) * 100;
+        }} else if (c.id === 'total') {{
+          c.share_realizado_pct = 100;
+        }}
+      }});
+
+      return res;
     }}
 
     function populateFilterDropdowns() {{
       const filtros = window.DASHBOARD_DATA.filtros || {{}};
       const grupoSel = document.getElementById('filterGrupo');
-      const subgrupoSel = document.getElementById('filterSubgrupo');
-      const labSel = document.getElementById('filterLab');
+      grupoSel.innerHTML = '<option value="">Todos os Grupos (Macro)</option>';
 
-      // 1. Grupos
       if (filtros.grupos) {{
         filtros.grupos.forEach(g => {{
           const opt = document.createElement('option');
@@ -1435,17 +1950,8 @@ def build():
         }});
       }}
 
-      // 2. Labs
-      if (filtros.laboratorios) {{
-        filtros.laboratorios.forEach(l => {{
-          const opt = document.createElement('option');
-          opt.value = l;
-          opt.textContent = l;
-          labSel.appendChild(opt);
-        }});
-      }}
-
       updateSubgrupoDropdown();
+      updateLabDropdown();
     }}
 
     function updateSubgrupoDropdown() {{
@@ -1462,43 +1968,360 @@ def build():
         subs = Array.from(allSubs).sort();
       }}
 
+      let stillValid = false;
       subs.forEach(s => {{
         const opt = document.createElement('option');
         opt.value = s;
         opt.textContent = s;
-        if (s === selectedSubgrupo) opt.selected = true;
+        if (s === selectedSubgrupo) {{
+          opt.selected = true;
+          stillValid = true;
+        }}
         subgrupoSel.appendChild(opt);
       }});
+      if (!stillValid) selectedSubgrupo = '';
+    }}
+
+    function updateLabDropdown() {{
+      const filtros = window.DASHBOARD_DATA.filtros || {{}};
+      const labSel = document.getElementById('filterLab');
+      labSel.innerHTML = '<option value="">Todos os Fornecedores</option>';
+
+      let labs = [];
+      if (selectedSubgrupo && filtros.subgrupos_labs && filtros.subgrupos_labs[selectedSubgrupo]) {{
+        labs = filtros.subgrupos_labs[selectedSubgrupo];
+      }} else if (selectedGrupo && filtros.grupos_labs && filtros.grupos_labs[selectedGrupo]) {{
+        labs = filtros.grupos_labs[selectedGrupo];
+      }} else if (filtros.laboratorios) {{
+        labs = filtros.laboratorios;
+      }}
+
+      let stillValid = false;
+      labs.forEach(l => {{
+        const opt = document.createElement('option');
+        opt.value = l;
+        opt.textContent = l;
+        if (l === selectedLab) {{
+          opt.selected = true;
+          stillValid = true;
+        }}
+        labSel.appendChild(opt);
+      }});
+      if (!stillValid) selectedLab = '';
     }}
 
     function onFilterGrupoChange() {{
       selectedGrupo = document.getElementById('filterGrupo').value;
       selectedSubgrupo = '';
+      selectedLab = '';
       updateSubgrupoDropdown();
+      updateLabDropdown();
       applyGlobalFilters();
     }}
 
-    function applyGlobalFilters() {{
-      selectedGrupo = document.getElementById('filterGrupo').value;
+    function onFilterSubgrupoChange() {{
       selectedSubgrupo = document.getElementById('filterSubgrupo').value;
+      selectedLab = '';
+      updateLabDropdown();
+      applyGlobalFilters();
+    }}
+
+    function onFilterLabChange() {{
       selectedLab = document.getElementById('filterLab').value;
-      searchText = document.getElementById('filterSearchText').value.trim().toLowerCase();
+      applyGlobalFilters();
+    }}
 
-      // Atualizar badge de filtros ativos
-      const activeParts = [];
-      if (selectedGrupo) activeParts.push(`Grupo: ${{selectedGrupo}}`);
-      if (selectedSubgrupo) activeParts.push(`Subgrupo: ${{selectedSubgrupo}}`);
-      if (selectedLab) activeParts.push(`Fornecedor: ${{selectedLab}}`);
-      if (searchText) activeParts.push(`Busca: "${{searchText}}"`);
+    function selectQuickGrupo(grp) {{
+      document.getElementById('filterGrupo').value = grp;
+      onFilterGrupoChange();
+    }}
 
-      const statusEl = document.getElementById('filterActiveStatus');
-      if (activeParts.length > 0) {{
-        statusEl.innerHTML = `<span style="color: var(--apple-blue); font-weight: 600;">Filtros Ativos:</span> ${{activeParts.join(' • ')}}`;
-      }} else {{
-        statusEl.textContent = 'Visualizando todos os registros';
+    function updateQuickPillsState() {{
+      const g = selectedGrupo;
+      const pills = [
+        {{ id: 'pillGrupoAll', val: '' }},
+        {{ id: 'pillGrupoMed', val: 'Medicamentos(1)' }},
+        {{ id: 'pillGrupoPerf', val: 'Perfumaria(2)' }},
+        {{ id: 'pillGrupoConv', val: 'Conveniencia(3)' }},
+        {{ id: 'pillGrupoHosp', val: 'Hospitalar(4)' }}
+      ];
+      pills.forEach(p => {{
+        const el = document.getElementById(p.id);
+        if (el) {{
+          if (p.val === g) {{
+            el.classList.add('active');
+          }} else {{
+            el.classList.remove('active');
+          }}
+        }}
+      }});
+    }}
+
+    function onSearchTextInput() {{
+      const input = document.getElementById('filterSearchText');
+      const val = input.value.trim();
+      const clearBtn = document.getElementById('btnSearchClear');
+      if (clearBtn) clearBtn.style.display = val ? 'inline-flex' : 'none';
+
+      renderQuickSearchDropdown(val);
+      applyGlobalFilters();
+    }}
+
+    function onSearchKeyDown(e) {{
+      if (e.key === 'Escape') {{
+        closeQuickSearch();
+      }} else if (e.key === 'Enter') {{
+        closeQuickSearch();
+        const fskus = getFilteredSkus();
+        const fl = getFilteredLinhas();
+        
+        // Se a busca não achou nada com os filtros de categoria atuais, mas tem resultados globais, limpa os filtros de categoria e reaplica
+        if (fskus.length === 0 && fl.length === 0) {{
+          const globalSkus = getFilteredSkus(true);
+          const globalLinhas = getFilteredLinhas(true);
+          if (globalSkus.length > 0 || globalLinhas.length > 0) {{
+            resetCategoryFiltersKeepSearch();
+            if (globalSkus.length > 0) {{
+              switchTableTab('skus');
+            }} else {{
+              switchTableTab('hierarquia');
+            }}
+            return;
+          }}
+        }}
+
+        if (fskus.length > 0 && activeTableTab === 'canais') {{
+          switchTableTab('skus');
+        }} else if (fl.length > 0 && activeTableTab === 'canais') {{
+          switchTableTab('hierarquia');
+        }}
+      }}
+    }}
+
+    function clearSearchInput() {{
+      const input = document.getElementById('filterSearchText');
+      input.value = '';
+      const clearBtn = document.getElementById('btnSearchClear');
+      if (clearBtn) clearBtn.style.display = 'none';
+      closeQuickSearch();
+      applyGlobalFilters();
+    }}
+
+    function closeQuickSearch() {{
+      const drop = document.getElementById('quickSearchDropdown');
+      if (drop) drop.style.display = 'none';
+    }}
+
+    function renderQuickSearchDropdown(query) {{
+      const drop = document.getElementById('quickSearchDropdown');
+      if (!drop) return;
+
+      if (!query || query.length < 2) {{
+        drop.style.display = 'none';
+        return;
       }}
 
-      renderTable();
+      const qNorm = normStr(query);
+      const skus = (window.DASHBOARD_DATA.top_skus || []).filter(s => 
+        String(s.id).includes(qNorm) || 
+        normStr(s.nome).includes(qNorm) ||
+        normStr(s.laboratorio).includes(qNorm) ||
+        normStr(s.linha).includes(qNorm)
+      ).slice(0, 5);
+
+      const linhas = (window.DASHBOARD_DATA.linhas || []).filter(l => 
+        normStr(l.linha).includes(qNorm) || 
+        normStr(l.subgrupo).includes(qNorm) ||
+        normStr(l.grupo).includes(qNorm) ||
+        (l.skus && l.skus.some(s => normStr(s).includes(qNorm)))
+      );
+      const seenLinhas = new Set();
+      const uniqueLinhas = [];
+      for (const l of linhas) {{
+        if (!seenLinhas.has(l.linha)) {{
+          seenLinhas.add(l.linha);
+          uniqueLinhas.push(l);
+          if (uniqueLinhas.length >= 4) break;
+        }}
+      }}
+
+      const labs = (window.DASHBOARD_DATA.laboratorios || []).filter(l => 
+        normStr(l.laboratorio).includes(qNorm)
+      ).slice(0, 4);
+
+      if (skus.length === 0 && uniqueLinhas.length === 0 && labs.length === 0) {{
+        drop.innerHTML = `
+          <div style="padding: 16px; text-align: center; color: var(--text-tertiary); font-size: 12px;">
+            Nenhum resultado rápido para "${{query}}"<br>
+            <span style="font-size: 11px;">(Pressione Enter para buscar em todas as tabelas)</span>
+          </div>
+        `;
+        drop.style.display = 'block';
+        return;
+      }}
+
+      let html = '';
+
+      if (skus.length > 0) {{
+        html += `<div class="quick-search-header"><span>🏷️ SKUs em Destaque</span><span style="font-size: 10px;">${{skus.length}}</span></div>`;
+        skus.forEach(s => {{
+          html += `
+            <div class="quick-search-item" onclick="selectQuickSku('${{s.id}}', '${{s.nome.replace(/'/g, "\\'")}}')">
+              <div class="quick-search-info">
+                <span class="quick-search-title">${{s.id}} - ${{s.nome}}</span>
+                <span class="quick-search-subtitle">${{s.laboratorio}} • ${{s.linha}}</span>
+              </div>
+              <div class="quick-search-metric">Meta: ${{fmtMoney(s.meta_mtd)}}</div>
+            </div>
+          `;
+        }});
+      }}
+
+      if (uniqueLinhas.length > 0) {{
+        html += `<div class="quick-search-header"><span>🏢 Linhas de Categoria</span><span style="font-size: 10px;">${{uniqueLinhas.length}}</span></div>`;
+        uniqueLinhas.forEach(l => {{
+          html += `
+            <div class="quick-search-item" onclick="selectQuickLinha('${{l.linha.replace(/'/g, "\\'")}}')">
+              <div class="quick-search-info">
+                <span class="quick-search-title">${{l.linha}}</span>
+                <span class="quick-search-subtitle">${{l.grupo}} • ${{l.subgrupo}}</span>
+              </div>
+              <div class="quick-search-metric" style="color: ${{l.gap_mtd >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">${{(l.gap_mtd >= 0 ? '+' : '') + fmtMoney(l.gap_mtd)}}</div>
+            </div>
+          `;
+        }});
+      }}
+
+      if (labs.length > 0) {{
+        html += `<div class="quick-search-header"><span>🏭 Fornecedores / Laboratórios</span><span style="font-size: 10px;">${{labs.length}}</span></div>`;
+        labs.forEach(l => {{
+          html += `
+            <div class="quick-search-item" onclick="selectQuickLab('${{l.laboratorio.replace(/'/g, "\\'")}}')">
+              <div class="quick-search-info">
+                <span class="quick-search-title">${{l.laboratorio}}</span>
+                <span class="quick-search-subtitle">${{(l.grupos || []).join(', ')}}</span>
+              </div>
+              <div class="quick-search-metric">Ating: ${{fmtPct(l.ating_mtd_pct)}}</div>
+            </div>
+          `;
+        }});
+      }}
+
+      html += `
+        <div style="padding: 8px 14px; background: var(--surface-hover); font-size: 11px; color: var(--text-tertiary); display: flex; justify-content: space-between; border-top: 1px solid var(--border);">
+          <span>💡 Clique em qualquer item para filtrar diretamente</span>
+          <span style="cursor: pointer; color: var(--apple-blue); font-weight: 600;" onclick="closeQuickSearch()">Fechar ✕</span>
+        </div>
+      `;
+
+      drop.innerHTML = html;
+      drop.style.display = 'block';
+    }}
+
+    function selectQuickSku(id, nome) {{
+      const skuObj = (window.DASHBOARD_DATA.top_skus || []).find(s => String(s.id) === String(id));
+      if (skuObj) {{
+        // Sincroniza categoria real do SKU para garantir exibição
+        document.getElementById('filterGrupo').value = skuObj.grupo || '';
+        selectedGrupo = skuObj.grupo || '';
+        updateSubgrupoDropdown();
+        document.getElementById('filterSubgrupo').value = skuObj.subgrupo || '';
+        selectedSubgrupo = skuObj.subgrupo || '';
+        updateLabDropdown();
+        document.getElementById('filterLab').value = skuObj.laboratorio || '';
+        selectedLab = skuObj.laboratorio || '';
+      }}
+      document.getElementById('filterSearchText').value = id;
+      closeQuickSearch();
+      switchTableTab('skus');
+      applyGlobalFilters();
+    }}
+
+    function selectQuickLinha(linha) {{
+      const linhaObj = (window.DASHBOARD_DATA.linhas || []).find(l => l.linha === linha);
+      if (linhaObj) {{
+        document.getElementById('filterGrupo').value = linhaObj.grupo || '';
+        selectedGrupo = linhaObj.grupo || '';
+        updateSubgrupoDropdown();
+        document.getElementById('filterSubgrupo').value = linhaObj.subgrupo || '';
+        selectedSubgrupo = linhaObj.subgrupo || '';
+        updateLabDropdown();
+        document.getElementById('filterLab').value = '';
+        selectedLab = '';
+      }}
+      document.getElementById('filterSearchText').value = linha;
+      closeQuickSearch();
+      switchTableTab('hierarquia');
+      hierarquiaSubView = 'linhas';
+      switchHierarquiaView('linhas');
+      applyGlobalFilters();
+    }}
+
+    function selectQuickLab(lab) {{
+      const labObj = (window.DASHBOARD_DATA.laboratorios || []).find(l => l.laboratorio === lab);
+      if (labObj && selectedGrupo && !(labObj.grupos || []).includes(selectedGrupo)) {{
+        document.getElementById('filterGrupo').value = '';
+        selectedGrupo = '';
+        updateSubgrupoDropdown();
+      }}
+      document.getElementById('filterSubgrupo').value = '';
+      selectedSubgrupo = '';
+      document.getElementById('filterLab').value = lab;
+      selectedLab = lab;
+      document.getElementById('filterSearchText').value = '';
+      closeQuickSearch();
+      switchTableTab('laboratorios');
+      applyGlobalFilters();
+    }}
+
+    function selectLabDirect(lab) {{
+      document.getElementById('filterLab').value = lab;
+      selectedLab = lab;
+      applyGlobalFilters();
+    }}
+
+    function selectSubgrupoDirect(sub, grp) {{
+      if (grp) {{
+        document.getElementById('filterGrupo').value = grp;
+        selectedGrupo = grp;
+        updateSubgrupoDropdown();
+      }}
+      document.getElementById('filterSubgrupo').value = sub;
+      selectedSubgrupo = sub;
+      updateLabDropdown();
+      applyGlobalFilters();
+    }}
+
+    function filterByLinhaDirect(linha) {{
+      document.getElementById('filterSearchText').value = linha;
+      applyGlobalFilters();
+    }}
+
+    function removeSingleFilter(type) {{
+      if (type === 'grupo') {{
+        document.getElementById('filterGrupo').value = '';
+        onFilterGrupoChange();
+      }} else if (type === 'subgrupo') {{
+        document.getElementById('filterSubgrupo').value = '';
+        onFilterSubgrupoChange();
+      }} else if (type === 'lab') {{
+        document.getElementById('filterLab').value = '';
+        onFilterLabChange();
+      }} else if (type === 'search') {{
+        clearSearchInput();
+      }}
+    }}
+
+    function resetCategoryFiltersKeepSearch() {{
+      document.getElementById('filterGrupo').value = '';
+      document.getElementById('filterSubgrupo').value = '';
+      document.getElementById('filterLab').value = '';
+      selectedGrupo = '';
+      selectedSubgrupo = '';
+      selectedLab = '';
+      updateSubgrupoDropdown();
+      updateLabDropdown();
+      applyGlobalFilters();
     }}
 
     function resetGlobalFilters() {{
@@ -1512,8 +2335,114 @@ def build():
       selectedLab = '';
       searchText = '';
 
+      const clearBtn = document.getElementById('btnSearchClear');
+      if (clearBtn) clearBtn.style.display = 'none';
+      closeQuickSearch();
+
       updateSubgrupoDropdown();
-      document.getElementById('filterActiveStatus').textContent = 'Visualizando todos os registros';
+      updateLabDropdown();
+      applyGlobalFilters();
+    }}
+
+    function applyGlobalFilters() {{
+      selectedGrupo = document.getElementById('filterGrupo').value;
+      selectedSubgrupo = document.getElementById('filterSubgrupo').value;
+      selectedLab = document.getElementById('filterLab').value;
+      searchText = document.getElementById('filterSearchText').value.trim();
+
+      // Sincronizar pílulas de grupos
+      updateQuickPillsState();
+
+      // Listas filtradas
+      const fl = getFilteredLinhas();
+      const flab = getFilteredLaboratorios();
+      const fskus = getFilteredSkus();
+
+      // Atualizar badges nas abas das tabelas
+      const isFilterActive = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
+
+      const bHier = document.getElementById('badgeCountHierarquia');
+      if (bHier) {{
+        bHier.style.display = isFilterActive ? 'inline-block' : 'none';
+        bHier.textContent = fl.length;
+      }}
+      const bLabs = document.getElementById('badgeCountLabs');
+      if (bLabs) {{
+        bLabs.style.display = isFilterActive ? 'inline-block' : 'none';
+        bLabs.textContent = flab.length;
+      }}
+      const bSkus = document.getElementById('badgeCountSkus');
+      if (bSkus) {{
+        bSkus.style.display = isFilterActive ? 'inline-block' : 'none';
+        bSkus.textContent = fskus.length;
+      }}
+
+      // Chips de Filtros Ativos
+      const activeParts = [];
+      if (selectedGrupo) activeParts.push(`<span class="filter-badge-pill">🏢 Grupo: ${{selectedGrupo}} <span onclick="removeSingleFilter('grupo')" style="cursor:pointer;margin-left:4px;font-weight:bold;" title="Remover">✕</span></span>`);
+      if (selectedSubgrupo) activeParts.push(`<span class="filter-badge-pill">📂 Subgrupo: ${{selectedSubgrupo}} <span onclick="removeSingleFilter('subgrupo')" style="cursor:pointer;margin-left:4px;font-weight:bold;" title="Remover">✕</span></span>`);
+      if (selectedLab) activeParts.push(`<span class="filter-badge-pill">🏭 Fornecedor: ${{selectedLab}} <span onclick="removeSingleFilter('lab')" style="cursor:pointer;margin-left:4px;font-weight:bold;" title="Remover">✕</span></span>`);
+      if (searchText) activeParts.push(`<span class="filter-badge-pill">🏷️ Busca: "${{searchText}}" <span onclick="removeSingleFilter('search')" style="cursor:pointer;margin-left:4px;font-weight:bold;" title="Remover">✕</span></span>`);
+
+      if (activeParts.length > 1) {{
+        activeParts.push(`<span class="filter-badge-pill clickable" onclick="resetGlobalFilters()" style="background: rgba(255, 59, 48, 0.12); color: var(--apple-red); border: 1px solid rgba(255, 59, 48, 0.25); font-weight: 600;" title="Limpar todos os filtros">✕ Limpar Tudo</span>`);
+      }}
+
+      const statusEl = document.getElementById('filterActiveStatus');
+      if (activeParts.length > 0) {{
+        statusEl.innerHTML = `<span style="color: var(--apple-blue); font-weight: 600; margin-right: 6px;">Filtros Ativos:</span> ` + activeParts.join(' ');
+      }} else {{
+        statusEl.textContent = 'Visualizando todos os registros';
+      }}
+
+      // Banner de busca inteligente com atalhos de visualização e aviso de escopo cruzado
+      const searchBanner = document.getElementById('filterSearchBanner');
+      if (searchBanner) {{
+        if (searchText) {{
+          searchBanner.style.display = 'flex';
+          const hasZeroCategoryMatches = (fl.length === 0 && fskus.length === 0 && flab.length === 0);
+          const hasCategoryFilters = !!(selectedGrupo || selectedSubgrupo || selectedLab);
+          
+          let conflictNotice = '';
+          if (hasZeroCategoryMatches && hasCategoryFilters) {{
+            const globalSkus = getFilteredSkus(true);
+            const globalLinhas = getFilteredLinhas(true);
+            const globalCount = globalSkus.length || globalLinhas.length;
+            if (globalCount > 0) {{
+              conflictNotice = `
+                <div style="width: 100%; margin-top: 8px; background: rgba(255, 149, 0, 0.12); border: 1px solid rgba(255, 149, 0, 0.35); border-radius: 8px; padding: 7px 12px; display: flex; align-items: center; justify-content: space-between; font-size: 11.5px;">
+                  <span>⚠️ Nenhum resultado no grupo <strong>${{selectedGrupo || selectedSubgrupo || selectedLab}}</strong>, mas encontramos <strong>${{globalCount}}</strong> itens em outras categorias!</span>
+                  <button onclick="resetCategoryFiltersKeepSearch()" style="background: var(--apple-blue); color: white; border: none; border-radius: 6px; padding: 4px 10px; font-weight: 600; cursor: pointer; font-size: 11px; margin-left: 8px;">🔍 Buscar em Todo o Dashboard</button>
+                </div>
+              `;
+            }}
+          }}
+
+          searchBanner.innerHTML = `
+            <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; width: 100%;">
+              <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; flex: 1;">
+                <span style="font-size: 13px;">🎯</span>
+                <span>Resultados para "<strong>${{searchText}}</strong>":</span>
+                <span class="filter-badge-pill clickable" onclick="switchTableTab('hierarquia')" title="Ver linhas encontradas">🏢 ${{fl.length}} Linhas</span>
+                <span class="filter-badge-pill clickable" onclick="switchTableTab('laboratorios')" title="Ver fornecedores encontrados">🏭 ${{flab.length}} Fornecedores</span>
+                <span class="filter-badge-pill clickable" onclick="switchTableTab('skus')" title="Ver SKUs encontrados">🏷️ ${{fskus.length}} SKUs</span>
+                <span class="filter-badge-pill clickable" onclick="switchTableTab('canais')" title="Ver consolidação nos canais">🌐 Visão Canais</span>
+              </div>
+              <div style="font-size: 11px; color: var(--apple-blue); cursor: pointer; text-decoration: underline; font-weight: 600;" onclick="removeSingleFilter('search')">
+                Limpar busca ✕
+              </div>
+              ${{conflictNotice}}
+            </div>
+          `;
+        }} else {{
+          searchBanner.style.display = 'none';
+        }}
+      }}
+
+      updateChannelNavSummary();
+      updateKpis();
+      renderChart();
+      renderHighlights();
       renderTable();
     }}
 
@@ -1601,8 +2530,8 @@ def build():
     }}
 
     function updateKpis() {{
-      const canais = window.DASHBOARD_DATA.kpis.canais;
-      const c = canais[activeChannel] || canais.total;
+      const canaisList = getFilteredCanaisData();
+      const c = canaisList.find(item => item.id === activeChannel) || canaisList[0];
       const pctCurva = window.DASHBOARD_DATA.kpis.pct_curva_acum || 10.73;
 
       // 1. Venda Realizada MTD
@@ -1641,7 +2570,9 @@ def build():
       const diariaElem = document.getElementById('kpiDiariaNec');
       if (diariaElem) {{ diariaElem.textContent = fmtMoney(diariaNec) + ' / dia'; }}
 
-      const ritmoDiff = c.ritmo_diff !== undefined ? c.ritmo_diff : ((c.venda_mtd / 3) - diariaNec);
+      const maxDiaVal = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.max_dia) || 5;
+      const maxDiaPad = String(maxDiaVal).padStart(2, '0');
+      const ritmoDiff = c.ritmo_diff !== undefined ? c.ritmo_diff : ((c.venda_mtd / maxDiaVal) - diariaNec);
       const ritmoBadge = document.getElementById('kpiRitmoBadge');
       if (ritmoBadge) {{
         const isRitmoPos = ritmoDiff >= 0;
@@ -1667,6 +2598,8 @@ def build():
         momBadge.textContent = (c.crescimento_mom_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_mom_diff);
         momBadge.className = 'badge-trend ' + (c.crescimento_mom_diff >= 0 ? 'trend-pos' : 'trend-neg');
       }}
+      const momRef = document.getElementById('kpiMoMPeriodRef');
+      if (momRef) {{ momRef.textContent = `vs 01 a ${{maxDiaPad}}/Ago`; }}
 
       // 5. Evolução YoY (vs Set/25)
       const yoy = c.crescimento_yoy_pct || 0;
@@ -1680,6 +2613,8 @@ def build():
         yoyBadge.textContent = (c.crescimento_yoy_diff >= 0 ? '+' : '') + fmtMoney(c.crescimento_yoy_diff);
         yoyBadge.className = 'badge-trend ' + (c.crescimento_yoy_diff >= 0 ? 'trend-pos' : 'trend-neg');
       }}
+      const yoyRef = document.getElementById('kpiYoYPeriodRef');
+      if (yoyRef) {{ yoyRef.textContent = `vs 01 a ${{maxDiaPad}}/Set/25`; }}
 
       // 6. Projeção de Fechamento
       const projElem = document.getElementById('kpiProjecao');
@@ -1724,9 +2659,14 @@ def build():
       }}
 
       // Atualizar título do gráfico com o canal ativo
+      const isFiltered = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
       const titleElem = document.getElementById('chartTitleText');
       if (titleElem) {{
-        titleElem.textContent = `📅 Curva Diária [${{channelLabel}}]: Realizado vs Meta Diária + Desvio % por Dia`;
+        if (isFiltered) {{
+          titleElem.innerHTML = `📅 Curva Diária [${{channelLabel}}]: Realizado vs Meta Diária + Desvio % por Dia <span style="font-size: 11px; font-weight: 600; color: var(--apple-blue); background: rgba(0, 113, 227, 0.1); padding: 2px 8px; border-radius: 10px; border: 1px solid rgba(0, 113, 227, 0.2); margin-left: 6px;">Consolidado do Canal</span>`;
+        }} else {{
+          titleElem.textContent = `📅 Curva Diária [${{channelLabel}}]: Realizado vs Meta Diária + Desvio % por Dia`;
+        }}
       }}
 
       const dataReal = curva.map(c => c[realKey]);
@@ -1888,25 +2828,70 @@ def build():
     }}
 
     function renderHighlights() {{
-      const diagObj = window.DASHBOARD_DATA.diagnostico_causas || window.DASHBOARD_DATA.destaques_por_canal || {{}};
-      const destaques = diagObj[activeChannel] || window.DASHBOARD_DATA.destaques || {{}};
-
       const chLabel = activeChannel === 'total' ? 'Digital' : (activeChannel === 'app' ? 'App' : (activeChannel === 'site' ? 'Site' : 'Marketplace'));
       const tAcel = document.getElementById('titleAceleradores');
       const tDetr = document.getElementById('titleDetratores');
       if (tAcel) tAcel.textContent = `🚀 Top Linhas Superando a Meta (${{chLabel}})`;
       if (tDetr) tDetr.textContent = `⚠️ Top Linhas com Maior Oportunidade (${{chLabel}})`;
-      
+
+      const filteredLinhas = getFilteredLinhas();
+      const itemsChannel = filteredLinhas.map(l => {{
+        const ch = (l.canais && l.canais[activeChannel]) ? l.canais[activeChannel] : {{
+          realizado_mtd: l.realizado_mtd,
+          meta_mtd: l.meta_mtd,
+          gap_mtd: l.gap_mtd,
+          desvio_pct: l.desvio_pct,
+          ating_mtd_pct: l.ating_mtd_pct,
+          crescimento_mom_pct: l.crescimento_mom_pct
+        }};
+        return {{
+          linha: l.linha,
+          grupo: l.grupo,
+          subgrupo: l.subgrupo,
+          realizado_mtd: ch.realizado_mtd || 0,
+          meta_mtd: ch.meta_mtd || 0,
+          gap_mtd: ch.gap_mtd || 0,
+          desvio_pct: ch.desvio_pct || 0,
+          ating_mtd_pct: ch.ating_mtd_pct || 0
+        }};
+      }});
+
+      // Agrupar por nome da linha para consolidar métricas
+      const linhaMap = new Map();
+      itemsChannel.forEach(item => {{
+        if (!linhaMap.has(item.linha)) {{
+          linhaMap.set(item.linha, {{ ...item }});
+        }} else {{
+          const ex = linhaMap.get(item.linha);
+          ex.realizado_mtd += item.realizado_mtd;
+          ex.meta_mtd += item.meta_mtd;
+          ex.gap_mtd = ex.realizado_mtd - ex.meta_mtd;
+          ex.ating_mtd_pct = ex.meta_mtd > 0 ? (ex.realizado_mtd / ex.meta_mtd) * 100 : 0;
+          ex.desvio_pct = ex.meta_mtd > 0 ? ((ex.realizado_mtd / ex.meta_mtd) - 1) * 100 : 0;
+        }}
+      }});
+
+      const uniqueItems = Array.from(linhaMap.values());
+
+      const acel = uniqueItems
+        .filter(x => x.gap_mtd > 0)
+        .sort((a, b) => b.gap_mtd - a.gap_mtd)
+        .slice(0, 8);
+
+      const detr = uniqueItems
+        .filter(x => x.gap_mtd < 0)
+        .sort((a, b) => a.gap_mtd - b.gap_mtd)
+        .slice(0, 8);
+
       const renderList = (items, isPositive) => {{
         if (!items || items.length === 0) {{
           return `<div style="padding: 18px; text-align: center; color: var(--text-tertiary); font-size: 12px;">Nenhum destaque para o filtro selecionado</div>`;
         }}
-        const displayItems = items.slice(0, 8);
-        return displayItems.map((item, idx) => `
-          <div class="highlight-item">
+        return items.map((item, idx) => `
+          <div class="highlight-item" onclick="filterByLinhaDirect('${{item.linha.replace(/'/g, "\\'")}}')" style="cursor: pointer;" title="Clique para filtrar por ${{item.linha}}">
             <div class="highlight-info">
-              <span class="highlight-name" title="${{item.linha || item.nome}}">
-                <span style="color: var(--text-tertiary); font-size: 11px; margin-right: 4px; font-weight: 600;">#${{idx + 1}}</span>${{item.linha || item.nome}}
+              <span class="highlight-name" title="${{item.linha}}">
+                <span style="color: var(--text-tertiary); font-size: 11px; margin-right: 4px; font-weight: 600;">#${{idx + 1}}</span>${{item.linha}}
               </span>
               <span class="highlight-cat">${{item.grupo || ''}} • Ating: ${{fmtPct(item.ating_mtd_pct)}}</span>
             </div>
@@ -1919,9 +2904,6 @@ def build():
           </div>
         `).join('');
       }};
-
-      const acel = destaques.aceleradores_linhas || destaques.aceleradores || [];
-      const detr = destaques.detratores_linhas || destaques.detratores || [];
 
       document.getElementById('listAceleradores').innerHTML = renderList(acel, true);
       document.getElementById('listDetratores').innerHTML = renderList(detr, false);
@@ -1974,10 +2956,29 @@ def build():
         </tr>
       `;
 
-      const canais = window.DASHBOARD_DATA.canais_tabela;
+      const canais = getFilteredCanaisData();
+      const isFiltered = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
+
+      if (!canais || canais.length === 0 || (isFiltered && canais[0].venda_mtd === 0 && canais[0].meta_mtd === 0)) {{
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="13" style="text-align: center; padding: 36px 16px; color: var(--text-tertiary);">
+              <div style="font-size: 24px; margin-bottom: 6px;">🔍</div>
+              <div style="font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">Nenhum dado encontrado nos canais para os filtros ativos</div>
+              <div style="font-size: 11.5px;">Tente alterar os filtros de grupo, fornecedor ou o termo de busca.</div>
+              <button class="apple-btn-secondary" onclick="resetGlobalFilters()" style="margin: 12px auto 0; display: inline-flex;">✕ Limpar Filtros</button>
+            </td>
+          </tr>
+        `;
+        return;
+      }}
+
       tbody.innerHTML = canais.map(c => `
         <tr style="${{c.id === activeChannel ? 'background: var(--surface-hover); font-weight: 600;' : ''}}">
-          <td><strong>${{c.icone || ''}} ${{c.nome}}</strong></td>
+          <td>
+            <strong>${{c.icone || ''}} ${{c.nome}}</strong>
+            ${{isFiltered ? '<span class="badge-trend trend-neutral" style="font-size: 10px; margin-left: 6px;">Filtrado</span>' : ''}}
+          </td>
           <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(c.venda_mtd)}}</td>
           <td class="num-cell">${{fmtMoney(c.meta_mtd)}}</td>
           <td class="num-cell">
@@ -2028,9 +3029,20 @@ def build():
           </tr>
         `;
 
-        let items = window.DASHBOARD_DATA.grupos;
-        if (selectedGrupo) items = items.filter(g => g.grupo === selectedGrupo);
-        if (searchText) items = items.filter(g => g.grupo.toLowerCase().includes(searchText));
+        let items = getFilteredGrupos();
+
+        if (items.length === 0) {{
+          tbody.innerHTML = `
+            <tr>
+              <td colspan="10" style="text-align: center; padding: 36px 16px; color: var(--text-tertiary);">
+                <div style="font-size: 24px; margin-bottom: 6px;">🔍</div>
+                <div style="font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">Nenhum grupo corresponde aos filtros ativos</div>
+                <button class="apple-btn-secondary" onclick="resetGlobalFilters()" style="margin: 12px auto 0; display: inline-flex;">✕ Limpar Filtros</button>
+              </td>
+            </tr>
+          `;
+          return;
+        }}
 
         tbody.innerHTML = items.map(g => {{
           const ch = g.canais[activeChannel] || g;
@@ -2083,16 +3095,26 @@ def build():
           </tr>
         `;
 
-        let items = window.DASHBOARD_DATA.subgrupos || [];
-        if (selectedGrupo) items = items.filter(s => s.grupo === selectedGrupo);
-        if (selectedSubgrupo) items = items.filter(s => s.subgrupo === selectedSubgrupo);
-        if (searchText) items = items.filter(s => s.subgrupo.toLowerCase().includes(searchText) || s.grupo.toLowerCase().includes(searchText));
+        let items = getFilteredSubgrupos();
+
+        if (items.length === 0) {{
+          tbody.innerHTML = `
+            <tr>
+              <td colspan="10" style="text-align: center; padding: 36px 16px; color: var(--text-tertiary);">
+                <div style="font-size: 24px; margin-bottom: 6px;">🔍</div>
+                <div style="font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">Nenhum subgrupo corresponde aos filtros ativos</div>
+                <button class="apple-btn-secondary" onclick="resetGlobalFilters()" style="margin: 12px auto 0; display: inline-flex;">✕ Limpar Filtros</button>
+              </td>
+            </tr>
+          `;
+          return;
+        }}
 
         tbody.innerHTML = items.map(s => {{
           const ch = s.canais[activeChannel] || s;
           const isPos = ch.gap_mtd >= 0;
           return `
-            <tr>
+            <tr onclick="selectSubgrupoDirect('${{s.subgrupo.replace(/'/g, "\\'")}}', '${{s.grupo.replace(/'/g, "\\'")}}')" style="cursor: pointer;" title="Clique para filtrar pelo subgrupo ${{s.subgrupo}}">
               <td><strong>${{s.subgrupo}}</strong></td>
               <td style="color: var(--text-secondary); font-size: 12px;">${{s.grupo}}</td>
               <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado_mtd)}}</td>
@@ -2141,16 +3163,27 @@ def build():
           </tr>
         `;
 
-        let items = window.DASHBOARD_DATA.linhas || [];
-        if (selectedGrupo) items = items.filter(l => l.grupo === selectedGrupo);
-        if (selectedSubgrupo) items = items.filter(l => l.subgrupo === selectedSubgrupo);
-        if (searchText) items = items.filter(l => l.linha.toLowerCase().includes(searchText) || l.subgrupo.toLowerCase().includes(searchText) || l.grupo.toLowerCase().includes(searchText));
+        let items = getFilteredLinhas();
+
+        if (items.length === 0) {{
+          tbody.innerHTML = `
+            <tr>
+              <td colspan="11" style="text-align: center; padding: 36px 16px; color: var(--text-tertiary);">
+                <div style="font-size: 24px; margin-bottom: 6px;">🔍</div>
+                <div style="font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">Nenhuma linha de produto encontrada para os filtros ativos</div>
+                <div style="font-size: 11.5px;">Tente alterar o fornecedor, o subgrupo ou o termo de busca.</div>
+                <button class="apple-btn-secondary" onclick="resetGlobalFilters()" style="margin: 12px auto 0; display: inline-flex;">✕ Limpar Filtros</button>
+              </td>
+            </tr>
+          `;
+          return;
+        }}
 
         tbody.innerHTML = items.slice(0, 150).map(l => {{
           const ch = l.canais[activeChannel] || l;
           const isPos = ch.gap_mtd >= 0;
           return `
-            <tr>
+            <tr onclick="filterByLinhaDirect('${{l.linha.replace(/'/g, "\\'")}}')" style="cursor: pointer;" title="Clique para buscar a linha ${{l.linha}}">
               <td><strong>${{l.linha}}</strong></td>
               <td style="color: var(--text-secondary); font-size: 11.5px;">${{l.subgrupo}}</td>
               <td style="color: var(--text-tertiary); font-size: 11px;">${{l.grupo}}</td>
@@ -2202,15 +3235,27 @@ def build():
         </tr>
       `;
 
-      let items = window.DASHBOARD_DATA.laboratorios || [];
-      if (selectedLab) items = items.filter(l => l.laboratorio === selectedLab);
-      if (searchText) items = items.filter(l => l.laboratorio.toLowerCase().includes(searchText));
+      let items = getFilteredLaboratorios();
+
+      if (items.length === 0) {{
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="11" style="text-align: center; padding: 36px 16px; color: var(--text-tertiary);">
+              <div style="font-size: 24px; margin-bottom: 6px;">🔍</div>
+              <div style="font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">Nenhum fornecedor encontrado para os filtros ativos</div>
+              <div style="font-size: 11.5px;">Tente selecionar outro Grupo/Subgrupo ou limpar a busca.</div>
+              <button class="apple-btn-secondary" onclick="resetGlobalFilters()" style="margin: 12px auto 0; display: inline-flex;">✕ Limpar Filtros</button>
+            </td>
+          </tr>
+        `;
+        return;
+      }}
 
       tbody.innerHTML = items.slice(0, 150).map(l => {{
         const ch = l.canais[activeChannel] || l;
         const isPos = ch.gap_mtd >= 0;
         return `
-          <tr>
+          <tr onclick="selectLabDirect('${{l.laboratorio.replace(/'/g, "\\'")}}')" style="cursor: pointer;" title="Clique para filtrar pelo fornecedor ${{l.laboratorio}}">
             <td><strong>${{l.laboratorio}}</strong></td>
             <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado_mtd)}}</td>
             <td class="num-cell">${{fmtMoney(ch.meta_mtd)}}</td>
@@ -2246,7 +3291,7 @@ def build():
     /* ABA 4: Raio-X de Problemas / Diagnóstico Executivo */
     function renderDiagnosticoView() {{
       const diagObj = window.DASHBOARD_DATA.diagnostico_causas || {{}};
-      const diag = diagObj[activeChannel] || diagObj.total || {{}};
+      const defaultDiag = diagObj[activeChannel] || diagObj.total || {{}};
 
       const channelNames = {{
         'total': 'Total Digital',
@@ -2255,12 +3300,13 @@ def build():
         'marketplace': 'Marketplaces'
       }};
 
-      document.getElementById('diagSummaryTitle').textContent = `Raio-X de Causa-Raiz — ${{channelNames[activeChannel]}} (D-1)`;
+      const isFiltered = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
+      document.getElementById('diagSummaryTitle').textContent = `Raio-X de Causa-Raiz — ${{channelNames[activeChannel]}} (D-1)${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
 
       const renderDiagList = (items, isPositive) => {{
-        if (!items || items.length === 0) return '<div style="font-size: 11.5px; color: var(--text-tertiary); padding: 8px;">Nenhum item relevante no canal</div>';
+        if (!items || items.length === 0) return '<div style="font-size: 11.5px; color: var(--text-tertiary); padding: 8px;">Nenhum item relevante para o escopo</div>';
         return items.slice(0, 6).map(item => `
-          <div class="highlight-item">
+          <div class="highlight-item" onclick="filterByLinhaDirect('${{item.nome.replace(/'/g, "\\'")}}')" style="cursor: pointer;" title="Clique para filtrar por ${{item.nome}}">
             <div class="highlight-info">
               <span class="highlight-name" title="${{item.nome}}">${{item.nome}}</span>
               <span class="highlight-cat">${{item.grupo ? item.grupo + ' • ' : ''}}Ating: ${{fmtPct(item.ating_mtd_pct)}} | MoM: ${{fmtSignPct(item.crescimento_mom_pct)}}</span>
@@ -2275,14 +3321,47 @@ def build():
         `).join('');
       }};
 
-      document.getElementById('diagListDetratoresLabs').innerHTML = renderDiagList(diag.detratores_laboratorios, false);
-      document.getElementById('diagListAceleradoresLabs').innerHTML = renderDiagList(diag.aceleradores_laboratorios, true);
+      if (!isFiltered) {{
+        document.getElementById('diagListDetratoresLabs').innerHTML = renderDiagList(defaultDiag.detratores_laboratorios, false);
+        document.getElementById('diagListAceleradoresLabs').innerHTML = renderDiagList(defaultDiag.aceleradores_laboratorios, true);
+        document.getElementById('diagListDetratoresSubgrupos').innerHTML = renderDiagList(defaultDiag.detratores_subgrupos, false);
+        document.getElementById('diagListAceleradoresSubgrupos').innerHTML = renderDiagList(defaultDiag.aceleradores_subgrupos, true);
+        document.getElementById('diagListDetratoresLinhas').innerHTML = renderDiagList(defaultDiag.detratores_linhas, false);
+        document.getElementById('diagListAceleradoresLinhas').innerHTML = renderDiagList(defaultDiag.aceleradores_linhas, true);
+        return;
+      }}
 
-      document.getElementById('diagListDetratoresSubgrupos').innerHTML = renderDiagList(diag.detratores_subgrupos, false);
-      document.getElementById('diagListAceleradoresSubgrupos').innerHTML = renderDiagList(diag.aceleradores_subgrupos, true);
+      // Escopo filtrado: computar dinamicamente
+      const fLabs = getFilteredLaboratorios();
+      const fSubs = getFilteredSubgrupos();
+      const fLins = getFilteredLinhas();
 
-      document.getElementById('diagListDetratoresLinhas').innerHTML = renderDiagList(diag.detratores_linhas, false);
-      document.getElementById('diagListAceleradoresLinhas').innerHTML = renderDiagList(diag.aceleradores_linhas, true);
+      const extractMetrics = (items, nameProp) => {{
+        return items.map(it => {{
+          const ch = (it.canais && it.canais[activeChannel]) ? it.canais[activeChannel] : it;
+          return {{
+            nome: it[nameProp],
+            grupo: it.grupo || (it.grupos ? it.grupos[0] : ''),
+            gap_mtd: ch.gap_mtd || 0,
+            desvio_pct: ch.desvio_pct || 0,
+            ating_mtd_pct: ch.ating_mtd_pct || 0,
+            crescimento_mom_pct: ch.crescimento_mom_pct || 0
+          }};
+        }});
+      }};
+
+      const labsM = extractMetrics(fLabs, 'laboratorio');
+      const subsM = extractMetrics(fSubs, 'subgrupo');
+      const linsM = extractMetrics(fLins, 'linha');
+
+      document.getElementById('diagListDetratoresLabs').innerHTML = renderDiagList(labsM.filter(x => x.gap_mtd < 0).sort((a,b) => a.gap_mtd - b.gap_mtd), false);
+      document.getElementById('diagListAceleradoresLabs').innerHTML = renderDiagList(labsM.filter(x => x.gap_mtd > 0).sort((a,b) => b.gap_mtd - a.gap_mtd), true);
+
+      document.getElementById('diagListDetratoresSubgrupos').innerHTML = renderDiagList(subsM.filter(x => x.gap_mtd < 0).sort((a,b) => a.gap_mtd - b.gap_mtd), false);
+      document.getElementById('diagListAceleradoresSubgrupos').innerHTML = renderDiagList(subsM.filter(x => x.gap_mtd > 0).sort((a,b) => b.gap_mtd - a.gap_mtd), true);
+
+      document.getElementById('diagListDetratoresLinhas').innerHTML = renderDiagList(linsM.filter(x => x.gap_mtd < 0).sort((a,b) => a.gap_mtd - b.gap_mtd), false);
+      document.getElementById('diagListAceleradoresLinhas').innerHTML = renderDiagList(linsM.filter(x => x.gap_mtd > 0).sort((a,b) => b.gap_mtd - a.gap_mtd), true);
     }}
 
     /* ABA 5: Top SKUs */
@@ -2301,17 +3380,20 @@ def build():
         </tr>
       `;
 
-      let items = window.DASHBOARD_DATA.top_skus || [];
-      if (selectedGrupo) items = items.filter(s => s.grupo === selectedGrupo);
-      if (selectedSubgrupo) items = items.filter(s => s.subgrupo === selectedSubgrupo);
-      if (selectedLab) items = items.filter(s => s.laboratorio === selectedLab);
-      if (searchText) {{
-        items = items.filter(s => 
-          String(s.id).includes(searchText) || 
-          s.nome.toLowerCase().includes(searchText) ||
-          s.laboratorio.toLowerCase().includes(searchText) ||
-          s.linha.toLowerCase().includes(searchText)
-        );
+      let items = getFilteredSkus();
+
+      if (items.length === 0) {{
+        tbody.innerHTML = `
+          <tr>
+            <td colspan="9" style="text-align: center; padding: 36px 16px; color: var(--text-tertiary);">
+              <div style="font-size: 24px; margin-bottom: 6px;">🔍</div>
+              <div style="font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">Nenhum SKU encontrado para os filtros ativos</div>
+              <div style="font-size: 11.5px;">Tente ajustar os critérios ou pesquisar por código ID, nome ou fornecedor.</div>
+              <button class="apple-btn-secondary" onclick="resetGlobalFilters()" style="margin: 12px auto 0; display: inline-flex;">✕ Limpar Filtros</button>
+            </td>
+          </tr>
+        `;
+        return;
       }}
 
       tbody.innerHTML = items.slice(0, 150).map(s => `
@@ -2335,38 +3417,38 @@ def build():
 
       if (activeTableTab === 'canais') {{
         csv = 'Canal;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;Ago26_MTD;MoM_Pct;Set25_MTD;YoY_Pct;Share_Pct;Projecao_Mes;Meta_Mensal\\n';
-        window.DASHBOARD_DATA.canais_tabela.forEach(c => {{
+        getFilteredCanaisData().forEach(c => {{
           csv += `"${{c.nome}}";${{c.venda_mtd}};${{c.meta_mtd}};${{c.ating_mtd_pct}};${{c.gap_mtd}};${{c.desvio_pct}};${{c.v26_06_mtd}};${{c.crescimento_mom_pct}};${{c.v25_mtd}};${{c.crescimento_yoy_pct}};${{c.share_realizado_pct}};${{c.projecao_fechamento}};${{c.meta_mensal}}\\n`;
         }});
       }} else if (activeTableTab === 'hierarquia') {{
         if (hierarquiaSubView === 'grupos') {{
           csv = 'Grupo;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Share_Pct;Projecao_Mes\\n';
-          window.DASHBOARD_DATA.grupos.forEach(g => {{
+          getFilteredGrupos().forEach(g => {{
             const ch = g.canais[activeChannel] || g;
             csv += `"${{g.grupo}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.share_pct}};${{ch.projecao_fechamento}}\\n`;
           }});
         }} else if (hierarquiaSubView === 'subgrupos') {{
           csv = 'Subgrupo;Grupo;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Projecao_Mes\\n';
-          window.DASHBOARD_DATA.subgrupos.forEach(s => {{
+          getFilteredSubgrupos().forEach(s => {{
             const ch = s.canais[activeChannel] || s;
             csv += `"${{s.subgrupo}}";"${{s.grupo}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.projecao_fechamento}}\\n`;
           }});
         }} else {{
           csv = 'Linha;Subgrupo;Grupo;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Projecao_Mes\\n';
-          window.DASHBOARD_DATA.linhas.forEach(l => {{
+          getFilteredLinhas().forEach(l => {{
             const ch = l.canais[activeChannel] || l;
             csv += `"${{l.linha}}";"${{l.subgrupo}}";"${{l.grupo}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.projecao_fechamento}}\\n`;
           }});
         }}
       }} else if (activeTableTab === 'laboratorios') {{
         csv = 'Laboratorio;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Share_Pct;Projecao_Mes\\n';
-        window.DASHBOARD_DATA.laboratorios.forEach(l => {{
+        getFilteredLaboratorios().forEach(l => {{
           const ch = l.canais[activeChannel] || l;
           csv += `"${{l.laboratorio}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.share_pct}};${{ch.projecao_fechamento}}\\n`;
         }});
       }} else if (activeTableTab === 'skus') {{
         csv = 'ID;Descricao;Laboratorio;Linha;Meta_MTD;Meta_App;Meta_Site;Meta_Mkt;Meta_Mensal\\n';
-        window.DASHBOARD_DATA.top_skus.forEach(s => {{
+        getFilteredSkus().forEach(s => {{
           csv += `${{s.id}};"${{s.nome}}";"${{s.laboratorio}}";"${{s.linha}}";${{s.meta_mtd}};${{s.meta_mtd_app}};${{s.meta_mtd_site}};${{s.meta_mtd_mkt}};${{s.meta_mensal}}\\n`;
         }});
       }}

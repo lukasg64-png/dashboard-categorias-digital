@@ -369,6 +369,49 @@ def main():
         print(f"  {c['nome']:15s}: Realizado: R$ {c['venda_mtd']:11,.2f} | Meta MTD: R$ {c['meta_mtd']:11,.2f} | Ating: {c['ating_mtd_pct']:6.1f}% | Desvio R$: R$ {c['gap_mtd']:+11,.2f} | MoM: {c['crescimento_mom_pct']:+5.1f}% | YoY: {c['crescimento_yoy_pct']:+5.1f}%")
 
     # 5. Processar Hierarquia por Linha
+    parquet_path = os.path.join(DATA_DIR, 'metas_digital_completa.parquet')
+    df_meta = pd.read_parquet(parquet_path) if os.path.exists(parquet_path) else None
+
+    # Mapeamentos bidirecionais e palavras-chave de produtos para filtros inteligentes
+    grupo_to_labs = defaultdict(list)
+    subgrupo_to_labs = defaultdict(list)
+    linha_to_labs = defaultdict(list)
+    lab_to_grupos = defaultdict(list)
+    lab_to_subgrupos = defaultdict(list)
+    lab_to_linhas = defaultdict(list)
+    lin_to_skus = defaultdict(list)
+    lab_to_skus = defaultdict(list)
+
+    if df_meta is not None:
+        top_skus_by_val = df_meta.sort_values(by='Total_Digital', ascending=False)
+        lin_skus_dict = top_skus_by_val.groupby('Desc_Linha')['Desc_Produto'].apply(lambda s: s.dropna().unique()[:6].tolist()).to_dict()
+        lab_skus_dict = top_skus_by_val.groupby('Laboratorio')['Desc_Produto'].apply(lambda s: s.dropna().unique()[:6].tolist()).to_dict()
+
+        for lin_k, skus_v in lin_skus_dict.items():
+            lin_to_skus[clean_name(lin_k)] = [clean_name(x) for x in skus_v]
+        for lab_k, skus_v in lab_skus_dict.items():
+            lab_to_skus[clean_name(lab_k)] = [clean_name(x) for x in skus_v]
+
+        g_l = df_meta.groupby('Desc_Grupo')['Laboratorio'].unique().to_dict()
+        s_l = df_meta.groupby('Desc_Subgrupo')['Laboratorio'].unique().to_dict()
+        li_l = df_meta.groupby('Desc_Linha')['Laboratorio'].unique().to_dict()
+        l_g = df_meta.groupby('Laboratorio')['Desc_Grupo'].unique().to_dict()
+        l_s = df_meta.groupby('Laboratorio')['Desc_Subgrupo'].unique().to_dict()
+        l_li = df_meta.groupby('Laboratorio')['Desc_Linha'].unique().to_dict()
+
+        for g, labs in g_l.items():
+            grupo_to_labs[clean_name(g)] = sorted([clean_name(x) for x in labs if pd.notna(x) and clean_name(x) not in ('OUTROS', '')])
+        for s, labs in s_l.items():
+            subgrupo_to_labs[clean_name(s)] = sorted([clean_name(x) for x in labs if pd.notna(x) and clean_name(x) not in ('OUTROS', '')])
+        for li, labs in li_l.items():
+            linha_to_labs[clean_name(li)] = sorted([clean_name(x) for x in labs if pd.notna(x) and clean_name(x) not in ('OUTROS', '')])
+        for lab, grps in l_g.items():
+            lab_to_grupos[clean_name(lab)] = sorted([clean_name(x) for x in grps if pd.notna(x) and clean_name(x) not in ('OUTROS', '')])
+        for lab, subs in l_s.items():
+            lab_to_subgrupos[clean_name(lab)] = sorted([clean_name(x) for x in subs if pd.notna(x) and clean_name(x) not in ('OUTROS', '')])
+        for lab, lins in l_li.items():
+            lab_to_linhas[clean_name(lab)] = sorted([clean_name(x) for x in lins if pd.notna(x) and clean_name(x) not in ('OUTROS', '')])
+
     with open(os.path.join(DATA_DIR, 'metas_por_linha.json'), 'r', encoding='utf-8') as f:
         metas_linhas_raw = json.load(f)
 
@@ -467,6 +510,8 @@ def main():
             'subgrupo': sub,
             'linha': lin,
             'canais': canais_linha,
+            'laboratorios': linha_to_labs.get(lin, []),
+            'skus': lin_to_skus.get(lin, []),
             # Flat attributes defaults (Total) for direct access
             'meta_mensal': canais_linha['total']['meta_mensal'],
             'meta_mtd': canais_linha['total']['meta_mtd'],
@@ -632,6 +677,7 @@ def main():
             'grupo': val['grupo'],
             'subgrupo': sub,
             'total_linhas': val['total_linhas'],
+            'laboratorios': subgrupo_to_labs.get(sub, []),
             'canais': canais_sub,
             'realizado_mtd': tot['realizado_mtd'],
             'meta_mtd': tot['meta_mtd'],
@@ -689,9 +735,7 @@ def main():
             lab_real[lab]['total']['v25'] += v25
 
     # Distribuição Marketplace via SKU / Linha mapping
-    parquet_path = os.path.join(DATA_DIR, 'metas_digital_completa.parquet')
-    if os.path.exists(parquet_path):
-        df_meta = pd.read_parquet(parquet_path)
+    if df_meta is not None:
         linha_lab_mkt = df_meta.groupby(['Desc_Linha', 'Laboratorio'])['Marketplace'].sum().reset_index()
         linha_tot_mkt = df_meta.groupby('Desc_Linha')['Marketplace'].sum().reset_index().rename(columns={'Marketplace': 'Tot_Mkt'})
         linha_weights = pd.merge(linha_lab_mkt, linha_tot_mkt, on='Desc_Linha')
@@ -768,6 +812,10 @@ def main():
             tabela_laboratorios.append({
                 'laboratorio': lab,
                 'canais': canais_lab,
+                'grupos': lab_to_grupos.get(lab, []),
+                'subgrupos': lab_to_subgrupos.get(lab, []),
+                'linhas': lab_to_linhas.get(lab, []),
+                'skus': lab_to_skus.get(lab, []),
                 'realizado_mtd': tot['realizado_mtd'],
                 'meta_mtd': tot['meta_mtd'],
                 'meta_mensal': tot['meta_mensal'],
@@ -943,11 +991,26 @@ def main():
     for g in filtro_subgrupos:
         filtro_subgrupos[g] = sorted(filtro_subgrupos[g])
 
-    filtro_laboratorios = [l['laboratorio'] for l in tabela_laboratorios[:100] if l['laboratorio'] not in ('OUTROS', '')]
+    # Lista abrangente de todos os laboratórios ativos, ordenados alfabeticamente para busca rápida
+    filtro_laboratorios_raw = [l['laboratorio'] for l in tabela_laboratorios if l['laboratorio'] not in ('OUTROS', '')]
+    filtro_laboratorios = sorted(filtro_laboratorios_raw)
+
+    # Mapeamento para filtro cascata: Grupo -> Labs válidos
+    filtro_grupos_labs = {}
+    for g in filtro_grupos:
+        valid_labs = [lab for lab in filtro_laboratorios if lab in grupo_to_labs.get(g, [])]
+        filtro_grupos_labs[g] = sorted(valid_labs)
+
+    # Mapeamento para filtro cascata: Subgrupo -> Labs válidos
+    filtro_subgrupos_labs = {}
+    for g, subs in filtro_subgrupos.items():
+        for s in subs:
+            valid_labs = [lab for lab in filtro_laboratorios if lab in subgrupo_to_labs.get(s, [])]
+            filtro_subgrupos_labs[s] = sorted(valid_labs)
 
     # 12. Montar Pacote Consolidado Final
     dashboard_data = {
-        'versao': '2.1.0',
+        'versao': '2.2.0',
         'gerado_em': time.strftime('%Y-%m-%d %H:%M:%S'),
         'kpis': kpis_executivos,
         'canais_tabela': canais_tabela,
@@ -955,14 +1018,16 @@ def main():
         'grupos': tabela_grupos,
         'subgrupos': tabela_subgrupos,
         'linhas': tabela_linhas[:500],
-        'laboratorios': tabela_laboratorios[:250],
-        'top_skus': top_skus_processados[:250],
+        'laboratorios': tabela_laboratorios[:350],
+        'top_skus': top_skus_processados[:350],
         'destaques': diagnostico_causas['total'],
         'diagnostico_causas': diagnostico_causas,
         'filtros': {
             'grupos': filtro_grupos,
             'subgrupos': filtro_subgrupos,
-            'laboratorios': filtro_laboratorios
+            'laboratorios': filtro_laboratorios,
+            'grupos_labs': filtro_grupos_labs,
+            'subgrupos_labs': filtro_subgrupos_labs
         }
     }
 

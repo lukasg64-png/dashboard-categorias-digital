@@ -24,7 +24,7 @@ SHEET_URL = f"{QLIK_URL}/sense/app/{APP_ID}/sheet/{SHEET_ID}/state/analysis"
 USERNAME = "lucas.alves6"
 PASSWORD = "Eloise2025*"
 
-DIGITAL_CHANNELS_FILTER = "APP', 'APP TELE ENTREGA', 'SITE', 'SITE TELE ENTREGA', 'IFOOD', 'RAPPI', 'E_COMMERCE', 'E-COMMERCE', 'MERCADO LIVRE"
+DIGITAL_CHANNELS_FILTER = "'APP', 'APP Tele Entrega', 'APP TELE ENTREGA', 'SITE', 'SITE Tele Entrega', 'SITE TELE ENTREGA', 'iFood', 'IFOOD', 'e_Commerce', 'E_COMMERCE', 'E-COMMERCE', 'RAPPI', 'Rappi', 'MERCADO LIVRE', 'Mercado Livre'"
 
 async def fetch_qlik_data():
     t0 = time.time()
@@ -99,9 +99,9 @@ async def fetch_qlik_data():
                                         { "qDef": { "qFieldDefs": ["Dia"] } }
                                     ],
                                     "qMeasures": [
-                                        { "qDef": { "qDef": "Sum({1<[Ano-Mes]={'2026-09'}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])", "qLabel": "v26_09" } },
-                                        { "qDef": { "qDef": "Sum({1<[Ano-Mes]={'2026-08'}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])", "qLabel": "v26_08" } },
-                                        { "qDef": { "qDef": "Sum({1<[Ano-Mes]={'2025-09'}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])", "qLabel": "v25_09" } }
+                                        { "qDef": { "qDef": "Sum({1<[Ano-Mes]={'2026-09'}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])", "qLabel": "v26_09" } },
+                                        { "qDef": { "qDef": "Sum({1<[Ano-Mes]={'2026-08'}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])", "qLabel": "v26_08" } },
+                                        { "qDef": { "qDef": "Sum({1<[Ano-Mes]={'2025-09'}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])", "qLabel": "v25_09" } }
                                     ],
                                     "qInitialDataFetch": [{ "qTop": 0, "qLeft": 0, "qHeight": 1000, "qWidth": 5 }],
                                     "qSuppressZero": true, "qSuppressMissing": true
@@ -133,9 +133,9 @@ async def fetch_qlik_data():
                                         { "qDef": { "qFieldDefs": ["Desc_Linha"] } }
                                     ],
                                     "qMeasures": [
-                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-09'}, ${dayFilter}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])`, "qLabel": "v26" } },
-                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-08'}, ${dayFilter}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])`, "qLabel": "v26_06" } },
-                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2025-09'}, ${dayFilter}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])`, "qLabel": "v25" } }
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-09'}, ${dayFilter}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])`, "qLabel": "v26" } },
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-08'}, ${dayFilter}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])`, "qLabel": "v26_06" } },
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2025-09'}, ${dayFilter}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])`, "qLabel": "v25" } }
                                     ],
                                     "qInitialDataFetch": [{ "qTop": 0, "qLeft": 0, "qHeight": 1000, "qWidth": 7 }],
                                     "qSuppressZero": true, "qSuppressMissing": true
@@ -155,9 +155,9 @@ async def fetch_qlik_data():
                                         { "qDef": { "qFieldDefs": ["Laboratorio"] } }
                                     ],
                                     "qMeasures": [
-                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-09'}, ${dayFilter}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])`, "qLabel": "v26" } },
-                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-08'}, ${dayFilter}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])`, "qLabel": "v26_06" } },
-                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2025-09'}, ${dayFilter}, [Canal]={'APP','APP TELE ENTREGA','SITE','SITE TELE ENTREGA','IFOOD','RAPPI','E_COMMERCE','E-COMMERCE','MERCADO LIVRE'}>} [Receita Líquida])`, "qLabel": "v25" } }
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-09'}, ${dayFilter}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])`, "qLabel": "v26" } },
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-08'}, ${dayFilter}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])`, "qLabel": "v26_06" } },
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2025-09'}, ${dayFilter}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])`, "qLabel": "v25" } }
                                     ],
                                     "qInitialDataFetch": [{ "qTop": 0, "qLeft": 0, "qHeight": 1000, "qWidth": 5 }],
                                     "qSuppressZero": true, "qSuppressMissing": true
