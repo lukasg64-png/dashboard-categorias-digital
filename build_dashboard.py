@@ -1074,9 +1074,19 @@ def build():
       border-radius: var(--radius-lg);
       padding: 18px 22px;
       display: flex;
-      gap: 20px;
+      justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
       margin-bottom: 16px;
+    }}
+
+    .diag-summary-left {{
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      flex: 1;
+      min-width: 280px;
     }}
 
     .diag-icon-box {{
@@ -1497,6 +1507,13 @@ def build():
             <button class="sub-seg-btn" id="hierSubSubgrupos" onclick="switchHierarquiaView('subgrupos')">Subgrupos</button>
             <button class="sub-seg-btn" id="hierSubGrupos" onclick="switchHierarquiaView('grupos')">Grupos</button>
           </div>
+
+          <!-- Sub-filtro para a Aba de Diagnóstico / Raio-X -->
+          <div class="sub-segmented-control" id="diagnosticoSubControl" style="display: none;">
+            <button class="sub-seg-btn active" id="diagSubMeta" onclick="setDiagMetricMode('meta')">🎯 Desvio Meta (GAP)</button>
+            <button class="sub-seg-btn" id="diagSubMom" onclick="setDiagMetricMode('mom')">📈 Crescimento MoM</button>
+            <button class="sub-seg-btn" id="diagSubYoy" onclick="setDiagMetricMode('yoy')">🚀 Evolução YoY</button>
+          </div>
         </div>
 
         <div class="table-tools-right">
@@ -1518,12 +1535,20 @@ def build():
       <!-- Container do Diagnóstico de Problemas (Aba 4) -->
       <div id="diagnosticoContainerWrapper" style="display: none;">
         <div class="diagnostic-summary-card">
-          <div class="diag-icon-box">🎯</div>
-          <div class="diag-text">
-            <h4 id="diagSummaryTitle">Diagnóstico de Causa-Raiz Digital — Setembro 2026</h4>
-            <p id="diagSummaryDesc">
-              Identificação prática dos principais fornecedores, subgrupos e linhas que impedem ou aceleram o atingimento da meta no canal selecionado.
-            </p>
+          <div class="diag-summary-left">
+            <div class="diag-icon-box" id="diagIconBox">🎯</div>
+            <div class="diag-text">
+              <h4 id="diagSummaryTitle">Diagnóstico de Causa-Raiz Digital — Setembro 2026</h4>
+              <p id="diagSummaryDesc">
+                Identificação prática dos principais fornecedores, subgrupos e linhas que impedem ou aceleram o atingimento da meta no canal selecionado.
+              </p>
+            </div>
+          </div>
+          <!-- Seletor Interativo de Métrica (Desvio da Meta, Crescimento MoM e Evolução YoY) -->
+          <div class="sub-segmented-control" id="diagMetricSelector">
+            <button class="sub-seg-btn active" id="btnDiagMeta" onclick="setDiagMetricMode('meta')">🎯 Desvio da Meta (GAP)</button>
+            <button class="sub-seg-btn" id="btnDiagMom" onclick="setDiagMetricMode('mom')">📈 Crescimento MoM (vs Ago)</button>
+            <button class="sub-seg-btn" id="btnDiagYoy" onclick="setDiagMetricMode('yoy')">🚀 Evolução YoY (vs Set/25)</button>
           </div>
         </div>
 
@@ -1532,13 +1557,13 @@ def build():
           <div class="diag-col-card" style="border-top: 3px solid var(--apple-red);">
             <div class="diag-col-header">
               <span class="diag-col-title">🏭 Fornecedores / Laboratórios</span>
-              <span class="badge-trend trend-neg">Detratores de Meta</span>
+              <span class="badge-trend trend-neg" id="badgeDetratoresLabs">Detratores de Meta</span>
             </div>
             <div class="highlight-list" id="diagListDetratoresLabs"></div>
             
             <div class="diag-col-header" style="margin-top: 10px;">
               <span class="diag-col-title">🏭 Fornecedores / Laboratórios</span>
-              <span class="badge-trend trend-pos">Aceleradores</span>
+              <span class="badge-trend trend-pos" id="badgeAceleradoresLabs">Aceleradores</span>
             </div>
             <div class="highlight-list" id="diagListAceleradoresLabs"></div>
           </div>
@@ -1547,13 +1572,13 @@ def build():
           <div class="diag-col-card" style="border-top: 3px solid var(--apple-orange);">
             <div class="diag-col-header">
               <span class="diag-col-title">📂 Subgrupos de Produtos</span>
-              <span class="badge-trend trend-neg">Detratores de Meta</span>
+              <span class="badge-trend trend-neg" id="badgeDetratoresSubgrupos">Detratores de Meta</span>
             </div>
             <div class="highlight-list" id="diagListDetratoresSubgrupos"></div>
 
             <div class="diag-col-header" style="margin-top: 10px;">
               <span class="diag-col-title">📂 Subgrupos de Produtos</span>
-              <span class="badge-trend trend-pos">Aceleradores</span>
+              <span class="badge-trend trend-pos" id="badgeAceleradoresSubgrupos">Aceleradores</span>
             </div>
             <div class="highlight-list" id="diagListAceleradoresSubgrupos"></div>
           </div>
@@ -1562,13 +1587,13 @@ def build():
           <div class="diag-col-card" style="border-top: 3px solid var(--apple-blue);">
             <div class="diag-col-header">
               <span class="diag-col-title">📦 Linhas de Produtos</span>
-              <span class="badge-trend trend-neg">Detratores de Meta</span>
+              <span class="badge-trend trend-neg" id="badgeDetratoresLinhas">Detratores de Meta</span>
             </div>
             <div class="highlight-list" id="diagListDetratoresLinhas"></div>
 
             <div class="diag-col-header" style="margin-top: 10px;">
               <span class="diag-col-title">📦 Linhas de Produtos</span>
-              <span class="badge-trend trend-pos">Aceleradores</span>
+              <span class="badge-trend trend-pos" id="badgeAceleradoresLinhas">Aceleradores</span>
             </div>
             <div class="highlight-list" id="diagListAceleradoresLinhas"></div>
           </div>
@@ -2478,7 +2503,10 @@ def build():
       if (activeBtn) activeBtn.classList.add('active');
 
       const hierSub = document.getElementById('hierarquiaSubControl');
-      hierSub.style.display = (tabId === 'hierarquia') ? 'inline-flex' : 'none';
+      if (hierSub) hierSub.style.display = (tabId === 'hierarquia') ? 'inline-flex' : 'none';
+
+      const diagSub = document.getElementById('diagnosticoSubControl');
+      if (diagSub) diagSub.style.display = (tabId === 'diagnostico') ? 'inline-flex' : 'none';
 
       renderTable();
     }}
@@ -3289,10 +3317,24 @@ def build():
     }}
 
     /* ABA 4: Raio-X de Problemas / Diagnóstico Executivo */
-    function renderDiagnosticoView() {{
-      const diagObj = window.DASHBOARD_DATA.diagnostico_causas || {{}};
-      const defaultDiag = diagObj[activeChannel] || diagObj.total || {{}};
+    let diagMetricMode = 'meta'; // 'meta' | 'mom' | 'yoy'
 
+    function setDiagMetricMode(mode) {{
+      diagMetricMode = mode;
+      
+      // Sincronizar botões de diagnóstico
+      ['meta', 'mom', 'yoy'].forEach(m => {{
+        const cap = m.charAt(0).toUpperCase() + m.slice(1);
+        const btnCard = document.getElementById('btnDiag' + cap);
+        if (btnCard) btnCard.classList.toggle('active', m === mode);
+        const btnSub = document.getElementById('diagSub' + cap);
+        if (btnSub) btnSub.classList.toggle('active', m === mode);
+      }});
+
+      renderDiagnosticoView();
+    }}
+
+    function renderDiagnosticoView() {{
       const channelNames = {{
         'total': 'Total Digital',
         'app': 'App São João',
@@ -3301,67 +3343,229 @@ def build():
       }};
 
       const isFiltered = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
-      document.getElementById('diagSummaryTitle').textContent = `Raio-X de Causa-Raiz — ${{channelNames[activeChannel]}} (D-1)${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
 
-      const renderDiagList = (items, isPositive) => {{
-        if (!items || items.length === 0) return '<div style="font-size: 11.5px; color: var(--text-tertiary); padding: 8px;">Nenhum item relevante para o escopo</div>';
-        return items.slice(0, 6).map(item => `
-          <div class="highlight-item" onclick="filterByLinhaDirect('${{item.nome.replace(/'/g, "\\'")}}')" style="cursor: pointer;" title="Clique para filtrar por ${{item.nome}}">
-            <div class="highlight-info">
-              <span class="highlight-name" title="${{item.nome}}">${{item.nome}}</span>
-              <span class="highlight-cat">${{item.grupo ? item.grupo + ' • ' : ''}}Ating: ${{fmtPct(item.ating_mtd_pct)}} | MoM: ${{fmtSignPct(item.crescimento_mom_pct)}}</span>
-            </div>
-            <div class="highlight-metric">
-              <div class="highlight-gap" style="color: ${{isPositive ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-                ${{(item.gap_mtd >= 0 ? '+' : '') + fmtMoney(item.gap_mtd)}}
-              </div>
-              <div style="font-size: 10.5px; color: var(--text-tertiary);">Desvio: ${{fmtSignPct(item.desvio_pct)}}</div>
-            </div>
-          </div>
-        `).join('');
+      // Atualizar Título, Descrição, Ícone e Badges de Acordo com o Modo
+      const diagIcon = document.getElementById('diagIconBox');
+      const diagTitle = document.getElementById('diagSummaryTitle');
+      const diagDesc = document.getElementById('diagSummaryDesc');
+
+      const updateBadges = (negText, posText) => {{
+        ['Labs', 'Subgrupos', 'Linhas'].forEach(col => {{
+          const bNeg = document.getElementById('badgeDetratores' + col);
+          const bPos = document.getElementById('badgeAceleradores' + col);
+          if (bNeg) bNeg.textContent = negText;
+          if (bPos) bPos.textContent = posText;
+        }});
       }};
 
-      if (!isFiltered) {{
-        document.getElementById('diagListDetratoresLabs').innerHTML = renderDiagList(defaultDiag.detratores_laboratorios, false);
-        document.getElementById('diagListAceleradoresLabs').innerHTML = renderDiagList(defaultDiag.aceleradores_laboratorios, true);
-        document.getElementById('diagListDetratoresSubgrupos').innerHTML = renderDiagList(defaultDiag.detratores_subgrupos, false);
-        document.getElementById('diagListAceleradoresSubgrupos').innerHTML = renderDiagList(defaultDiag.aceleradores_subgrupos, true);
-        document.getElementById('diagListDetratoresLinhas').innerHTML = renderDiagList(defaultDiag.detratores_linhas, false);
-        document.getElementById('diagListAceleradoresLinhas').innerHTML = renderDiagList(defaultDiag.aceleradores_linhas, true);
-        return;
+      if (diagMetricMode === 'meta') {{
+        if (diagIcon) diagIcon.textContent = '🎯';
+        if (diagTitle) diagTitle.textContent = `Raio-X de Causa-Raiz — Desvio da Meta (${{channelNames[activeChannel]}}) (D-1)${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
+        if (diagDesc) diagDesc.textContent = 'Identificação prática dos principais fornecedores, subgrupos e linhas que impedem (GAP Déficit) ou aceleram o atingimento da meta orçada.';
+        updateBadges('Detratores de Meta', 'Aceleradores');
+      }} else if (diagMetricMode === 'mom') {{
+        if (diagIcon) diagIcon.textContent = '📈';
+        if (diagTitle) diagTitle.textContent = `Raio-X de Crescimento MoM — vs Ago/26 (${{channelNames[activeChannel]}}) (D-1)${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
+        if (diagDesc) diagDesc.textContent = 'Identificação prática de quem mais perdeu faturamento (contração MoM) ou quem mais cresceu em relação ao mesmo período do mês anterior (Ago/26).';
+        updateBadges('Maiores Quedas MoM', 'Maiores Altas MoM');
+      }} else if (diagMetricMode === 'yoy') {{
+        if (diagIcon) diagIcon.textContent = '🚀';
+        if (diagTitle) diagTitle.textContent = `Raio-X de Evolução Anual YoY — vs Set/25 (${{channelNames[activeChannel]}}) (D-1)${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
+        if (diagDesc) diagDesc.textContent = 'Identificação prática de quem mais perdeu faturamento (queda anual) ou quem mais expandiu em relação ao mesmo período do ano anterior (Set/25).';
+        updateBadges('Maiores Quedas YoY', 'Maiores Altas YoY');
       }}
 
-      // Escopo filtrado: computar dinamicamente
+      // Dados filtrados do escopo
       const fLabs = getFilteredLaboratorios();
       const fSubs = getFilteredSubgrupos();
       const fLins = getFilteredLinhas();
 
-      const extractMetrics = (items, nameProp) => {{
-        return items.map(it => {{
-          const ch = (it.canais && it.canais[activeChannel]) ? it.canais[activeChannel] : it;
-          return {{
-            nome: it[nameProp],
-            grupo: it.grupo || (it.grupos ? it.grupos[0] : ''),
+      const labsM = fLabs.map(it => {{
+        const ch = (it.canais && it.canais[activeChannel]) ? it.canais[activeChannel] : it;
+        return {{
+          nome: it.laboratorio,
+          grupo: it.grupos ? it.grupos.join(', ') : (it.grupo || ''),
+          tipo: 'lab',
+          realizado_mtd: ch.realizado_mtd || 0,
+          meta_mtd: ch.meta_mtd || 0,
+          gap_mtd: ch.gap_mtd || 0,
+          desvio_pct: ch.desvio_pct || 0,
+          ating_mtd_pct: ch.ating_mtd_pct || 0,
+          v26_06_mtd: ch.v26_06_mtd || 0,
+          crescimento_mom_pct: ch.crescimento_mom_pct || 0,
+          crescimento_mom_diff: ch.crescimento_mom_diff !== undefined ? ch.crescimento_mom_diff : ((ch.realizado_mtd || 0) - (ch.v26_06_mtd || 0)),
+          v25_mtd: ch.v25_mtd || 0,
+          crescimento_yoy_pct: ch.crescimento_yoy_pct || 0,
+          crescimento_yoy_diff: ch.crescimento_yoy_diff !== undefined ? ch.crescimento_yoy_diff : ((ch.realizado_mtd || 0) - (ch.v25_mtd || 0))
+        }};
+      }});
+
+      const subsM = fSubs.map(it => {{
+        const ch = (it.canais && it.canais[activeChannel]) ? it.canais[activeChannel] : it;
+        return {{
+          nome: it.subgrupo,
+          grupo: it.grupo || '',
+          tipo: 'subgrupo',
+          realizado_mtd: ch.realizado_mtd || 0,
+          meta_mtd: ch.meta_mtd || 0,
+          gap_mtd: ch.gap_mtd || 0,
+          desvio_pct: ch.desvio_pct || 0,
+          ating_mtd_pct: ch.ating_mtd_pct || 0,
+          v26_06_mtd: ch.v26_06_mtd || 0,
+          crescimento_mom_pct: ch.crescimento_mom_pct || 0,
+          crescimento_mom_diff: ch.crescimento_mom_diff !== undefined ? ch.crescimento_mom_diff : ((ch.realizado_mtd || 0) - (ch.v26_06_mtd || 0)),
+          v25_mtd: ch.v25_mtd || 0,
+          crescimento_yoy_pct: ch.crescimento_yoy_pct || 0,
+          crescimento_yoy_diff: ch.crescimento_yoy_diff !== undefined ? ch.crescimento_yoy_diff : ((ch.realizado_mtd || 0) - (ch.v25_mtd || 0))
+        }};
+      }});
+
+      // Agrupar linhas para evitar duplicatas em múltiplos subgrupos/fornecedores
+      const linhaMap = new Map();
+      fLins.forEach(it => {{
+        const ch = (it.canais && it.canais[activeChannel]) ? it.canais[activeChannel] : it;
+        const linName = it.linha;
+        if (!linhaMap.has(linName)) {{
+          linhaMap.set(linName, {{
+            nome: linName,
+            grupo: it.grupo || '',
+            subgrupo: it.subgrupo || '',
+            tipo: 'linha',
+            realizado_mtd: ch.realizado_mtd || 0,
+            meta_mtd: ch.meta_mtd || 0,
             gap_mtd: ch.gap_mtd || 0,
             desvio_pct: ch.desvio_pct || 0,
             ating_mtd_pct: ch.ating_mtd_pct || 0,
-            crescimento_mom_pct: ch.crescimento_mom_pct || 0
-          }};
-        }});
+            v26_06_mtd: ch.v26_06_mtd || 0,
+            crescimento_mom_pct: ch.crescimento_mom_pct || 0,
+            crescimento_mom_diff: ch.crescimento_mom_diff !== undefined ? ch.crescimento_mom_diff : ((ch.realizado_mtd || 0) - (ch.v26_06_mtd || 0)),
+            v25_mtd: ch.v25_mtd || 0,
+            crescimento_yoy_pct: ch.crescimento_yoy_pct || 0,
+            crescimento_yoy_diff: ch.crescimento_yoy_diff !== undefined ? ch.crescimento_yoy_diff : ((ch.realizado_mtd || 0) - (ch.v25_mtd || 0))
+          }});
+        }} else {{
+          const ex = linhaMap.get(linName);
+          ex.realizado_mtd += (ch.realizado_mtd || 0);
+          ex.meta_mtd += (ch.meta_mtd || 0);
+          ex.gap_mtd = ex.realizado_mtd - ex.meta_mtd;
+          ex.ating_mtd_pct = ex.meta_mtd > 0 ? (ex.realizado_mtd / ex.meta_mtd) * 100 : 0;
+          ex.desvio_pct = ex.meta_mtd > 0 ? ((ex.realizado_mtd / ex.meta_mtd) - 1) * 100 : 0;
+          ex.v26_06_mtd += (ch.v26_06_mtd || 0);
+          ex.crescimento_mom_diff = ex.realizado_mtd - ex.v26_06_mtd;
+          ex.crescimento_mom_pct = ex.v26_06_mtd > 0 ? ((ex.realizado_mtd - ex.v26_06_mtd) / ex.v26_06_mtd) * 100 : 0;
+          ex.v25_mtd += (ch.v25_mtd || 0);
+          ex.crescimento_yoy_diff = ex.realizado_mtd - ex.v25_mtd;
+          ex.crescimento_yoy_pct = ex.v25_mtd > 0 ? ((ex.realizado_mtd - ex.v25_mtd) / ex.v25_mtd) * 100 : 0;
+        }}
+      }});
+      const linsM = Array.from(linhaMap.values());
+
+      let detrLabs = [], acelLabs = [];
+      let detrSubs = [], acelSubs = [];
+      let detrLins = [], acelLins = [];
+
+      if (diagMetricMode === 'meta') {{
+        detrLabs = labsM.filter(x => x.gap_mtd < 0).sort((a, b) => a.gap_mtd - b.gap_mtd).slice(0, 6);
+        acelLabs = labsM.filter(x => x.gap_mtd > 0).sort((a, b) => b.gap_mtd - a.gap_mtd).slice(0, 6);
+
+        detrSubs = subsM.filter(x => x.gap_mtd < 0).sort((a, b) => a.gap_mtd - b.gap_mtd).slice(0, 6);
+        acelSubs = subsM.filter(x => x.gap_mtd > 0).sort((a, b) => b.gap_mtd - a.gap_mtd).slice(0, 6);
+
+        detrLins = linsM.filter(x => x.gap_mtd < 0).sort((a, b) => a.gap_mtd - b.gap_mtd).slice(0, 6);
+        acelLins = linsM.filter(x => x.gap_mtd > 0).sort((a, b) => b.gap_mtd - a.gap_mtd).slice(0, 6);
+      }} else if (diagMetricMode === 'mom') {{
+        detrLabs = labsM.filter(x => x.crescimento_mom_diff < 0).sort((a, b) => a.crescimento_mom_diff - b.crescimento_mom_diff).slice(0, 6);
+        acelLabs = labsM.filter(x => x.crescimento_mom_diff > 0).sort((a, b) => b.crescimento_mom_diff - a.crescimento_mom_diff).slice(0, 6);
+
+        detrSubs = subsM.filter(x => x.crescimento_mom_diff < 0).sort((a, b) => a.crescimento_mom_diff - b.crescimento_mom_diff).slice(0, 6);
+        acelSubs = subsM.filter(x => x.crescimento_mom_diff > 0).sort((a, b) => b.crescimento_mom_diff - a.crescimento_mom_diff).slice(0, 6);
+
+        detrLins = linsM.filter(x => x.crescimento_mom_diff < 0).sort((a, b) => a.crescimento_mom_diff - b.crescimento_mom_diff).slice(0, 6);
+        acelLins = linsM.filter(x => x.crescimento_mom_diff > 0).sort((a, b) => b.crescimento_mom_diff - a.crescimento_mom_diff).slice(0, 6);
+      }} else if (diagMetricMode === 'yoy') {{
+        detrLabs = labsM.filter(x => x.crescimento_yoy_diff < 0).sort((a, b) => a.crescimento_yoy_diff - b.crescimento_yoy_diff).slice(0, 6);
+        acelLabs = labsM.filter(x => x.crescimento_yoy_diff > 0).sort((a, b) => b.crescimento_yoy_diff - a.crescimento_yoy_diff).slice(0, 6);
+
+        detrSubs = subsM.filter(x => x.crescimento_yoy_diff < 0).sort((a, b) => a.crescimento_yoy_diff - b.crescimento_yoy_diff).slice(0, 6);
+        acelSubs = subsM.filter(x => x.crescimento_yoy_diff > 0).sort((a, b) => b.crescimento_yoy_diff - a.crescimento_yoy_diff).slice(0, 6);
+
+        detrLins = linsM.filter(x => x.crescimento_yoy_diff < 0).sort((a, b) => a.crescimento_yoy_diff - b.crescimento_yoy_diff).slice(0, 6);
+        acelLins = linsM.filter(x => x.crescimento_yoy_diff > 0).sort((a, b) => b.crescimento_yoy_diff - a.crescimento_yoy_diff).slice(0, 6);
+      }}
+
+      const renderDiagList = (items, isPositive) => {{
+        if (!items || items.length === 0) {{
+          const emptyMsg = isPositive 
+            ? 'Nenhum item com crescimento no escopo' 
+            : 'Nenhum item com detração/queda no escopo';
+          return `<div style="font-size: 11.5px; color: var(--text-tertiary); padding: 12px; text-align: center;">${{emptyMsg}}</div>`;
+        }}
+
+        return items.map((item, idx) => {{
+          let onClickHandler = '';
+          if (item.tipo === 'lab') {{
+            onClickHandler = `selectLabDirect('${{item.nome.replace(/'/g, "\\'")}}')`;
+          }} else if (item.tipo === 'subgrupo') {{
+            onClickHandler = `selectSubgrupoDirect('${{item.nome.replace(/'/g, "\\'")}}', '${{(item.grupo || '').replace(/'/g, "\\'")}}')`;
+          }} else {{
+            onClickHandler = `filterByLinhaDirect('${{item.nome.replace(/'/g, "\\'")}}')`;
+          }}
+
+          let topMetricHtml = '';
+          let subMetricHtml = '';
+          let subInfoText = '';
+
+          if (diagMetricMode === 'meta') {{
+            topMetricHtml = `
+              <div class="highlight-gap" style="color: ${{isPositive ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+                ${{(item.gap_mtd >= 0 ? '+' : '') + fmtMoney(item.gap_mtd)}}
+              </div>
+            `;
+            subMetricHtml = `<div style="font-size: 10.5px; color: var(--text-tertiary);">Desvio: ${{fmtSignPct(item.desvio_pct)}}</div>`;
+            subInfoText = `${{item.grupo ? item.grupo + ' • ' : ''}}Ating: ${{fmtPct(item.ating_mtd_pct)}} | Real: ${{fmtMoney(item.realizado_mtd)}}`;
+          }} else if (diagMetricMode === 'mom') {{
+            topMetricHtml = `
+              <div class="highlight-gap" style="color: ${{isPositive ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+                ${{(item.crescimento_mom_diff >= 0 ? '+' : '') + fmtMoney(item.crescimento_mom_diff)}}
+              </div>
+            `;
+            subMetricHtml = `<div style="font-size: 10.5px; color: ${{item.crescimento_mom_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}}; font-weight: 600;">MoM: ${{fmtSignPct(item.crescimento_mom_pct)}}</div>`;
+            subInfoText = `${{item.grupo ? item.grupo + ' • ' : ''}}Real: ${{fmtMoney(item.realizado_mtd)}} | Ago: ${{fmtMoney(item.v26_06_mtd)}}`;
+          }} else if (diagMetricMode === 'yoy') {{
+            topMetricHtml = `
+              <div class="highlight-gap" style="color: ${{isPositive ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+                ${{(item.crescimento_yoy_diff >= 0 ? '+' : '') + fmtMoney(item.crescimento_yoy_diff)}}
+              </div>
+            `;
+            subMetricHtml = `<div style="font-size: 10.5px; color: ${{item.crescimento_yoy_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}}; font-weight: 600;">YoY: ${{fmtSignPct(item.crescimento_yoy_pct)}}</div>`;
+            subInfoText = `${{item.grupo ? item.grupo + ' • ' : ''}}Real: ${{fmtMoney(item.realizado_mtd)}} | Set/25: ${{fmtMoney(item.v25_mtd)}}`;
+          }}
+
+          return `
+            <div class="highlight-item" onclick="${{onClickHandler}}" style="cursor: pointer;" title="Clique para filtrar por ${{item.nome}}">
+              <div class="highlight-info">
+                <span class="highlight-name" title="${{item.nome}}">
+                  <span style="color: var(--text-tertiary); font-size: 11px; margin-right: 4px; font-weight: 600;">#${{idx + 1}}</span>${{item.nome}}
+                </span>
+                <span class="highlight-cat">${{subInfoText}}</span>
+              </div>
+              <div class="highlight-metric">
+                ${{topMetricHtml}}
+                ${{subMetricHtml}}
+              </div>
+            </div>
+          `;
+        }}).join('');
       }};
 
-      const labsM = extractMetrics(fLabs, 'laboratorio');
-      const subsM = extractMetrics(fSubs, 'subgrupo');
-      const linsM = extractMetrics(fLins, 'linha');
+      document.getElementById('diagListDetratoresLabs').innerHTML = renderDiagList(detrLabs, false);
+      document.getElementById('diagListAceleradoresLabs').innerHTML = renderDiagList(acelLabs, true);
 
-      document.getElementById('diagListDetratoresLabs').innerHTML = renderDiagList(labsM.filter(x => x.gap_mtd < 0).sort((a,b) => a.gap_mtd - b.gap_mtd), false);
-      document.getElementById('diagListAceleradoresLabs').innerHTML = renderDiagList(labsM.filter(x => x.gap_mtd > 0).sort((a,b) => b.gap_mtd - a.gap_mtd), true);
+      document.getElementById('diagListDetratoresSubgrupos').innerHTML = renderDiagList(detrSubs, false);
+      document.getElementById('diagListAceleradoresSubgrupos').innerHTML = renderDiagList(acelSubs, true);
 
-      document.getElementById('diagListDetratoresSubgrupos').innerHTML = renderDiagList(subsM.filter(x => x.gap_mtd < 0).sort((a,b) => a.gap_mtd - b.gap_mtd), false);
-      document.getElementById('diagListAceleradoresSubgrupos').innerHTML = renderDiagList(subsM.filter(x => x.gap_mtd > 0).sort((a,b) => b.gap_mtd - a.gap_mtd), true);
-
-      document.getElementById('diagListDetratoresLinhas').innerHTML = renderDiagList(linsM.filter(x => x.gap_mtd < 0).sort((a,b) => a.gap_mtd - b.gap_mtd), false);
-      document.getElementById('diagListAceleradoresLinhas').innerHTML = renderDiagList(linsM.filter(x => x.gap_mtd > 0).sort((a,b) => b.gap_mtd - a.gap_mtd), true);
+      document.getElementById('diagListDetratoresLinhas').innerHTML = renderDiagList(detrLins, false);
+      document.getElementById('diagListAceleradoresLinhas').innerHTML = renderDiagList(acelLins, true);
     }}
 
     /* ABA 5: Top SKUs */
