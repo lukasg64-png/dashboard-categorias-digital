@@ -118,9 +118,17 @@ async def fetch_qlik_data():
                             });
                             const rawMaxDia = diasComVenda.size > 0 ? Math.max(...Array.from(diasComVenda)) : 1;
                             const today = new Date().getDate();
-                            const maxDia = Math.max(1, Math.min(rawMaxDia, today > 1 ? today - 1 : rawMaxDia));
+                            const d_minus_1 = today > 1 ? today - 1 : 1;
+                            const maxDia = Math.max(1, Math.min(rawMaxDia, d_minus_1));
                             const dayFilter = `[Dia]={"<=${maxDia}"}`;
                             resData.maxDia = maxDia;
+
+                            // Zera qualquer venda de 2026 (v26) para dias > maxDia (ex: dia corrente parcial)
+                            resData.canais_dia.forEach(r => {
+                                if (Number(r[1]) > maxDia) {
+                                    r[2] = 0;
+                                }
+                            });
 
                             // 2. Hierarquia Digital (Canal x Grupo x Subgrupo x Linha MTD)
                             const c2 = await send("CreateSessionObject", docHandle, [{
@@ -189,7 +197,7 @@ async def fetch_qlik_data():
                     setTimeout(() => {
                         try { ws.close(); } catch(e) {}
                         resolve(null);
-                    }, 15000);
+                    }, 60000);
                 });
             };"""
             results = await page.evaluate(queries_js)
@@ -253,10 +261,18 @@ def load_fallback_data():
                     if v26 > 0 or v26_06 > 0 or v25_val > 0:
                         canais_dia_rows.append([c.get('canal'), d_idx + 1, v26, v26_06, v25_val])
 
-    dias_com_venda = [r[1] for r in canais_dia_rows if float(r[2] or 0) > 0]
     import datetime
     today = datetime.datetime.now().day
-    computed_max = max(dias_com_venda) if dias_com_venda else (today - 1 if today > 1 else 1)
+    d_minus_1 = today - 1 if today > 1 else 1
+
+    dias_com_venda = [r[1] for r in canais_dia_rows if float(r[2] or 0) > 0 and r[1] <= d_minus_1]
+    raw_max = max(dias_com_venda) if dias_com_venda else d_minus_1
+    computed_max = min(raw_max, d_minus_1)
+
+    # Zera vendas de 2026 para dias > computed_max (dias parciais/incompletos)
+    for row in canais_dia_rows:
+        if row[1] > computed_max:
+            row[2] = 0.0
 
     return {
         'canais_dia': canais_dia_rows,

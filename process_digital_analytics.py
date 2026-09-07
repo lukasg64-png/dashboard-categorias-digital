@@ -74,9 +74,15 @@ def main():
     with open(qlik_raw_file, 'r', encoding='utf-8') as f:
         qlik_raw = json.load(f)
 
-    max_dia = qlik_raw.get('maxDia', 3)
-    if max_dia < 1: max_dia = 3
-    print(f"Data de corte D-1 identificada: Dia {max_dia}/09/2026")
+    import datetime
+    today_day = datetime.datetime.now().day
+    d_minus_1 = today_day - 1 if today_day > 1 else 1
+
+    max_dia = qlik_raw.get('maxDia', d_minus_1)
+    # Regra estrita D-1: NUNCA pode incluir o dia corrente inacabado
+    max_dia = min(max_dia, d_minus_1)
+    if max_dia < 1: max_dia = 1
+    print(f"Data de corte D-1 oficial: Dia {max_dia:02d}/09/2026 (Hoje = {today_day:02d}/09)")
 
     pct_acum_dmax = curva_diaria[max_dia - 1]['pct_acum']
     print(f"Percentual acumulado da curva até o Dia {max_dia}: {pct_acum_dmax * 100:.2f}%")
@@ -97,6 +103,10 @@ def main():
         v26 = float(r[2] or 0.0)
         v26_06 = float(r[3] or 0.0)
         v25 = float(r[4] or 0.0)
+
+        # Regra D-1 estrita: não carrega vendas do ano atual para dias posteriores ao corte fechado
+        if dia > max_dia:
+            v26 = 0.0
 
         cat = map_channel_category(canal)
         if cat != 'outros':
