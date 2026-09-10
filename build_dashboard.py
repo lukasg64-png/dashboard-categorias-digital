@@ -526,6 +526,135 @@ def build():
       vertical-align: middle;
     }}
 
+    /* Filtro de Período / Date Range & Presets */
+    .date-filter-container {{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px 16px;
+      background: var(--surface-subtle);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }}
+
+    .date-filter-label-group {{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }}
+
+    .date-filter-title {{
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }}
+
+    .date-inputs-pair {{
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }}
+
+    .date-input-wrap {{
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }}
+
+    .date-input-wrap label {{
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }}
+
+    .apple-date-input {{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      outline: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    }}
+
+    .apple-date-input:hover {{
+      border-color: var(--apple-blue);
+    }}
+
+    .apple-date-input:focus {{
+      border-color: var(--apple-blue);
+      box-shadow: 0 0 0 3px var(--apple-blue-soft);
+    }}
+
+    .date-range-separator {{
+      font-size: 12px;
+      color: var(--text-tertiary);
+      font-weight: 600;
+      margin-top: 14px;
+    }}
+
+    .date-presets-group {{
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }}
+
+    .preset-pill {{
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      font-size: 11.5px;
+      font-weight: 600;
+      background: var(--surface);
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+      user-select: none;
+    }}
+
+    .preset-pill:hover {{
+      background: var(--surface-hover);
+      color: var(--text-primary);
+      border-color: var(--apple-blue);
+      transform: translateY(-1px);
+    }}
+
+    .preset-pill.active {{
+      background: var(--apple-blue);
+      color: #FFFFFF !important;
+      border-color: var(--apple-blue);
+      box-shadow: 0 2px 8px var(--apple-blue-soft);
+    }}
+
+    .date-period-badge {{
+      font-size: 11.5px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 113, 227, 0.08);
+      color: var(--apple-blue);
+      border: 1px solid rgba(0, 113, 227, 0.2);
+    }}
+
     /* Pílulas de Acesso Rápido a Categorias Macro */
     .filter-quick-pills {{
       display: flex;
@@ -1285,6 +1414,35 @@ def build():
         </div>
       </div>
 
+      <!-- Filtro de Período / Data Diarizada (Date Range & Quick Presets) -->
+      <div class="date-filter-container">
+        <div class="date-filter-label-group">
+          <span class="date-filter-title">📅 Período de Análise:</span>
+          <div class="date-inputs-pair">
+            <div class="date-input-wrap">
+              <label for="filterDateIni">Início</label>
+              <input type="date" id="filterDateIni" class="apple-date-input" min="2026-09-01" max="2026-09-{max_dia_str}" value="2026-09-01" onchange="onDateInputChange()">
+            </div>
+            <span class="date-range-separator">até</span>
+            <div class="date-input-wrap">
+              <label for="filterDateEnd">Fim</label>
+              <input type="date" id="filterDateEnd" class="apple-date-input" min="2026-09-01" max="2026-09-{max_dia_str}" value="2026-09-{max_dia_str}" onchange="onDateInputChange()">
+            </div>
+          </div>
+        </div>
+
+        <div class="date-presets-group">
+          <span class="preset-pill active" id="presetMtd" onclick="selectDatePreset('mtd')">⭐ Mês Acumulado (MTD)</span>
+          <span class="preset-pill" id="presetYesterday" onclick="selectDatePreset('yesterday')">⚡ Ontem (D-1)</span>
+          <span class="preset-pill" id="preset7Days" onclick="selectDatePreset('7days')">📆 Últimos 7 Dias</span>
+          <span class="preset-pill" id="presetThisWeek" onclick="selectDatePreset('this_week')">🗓️ Semana Atual</span>
+        </div>
+
+        <div class="date-period-badge" id="datePeriodInfo">
+          <span>01 a {max_dia_str}/09/2026 ({max_dia} dias)</span>
+        </div>
+      </div>
+
       <!-- Pílulas de Acesso Rápido a Categorias Macro -->
       <div class="filter-quick-pills">
         <span class="quick-pill active" id="pillGrupoAll" onclick="selectQuickGrupo('')">⭐ Todos os Grupos</span>
@@ -1346,12 +1504,12 @@ def build():
       <!-- 1. Faturamento Realizado MTD -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span>Venda Realizada MTD</span>
+          <span id="kpiVendaTitle">Venda Realizada MTD</span>
           <span>💰</span>
         </div>
         <div class="kpi-value" id="kpiVendaMtd" style="color: var(--apple-blue);">R$ 5.897.259</div>
         <div class="kpi-subtext">
-          <span>Meta MTD: <strong id="kpiMetaMtdRef" style="color: var(--text-primary);">R$ 5.875.260</strong></span>
+          <span><span id="kpiMetaLabel">Meta MTD</span>: <strong id="kpiMetaMtdRef" style="color: var(--text-primary);">R$ 5.875.260</strong></span>
           <span style="color: var(--text-tertiary);">• Curva: <strong id="kpiPctCurva">10.73%</strong></span>
         </div>
       </div>
@@ -1359,7 +1517,7 @@ def build():
       <!-- 2. Atingimento da Meta & GAP MTD -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span>Atingimento & GAP MTD</span>
+          <span id="kpiAtingTitle">Atingimento & GAP MTD</span>
           <span>🎯</span>
         </div>
         <div class="kpi-value" id="kpiAtingMtd" style="color: var(--apple-green);">100.4%</div>
@@ -1624,6 +1782,12 @@ def build():
     let activeTableTab = 'canais'; // 'canais', 'hierarquia', 'laboratorios', 'diagnostico', 'skus'
     let hierarquiaSubView = 'linhas'; // 'linhas', 'subgrupos', 'grupos'
     
+    // Filtro de Período / Date Range & Presets
+    let maxDia = 9;
+    let selectedDiaIni = 1;
+    let selectedDiaEnd = 9;
+    let activeDatePreset = 'mtd'; // 'mtd', 'yesterday', '7days', 'this_week', 'custom'
+
     // Filtros Globais
     let selectedGrupo = '';
     let selectedSubgrupo = '';
@@ -1664,6 +1828,224 @@ def build():
       initDashboard();
     }});
 
+    function initDateFilterState() {{
+      const d = window.DASHBOARD_DATA;
+      maxDia = (d && d.kpis && d.kpis.max_dia) || 9;
+      selectedDiaIni = 1;
+      selectedDiaEnd = maxDia;
+      activeDatePreset = 'mtd';
+
+      const pad = (n) => String(n).padStart(2, '0');
+      const iniEl = document.getElementById('filterDateIni');
+      const endEl = document.getElementById('filterDateEnd');
+      if (iniEl) {{
+        iniEl.max = `2026-09-${{pad(maxDia)}}`;
+        iniEl.value = '2026-09-01';
+      }}
+      if (endEl) {{
+        endEl.max = `2026-09-${{pad(maxDia)}}`;
+        endEl.value = `2026-09-${{pad(maxDia)}}`;
+      }}
+      updateDatePeriodBadge();
+      updatePresetButtonsState();
+    }}
+
+    function getPeriodMetaPct() {{
+      const curva = (window.DASHBOARD_DATA && window.DASHBOARD_DATA.curva_diaria) || [];
+      let sumPct = 0;
+      for (let d = selectedDiaIni; d <= selectedDiaEnd; d++) {{
+        if (d - 1 < curva.length) {{
+          sumPct += (curva[d - 1].pct_mes || 0);
+        }}
+      }}
+      return Math.round(sumPct * 100) / 100;
+    }}
+
+    function getPeriodLabel() {{
+      const isFullMtd = (selectedDiaIni === 1 && selectedDiaEnd === maxDia);
+      if (isFullMtd) return 'MTD';
+      const pad = (n) => String(n).padStart(2, '0');
+      if (selectedDiaIni === selectedDiaEnd) {{
+        return `Dia ${{pad(selectedDiaIni)}}`;
+      }}
+      return `${{pad(selectedDiaIni)}} a ${{pad(selectedDiaEnd)}}/09`;
+    }}
+
+    function updateDatePeriodBadge() {{
+      const badge = document.getElementById('datePeriodInfo');
+      if (!badge) return;
+      const pad = (n) => String(n).padStart(2, '0');
+      const diffDias = (selectedDiaEnd - selectedDiaIni + 1);
+
+      if (selectedDiaIni === 1 && selectedDiaEnd === maxDia) {{
+        badge.innerHTML = `<span>01 a ${{pad(maxDia)}}/09/2026 (${{maxDia}} dias MTD)</span>`;
+      }} else if (selectedDiaIni === selectedDiaEnd) {{
+        const curva = (window.DASHBOARD_DATA && window.DASHBOARD_DATA.curva_diaria) || [];
+        const dow = (curva[selectedDiaIni - 1] && curva[selectedDiaIni - 1].dow) ? ` (${{curva[selectedDiaIni - 1].dow}})` : '';
+        const isYesterday = (selectedDiaIni === maxDia);
+        badge.innerHTML = `<span>${{pad(selectedDiaIni)}}/09/2026${{dow}}${{isYesterday ? ' • Ontem' : ''}} (1 dia)</span>`;
+      }} else {{
+        badge.innerHTML = `<span>${{pad(selectedDiaIni)}} a ${{pad(selectedDiaEnd)}}/09/2026 (${{diffDias}} dias)</span>`;
+      }}
+    }}
+
+    function updatePresetButtonsState() {{
+      const presets = ['mtd', 'yesterday', '7days', 'this_week'];
+      presets.forEach(p => {{
+        let btnId = 'presetMtd';
+        if (p === 'yesterday') btnId = 'presetYesterday';
+        if (p === '7days') btnId = 'preset7Days';
+        if (p === 'this_week') btnId = 'presetThisWeek';
+        const btn = document.getElementById(btnId);
+        if (btn) {{
+          btn.classList.toggle('active', p === activeDatePreset);
+        }}
+      }});
+    }}
+
+    function selectDatePreset(preset) {{
+      activeDatePreset = preset;
+      const pad = (n) => String(n).padStart(2, '0');
+
+      if (preset === 'mtd') {{
+        selectedDiaIni = 1;
+        selectedDiaEnd = maxDia;
+      }} else if (preset === 'yesterday') {{
+        selectedDiaIni = maxDia;
+        selectedDiaEnd = maxDia;
+      }} else if (preset === '7days') {{
+        selectedDiaIni = Math.max(1, maxDia - 6);
+        selectedDiaEnd = maxDia;
+      }} else if (preset === 'this_week') {{
+        const curva = (window.DASHBOARD_DATA && window.DASHBOARD_DATA.curva_diaria) || [];
+        let segDia = 1;
+        for (let d = maxDia; d >= 1; d--) {{
+          if (curva[d - 1] && curva[d - 1].dow === 'Seg') {{
+            segDia = d;
+            break;
+          }}
+        }}
+        selectedDiaIni = segDia;
+        selectedDiaEnd = maxDia;
+      }}
+
+      const iniEl = document.getElementById('filterDateIni');
+      const endEl = document.getElementById('filterDateEnd');
+      if (iniEl) iniEl.value = `2026-09-${{pad(selectedDiaIni)}}`;
+      if (endEl) endEl.value = `2026-09-${{pad(selectedDiaEnd)}}`;
+
+      updateDatePeriodBadge();
+      updatePresetButtonsState();
+      applyGlobalFilters();
+    }}
+
+    function onDateInputChange() {{
+      const iniEl = document.getElementById('filterDateIni');
+      const endEl = document.getElementById('filterDateEnd');
+      if (!iniEl || !endEl) return;
+
+      const pad = (n) => String(n).padStart(2, '0');
+      let iniVal = parseInt(iniEl.value.split('-')[2], 10) || 1;
+      let endVal = parseInt(endEl.value.split('-')[2], 10) || maxDia;
+
+      if (iniVal < 1) iniVal = 1;
+      if (iniVal > maxDia) iniVal = maxDia;
+      if (endVal < 1) endVal = 1;
+      if (endVal > maxDia) endVal = maxDia;
+
+      if (iniVal > endVal) {{
+        endVal = iniVal;
+      }}
+
+      selectedDiaIni = iniVal;
+      selectedDiaEnd = endVal;
+      iniEl.value = `2026-09-${{pad(selectedDiaIni)}}`;
+      endEl.value = `2026-09-${{pad(selectedDiaEnd)}}`;
+
+      if (selectedDiaIni === 1 && selectedDiaEnd === maxDia) {{
+        activeDatePreset = 'mtd';
+      }} else if (selectedDiaIni === maxDia && selectedDiaEnd === maxDia) {{
+        activeDatePreset = 'yesterday';
+      }} else if (selectedDiaIni === Math.max(1, maxDia - 6) && selectedDiaEnd === maxDia) {{
+        activeDatePreset = '7days';
+      }} else {{
+        activeDatePreset = 'custom';
+      }}
+
+      updateDatePeriodBadge();
+      updatePresetButtonsState();
+      applyGlobalFilters();
+    }}
+
+    function getItemPeriodMetrics(item, chKey) {{
+      const ch = (item.canais && item.canais[chKey]) ? item.canais[chKey] : (item[chKey] || item);
+      const isFullMtd = (selectedDiaIni === 1 && selectedDiaEnd === maxDia);
+
+      if (isFullMtd) {{
+        return {{
+          realizado: ch.realizado_mtd || 0,
+          meta: ch.meta_mtd || 0,
+          gap: ch.gap_mtd || 0,
+          ating: ch.ating_mtd_pct || 0,
+          desvio: ch.desvio_pct || 0,
+          v26_06: ch.v26_06_mtd || 0,
+          cresc_mom_pct: ch.crescimento_mom_pct || 0,
+          cresc_mom_diff: ch.crescimento_mom_diff !== undefined ? ch.crescimento_mom_diff : ((ch.realizado_mtd || 0) - (ch.v26_06_mtd || 0)),
+          v25: ch.v25_mtd || 0,
+          cresc_yoy_pct: ch.crescimento_yoy_pct || 0,
+          cresc_yoy_diff: ch.crescimento_yoy_diff !== undefined ? ch.crescimento_yoy_diff : ((ch.realizado_mtd || 0) - (ch.v25_mtd || 0)),
+          share: ch.share_pct || 0,
+          projecao: ch.projecao_fechamento || 0,
+          meta_mensal: ch.meta_mensal || 0
+        }};
+      }}
+
+      // Período Customizado (ex: Ontem, 7 dias, etc.)
+      let r = 0;
+      const dias = ch.dias || [];
+      for (let d = selectedDiaIni; d <= selectedDiaEnd; d++) {{
+        if (d - 1 < dias.length) {{
+          r += dias[d - 1] || 0;
+        }}
+      }}
+      r = Math.round(r * 100) / 100;
+
+      const periodMetaPct = getPeriodMetaPct();
+      const meta_periodo = Math.round((ch.meta_mensal || 0) * (periodMetaPct / 100) * 100) / 100;
+      const gap = Math.round((r - meta_periodo) * 100) / 100;
+      const ating = meta_periodo > 0 ? ((r / meta_periodo) * 100) : 0;
+      const desvio = meta_periodo > 0 ? (((r / meta_periodo) - 1) * 100) : 0;
+
+      const pctCurvaAcum = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.pct_curva_acum) || 10.73;
+      const ratio = pctCurvaAcum > 0 ? (periodMetaPct / pctCurvaAcum) : 1;
+      const v06 = Math.round((ch.v26_06_mtd || 0) * ratio * 100) / 100;
+      const v25 = Math.round((ch.v25_mtd || 0) * ratio * 100) / 100;
+
+      const mom_pct = v06 > 0 ? (((r - v06) / v06) * 100) : 0;
+      const mom_diff = Math.round((r - v06) * 100) / 100;
+      const yoy_pct = v25 > 0 ? (((r - v25) / v25) * 100) : 0;
+      const yoy_diff = Math.round((r - v25) * 100) / 100;
+
+      const proj = periodMetaPct > 0 ? Math.round((r / (periodMetaPct / 100)) * 100) / 100 : 0;
+
+      return {{
+        realizado: r,
+        meta: meta_periodo,
+        gap: gap,
+        ating: ating,
+        desvio: desvio,
+        v26_06: v06,
+        cresc_mom_pct: mom_pct,
+        cresc_mom_diff: mom_diff,
+        v25: v25,
+        cresc_yoy_pct: yoy_pct,
+        cresc_yoy_diff: yoy_diff,
+        share: ch.share_pct || 0,
+        projecao: proj,
+        meta_mensal: ch.meta_mensal || 0
+      }};
+    }}
+
     function initDashboard() {{
       const d = window.DASHBOARD_DATA;
       if (!d) return;
@@ -1671,6 +2053,7 @@ def build():
       document.getElementById('headerCutDate').textContent = d.kpis.data_corte;
       document.getElementById('dataAtualizacao').textContent = d.gerado_em;
 
+      initDateFilterState();
       populateFilterDropdowns();
       updateChannelNavSummary();
       updateKpis();
@@ -1819,69 +2202,50 @@ def build():
       return items;
     }}
 
-    function formatCanaisBlock(canaisObj) {{
+    function formatCanaisBlock(itemWithCanais) {{
       const chList = [
         {{ id: 'total', nome: 'Total Digital', icone: '🌐', key: 'total' }},
         {{ id: 'app', nome: 'App São João', icone: '📱', key: 'app' }},
         {{ id: 'marketplace', nome: 'Marketplaces', icone: '🛍️', key: 'marketplace' }},
         {{ id: 'site', nome: 'Site Oficial', icone: '🌐', key: 'site' }}
       ];
-      return chList.map(item => {{
-        const d = canaisObj[item.key] || {{}};
+      let totalRealizado = 0;
+      const res = chList.map(item => {{
+        const m = getItemPeriodMetrics(itemWithCanais, item.key);
+        if (item.id === 'total') totalRealizado = m.realizado;
         return {{
           id: item.id,
           nome: item.nome,
           icone: item.icone,
-          venda_mtd: d.realizado_mtd || 0,
-          meta_mtd: d.meta_mtd || 0,
-          ating_mtd_pct: d.ating_mtd_pct || 0,
-          gap_mtd: d.gap_mtd || 0,
-          desvio_pct: d.desvio_pct || 0,
-          v26_06_mtd: d.v26_06_mtd || 0,
-          crescimento_mom_pct: d.crescimento_mom_pct || 0,
-          crescimento_mom_diff: d.crescimento_mom_diff || 0,
-          v25_mtd: d.v25_mtd || 0,
-          crescimento_yoy_pct: d.crescimento_yoy_pct || 0,
-          crescimento_yoy_diff: d.crescimento_yoy_diff || 0,
-          share_realizado_pct: d.share_pct || 0,
-          projecao_fechamento: d.projecao_fechamento || 0,
-          meta_mensal: d.meta_mensal || 0
+          venda_mtd: m.realizado,
+          meta_mtd: m.meta,
+          ating_mtd_pct: m.ating,
+          gap_mtd: m.gap,
+          desvio_pct: m.desvio,
+          v26_06_mtd: m.v26_06,
+          crescimento_mom_pct: m.cresc_mom_pct,
+          crescimento_mom_diff: m.cresc_mom_diff,
+          v25_mtd: m.v25,
+          crescimento_yoy_pct: m.cresc_yoy_pct,
+          crescimento_yoy_diff: m.cresc_yoy_diff,
+          share_realizado_pct: 0,
+          projecao_fechamento: m.projecao,
+          meta_mensal: m.meta_mensal
         }};
       }});
+      res.forEach(c => {{
+        if (c.id !== 'total' && totalRealizado > 0) {{
+          c.share_realizado_pct = (c.venda_mtd / totalRealizado) * 100;
+        }} else if (c.id === 'total') {{
+          c.share_realizado_pct = 100;
+        }}
+      }});
+      return res;
     }}
 
     function getFilteredCanaisData() {{
       const isFilterActive = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
-      if (!isFilterActive) {{
-        return window.DASHBOARD_DATA.canais_tabela;
-      }}
-
-      // Caso 1: Apenas laboratório selecionado sem outros filtros
-      if (selectedLab && !selectedGrupo && !selectedSubgrupo && !searchText) {{
-        const labItem = (window.DASHBOARD_DATA.laboratorios || []).find(l => l.laboratorio === selectedLab);
-        if (labItem && labItem.canais) {{
-          return formatCanaisBlock(labItem.canais);
-        }}
-      }}
-
-      // Caso 2: Apenas Subgrupo selecionado
-      if (selectedSubgrupo && !selectedLab && !searchText) {{
-        const subItem = (window.DASHBOARD_DATA.subgrupos || []).find(s => s.subgrupo === selectedSubgrupo && (!selectedGrupo || s.grupo === selectedGrupo));
-        if (subItem && subItem.canais) {{
-          return formatCanaisBlock(subItem.canais);
-        }}
-      }}
-
-      // Caso 3: Apenas Grupo selecionado
-      if (selectedGrupo && !selectedSubgrupo && !selectedLab && !searchText) {{
-        const grpItem = (window.DASHBOARD_DATA.grupos || []).find(g => g.grupo === selectedGrupo);
-        if (grpItem && grpItem.canais) {{
-          return formatCanaisBlock(grpItem.canais);
-        }}
-      }}
-
-      // Caso 4: Agregação genérica a partir das linhas filtradas
-      const linhas = getFilteredLinhas();
+      const isFullMtd = (selectedDiaIni === 1 && selectedDiaEnd === maxDia);
       const channels = ['total', 'app', 'marketplace', 'site'];
       const channelNames = {{
         'total': 'Total Digital',
@@ -1896,45 +2260,167 @@ def build():
         'site': '🌐'
       }};
 
-      const pctCurva = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.pct_curva_acum) ? (window.DASHBOARD_DATA.kpis.pct_curva_acum / 100) : 0.1073;
+      if (!isFilterActive) {{
+        if (isFullMtd) {{
+          return window.DASHBOARD_DATA.canais_tabela;
+        }}
+        // Sem filtro de categoria, mas com filtro de data ativo:
+        // Agrega os canais diretamente da curva_diaria (precisão oficial por canal)
+        const curva = window.DASHBOARD_DATA.curva_diaria || [];
+        const chKeyMap = {{
+          'total': {{ r: 'real_dia_total', m: 'meta_dia_total', v06: 'v26_06_dia_total', v25: 'v25_dia_total' }},
+          'app': {{ r: 'real_dia_app', m: 'meta_dia_app', v06: 'v26_06_dia_app', v25: 'v25_dia_app' }},
+          'marketplace': {{ r: 'real_dia_mkt', m: 'meta_dia_mkt', v06: 'v26_06_dia_mkt', v25: 'v25_dia_mkt' }},
+          'site': {{ r: 'real_dia_site', m: 'meta_dia_site', v06: 'v26_06_dia_site', v25: 'v25_dia_site' }}
+        }};
+
+        const baseKpis = window.DASHBOARD_DATA.kpis.canais;
+        const periodMetaPct = getPeriodMetaPct();
+        let totalRealizado = 0;
+
+        const res = channels.map(ch => {{
+          const km = chKeyMap[ch];
+          const baseCh = baseKpis[ch] || {{}};
+          let r = 0, m = 0, v06 = 0, v25 = 0;
+
+          for (let d = selectedDiaIni; d <= selectedDiaEnd; d++) {{
+            if (d - 1 < curva.length) {{
+              const row = curva[d - 1];
+              r += (row[km.r] || 0);
+              m += (row[km.m] || 0);
+              v06 += (row[km.v06] || 0);
+              v25 += (row[km.v25] || 0);
+            }}
+          }}
+
+          r = Math.round(r * 100) / 100;
+          m = Math.round(m * 100) / 100;
+          v06 = Math.round(v06 * 100) / 100;
+          v25 = Math.round(v25 * 100) / 100;
+
+          if (ch === 'total') totalRealizado = r;
+
+          const gap = Math.round((r - m) * 100) / 100;
+          const ating = m > 0 ? ((r / m) * 100) : 0;
+          const desvio = m > 0 ? (((r / m) - 1) * 100) : 0;
+          const mom = v06 > 0 ? (((r - v06) / v06) * 100) : 0;
+          const mom_diff = Math.round((r - v06) * 100) / 100;
+          const yoy = v25 > 0 ? (((r - v25) / v25) * 100) : 0;
+          const yoy_diff = Math.round((r - v25) * 100) / 100;
+          const proj = periodMetaPct > 0 ? Math.round((r / (periodMetaPct / 100)) * 100) / 100 : 0;
+
+          return {{
+            id: ch,
+            nome: channelNames[ch],
+            icone: channelIcons[ch],
+            venda_mtd: r,
+            meta_mtd: m,
+            ating_mtd_pct: ating,
+            gap_mtd: gap,
+            desvio_pct: desvio,
+            v26_06_mtd: v06,
+            crescimento_mom_pct: mom,
+            crescimento_mom_diff: mom_diff,
+            v25_mtd: v25,
+            crescimento_yoy_pct: yoy,
+            crescimento_yoy_diff: yoy_diff,
+            share_realizado_pct: 0,
+            projecao_fechamento: proj,
+            meta_mensal: baseCh.meta_mensal || 0
+          }};
+        }});
+
+        res.forEach(c => {{
+          if (c.id !== 'total' && totalRealizado > 0) {{
+            c.share_realizado_pct = (c.venda_mtd / totalRealizado) * 100;
+          }} else if (c.id === 'total') {{
+            c.share_realizado_pct = 100;
+          }}
+        }});
+        return res;
+      }}
+
+      // Caso 1: Apenas laboratório selecionado sem outros filtros
+      if (selectedLab && !selectedGrupo && !selectedSubgrupo && !searchText) {{
+        const labItem = (window.DASHBOARD_DATA.laboratorios || []).find(l => l.laboratorio === selectedLab);
+        if (labItem && labItem.canais) {{
+          return formatCanaisBlock(labItem);
+        }}
+      }}
+
+      // Caso 2: Apenas Subgrupo selecionado
+      if (selectedSubgrupo && !selectedLab && !searchText) {{
+        const subItem = (window.DASHBOARD_DATA.subgrupos || []).find(s => s.subgrupo === selectedSubgrupo && (!selectedGrupo || s.grupo === selectedGrupo));
+        if (subItem && subItem.canais) {{
+          return formatCanaisBlock(subItem);
+        }}
+      }}
+
+      // Caso 3: Apenas Grupo selecionado
+      if (selectedGrupo && !selectedSubgrupo && !selectedLab && !searchText) {{
+        const grpItem = (window.DASHBOARD_DATA.grupos || []).find(g => g.grupo === selectedGrupo);
+        if (grpItem && grpItem.canais) {{
+          return formatCanaisBlock(grpItem);
+        }}
+      }}
+
+      // Caso 4: Agregação genérica a partir das linhas filtradas
+      const linhas = getFilteredLinhas();
+      const periodMetaPct = getPeriodMetaPct();
+      const pctCurvaAcum = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.pct_curva_acum) || 10.73;
+      const ratioPeriodo = pctCurvaAcum > 0 ? (periodMetaPct / pctCurvaAcum) : 1;
 
       let totalRealizado = 0;
       const res = channels.map(ch => {{
-        let r = 0, m_mtd = 0, m_mes = 0, v06 = 0, v25 = 0;
+        let r = 0, m_mes = 0, v06 = 0, v25 = 0;
         linhas.forEach(l => {{
           const c = l.canais ? l.canais[ch] : null;
           if (c) {{
-            r += c.realizado_mtd || 0;
-            m_mtd += c.meta_mtd || 0;
-            m_mes += c.meta_mensal || 0;
-            v06 += c.v26_06_mtd || 0;
-            v25 += c.v25_mtd || 0;
+            m_mes += (c.meta_mensal || 0);
+            v06 += (c.v26_06_mtd || 0);
+            v25 += (c.v25_mtd || 0);
+            if (isFullMtd) {{
+              r += (c.realizado_mtd || 0);
+            }} else {{
+              const dias = c.dias || [];
+              for (let d = selectedDiaIni; d <= selectedDiaEnd; d++) {{
+                if (d - 1 < dias.length) {{
+                  r += (dias[d - 1] || 0);
+                }}
+              }}
+            }}
           }}
         }});
 
         r = Math.round(r * 100) / 100;
-        m_mtd = Math.round(m_mtd * 100) / 100;
         m_mes = Math.round(m_mes * 100) / 100;
-        v06 = Math.round(v06 * 100) / 100;
-        v25 = Math.round(v25 * 100) / 100;
+        const m_periodo = Math.round(m_mes * (periodMetaPct / 100) * 100) / 100;
+
+        if (!isFullMtd) {{
+          v06 = Math.round(v06 * ratioPeriodo * 100) / 100;
+          v25 = Math.round(v25 * ratioPeriodo * 100) / 100;
+        }} else {{
+          v06 = Math.round(v06 * 100) / 100;
+          v25 = Math.round(v25 * 100) / 100;
+        }}
 
         if (ch === 'total') totalRealizado = r;
 
-        const gap = Math.round((r - m_mtd) * 100) / 100;
-        const ating = m_mtd > 0 ? ((r / m_mtd) * 100) : 0;
-        const desvio = m_mtd > 0 ? (((r / m_mtd) - 1) * 100) : 0;
+        const gap = Math.round((r - m_periodo) * 100) / 100;
+        const ating = m_periodo > 0 ? ((r / m_periodo) * 100) : 0;
+        const desvio = m_periodo > 0 ? (((r / m_periodo) - 1) * 100) : 0;
         const mom = v06 > 0 ? (((r - v06) / v06) * 100) : 0;
         const mom_diff = Math.round((r - v06) * 100) / 100;
         const yoy = v25 > 0 ? (((r - v25) / v25) * 100) : 0;
         const yoy_diff = Math.round((r - v25) * 100) / 100;
-        const proj = pctCurva > 0 ? Math.round((r / pctCurva) * 100) / 100 : 0;
+        const proj = periodMetaPct > 0 ? Math.round((r / (periodMetaPct / 100)) * 100) / 100 : 0;
 
         return {{
           id: ch,
           nome: channelNames[ch],
           icone: channelIcons[ch],
           venda_mtd: r,
-          meta_mtd: m_mtd,
+          meta_mtd: m_periodo,
           ating_mtd_pct: ating,
           gap_mtd: gap,
           desvio_pct: desvio,
@@ -2521,9 +3007,12 @@ def build():
     }}
 
     function updateChannelNavSummary() {{
-      const k = window.DASHBOARD_DATA.kpis.canais;
+      const canais = getFilteredCanaisData();
+      const cMap = {{}};
+      canais.forEach(c => {{ cMap[c.id] = c; }});
       
       const fillTab = (id, obj) => {{
+        if (!obj) return;
         document.getElementById(`tabSales${{id}}`).textContent = fmtMoney(obj.venda_mtd);
         document.getElementById(`tabMeta${{id}}`).textContent = fmtMoney(obj.meta_mtd);
         document.getElementById(`badgeAting${{id}}`).textContent = fmtPct(obj.ating_mtd_pct) + (obj.ating_mtd_pct >= 100 ? ' 🚀' : '');
@@ -2551,26 +3040,41 @@ def build():
         }}
       }};
 
-      fillTab('Total', k.total);
-      fillTab('App', k.app);
-      fillTab('Site', k.site);
-      fillTab('Mkt', k.marketplace);
+      fillTab('Total', cMap['total']);
+      fillTab('App', cMap['app']);
+      fillTab('Site', cMap['site']);
+      fillTab('Mkt', cMap['marketplace']);
     }}
 
     function updateKpis() {{
       const canaisList = getFilteredCanaisData();
       const c = canaisList.find(item => item.id === activeChannel) || canaisList[0];
-      const pctCurva = window.DASHBOARD_DATA.kpis.pct_curva_acum || 10.73;
+      const isFullMtd = (selectedDiaIni === 1 && selectedDiaEnd === maxDia);
+      const pLabel = getPeriodLabel();
+      const periodMetaPct = getPeriodMetaPct();
 
-      // 1. Venda Realizada MTD
+      // 1. Venda Realizada
+      const elVendaTitle = document.getElementById('kpiVendaTitle');
+      if (elVendaTitle) {{
+        elVendaTitle.textContent = isFullMtd ? 'Venda Realizada MTD' : `Venda Realizada (${{pLabel}})`;
+      }}
       const elVenda = document.getElementById('kpiVendaMtd');
       if (elVenda) {{ elVenda.textContent = fmtMoney(c.venda_mtd); }}
+      
+      const metaLabel = document.getElementById('kpiMetaLabel');
+      if (metaLabel) {{
+        metaLabel.textContent = isFullMtd ? 'Meta MTD' : `Meta (${{pLabel}})`;
+      }}
       const metaRef = document.getElementById('kpiMetaMtdRef');
       if (metaRef) {{ metaRef.textContent = fmtMoney(c.meta_mtd); }}
       const curvaRef = document.getElementById('kpiPctCurva');
-      if (curvaRef) {{ curvaRef.textContent = pctCurva + '%'; }}
+      if (curvaRef) {{ curvaRef.textContent = periodMetaPct + '%'; }}
 
-      // 2. Atingimento & GAP MTD
+      // 2. Atingimento & GAP
+      const elAtingTitle = document.getElementById('kpiAtingTitle');
+      if (elAtingTitle) {{
+        elAtingTitle.textContent = isFullMtd ? 'Atingimento & GAP MTD' : `Atingimento & GAP (${{pLabel}})`;
+      }}
       const ating = c.ating_mtd_pct;
       const atingElem = document.getElementById('kpiAtingMtd');
       if (atingElem) {{
@@ -2592,15 +3096,16 @@ def build():
         desvioRef.textContent = `Desvio: ${{fmtSignPct(c.desvio_pct)}}`;
       }}
 
-      // 3. Diária Necessária (Run Rate)
-      const diasRestantes = c.dias_restantes || 27;
-      const diariaNec = c.diaria_necessaria !== undefined ? c.diaria_necessaria : (Math.max(0, (c.meta_mensal - c.venda_mtd)) / diasRestantes);
+      // 3. Diária Necessária (Run Rate do Mês)
+      const diasNoMes = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.dias_no_mes) || 30;
+      const diasRestantes = Math.max(1, diasNoMes - maxDia);
+      const diariaNec = Math.max(0, (c.meta_mensal - c.venda_mtd)) / diasRestantes;
       const diariaElem = document.getElementById('kpiDiariaNec');
       if (diariaElem) {{ diariaElem.textContent = fmtMoney(diariaNec) + ' / dia'; }}
 
-      const maxDiaVal = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.max_dia) || 5;
-      const maxDiaPad = String(maxDiaVal).padStart(2, '0');
-      const ritmoDiff = c.ritmo_diff !== undefined ? c.ritmo_diff : ((c.venda_mtd / maxDiaVal) - diariaNec);
+      const maxDiaVal = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.max_dia) || 9;
+      const numDiasPeriodo = (selectedDiaEnd - selectedDiaIni + 1);
+      const ritmoDiff = (c.venda_mtd / numDiasPeriodo) - diariaNec;
       const ritmoBadge = document.getElementById('kpiRitmoBadge');
       if (ritmoBadge) {{
         const isRitmoPos = ritmoDiff >= 0;
@@ -2609,7 +3114,7 @@ def build():
       }}
       const diasRef = document.getElementById('kpiDiasRestantesRef');
       if (diasRef) {{
-        const falta = c.falta_para_meta !== undefined ? c.falta_para_meta : Math.max(0, (c.meta_mensal - c.venda_mtd));
+        const falta = Math.max(0, (c.meta_mensal - c.venda_mtd));
         const faltaStr = falta >= 1000000 ? ('R$ ' + (falta / 1000000).toFixed(1) + 'M') : fmtMoney(falta);
         diasRef.textContent = diasRestantes + 'd rest. (' + faltaStr + ')';
       }}
@@ -2627,7 +3132,9 @@ def build():
         momBadge.className = 'badge-trend ' + (c.crescimento_mom_diff >= 0 ? 'trend-pos' : 'trend-neg');
       }}
       const momRef = document.getElementById('kpiMoMPeriodRef');
-      if (momRef) {{ momRef.textContent = `vs 01 a ${{maxDiaPad}}/Ago`; }}
+      if (momRef) {{
+        momRef.textContent = isFullMtd ? `vs 01 a ${{String(maxDiaVal).padStart(2, '0')}}/Ago` : `vs Período (${{pLabel}})/Ago`;
+      }}
 
       // 5. Evolução YoY (vs Set/25)
       const yoy = c.crescimento_yoy_pct || 0;
@@ -2642,7 +3149,9 @@ def build():
         yoyBadge.className = 'badge-trend ' + (c.crescimento_yoy_diff >= 0 ? 'trend-pos' : 'trend-neg');
       }}
       const yoyRef = document.getElementById('kpiYoYPeriodRef');
-      if (yoyRef) {{ yoyRef.textContent = `vs 01 a ${{maxDiaPad}}/Set/25`; }}
+      if (yoyRef) {{
+        yoyRef.textContent = isFullMtd ? `vs 01 a ${{String(maxDiaVal).padStart(2, '0')}}/Set/25` : `vs Período (${{pLabel}})/Set/25`;
+      }}
 
       // 6. Projeção de Fechamento
       const projElem = document.getElementById('kpiProjecao');
@@ -2662,11 +3171,13 @@ def build():
       }}
     }}
 
-    /* NOVO GRÁFICO DIÁRIO COM DESVIO % POR DIA (SOLICITADO PELO USUÁRIO) */
+    /* NOVO GRÁFICO DIÁRIO COM DESVIO % POR DIA E FOCO NO PERÍODO */
     function renderChart() {{
       const curva = window.DASHBOARD_DATA.curva_diaria;
       const ctx = document.getElementById('chartEvolucaoDiaria').getContext('2d');
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      const isFullMtd = (selectedDiaIni === 1 && selectedDiaEnd === maxDia);
+      const pLabel = getPeriodLabel();
 
       const labels = curva.map(c => `${{c.dia}} (${{c.dow}})`);
       
@@ -2686,27 +3197,43 @@ def build():
         channelLabel = 'Canal Marketplace';
       }}
 
-      // Atualizar título do gráfico com o canal ativo
+      // Atualizar título do gráfico com o canal ativo e período
       const isFiltered = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
       const titleElem = document.getElementById('chartTitleText');
       if (titleElem) {{
+        let scopeBadge = '';
         if (isFiltered) {{
-          titleElem.innerHTML = `📅 Curva Diária [${{channelLabel}}]: Realizado vs Meta Diária + Desvio % por Dia <span style="font-size: 11px; font-weight: 600; color: var(--apple-blue); background: rgba(0, 113, 227, 0.1); padding: 2px 8px; border-radius: 10px; border: 1px solid rgba(0, 113, 227, 0.2); margin-left: 6px;">Consolidado do Canal</span>`;
-        }} else {{
-          titleElem.textContent = `📅 Curva Diária [${{channelLabel}}]: Realizado vs Meta Diária + Desvio % por Dia`;
+          scopeBadge += `<span style="font-size: 11px; font-weight: 600; color: var(--apple-blue); background: rgba(0, 113, 227, 0.1); padding: 2px 8px; border-radius: 10px; border: 1px solid rgba(0, 113, 227, 0.2); margin-left: 6px;">Consolidado do Canal</span>`;
         }}
+        if (!isFullMtd) {{
+          scopeBadge += `<span style="font-size: 11px; font-weight: 600; color: #FFFFFF; background: var(--apple-blue); padding: 2px 8px; border-radius: 10px; margin-left: 6px;">Foco: ${{pLabel}}</span>`;
+        }}
+        titleElem.innerHTML = `📅 Curva Diária [${{channelLabel}}]: Realizado vs Meta Diária + Desvio % por Dia ${{scopeBadge}}`;
       }}
 
       const dataReal = curva.map(c => c[realKey]);
       const dataMeta = curva.map(c => c[metaKey]);
-      const dataDesvio = curva.map(c => c[desvioKey]);
 
       if (chartInstance) chartInstance.destroy();
 
       const blueColor = isDark ? '#2997FF' : '#0071E3';
+      const blueDimColor = isDark ? 'rgba(41, 151, 255, 0.22)' : 'rgba(0, 113, 227, 0.20)';
       const metaBarColor = isDark ? 'rgba(255, 255, 255, 0.12)' : 'rgba(0, 0, 0, 0.08)';
+      const metaDimColor = isDark ? 'rgba(255, 255, 255, 0.04)' : 'rgba(0, 0, 0, 0.03)';
       const gridColor = isDark ? 'rgba(255, 255, 255, 0.06)' : 'rgba(0, 0, 0, 0.05)';
       const textColor = isDark ? '#8E8E93' : '#86868B';
+
+      const realColors = curva.map(c => {{
+        if (isFullMtd) return blueColor;
+        const inRange = (c.dia >= selectedDiaIni && c.dia <= selectedDiaEnd);
+        return inRange ? blueColor : blueDimColor;
+      }});
+
+      const metaColors = curva.map(c => {{
+        if (isFullMtd) return metaBarColor;
+        const inRange = (c.dia >= selectedDiaIni && c.dia <= selectedDiaEnd);
+        return inRange ? metaBarColor : metaDimColor;
+      }});
 
       // Plugin Apple Design: desenha badges elegantes com o % de Desvio flutuando diretamente sobre cada barra realizada
       const desvioBadgesPlugin = {{
@@ -2724,6 +3251,10 @@ def build():
             const metaVal = metaData[idx];
             if (realVal === null || realVal === undefined || realVal <= 0) return;
             if (!metaVal || metaVal <= 0) return;
+            
+            const c = curva[idx];
+            const inRange = isFullMtd || (c.dia >= selectedDiaIni && c.dia <= selectedDiaEnd);
+            if (!isFullMtd && !inRange) return; // Foco exclusivo nas badges do período selecionado
 
             const desvio = ((realVal - metaVal) / metaVal) * 100;
             const isPos = desvio >= 0;
@@ -2778,7 +3309,7 @@ def build():
             {{
               label: 'Realizado Diário',
               data: dataReal,
-              backgroundColor: blueColor,
+              backgroundColor: realColors,
               borderRadius: 6,
               yAxisID: 'y',
               order: 1,
@@ -2787,7 +3318,7 @@ def build():
             {{
               label: 'Meta Diária Oficial',
               data: dataMeta,
-              backgroundColor: metaBarColor,
+              backgroundColor: metaColors,
               borderRadius: 6,
               yAxisID: 'y',
               order: 2,
@@ -2857,30 +3388,24 @@ def build():
 
     function renderHighlights() {{
       const chLabel = activeChannel === 'total' ? 'Digital' : (activeChannel === 'app' ? 'App' : (activeChannel === 'site' ? 'Site' : 'Marketplace'));
+      const pLabel = getPeriodLabel();
       const tAcel = document.getElementById('titleAceleradores');
       const tDetr = document.getElementById('titleDetratores');
-      if (tAcel) tAcel.textContent = `🚀 Top Linhas Superando a Meta (${{chLabel}})`;
-      if (tDetr) tDetr.textContent = `⚠️ Top Linhas com Maior Oportunidade (${{chLabel}})`;
+      if (tAcel) tAcel.textContent = `🚀 Top Linhas Superando a Meta (${{chLabel}} • ${{pLabel}})`;
+      if (tDetr) tDetr.textContent = `⚠️ Top Linhas com Maior Oportunidade (${{chLabel}} • ${{pLabel}})`;
 
       const filteredLinhas = getFilteredLinhas();
       const itemsChannel = filteredLinhas.map(l => {{
-        const ch = (l.canais && l.canais[activeChannel]) ? l.canais[activeChannel] : {{
-          realizado_mtd: l.realizado_mtd,
-          meta_mtd: l.meta_mtd,
-          gap_mtd: l.gap_mtd,
-          desvio_pct: l.desvio_pct,
-          ating_mtd_pct: l.ating_mtd_pct,
-          crescimento_mom_pct: l.crescimento_mom_pct
-        }};
+        const m = getItemPeriodMetrics(l, activeChannel);
         return {{
           linha: l.linha,
           grupo: l.grupo,
           subgrupo: l.subgrupo,
-          realizado_mtd: ch.realizado_mtd || 0,
-          meta_mtd: ch.meta_mtd || 0,
-          gap_mtd: ch.gap_mtd || 0,
-          desvio_pct: ch.desvio_pct || 0,
-          ating_mtd_pct: ch.ating_mtd_pct || 0
+          realizado_mtd: m.realizado,
+          meta_mtd: m.meta,
+          gap_mtd: m.gap,
+          desvio_pct: m.desvio,
+          ating_mtd_pct: m.ating
         }};
       }});
 
@@ -2966,17 +3491,18 @@ def build():
 
     /* ABA 1: Visão Geral de Canais */
     function renderCanaisTable(thead, tbody) {{
+      const pLabel = getPeriodLabel();
       thead.innerHTML = `
         <tr>
           <th>Canal Digital</th>
-          <th class="num-cell">Realizado MTD</th>
-          <th class="num-cell">Meta MTD</th>
+          <th class="num-cell">Realizado ${{pLabel}}</th>
+          <th class="num-cell">Meta ${{pLabel}}</th>
           <th class="num-cell">Ating. %</th>
           <th class="num-cell">Desvio R$ (GAP)</th>
           <th class="num-cell">Desvio %</th>
-          <th class="num-cell">Ago/26 MTD</th>
+          <th class="num-cell">Ago/26</th>
           <th class="num-cell">Cresc. MoM %</th>
-          <th class="num-cell">Set/25 MTD</th>
+          <th class="num-cell">Set/25</th>
           <th class="num-cell">Evol. YoY %</th>
           <th class="num-cell">Share %</th>
           <th class="num-cell">Projeção Mês</th>
@@ -3041,12 +3567,13 @@ def build():
 
     /* ABA 2: Hierarquia (Grupo > Subgrupo > Linha) */
     function renderHierarquiaTable(thead, tbody) {{
+      const pLabel = getPeriodLabel();
       if (hierarquiaSubView === 'grupos') {{
         thead.innerHTML = `
           <tr>
             <th>Categoria / Grupo</th>
-            <th class="num-cell">Realizado MTD</th>
-            <th class="num-cell">Meta MTD</th>
+            <th class="num-cell">Realizado ${{pLabel}}</th>
+            <th class="num-cell">Meta ${{pLabel}}</th>
             <th class="num-cell">Ating. %</th>
             <th class="num-cell">Desvio R$ (GAP)</th>
             <th class="num-cell">Desvio %</th>
@@ -3073,36 +3600,36 @@ def build():
         }}
 
         tbody.innerHTML = items.map(g => {{
-          const ch = g.canais[activeChannel] || g;
-          const isPos = ch.gap_mtd >= 0;
+          const ch = getItemPeriodMetrics(g, activeChannel);
+          const isPos = ch.gap >= 0;
           return `
             <tr>
               <td><strong>${{g.grupo}}</strong> <span style="font-size: 11px; color: var(--text-tertiary);">(${{g.total_linhas}} linhas)</span></td>
-              <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado_mtd)}}</td>
-              <td class="num-cell">${{fmtMoney(ch.meta_mtd)}}</td>
+              <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado)}}</td>
+              <td class="num-cell">${{fmtMoney(ch.meta)}}</td>
               <td class="num-cell">
-                <span class="badge-trend ${{ch.ating_mtd_pct >= 100 ? 'trend-pos' : ch.ating_mtd_pct >= 90 ? 'trend-neutral' : 'trend-neg'}}">
-                  ${{fmtPct(ch.ating_mtd_pct)}}
+                <span class="badge-trend ${{ch.ating >= 100 ? 'trend-pos' : ch.ating >= 90 ? 'trend-neutral' : 'trend-neg'}}">
+                  ${{fmtPct(ch.ating)}}
                 </span>
               </td>
               <td class="num-cell" style="font-weight: 700; color: ${{isPos ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-                ${{(isPos ? '+' : '') + fmtMoney(ch.gap_mtd)}}
+                ${{(isPos ? '+' : '') + fmtMoney(ch.gap)}}
               </td>
-              <td class="num-cell" style="color: ${{ch.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-                ${{fmtSignPct(ch.desvio_pct)}}
+              <td class="num-cell" style="color: ${{ch.desvio >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+                ${{fmtSignPct(ch.desvio)}}
               </td>
               <td class="num-cell">
-                <span class="badge-trend ${{ch.crescimento_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                  ${{fmtSignPct(ch.crescimento_mom_pct)}}
+                <span class="badge-trend ${{ch.cresc_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                  ${{fmtSignPct(ch.cresc_mom_pct)}}
                 </span>
               </td>
               <td class="num-cell">
-                <span class="badge-trend ${{ch.crescimento_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                  ${{fmtSignPct(ch.crescimento_yoy_pct)}}
+                <span class="badge-trend ${{ch.cresc_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                  ${{fmtSignPct(ch.cresc_yoy_pct)}}
                 </span>
               </td>
-              <td class="num-cell">${{fmtPct(ch.share_pct)}}</td>
-              <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(ch.projecao_fechamento)}}</td>
+              <td class="num-cell">${{fmtPct(ch.share)}}</td>
+              <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(ch.projecao)}}</td>
             </tr>
           `;
         }}).join('');
@@ -3112,8 +3639,8 @@ def build():
           <tr>
             <th>Subgrupo de Categoria</th>
             <th>Grupo</th>
-            <th class="num-cell">Realizado MTD</th>
-            <th class="num-cell">Meta MTD</th>
+            <th class="num-cell">Realizado ${{pLabel}}</th>
+            <th class="num-cell">Meta ${{pLabel}}</th>
             <th class="num-cell">Ating. %</th>
             <th class="num-cell">Desvio R$ (GAP)</th>
             <th class="num-cell">Desvio %</th>
@@ -3139,36 +3666,36 @@ def build():
         }}
 
         tbody.innerHTML = items.map(s => {{
-          const ch = s.canais[activeChannel] || s;
-          const isPos = ch.gap_mtd >= 0;
+          const ch = getItemPeriodMetrics(s, activeChannel);
+          const isPos = ch.gap >= 0;
           return `
             <tr onclick="selectSubgrupoDirect('${{s.subgrupo.replace(/'/g, "\\'")}}', '${{s.grupo.replace(/'/g, "\\'")}}')" style="cursor: pointer;" title="Clique para filtrar pelo subgrupo ${{s.subgrupo}}">
               <td><strong>${{s.subgrupo}}</strong></td>
               <td style="color: var(--text-secondary); font-size: 12px;">${{s.grupo}}</td>
-              <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado_mtd)}}</td>
-              <td class="num-cell">${{fmtMoney(ch.meta_mtd)}}</td>
+              <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado)}}</td>
+              <td class="num-cell">${{fmtMoney(ch.meta)}}</td>
               <td class="num-cell">
-                <span class="badge-trend ${{ch.ating_mtd_pct >= 100 ? 'trend-pos' : ch.ating_mtd_pct >= 90 ? 'trend-neutral' : 'trend-neg'}}">
-                  ${{fmtPct(ch.ating_mtd_pct)}}
+                <span class="badge-trend ${{ch.ating >= 100 ? 'trend-pos' : ch.ating >= 90 ? 'trend-neutral' : 'trend-neg'}}">
+                  ${{fmtPct(ch.ating)}}
                 </span>
               </td>
               <td class="num-cell" style="font-weight: 700; color: ${{isPos ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-                ${{(isPos ? '+' : '') + fmtMoney(ch.gap_mtd)}}
+                ${{(isPos ? '+' : '') + fmtMoney(ch.gap)}}
               </td>
-              <td class="num-cell" style="color: ${{ch.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-                ${{fmtSignPct(ch.desvio_pct)}}
+              <td class="num-cell" style="color: ${{ch.desvio >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+                ${{fmtSignPct(ch.desvio)}}
               </td>
               <td class="num-cell">
-                <span class="badge-trend ${{ch.crescimento_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                  ${{fmtSignPct(ch.crescimento_mom_pct)}}
+                <span class="badge-trend ${{ch.cresc_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                  ${{fmtSignPct(ch.cresc_mom_pct)}}
                 </span>
               </td>
               <td class="num-cell">
-                <span class="badge-trend ${{ch.crescimento_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                  ${{fmtSignPct(ch.crescimento_yoy_pct)}}
+                <span class="badge-trend ${{ch.cresc_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                  ${{fmtSignPct(ch.cresc_yoy_pct)}}
                 </span>
               </td>
-              <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(ch.projecao_fechamento)}}</td>
+              <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(ch.projecao)}}</td>
             </tr>
           `;
         }}).join('');
@@ -3180,8 +3707,8 @@ def build():
             <th>Linha de Produto</th>
             <th>Subgrupo</th>
             <th>Grupo</th>
-            <th class="num-cell">Realizado MTD</th>
-            <th class="num-cell">Meta MTD</th>
+            <th class="num-cell">Realizado ${{pLabel}}</th>
+            <th class="num-cell">Meta ${{pLabel}}</th>
             <th class="num-cell">Ating. %</th>
             <th class="num-cell">Desvio R$ (GAP)</th>
             <th class="num-cell">Desvio %</th>
@@ -3208,37 +3735,37 @@ def build():
         }}
 
         tbody.innerHTML = items.slice(0, 150).map(l => {{
-          const ch = l.canais[activeChannel] || l;
-          const isPos = ch.gap_mtd >= 0;
+          const ch = getItemPeriodMetrics(l, activeChannel);
+          const isPos = ch.gap >= 0;
           return `
             <tr onclick="filterByLinhaDirect('${{l.linha.replace(/'/g, "\\'")}}')" style="cursor: pointer;" title="Clique para buscar a linha ${{l.linha}}">
               <td><strong>${{l.linha}}</strong></td>
               <td style="color: var(--text-secondary); font-size: 11.5px;">${{l.subgrupo}}</td>
               <td style="color: var(--text-tertiary); font-size: 11px;">${{l.grupo}}</td>
-              <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado_mtd)}}</td>
-              <td class="num-cell">${{fmtMoney(ch.meta_mtd)}}</td>
+              <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado)}}</td>
+              <td class="num-cell">${{fmtMoney(ch.meta)}}</td>
               <td class="num-cell">
-                <span class="badge-trend ${{ch.ating_mtd_pct >= 100 ? 'trend-pos' : ch.ating_mtd_pct >= 90 ? 'trend-neutral' : 'trend-neg'}}">
-                  ${{fmtPct(ch.ating_mtd_pct)}}
+                <span class="badge-trend ${{ch.ating >= 100 ? 'trend-pos' : ch.ating >= 90 ? 'trend-neutral' : 'trend-neg'}}">
+                  ${{fmtPct(ch.ating)}}
                 </span>
               </td>
               <td class="num-cell" style="font-weight: 700; color: ${{isPos ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-                ${{(isPos ? '+' : '') + fmtMoney(ch.gap_mtd)}}
+                ${{(isPos ? '+' : '') + fmtMoney(ch.gap)}}
               </td>
-              <td class="num-cell" style="color: ${{ch.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-                ${{fmtSignPct(ch.desvio_pct)}}
+              <td class="num-cell" style="color: ${{ch.desvio >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+                ${{fmtSignPct(ch.desvio)}}
               </td>
               <td class="num-cell">
-                <span class="badge-trend ${{ch.crescimento_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                  ${{fmtSignPct(ch.crescimento_mom_pct)}}
+                <span class="badge-trend ${{ch.cresc_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                  ${{fmtSignPct(ch.cresc_mom_pct)}}
                 </span>
               </td>
               <td class="num-cell">
-                <span class="badge-trend ${{ch.crescimento_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                  ${{fmtSignPct(ch.crescimento_yoy_pct)}}
+                <span class="badge-trend ${{ch.cresc_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                  ${{fmtSignPct(ch.cresc_yoy_pct)}}
                 </span>
               </td>
-              <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(ch.projecao_fechamento)}}</td>
+              <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(ch.projecao)}}</td>
             </tr>
           `;
         }}).join('');
@@ -3247,11 +3774,12 @@ def build():
 
     /* ABA 3: Fornecedores / Laboratórios */
     function renderLaboratoriosTable(thead, tbody) {{
+      const pLabel = getPeriodLabel();
       thead.innerHTML = `
         <tr>
           <th>Laboratório / Fornecedor</th>
-          <th class="num-cell">Realizado MTD</th>
-          <th class="num-cell">Meta MTD</th>
+          <th class="num-cell">Realizado ${{pLabel}}</th>
+          <th class="num-cell">Meta ${{pLabel}}</th>
           <th class="num-cell">Ating. %</th>
           <th class="num-cell">Desvio R$ (GAP)</th>
           <th class="num-cell">Desvio %</th>
@@ -3280,36 +3808,36 @@ def build():
       }}
 
       tbody.innerHTML = items.slice(0, 150).map(l => {{
-        const ch = l.canais[activeChannel] || l;
-        const isPos = ch.gap_mtd >= 0;
+        const ch = getItemPeriodMetrics(l, activeChannel);
+        const isPos = ch.gap >= 0;
         return `
           <tr onclick="selectLabDirect('${{l.laboratorio.replace(/'/g, "\\'")}}')" style="cursor: pointer;" title="Clique para filtrar pelo fornecedor ${{l.laboratorio}}">
             <td><strong>${{l.laboratorio}}</strong></td>
-            <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado_mtd)}}</td>
-            <td class="num-cell">${{fmtMoney(ch.meta_mtd)}}</td>
+            <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtMoney(ch.realizado)}}</td>
+            <td class="num-cell">${{fmtMoney(ch.meta)}}</td>
             <td class="num-cell">
-              <span class="badge-trend ${{ch.ating_mtd_pct >= 100 ? 'trend-pos' : ch.ating_mtd_pct >= 90 ? 'trend-neutral' : 'trend-neg'}}">
-                ${{fmtPct(ch.ating_mtd_pct)}}
+              <span class="badge-trend ${{ch.ating >= 100 ? 'trend-pos' : ch.ating >= 90 ? 'trend-neutral' : 'trend-neg'}}">
+                ${{fmtPct(ch.ating)}}
               </span>
             </td>
             <td class="num-cell" style="font-weight: 700; color: ${{isPos ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-              ${{(isPos ? '+' : '') + fmtMoney(ch.gap_mtd)}}
+              ${{(isPos ? '+' : '') + fmtMoney(ch.gap)}}
             </td>
-            <td class="num-cell" style="color: ${{ch.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
-              ${{fmtSignPct(ch.desvio_pct)}}
+            <td class="num-cell" style="color: ${{ch.desvio >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)'}};">
+              ${{fmtSignPct(ch.desvio)}}
             </td>
             <td class="num-cell">
-              <span class="badge-trend ${{ch.crescimento_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                ${{fmtSignPct(ch.crescimento_mom_pct)}}
+              <span class="badge-trend ${{ch.cresc_mom_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                ${{fmtSignPct(ch.cresc_mom_pct)}}
               </span>
             </td>
             <td class="num-cell">
-              <span class="badge-trend ${{ch.crescimento_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
-                ${{fmtSignPct(ch.crescimento_yoy_pct)}}
+              <span class="badge-trend ${{ch.cresc_yoy_pct >= 0 ? 'trend-pos' : 'trend-neg'}}">
+                ${{fmtSignPct(ch.cresc_yoy_pct)}}
               </span>
             </td>
-            <td class="num-cell">${{fmtPct(ch.share_pct)}}</td>
-            <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(ch.projecao_fechamento)}}</td>
+            <td class="num-cell">${{fmtPct(ch.share)}}</td>
+            <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(ch.projecao)}}</td>
             <td class="num-cell" style="color: var(--text-tertiary);">${{fmtMoney(ch.meta_mensal)}}</td>
           </tr>
         `;
@@ -3343,6 +3871,7 @@ def build():
       }};
 
       const isFiltered = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
+      const pLabel = getPeriodLabel();
 
       // Atualizar Título, Descrição, Ícone e Badges de Acordo com o Modo
       const diagIcon = document.getElementById('diagIconBox');
@@ -3360,17 +3889,17 @@ def build():
 
       if (diagMetricMode === 'meta') {{
         if (diagIcon) diagIcon.textContent = '🎯';
-        if (diagTitle) diagTitle.textContent = `Raio-X de Causa-Raiz — Desvio da Meta (${{channelNames[activeChannel]}}) (D-1)${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
+        if (diagTitle) diagTitle.textContent = `Raio-X de Causa-Raiz — Desvio da Meta (${{channelNames[activeChannel]}} • ${{pLabel}})${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
         if (diagDesc) diagDesc.textContent = 'Identificação prática dos principais fornecedores, subgrupos e linhas que impedem (GAP Déficit) ou aceleram o atingimento da meta orçada.';
         updateBadges('Detratores de Meta', 'Aceleradores');
       }} else if (diagMetricMode === 'mom') {{
         if (diagIcon) diagIcon.textContent = '📈';
-        if (diagTitle) diagTitle.textContent = `Raio-X de Crescimento MoM — vs Ago/26 (${{channelNames[activeChannel]}}) (D-1)${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
+        if (diagTitle) diagTitle.textContent = `Raio-X de Crescimento MoM — vs Ago/26 (${{channelNames[activeChannel]}} • ${{pLabel}})${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
         if (diagDesc) diagDesc.textContent = 'Identificação prática de quem mais perdeu faturamento (contração MoM) ou quem mais cresceu em relação ao mesmo período do mês anterior (Ago/26).';
         updateBadges('Maiores Quedas MoM', 'Maiores Altas MoM');
       }} else if (diagMetricMode === 'yoy') {{
         if (diagIcon) diagIcon.textContent = '🚀';
-        if (diagTitle) diagTitle.textContent = `Raio-X de Evolução Anual YoY — vs Set/25 (${{channelNames[activeChannel]}}) (D-1)${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
+        if (diagTitle) diagTitle.textContent = `Raio-X de Evolução Anual YoY — vs Set/25 (${{channelNames[activeChannel]}} • ${{pLabel}})${{isFiltered ? ' [Escopo Filtrado]' : ''}}`;
         if (diagDesc) diagDesc.textContent = 'Identificação prática de quem mais perdeu faturamento (queda anual) ou quem mais expandiu em relação ao mesmo período do ano anterior (Set/25).';
         updateBadges('Maiores Quedas YoY', 'Maiores Altas YoY');
       }}
@@ -3381,49 +3910,49 @@ def build():
       const fLins = getFilteredLinhas();
 
       const labsM = fLabs.map(it => {{
-        const ch = (it.canais && it.canais[activeChannel]) ? it.canais[activeChannel] : it;
+        const m = getItemPeriodMetrics(it, activeChannel);
         return {{
           nome: it.laboratorio,
           grupo: it.grupos ? it.grupos.join(', ') : (it.grupo || ''),
           tipo: 'lab',
-          realizado_mtd: ch.realizado_mtd || 0,
-          meta_mtd: ch.meta_mtd || 0,
-          gap_mtd: ch.gap_mtd || 0,
-          desvio_pct: ch.desvio_pct || 0,
-          ating_mtd_pct: ch.ating_mtd_pct || 0,
-          v26_06_mtd: ch.v26_06_mtd || 0,
-          crescimento_mom_pct: ch.crescimento_mom_pct || 0,
-          crescimento_mom_diff: ch.crescimento_mom_diff !== undefined ? ch.crescimento_mom_diff : ((ch.realizado_mtd || 0) - (ch.v26_06_mtd || 0)),
-          v25_mtd: ch.v25_mtd || 0,
-          crescimento_yoy_pct: ch.crescimento_yoy_pct || 0,
-          crescimento_yoy_diff: ch.crescimento_yoy_diff !== undefined ? ch.crescimento_yoy_diff : ((ch.realizado_mtd || 0) - (ch.v25_mtd || 0))
+          realizado_mtd: m.realizado,
+          meta_mtd: m.meta,
+          gap_mtd: m.gap,
+          desvio_pct: m.desvio,
+          ating_mtd_pct: m.ating,
+          v26_06_mtd: m.v26_06,
+          crescimento_mom_pct: m.cresc_mom_pct,
+          crescimento_mom_diff: m.cresc_mom_diff,
+          v25_mtd: m.v25,
+          crescimento_yoy_pct: m.cresc_yoy_pct,
+          crescimento_yoy_diff: m.cresc_yoy_diff
         }};
       }});
 
       const subsM = fSubs.map(it => {{
-        const ch = (it.canais && it.canais[activeChannel]) ? it.canais[activeChannel] : it;
+        const m = getItemPeriodMetrics(it, activeChannel);
         return {{
           nome: it.subgrupo,
           grupo: it.grupo || '',
           tipo: 'subgrupo',
-          realizado_mtd: ch.realizado_mtd || 0,
-          meta_mtd: ch.meta_mtd || 0,
-          gap_mtd: ch.gap_mtd || 0,
-          desvio_pct: ch.desvio_pct || 0,
-          ating_mtd_pct: ch.ating_mtd_pct || 0,
-          v26_06_mtd: ch.v26_06_mtd || 0,
-          crescimento_mom_pct: ch.crescimento_mom_pct || 0,
-          crescimento_mom_diff: ch.crescimento_mom_diff !== undefined ? ch.crescimento_mom_diff : ((ch.realizado_mtd || 0) - (ch.v26_06_mtd || 0)),
-          v25_mtd: ch.v25_mtd || 0,
-          crescimento_yoy_pct: ch.crescimento_yoy_pct || 0,
-          crescimento_yoy_diff: ch.crescimento_yoy_diff !== undefined ? ch.crescimento_yoy_diff : ((ch.realizado_mtd || 0) - (ch.v25_mtd || 0))
+          realizado_mtd: m.realizado,
+          meta_mtd: m.meta,
+          gap_mtd: m.gap,
+          desvio_pct: m.desvio,
+          ating_mtd_pct: m.ating,
+          v26_06_mtd: m.v26_06,
+          crescimento_mom_pct: m.cresc_mom_pct,
+          crescimento_mom_diff: m.cresc_mom_diff,
+          v25_mtd: m.v25,
+          crescimento_yoy_pct: m.cresc_yoy_pct,
+          crescimento_yoy_diff: m.cresc_yoy_diff
         }};
       }});
 
       // Agrupar linhas para evitar duplicatas em múltiplos subgrupos/fornecedores
       const linhaMap = new Map();
       fLins.forEach(it => {{
-        const ch = (it.canais && it.canais[activeChannel]) ? it.canais[activeChannel] : it;
+        const m = getItemPeriodMetrics(it, activeChannel);
         const linName = it.linha;
         if (!linhaMap.has(linName)) {{
           linhaMap.set(linName, {{
@@ -3431,29 +3960,29 @@ def build():
             grupo: it.grupo || '',
             subgrupo: it.subgrupo || '',
             tipo: 'linha',
-            realizado_mtd: ch.realizado_mtd || 0,
-            meta_mtd: ch.meta_mtd || 0,
-            gap_mtd: ch.gap_mtd || 0,
-            desvio_pct: ch.desvio_pct || 0,
-            ating_mtd_pct: ch.ating_mtd_pct || 0,
-            v26_06_mtd: ch.v26_06_mtd || 0,
-            crescimento_mom_pct: ch.crescimento_mom_pct || 0,
-            crescimento_mom_diff: ch.crescimento_mom_diff !== undefined ? ch.crescimento_mom_diff : ((ch.realizado_mtd || 0) - (ch.v26_06_mtd || 0)),
-            v25_mtd: ch.v25_mtd || 0,
-            crescimento_yoy_pct: ch.crescimento_yoy_pct || 0,
-            crescimento_yoy_diff: ch.crescimento_yoy_diff !== undefined ? ch.crescimento_yoy_diff : ((ch.realizado_mtd || 0) - (ch.v25_mtd || 0))
+            realizado_mtd: m.realizado,
+            meta_mtd: m.meta,
+            gap_mtd: m.gap,
+            desvio_pct: m.desvio,
+            ating_mtd_pct: m.ating,
+            v26_06_mtd: m.v26_06,
+            crescimento_mom_pct: m.cresc_mom_pct,
+            crescimento_mom_diff: m.cresc_mom_diff,
+            v25_mtd: m.v25,
+            crescimento_yoy_pct: m.cresc_yoy_pct,
+            crescimento_yoy_diff: m.cresc_yoy_diff
           }});
         }} else {{
           const ex = linhaMap.get(linName);
-          ex.realizado_mtd += (ch.realizado_mtd || 0);
-          ex.meta_mtd += (ch.meta_mtd || 0);
+          ex.realizado_mtd += m.realizado;
+          ex.meta_mtd += m.meta;
           ex.gap_mtd = ex.realizado_mtd - ex.meta_mtd;
           ex.ating_mtd_pct = ex.meta_mtd > 0 ? (ex.realizado_mtd / ex.meta_mtd) * 100 : 0;
           ex.desvio_pct = ex.meta_mtd > 0 ? ((ex.realizado_mtd / ex.meta_mtd) - 1) * 100 : 0;
-          ex.v26_06_mtd += (ch.v26_06_mtd || 0);
+          ex.v26_06_mtd += m.v26_06;
           ex.crescimento_mom_diff = ex.realizado_mtd - ex.v26_06_mtd;
           ex.crescimento_mom_pct = ex.v26_06_mtd > 0 ? ((ex.realizado_mtd - ex.v26_06_mtd) / ex.v26_06_mtd) * 100 : 0;
-          ex.v25_mtd += (ch.v25_mtd || 0);
+          ex.v25_mtd += m.v25;
           ex.crescimento_yoy_diff = ex.realizado_mtd - ex.v25_mtd;
           ex.crescimento_yoy_pct = ex.v25_mtd > 0 ? ((ex.realizado_mtd - ex.v25_mtd) / ex.v25_mtd) * 100 : 0;
         }}
@@ -3570,16 +4099,21 @@ def build():
 
     /* ABA 5: Top SKUs */
     function renderSkusTable(thead, tbody) {{
+      const pLabel = getPeriodLabel();
+      const periodMetaPct = getPeriodMetaPct();
+      const isFullMtd = (selectedDiaIni === 1 && selectedDiaEnd === maxDia);
+      const ratio = periodMetaPct / 100;
+
       thead.innerHTML = `
         <tr>
           <th>ID</th>
           <th>Descrição do SKU</th>
           <th>Laboratório</th>
           <th>Linha</th>
-          <th class="num-cell">Meta MTD Total</th>
-          <th class="num-cell">Meta MTD App</th>
-          <th class="num-cell">Meta MTD Site</th>
-          <th class="num-cell">Meta MTD Mkt</th>
+          <th class="num-cell">Meta ${{pLabel}} Total</th>
+          <th class="num-cell">Meta ${{pLabel}} App</th>
+          <th class="num-cell">Meta ${{pLabel}} Site</th>
+          <th class="num-cell">Meta ${{pLabel}} Mkt</th>
           <th class="num-cell">Meta Mensal</th>
         </tr>
       `;
@@ -3600,67 +4134,77 @@ def build():
         return;
       }}
 
-      tbody.innerHTML = items.slice(0, 150).map(s => `
-        <tr>
-          <td style="font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', monospace; font-size: 11.5px; font-weight: 600; color: var(--apple-blue);">${{s.id}}</td>
-          <td><strong>${{s.nome}}</strong></td>
-          <td style="color: var(--text-secondary); font-size: 12px;">${{s.laboratorio}}</td>
-          <td style="color: var(--text-tertiary); font-size: 11.5px;">${{s.linha}}</td>
-          <td class="num-cell" style="font-weight: 700; color: var(--apple-green-text);">${{fmtMoney(s.meta_mtd)}}</td>
-          <td class="num-cell" style="${{activeChannel === 'app' ? 'font-weight: 700; color: var(--apple-indigo);' : ''}}">${{fmtMoney(s.meta_mtd_app)}}</td>
-          <td class="num-cell" style="${{activeChannel === 'site' ? 'font-weight: 700; color: var(--apple-purple);' : ''}}">${{fmtMoney(s.meta_mtd_site)}}</td>
-          <td class="num-cell" style="${{activeChannel === 'marketplace' ? 'font-weight: 700; color: var(--apple-orange);' : ''}}">${{fmtMoney(s.meta_mtd_mkt)}}</td>
-          <td class="num-cell" style="color: var(--text-secondary);">${{fmtMoney(s.meta_mensal)}}</td>
-        </tr>
-      `).join('');
+      tbody.innerHTML = items.slice(0, 150).map(s => {{
+        const mTotal = isFullMtd ? s.meta_mtd : Math.round((s.meta_mensal || 0) * ratio * 100) / 100;
+        const mApp = isFullMtd ? s.meta_mtd_app : Math.round(((s.meta_mensal || 0) * 0.474) * ratio * 100) / 100;
+        const mSite = isFullMtd ? s.meta_mtd_site : Math.round(((s.meta_mensal || 0) * 0.265) * ratio * 100) / 100;
+        const mMkt = isFullMtd ? s.meta_mtd_mkt : Math.round(((s.meta_mensal || 0) * 0.261) * ratio * 100) / 100;
+
+        return `
+          <tr>
+            <td style="font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', monospace; font-size: 11.5px; font-weight: 600; color: var(--apple-blue);">${{s.id}}</td>
+            <td><strong>${{s.nome}}</strong></td>
+            <td style="color: var(--text-secondary); font-size: 12px;">${{s.laboratorio}}</td>
+            <td style="color: var(--text-tertiary); font-size: 11.5px;">${{s.linha}}</td>
+            <td class="num-cell" style="font-weight: 700; color: var(--apple-green-text);">${{fmtMoney(mTotal)}}</td>
+            <td class="num-cell" style="${{activeChannel === 'app' ? 'font-weight: 700; color: var(--apple-indigo);' : ''}}">${{fmtMoney(mApp)}}</td>
+            <td class="num-cell" style="${{activeChannel === 'site' ? 'font-weight: 700; color: var(--apple-purple);' : ''}}">${{fmtMoney(mSite)}}</td>
+            <td class="num-cell" style="${{activeChannel === 'marketplace' ? 'font-weight: 700; color: var(--apple-orange);' : ''}}">${{fmtMoney(mMkt)}}</td>
+            <td class="num-cell" style="color: var(--text-secondary);">${{fmtMoney(s.meta_mensal)}}</td>
+          </tr>
+        `;
+      }}).join('');
     }}
 
     function exportToCSV() {{
       let csv = '';
+      const pLabel = getPeriodLabel().replace(/[^a-zA-Z0-9_-]/g, '_');
       const dateStr = new Date().toISOString().slice(0,10);
 
       if (activeTableTab === 'canais') {{
-        csv = 'Canal;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;Ago26_MTD;MoM_Pct;Set25_MTD;YoY_Pct;Share_Pct;Projecao_Mes;Meta_Mensal\\n';
+        csv = 'Canal;Realizado_Periodo;Meta_Periodo;Ating_Pct;Desvio_RS;Desvio_Pct;Ago26_Periodo;MoM_Pct;Set25_Periodo;YoY_Pct;Share_Pct;Projecao_Mes;Meta_Mensal\\n';
         getFilteredCanaisData().forEach(c => {{
           csv += `"${{c.nome}}";${{c.venda_mtd}};${{c.meta_mtd}};${{c.ating_mtd_pct}};${{c.gap_mtd}};${{c.desvio_pct}};${{c.v26_06_mtd}};${{c.crescimento_mom_pct}};${{c.v25_mtd}};${{c.crescimento_yoy_pct}};${{c.share_realizado_pct}};${{c.projecao_fechamento}};${{c.meta_mensal}}\\n`;
         }});
       }} else if (activeTableTab === 'hierarquia') {{
         if (hierarquiaSubView === 'grupos') {{
-          csv = 'Grupo;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Share_Pct;Projecao_Mes\\n';
+          csv = 'Grupo;Realizado_Periodo;Meta_Periodo;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Share_Pct;Projecao_Mes\\n';
           getFilteredGrupos().forEach(g => {{
-            const ch = g.canais[activeChannel] || g;
-            csv += `"${{g.grupo}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.share_pct}};${{ch.projecao_fechamento}}\\n`;
+            const ch = getItemPeriodMetrics(g, activeChannel);
+            csv += `"${{g.grupo}}";${{ch.realizado}};${{ch.meta}};${{ch.ating}};${{ch.gap}};${{ch.desvio}};${{ch.cresc_mom_pct}};${{ch.cresc_yoy_pct}};${{ch.share}};${{ch.projecao}}\\n`;
           }});
         }} else if (hierarquiaSubView === 'subgrupos') {{
-          csv = 'Subgrupo;Grupo;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Projecao_Mes\\n';
+          csv = 'Subgrupo;Grupo;Realizado_Periodo;Meta_Periodo;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Projecao_Mes\\n';
           getFilteredSubgrupos().forEach(s => {{
-            const ch = s.canais[activeChannel] || s;
-            csv += `"${{s.subgrupo}}";"${{s.grupo}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.projecao_fechamento}}\\n`;
+            const ch = getItemPeriodMetrics(s, activeChannel);
+            csv += `"${{s.subgrupo}}";"${{s.grupo}}";${{ch.realizado}};${{ch.meta}};${{ch.ating}};${{ch.gap}};${{ch.desvio}};${{ch.cresc_mom_pct}};${{ch.cresc_yoy_pct}};${{ch.projecao}}\\n`;
           }});
         }} else {{
-          csv = 'Linha;Subgrupo;Grupo;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Projecao_Mes\\n';
+          csv = 'Linha;Subgrupo;Grupo;Realizado_Periodo;Meta_Periodo;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Projecao_Mes\\n';
           getFilteredLinhas().forEach(l => {{
-            const ch = l.canais[activeChannel] || l;
-            csv += `"${{l.linha}}";"${{l.subgrupo}}";"${{l.grupo}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.projecao_fechamento}}\\n`;
+            const ch = getItemPeriodMetrics(l, activeChannel);
+            csv += `"${{l.linha}}";"${{l.subgrupo}}";"${{l.grupo}}";${{ch.realizado}};${{ch.meta}};${{ch.ating}};${{ch.gap}};${{ch.desvio}};${{ch.cresc_mom_pct}};${{ch.cresc_yoy_pct}};${{ch.projecao}}\\n`;
           }});
         }}
       }} else if (activeTableTab === 'laboratorios') {{
-        csv = 'Laboratorio;Realizado_MTD;Meta_MTD;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Share_Pct;Projecao_Mes\\n';
+        csv = 'Laboratorio;Realizado_Periodo;Meta_Periodo;Ating_Pct;Desvio_RS;Desvio_Pct;MoM_Pct;YoY_Pct;Share_Pct;Projecao_Mes;Meta_Mensal\\n';
         getFilteredLaboratorios().forEach(l => {{
-          const ch = l.canais[activeChannel] || l;
-          csv += `"${{l.laboratorio}}";${{ch.realizado_mtd}};${{ch.meta_mtd}};${{ch.ating_mtd_pct}};${{ch.gap_mtd}};${{ch.desvio_pct}};${{ch.crescimento_mom_pct}};${{ch.crescimento_yoy_pct}};${{ch.share_pct}};${{ch.projecao_fechamento}}\\n`;
+          const ch = getItemPeriodMetrics(l, activeChannel);
+          csv += `"${{l.laboratorio}}";${{ch.realizado}};${{ch.meta}};${{ch.ating}};${{ch.gap}};${{ch.desvio}};${{ch.cresc_mom_pct}};${{ch.cresc_yoy_pct}};${{ch.share}};${{ch.projecao}};${{ch.meta_mensal}}\\n`;
         }});
       }} else if (activeTableTab === 'skus') {{
-        csv = 'ID;Descricao;Laboratorio;Linha;Meta_MTD;Meta_App;Meta_Site;Meta_Mkt;Meta_Mensal\\n';
+        csv = 'ID;Descricao;Laboratorio;Linha;Meta_Periodo;Meta_Mensal\\n';
+        const ratio = getPeriodMetaPct() / 100;
         getFilteredSkus().forEach(s => {{
-          csv += `${{s.id}};"${{s.nome}}";"${{s.laboratorio}}";"${{s.linha}}";${{s.meta_mtd}};${{s.meta_mtd_app}};${{s.meta_mtd_site}};${{s.meta_mtd_mkt}};${{s.meta_mensal}}\\n`;
+          const mTotal = Math.round((s.meta_mensal || 0) * ratio * 100) / 100;
+          csv += `${{s.id}};"${{s.nome}}";"${{s.laboratorio}}";"${{s.linha}}";${{mTotal}};${{s.meta_mensal}}\\n`;
         }});
       }}
 
       const blob = new Blob(["\\uFEFF" + csv], {{ type: 'text/csv;charset=utf-8;' }});
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = `Acompanhamento_Digital_${{activeTableTab}}_${{activeChannel}}_${{dateStr}}.csv`;
+      link.download = `Acompanhamento_Digital_${{activeTableTab}}_${{activeChannel}}_${{pLabel}}_${{dateStr}}.csv`;
       link.click();
     }}
   </script>

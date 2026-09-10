@@ -179,6 +179,15 @@ def main():
             'real_acum_site': round(real_acum_site, 2) if is_realizado else None,
             'real_dia_mkt': round(ds['marketplace'], 2) if is_realizado else None,
             'real_acum_mkt': round(real_acum_mkt, 2) if is_realizado else None,
+            # Histórico Diário Comparativo
+            'v26_06_dia_total': round(ds.get('v26_06_total', 0.0), 2),
+            'v25_dia_total': round(ds.get('v25_total', 0.0), 2),
+            'v26_06_dia_app': round(ds.get('v26_06_app', 0.0), 2),
+            'v25_dia_app': round(ds.get('v25_app', 0.0), 2),
+            'v26_06_dia_site': round(ds.get('v26_06_site', 0.0), 2),
+            'v25_dia_site': round(ds.get('v25_site', 0.0), 2),
+            'v26_06_dia_mkt': round(ds.get('v26_06_mkt', 0.0), 2),
+            'v25_dia_mkt': round(ds.get('v25_mkt', 0.0), 2),
             # Atingimento diário
             'ating_dia_total': calc_pct(ds['total'], m_dia_tot) if is_realizado else None,
             'ating_acum_total': calc_pct(real_acum_total, m_acum_tot) if is_realizado else None,
@@ -443,6 +452,29 @@ def main():
         }
 
     raw_hier = qlik_raw.get('hierarquia', [])
+    raw_linhas_dia = qlik_raw.get('linhas_dia', [])
+    raw_labs_dia = qlik_raw.get('laboratorios_dia', [])
+
+    # Mapa diário de vendas por Linha e Canal (Dias 1 a max_dia)
+    linha_dias = defaultdict(lambda: {
+        'total': [0.0] * max_dia,
+        'app': [0.0] * max_dia,
+        'site': [0.0] * max_dia,
+        'marketplace': [0.0] * max_dia
+    })
+
+    for r in raw_linhas_dia:
+        canal = r[0]
+        lin = clean_name(r[1])
+        dia = int(r[2]) if str(r[2]).isdigit() else 0
+        v = float(r[3] or 0.0)
+        if 1 <= dia <= max_dia:
+            cat = map_channel_category(canal)
+            if cat != 'outros':
+                c_key = 'marketplace' if cat == 'marketplace' else cat
+                linha_dias[lin]['total'][dia - 1] += v
+                linha_dias[lin][c_key][dia - 1] += v
+
     real_linha_map = defaultdict(lambda: {
         'v26_total': 0.0, 'v26_app': 0.0, 'v26_site': 0.0, 'v26_mkt': 0.0,
         'v26_06_total': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0,
@@ -485,7 +517,7 @@ def main():
         })
 
         # Função auxiliar para consolidar cada canal
-        def build_metric_block(real, meta_mtd, meta_mes, v26_06, v25):
+        def build_metric_block(real, meta_mtd, meta_mes, v26_06, v25, dias_venda):
             gap_rs = round(real - meta_mtd, 2)
             ating_pct = calc_pct(real, meta_mtd)
             desvio_pct = calc_desvio_pct(real, meta_mtd)
@@ -505,14 +537,15 @@ def main():
                 'crescimento_mom_diff': mom_diff,
                 'v25_mtd': round(v25, 2),
                 'crescimento_yoy_pct': yoy_pct,
-                'crescimento_yoy_diff': yoy_diff
+                'crescimento_yoy_diff': yoy_diff,
+                'dias': [round(x, 2) for x in dias_venda]
             }
 
         canais_linha = {
-            'total': build_metric_block(rv['v26_total'], m['meta_mtd_total'], m['meta_mensal_total'], rv['v26_06_total'], rv['v25_total']),
-            'app': build_metric_block(rv['v26_app'], m['meta_mtd_app'], m['meta_mensal_app'], rv['v26_06_app'], rv['v25_app']),
-            'site': build_metric_block(rv['v26_site'], m['meta_mtd_site'], m['meta_mensal_site'], rv['v26_06_site'], rv['v25_site']),
-            'marketplace': build_metric_block(rv['v26_mkt'], m['meta_mtd_mkt'], m['meta_mensal_mkt'], rv['v26_06_mkt'], rv['v25_mkt'])
+            'total': build_metric_block(rv['v26_total'], m['meta_mtd_total'], m['meta_mensal_total'], rv['v26_06_total'], rv['v25_total'], linha_dias[lin]['total']),
+            'app': build_metric_block(rv['v26_app'], m['meta_mtd_app'], m['meta_mensal_app'], rv['v26_06_app'], rv['v25_app'], linha_dias[lin]['app']),
+            'site': build_metric_block(rv['v26_site'], m['meta_mtd_site'], m['meta_mensal_site'], rv['v26_06_site'], rv['v25_site'], linha_dias[lin]['site']),
+            'marketplace': build_metric_block(rv['v26_mkt'], m['meta_mtd_mkt'], m['meta_mensal_mkt'], rv['v26_06_mkt'], rv['v25_mkt'], linha_dias[lin]['marketplace'])
         }
 
         tabela_linhas.append({
@@ -542,12 +575,12 @@ def main():
     tabela_linhas.sort(key=lambda x: x['realizado_mtd'], reverse=True)
     print(f"Total de Linhas processadas: {len(tabela_linhas):,}")
 
-    # 6. Agregações por Grupo com suporte a canais
+    # 6. Agregações por Grupo com suporte a canais e histórico diário
     grupos_dict = defaultdict(lambda: {
-        'total': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
-        'app': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
-        'site': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
-        'marketplace': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'total': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'app': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'site': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'marketplace': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'total_linhas': 0
     })
 
@@ -561,6 +594,8 @@ def main():
             grupos_dict[g][ch]['meta_mes'] += b['meta_mensal']
             grupos_dict[g][ch]['v26_06'] += b['v26_06_mtd']
             grupos_dict[g][ch]['v25'] += b['v25_mtd']
+            for i in range(max_dia):
+                grupos_dict[g][ch]['dias'][i] += b['dias'][i]
 
     tabela_grupos = []
     for g, val in grupos_dict.items():
@@ -595,7 +630,8 @@ def main():
                 'v25_mtd': round(v25, 2),
                 'crescimento_yoy_pct': yoy_pct,
                 'crescimento_yoy_diff': yoy_diff,
-                'share_pct': share
+                'share_pct': share,
+                'dias': [round(x, 2) for x in val[ch]['dias']]
             }
 
         tot = canais_grupo['total']
@@ -623,13 +659,13 @@ def main():
 
     tabela_grupos.sort(key=lambda x: x['realizado_mtd'], reverse=True)
 
-    # 7. Agregações por Subgrupo com suporte a canais
+    # 7. Agregações por Subgrupo com suporte a canais e histórico diário
     subgrupos_dict = defaultdict(lambda: {
         'grupo': '',
-        'total': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
-        'app': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
-        'site': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
-        'marketplace': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0},
+        'total': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'app': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'site': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'marketplace': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'total_linhas': 0
     })
 
@@ -645,6 +681,8 @@ def main():
             subgrupos_dict[sub][ch]['meta_mes'] += b['meta_mensal']
             subgrupos_dict[sub][ch]['v26_06'] += b['v26_06_mtd']
             subgrupos_dict[sub][ch]['v25'] += b['v25_mtd']
+            for i in range(max_dia):
+                subgrupos_dict[sub][ch]['dias'][i] += b['dias'][i]
 
     tabela_subgrupos = []
     for sub, val in subgrupos_dict.items():
@@ -679,7 +717,8 @@ def main():
                 'v25_mtd': round(v25, 2),
                 'crescimento_yoy_pct': yoy_pct,
                 'crescimento_yoy_diff': yoy_diff,
-                'share_pct': share
+                'share_pct': share,
+                'dias': [round(x, 2) for x in val[ch]['dias']]
             }
 
         tot = canais_sub['total']
@@ -708,7 +747,7 @@ def main():
     tabela_subgrupos.sort(key=lambda x: x['realizado_mtd'], reverse=True)
     print(f"Total de Subgrupos processados: {len(tabela_subgrupos):,}")
 
-    # 8. Fornecedores / Laboratórios com suporte a canais
+    # 8. Fornecedores / Laboratórios com suporte a canais e histórico diário
     with open(os.path.join(DATA_DIR, 'metas_por_laboratorio.json'), 'r', encoding='utf-8') as f:
         metas_labs_list = json.load(f)
     metas_labs_map = {clean_name(r['Laboratorio']): r for r in metas_labs_list}
@@ -720,6 +759,26 @@ def main():
             labs_raw = json.load(f)
     elif 'laboratorios' in qlik_raw:
         labs_raw = qlik_raw['laboratorios']
+
+    # Mapa diário de vendas por Laboratório e Canal
+    lab_dias = defaultdict(lambda: {
+        'total': [0.0] * max_dia,
+        'app': [0.0] * max_dia,
+        'site': [0.0] * max_dia,
+        'marketplace': [0.0] * max_dia
+    })
+
+    for r in raw_labs_dia:
+        canal = r[0]
+        lab = clean_name(r[1])
+        dia = int(r[2]) if str(r[2]).isdigit() else 0
+        v = float(r[3] or 0.0)
+        if 1 <= dia <= max_dia:
+            cat = map_channel_category(canal)
+            if cat != 'outros':
+                c_key = 'marketplace' if cat == 'marketplace' else cat
+                lab_dias[lab]['total'][dia - 1] += v
+                lab_dias[lab][c_key][dia - 1] += v
 
     # Estrutura acumulada de laboratórios
     lab_real = defaultdict(lambda: {
@@ -814,7 +873,8 @@ def main():
                 'v25_mtd': round(v25, 2),
                 'crescimento_yoy_pct': yoy_pct,
                 'crescimento_yoy_diff': yoy_diff,
-                'share_pct': share
+                'share_pct': share,
+                'dias': [round(x, 2) for x in lab_dias[lab][ch]]
             }
 
         tot = canais_lab['total']

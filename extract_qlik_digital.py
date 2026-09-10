@@ -176,6 +176,48 @@ async def fetch_qlik_data():
                             const totalRows3 = l3.result.qLayout.qHyperCube.qSize.qcy;
                             resData.laboratorios = await fetchAllHyperCubeRows(h3, totalRows3, 5, 1000);
 
+                            // 4. Hierarquia Diária (Canal x Linha x Dia) para o filtro dinâmico de datas
+                            const c4 = await send("CreateSessionObject", docHandle, [{
+                                "qInfo": { "qType": "q_digital_linhas_dia" },
+                                "qHyperCubeDef": {
+                                    "qDimensions": [
+                                        { "qDef": { "qFieldDefs": ["Canal"] } },
+                                        { "qDef": { "qFieldDefs": ["Desc_Linha"] } },
+                                        { "qDef": { "qFieldDefs": ["Dia"] } }
+                                    ],
+                                    "qMeasures": [
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-09'}, ${dayFilter}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])`, "qLabel": "v26_dia" } }
+                                    ],
+                                    "qInitialDataFetch": [{ "qTop": 0, "qLeft": 0, "qHeight": 1000, "qWidth": 4 }],
+                                    "qSuppressZero": true, "qSuppressMissing": true
+                                }
+                            }]);
+                            const h4 = c4.result.qReturn.qHandle;
+                            const l4 = await send("GetLayout", h4, []);
+                            const totalRows4 = l4.result.qLayout.qHyperCube.qSize.qcy;
+                            resData.linhas_dia = await fetchAllHyperCubeRows(h4, totalRows4, 4, 1000);
+
+                            // 5. Fornecedores / Laboratórios Diários (Canal x Laboratório x Dia)
+                            const c5 = await send("CreateSessionObject", docHandle, [{
+                                "qInfo": { "qType": "q_digital_labs_dia" },
+                                "qHyperCubeDef": {
+                                    "qDimensions": [
+                                        { "qDef": { "qFieldDefs": ["Canal"] } },
+                                        { "qDef": { "qFieldDefs": ["Laboratorio"] } },
+                                        { "qDef": { "qFieldDefs": ["Dia"] } }
+                                    ],
+                                    "qMeasures": [
+                                        { "qDef": { "qDef": `Sum({1<[Ano-Mes]={'2026-09'}, ${dayFilter}, [Canal]={'APP','APP Tele Entrega','APP TELE ENTREGA','SITE','SITE Tele Entrega','SITE TELE ENTREGA','iFood','IFOOD','e_Commerce','E_COMMERCE','E-COMMERCE','RAPPI','Rappi','MERCADO LIVRE','Mercado Livre'}>} [Receita Líquida])`, "qLabel": "v26_dia" } }
+                                    ],
+                                    "qInitialDataFetch": [{ "qTop": 0, "qLeft": 0, "qHeight": 1000, "qWidth": 4 }],
+                                    "qSuppressZero": true, "qSuppressMissing": true
+                                }
+                            }]);
+                            const h5 = c5.result.qReturn.qHandle;
+                            const l5 = await send("GetLayout", h5, []);
+                            const totalRows5 = l5.result.qLayout.qHyperCube.qSize.qcy;
+                            resData.laboratorios_dia = await fetchAllHyperCubeRows(h5, totalRows5, 4, 1000);
+
                             ws.close();
                             resolve(resData);
                         } catch (e) {
