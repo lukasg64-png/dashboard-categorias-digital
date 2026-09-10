@@ -504,6 +504,16 @@ def main():
     all_keys = set(metas_linha_map.keys()).union(set(real_linha_map.keys()))
     tabela_linhas = []
 
+    # Mapa para rateio proporcional exato de vendas diárias em linhas com mesmo nome em múltiplos grupos
+    tot_lin_mtd = defaultdict(lambda: {'total': 0.0, 'app': 0.0, 'site': 0.0, 'marketplace': 0.0})
+    for k in all_keys:
+        _, _, l_name = k
+        r_item = real_linha_map.get(k, {})
+        tot_lin_mtd[l_name]['total'] += r_item.get('v26_total', 0.0)
+        tot_lin_mtd[l_name]['app'] += r_item.get('v26_app', 0.0)
+        tot_lin_mtd[l_name]['site'] += r_item.get('v26_site', 0.0)
+        tot_lin_mtd[l_name]['marketplace'] += r_item.get('v26_mkt', 0.0)
+
     for key in all_keys:
         grp, sub, lin = key
         m = metas_linha_map.get(key, {
@@ -541,11 +551,21 @@ def main():
                 'dias': [round(x, 2) for x in dias_venda]
             }
 
+        def get_rateio_dias(ch_name, ch_real):
+            tot_lin = tot_lin_mtd[lin][ch_name]
+            weight = (ch_real / tot_lin) if tot_lin > 0 else 0.0
+            return [round(x * weight, 2) for x in linha_dias[lin][ch_name]]
+
+        dias_tot = get_rateio_dias('total', rv['v26_total'])
+        dias_app = get_rateio_dias('app', rv['v26_app'])
+        dias_site = get_rateio_dias('site', rv['v26_site'])
+        dias_mkt = get_rateio_dias('marketplace', rv['v26_mkt'])
+
         canais_linha = {
-            'total': build_metric_block(rv['v26_total'], m['meta_mtd_total'], m['meta_mensal_total'], rv['v26_06_total'], rv['v25_total'], linha_dias[lin]['total']),
-            'app': build_metric_block(rv['v26_app'], m['meta_mtd_app'], m['meta_mensal_app'], rv['v26_06_app'], rv['v25_app'], linha_dias[lin]['app']),
-            'site': build_metric_block(rv['v26_site'], m['meta_mtd_site'], m['meta_mensal_site'], rv['v26_06_site'], rv['v25_site'], linha_dias[lin]['site']),
-            'marketplace': build_metric_block(rv['v26_mkt'], m['meta_mtd_mkt'], m['meta_mensal_mkt'], rv['v26_06_mkt'], rv['v25_mkt'], linha_dias[lin]['marketplace'])
+            'total': build_metric_block(rv['v26_total'], m['meta_mtd_total'], m['meta_mensal_total'], rv['v26_06_total'], rv['v25_total'], dias_tot),
+            'app': build_metric_block(rv['v26_app'], m['meta_mtd_app'], m['meta_mensal_app'], rv['v26_06_app'], rv['v25_app'], dias_app),
+            'site': build_metric_block(rv['v26_site'], m['meta_mtd_site'], m['meta_mensal_site'], rv['v26_06_site'], rv['v25_site'], dias_site),
+            'marketplace': build_metric_block(rv['v26_mkt'], m['meta_mtd_mkt'], m['meta_mensal_mkt'], rv['v26_06_mkt'], rv['v25_mkt'], dias_mkt)
         }
 
         tabela_linhas.append({
@@ -754,11 +774,11 @@ def main():
 
     qlik_labs_file = os.path.join(DATA_DIR, 'qlik_laboratorios_raw.json')
     labs_raw = []
-    if os.path.exists(qlik_labs_file):
+    if 'laboratorios' in qlik_raw and qlik_raw['laboratorios']:
+        labs_raw = qlik_raw['laboratorios']
+    elif os.path.exists(qlik_labs_file):
         with open(qlik_labs_file, 'r', encoding='utf-8') as f:
             labs_raw = json.load(f)
-    elif 'laboratorios' in qlik_raw:
-        labs_raw = qlik_raw['laboratorios']
 
     # Mapa diário de vendas por Laboratório e Canal
     lab_dias = defaultdict(lambda: {
@@ -803,8 +823,9 @@ def main():
             lab_real[lab]['total']['v06'] += v26_06
             lab_real[lab]['total']['v25'] += v25
 
-    # Distribuição Marketplace via SKU / Linha mapping
-    if df_meta is not None:
+    # Distribuição Marketplace via SKU / Linha mapping (apenas se não extraído direto do Qlik)
+    has_mkt_in_labs = any(map_channel_category(r[0]) == 'marketplace' for r in labs_raw)
+    if not has_mkt_in_labs and df_meta is not None:
         linha_lab_mkt = df_meta.groupby(['Desc_Linha', 'Laboratorio'])['Marketplace'].sum().reset_index()
         linha_tot_mkt = df_meta.groupby('Desc_Linha')['Marketplace'].sum().reset_index().rename(columns={'Marketplace': 'Tot_Mkt'})
         linha_weights = pd.merge(linha_lab_mkt, linha_tot_mkt, on='Desc_Linha')
@@ -1087,9 +1108,9 @@ def main():
         'curva_diaria': curva_grafico,
         'grupos': tabela_grupos,
         'subgrupos': tabela_subgrupos,
-        'linhas': tabela_linhas[:500],
-        'laboratorios': tabela_laboratorios[:350],
-        'top_skus': top_skus_processados[:350],
+        'linhas': tabela_linhas[:800],
+        'laboratorios': tabela_laboratorios[:500],
+        'top_skus': top_skus_processados[:500],
         'destaques': diagnostico_causas['total'],
         'diagnostico_causas': diagnostico_causas,
         'filtros': {
