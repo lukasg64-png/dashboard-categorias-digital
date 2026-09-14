@@ -1339,14 +1339,14 @@ def build():
             <span class="channel-name">🌐 Total Digital</span>
             <span class="channel-badge trend-pos" id="badgeAtingTotal">+7.8% 🚀</span>
           </div>
-          <div class="channel-sales" id="tabSalesTotal">R$ 5.897.259</div>
+          <div class="channel-sales" id="tabSalesTotal">R$ 26.040.616</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaTotal">R$ 5.875.260</strong></span>
-            <span id="tabGapTotal" class="badge-trend trend-pos">+R$ 21.999</span>
+            <span>Meta MTD: <strong id="tabMetaTotal">R$ 24.163.839</strong></span>
+            <span id="tabGapTotal" class="badge-trend trend-pos">+R$ 1.876.777</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong style="color: var(--apple-blue);">100% Digital</strong></span>
-            <span>YoY: <strong id="tabYoyTotal" style="color: var(--apple-green-text);">+43.2%</strong></span>
+            <span>Share: <strong id="tabShareTotal" style="color: var(--apple-blue);">100% Digital</strong></span>
+            <span>YoY: <strong id="tabYoyTotal" style="color: var(--apple-green-text);">+61.0%</strong></span>
           </div>
         </div>
 
@@ -1356,14 +1356,14 @@ def build():
             <span class="channel-name">📱 App</span>
             <span class="channel-badge trend-pos" id="badgeAtingApp">+24.2% 🚀</span>
           </div>
-          <div class="channel-sales" id="tabSalesApp">R$ 3.215.637</div>
+          <div class="channel-sales" id="tabSalesApp">R$ 14.219.228</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaApp">R$ 2.784.144</strong></span>
-            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 431.494</span>
+            <span>Meta MTD: <strong id="tabMetaApp">R$ 11.450.660</strong></span>
+            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 2.768.567</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong style="color: var(--apple-blue);">54.5%</strong></span>
-            <span>YoY: <strong id="tabYoyApp" style="color: var(--apple-green-text);">+53.4%</strong></span>
+            <span>Share: <strong id="tabShareApp" style="color: var(--apple-blue);">54.6%</strong></span>
+            <span>YoY: <strong id="tabYoyApp" style="color: var(--apple-green-text);">+84.9%</strong></span>
           </div>
         </div>
 
@@ -1373,14 +1373,14 @@ def build():
             <span class="channel-name">🛍️ Marketplace</span>
             <span class="channel-badge trend-pos" id="badgeAtingMkt">+20.6% 🚀</span>
           </div>
-          <div class="channel-sales" id="tabSalesMkt">R$ 1.638.913</div>
+          <div class="channel-sales" id="tabSalesMkt">R$ 7.616.175</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaMkt">R$ 1.535.631</strong></span>
-            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 103.281</span>
+            <span>Meta MTD: <strong id="tabMetaMkt">R$ 6.315.763</strong></span>
+            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 1.300.412</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong style="color: var(--apple-blue);">27.8%</strong></span>
-            <span>YoY: <strong id="tabYoyMkt" style="color: var(--apple-green-text);">+115.5%</strong></span>
+            <span>Share: <strong id="tabShareMkt" style="color: var(--apple-blue);">29.2%</strong></span>
+            <span>YoY: <strong id="tabYoyMkt" style="color: var(--apple-green-text);">+112.0%</strong></span>
           </div>
         </div>
 
@@ -1390,14 +1390,14 @@ def build():
             <span class="channel-name">💻 Site</span>
             <span class="channel-badge trend-neg" id="badgeAtingSite">-34.3% ⚠️</span>
           </div>
-          <div class="channel-sales" id="tabSalesSite">R$ 1.042.709</div>
+          <div class="channel-sales" id="tabSalesSite">R$ 4.205.214</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaSite">R$ 1.555.484</strong></span>
-            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 512.775</span>
+            <span>Meta MTD: <strong id="tabMetaSite">R$ 6.397.416</strong></span>
+            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 2.192.202</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong style="color: var(--apple-blue);">17.7%</strong></span>
-            <span>YoY: <strong id="tabYoySite" style="color: var(--apple-red-text);">-17.4%</strong></span>
+            <span>Share: <strong id="tabShareSite" style="color: var(--apple-blue);">16.2%</strong></span>
+            <span>YoY: <strong id="tabYoySite" style="color: var(--apple-red-text);">-14.2%</strong></span>
           </div>
         </div>
       </nav>
@@ -1507,10 +1507,10 @@ def build():
           <span id="kpiVendaTitle">Venda Realizada MTD</span>
           <span>💰</span>
         </div>
-        <div class="kpi-value" id="kpiVendaMtd" style="color: var(--apple-blue);">R$ 5.897.259</div>
+        <div class="kpi-value" id="kpiVendaMtd" style="color: var(--apple-blue);">R$ 26.040.616</div>
         <div class="kpi-subtext">
-          <span><span id="kpiMetaLabel">Meta MTD</span>: <strong id="kpiMetaMtdRef" style="color: var(--text-primary);">R$ 5.875.260</strong></span>
-          <span style="color: var(--text-tertiary);">• Curva: <strong id="kpiPctCurva">10.73%</strong></span>
+          <span><span id="kpiMetaLabel">Meta MTD</span>: <strong id="kpiMetaMtdRef" style="color: var(--text-primary);">R$ 24.163.839</strong></span>
+          <span style="color: var(--text-tertiary);">• Curva: <strong id="kpiPctCurva">44.13%</strong></span>
         </div>
       </div>
 
@@ -1522,7 +1522,7 @@ def build():
         </div>
         <div class="kpi-value" id="kpiAtingMtd" style="color: var(--apple-green);">+7.8%</div>
         <div class="kpi-subtext" style="display: flex; justify-content: space-between; align-items: center;">
-          <span class="badge-trend trend-pos" id="kpiGapBadge">+R$ 21.999 Superávit</span>
+          <span class="badge-trend trend-pos" id="kpiGapBadge">+R$ 1.876.777 Superávit</span>
           <span id="kpiDesvioPctRef" style="font-size: 11px; color: var(--text-secondary);">Atingimento: 107.8%</span>
         </div>
         <div class="progress-bar-container">
@@ -1536,10 +1536,10 @@ def build():
           <span>Diária Necessária (Run Rate)</span>
           <span>⚡</span>
         </div>
-        <div class="kpi-value" id="kpiDiariaNec" style="color: var(--text-primary); font-size: 21px;">R$ 1.809.185 / dia</div>
+        <div class="kpi-value" id="kpiDiariaNec" style="color: var(--text-primary); font-size: 21px;">R$ 1.688.508 / dia</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiRitmoBadge">+R$ 156.6k/dia Ritmo</span>
-          <span id="kpiDiasRestantesRef" style="color: var(--text-tertiary);">27d rest. (R$ 48.8M)</span>
+          <span class="badge-trend trend-pos" id="kpiRitmoBadge">+R$ 314.617/dia Ritmo</span>
+          <span id="kpiDiasRestantesRef" style="color: var(--text-tertiary);">17d rest. (R$ 28.7M)</span>
         </div>
       </div>
 
@@ -1549,9 +1549,9 @@ def build():
           <span>Crescimento MoM (vs Ago/26)</span>
           <span>📈</span>
         </div>
-        <div class="kpi-value" id="kpiMoMValue" style="color: var(--apple-green);">+17.1%</div>
+        <div class="kpi-value" id="kpiMoMValue" style="color: var(--apple-green);">+5.1%</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiMoMBadge">+R$ 861.946</span>
+          <span class="badge-trend trend-pos" id="kpiMoMBadge">+R$ 1.268.621</span>
           <span id="kpiMoMPeriodRef" style="color: var(--text-tertiary);">vs 01 a {max_dia_str}/Ago</span>
         </div>
       </div>
@@ -1562,9 +1562,9 @@ def build():
           <span>Evolução YoY (vs Set/25)</span>
           <span>🚀</span>
         </div>
-        <div class="kpi-value" id="kpiYoYValue" style="color: var(--apple-green);">+43.2%</div>
+        <div class="kpi-value" id="kpiYoYValue" style="color: var(--apple-green);">+61.0%</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiYoYBadge">+R$ 1.778.904</span>
+          <span class="badge-trend trend-pos" id="kpiYoYBadge">+R$ 9.861.450</span>
           <span id="kpiYoYPeriodRef" style="color: var(--text-tertiary);">vs 01 a {max_dia_str}/Set/25</span>
         </div>
       </div>
@@ -1575,10 +1575,10 @@ def build():
           <span>Projeção de Fechamento</span>
           <span>🔮</span>
         </div>
-        <div class="kpi-value" id="kpiProjecao" style="color: var(--apple-purple);">R$ 54.950.233</div>
+        <div class="kpi-value" id="kpiProjecao" style="color: var(--apple-purple);">R$ 58.997.244</div>
         <div class="kpi-subtext">
-          <span class="badge-trend trend-pos" id="kpiAtingProj">+R$ 205.0k vs Meta</span>
-          <span id="kpiMetaMensalRef" style="color: var(--text-tertiary);">Meta: R$ 54.7M</span>
+          <span class="badge-trend trend-pos" id="kpiAtingProj">+R$ 4.3M vs Meta</span>
+          <span id="kpiMetaMensalRef" style="color: var(--text-tertiary);">Meta Mês: R$ 54.7M</span>
         </div>
       </div>
     </section>
@@ -3034,6 +3034,12 @@ def build():
         if (desvioEl) {{
           desvioEl.textContent = fmtSignPct(obj.desvio_pct);
           desvioEl.style.color = obj.desvio_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+        }}
+
+        const shareEl = document.getElementById(`tabShare${{id}}`);
+        if (shareEl) {{
+          const shareVal = id === 'Total' ? 100.0 : (obj.share_realizado_pct !== undefined ? obj.share_realizado_pct : 0.0);
+          shareEl.textContent = id === 'Total' ? '100% Digital' : `${{shareVal.toFixed(1)}}%`;
         }}
 
         const momEl = document.getElementById(`tabMom${{id}}`);
