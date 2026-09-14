@@ -10,7 +10,7 @@ Write-Host "  CONFIGURAÇÃO DE AGENDAMENTO AUTOMÁTICO (WINDOWS TASK SCHEDULER)
 Write-Host "======================================================================" -ForegroundColor Cyan
 Write-Host "Diretório do Projeto: $ScriptDir"
 Write-Host "Script Executor:      $BatPath"
-Write-Host "Horário de Execução:  07:35 da manhã (Diariamente - 5min após o Dashboard Geral)"
+Write-Host "Horário de Execução:  08:05 da manhã (Diariamente - garantindo carga 100% concluída do Qlik)"
 
 if (-not (Test-Path $BatPath)) {
     Write-Error "Arquivo atualizar_digital.bat não encontrado em $ScriptDir"
@@ -18,12 +18,12 @@ if (-not (Test-Path $BatPath)) {
 }
 
 $Action = New-ScheduledTaskAction -Execute "cmd.exe" -Argument "/c `"$BatPath`"" -WorkingDirectory $ScriptDir
-$Trigger = New-ScheduledTaskTrigger -Daily -At "07:35"
+$Trigger = New-ScheduledTaskTrigger -Daily -At "08:05"
 $Settings = New-ScheduledTaskSettingsSet -AllowStartIfOnBatteries -DontStopIfGoingOnBatteries -StartWhenAvailable -MultipleInstances IgnoreNew
 
 try {
     Register-ScheduledTask -TaskName $TaskName -Action $Action -Trigger $Trigger -Settings $Settings -Description "Atualizacao automatica diaria do Dashboard Acompanhamento Categorias Digital" -Force | Out-Null
-    Write-Host "`n✅ Tarefa '$TaskName' agendada com sucesso para rodar todos os dias às 07:35!" -ForegroundColor Green
+    Write-Host "`n✅ Tarefa '$TaskName' agendada com sucesso para rodar todos os dias às 08:05!" -ForegroundColor Green
     Write-Host "Para executar manualmente agora: Start-ScheduledTask -TaskName '$TaskName'" -ForegroundColor Yellow
 } catch {
     Write-Warning "Não foi possível registrar com privilégios de Administrador direto: $_"
