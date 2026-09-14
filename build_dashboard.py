@@ -1337,7 +1337,7 @@ def build():
         <div class="channel-tab tab-total active" onclick="switchChannel('total')">
           <div class="channel-tab-header">
             <span class="channel-name">🌐 Total Digital</span>
-            <span class="channel-badge trend-pos" id="badgeAtingTotal">100.4%</span>
+            <span class="channel-badge trend-pos" id="badgeAtingTotal">+7.8% 🚀</span>
           </div>
           <div class="channel-sales" id="tabSalesTotal">R$ 5.897.259</div>
           <div class="channel-meta-sub">
@@ -1354,7 +1354,7 @@ def build():
         <div class="channel-tab tab-app" onclick="switchChannel('app')">
           <div class="channel-tab-header">
             <span class="channel-name">📱 App</span>
-            <span class="channel-badge trend-pos" id="badgeAtingApp">115.5% 🚀</span>
+            <span class="channel-badge trend-pos" id="badgeAtingApp">+24.2% 🚀</span>
           </div>
           <div class="channel-sales" id="tabSalesApp">R$ 3.215.637</div>
           <div class="channel-meta-sub">
@@ -1371,7 +1371,7 @@ def build():
         <div class="channel-tab tab-marketplace" onclick="switchChannel('marketplace')">
           <div class="channel-tab-header">
             <span class="channel-name">🛍️ Marketplace</span>
-            <span class="channel-badge trend-pos" id="badgeAtingMkt">106.7% 🚀</span>
+            <span class="channel-badge trend-pos" id="badgeAtingMkt">+20.6% 🚀</span>
           </div>
           <div class="channel-sales" id="tabSalesMkt">R$ 1.638.913</div>
           <div class="channel-meta-sub">
@@ -1388,7 +1388,7 @@ def build():
         <div class="channel-tab tab-site" onclick="switchChannel('site')">
           <div class="channel-tab-header">
             <span class="channel-name">💻 Site</span>
-            <span class="channel-badge trend-neg" id="badgeAtingSite">67.0% ⚠️</span>
+            <span class="channel-badge trend-neg" id="badgeAtingSite">-34.3% ⚠️</span>
           </div>
           <div class="channel-sales" id="tabSalesSite">R$ 1.042.709</div>
           <div class="channel-meta-sub">
@@ -1514,16 +1514,16 @@ def build():
         </div>
       </div>
 
-      <!-- 2. Atingimento da Meta & GAP MTD -->
+      <!-- 2. Desvio da Meta & GAP MTD -->
       <div class="kpi-card">
         <div class="kpi-title">
-          <span id="kpiAtingTitle">Atingimento & GAP MTD</span>
+          <span id="kpiAtingTitle">Desvio da Meta (GAP %)</span>
           <span>🎯</span>
         </div>
-        <div class="kpi-value" id="kpiAtingMtd" style="color: var(--apple-green);">100.4%</div>
+        <div class="kpi-value" id="kpiAtingMtd" style="color: var(--apple-green);">+7.8%</div>
         <div class="kpi-subtext" style="display: flex; justify-content: space-between; align-items: center;">
           <span class="badge-trend trend-pos" id="kpiGapBadge">+R$ 21.999 Superávit</span>
-          <span id="kpiDesvioPctRef" style="font-size: 11px; color: var(--text-secondary);">Desvio: +0.4%</span>
+          <span id="kpiDesvioPctRef" style="font-size: 11px; color: var(--text-secondary);">Atingimento: 107.8%</span>
         </div>
         <div class="progress-bar-container">
           <div class="progress-bar-fill" id="kpiProgressBar" style="width: 100%; background: var(--apple-green);"></div>
@@ -3015,7 +3015,16 @@ def build():
         if (!obj) return;
         document.getElementById(`tabSales${{id}}`).textContent = fmtMoney(obj.venda_mtd);
         document.getElementById(`tabMeta${{id}}`).textContent = fmtMoney(obj.meta_mtd);
-        document.getElementById(`badgeAting${{id}}`).textContent = fmtPct(obj.ating_mtd_pct) + (obj.ating_mtd_pct >= 100 ? ' 🚀' : '');
+        
+        // Desvio da Meta % com formula (Realizado / Meta - 1) * 100
+        const desvioVal = obj.desvio_pct !== undefined ? obj.desvio_pct : (obj.meta_mtd > 0 ? (((obj.venda_mtd / obj.meta_mtd) - 1.0) * 100.0) : 0.0);
+        const signStr = desvioVal >= 0 ? '+' : '';
+        const iconStr = desvioVal >= 0 ? ' 🚀' : ' ⚠️';
+        const badgeEl = document.getElementById(`badgeAting${{id}}`);
+        if (badgeEl) {{
+          badgeEl.textContent = `${{signStr}}${{desvioVal.toFixed(1)}}%${{iconStr}}`;
+          badgeEl.className = `channel-badge ${{desvioVal >= 0 ? 'trend-pos' : 'trend-neg'}}`;
+        }}
         
         const gapEl = document.getElementById(`tabGap${{id}}`);
         gapEl.textContent = (obj.gap_mtd >= 0 ? '+' : '') + fmtMoney(obj.gap_mtd);
@@ -3070,21 +3079,22 @@ def build():
       const curvaRef = document.getElementById('kpiPctCurva');
       if (curvaRef) {{ curvaRef.textContent = periodMetaPct + '%'; }}
 
-      // 2. Atingimento & GAP
+      // 2. Desvio da Meta & GAP (com formula onde nao fica 107.8% e sim +7.8% com o -1)
       const elAtingTitle = document.getElementById('kpiAtingTitle');
       if (elAtingTitle) {{
-        elAtingTitle.textContent = isFullMtd ? 'Atingimento & GAP MTD' : `Atingimento & GAP (${{pLabel}})`;
+        elAtingTitle.textContent = isFullMtd ? 'Desvio da Meta (GAP %)' : `Desvio da Meta (${{pLabel}})`;
       }}
       const ating = c.ating_mtd_pct;
+      const desvio = c.desvio_pct !== undefined ? c.desvio_pct : (c.meta_mtd > 0 ? (((c.venda_mtd / c.meta_mtd) - 1.0) * 100.0) : 0.0);
       const atingElem = document.getElementById('kpiAtingMtd');
       if (atingElem) {{
-        atingElem.textContent = fmtPct(ating);
-        atingElem.style.color = ating >= 100 ? 'var(--apple-green)' : (ating >= 90 ? 'var(--apple-orange)' : 'var(--apple-red)');
+        atingElem.textContent = fmtSignPct(desvio);
+        atingElem.style.color = desvio >= 0 ? 'var(--apple-green)' : (desvio >= -10 ? 'var(--apple-orange)' : 'var(--apple-red)');
       }}
       const barElem = document.getElementById('kpiProgressBar');
       if (barElem) {{
         barElem.style.width = Math.min(ating, 100) + '%';
-        barElem.style.background = ating >= 100 ? 'var(--apple-green)' : (ating >= 90 ? 'var(--apple-orange)' : 'var(--apple-red)');
+        barElem.style.background = desvio >= 0 ? 'var(--apple-green)' : (desvio >= -10 ? 'var(--apple-orange)' : 'var(--apple-red)');
       }}
       const gapBadge = document.getElementById('kpiGapBadge');
       if (gapBadge) {{
@@ -3093,7 +3103,7 @@ def build():
       }}
       const desvioRef = document.getElementById('kpiDesvioPctRef');
       if (desvioRef) {{
-        desvioRef.textContent = `Desvio: ${{fmtSignPct(c.desvio_pct)}}`;
+        desvioRef.textContent = `Atingimento: ${{fmtPct(ating)}}`;
       }}
 
       // 3. Diária Necessária (Run Rate do Mês)
