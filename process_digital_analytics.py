@@ -33,6 +33,8 @@ def map_channel_category(canal_name):
         return 'site'
     elif c in ['IFOOD', 'E_COMMERCE', 'E-COMMERCE', 'ECOMMERCE', 'RAPPI', 'MERCADO LIVRE', 'PARCEIROS', 'SUPERFACIL']:
         return 'marketplace'
+    elif c in ['FIGITAL', 'PHYGITAL']:
+        return 'figital'
     else:
         return 'outros'
 
@@ -90,11 +92,11 @@ def main():
     # 3. Processar Curva Diária de Vendas (Realizado x Meta)
     raw_canais_dia = qlik_raw.get('canais_dia', [])
     
-    # Estrutura por Dia: total, app, site, marketplace (v26, v26_06, v25)
+    # Estrutura por Dia: total, total_sem_figital, app, site, marketplace, figital (v26, v26_06, v25)
     daily_sales = defaultdict(lambda: {
-        'total': 0.0, 'app': 0.0, 'site': 0.0, 'marketplace': 0.0,
-        'v26_06_total': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0,
-        'v25_total': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0
+        'total': 0.0, 'total_sem_figital': 0.0, 'app': 0.0, 'site': 0.0, 'marketplace': 0.0, 'figital': 0.0,
+        'v26_06_total': 0.0, 'v26_06_total_sem_figital': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0, 'v26_06_figital': 0.0,
+        'v25_total': 0.0, 'v25_total_sem_figital': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0, 'v25_figital': 0.0
     })
 
     for r in raw_canais_dia:
@@ -119,12 +121,19 @@ def main():
             daily_sales[dia][f'v26_06_{cat_key}'] += v26_06
             daily_sales[dia][f'v25_{cat_key}'] += v25
 
+            if cat != 'figital':
+                daily_sales[dia]['total_sem_figital'] += v26
+                daily_sales[dia]['v26_06_total_sem_figital'] += v26_06
+                daily_sales[dia]['v25_total_sem_figital'] += v25
+
     # Construir tabela diária para gráficos
     curva_grafico = []
     real_acum_total = 0.0
+    real_acum_total_sem_figital = 0.0
     real_acum_app = 0.0
     real_acum_site = 0.0
     real_acum_mkt = 0.0
+    real_acum_figital = 0.0
 
     meta_total_mensal = metas_resumo['metas']['total']
     meta_app_mensal = metas_resumo['metas']['app']
@@ -145,14 +154,20 @@ def main():
         m_dia_mkt = item['meta_dia_mkt']
         m_acum_mkt = item['meta_acum_mkt']
 
-        ds = daily_sales.get(d, {'total': 0.0, 'app': 0.0, 'site': 0.0, 'marketplace': 0.0})
+        ds = daily_sales.get(d, {
+            'total': 0.0, 'total_sem_figital': 0.0, 'app': 0.0, 'site': 0.0, 'marketplace': 0.0, 'figital': 0.0,
+            'v26_06_total': 0.0, 'v26_06_total_sem_figital': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0, 'v26_06_figital': 0.0,
+            'v25_total': 0.0, 'v25_total_sem_figital': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0, 'v25_figital': 0.0
+        })
         is_realizado = (d <= max_dia)
 
         if is_realizado:
             real_acum_total += ds['total']
+            real_acum_total_sem_figital += ds['total_sem_figital']
             real_acum_app += ds['app']
             real_acum_site += ds['site']
             real_acum_mkt += ds['marketplace']
+            real_acum_figital += ds['figital']
 
         curva_grafico.append({
             'dia': d,
@@ -173,33 +188,44 @@ def main():
             # Realizado
             'real_dia_total': round(ds['total'], 2) if is_realizado else None,
             'real_acum_total': round(real_acum_total, 2) if is_realizado else None,
+            'real_dia_total_sem_figital': round(ds['total_sem_figital'], 2) if is_realizado else None,
+            'real_acum_total_sem_figital': round(real_acum_total_sem_figital, 2) if is_realizado else None,
             'real_dia_app': round(ds['app'], 2) if is_realizado else None,
             'real_acum_app': round(real_acum_app, 2) if is_realizado else None,
             'real_dia_site': round(ds['site'], 2) if is_realizado else None,
             'real_acum_site': round(real_acum_site, 2) if is_realizado else None,
             'real_dia_mkt': round(ds['marketplace'], 2) if is_realizado else None,
             'real_acum_mkt': round(real_acum_mkt, 2) if is_realizado else None,
+            'real_dia_figital': round(ds['figital'], 2) if is_realizado else None,
+            'real_acum_figital': round(real_acum_figital, 2) if is_realizado else None,
             # Histórico Diário Comparativo
             'v26_06_dia_total': round(ds.get('v26_06_total', 0.0), 2),
             'v25_dia_total': round(ds.get('v25_total', 0.0), 2),
+            'v26_06_dia_total_sem_figital': round(ds.get('v26_06_total_sem_figital', 0.0), 2),
+            'v25_dia_total_sem_figital': round(ds.get('v25_total_sem_figital', 0.0), 2),
             'v26_06_dia_app': round(ds.get('v26_06_app', 0.0), 2),
             'v25_dia_app': round(ds.get('v25_app', 0.0), 2),
             'v26_06_dia_site': round(ds.get('v26_06_site', 0.0), 2),
             'v25_dia_site': round(ds.get('v25_site', 0.0), 2),
             'v26_06_dia_mkt': round(ds.get('v26_06_mkt', 0.0), 2),
             'v25_dia_mkt': round(ds.get('v25_mkt', 0.0), 2),
+            'v26_06_dia_figital': round(ds.get('v26_06_figital', 0.0), 2),
+            'v25_dia_figital': round(ds.get('v25_figital', 0.0), 2),
             # Atingimento diário
             'ating_dia_total': calc_pct(ds['total'], m_dia_tot) if is_realizado else None,
             'ating_acum_total': calc_pct(real_acum_total, m_acum_tot) if is_realizado else None,
-            # Desvio % e GAP R$ diários vs Meta (Solicitado pelo usuário)
+            # Desvio % e GAP R$ diários vs Meta
             'desvio_dia_total': calc_desvio_pct(ds['total'], m_dia_tot) if is_realizado else None,
+            'desvio_dia_total_sem_figital': calc_desvio_pct(ds['total_sem_figital'], m_dia_tot) if is_realizado else None,
             'desvio_dia_app': calc_desvio_pct(ds['app'], m_dia_app) if is_realizado else None,
             'desvio_dia_site': calc_desvio_pct(ds['site'], m_dia_site) if is_realizado else None,
             'desvio_dia_mkt': calc_desvio_pct(ds['marketplace'], m_dia_mkt) if is_realizado else None,
             'gap_dia_total': round(ds['total'] - m_dia_tot, 2) if is_realizado else None,
+            'gap_dia_total_sem_figital': round(ds['total_sem_figital'] - m_dia_tot, 2) if is_realizado else None,
             'gap_dia_app': round(ds['app'] - m_dia_app, 2) if is_realizado else None,
             'gap_dia_site': round(ds['site'] - m_dia_site, 2) if is_realizado else None,
-            'gap_dia_mkt': round(ds['marketplace'] - m_dia_mkt, 2) if is_realizado else None
+            'gap_dia_mkt': round(ds['marketplace'] - m_dia_mkt, 2) if is_realizado else None,
+            'gap_dia_figital': round(ds['figital'], 2) if is_realizado else None
         })
 
     # 4. Totais Executivos MTD & Projeções
@@ -208,9 +234,13 @@ def main():
     meta_site_mtd = meta_site_mensal * pct_acum_dmax
     meta_mkt_mtd = meta_mkt_mensal * pct_acum_dmax
 
-    # Histórico comparativo MTD Total
+    # Histórico comparativo MTD Total (com Figital)
     v26_06_mtd_tot = sum(daily_sales[d]['v26_06_total'] for d in range(1, max_dia + 1))
     v25_mtd_tot = sum(daily_sales[d]['v25_total'] for d in range(1, max_dia + 1))
+
+    # Histórico comparativo MTD Total Sem Figital
+    v26_06_mtd_tot_sem_fig = sum(daily_sales[d]['v26_06_total_sem_figital'] for d in range(1, max_dia + 1))
+    v25_mtd_tot_sem_fig = sum(daily_sales[d]['v25_total_sem_figital'] for d in range(1, max_dia + 1))
 
     # Histórico comparativo por canal
     v26_06_mtd_app = sum(daily_sales[d]['v26_06_app'] for d in range(1, max_dia + 1))
@@ -222,15 +252,23 @@ def main():
     v26_06_mtd_mkt = sum(daily_sales[d]['v26_06_mkt'] for d in range(1, max_dia + 1))
     v25_mtd_mkt = sum(daily_sales[d]['v25_mkt'] for d in range(1, max_dia + 1))
 
+    v26_06_mtd_fig = sum(daily_sales[d]['v26_06_figital'] for d in range(1, max_dia + 1))
+    v25_mtd_fig = sum(daily_sales[d]['v25_figital'] for d in range(1, max_dia + 1))
+
     # Projeção de Fechamento (Run Rate ponderado pela curva oficial)
     proj_total = (real_acum_total / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
+    proj_total_sem_fig = (real_acum_total_sem_figital / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
     proj_app = (real_acum_app / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
     proj_site = (real_acum_site / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
     proj_mkt = (real_acum_mkt / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
+    proj_fig = (real_acum_figital / pct_acum_dmax) if pct_acum_dmax > 0 else 0.0
 
     # Crescimentos MoM e YoY
     yoy_pct_tot, yoy_diff_tot = calc_growth(real_acum_total, v25_mtd_tot)
     mom_pct_tot, mom_diff_tot = calc_growth(real_acum_total, v26_06_mtd_tot)
+
+    yoy_pct_tot_sem_fig, yoy_diff_tot_sem_fig = calc_growth(real_acum_total_sem_figital, v25_mtd_tot_sem_fig)
+    mom_pct_tot_sem_fig, mom_diff_tot_sem_fig = calc_growth(real_acum_total_sem_figital, v26_06_mtd_tot_sem_fig)
 
     yoy_pct_app, yoy_diff_app = calc_growth(real_acum_app, v25_mtd_app)
     mom_pct_app, mom_diff_app = calc_growth(real_acum_app, v26_06_mtd_app)
@@ -241,10 +279,15 @@ def main():
     yoy_pct_mkt, yoy_diff_mkt = calc_growth(real_acum_mkt, v25_mtd_mkt)
     mom_pct_mkt, mom_diff_mkt = calc_growth(real_acum_mkt, v26_06_mtd_mkt)
 
+    yoy_pct_fig, yoy_diff_fig = calc_growth(real_acum_figital, v25_mtd_fig)
+    mom_pct_fig, mom_diff_fig = calc_growth(real_acum_figital, v26_06_mtd_fig)
+
     gap_mtd_tot = round(real_acum_total - meta_total_mtd, 2)
+    gap_mtd_tot_sem_fig = round(real_acum_total_sem_figital - meta_total_mtd, 2)
     gap_mtd_app = round(real_acum_app - meta_app_mtd, 2)
     gap_mtd_site = round(real_acum_site - meta_site_mtd, 2)
     gap_mtd_mkt = round(real_acum_mkt - meta_mkt_mtd, 2)
+    gap_mtd_fig = round(real_acum_figital, 2)
 
     dias_decorridos = max_dia
     dias_restantes = 30 - max_dia
@@ -266,9 +309,11 @@ def main():
         }
 
     rr_tot = calc_run_rate(real_acum_total, meta_total_mensal)
+    rr_tot_sem_fig = calc_run_rate(real_acum_total_sem_figital, meta_total_mensal)
     rr_app = calc_run_rate(real_acum_app, meta_app_mensal)
     rr_site = calc_run_rate(real_acum_site, meta_site_mensal)
     rr_mkt = calc_run_rate(real_acum_mkt, meta_mkt_mensal)
+    rr_fig = calc_run_rate(real_acum_figital, 0.0)
 
     kpis_executivos = {
         'data_corte': f"01 a {max_dia:02d}/09/2026 (D-1)",
@@ -281,6 +326,9 @@ def main():
                 'nome': 'Total Digital',
                 'icone': '🌐',
                 'venda_mtd': round(real_acum_total, 2),
+                'venda_mtd_com_figital': round(real_acum_total, 2),
+                'venda_mtd_sem_figital': round(real_acum_total_sem_figital, 2),
+                'figital_venda_mtd': round(real_acum_figital, 2),
                 'meta_mtd': round(meta_total_mtd, 2),
                 'meta_mensal': round(meta_total_mensal, 2),
                 'ating_mtd_pct': calc_pct(real_acum_total, meta_total_mtd),
@@ -299,6 +347,33 @@ def main():
                 'crescimento_yoy_pct': yoy_pct_tot,
                 'crescimento_yoy_diff': yoy_diff_tot,
                 **rr_tot
+            },
+            'total_sem_figital': {
+                'id': 'total_sem_figital',
+                'nome': 'Total Digital (Sem Figital)',
+                'icone': '🌐',
+                'venda_mtd': round(real_acum_total_sem_figital, 2),
+                'venda_mtd_com_figital': round(real_acum_total, 2),
+                'venda_mtd_sem_figital': round(real_acum_total_sem_figital, 2),
+                'figital_venda_mtd': round(real_acum_figital, 2),
+                'meta_mtd': round(meta_total_mtd, 2),
+                'meta_mensal': round(meta_total_mensal, 2),
+                'ating_mtd_pct': calc_pct(real_acum_total_sem_figital, meta_total_mtd),
+                'gap_mtd': gap_mtd_tot_sem_fig,
+                'desvio_pct': calc_desvio_pct(real_acum_total_sem_figital, meta_total_mtd),
+                'ating_mensal_pct': calc_pct(real_acum_total_sem_figital, meta_total_mensal),
+                'projecao_fechamento': round(proj_total_sem_fig, 2),
+                'ating_proj_pct': calc_pct(proj_total_sem_fig, meta_total_mensal),
+                'gap_projecao': round(proj_total_sem_fig - meta_total_mensal, 2),
+                'share_realizado_pct': calc_pct(real_acum_total_sem_figital, real_acum_total),
+                'share_meta_pct': 100.0,
+                'v26_06_mtd': round(v26_06_mtd_tot_sem_fig, 2),
+                'crescimento_mom_pct': mom_pct_tot_sem_fig,
+                'crescimento_mom_diff': mom_diff_tot_sem_fig,
+                'v25_mtd': round(v25_mtd_tot_sem_fig, 2),
+                'crescimento_yoy_pct': yoy_pct_tot_sem_fig,
+                'crescimento_yoy_diff': yoy_diff_tot_sem_fig,
+                **rr_tot_sem_fig
             },
             'app': {
                 'id': 'app',
@@ -371,6 +446,30 @@ def main():
                 'crescimento_yoy_pct': yoy_pct_mkt,
                 'crescimento_yoy_diff': yoy_diff_mkt,
                 **rr_mkt
+            },
+            'figital': {
+                'id': 'figital',
+                'nome': 'Figital',
+                'icone': '🏪',
+                'venda_mtd': round(real_acum_figital, 2),
+                'meta_mtd': 0.0,
+                'meta_mensal': 0.0,
+                'ating_mtd_pct': 100.0,
+                'gap_mtd': gap_mtd_fig,
+                'desvio_pct': 0.0,
+                'ating_mensal_pct': 0.0,
+                'projecao_fechamento': round(proj_fig, 2),
+                'ating_proj_pct': 100.0,
+                'gap_projecao': 0.0,
+                'share_realizado_pct': calc_pct(real_acum_figital, real_acum_total),
+                'share_meta_pct': 0.0,
+                'v26_06_mtd': round(v26_06_mtd_fig, 2),
+                'crescimento_mom_pct': mom_pct_fig,
+                'crescimento_mom_diff': mom_diff_fig,
+                'v25_mtd': round(v25_mtd_fig, 2),
+                'crescimento_yoy_pct': yoy_pct_fig,
+                'crescimento_yoy_diff': yoy_diff_fig,
+                **rr_fig
             }
         }
     }
@@ -378,14 +477,16 @@ def main():
     # Tabela Executiva de Canais (Resumo Comparativo Consolidado)
     canais_tabela = [
         kpis_executivos['canais']['total'],
+        kpis_executivos['canais']['total_sem_figital'],
         kpis_executivos['canais']['app'],
         kpis_executivos['canais']['marketplace'],
-        kpis_executivos['canais']['site']
+        kpis_executivos['canais']['site'],
+        kpis_executivos['canais']['figital']
     ]
 
     print("\n--- RESUMO DE PERFORMANCE MTD (01 a {:02d}/09) ---".format(max_dia))
     for c in canais_tabela:
-        print(f"  {c['nome']:15s}: Realizado: R$ {c['venda_mtd']:11,.2f} | Meta MTD: R$ {c['meta_mtd']:11,.2f} | Ating: {c['ating_mtd_pct']:6.1f}% | Desvio R$: R$ {c['gap_mtd']:+11,.2f} | MoM: {c['crescimento_mom_pct']:+5.1f}% | YoY: {c['crescimento_yoy_pct']:+5.1f}%")
+        print(f"  {c['nome']:25s}: Realizado: R$ {c['venda_mtd']:11,.2f} | Meta MTD: R$ {c['meta_mtd']:11,.2f} | Ating: {c['ating_mtd_pct']:6.1f}% | Desvio R$: R$ {c['gap_mtd']:+11,.2f} | MoM: {c['crescimento_mom_pct']:+5.1f}% | YoY: {c['crescimento_yoy_pct']:+5.1f}%")
 
     # 5. Processar Hierarquia por Linha
     parquet_path = os.path.join(DATA_DIR, 'metas_digital_completa.parquet')
@@ -458,9 +559,11 @@ def main():
     # Mapa diário de vendas por Linha e Canal (Dias 1 a max_dia)
     linha_dias = defaultdict(lambda: {
         'total': [0.0] * max_dia,
+        'total_sem_figital': [0.0] * max_dia,
         'app': [0.0] * max_dia,
         'site': [0.0] * max_dia,
-        'marketplace': [0.0] * max_dia
+        'marketplace': [0.0] * max_dia,
+        'figital': [0.0] * max_dia
     })
 
     for r in raw_linhas_dia:
@@ -474,11 +577,13 @@ def main():
                 c_key = 'marketplace' if cat == 'marketplace' else cat
                 linha_dias[lin]['total'][dia - 1] += v
                 linha_dias[lin][c_key][dia - 1] += v
+                if cat != 'figital':
+                    linha_dias[lin]['total_sem_figital'][dia - 1] += v
 
     real_linha_map = defaultdict(lambda: {
-        'v26_total': 0.0, 'v26_app': 0.0, 'v26_site': 0.0, 'v26_mkt': 0.0,
-        'v26_06_total': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0,
-        'v25_total': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0
+        'v26_total': 0.0, 'v26_total_sem_figital': 0.0, 'v26_app': 0.0, 'v26_site': 0.0, 'v26_mkt': 0.0, 'v26_figital': 0.0,
+        'v26_06_total': 0.0, 'v26_06_total_sem_figital': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0, 'v26_06_figital': 0.0,
+        'v25_total': 0.0, 'v25_total_sem_figital': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0, 'v25_figital': 0.0
     })
 
     for r in raw_hier:
@@ -501,18 +606,25 @@ def main():
             real_linha_map[key]['v25_total'] += v25
             real_linha_map[key][f'v25_{c_key}'] += v25
 
+            if cat != 'figital':
+                real_linha_map[key]['v26_total_sem_figital'] += v26
+                real_linha_map[key]['v26_06_total_sem_figital'] += v26_06
+                real_linha_map[key]['v25_total_sem_figital'] += v25
+
     all_keys = set(metas_linha_map.keys()).union(set(real_linha_map.keys()))
     tabela_linhas = []
 
     # Mapa para rateio proporcional exato de vendas diárias em linhas com mesmo nome em múltiplos grupos
-    tot_lin_mtd = defaultdict(lambda: {'total': 0.0, 'app': 0.0, 'site': 0.0, 'marketplace': 0.0})
+    tot_lin_mtd = defaultdict(lambda: {'total': 0.0, 'total_sem_figital': 0.0, 'app': 0.0, 'site': 0.0, 'marketplace': 0.0, 'figital': 0.0})
     for k in all_keys:
         _, _, l_name = k
         r_item = real_linha_map.get(k, {})
         tot_lin_mtd[l_name]['total'] += r_item.get('v26_total', 0.0)
+        tot_lin_mtd[l_name]['total_sem_figital'] += r_item.get('v26_total_sem_figital', 0.0)
         tot_lin_mtd[l_name]['app'] += r_item.get('v26_app', 0.0)
         tot_lin_mtd[l_name]['site'] += r_item.get('v26_site', 0.0)
         tot_lin_mtd[l_name]['marketplace'] += r_item.get('v26_mkt', 0.0)
+        tot_lin_mtd[l_name]['figital'] += r_item.get('v26_figital', 0.0)
 
     for key in all_keys:
         grp, sub, lin = key
@@ -521,9 +633,9 @@ def main():
             'meta_mtd_total': 0.0, 'meta_mtd_app': 0.0, 'meta_mtd_site': 0.0, 'meta_mtd_mkt': 0.0
         })
         rv = real_linha_map.get(key, {
-            'v26_total': 0.0, 'v26_app': 0.0, 'v26_site': 0.0, 'v26_mkt': 0.0,
-            'v26_06_total': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0,
-            'v25_total': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0
+            'v26_total': 0.0, 'v26_total_sem_figital': 0.0, 'v26_app': 0.0, 'v26_site': 0.0, 'v26_mkt': 0.0, 'v26_figital': 0.0,
+            'v26_06_total': 0.0, 'v26_06_total_sem_figital': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0, 'v26_06_figital': 0.0,
+            'v25_total': 0.0, 'v25_total_sem_figital': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0, 'v25_figital': 0.0
         })
 
         # Função auxiliar para consolidar cada canal
@@ -557,15 +669,19 @@ def main():
             return [round(x * weight, 2) for x in linha_dias[lin][ch_name]]
 
         dias_tot = get_rateio_dias('total', rv['v26_total'])
+        dias_sem_fig = get_rateio_dias('total_sem_figital', rv['v26_total_sem_figital'])
         dias_app = get_rateio_dias('app', rv['v26_app'])
         dias_site = get_rateio_dias('site', rv['v26_site'])
         dias_mkt = get_rateio_dias('marketplace', rv['v26_mkt'])
+        dias_fig = get_rateio_dias('figital', rv['v26_figital'])
 
         canais_linha = {
             'total': build_metric_block(rv['v26_total'], m['meta_mtd_total'], m['meta_mensal_total'], rv['v26_06_total'], rv['v25_total'], dias_tot),
+            'total_sem_figital': build_metric_block(rv['v26_total_sem_figital'], m['meta_mtd_total'], m['meta_mensal_total'], rv['v26_06_total_sem_figital'], rv['v25_total_sem_figital'], dias_sem_fig),
             'app': build_metric_block(rv['v26_app'], m['meta_mtd_app'], m['meta_mensal_app'], rv['v26_06_app'], rv['v25_app'], dias_app),
             'site': build_metric_block(rv['v26_site'], m['meta_mtd_site'], m['meta_mensal_site'], rv['v26_06_site'], rv['v25_site'], dias_site),
-            'marketplace': build_metric_block(rv['v26_mkt'], m['meta_mtd_mkt'], m['meta_mensal_mkt'], rv['v26_06_mkt'], rv['v25_mkt'], dias_mkt)
+            'marketplace': build_metric_block(rv['v26_mkt'], m['meta_mtd_mkt'], m['meta_mensal_mkt'], rv['v26_06_mkt'], rv['v25_mkt'], dias_mkt),
+            'figital': build_metric_block(rv['v26_figital'], 0.0, 0.0, rv['v26_06_figital'], rv['v25_figital'], dias_fig)
         }
 
         tabela_linhas.append({
@@ -579,9 +695,11 @@ def main():
             'meta_mensal': canais_linha['total']['meta_mensal'],
             'meta_mtd': canais_linha['total']['meta_mtd'],
             'realizado_mtd': canais_linha['total']['realizado_mtd'],
+            'realizado_sem_figital': canais_linha['total_sem_figital']['realizado_mtd'],
             'realizado_app': canais_linha['app']['realizado_mtd'],
             'realizado_site': canais_linha['site']['realizado_mtd'],
             'realizado_mkt': canais_linha['marketplace']['realizado_mtd'],
+            'realizado_figital': canais_linha['figital']['realizado_mtd'],
             'gap_mtd': canais_linha['total']['gap_mtd'],
             'desvio_pct': canais_linha['total']['desvio_pct'],
             'ating_mtd_pct': canais_linha['total']['ating_mtd_pct'],
@@ -598,16 +716,18 @@ def main():
     # 6. Agregações por Grupo com suporte a canais e histórico diário
     grupos_dict = defaultdict(lambda: {
         'total': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'total_sem_figital': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'app': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'site': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'marketplace': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'figital': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'total_linhas': 0
     })
 
     for l in tabela_linhas:
         g = l['grupo']
         grupos_dict[g]['total_linhas'] += 1
-        for ch in ['total', 'app', 'site', 'marketplace']:
+        for ch in ['total', 'total_sem_figital', 'app', 'site', 'marketplace', 'figital']:
             b = l['canais'][ch]
             grupos_dict[g][ch]['real'] += b['realizado_mtd']
             grupos_dict[g][ch]['meta_mtd'] += b['meta_mtd']
@@ -620,7 +740,7 @@ def main():
     tabela_grupos = []
     for g, val in grupos_dict.items():
         canais_grupo = {}
-        for ch in ['total', 'app', 'site', 'marketplace']:
+        for ch in ['total', 'total_sem_figital', 'app', 'site', 'marketplace', 'figital']:
             r = val[ch]['real']
             m_mtd = val[ch]['meta_mtd']
             m_mes = val[ch]['meta_mes']
@@ -661,6 +781,7 @@ def main():
             'canais': canais_grupo,
             # Flat attributes
             'realizado_mtd': tot['realizado_mtd'],
+            'realizado_sem_figital': canais_grupo['total_sem_figital']['realizado_mtd'],
             'meta_mtd': tot['meta_mtd'],
             'meta_mensal': tot['meta_mensal'],
             'gap_mtd': tot['gap_mtd'],
@@ -670,6 +791,7 @@ def main():
             'realizado_app': canais_grupo['app']['realizado_mtd'],
             'realizado_site': canais_grupo['site']['realizado_mtd'],
             'realizado_mkt': canais_grupo['marketplace']['realizado_mtd'],
+            'realizado_figital': canais_grupo['figital']['realizado_mtd'],
             'crescimento_mom_pct': tot['crescimento_mom_pct'],
             'crescimento_mom_diff': tot['crescimento_mom_diff'],
             'crescimento_yoy_pct': tot['crescimento_yoy_pct'],
@@ -683,9 +805,11 @@ def main():
     subgrupos_dict = defaultdict(lambda: {
         'grupo': '',
         'total': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'total_sem_figital': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'app': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'site': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'marketplace': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
+        'figital': {'real': 0.0, 'meta_mtd': 0.0, 'meta_mes': 0.0, 'v26_06': 0.0, 'v25': 0.0, 'dias': [0.0]*max_dia},
         'total_linhas': 0
     })
 
@@ -694,7 +818,7 @@ def main():
         grp = l['grupo']
         subgrupos_dict[sub]['grupo'] = grp
         subgrupos_dict[sub]['total_linhas'] += 1
-        for ch in ['total', 'app', 'site', 'marketplace']:
+        for ch in ['total', 'total_sem_figital', 'app', 'site', 'marketplace', 'figital']:
             b = l['canais'][ch]
             subgrupos_dict[sub][ch]['real'] += b['realizado_mtd']
             subgrupos_dict[sub][ch]['meta_mtd'] += b['meta_mtd']
@@ -707,7 +831,7 @@ def main():
     tabela_subgrupos = []
     for sub, val in subgrupos_dict.items():
         canais_sub = {}
-        for ch in ['total', 'app', 'site', 'marketplace']:
+        for ch in ['total', 'total_sem_figital', 'app', 'site', 'marketplace', 'figital']:
             r = val[ch]['real']
             m_mtd = val[ch]['meta_mtd']
             m_mes = val[ch]['meta_mes']
@@ -749,6 +873,7 @@ def main():
             'laboratorios': subgrupo_to_labs.get(sub, []),
             'canais': canais_sub,
             'realizado_mtd': tot['realizado_mtd'],
+            'realizado_sem_figital': canais_sub['total_sem_figital']['realizado_mtd'],
             'meta_mtd': tot['meta_mtd'],
             'meta_mensal': tot['meta_mensal'],
             'gap_mtd': tot['gap_mtd'],
@@ -758,6 +883,7 @@ def main():
             'realizado_app': canais_sub['app']['realizado_mtd'],
             'realizado_site': canais_sub['site']['realizado_mtd'],
             'realizado_mkt': canais_sub['marketplace']['realizado_mtd'],
+            'realizado_figital': canais_sub['figital']['realizado_mtd'],
             'crescimento_mom_pct': tot['crescimento_mom_pct'],
             'crescimento_mom_diff': tot['crescimento_mom_diff'],
             'crescimento_yoy_pct': tot['crescimento_yoy_pct'],
@@ -783,9 +909,11 @@ def main():
     # Mapa diário de vendas por Laboratório e Canal
     lab_dias = defaultdict(lambda: {
         'total': [0.0] * max_dia,
+        'total_sem_figital': [0.0] * max_dia,
         'app': [0.0] * max_dia,
         'site': [0.0] * max_dia,
-        'marketplace': [0.0] * max_dia
+        'marketplace': [0.0] * max_dia,
+        'figital': [0.0] * max_dia
     })
 
     for r in raw_labs_dia:
@@ -799,13 +927,17 @@ def main():
                 c_key = 'marketplace' if cat == 'marketplace' else cat
                 lab_dias[lab]['total'][dia - 1] += v
                 lab_dias[lab][c_key][dia - 1] += v
+                if cat != 'figital':
+                    lab_dias[lab]['total_sem_figital'][dia - 1] += v
 
     # Estrutura acumulada de laboratórios
     lab_real = defaultdict(lambda: {
         'total': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+        'total_sem_figital': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
         'app': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
         'site': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
-        'marketplace': {'real': 0.0, 'v06': 0.0, 'v25': 0.0}
+        'marketplace': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+        'figital': {'real': 0.0, 'v06': 0.0, 'v25': 0.0}
     })
 
     for r in labs_raw:
@@ -822,6 +954,10 @@ def main():
             lab_real[lab]['total']['real'] += v26
             lab_real[lab]['total']['v06'] += v26_06
             lab_real[lab]['total']['v25'] += v25
+            if cat != 'figital':
+                lab_real[lab]['total_sem_figital']['real'] += v26
+                lab_real[lab]['total_sem_figital']['v06'] += v26_06
+                lab_real[lab]['total_sem_figital']['v25'] += v25
 
     # Distribuição Marketplace via SKU / Linha mapping (apenas se não extraído direto do Qlik)
     has_mkt_in_labs = any(map_channel_category(r[0]) == 'marketplace' for r in labs_raw)
@@ -850,24 +986,29 @@ def main():
                         lab_real[lab]['total']['real'] += v26 * w
                         lab_real[lab]['total']['v06'] += v26_06 * w
                         lab_real[lab]['total']['v25'] += v25 * w
+                        lab_real[lab]['total_sem_figital']['real'] += v26 * w
+                        lab_real[lab]['total_sem_figital']['v06'] += v26_06 * w
+                        lab_real[lab]['total_sem_figital']['v25'] += v25 * w
 
     all_labs_keys = set(metas_labs_map.keys()).union(set(lab_real.keys()))
     tabela_laboratorios = []
-    meta_keys = {'total': 'Total_Digital', 'app': 'App', 'site': 'Site', 'marketplace': 'Marketplace'}
+    meta_keys = {'total': 'Total_Digital', 'total_sem_figital': 'Total_Digital', 'app': 'App', 'site': 'Site', 'marketplace': 'Marketplace', 'figital': None}
     
     for lab in all_labs_keys:
         m = metas_labs_map.get(lab, {'Total_Digital': 0.0, 'App': 0.0, 'Site': 0.0, 'Marketplace': 0.0})
         rv = lab_real.get(lab, {
             'total': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+            'total_sem_figital': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
             'app': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
             'site': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
-            'marketplace': {'real': 0.0, 'v06': 0.0, 'v25': 0.0}
+            'marketplace': {'real': 0.0, 'v06': 0.0, 'v25': 0.0},
+            'figital': {'real': 0.0, 'v06': 0.0, 'v25': 0.0}
         })
         
         canais_lab = {}
-        for ch in ['total', 'app', 'site', 'marketplace']:
+        for ch in ['total', 'total_sem_figital', 'app', 'site', 'marketplace', 'figital']:
             r = rv[ch]['real']
-            m_mes = float(m.get(meta_keys[ch], 0.0) or 0.0)
+            m_mes = float(m.get(meta_keys[ch], 0.0) or 0.0) if meta_keys.get(ch) else 0.0
             m_mtd = round(m_mes * pct_acum_dmax, 2)
             v06 = rv[ch]['v06']
             v25 = rv[ch]['v25']
@@ -908,6 +1049,7 @@ def main():
                 'linhas': lab_to_linhas.get(lab, []),
                 'skus': lab_to_skus.get(lab, []),
                 'realizado_mtd': tot['realizado_mtd'],
+                'realizado_sem_figital': canais_lab['total_sem_figital']['realizado_mtd'],
                 'meta_mtd': tot['meta_mtd'],
                 'meta_mensal': tot['meta_mensal'],
                 'gap_mtd': tot['gap_mtd'],
@@ -917,6 +1059,7 @@ def main():
                 'realizado_app': canais_lab['app']['realizado_mtd'],
                 'realizado_site': canais_lab['site']['realizado_mtd'],
                 'realizado_mkt': canais_lab['marketplace']['realizado_mtd'],
+                'realizado_figital': canais_lab['figital']['realizado_mtd'],
                 'crescimento_mom_pct': tot['crescimento_mom_pct'],
                 'crescimento_mom_diff': tot['crescimento_mom_diff'],
                 'crescimento_yoy_pct': tot['crescimento_yoy_pct'],
@@ -960,7 +1103,7 @@ def main():
 
     # 10. Diagnóstico de Causa-Raiz (Raio-X de Problemas vs Aceleradores por Canal)
     diagnostico_causas = {}
-    for ch in ['total', 'app', 'site', 'marketplace']:
+    for ch in ['total', 'total_sem_figital', 'app', 'site', 'marketplace', 'figital']:
         # Fornecedores
         labs_validos = [l for l in tabela_laboratorios if l['canais'][ch]['meta_mtd'] > 500 or l['canais'][ch]['realizado_mtd'] > 500]
         det_labs = sorted(labs_validos, key=lambda x: x['canais'][ch]['gap_mtd'])[:15]

@@ -297,8 +297,57 @@ def build():
     /* Channel Selector (Segmented Cards) */
     .channel-nav-container {{
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }}
+
+    @media (max-width: 1100px) {{
+      .channel-nav-container {{
+        grid-template-columns: repeat(3, 1fr);
+      }}
+    }}
+
+    @media (max-width: 900px) {{
+      .channel-nav-container {{
+        grid-template-columns: repeat(2, 1fr);
+      }}
+    }}
+
+    @media (max-width: 600px) {{
+      .channel-nav-container {{
+        grid-template-columns: 1fr;
+      }}
+    }}
+
+    .figital-toggle-pill {{
+      display: inline-flex;
+      background: var(--surface-sunken);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-pill);
+      padding: 2px;
+      gap: 2px;
+      margin-left: auto;
+    }}
+
+    .fig-toggle-btn {{
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: all 0.15s ease;
+      user-select: none;
+    }}
+
+    .fig-toggle-btn:hover {{
+      color: var(--text-primary);
+    }}
+
+    .fig-toggle-btn.active {{
+      background: var(--apple-blue);
+      color: #FFFFFF;
+      box-shadow: 0 1px 4px rgba(0, 113, 227, 0.25);
     }}
 
     .channel-tab {{
@@ -1337,16 +1386,23 @@ def build():
         <div class="channel-tab tab-total active" onclick="switchChannel('total')">
           <div class="channel-tab-header">
             <span class="channel-name">🌐 Total Digital</span>
-            <span class="channel-badge trend-pos" id="badgeAtingTotal">+7.8% 🚀</span>
+            <div class="figital-toggle-pill" onclick="event.stopPropagation();" title="Alternar visualização Com ou Sem canal Figital">
+              <span class="fig-toggle-btn active" id="btnFigCom" onclick="setFigitalInTotal(true, event)">Com Figital</span>
+              <span class="fig-toggle-btn" id="btnFigSem" onclick="setFigitalInTotal(false, event)">Sem Figital</span>
+            </div>
           </div>
-          <div class="channel-sales" id="tabSalesTotal">R$ 26.040.616</div>
+          <div class="channel-sales" id="tabSalesTotal">R$ 28.312.619</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaTotal">R$ 24.163.839</strong></span>
-            <span id="tabGapTotal" class="badge-trend trend-pos">+R$ 1.876.777</span>
+            <span>Meta MTD: <strong id="tabMetaTotal">R$ 26.107.624</strong></span>
+            <span id="tabGapTotal" class="badge-trend trend-pos">+R$ 2.204.996</span>
           </div>
           <div class="channel-deltas-line">
             <span>Share: <strong id="tabShareTotal" style="color: var(--apple-blue);">100% Digital</strong></span>
-            <span>YoY: <strong id="tabYoyTotal" style="color: var(--apple-green-text);">+61.0%</strong></span>
+            <span>Ating: <strong id="badgeAtingTotal" style="color: var(--apple-green-text);">+8.5% 🚀</strong></span>
+          </div>
+          <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px; padding-top: 5px; border-top: 1px dashed var(--separator); display: flex; justify-content: space-between;">
+            <span>Com: <strong id="valComFig" style="color: var(--text-primary);">R$ 28,31M</strong></span>
+            <span>Sem: <strong id="valSemFig" style="color: var(--text-secondary);">R$ 27,72M</strong></span>
           </div>
         </div>
 
@@ -1354,16 +1410,16 @@ def build():
         <div class="channel-tab tab-app" onclick="switchChannel('app')">
           <div class="channel-tab-header">
             <span class="channel-name">📱 App</span>
-            <span class="channel-badge trend-pos" id="badgeAtingApp">+24.2% 🚀</span>
+            <span class="channel-badge trend-pos" id="badgeAtingApp">+22.3% 🚀</span>
           </div>
-          <div class="channel-sales" id="tabSalesApp">R$ 14.219.228</div>
+          <div class="channel-sales" id="tabSalesApp">R$ 15.130.349</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaApp">R$ 11.450.660</strong></span>
-            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 2.768.567</span>
+            <span>Meta MTD: <strong id="tabMetaApp">R$ 12.371.773</strong></span>
+            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 2.758.576</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong id="tabShareApp" style="color: var(--apple-blue);">54.6%</strong></span>
-            <span>YoY: <strong id="tabYoyApp" style="color: var(--apple-green-text);">+84.9%</strong></span>
+            <span>Share: <strong id="tabShareApp" style="color: var(--apple-blue);">53.4%</strong></span>
+            <span>YoY: <strong id="tabYoyApp" style="color: var(--apple-green-text);">+88.3%</strong></span>
           </div>
         </div>
 
@@ -1371,16 +1427,16 @@ def build():
         <div class="channel-tab tab-marketplace" onclick="switchChannel('marketplace')">
           <div class="channel-tab-header">
             <span class="channel-name">🛍️ Marketplace</span>
-            <span class="channel-badge trend-pos" id="badgeAtingMkt">+20.6% 🚀</span>
+            <span class="channel-badge trend-pos" id="badgeAtingMkt">+18.9% 🚀</span>
           </div>
-          <div class="channel-sales" id="tabSalesMkt">R$ 7.616.175</div>
+          <div class="channel-sales" id="tabSalesMkt">R$ 8.114.737</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaMkt">R$ 6.315.763</strong></span>
-            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 1.300.412</span>
+            <span>Meta MTD: <strong id="tabMetaMkt">R$ 6.823.815</strong></span>
+            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 1.290.922</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong id="tabShareMkt" style="color: var(--apple-blue);">29.2%</strong></span>
-            <span>YoY: <strong id="tabYoyMkt" style="color: var(--apple-green-text);">+112.0%</strong></span>
+            <span>Share: <strong id="tabShareMkt" style="color: var(--apple-blue);">28.7%</strong></span>
+            <span>YoY: <strong id="tabYoyMkt" style="color: var(--apple-green-text);">+110.5%</strong></span>
           </div>
         </div>
 
@@ -1388,16 +1444,37 @@ def build():
         <div class="channel-tab tab-site" onclick="switchChannel('site')">
           <div class="channel-tab-header">
             <span class="channel-name">💻 Site</span>
-            <span class="channel-badge trend-neg" id="badgeAtingSite">-34.3% ⚠️</span>
+            <span class="channel-badge trend-neg" id="badgeAtingSite">-35.3% ⚠️</span>
           </div>
-          <div class="channel-sales" id="tabSalesSite">R$ 4.205.214</div>
+          <div class="channel-sales" id="tabSalesSite">R$ 4.472.838</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaSite">R$ 6.397.416</strong></span>
-            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 2.192.202</span>
+            <span>Meta MTD: <strong id="tabMetaSite">R$ 6.912.036</strong></span>
+            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 2.439.197</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong id="tabShareSite" style="color: var(--apple-blue);">16.2%</strong></span>
-            <span>YoY: <strong id="tabYoySite" style="color: var(--apple-red-text);">-14.2%</strong></span>
+            <span>Share: <strong id="tabShareSite" style="color: var(--apple-blue);">15.8%</strong></span>
+            <span>YoY: <strong id="tabYoySite" style="color: var(--apple-red-text);">-11.8%</strong></span>
+          </div>
+        </div>
+
+        <!-- 5. Figital (Canal Exclusivo) -->
+        <div class="channel-tab tab-figital" onclick="switchChannel('figital')">
+          <div class="channel-tab-header">
+            <span class="channel-name">🏪 Figital</span>
+            <span class="channel-badge trend-pos" id="badgeAtingFigital">Superávit 🚀</span>
+          </div>
+          <div class="channel-sales" id="tabSalesFigital" style="color: var(--apple-indigo);">R$ 594.695</div>
+          <div class="channel-meta-sub">
+            <span>Meta MTD: <strong id="tabMetaFigital">R$ 0,00</strong></span>
+            <span id="tabGapFigital" class="badge-trend trend-pos">+R$ 594.695</span>
+          </div>
+          <div class="channel-deltas-line">
+            <span>Share: <strong id="tabShareFigital" style="color: var(--apple-blue);">2.1%</strong></span>
+            <span>YoY: <strong id="tabYoyFigital" style="color: var(--apple-green-text);">Novo Canal</strong></span>
+          </div>
+          <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px; padding-top: 5px; border-top: 1px dashed var(--separator); display: flex; justify-content: space-between;">
+            <span>Omnichannel Integrado</span>
+            <span style="color: var(--apple-green-text); font-weight: 600;">100% Adicional</span>
           </div>
         </div>
       </nav>
@@ -2205,9 +2282,11 @@ def build():
     function formatCanaisBlock(itemWithCanais) {{
       const chList = [
         {{ id: 'total', nome: 'Total Digital', icone: '🌐', key: 'total' }},
+        {{ id: 'total_sem_figital', nome: 'Total (Sem Figital)', icone: '🌐', key: 'total_sem_figital' }},
         {{ id: 'app', nome: 'App São João', icone: '📱', key: 'app' }},
         {{ id: 'marketplace', nome: 'Marketplaces', icone: '🛍️', key: 'marketplace' }},
-        {{ id: 'site', nome: 'Site Oficial', icone: '🌐', key: 'site' }}
+        {{ id: 'site', nome: 'Site Oficial', icone: '💻', key: 'site' }},
+        {{ id: 'figital', nome: 'Canal Figital', icone: '🏪', key: 'figital' }}
       ];
       let totalRealizado = 0;
       const res = chList.map(item => {{
@@ -2234,9 +2313,9 @@ def build():
         }};
       }});
       res.forEach(c => {{
-        if (c.id !== 'total' && totalRealizado > 0) {{
+        if (c.id !== 'total' && c.id !== 'total_sem_figital' && totalRealizado > 0) {{
           c.share_realizado_pct = (c.venda_mtd / totalRealizado) * 100;
-        }} else if (c.id === 'total') {{
+        }} else {{
           c.share_realizado_pct = 100;
         }}
       }});
@@ -2246,18 +2325,22 @@ def build():
     function getFilteredCanaisData() {{
       const isFilterActive = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);
       const isFullMtd = (selectedDiaIni === 1 && selectedDiaEnd === maxDia);
-      const channels = ['total', 'app', 'marketplace', 'site'];
+      const channels = ['total', 'total_sem_figital', 'app', 'marketplace', 'site', 'figital'];
       const channelNames = {{
         'total': 'Total Digital',
+        'total_sem_figital': 'Total Digital (Sem Figital)',
         'app': 'App São João',
         'marketplace': 'Marketplaces',
-        'site': 'Site Oficial'
+        'site': 'Site Oficial',
+        'figital': 'Canal Figital'
       }};
       const channelIcons = {{
         'total': '🌐',
+        'total_sem_figital': '🌐',
         'app': '📱',
         'marketplace': '🛍️',
-        'site': '🌐'
+        'site': '💻',
+        'figital': '🏪'
       }};
 
       if (!isFilterActive) {{
@@ -2269,9 +2352,11 @@ def build():
         const curva = window.DASHBOARD_DATA.curva_diaria || [];
         const chKeyMap = {{
           'total': {{ r: 'real_dia_total', m: 'meta_dia_total', v06: 'v26_06_dia_total', v25: 'v25_dia_total' }},
+          'total_sem_figital': {{ r: 'real_dia_total_sem_figital', m: 'meta_dia_total', v06: 'v26_06_dia_total_sem_figital', v25: 'v25_dia_total_sem_figital' }},
           'app': {{ r: 'real_dia_app', m: 'meta_dia_app', v06: 'v26_06_dia_app', v25: 'v25_dia_app' }},
           'marketplace': {{ r: 'real_dia_mkt', m: 'meta_dia_mkt', v06: 'v26_06_dia_mkt', v25: 'v25_dia_mkt' }},
-          'site': {{ r: 'real_dia_site', m: 'meta_dia_site', v06: 'v26_06_dia_site', v25: 'v25_dia_site' }}
+          'site': {{ r: 'real_dia_site', m: 'meta_dia_site', v06: 'v26_06_dia_site', v25: 'v25_dia_site' }},
+          'figital': {{ r: 'real_dia_figital', m: null, v06: 'v26_06_dia_figital', v25: 'v25_dia_figital' }}
         }};
 
         const baseKpis = window.DASHBOARD_DATA.kpis.canais;
@@ -2287,7 +2372,7 @@ def build():
             if (d - 1 < curva.length) {{
               const row = curva[d - 1];
               r += (row[km.r] || 0);
-              m += (row[km.m] || 0);
+              m += km.m ? (row[km.m] || 0) : 0;
               v06 += (row[km.v06] || 0);
               v25 += (row[km.v25] || 0);
             }}
@@ -2300,9 +2385,9 @@ def build():
 
           if (ch === 'total') totalRealizado = r;
 
-          const gap = Math.round((r - m) * 100) / 100;
-          const ating = m > 0 ? ((r / m) * 100) : 0;
-          const desvio = m > 0 ? (((r / m) - 1) * 100) : 0;
+          const gap = ch === 'figital' ? r : Math.round((r - m) * 100) / 100;
+          const ating = m > 0 ? ((r / m) * 100) : (ch === 'figital' ? 100 : 0);
+          const desvio = m > 0 ? (((r / m) - 1) * 100) : (ch === 'figital' ? 100 : 0);
           const mom = v06 > 0 ? (((r - v06) / v06) * 100) : 0;
           const mom_diff = Math.round((r - v06) * 100) / 100;
           const yoy = v25 > 0 ? (((r - v25) / v25) * 100) : 0;
@@ -2331,9 +2416,9 @@ def build():
         }});
 
         res.forEach(c => {{
-          if (c.id !== 'total' && totalRealizado > 0) {{
+          if (c.id !== 'total' && c.id !== 'total_sem_figital' && totalRealizado > 0) {{
             c.share_realizado_pct = (c.venda_mtd / totalRealizado) * 100;
-          }} else if (c.id === 'total') {{
+          }} else {{
             c.share_realizado_pct = 100;
           }}
         }});
@@ -2406,9 +2491,9 @@ def build():
 
         if (ch === 'total') totalRealizado = r;
 
-        const gap = Math.round((r - m_periodo) * 100) / 100;
-        const ating = m_periodo > 0 ? ((r / m_periodo) * 100) : 0;
-        const desvio = m_periodo > 0 ? (((r / m_periodo) - 1) * 100) : 0;
+        const gap = ch === 'figital' ? r : Math.round((r - m_periodo) * 100) / 100;
+        const ating = m_periodo > 0 ? ((r / m_periodo) * 100) : (ch === 'figital' ? 100 : 0);
+        const desvio = m_periodo > 0 ? (((r / m_periodo) - 1) * 100) : (ch === 'figital' ? 100 : 0);
         const mom = v06 > 0 ? (((r - v06) / v06) * 100) : 0;
         const mom_diff = Math.round((r - v06) * 100) / 100;
         const yoy = v25 > 0 ? (((r - v25) / v25) * 100) : 0;
@@ -2437,9 +2522,9 @@ def build():
       }});
 
       res.forEach(c => {{
-        if (c.id !== 'total' && totalRealizado > 0) {{
+        if (c.id !== 'total' && c.id !== 'total_sem_figital' && totalRealizado > 0) {{
           c.share_realizado_pct = (c.venda_mtd / totalRealizado) * 100;
-        }} else if (c.id === 'total') {{
+        }} else {{
           c.share_realizado_pct = 100;
         }}
       }});
@@ -2957,13 +3042,48 @@ def build():
       renderTable();
     }}
 
+    let includeFigitalInTotal = true;
+
+    function setFigitalInTotal(include, evt) {{
+      if (evt) evt.stopPropagation();
+      includeFigitalInTotal = include;
+
+      const btnCom = document.getElementById('btnFigCom');
+      const btnSem = document.getElementById('btnFigSem');
+      if (btnCom && btnSem) {{
+        if (includeFigitalInTotal) {{
+          btnCom.classList.add('active');
+          btnSem.classList.remove('active');
+        }} else {{
+          btnCom.classList.remove('active');
+          btnSem.classList.add('active');
+        }}
+      }}
+
+      if (activeChannel === 'total' || activeChannel === 'total_sem_figital') {{
+        activeChannel = includeFigitalInTotal ? 'total' : 'total_sem_figital';
+      }}
+
+      updateChannelNavSummary();
+      updateKpis();
+      renderChart();
+      renderHighlights();
+      renderTable();
+      renderDiagnosticoView();
+    }}
+
     function switchChannel(channelId) {{
-      activeChannel = channelId;
+      if (channelId === 'total') {{
+        activeChannel = includeFigitalInTotal ? 'total' : 'total_sem_figital';
+      }} else {{
+        activeChannel = channelId;
+      }}
 
       document.querySelectorAll('.channel-tab').forEach(tab => {{
         tab.classList.remove('active');
       }});
-      const activeEl = document.querySelector(`.tab-${{channelId}}`);
+      const tabTarget = (activeChannel === 'total' || activeChannel === 'total_sem_figital') ? 'total' : activeChannel;
+      const activeEl = document.querySelector(`.tab-${{tabTarget}}`);
       if (activeEl) activeEl.classList.add('active');
 
       updateKpis();
@@ -3013,8 +3133,10 @@ def build():
       
       const fillTab = (id, obj) => {{
         if (!obj) return;
-        document.getElementById(`tabSales${{id}}`).textContent = fmtMoney(obj.venda_mtd);
-        document.getElementById(`tabMeta${{id}}`).textContent = fmtMoney(obj.meta_mtd);
+        const elSales = document.getElementById(`tabSales${{id}}`);
+        if (elSales) elSales.textContent = fmtMoney(obj.venda_mtd);
+        const elMeta = document.getElementById(`tabMeta${{id}}`);
+        if (elMeta) elMeta.textContent = fmtMoney(obj.meta_mtd);
         
         // Desvio da Meta % com formula (Realizado / Meta - 1) * 100
         const desvioVal = obj.desvio_pct !== undefined ? obj.desvio_pct : (obj.meta_mtd > 0 ? (((obj.venda_mtd / obj.meta_mtd) - 1.0) * 100.0) : 0.0);
@@ -3022,13 +3144,20 @@ def build():
         const iconStr = desvioVal >= 0 ? ' 🚀' : ' ⚠️';
         const badgeEl = document.getElementById(`badgeAting${{id}}`);
         if (badgeEl) {{
-          badgeEl.textContent = `${{signStr}}${{desvioVal.toFixed(1)}}%${{iconStr}}`;
-          badgeEl.className = `channel-badge ${{desvioVal >= 0 ? 'trend-pos' : 'trend-neg'}}`;
+          if (id === 'Figital') {{
+            badgeEl.textContent = 'Superávit 🚀';
+            badgeEl.className = 'channel-badge trend-pos';
+          }} else {{
+            badgeEl.textContent = `${{signStr}}${{desvioVal.toFixed(1)}}%${{iconStr}}`;
+            badgeEl.className = `channel-badge ${{desvioVal >= 0 ? 'trend-pos' : 'trend-neg'}}`;
+          }}
         }}
         
         const gapEl = document.getElementById(`tabGap${{id}}`);
-        gapEl.textContent = (obj.gap_mtd >= 0 ? '+' : '') + fmtMoney(obj.gap_mtd);
-        gapEl.className = 'badge-trend ' + (obj.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
+        if (gapEl) {{
+          gapEl.textContent = (obj.gap_mtd >= 0 ? '+' : '') + fmtMoney(obj.gap_mtd);
+          gapEl.className = 'badge-trend ' + (obj.gap_mtd >= 0 ? 'trend-pos' : 'trend-neg');
+        }}
 
         const desvioEl = document.getElementById(`tabDesvioPct${{id}}`);
         if (desvioEl) {{
@@ -3050,20 +3179,37 @@ def build():
 
         const yoyEl = document.getElementById(`tabYoy${{id}}`);
         if (yoyEl) {{
-          yoyEl.textContent = fmtSignPct(obj.crescimento_yoy_pct);
-          yoyEl.style.color = obj.crescimento_yoy_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+          if (id === 'Figital') {{
+            yoyEl.textContent = 'Novo Canal';
+            yoyEl.style.color = 'var(--apple-green-text)';
+          }} else {{
+            yoyEl.textContent = fmtSignPct(obj.crescimento_yoy_pct);
+            yoyEl.style.color = obj.crescimento_yoy_pct >= 0 ? 'var(--apple-green-text)' : 'var(--apple-red-text)';
+          }}
         }}
       }};
 
-      fillTab('Total', cMap['total']);
+      const totalObj = includeFigitalInTotal ? (cMap['total'] || cMap['total_sem_figital']) : (cMap['total_sem_figital'] || cMap['total']);
+      fillTab('Total', totalObj);
       fillTab('App', cMap['app']);
       fillTab('Site', cMap['site']);
       fillTab('Mkt', cMap['marketplace']);
+      fillTab('Figital', cMap['figital']);
+
+      // Sub-Breakdown comparativo no Card do Total Digital
+      const valComEl = document.getElementById('valComFig');
+      const valSemEl = document.getElementById('valSemFig');
+      if (valComEl && cMap['total']) valComEl.textContent = fmtMoney(cMap['total'].venda_mtd);
+      if (valSemEl && cMap['total_sem_figital']) valSemEl.textContent = fmtMoney(cMap['total_sem_figital'].venda_mtd);
     }}
 
     function updateKpis() {{
       const canaisList = getFilteredCanaisData();
-      const c = canaisList.find(item => item.id === activeChannel) || canaisList[0];
+      let targetId = activeChannel;
+      if (targetId === 'total' && !includeFigitalInTotal) targetId = 'total_sem_figital';
+      if (targetId === 'total_sem_figital' && includeFigitalInTotal) targetId = 'total';
+
+      const c = canaisList.find(item => item.id === targetId) || canaisList.find(item => item.id === activeChannel) || canaisList[0];
       const isFullMtd = (selectedDiaIni === 1 && selectedDiaEnd === maxDia);
       const pLabel = getPeriodLabel();
       const periodMetaPct = getPeriodMetaPct();
@@ -3200,17 +3346,26 @@ def build():
       let realKey = 'real_dia_total';
       let metaKey = 'meta_dia_total';
       let desvioKey = 'desvio_dia_total';
-      let channelLabel = 'Total Digital';
+      let channelLabel = 'Total Digital (Com Figital)';
 
-      if (activeChannel === 'app') {{
+      let targetCh = activeChannel;
+      if (targetCh === 'total' && !includeFigitalInTotal) targetCh = 'total_sem_figital';
+
+      if (targetCh === 'total_sem_figital') {{
+        realKey = 'real_dia_total_sem_figital'; metaKey = 'meta_dia_total'; desvioKey = 'desvio_dia_total_sem_figital';
+        channelLabel = 'Total Digital (Sem Figital)';
+      }} else if (targetCh === 'app') {{
         realKey = 'real_dia_app'; metaKey = 'meta_dia_app'; desvioKey = 'desvio_dia_app';
         channelLabel = 'Canal App';
-      }} else if (activeChannel === 'site') {{
+      }} else if (targetCh === 'site') {{
         realKey = 'real_dia_site'; metaKey = 'meta_dia_site'; desvioKey = 'desvio_dia_site';
         channelLabel = 'Canal Site';
-      }} else if (activeChannel === 'marketplace') {{
+      }} else if (targetCh === 'marketplace') {{
         realKey = 'real_dia_mkt'; metaKey = 'meta_dia_mkt'; desvioKey = 'desvio_dia_mkt';
         channelLabel = 'Canal Marketplace';
+      }} else if (targetCh === 'figital') {{
+        realKey = 'real_dia_figital'; metaKey = null; desvioKey = null;
+        channelLabel = 'Canal Figital (Superávit Adicional)';
       }}
 
       // Atualizar título do gráfico com o canal ativo e período
@@ -3228,7 +3383,7 @@ def build():
       }}
 
       const dataReal = curva.map(c => c[realKey]);
-      const dataMeta = curva.map(c => c[metaKey]);
+      const dataMeta = metaKey ? curva.map(c => c[metaKey]) : curva.map(() => null);
 
       if (chartInstance) chartInstance.destroy();
 
@@ -3881,9 +4036,11 @@ def build():
     function renderDiagnosticoView() {{
       const channelNames = {{
         'total': 'Total Digital',
+        'total_sem_figital': 'Total Digital (Sem Figital)',
         'app': 'App São João',
         'site': 'Site Oficial',
-        'marketplace': 'Marketplaces'
+        'marketplace': 'Marketplaces',
+        'figital': 'Canal Figital'
       }};
 
       const isFiltered = !!(selectedGrupo || selectedSubgrupo || selectedLab || searchText);

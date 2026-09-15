@@ -37,7 +37,7 @@ HOME_URL = f"https://{QLIK_CLOUD_HOST}/analytics/home"
 USERNAME = "lucas.alves6"
 PASSWORD = "Eloise2025*"
 
-DIGITAL_CHANNELS_FILTER = "'APP', 'APP Tele Entrega', 'APP TELE ENTREGA', 'SITE', 'SITE Tele Entrega', 'SITE TELE ENTREGA', 'iFood', 'IFOOD', 'e_Commerce', 'E_COMMERCE', 'E-COMMERCE', 'RAPPI', 'Rappi', 'MERCADO LIVRE', 'Mercado Livre'"
+DIGITAL_CHANNELS_FILTER = "'APP', 'APP Tele Entrega', 'APP TELE ENTREGA', 'SITE', 'SITE Tele Entrega', 'SITE TELE ENTREGA', 'iFood', 'IFOOD', 'e_Commerce', 'E_COMMERCE', 'E-COMMERCE', 'RAPPI', 'Rappi', 'MERCADO LIVRE', 'Mercado Livre', 'Figital', 'FIGITAL'"
 
 async def fetch_qlik_cloud_data():
     t0 = time.time()

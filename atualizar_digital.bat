@@ -17,8 +17,8 @@ python -u load_metas_digital.py >> "%LOG%" 2>&1
 if errorlevel 1 goto :erro
 
 echo.
-echo [2/4] Sincronizando com Qlik Sense Enterprise...
-python -u extract_qlik_digital.py >> "%LOG%" 2>&1
+echo [2/4] Sincronizando com Qlik Cloud (SaaS)...
+python -u extract_qlik_cloud_digital.py >> "%LOG%" 2>&1
 
 echo.
 echo [3/4] Executando Motor Analitico (Desvios, Evolucao, Projecoes)...
