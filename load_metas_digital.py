@@ -36,6 +36,23 @@ def load_curva():
         
     return curva, total_pct, total_meta
 
+import re
+
+def clean_hier_name(val):
+    if val is None or pd.isna(val):
+        return 'OUTROS'
+    s = str(val).strip()
+    if not s or s in ('-', 'None', 'nan', 'NAN', 'OUTROS'):
+        return 'OUTROS'
+    # Remove codigos numericos entre parenteses: ex: "Medicamentos(1)" -> "Medicamentos"
+    s = re.sub(r'\s*\(\d+\)', '', s).strip().upper()
+    # Corrige tracos, interrogacoes e caracteres corrompidos
+    s = s.replace(' ? ', ' - ').replace(' ?', ' -').replace('? ', '- ')
+    s = s.replace(' \ufffd ', ' - ').replace('\ufffd', '-').replace('–', '-').replace('—', '-')
+    # Normaliza espacos multiplos
+    s = re.sub(r'\s+', ' ', s)
+    return s.strip()
+
 def get_dataframe():
     """Lê o Excel com segurança contra locks do OneDrive/Excel."""
     try:
@@ -47,11 +64,11 @@ def get_dataframe():
     print(f"Lendo base de metas: {os.path.basename(target)}...")
     df = pd.read_excel(target)
     
-    # Tratamento de colunas e nulos
-    df['Desc_Grupo'] = df['Desc_Grupo'].fillna('OUTROS').astype(str).str.strip()
-    df['Desc_Subgrupo'] = df['Desc_Subgrupo'].fillna('OUTROS').astype(str).str.strip()
-    df['Desc_Linha'] = df['Desc_Linha'].fillna('OUTROS').astype(str).str.strip()
-    df['Laboratorio'] = df['Laboratorio'].fillna('OUTROS').astype(str).str.strip()
+    # Tratamento e normalizacao de colunas e hierarquias
+    df['Desc_Grupo'] = df['Desc_Grupo'].apply(clean_hier_name)
+    df['Desc_Subgrupo'] = df['Desc_Subgrupo'].apply(clean_hier_name)
+    df['Desc_Linha'] = df['Desc_Linha'].apply(clean_hier_name)
+    df['Laboratorio'] = df['Laboratorio'].apply(clean_hier_name)
     df['Desc_Produto'] = df['Desc_Produto'].fillna('NÃO INFORMADO').astype(str).str.strip()
     df['Produto_ID'] = df['Produto_ID'].fillna(0).astype(int)
     

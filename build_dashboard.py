@@ -1523,10 +1523,11 @@ def build():
       <!-- Pílulas de Acesso Rápido a Categorias Macro -->
       <div class="filter-quick-pills">
         <span class="quick-pill active" id="pillGrupoAll" onclick="selectQuickGrupo('')">⭐ Todos os Grupos</span>
-        <span class="quick-pill" id="pillGrupoMed" onclick="selectQuickGrupo('Medicamentos(1)')">💊 Medicamentos (1)</span>
-        <span class="quick-pill" id="pillGrupoPerf" onclick="selectQuickGrupo('Perfumaria(2)')">🧴 Perfumaria (2)</span>
-        <span class="quick-pill" id="pillGrupoConv" onclick="selectQuickGrupo('Conveniencia(3)')">🍫 Conveniência (3)</span>
-        <span class="quick-pill" id="pillGrupoHosp" onclick="selectQuickGrupo('Hospitalar(4)')">🏥 Hospitalar (4)</span>
+        <span class="quick-pill" id="pillGrupoMed" onclick="selectQuickGrupo('MEDICAMENTOS')">💊 Medicamentos</span>
+        <span class="quick-pill" id="pillGrupoPerf" onclick="selectQuickGrupo('PERFUMARIA')">🧴 Perfumaria</span>
+        <span class="quick-pill" id="pillGrupoDermo" onclick="selectQuickGrupo('DERMO-COSMETICOS')">✨ Dermo</span>
+        <span class="quick-pill" id="pillGrupoNutri" onclick="selectQuickGrupo('NUTRICAO')">🥗 Nutrição</span>
+        <span class="quick-pill" id="pillGrupoConv" onclick="selectQuickGrupo('CONVENIENCIA')">🍫 Conveniência</span>
       </div>
 
       <div class="filter-inputs-grid">
@@ -2636,10 +2637,11 @@ def build():
       const g = selectedGrupo;
       const pills = [
         {{ id: 'pillGrupoAll', val: '' }},
-        {{ id: 'pillGrupoMed', val: 'Medicamentos(1)' }},
-        {{ id: 'pillGrupoPerf', val: 'Perfumaria(2)' }},
-        {{ id: 'pillGrupoConv', val: 'Conveniencia(3)' }},
-        {{ id: 'pillGrupoHosp', val: 'Hospitalar(4)' }}
+        {{ id: 'pillGrupoMed', val: 'MEDICAMENTOS' }},
+        {{ id: 'pillGrupoPerf', val: 'PERFUMARIA' }},
+        {{ id: 'pillGrupoDermo', val: 'DERMO-COSMETICOS' }},
+        {{ id: 'pillGrupoNutri', val: 'NUTRICAO' }},
+        {{ id: 'pillGrupoConv', val: 'CONVENIENCIA' }}
       ];
       pills.forEach(p => {{
         const el = document.getElementById(p.id);
@@ -3558,7 +3560,7 @@ def build():
     }}
 
     function renderHighlights() {{
-      const chLabel = activeChannel === 'total' ? 'Digital' : (activeChannel === 'app' ? 'App' : (activeChannel === 'site' ? 'Site' : 'Marketplace'));
+      const chLabel = (activeChannel === 'total' || activeChannel === 'total_sem_figital') ? 'Digital' : (activeChannel === 'app' ? 'App' : (activeChannel === 'site' ? 'Site' : (activeChannel === 'figital' ? 'Figital' : 'Marketplace')));
       const pLabel = getPeriodLabel();
       const tAcel = document.getElementById('titleAceleradores');
       const tDetr = document.getElementById('titleDetratores');

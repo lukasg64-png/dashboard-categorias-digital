@@ -20,10 +20,22 @@ from collections import defaultdict
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, 'data')
 
+import re
+
 def clean_name(val):
-    if pd.isna(val) or val is None or str(val).strip() in ('-', '', 'None'):
+    if val is None or pd.isna(val):
         return "OUTROS"
-    return str(val).replace('\xa0', ' ').replace('\t', ' ').strip()
+    s = str(val).replace('\xa0', ' ').replace('\t', ' ').strip()
+    if not s or s in ('-', 'None', 'nan', 'NAN', 'OUTROS'):
+        return "OUTROS"
+    # Remove codigos numericos entre parenteses: ex: "Medicamentos(1)" -> "Medicamentos"
+    s = re.sub(r'\s*\(\d+\)', '', s).strip().upper()
+    # Corrige tracos, interrogacoes e caracteres corrompidos
+    s = s.replace(' ? ', ' - ').replace(' ?', ' -').replace('? ', '- ')
+    s = s.replace(' \ufffd ', ' - ').replace('\ufffd', '-').replace('–', '-').replace('—', '-')
+    # Normaliza espacos multiplos
+    s = re.sub(r'\s+', ' ', s)
+    return s.strip()
 
 def map_channel_category(canal_name):
     c = str(canal_name).strip().upper()
@@ -536,12 +548,14 @@ def main():
         metas_linhas_raw = json.load(f)
 
     metas_linha_map = {}
+    metas_linha_grp_fallback = {}
+    metas_linha_only_fallback = {}
     for l in metas_linhas_raw:
         grp = clean_name(l['Desc_Grupo'])
         sub = clean_name(l['Desc_Subgrupo'])
         lin = clean_name(l['Desc_Linha'])
         key = (grp, sub, lin)
-        metas_linha_map[key] = {
+        m_item = {
             'meta_mensal_total': l['Total_Digital'],
             'meta_mensal_app': l['App'],
             'meta_mensal_site': l['Site'],
@@ -551,6 +565,11 @@ def main():
             'meta_mtd_site': round(l['Site'] * pct_acum_dmax, 2),
             'meta_mtd_mkt': round(l['Marketplace'] * pct_acum_dmax, 2)
         }
+        metas_linha_map[key] = m_item
+        if (grp, lin) not in metas_linha_grp_fallback:
+            metas_linha_grp_fallback[(grp, lin)] = m_item
+        if lin not in metas_linha_only_fallback:
+            metas_linha_only_fallback[lin] = m_item
 
     raw_hier = qlik_raw.get('hierarquia', [])
     raw_linhas_dia = qlik_raw.get('linhas_dia', [])
@@ -628,15 +647,20 @@ def main():
 
     for key in all_keys:
         grp, sub, lin = key
-        m = metas_linha_map.get(key, {
-            'meta_mensal_total': 0.0, 'meta_mensal_app': 0.0, 'meta_mensal_site': 0.0, 'meta_mensal_mkt': 0.0,
-            'meta_mtd_total': 0.0, 'meta_mtd_app': 0.0, 'meta_mtd_site': 0.0, 'meta_mtd_mkt': 0.0
-        })
+        m = metas_linha_map.get(key)
+        if not m or m.get('meta_mensal_total', 0.0) == 0:
+            m = metas_linha_grp_fallback.get((grp, lin), metas_linha_only_fallback.get(lin, {
+                'meta_mensal_total': 0.0, 'meta_mensal_app': 0.0, 'meta_mensal_site': 0.0, 'meta_mensal_mkt': 0.0,
+                'meta_mtd_total': 0.0, 'meta_mtd_app': 0.0, 'meta_mtd_site': 0.0, 'meta_mtd_mkt': 0.0
+            }))
         rv = real_linha_map.get(key, {
             'v26_total': 0.0, 'v26_total_sem_figital': 0.0, 'v26_app': 0.0, 'v26_site': 0.0, 'v26_mkt': 0.0, 'v26_figital': 0.0,
             'v26_06_total': 0.0, 'v26_06_total_sem_figital': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0, 'v26_06_figital': 0.0,
             'v25_total': 0.0, 'v25_total_sem_figital': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0, 'v25_figital': 0.0
         })
+
+        if rv['v26_total'] <= 0 and m['meta_mtd_total'] <= 0:
+            continue
 
         # Função auxiliar para consolidar cada canal
         def build_metric_block(real, meta_mtd, meta_mes, v26_06, v25, dias_venda):
@@ -1083,10 +1107,10 @@ def main():
         top_skus_processados.append({
             'id': sk.get('Produto_ID'),
             'nome': sk.get('Desc_Produto'),
-            'grupo': sk.get('Desc_Grupo'),
-            'subgrupo': sk.get('Desc_Subgrupo'),
-            'linha': sk.get('Desc_Linha'),
-            'laboratorio': sk.get('Laboratorio'),
+            'grupo': clean_name(sk.get('Desc_Grupo')),
+            'subgrupo': clean_name(sk.get('Desc_Subgrupo')),
+            'linha': clean_name(sk.get('Desc_Linha')),
+            'laboratorio': clean_name(sk.get('Laboratorio')),
             # Total
             'meta_mensal': round(m_tot, 2),
             'meta_mtd': round(m_tot * pct_acum_dmax, 2),

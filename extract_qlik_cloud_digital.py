@@ -308,7 +308,7 @@ def load_fallback_data():
     fallback_hier = r"c:\Users\lucas.alves6\OneDrive - Farmácias São João\Documentos\ANTIGRAVITI\dashboard-acompanhamento-categorias\data\setembro\canais_by_hierarquia.json"
     fallback_canais = r"c:\Users\lucas.alves6\OneDrive - Farmácias São João\Documentos\ANTIGRAVITI\dashboard-acompanhamento-categorias\data\setembro\canais_summary.json"
 
-    digital_canais_set = {'APP', 'APP TELE ENTREGA', 'SITE', 'SITE TELE ENTREGA', 'IFOOD', 'RAPPI', 'E_COMMERCE', 'E-COMMERCE'}
+    digital_canais_set = {'APP', 'APP TELE ENTREGA', 'SITE', 'SITE TELE ENTREGA', 'IFOOD', 'RAPPI', 'E_COMMERCE', 'E-COMMERCE', 'FIGITAL', 'PHYGITAL'}
     
     hier_rows = []
     if os.path.exists(fallback_hier):
