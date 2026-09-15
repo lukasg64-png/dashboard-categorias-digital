@@ -16,29 +16,27 @@ async def test_login():
         page = await context.new_page()
         
         print("Navegando para:", QLIK_CLOUD_URL)
-        resp = await page.goto(QLIK_CLOUD_URL, timeout=60000)
-        print("Aguardando carregamento da SPA / redirecionamento...")
-        try:
-            await page.wait_for_url(lambda u: "idp.farmaciassaojoao.com.br" in u or "/analytics/" in u, timeout=20000)
-        except Exception:
-            pass
-        await page.wait_for_timeout(3000)
-        print("URL após carregamento inicial:", page.url)
-        print("Título após carregamento:", await page.title())
+        await page.goto(QLIK_CLOUD_URL, timeout=60000)
         
-        # Verifica se caiu no Keycloak SSO
-        if "idp.farmaciassaojoao.com.br" in page.url:
-            print("Identificado Keycloak SSO. Preenchendo credenciais...")
-            await page.fill('#username', USERNAME)
-            await page.fill('#password', PASSWORD)
-            await page.click('#kc-login')
-            
-            print("Aguardando retorno para o Qlik Cloud...")
-            await page.wait_for_url("**/analytics/**", timeout=60000)
-            print("✅ Login concluído! URL pós-login:", page.url)
-        else:
-            print("Já autenticado ou redirecionamento direto:", page.url)
-            
+        # Verifica se caiu ou está indo para o Keycloak SSO aguardando o input #username
+        print("Verificando necessidade de login SSO...")
+        try:
+            user_input = await page.wait_for_selector('#username', timeout=15000)
+            if user_input:
+                print("Identificado formulário do Keycloak SSO. Preenchendo credenciais...")
+                await page.fill('#username', USERNAME)
+                await page.fill('#password', PASSWORD)
+                await page.click('#kc-login')
+                print("Credenciais enviadas. Aguardando retorno ao Qlik Cloud...")
+                await page.wait_for_url("**/analytics/**", timeout=60000)
+                print("✅ Login SSO concluído com sucesso!")
+        except Exception as e:
+            print("Formulário de login não solicitado ou já logado:", e)
+
+        print("Aguardando estabilização da página do Qlik Cloud...")
+        await page.wait_for_timeout(5000)
+        print("URL final:", page.url)
+        
         # Testar obtenção do token CSRF
         csrf_token = await page.evaluate("""async () => {
             const r = await fetch('/api/v1/csrf-token');

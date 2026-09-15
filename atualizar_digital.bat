@@ -17,11 +17,11 @@ python -u load_metas_digital.py >> "%LOG%" 2>&1
 if errorlevel 1 goto :erro
 
 echo.
-echo [2/4] Sincronizando com Qlik Cloud (SaaS)...
+echo [2/5] Sincronizando com Qlik Cloud (SaaS)...
 python -u extract_qlik_cloud_digital.py >> "%LOG%" 2>&1
 
 echo.
-echo [3/4] Executando Motor Analitico (Desvios, Evolucao, Projecoes)...
+echo [3/5] Executando Motor Analitico (Desvios, Evolucao, Projecoes)...
 python -u process_digital_analytics.py >> "%LOG%" 2>&1
 if errorlevel 1 goto :erro
 

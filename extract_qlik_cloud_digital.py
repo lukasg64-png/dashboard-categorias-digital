@@ -69,23 +69,25 @@ async def fetch_qlik_cloud_data():
             print(f"Navegando para o Qlik Cloud ({HOME_URL})...", flush=True)
             await page.goto(HOME_URL, timeout=60000)
 
-            # Aguarda eventual redirecionamento para o Keycloak SSO
+            # Verifica se caiu ou está indo para o Keycloak SSO aguardando o input #username
+            print("Verificando autenticação no Qlik Cloud...", flush=True)
             try:
-                await page.wait_for_url(lambda u: "idp.farmaciassaojoao.com.br" in u or f"{QLIK_CLOUD_HOST}/analytics" in u, timeout=20000)
+                user_input = await page.wait_for_selector('#username', timeout=12000)
+                if user_input:
+                    print("Identificado formulário do Keycloak SSO. Preenchendo credenciais...", flush=True)
+                    await page.fill('#username', USERNAME)
+                    await page.fill('#password', PASSWORD)
+                    await page.click('#kc-login')
+                    print("Credenciais enviadas. Aguardando retorno ao Qlik Cloud...", flush=True)
+                    await page.wait_for_url(f"**{QLIK_CLOUD_HOST}/analytics/**", timeout=60000)
+                    print("✅ Autenticação SSO concluída com sucesso!", flush=True)
+                    await page.wait_for_timeout(4000)
+                    await context.storage_state(path=STORAGE_STATE_PATH)
             except Exception:
-                pass
-            await page.wait_for_timeout(2000)
+                print("Sessão ativa mantida sem necessidade de novo login.", flush=True)
 
-            if "idp.farmaciassaojoao.com.br" in page.url:
-                print("Identificado Keycloak SSO. Autenticando com credenciais de rede...", flush=True)
-                await page.fill('#username', USERNAME)
-                await page.fill('#password', PASSWORD)
-                await page.click('#kc-login')
-                print("Aguardando retorno para o Qlik Cloud...", flush=True)
-                await page.wait_for_url(f"**{QLIK_CLOUD_HOST}/analytics/**", timeout=60000)
-                await page.wait_for_timeout(3000)
-                print("Autenticação no Keycloak concluída com sucesso!", flush=True)
-                await context.storage_state(path=STORAGE_STATE_PATH)
+            print("Aguardando estabilização da página do Qlik Cloud...", flush=True)
+            await page.wait_for_timeout(4000)
 
             print("2/3 Executando consultas no QIX Engine API via WebSocket...", flush=True)
             queries_js = f"""async () => {{
@@ -281,7 +283,17 @@ async def fetch_qlik_cloud_data():
                 }});
             }};"""
 
-            results = await page.evaluate(queries_js)
+            results = None
+            for attempt in range(3):
+                try:
+                    await page.wait_for_timeout(1000)
+                    results = await page.evaluate(queries_js)
+                    if results and 'canais_dia' in results:
+                        break
+                except Exception as eval_err:
+                    print(f"Tentativa {attempt+1}/3 aguardando estabilização da página: {eval_err}", flush=True)
+                    await page.wait_for_timeout(3000)
+
             await browser.close()
 
             if results and 'canais_dia' in results:
