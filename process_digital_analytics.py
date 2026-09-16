@@ -103,6 +103,19 @@ def main():
 
     # 3. Processar Curva Diária de Vendas (Realizado x Meta)
     raw_canais_dia = qlik_raw.get('canais_dia', [])
+    raw_empresa_dia = qlik_raw.get('empresa_dia', [])
+    
+    empresa_daily_sales = defaultdict(lambda: {'v26': 0.0, 'v26_06': 0.0, 'v25': 0.0})
+    for r in raw_empresa_dia:
+        dia = int(r[0]) if str(r[0]).isdigit() else 0
+        v26 = float(r[1] or 0.0)
+        v26_06 = float(r[2] or 0.0)
+        v25 = float(r[3] or 0.0)
+        if dia > max_dia:
+            v26 = 0.0
+        empresa_daily_sales[dia]['v26'] += v26
+        empresa_daily_sales[dia]['v26_06'] += v26_06
+        empresa_daily_sales[dia]['v25'] += v25
     
     # Estrutura por Dia: total, total_sem_figital, app, site, marketplace, figital (v26, v26_06, v25)
     daily_sales = defaultdict(lambda: {
@@ -146,6 +159,9 @@ def main():
     real_acum_site = 0.0
     real_acum_mkt = 0.0
     real_acum_figital = 0.0
+    real_acum_empresa = 0.0
+    v26_06_acum_empresa = 0.0
+    v25_acum_empresa = 0.0
 
     meta_total_mensal = metas_resumo['metas']['total']
     meta_app_mensal = metas_resumo['metas']['app']
@@ -171,6 +187,7 @@ def main():
             'v26_06_total': 0.0, 'v26_06_total_sem_figital': 0.0, 'v26_06_app': 0.0, 'v26_06_site': 0.0, 'v26_06_mkt': 0.0, 'v26_06_figital': 0.0,
             'v25_total': 0.0, 'v25_total_sem_figital': 0.0, 'v25_app': 0.0, 'v25_site': 0.0, 'v25_mkt': 0.0, 'v25_figital': 0.0
         })
+        eds = empresa_daily_sales.get(d, {'v26': 0.0, 'v26_06': 0.0, 'v25': 0.0})
         is_realizado = (d <= max_dia)
 
         if is_realizado:
@@ -180,6 +197,9 @@ def main():
             real_acum_site += ds['site']
             real_acum_mkt += ds['marketplace']
             real_acum_figital += ds['figital']
+            real_acum_empresa += eds['v26']
+            v26_06_acum_empresa += eds['v26_06']
+            v25_acum_empresa += eds['v25']
 
         curva_grafico.append({
             'dia': d,
@@ -223,6 +243,11 @@ def main():
             'v25_dia_mkt': round(ds.get('v25_mkt', 0.0), 2),
             'v26_06_dia_figital': round(ds.get('v26_06_figital', 0.0), 2),
             'v25_dia_figital': round(ds.get('v25_figital', 0.0), 2),
+            # Total Empresa Diário
+            'real_dia_empresa': round(eds['v26'], 2) if is_realizado else None,
+            'real_acum_empresa': round(real_acum_empresa, 2) if is_realizado else None,
+            'v26_06_dia_empresa': round(eds['v26_06'], 2),
+            'v25_dia_empresa': round(eds['v25'], 2),
             # Atingimento diário
             'ating_dia_total': calc_pct(ds['total'], m_dia_tot) if is_realizado else None,
             'ating_acum_total': calc_pct(real_acum_total, m_acum_tot) if is_realizado else None,
@@ -332,6 +357,13 @@ def main():
         'max_dia': max_dia,
         'pct_tempo_mes': round(max_dia / 30 * 100, 1),
         'pct_curva_acum': round(pct_acum_dmax * 100, 2),
+        'total_empresa': {
+            'venda_mtd': round(real_acum_empresa, 2),
+            'v26_06_mtd': round(v26_06_acum_empresa, 2),
+            'v25_mtd': round(v25_acum_empresa, 2),
+            'crescimento_mom_pct': calc_pct(real_acum_empresa - v26_06_acum_empresa, v26_06_acum_empresa) if v26_06_acum_empresa > 0 else 0.0,
+            'crescimento_yoy_pct': calc_pct(real_acum_empresa - v25_acum_empresa, v25_acum_empresa) if v25_acum_empresa > 0 else 0.0,
+        },
         'canais': {
             'total': {
                 'id': 'total',
@@ -351,6 +383,7 @@ def main():
                 'ating_proj_pct': calc_pct(proj_total, meta_total_mensal),
                 'gap_projecao': round(proj_total - meta_total_mensal, 2),
                 'share_realizado_pct': 100.0,
+                'share_empresa_pct': calc_pct(real_acum_total, real_acum_empresa),
                 'share_meta_pct': 100.0,
                 'v26_06_mtd': round(v26_06_mtd_tot, 2),
                 'crescimento_mom_pct': mom_pct_tot,
@@ -378,6 +411,7 @@ def main():
                 'ating_proj_pct': calc_pct(proj_total_sem_fig, meta_total_mensal),
                 'gap_projecao': round(proj_total_sem_fig - meta_total_mensal, 2),
                 'share_realizado_pct': calc_pct(real_acum_total_sem_figital, real_acum_total),
+                'share_empresa_pct': calc_pct(real_acum_total_sem_figital, real_acum_empresa),
                 'share_meta_pct': 100.0,
                 'v26_06_mtd': round(v26_06_mtd_tot_sem_fig, 2),
                 'crescimento_mom_pct': mom_pct_tot_sem_fig,
@@ -402,6 +436,7 @@ def main():
                 'ating_proj_pct': calc_pct(proj_app, meta_app_mensal),
                 'gap_projecao': round(proj_app - meta_app_mensal, 2),
                 'share_realizado_pct': calc_pct(real_acum_app, real_acum_total),
+                'share_empresa_pct': calc_pct(real_acum_app, real_acum_empresa),
                 'share_meta_pct': metas_resumo['shares']['app'],
                 'v26_06_mtd': round(v26_06_mtd_app, 2),
                 'crescimento_mom_pct': mom_pct_app,
@@ -426,6 +461,7 @@ def main():
                 'ating_proj_pct': calc_pct(proj_site, meta_site_mensal),
                 'gap_projecao': round(proj_site - meta_site_mensal, 2),
                 'share_realizado_pct': calc_pct(real_acum_site, real_acum_total),
+                'share_empresa_pct': calc_pct(real_acum_site, real_acum_empresa),
                 'share_meta_pct': metas_resumo['shares']['site'],
                 'v26_06_mtd': round(v26_06_mtd_site, 2),
                 'crescimento_mom_pct': mom_pct_site,
@@ -450,6 +486,7 @@ def main():
                 'ating_proj_pct': calc_pct(proj_mkt, meta_mkt_mensal),
                 'gap_projecao': round(proj_mkt - meta_mkt_mensal, 2),
                 'share_realizado_pct': calc_pct(real_acum_mkt, real_acum_total),
+                'share_empresa_pct': calc_pct(real_acum_mkt, real_acum_empresa),
                 'share_meta_pct': metas_resumo['shares']['marketplace'],
                 'v26_06_mtd': round(v26_06_mtd_mkt, 2),
                 'crescimento_mom_pct': mom_pct_mkt,
@@ -474,6 +511,7 @@ def main():
                 'ating_proj_pct': 100.0,
                 'gap_projecao': 0.0,
                 'share_realizado_pct': calc_pct(real_acum_figital, real_acum_total),
+                'share_empresa_pct': calc_pct(real_acum_figital, real_acum_empresa),
                 'share_meta_pct': 0.0,
                 'v26_06_mtd': round(v26_06_mtd_fig, 2),
                 'crescimento_mom_pct': mom_pct_fig,

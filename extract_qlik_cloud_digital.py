@@ -253,10 +253,29 @@ async def fetch_qlik_cloud_data():
                                     "qSuppressZero": true, "qSuppressMissing": true
                                 }}
                             }}]);
-                            const h5 = c5.result.qReturn.qHandle;
-                            const l5 = await send("GetLayout", h5, []);
-                            const totalRows5 = l5.result.qLayout.qHyperCube.qSize.qcy;
-                            resData.laboratorios_dia = await fetchAllHyperCubeRows(h5, totalRows5, 4, 1000);
+                            // 6. Total Empresa Diário (Set/26, Ago/26, Set/25 - TODOS os canais)
+                            const c6 = await send("CreateSessionObject", docHandle, [{{
+                                "qInfo": {{ "qType": "q_total_empresa_dia" }},
+                                "qHyperCubeDef": {{
+                                    "qDimensions": [{{ "qDef": {{ "qFieldDefs": ["Dia Venda"] }} }}],
+                                    "qMeasures": [
+                                        {{ "qDef": {{ "qDef": "Sum({{1<[Ano-Mês Venda]={{'2026-09'}}>}} [Vl_Mercadoria])", "qLabel": "v26_empresa" }} }},
+                                        {{ "qDef": {{ "qDef": "Sum({{1<[Ano-Mês Venda]={{'2026-08'}}>}} [Vl_Mercadoria])", "qLabel": "v26_06_empresa" }} }},
+                                        {{ "qDef": {{ "qDef": "Sum({{1<[Ano-Mês Venda]={{'2025-09'}}>}} [Vl_Mercadoria])", "qLabel": "v25_empresa" }} }}
+                                    ],
+                                    "qInitialDataFetch": [{{ "qTop": 0, "qLeft": 0, "qHeight": 50, "qWidth": 4 }}],
+                                    "qSuppressZero": true
+                                }}
+                            }}]);
+                            const h6 = c6.result.qReturn.qHandle;
+                            const l6 = await send("GetLayout", h6, []);
+                            resData.empresa_dia = (l6.result.qLayout.qHyperCube.qDataPages[0]?.qMatrix || []).map(r => r.map(c => c.qNum !== 'NaN' && typeof c.qNum === 'number' ? c.qNum : c.qText));
+
+                            resData.empresa_dia.forEach(r => {{
+                                if (Number(r[0]) > maxDia) {{
+                                    r[1] = 0;
+                                }}
+                            }});
 
                             ws.close();
                             resolve(resData);
@@ -368,9 +387,23 @@ def load_fallback_data():
         if row[1] > computed_max:
             row[2] = 0.0
 
+    empresa_dia_rows = []
+    if os.path.exists(fallback_canais):
+        with open(fallback_canais, 'r', encoding='utf-8') as f:
+            cdata = json.load(f)
+        for d_idx in range(31):
+            dia_num = d_idx + 1
+            v26_tot = sum(float(c.get('d26_07', [])[d_idx] or 0) for c in cdata if d_idx < len(c.get('d26_07', [])))
+            v26_06_tot = sum(float(c.get('d26_06', [])[d_idx] or 0) for c in cdata if d_idx < len(c.get('d26_06', [])))
+            v25_tot = sum(float(c.get('d25', [])[d_idx] or 0) for c in cdata if d_idx < len(c.get('d25', [])))
+            if dia_num > computed_max:
+                v26_tot = 0.0
+            empresa_dia_rows.append([dia_num, round(v26_tot, 2), round(v26_06_tot, 2), round(v25_tot, 2)])
+
     return {
         'canais_dia': canais_dia_rows,
         'hierarquia': hier_rows,
+        'empresa_dia': empresa_dia_rows,
         'maxDia': computed_max,
         'origem': 'Data Lake Local (Fallback)'
     }

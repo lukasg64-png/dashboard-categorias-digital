@@ -420,12 +420,21 @@ def build():
 
     .channel-deltas-line {{
       display: flex;
-      gap: 12px;
-      font-size: 11px;
+      justify-content: space-between;
+      align-items: center;
+      gap: 6px;
+      font-size: 10.5px;
       border-top: 1px solid var(--border-subtle);
       padding-top: 6px;
       color: var(--text-tertiary);
       font-variant-numeric: tabular-nums;
+      white-space: nowrap;
+    }}
+    .channel-deltas-line > span {{
+      white-space: nowrap;
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
     }}
 
     /* Global Filter Bar (Macro to Micro) */
@@ -1397,12 +1406,12 @@ def build():
             <span id="tabGapTotal" class="badge-trend trend-pos">+R$ 2.204.996</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong id="tabShareTotal" style="color: var(--apple-blue);">100% Digital</strong></span>
-            <span>Ating: <strong id="badgeAtingTotal" style="color: var(--apple-green-text);">+8.5% 🚀</strong></span>
+            <span>Part. Empresa: <strong id="tabShareTotal" style="color: var(--apple-blue);" title="Participação sobre o total da rede (todos os canais)">6.9%</strong></span>
+            <span>Ating: <strong id="badgeAtingTotal" style="color: var(--apple-green-text);">+10.5% 🚀</strong></span>
           </div>
           <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px; padding-top: 5px; border-top: 1px dashed var(--separator); display: flex; justify-content: space-between;">
-            <span>Com: <strong id="valComFig" style="color: var(--text-primary);">R$ 28,31M</strong></span>
-            <span>Sem: <strong id="valSemFig" style="color: var(--text-secondary);">R$ 27,72M</strong></span>
+            <span>Com: <strong id="valComFig" style="color: var(--text-primary);">R$ 31,03M (6.9%)</strong></span>
+            <span>Sem: <strong id="valSemFig" style="color: var(--text-secondary);">R$ 29,77M (6.6%)</strong></span>
           </div>
         </div>
 
@@ -1410,16 +1419,16 @@ def build():
         <div class="channel-tab tab-app" onclick="switchChannel('app')">
           <div class="channel-tab-header">
             <span class="channel-name">📱 App</span>
-            <span class="channel-badge trend-pos" id="badgeAtingApp">+22.3% 🚀</span>
+            <span class="channel-badge trend-pos" id="badgeAtingApp">+21.9% 🚀</span>
           </div>
-          <div class="channel-sales" id="tabSalesApp">R$ 15.130.349</div>
+          <div class="channel-sales" id="tabSalesApp">R$ 16.227.222</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaApp">R$ 12.371.773</strong></span>
-            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 2.758.576</span>
+            <span>Meta MTD: <strong id="tabMetaApp">R$ 13.308.477</strong></span>
+            <span id="tabGapApp" class="badge-trend trend-pos">+R$ 2.918.745</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong id="tabShareApp" style="color: var(--apple-blue);">53.4%</strong></span>
-            <span>YoY: <strong id="tabYoyApp" style="color: var(--apple-green-text);">+88.3%</strong></span>
+            <span>Part. Empresa: <strong id="tabShareApp" style="color: var(--apple-blue);">3.6%</strong> <small id="tabDigShareApp" style="color: var(--text-tertiary); font-size: 9.5px; font-weight: 500;">(52.3% Dig)</small></span>
+            <span>YoY: <strong id="tabYoyApp" style="color: var(--apple-green-text);">+88.8%</strong></span>
           </div>
         </div>
 
@@ -1427,16 +1436,16 @@ def build():
         <div class="channel-tab tab-marketplace" onclick="switchChannel('marketplace')">
           <div class="channel-tab-header">
             <span class="channel-name">🛍️ Marketplace</span>
-            <span class="channel-badge trend-pos" id="badgeAtingMkt">+18.9% 🚀</span>
+            <span class="channel-badge trend-pos" id="badgeAtingMkt">+19.0% 🚀</span>
           </div>
-          <div class="channel-sales" id="tabSalesMkt">R$ 8.114.737</div>
+          <div class="channel-sales" id="tabSalesMkt">R$ 8.737.090</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaMkt">R$ 6.823.815</strong></span>
-            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 1.290.922</span>
+            <span>Meta MTD: <strong id="tabMetaMkt">R$ 7.340.467</strong></span>
+            <span id="tabGapMkt" class="badge-trend trend-pos">+R$ 1.396.624</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong id="tabShareMkt" style="color: var(--apple-blue);">28.7%</strong></span>
-            <span>YoY: <strong id="tabYoyMkt" style="color: var(--apple-green-text);">+110.5%</strong></span>
+            <span>Part. Empresa: <strong id="tabShareMkt" style="color: var(--apple-blue);">1.9%</strong> <small id="tabDigShareMkt" style="color: var(--text-tertiary); font-size: 9.5px; font-weight: 500;">(28.1% Dig)</small></span>
+            <span>YoY: <strong id="tabYoyMkt" style="color: var(--apple-green-text);">+111.0%</strong></span>
           </div>
         </div>
 
@@ -1444,16 +1453,16 @@ def build():
         <div class="channel-tab tab-site" onclick="switchChannel('site')">
           <div class="channel-tab-header">
             <span class="channel-name">💻 Site</span>
-            <span class="channel-badge trend-neg" id="badgeAtingSite">-35.3% ⚠️</span>
+            <span class="channel-badge trend-neg" id="badgeAtingSite">-35.4% ⚠️</span>
           </div>
-          <div class="channel-sales" id="tabSalesSite">R$ 4.472.838</div>
+          <div class="channel-sales" id="tabSalesSite">R$ 4.804.445</div>
           <div class="channel-meta-sub">
-            <span>Meta MTD: <strong id="tabMetaSite">R$ 6.912.036</strong></span>
-            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 2.439.197</span>
+            <span>Meta MTD: <strong id="tabMetaSite">R$ 7.435.367</strong></span>
+            <span id="tabGapSite" class="badge-trend trend-neg">-R$ 2.630.922</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong id="tabShareSite" style="color: var(--apple-blue);">15.8%</strong></span>
-            <span>YoY: <strong id="tabYoySite" style="color: var(--apple-red-text);">-11.8%</strong></span>
+            <span>Part. Empresa: <strong id="tabShareSite" style="color: var(--apple-blue);">1.1%</strong> <small id="tabDigShareSite" style="color: var(--text-tertiary); font-size: 9.5px; font-weight: 500;">(15.5% Dig)</small></span>
+            <span>YoY: <strong id="tabYoySite" style="color: var(--apple-red-text);">-11.7%</strong></span>
           </div>
         </div>
 
@@ -1463,13 +1472,13 @@ def build():
             <span class="channel-name">🏪 Figital</span>
             <span class="channel-badge trend-pos" id="badgeAtingFigital">Superávit 🚀</span>
           </div>
-          <div class="channel-sales" id="tabSalesFigital" style="color: var(--apple-indigo);">R$ 594.695</div>
+          <div class="channel-sales" id="tabSalesFigital" style="color: var(--apple-indigo);">R$ 1.265.837</div>
           <div class="channel-meta-sub">
             <span>Meta MTD: <strong id="tabMetaFigital">R$ 0,00</strong></span>
-            <span id="tabGapFigital" class="badge-trend trend-pos">+R$ 594.695</span>
+            <span id="tabGapFigital" class="badge-trend trend-pos">+R$ 1.265.837</span>
           </div>
           <div class="channel-deltas-line">
-            <span>Share: <strong id="tabShareFigital" style="color: var(--apple-blue);">2.1%</strong></span>
+            <span>Part. Empresa: <strong id="tabShareFigital" style="color: var(--apple-blue);">0.3%</strong> <small id="tabDigShareFigital" style="color: var(--text-tertiary); font-size: 9.5px; font-weight: 500;">(4.1% Dig)</small></span>
             <span>YoY: <strong id="tabYoyFigital" style="color: var(--apple-green-text);">Novo Canal</strong></span>
           </div>
           <div style="font-size: 11px; color: var(--text-secondary); margin-top: 4px; padding-top: 5px; border-top: 1px dashed var(--separator); display: flex; justify-content: space-between;">
@@ -2313,12 +2322,14 @@ def build():
           meta_mensal: m.meta_mensal
         }};
       }});
+      const totEmpresa = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.total_empresa) ? window.DASHBOARD_DATA.kpis.total_empresa.venda_mtd : 0;
       res.forEach(c => {{
         if (c.id !== 'total' && c.id !== 'total_sem_figital' && totalRealizado > 0) {{
           c.share_realizado_pct = (c.venda_mtd / totalRealizado) * 100;
         }} else {{
           c.share_realizado_pct = 100;
         }}
+        c.share_empresa_pct = totEmpresa > 0 ? (c.venda_mtd / totEmpresa) * 100 : 0;
       }});
       return res;
     }}
@@ -2363,6 +2374,14 @@ def build():
         const baseKpis = window.DASHBOARD_DATA.kpis.canais;
         const periodMetaPct = getPeriodMetaPct();
         let totalRealizado = 0;
+        let totalEmpresa = 0;
+
+        for (let d = selectedDiaIni; d <= selectedDiaEnd; d++) {{
+          if (d - 1 < curva.length) {{
+            const row = curva[d - 1];
+            totalEmpresa += (row.real_dia_empresa || 0);
+          }}
+        }}
 
         const res = channels.map(ch => {{
           const km = chKeyMap[ch];
@@ -2411,6 +2430,7 @@ def build():
             crescimento_yoy_pct: yoy,
             crescimento_yoy_diff: yoy_diff,
             share_realizado_pct: 0,
+            share_empresa_pct: 0,
             projecao_fechamento: proj,
             meta_mensal: baseCh.meta_mensal || 0
           }};
@@ -2421,6 +2441,11 @@ def build():
             c.share_realizado_pct = (c.venda_mtd / totalRealizado) * 100;
           }} else {{
             c.share_realizado_pct = 100;
+          }}
+          if (totalEmpresa > 0) {{
+            c.share_empresa_pct = (c.venda_mtd / totalEmpresa) * 100;
+          }} else {{
+            c.share_empresa_pct = 0;
           }}
         }});
         return res;
@@ -2522,12 +2547,14 @@ def build():
         }};
       }});
 
+      const totEmpresa = (window.DASHBOARD_DATA.kpis && window.DASHBOARD_DATA.kpis.total_empresa) ? window.DASHBOARD_DATA.kpis.total_empresa.venda_mtd : 0;
       res.forEach(c => {{
         if (c.id !== 'total' && c.id !== 'total_sem_figital' && totalRealizado > 0) {{
           c.share_realizado_pct = (c.venda_mtd / totalRealizado) * 100;
         }} else {{
           c.share_realizado_pct = 100;
         }}
+        c.share_empresa_pct = totEmpresa > 0 ? (c.venda_mtd / totEmpresa) * 100 : 0;
       }});
 
       return res;
@@ -3169,8 +3196,16 @@ def build():
 
         const shareEl = document.getElementById(`tabShare${{id}}`);
         if (shareEl) {{
-          const shareVal = id === 'Total' ? 100.0 : (obj.share_realizado_pct !== undefined ? obj.share_realizado_pct : 0.0);
-          shareEl.textContent = id === 'Total' ? '100% Digital' : `${{shareVal.toFixed(1)}}%`;
+          const empShareVal = obj.share_empresa_pct !== undefined ? obj.share_empresa_pct : 0.0;
+          shareEl.textContent = `${{empShareVal.toFixed(1)}}%`;
+          shareEl.parentElement.title = `Participação de ${{fmtMoney(obj.venda_mtd)}} sobre o faturamento total da empresa`;
+        }}
+
+        const digShareEl = document.getElementById(`tabDigShare${{id}}`);
+        if (digShareEl) {{
+          const digShareVal = obj.share_realizado_pct !== undefined ? obj.share_realizado_pct : 0.0;
+          digShareEl.textContent = `(${{digShareVal.toFixed(1)}}% Dig)`;
+          digShareEl.title = `${{digShareVal.toFixed(1)}}% de participação dentro dos Canais Digitais`;
         }}
 
         const momEl = document.getElementById(`tabMom${{id}}`);
@@ -3201,8 +3236,14 @@ def build():
       // Sub-Breakdown comparativo no Card do Total Digital
       const valComEl = document.getElementById('valComFig');
       const valSemEl = document.getElementById('valSemFig');
-      if (valComEl && cMap['total']) valComEl.textContent = fmtMoney(cMap['total'].venda_mtd);
-      if (valSemEl && cMap['total_sem_figital']) valSemEl.textContent = fmtMoney(cMap['total_sem_figital'].venda_mtd);
+      if (valComEl && cMap['total']) {{
+        const sh = cMap['total'].share_empresa_pct !== undefined ? ` (${{cMap['total'].share_empresa_pct.toFixed(1)}}%)` : '';
+        valComEl.textContent = fmtMoney(cMap['total'].venda_mtd) + sh;
+      }}
+      if (valSemEl && cMap['total_sem_figital']) {{
+        const sh = cMap['total_sem_figital'].share_empresa_pct !== undefined ? ` (${{cMap['total_sem_figital'].share_empresa_pct.toFixed(1)}}%)` : '';
+        valSemEl.textContent = fmtMoney(cMap['total_sem_figital'].venda_mtd) + sh;
+      }}
     }}
 
     function updateKpis() {{
@@ -3677,7 +3718,8 @@ def build():
           <th class="num-cell">Cresc. MoM %</th>
           <th class="num-cell">Set/25</th>
           <th class="num-cell">Evol. YoY %</th>
-          <th class="num-cell">Share %</th>
+          <th class="num-cell">Share Dig. %</th>
+          <th class="num-cell" style="color: var(--apple-blue);">Part. Empresa %</th>
           <th class="num-cell">Projeção Mês</th>
           <th class="num-cell">Meta Mensal</th>
         </tr>
@@ -3689,7 +3731,7 @@ def build():
       if (!canais || canais.length === 0 || (isFiltered && canais[0].venda_mtd === 0 && canais[0].meta_mtd === 0)) {{
         tbody.innerHTML = `
           <tr>
-            <td colspan="13" style="text-align: center; padding: 36px 16px; color: var(--text-tertiary);">
+            <td colspan="14" style="text-align: center; padding: 36px 16px; color: var(--text-tertiary);">
               <div style="font-size: 24px; margin-bottom: 6px;">🔍</div>
               <div style="font-weight: 600; color: var(--text-secondary); margin-bottom: 4px;">Nenhum dado encontrado nos canais para os filtros ativos</div>
               <div style="font-size: 11.5px;">Tente alterar os filtros de grupo, fornecedor ou o termo de busca.</div>
@@ -3732,6 +3774,7 @@ def build():
             </span>
           </td>
           <td class="num-cell">${{fmtPct(c.share_realizado_pct)}}</td>
+          <td class="num-cell" style="font-weight: 700; color: var(--apple-blue);">${{fmtPct(c.share_empresa_pct)}}</td>
           <td class="num-cell" style="color: var(--apple-blue);">${{fmtMoney(c.projecao_fechamento)}}</td>
           <td class="num-cell" style="color: var(--text-tertiary);">${{fmtMoney(c.meta_mensal)}}</td>
         </tr>
@@ -4337,9 +4380,9 @@ def build():
       const dateStr = new Date().toISOString().slice(0,10);
 
       if (activeTableTab === 'canais') {{
-        csv = 'Canal;Realizado_Periodo;Meta_Periodo;Ating_Pct;Desvio_RS;Desvio_Pct;Ago26_Periodo;MoM_Pct;Set25_Periodo;YoY_Pct;Share_Pct;Projecao_Mes;Meta_Mensal\\n';
+        csv = 'Canal;Realizado_Periodo;Meta_Periodo;Ating_Pct;Desvio_RS;Desvio_Pct;Ago26_Periodo;MoM_Pct;Set25_Periodo;YoY_Pct;Share_Digital_Pct;Part_Empresa_Pct;Projecao_Mes;Meta_Mensal\\n';
         getFilteredCanaisData().forEach(c => {{
-          csv += `"${{c.nome}}";${{c.venda_mtd}};${{c.meta_mtd}};${{c.ating_mtd_pct}};${{c.gap_mtd}};${{c.desvio_pct}};${{c.v26_06_mtd}};${{c.crescimento_mom_pct}};${{c.v25_mtd}};${{c.crescimento_yoy_pct}};${{c.share_realizado_pct}};${{c.projecao_fechamento}};${{c.meta_mensal}}\\n`;
+          csv += `"${{c.nome}}";${{c.venda_mtd}};${{c.meta_mtd}};${{c.ating_mtd_pct}};${{c.gap_mtd}};${{c.desvio_pct}};${{c.v26_06_mtd}};${{c.crescimento_mom_pct}};${{c.v25_mtd}};${{c.crescimento_yoy_pct}};${{c.share_realizado_pct}};${{c.share_empresa_pct || 0}};${{c.projecao_fechamento}};${{c.meta_mensal}}\\n`;
         }});
       }} else if (activeTableTab === 'hierarquia') {{
         if (hierarquiaSubView === 'grupos') {{
